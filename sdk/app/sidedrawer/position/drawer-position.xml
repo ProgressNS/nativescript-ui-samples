@@ -1,0 +1,30 @@
+<Page loaded="onPageLoaded" xmlns:drawer="ui-for-nativescript/sidedrawer" xmlns="http://www.nativescript.org/tns.xsd">
+  <drawer:SideDrawer id="sideDrawer">
+    <drawer:SideDrawer.mainContent>
+        <StackLayout>
+            <Label text="{{transitionsDescription}}"/>
+            <ScrollView>
+                <StackLayout>
+                    <Button text="Left" tap="{{ onLeftLocationTap }}"/>
+                    <Button text="Top" tap="{{ onTopLocationTap }}"/>
+                    <Button text="Right" tap="{{ onRightLocationTap }}"/>
+                    <Button text="Bottom" tap="{{ onBottomLocationTap }}"/>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </drawer:SideDrawer.mainContent>
+    <drawer:SideDrawer.drawerContent>
+        <StackLayout cssClass="drawerContent">
+          <StackLayout cssClass="headerContent">
+            <Label text="Header"/>
+          </StackLayout>
+          <StackLayout cssClass="drawerMenuContent">
+            <Label text="Item 1"/>
+            <Label text="Item 2"/>
+            <Label text="Item 3"/>
+            <Label text="Item 4"/>
+          </StackLayout>
+        </StackLayout>
+    </drawer:SideDrawer.drawerContent>
+  </drawer:SideDrawer>
+</Page>

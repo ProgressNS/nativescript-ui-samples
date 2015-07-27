@@ -1,0 +1,39 @@
+<Page loaded="onPageLoaded" xmlns:chart="ui-for-nativescript/chart" xmlns="http://www.nativescript.org/tns.xsd">
+    <chart:CartesianChart id="cartesianChart">
+        <chart:CartesianChart.series>
+            <chart:LineSeries seriesName="Line" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">
+
+            </chart:LineSeries>
+            <chart:AreaSeries seriesName="Area" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">
+
+            </chart:AreaSeries>
+            <chart:BarSeries seriesName="Bar" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">
+
+            </chart:BarSeries>
+        </chart:CartesianChart.series>
+        <chart:CartesianChart.palettes>
+            <chart:Palette seriesName="Bar">
+                <chart:Palette.entries>
+                    <chart:PaletteEntry fillColor="Red" strokeColor="Green" strokeWidth="3"/>
+                </chart:Palette.entries>
+            </chart:Palette>
+            <chart:Palette seriesName="Area">
+                <chart:Palette.entries>
+                    <chart:PaletteEntry fillColor="#DDFFFF00" strokeColor="Green" strokeWidth="1"/>
+                </chart:Palette.entries>
+            </chart:Palette>
+            <chart:Palette seriesName="Line">
+                <chart:Palette.entries>
+                    <chart:PaletteEntry strokeColor="Blue" strokeWidth="5"/>
+                </chart:Palette.entries>
+            </chart:Palette>
+        </chart:CartesianChart.palettes>
+
+        <chart:CartesianChart.horizontalAxis>
+            <chart:CategoricalAxis/>
+        </chart:CartesianChart.horizontalAxis>
+        <chart:CartesianChart.verticalAxis>
+            <chart:LinearAxis/>
+        </chart:CartesianChart.verticalAxis>
+    </chart:CartesianChart>
+</Page>

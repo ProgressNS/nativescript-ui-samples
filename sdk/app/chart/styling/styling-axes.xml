@@ -1,0 +1,14 @@
+<Page loaded="onPageLoaded" xmlns:chart="ui-for-nativescript/chart" xmlns="http://www.nativescript.org/tns.xsd">
+    <chart:CartesianChart id="cartesianChart">
+        <chart:CartesianChart.series>
+            <chart:BarSeries items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="Amount">
+                <chart:BarSeries.horizontalAxis>
+                    <chart:LinearAxis labelTextColor="Red" />
+                </chart:BarSeries.horizontalAxis>
+                <chart:BarSeries.verticalAxis>
+                        <chart:CategoricalAxis labelTextColor="#cb4b16" lineThickness="10" lineColor="#322338"/>
+                </chart:BarSeries.verticalAxis>
+            </chart:BarSeries>
+        </chart:CartesianChart.series>
+    </chart:CartesianChart>
+</Page>

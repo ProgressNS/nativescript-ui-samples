@@ -1,0 +1,21 @@
+<Page loaded="onPageLoaded" xmlns:chart="ui-for-nativescript/chart" xmlns="http://www.nativescript.org/tns.xsd">
+    <chart:CartesianChart id="cartesianChart">
+        <chart:CartesianChart.series>
+            <chart:LineSeries seriesName="Line" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">
+                <chart:LineSeries.verticalAxis>
+                    <chart:LinearAxis horizontalLocation="Right"/>
+                </chart:LineSeries.verticalAxis>
+            </chart:LineSeries>
+            <chart:BarSeries seriesName="Bar" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">
+                <chart:BarSeries.verticalAxis>
+                    <chart:LinearAxis horizontalLocation="Left"/>
+                </chart:BarSeries.verticalAxis>
+            </chart:BarSeries>
+        </chart:CartesianChart.series>
+
+        <chart:CartesianChart.horizontalAxis>
+            <chart:CategoricalAxis/>
+        </chart:CartesianChart.horizontalAxis>
+
+    </chart:CartesianChart>
+</Page>

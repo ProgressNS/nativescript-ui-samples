@@ -1,0 +1,14 @@
+<Page loaded="onPageLoaded" xmlns:chart="ui-for-nativescript/chart" xmlns="http://www.nativescript.org/tns.xsd">
+    <chart:CartesianChart id="pieChart">
+        <chart:CartesianChart.series>
+            <chart:BubbleSeries  items="{{ bubbleCategoricalSource }}" bubbleScale="5" categoryProperty="Country" valueProperty="Amount" bubbleSizeProperty="Impact" >
+                <chart:BubbleSeries.horizontalAxis>
+                    <chart:CategoricalAxis/>
+                </chart:BubbleSeries.horizontalAxis>
+                <chart:BubbleSeries.verticalAxis>
+                    <chart:LinearAxis />
+                </chart:BubbleSeries.verticalAxis>
+            </chart:BubbleSeries>
+        </chart:CartesianChart.series>
+    </chart:CartesianChart>
+</Page>

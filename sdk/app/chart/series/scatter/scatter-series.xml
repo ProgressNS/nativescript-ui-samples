@@ -1,0 +1,14 @@
+<Page loaded="onPageLoaded" xmlns:chart="ui-for-nativescript/chart" xmlns="http://www.nativescript.org/tns.xsd">
+    <chart:CartesianChart id="cartesianChart">
+        <chart:CartesianChart.series>
+            <chart:ScatterSeries items="{{ scatterSource }}" xProperty="Age" yProperty="Salary">
+                <chart:ScatterSeries.horizontalAxis>
+                    <chart:LinearAxis/>
+                </chart:ScatterSeries.horizontalAxis>
+                <chart:ScatterSeries.verticalAxis>
+                    <chart:LinearAxis/>
+                </chart:ScatterSeries.verticalAxis>
+            </chart:ScatterSeries>
+        </chart:CartesianChart.series>
+    </chart:CartesianChart>
+</Page>

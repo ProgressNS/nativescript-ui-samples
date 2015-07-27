@@ -1,0 +1,8 @@
+<Page loaded="onPageLoaded" xmlns:chart="ui-for-nativescript/chart" xmlns="http://www.nativescript.org/tns.xsd">
+    <chart:PieChart id="pieChart" width="300" height="300">
+        <chart:PieChart.series>
+            <chart:DonutSeries items="{{ pieSource }}" valueProperty="Amount" labelProperty="Brand">
+            </chart:DonutSeries>
+        </chart:PieChart.series>
+    </chart:PieChart>
+</Page>

@@ -1,0 +1,54 @@
+﻿.title {
+    font-size: 30;
+    horizontal-align: center;
+    margin:20;
+}
+
+button {
+    font-size: 15;
+    horizontal-align: center;
+}
+
+.message {
+    font-size: 20;
+    color: #284848;
+    horizontal-align: center;
+}
+
+.drawerMenuContent {
+    margin:10;
+}
+
+.drawerContent {
+    background-color: white;
+}
+
+.headerContent {
+    padding:20;
+    background-color: #808080
+}
+
+.listView{
+    background-color: #ffffff;
+}
+
+.example-title{
+    color: #555555;
+    font-size: 17;
+    margin: 0;
+}
+
+.control-title{
+    color: #FFFFFF;
+    background-color: #284848;
+    font-size: 22;
+    margin: 0;
+    padding: 5;
+}
+
+.example-group-title{
+    color: #555555;
+    background-color: #808080;
+    font-size: 20;
+    margin: 0;
+}
