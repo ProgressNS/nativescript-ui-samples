@@ -7,8 +7,5 @@
     "tns-ios": {
       "version": "1.2.0"
     }
-  },
-  "dependencies": {
-    "ui-for-nativescript": "file:../plugin"
   }
 }
