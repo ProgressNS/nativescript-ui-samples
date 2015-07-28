@@ -42,7 +42,6 @@ Build/intermediates
 #NativeScript
 platforms/
 lib/
-tns_modules/
 frameworks/
 /samples/app/tns_modules
 /samples/lib
