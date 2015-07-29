@@ -2,9 +2,8 @@
   <drawer:SideDrawer id="sideDrawer">
     <drawer:SideDrawer.mainContent>
         <StackLayout cssClass="mainContent">
-            <Label text="{{transitionsDescription}}"/>
             <ScrollView>
-                <Label text="Open the drawer from the left of the screen to change the transition." textWrap="true"/>
+                <Label textSize="30" text="Open the drawer from the left of the screen to change the transition." textWrap="true"/>
             </ScrollView>
         </StackLayout>
     </drawer:SideDrawer.mainContent>

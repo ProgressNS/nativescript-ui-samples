@@ -15,7 +15,7 @@ export function pageLoaded(args: observable.EventData) {
     page.bindingContext = appViewModel.appModel;
 
     if (frame.topmost().ios){
-        console.log(frame.topmost().ios.controller.interactivePopGestureRecognizer.enabled = false);
+        frame.topmost().ios.controller.interactivePopGestureRecognizer.enabled = false;
     }
 }
 
