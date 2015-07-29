@@ -1,4 +1,4 @@
-<Page navigatedTo="onNavigatedTo" xmlns:drawer="ui-for-nativescript/sidedrawer" xmlns="http://www.nativescript.org/tns.xsd">
+<Page navigatedTo="onNavigatedTo" xmlns:drawer="nativescript-telerik-ui/sidedrawer" xmlns="http://www.nativescript.org/tns.xsd">
   <drawer:SideDrawer id="sideDrawer">
     <drawer:SideDrawer.mainContent>
         <StackLayout>

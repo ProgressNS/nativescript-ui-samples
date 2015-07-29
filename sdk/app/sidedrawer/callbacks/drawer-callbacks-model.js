@@ -4,7 +4,6 @@ var __extends = this.__extends || function (d, b) {
     __.prototype = b.prototype;
     d.prototype = new __();
 };
-var observableModule = require("ui/core/dependency-observable");
 var DrawerCallbacksModel = (function (_super) {
     __extends(DrawerCallbacksModel, _super);
     function DrawerCallbacksModel() {
