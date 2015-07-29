@@ -1,32 +1,27 @@
 <Page loaded="onPageLoaded" xmlns:drawer="ui-for-nativescript/sidedrawer" xmlns="http://www.nativescript.org/tns.xsd">
   <drawer:SideDrawer id="sideDrawer">
     <drawer:SideDrawer.mainContent>
-        <StackLayout>
+        <StackLayout cssClass="mainContent">
             <Label text="{{transitionsDescription}}"/>
             <ScrollView>
-                <StackLayout>
-                    <Button text="Fade Transition" tap="{{ onFadeTransitionTap }}"/>
-                    <Button text="Push Transition" tap="{{ onPushTransitionTap }}"/>
-                    <Button text="Reveal Transition" tap="{{ onRevealTransitionTap }}"/>
-                    <Button text="ReverseSlideOut Transition" tap="{{ onReverseSlideOutTransitionTap }}"/>
-                    <Button text="ScaleDownPusher Transition" tap="{{ onScaleDownPusherTransitionTap }}"/>
-                    <Button text="ScaleUp Transition" tap="{{ onScaleUpTransitionTap }}"/>
-                    <Button text="SlideAlong Transition" tap="{{ onSlideAlongTransitionTap }}"/>
-                    <Button text="SlideInOnTop Transition" tap="{{ onSlideInOnTopTransitionTap }}"/>
-                </StackLayout>
+                <Label text="Open the drawer from the left of the screen to change the transition." textWrap="true"/>
             </ScrollView>
         </StackLayout>
     </drawer:SideDrawer.mainContent>
     <drawer:SideDrawer.drawerContent>
         <StackLayout cssClass="drawerContent">
           <StackLayout cssClass="headerContent">
-            <Label text="Header"/>
+            <Label text="Tap to change transition:"/>
           </StackLayout>
-          <StackLayout cssClass="drawerMenuContent">
-            <Label text="Item 1"/>
-            <Label text="Item 2"/>
-            <Label text="Item 3"/>
-            <Label text="Item 4"/>
+          <StackLayout>
+              <Button text="Fade Transition" tap="{{ onFadeTransitionTap }}"/>
+              <Button text="Push Transition" tap="{{ onPushTransitionTap }}"/>
+              <Button text="Reveal Transition" tap="{{ onRevealTransitionTap }}"/>
+              <Button text="ReverseSlideOut Transition" tap="{{ onReverseSlideOutTransitionTap }}"/>
+              <Button text="ScaleDownPusher Transition" tap="{{ onScaleDownPusherTransitionTap }}"/>
+              <Button text="ScaleUp Transition" tap="{{ onScaleUpTransitionTap }}"/>
+              <Button text="SlideAlong Transition" tap="{{ onSlideAlongTransitionTap }}"/>
+              <Button text="SlideInOnTop Transition" tap="{{ onSlideInOnTopTransitionTap }}"/>
           </StackLayout>
         </StackLayout>
     </drawer:SideDrawer.drawerContent>

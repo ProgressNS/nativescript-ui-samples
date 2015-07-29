@@ -37,6 +37,7 @@ export class DrawerTransitionsModel {
 
     private setDrawerTransition(transition: drawerModule.DrawerTransitionBase) {
         var drawer: drawerModule.SideDrawer = <drawerModule.SideDrawer>frameModule.topmost().getViewById("sideDrawer");
+        drawer.closeDrawer();
         drawer.drawerTransition = transition;
     }
 }

@@ -29,6 +29,7 @@ var DrawerTransitionsModel = (function () {
     };
     DrawerTransitionsModel.prototype.setDrawerTransition = function (transition) {
         var drawer = frameModule.topmost().getViewById("sideDrawer");
+        drawer.closeDrawer();
         drawer.drawerTransition = transition;
     };
     return DrawerTransitionsModel;

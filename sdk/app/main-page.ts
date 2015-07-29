@@ -13,6 +13,10 @@ import appViewModel = require("./app-view-model");
 export function pageLoaded(args: observable.EventData) {
     var page = <pages.Page>args.object;
     page.bindingContext = appViewModel.appModel;
+
+    if (frame.topmost().ios){
+        console.log(frame.topmost().ios.controller.interactivePopGestureRecognizer.enabled = false);
+    }
 }
 
 export function selectExample(args: listView.ItemEventData) {
