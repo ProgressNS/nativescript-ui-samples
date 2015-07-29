@@ -12,4 +12,4 @@ As already mentioned, you have to install the **UI for NativeScript** plugin to 
 
 1. Make sure you are using NativeScript 1.2+. To see which version of NativeScript you are currently using, type `tns --version` in the console.
 2. Download the UI for NativeScript plugin and copy the root folder of the plugin to a convenient location.
-3. Install the plugin by opening the root folder of the samples app and typing the following command: `tns plugin add <path-to-root-plugin-folder>`.
+3. Install the plugin by opening the root folder of the samples app and typing the following command: `tns plugin add nativescript-telerik-ui`.
