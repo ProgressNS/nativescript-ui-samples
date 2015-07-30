@@ -4,6 +4,7 @@ var __extends = this.__extends || function (d, b) {
     __.prototype = b.prototype;
     d.prototype = new __();
 };
+var observableModule = require("data/observable");
 var GettingStartedViewModel = (function (_super) {
     __extends(GettingStartedViewModel, _super);
     function GettingStartedViewModel() {
