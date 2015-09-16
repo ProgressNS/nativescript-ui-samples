@@ -7,9 +7,11 @@ The UI for NativeScript samples app resides in the **sdk** folder at root reposi
 - chart
 - sidedrawer
 
-## Adding the UI for NativeScript
-As already mentioned, you have to install the **UI for NativeScript** plugin to be able to run the samples app. The following text provides step-by-step instructions on how this is done.
+## Running **UI for NativeScript** sample app
+Make sure you are using NativeScript 1.3+. To see which version of NativeScript you are currently using, type `tns --version` in the console.
 
-1. Make sure you are using NativeScript 1.2+. To see which version of NativeScript you are currently using, type `tns --version` in the console.
-2. Create a NativeScript application and add at least one of the platforms (Android or iOS) if you haven't done so already.
-3. Install the plugin by opening the root folder of the samples app and typing the following command: `tns plugin add nativescript-telerik-ui`.
+Steps to run the sample:
+cd sdk
+tns install
+tns run android (or tns run ios)
+
