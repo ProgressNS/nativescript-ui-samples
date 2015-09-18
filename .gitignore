@@ -48,6 +48,7 @@ frameworks/
 libs/
 temp/
 .settings/
+node_modules/
 
 #OSX
 .DS_Store
