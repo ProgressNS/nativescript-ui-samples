@@ -1,6 +1,6 @@
 import frameModule = require("ui/frame");
 import drawerModule = require("nativescript-telerik-ui/sidedrawer");
-
+import observableModule = require("data/observable");
 
 export class DrawerTransitionsModel {
     public onFadeTransitionTap(args) {
@@ -34,7 +34,18 @@ export class DrawerTransitionsModel {
     public onSlideInOnTopTransitionTap(args) {
         this.setDrawerTransition(new drawerModule.SlideInOnTopTransition());
     }
+    
+    public openSideDrawer(args: observableModule.EventData) {
+        var drawer: drawerModule.SideDrawer = <drawerModule.SideDrawer>frameModule.topmost().getViewById("sideDrawer");
+        drawer.showDrawer();
+    }
 
+    public closeSideDrawer(args: observableModule.EventData) {
+        var drawer: drawerModule.SideDrawer = <drawerModule.SideDrawer>frameModule.topmost().getViewById("sideDrawer");
+        drawer.closeDrawer();
+    }
+    
+   
     private setDrawerTransition(transition: drawerModule.DrawerTransitionBase) {
         var drawer: drawerModule.SideDrawer = <drawerModule.SideDrawer>frameModule.topmost().getViewById("sideDrawer");
         drawer.closeDrawer();

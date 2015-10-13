@@ -1,5 +1,6 @@
 var frameModule = require("ui/frame");
 var drawerModule = require("nativescript-telerik-ui/sidedrawer");
+var observable = require("data/observable");
 var DrawerTransitionsModel = (function () {
     function DrawerTransitionsModel() {
     }
@@ -26,6 +27,14 @@ var DrawerTransitionsModel = (function () {
     };
     DrawerTransitionsModel.prototype.onSlideInOnTopTransitionTap = function (args) {
         this.setDrawerTransition(new drawerModule.SlideInOnTopTransition());
+    };
+    DrawerTransitionsModel.prototype.openSideDrawer = function (args) {
+        var drawer = frameModule.topmost().getViewById("sideDrawer");
+        drawer.showDrawer();
+    };
+    DrawerTransitionsModel.prototype.closeSideDrawer = function (args) {
+        var drawer = frameModule.topmost().getViewById("sideDrawer");
+        drawer.closeDrawer();
     };
     DrawerTransitionsModel.prototype.setDrawerTransition = function (transition) {
         var drawer = frameModule.topmost().getViewById("sideDrawer");

@@ -5,6 +5,7 @@
             <ScrollView>
                 <Label textSize="30" text="Open the drawer from the left of the screen to change the transition." textWrap="true"/>
             </ScrollView>
+            <Button text="open drawer" tap="{{ openSideDrawer }}"/>
         </StackLayout>
     </drawer:SideDrawer.mainContent>
     <drawer:SideDrawer.drawerContent>

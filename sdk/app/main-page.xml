@@ -13,7 +13,7 @@
                                 <Label text="{{ description }}" />
                             </StackLayout>
                         </GridLayout>
-                        <GridLayout visibility="{{ isExampleGroup || isControl ? 'collapsed' : 'visible' }}">
+                        <GridLayout visibility="{{ isExampleGroup || isControl ? 'collapsed' : 'visible' }}" height="44">
                             <StackLayout >
                                 <Label text="{{ title }}" textWrap="true" cssClass="example-title" />
                             </StackLayout>
