@@ -42,6 +42,16 @@ var AppViewModel = (function (_super) {
         this._examples.push({ Id: "22", title: "Getting started", group: "sidedrawer features", description: "", moduleName: "./sidedrawer/getting-started/getting-started" });
         this._examples.push({ Id: "23", title: "Position", group: "sidedrawer features", description: "", moduleName: "./sidedrawer/position/drawer-position" });
         this._examples.push({ Id: "24", title: "Transitions", group: "sidedrawer features", description: "", moduleName: "./sidedrawer/transitions/drawer-transitions" });
+        this._examples.push({ Id: "25", title: "ListView", group: "controls", description: "Telerik ListView for NativeScript", isControl: true });
+        this._examples.push({ Id: "26", title: "Item animations", group: "listview features", description: "", moduleName: "./listview/item-animations/item-animations" });
+        this._examples.push({ Id: "27", title: "Item layouts: linear", group: "listview features", description: "", moduleName: "./listview/item-layouts/item-layouts-linear" });
+        this._examples.push({ Id: "28", title: "Item layouts: grid", group: "listview features", description: "", moduleName: "./listview/item-layouts/item-layouts-grid" });
+        this._examples.push({ Id: "29", title: "Item layouts: staggered", group: "listview features", description: "", moduleName: "./listview/item-layouts/item-layouts-staggered" });
+        this._examples.push({ Id: "30", title: "Item reorder", group: "listview features", description: "", moduleName: "./listview/item-reorder/item-reorder" });
+        this._examples.push({ Id: "31", title: "Load on demand", group: "listview features", description: "", moduleName: "./listview/load-on-demand/load-on-demand" });
+        this._examples.push({ Id: "32", title: "Observable array", group: "listview features", description: "", moduleName: "./listview/observable-array/observable-array" });
+        this._examples.push({ Id: "33", title: "Pull to refresh", group: "listview features", description: "", moduleName: "./listview/pull-to-refresh/pull-to-refresh" });
+        this._examples.push({ Id: "34", title: "Swipe to execute", group: "listview features", description: "", moduleName: "./listview/swipe-execute/swipe-execute" });
     };
     Object.defineProperty(AppViewModel.prototype, "examples", {
         get: function () {

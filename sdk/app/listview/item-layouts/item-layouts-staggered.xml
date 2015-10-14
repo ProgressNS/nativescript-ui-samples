@@ -1,0 +1,13 @@
+<Page loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
+    <lv:ListView items="{{ staggeredItems }}">
+        <lv:ListView.listViewLayout>
+            <lv:ListViewStaggeredLayout scrollDirection="Vertical" spanCount="3"/>
+        </lv:ListView.listViewLayout>
+        <lv:ListView.itemTemplate>
+            <StackLayout orientation="vertical" cssClass="item-template-style">
+                <Label fontSize="20" text="{{ itemName }}"/>
+                <Label fontSize="14" text="{{ itemDescription }}" textWrap="true"/>
+            </StackLayout>
+        </lv:ListView.itemTemplate>
+    </lv:ListView>
+</Page>

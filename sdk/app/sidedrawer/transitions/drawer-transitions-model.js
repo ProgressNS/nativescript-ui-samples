@@ -1,6 +1,5 @@
 var frameModule = require("ui/frame");
 var drawerModule = require("nativescript-telerik-ui/sidedrawer");
-var observable = require("data/observable");
 var DrawerTransitionsModel = (function () {
     function DrawerTransitionsModel() {
     }

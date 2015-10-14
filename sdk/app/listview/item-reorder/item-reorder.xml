@@ -1,0 +1,17 @@
+<Page loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
+    <GridLayout orientation="vertical" rows="auto, *, auto">
+        <Label cssClass="example-header" text="Hold and drag to reorder"/>
+        <lv:ListView didReorderItem="{{onItemReordered}}" items="{{ dataItems }}" row="1" cellReorder="true">
+            <lv:ListView.listViewLayout>
+                <lv:ListViewLinearLayout itemHeight="50" scrollDirection="Vertical"/>
+            </lv:ListView.listViewLayout>
+            <lv:ListView.itemTemplate>
+                <StackLayout orientation="vertical">
+                    <Label fontSize="20" text="{{ itemName }}"/>
+                    <Label fontSize="14" text="{{ itemDescription }}"/>
+                </StackLayout>
+            </lv:ListView.itemTemplate>
+        </lv:ListView>
+    </GridLayout>
+
+</Page>

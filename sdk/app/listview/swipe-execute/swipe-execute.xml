@@ -1,0 +1,24 @@
+<Page loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
+
+    <GridLayout orientation="vertical" rows="auto, *">
+        <Label text="Swipe left or right to execute" cssClass="example-header"/>
+        <lv:ListView items="{{ dataItems }}" row="1" selectionBehavior="None" didFinishSwipeCell="{{onSwipeCellFinished}}" itemTap="{{onItemClick}}" startSwipeCell="{{onSwipeCellStarted}}" didSwipeCell="{{onCellSwiping}}" swipeCells="true">
+            <lv:ListView.listViewLayout>
+                <lv:ListViewLinearLayout itemHeight="50" scrollDirection="Vertical"/>
+            </lv:ListView.listViewLayout>
+            <lv:ListView.itemTemplate>
+                <StackLayout orientation="vertical">
+                    <Label fontSize="20" text="{{ itemName }}"/>
+                    <Label fontSize="14" text="{{ itemDescription }}"/>
+                </StackLayout>
+            </lv:ListView.itemTemplate>
+            <lv:ListView.itemSwipeTemplate>
+                <GridLayout columns="auto, *, auto">
+                    <Button col="0" style="background-color: red;" text="Left button"/>
+                    <Button col="2" style="background-color: blue;" text="Right button"/>
+                </GridLayout>
+            </lv:ListView.itemSwipeTemplate>
+        </lv:ListView>
+    </GridLayout>
+
+</Page>

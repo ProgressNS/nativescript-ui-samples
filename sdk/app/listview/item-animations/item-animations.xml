@@ -1,0 +1,24 @@
+<Page loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
+
+    <GridLayout orientation="vertical" rows="auto, *, auto">
+        <Label text="Swipe left or right to execute" cssClass="example-header"/>
+        <lv:ListView items="{{ dataItems }}" row="1" >
+            <lv:ListView.listViewLayout>
+                <lv:ListViewLinearLayout itemHeight="50" scrollDirection="Vertical" itemInsertAnimation="Fade" itemDeleteAnimation="Fade"/>
+            </lv:ListView.listViewLayout>
+            <lv:ListView.itemTemplate>
+                <StackLayout orientation="vertical">
+                    <Label fontSize="20" text="{{ itemName }}"/>
+                    <Label fontSize="14" text="{{ itemDescription }}"/>
+                </StackLayout>
+            </lv:ListView.itemTemplate>
+        </lv:ListView>
+        <StackLayout row="2" orientation="horizontal">
+            <Button text="Add" tap="{{onAddItemClick}}"/>
+            <Button text="Del" tap="{{onRemoveItemClick}}"/>
+            <Button text="Update" tap="{{onUpdateItemClick}}"/>
+            <Button text="Reset" tap="{{onResetClick}}"/>
+        </StackLayout>
+    </GridLayout>
+
+</Page>
