@@ -1,7 +1,7 @@
 <Page loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
 
     <GridLayout orientation="vertical" rows="auto, *, auto">
-        <Label text="Swipe left or right to execute" cssClass="example-header"/>
+        <Label text="Observable array" cssClass="example-header"/>
         <lv:RadListView items="{{ dataItems }}" row="1" >
             <lv:RadListView.listViewLayout>
                 <lv:ListViewLinearLayout itemHeight="50" scrollDirection="Vertical"/>
