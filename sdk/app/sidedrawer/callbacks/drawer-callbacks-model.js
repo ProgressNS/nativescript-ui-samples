@@ -4,6 +4,9 @@ var __extends = this.__extends || function (d, b) {
     __.prototype = b.prototype;
     d.prototype = new __();
 };
+
+var observableModule = require("data/observable");
+var drawerModule = require("nativescript-telerik-ui/sidedrawer");
 var DrawerCallbacksModel = (function (_super) {
     __extends(DrawerCallbacksModel, _super);
     function DrawerCallbacksModel() {

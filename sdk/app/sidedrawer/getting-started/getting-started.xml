@@ -1,11 +1,11 @@
-<Page loaded="pageLoaded" xmlns:drawer="nativescript-telerik-ui/sidedrawer" xmlns="http://www.nativescript.org/tns.xsd">
-  <drawer:SideDrawer>
-    <drawer:SideDrawer.mainContent>
+<Page loaded="pageLoaded" xmlns:drawer="nativescript-telerik-ui/radsidedrawer" xmlns="http://www.nativescript.org/tns.xsd">
+  <drawer:RadSideDrawer>
+    <drawer:RadSideDrawer.mainContent>
       <StackLayout >
         <Label text="{{ mainContentText }}" textWrap="true"/>
       </StackLayout>
-    </drawer:SideDrawer.mainContent>
-    <drawer:SideDrawer.drawerContent>
+    </drawer:RadSideDrawer.mainContent>
+    <drawer:RadSideDrawer.drawerContent>
       <StackLayout cssClass="drawerContent">
         <StackLayout cssClass="headerContent">
           <Label text="Header"/>
@@ -17,6 +17,6 @@
           <Label text="Item 4"/>
         </StackLayout>
       </StackLayout>
-    </drawer:SideDrawer.drawerContent>
-  </drawer:SideDrawer>
+    </drawer:RadSideDrawer.drawerContent>
+  </drawer:RadSideDrawer>
 </Page>

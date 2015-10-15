@@ -1,5 +1,5 @@
 import frameModule = require("ui/frame");
-import drawerModule = require("nativescript-telerik-ui/sidedrawer");
+import drawerModule = require("nativescript-telerik-ui/radsidedrawer");
 import observableModule = require("data/observable");
 
 export class DrawerTransitionsModel {
@@ -36,18 +36,18 @@ export class DrawerTransitionsModel {
     }
     
     public openSideDrawer(args: observableModule.EventData) {
-        var drawer: drawerModule.SideDrawer = <drawerModule.SideDrawer>frameModule.topmost().getViewById("sideDrawer");
+        var drawer: drawerModule.RadideDrawer = <drawerModule.RadSideDrawer>frameModule.topmost().getViewById("sideDrawer");
         drawer.showDrawer();
     }
 
     public closeSideDrawer(args: observableModule.EventData) {
-        var drawer: drawerModule.SideDrawer = <drawerModule.SideDrawer>frameModule.topmost().getViewById("sideDrawer");
+        var drawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>frameModule.topmost().getViewById("sideDrawer");
         drawer.closeDrawer();
     }
     
    
     private setDrawerTransition(transition: drawerModule.DrawerTransitionBase) {
-        var drawer: drawerModule.SideDrawer = <drawerModule.SideDrawer>frameModule.topmost().getViewById("sideDrawer");
+        var drawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>frameModule.topmost().getViewById("sideDrawer");
         drawer.closeDrawer();
         drawer.drawerTransition = transition;
     }

@@ -1,4 +1,4 @@
-import drawerModule = require("nativescript-telerik-ui/sidedrawer");
+import drawerModule = require("nativescript-telerik-ui/radsidedrawer");
 import observableModule = require("ui/core/dependency-observable");
 
 export class DrawerCallbacksModel extends observableModule.DependencyObservable implements drawerModule.DrawerStateDelegate {
