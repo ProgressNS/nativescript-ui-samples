@@ -1,5 +1,5 @@
 import frameModule = require("ui/frame");
-import drawerModule = require("nativescript-telerik-ui/radsidedrawer");
+import drawerModule = require("nativescript-telerik-ui/sidedrawer");
 import observableModule = require("data/observable");
 
 export class DrawerTransitionsModel {

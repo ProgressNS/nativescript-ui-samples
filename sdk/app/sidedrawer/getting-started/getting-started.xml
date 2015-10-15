@@ -1,4 +1,4 @@
-<Page loaded="pageLoaded" xmlns:drawer="nativescript-telerik-ui/radsidedrawer" xmlns="http://www.nativescript.org/tns.xsd">
+<Page loaded="pageLoaded" xmlns:drawer="nativescript-telerik-ui/sidedrawer" xmlns="http://www.nativescript.org/tns.xsd">
   <drawer:RadSideDrawer>
     <drawer:RadSideDrawer.mainContent>
       <StackLayout >
