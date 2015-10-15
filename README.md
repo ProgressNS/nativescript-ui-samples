@@ -6,6 +6,7 @@ The UI for NativeScript samples app resides in the **sdk** folder at root reposi
 
 - chart
 - sidedrawer
+- listview
 
 ## Running **UI for NativeScript** sample app
 Make sure you are using NativeScript 1.3+. To see which version of NativeScript you are currently using, type `tns --version` in the console.
@@ -15,4 +16,7 @@ Steps to run the sample:
 1. cd sdk
 2. tns install
 3. tns run android (or tns run ios)
+
+> If you want to try the new RadListView component on Android you will need to manually add a reference to the RecyclerView component as described in the online documentation here: [Getting started with RadListView for NativeScript](http://docs.telerik.com/devtools/nativescript-ui/Controls/ListView/listview-getting-started)
+
 
