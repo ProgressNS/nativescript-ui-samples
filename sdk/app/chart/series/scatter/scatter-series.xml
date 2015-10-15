@@ -1,6 +1,6 @@
 <Page loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
-    <chart:CartesianChart id="cartesianChart">
-        <chart:CartesianChart.series>
+    <chart:RadCartesianChart id="cartesianChart">
+        <chart:RadCartesianChart.series>
             <chart:ScatterSeries items="{{ scatterSource }}" xProperty="Age" yProperty="Salary">
                 <chart:ScatterSeries.horizontalAxis>
                     <chart:LinearAxis/>
@@ -9,6 +9,6 @@
                     <chart:LinearAxis/>
                 </chart:ScatterSeries.verticalAxis>
             </chart:ScatterSeries>
-        </chart:CartesianChart.series>
-    </chart:CartesianChart>
+        </chart:RadCartesianChart.series>
+    </chart:RadCartesianChart>
 </Page>

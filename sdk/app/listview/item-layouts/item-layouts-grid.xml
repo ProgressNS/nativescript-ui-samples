@@ -1,13 +1,13 @@
 <Page loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
-    <lv:ListView items="{{ dataItems }}">
-        <lv:ListView.listViewLayout>
+    <lv:RadListView items="{{ dataItems }}">
+        <lv:RadListView.listViewLayout>
             <lv:ListViewGridLayout scrollDirection="Vertical" spanCount="3"/>
-        </lv:ListView.listViewLayout>
-        <lv:ListView.itemTemplate>
+        </lv:RadListView.listViewLayout>
+        <lv:RadListView.itemTemplate>
             <StackLayout orientation="vertical">
                 <Label fontSize="20" text="{{ itemName }}"/>
                 <Label fontSize="14" text="{{ itemDescription }}"/>
             </StackLayout>
-        </lv:ListView.itemTemplate>
-    </lv:ListView>
+        </lv:RadListView.itemTemplate>
+    </lv:RadListView>
 </Page>

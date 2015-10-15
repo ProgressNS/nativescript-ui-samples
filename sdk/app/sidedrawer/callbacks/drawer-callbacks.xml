@@ -1,12 +1,12 @@
 <Page navigatedTo="onNavigatedTo" xmlns:drawer="nativescript-telerik-ui/sidedrawer" xmlns="http://www.nativescript.org/tns.xsd">
-  <drawer:SideDrawer id="sideDrawer">
-    <drawer:SideDrawer.mainContent>
+  <drawer:RadSideDrawer id="sideDrawer">
+    <drawer:RadSideDrawer.mainContent>
         <StackLayout>
             <Label text="Drawer notification: "/>
             <Label text="{{ currentDrawerNotification }}"/>
         </StackLayout>
-    </drawer:SideDrawer.mainContent>
-    <drawer:SideDrawer.drawerContent>
+    </drawer:RadSideDrawer.mainContent>
+    <drawer:RadSideDrawer.drawerContent>
         <StackLayout cssClass="drawerContent">
           <StackLayout cssClass="headerContent">
             <Label text="Header"/>
@@ -18,6 +18,6 @@
             <Label text="Item 4"/>
           </StackLayout>
         </StackLayout>
-    </drawer:SideDrawer.drawerContent>
-  </drawer:SideDrawer>
+    </drawer:RadSideDrawer.drawerContent>
+  </drawer:RadSideDrawer>
 </Page>

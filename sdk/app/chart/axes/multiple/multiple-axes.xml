@@ -1,6 +1,6 @@
 <Page loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
-    <chart:CartesianChart id="cartesianChart">
-        <chart:CartesianChart.series>
+    <chart:RadCartesianChart id="cartesianChart">
+        <chart:RadCartesianChart.series>
             <chart:LineSeries seriesName="Line" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">
                 <chart:LineSeries.verticalAxis>
                     <chart:LinearAxis horizontalLocation="Right"/>
@@ -11,11 +11,11 @@
                     <chart:LinearAxis horizontalLocation="Left"/>
                 </chart:BarSeries.verticalAxis>
             </chart:BarSeries>
-        </chart:CartesianChart.series>
+        </chart:RadCartesianChart.series>
 
-        <chart:CartesianChart.horizontalAxis>
+        <chart:RadCartesianChart.horizontalAxis>
             <chart:CategoricalAxis/>
-        </chart:CartesianChart.horizontalAxis>
+        </chart:RadCartesianChart.horizontalAxis>
 
-    </chart:CartesianChart>
+    </chart:RadCartesianChart>
 </Page>

@@ -25,7 +25,7 @@ export class DrawerPositionModel {
     }
 
     private setDrawerLocation(location: drawerModule.SideDrawerLocation) {
-        var sideDrawer: drawerModule.SideDrawer = frameModule.topmost().getViewById("sideDrawer");
+        var sideDrawer: drawerModule.RadSideDrawer = frameModule.topmost().getViewById("sideDrawer");
         sideDrawer.drawerLocation = location;
     }
 }

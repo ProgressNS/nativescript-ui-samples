@@ -1,14 +1,14 @@
 <Page loaded="onPageLoaded" xmlns:drawer="nativescript-telerik-ui/sidedrawer" xmlns="http://www.nativescript.org/tns.xsd">
-  <drawer:SideDrawer id="sideDrawer">
-    <drawer:SideDrawer.mainContent>
+  <drawer:RadSideDrawer id="sideDrawer">
+    <drawer:RadSideDrawer.mainContent>
         <StackLayout cssClass="mainContent">
             <ScrollView>
                 <Label textSize="30" text="Open the drawer from the left of the screen to change the transition." textWrap="true"/>
             </ScrollView>
             <Button text="open drawer" tap="{{ openSideDrawer }}"/>
         </StackLayout>
-    </drawer:SideDrawer.mainContent>
-    <drawer:SideDrawer.drawerContent>
+    </drawer:RadSideDrawer.mainContent>
+    <drawer:RadSideDrawer.drawerContent>
         <StackLayout cssClass="drawerContent">
           <StackLayout cssClass="headerContent">
             <Label text="Tap to change transition:"/>
@@ -24,6 +24,6 @@
               <Button text="SlideInOnTop Transition" tap="{{ onSlideInOnTopTransitionTap }}"/>
           </StackLayout>
         </StackLayout>
-    </drawer:SideDrawer.drawerContent>
-  </drawer:SideDrawer>
+    </drawer:RadSideDrawer.drawerContent>
+  </drawer:RadSideDrawer>
 </Page>

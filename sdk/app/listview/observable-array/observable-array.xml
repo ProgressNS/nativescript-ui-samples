@@ -2,17 +2,17 @@
 
     <GridLayout orientation="vertical" rows="auto, *, auto">
         <Label text="Swipe left or right to execute" cssClass="example-header"/>
-        <lv:ListView items="{{ dataItems }}" row="1" >
-            <lv:ListView.listViewLayout>
+        <lv:RadListView items="{{ dataItems }}" row="1" >
+            <lv:RadListView.listViewLayout>
                 <lv:ListViewLinearLayout itemHeight="50" scrollDirection="Vertical"/>
-            </lv:ListView.listViewLayout>
-            <lv:ListView.itemTemplate>
+            </lv:RadListView.listViewLayout>
+            <lv:RadListView.itemTemplate>
                 <StackLayout orientation="vertical">
                     <Label fontSize="20" text="{{ itemName }}"/>
                     <Label fontSize="14" text="{{ itemDescription }}"/>
                 </StackLayout>
-            </lv:ListView.itemTemplate>
-        </lv:ListView>
+            </lv:RadListView.itemTemplate>
+        </lv:RadListView>
         <StackLayout row="2" orientation="horizontal">
             <Button text="Add" tap="{{onAddItemClick}}"/>
             <Button text="Del" tap="{{onRemoveItemClick}}"/>

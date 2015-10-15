@@ -1,18 +1,18 @@
 <Page loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
 
     <GridLayout orientation="vertical" rows="auto, *">
-        <Label text="Add, remove, update, reset source" cssClass="example-header"/>
-        <lv:ListView items="{{ dataItems }}"  row="1" loadOnDemandMode="Manualt " shouldLoadMoreData="{{onLoadMoreItemsRequested}}">
-            <lv:ListView.listViewLayout>
+        <Label text="Load on demand" cssClass="example-header"/>
+        <lv:RadListView items="{{ dataItems }}"  row="1" loadOnDemandMode="Manual" shouldLoadMoreData="{{onLoadMoreItemsRequested}}">
+            <lv:RadListView.listViewLayout>
                 <lv:ListViewLinearLayout itemHeight="50" scrollDirection="Vertical"/>
-            </lv:ListView.listViewLayout>
-            <lv:ListView.itemTemplate>
+            </lv:RadListView.listViewLayout>
+            <lv:RadListView.itemTemplate>
                 <StackLayout orientation="vertical">
                     <Label fontSize="20" text="{{ itemName }}"/>
                     <Label fontSize="14" text="{{ itemDescription }}"/>
                 </StackLayout>
-            </lv:ListView.itemTemplate>
-        </lv:ListView>
+            </lv:RadListView.itemTemplate>
+        </lv:RadListView>
     </GridLayout>
 
 </Page>

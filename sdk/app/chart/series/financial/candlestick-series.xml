@@ -1,6 +1,6 @@
 <Page loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
-    <chart:CartesianChart id="cartesianChart">
-    <chart:CartesianChart.series>
+    <chart:RadCartesianChart id="cartesianChart">
+    <chart:RadCartesianChart.series>
           <chart:CandlestickSeries
             categoryProperty="Date"
             openPropertyName="Open"
@@ -15,6 +15,6 @@
                 <chart:LinearAxis/>
               </chart:CandlestickSeries.verticalAxis>
             </chart:CandlestickSeries>
-        </chart:CartesianChart.series>
-    </chart:CartesianChart>
+        </chart:RadCartesianChart.series>
+    </chart:RadCartesianChart>
 </Page>

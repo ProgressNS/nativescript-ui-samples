@@ -1,6 +1,6 @@
 <Page loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
-    <chart:CartesianChart id="pieChart">
-        <chart:CartesianChart.series>
+    <chart:RadCartesianChart id="pieChart">
+        <chart:RadCartesianChart.series>
             <chart:BubbleSeries  items="{{ bubbleCategoricalSource }}" bubbleScale="5" categoryProperty="Country" valueProperty="Amount" bubbleSizeProperty="Impact" >
                 <chart:BubbleSeries.horizontalAxis>
                     <chart:CategoricalAxis/>
@@ -9,6 +9,6 @@
                     <chart:LinearAxis />
                 </chart:BubbleSeries.verticalAxis>
             </chart:BubbleSeries>
-        </chart:CartesianChart.series>
-    </chart:CartesianChart>
+        </chart:RadCartesianChart.series>
+    </chart:RadCartesianChart>
 </Page>

@@ -1,8 +1,8 @@
 <Page loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
-    <chart:PieChart id="pieChart" width="300" height="300">
-        <chart:PieChart.series>
+    <chart:RadPieChart id="pieChart" width="300" height="300">
+        <chart:RadPieChart.series>
             <chart:PieSeries items="{{ pieSource }}" valueProperty="Amount">
             </chart:PieSeries>
-        </chart:PieChart.series>
-    </chart:PieChart>
+        </chart:RadPieChart.series>
+    </chart:RadPieChart>
 </Page>

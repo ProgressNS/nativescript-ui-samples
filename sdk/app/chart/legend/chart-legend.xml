@@ -1,6 +1,6 @@
 <Page loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
-    <chart:CartesianChart id="cartesianChart">
-        <chart:CartesianChart.series>
+    <chart:RadCartesianChart id="cartesianChart">
+        <chart:RadCartesianChart.series>
             <chart:LineSeries legendTitle="Line series" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">
 
             </chart:LineSeries>
@@ -9,19 +9,19 @@
             </chart:AreaSeries>
             <chart:BarSeries legendTitle="Bar series" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">
             </chart:BarSeries>
-        </chart:CartesianChart.series>
+        </chart:RadCartesianChart.series>
 
 
-        <chart:CartesianChart.horizontalAxis>
+        <chart:RadCartesianChart.horizontalAxis>
             <chart:CategoricalAxis/>
-        </chart:CartesianChart.horizontalAxis>
-        <chart:CartesianChart.verticalAxis>
+        </chart:RadCartesianChart.horizontalAxis>
+        <chart:RadCartesianChart.verticalAxis>
             <chart:LinearAxis/>
-        </chart:CartesianChart.verticalAxis>
+        </chart:RadCartesianChart.verticalAxis>
 
-                <chart:CartesianChart.legend>
-            <chart:LegendView position="Top" height="150" />
-        </chart:CartesianChart.legend>
+                <chart:RadCartesianChart.legend>
+            <chart:RadLegendView position="Top" height="150" />
+        </chart:RadCartesianChart.legend>
 
-    </chart:CartesianChart>
+    </chart:RadCartesianChart>
 </Page>
