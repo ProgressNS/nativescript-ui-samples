@@ -19,4 +19,6 @@ Steps to run the sample:
 
 > If you want to try the new RadListView component on Android you will need to manually add a reference to the RecyclerView component as described in the online documentation here: [Getting started with RadListView for NativeScript](http://docs.telerik.com/devtools/nativescript-ui/Controls/ListView/listview-getting-started)
 
-
+## Release notes
+For more information about releases, features and breaking changes you can check out the release notes section in the online documentation:
+[Telerik UI for NativeScript release notes](http://docs.telerik.com/devtools/nativescript-ui/release-notes)
