@@ -12,6 +12,8 @@ export interface Example {
     description: string;
     group: string;
     moduleName: string;
+    isControl? : boolean;
+    isExampleGroup?: boolean;
 }
 
 //////////////////////////////////////////////////////////
@@ -45,6 +47,10 @@ export class AppViewModel extends observable.Observable {
         this._examples.push({ Id: "14", title: "Ohlc series", group: "chart series", description: "", moduleName: "./chart/series/financial/ohlc-series" });
         this._examples.push({ Id: "15", title: "Scatter series", group: "chart series", description: "", moduleName: "./chart/series/scatter/scatter-series" });
 
+        this._examples.push({ Id: "35", title: "Annotations", group: "annotations", description: "Chart annotations", isExampleGroup: true });
+        this._examples.push({ Id: "36", title: "Grid line annotation", group: "annotations", description: "", moduleName: "./chart/annotations/grid-line" });
+        this._examples.push({ Id: "37", title: "Plot band annotation", group: "annotations", description: "", moduleName: "./chart/annotations/plot-band" });
+        
         this._examples.push({ Id: "16", title: "Legend", group: "chart series", description: "Chart legend", isExampleGroup: true });
         this._examples.push({ Id: "17", title: "Legend overview", group: "chart series", description: "", moduleName: "./chart/legend/chart-legend" });
 
