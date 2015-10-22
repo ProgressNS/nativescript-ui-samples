@@ -50,5 +50,8 @@ temp/
 .settings/
 node_modules/
 
+#VSCode
+.vscode/
+
 #OSX
 .DS_Store
