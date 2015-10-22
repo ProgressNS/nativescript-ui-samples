@@ -1,7 +1,8 @@
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    __.prototype = b.prototype;
+    d.prototype = new __();
 };
 var observable = require("data/observable");
 var AppViewModel = (function (_super) {
@@ -29,6 +30,9 @@ var AppViewModel = (function (_super) {
         this._examples.push({ Id: "13", title: "Candlestick series", group: "chart series", description: "", moduleName: "./chart/series/financial/candlestick-series" });
         this._examples.push({ Id: "14", title: "Ohlc series", group: "chart series", description: "", moduleName: "./chart/series/financial/ohlc-series" });
         this._examples.push({ Id: "15", title: "Scatter series", group: "chart series", description: "", moduleName: "./chart/series/scatter/scatter-series" });
+        this._examples.push({ Id: "35", title: "Annotations", group: "annotations", description: "Chart annotations", isExampleGroup: true });
+        this._examples.push({ Id: "36", title: "Grid line annotation", group: "annotations", description: "", moduleName: "./chart/annotations/grid-line" });
+        this._examples.push({ Id: "37", title: "Plot band annotation", group: "annotations", description: "", moduleName: "./chart/annotations/plot-band" });
         this._examples.push({ Id: "16", title: "Legend", group: "chart series", description: "Chart legend", isExampleGroup: true });
         this._examples.push({ Id: "17", title: "Legend overview", group: "chart series", description: "", moduleName: "./chart/legend/chart-legend" });
         this._examples.push({ Id: "18", title: "Styling", group: "chart series", description: "Chart styling", isExampleGroup: true });
