@@ -15,8 +15,9 @@ Steps to run the sample:
 
 1. cd sdk
 2. tns install
-3. tns run android (or tns run ios)
+3. tns run android --compileSdk=22 (or tns run ios)
 
+**Note about the `compileSdk` option: this is a temporary workaround for this preview version. It will be resolved in the next release. **
 > If you want to try the new RadListView component on Android you will need to manually add a reference to the RecyclerView component as described in the online documentation here: [Getting started with RadListView for NativeScript](http://docs.telerik.com/devtools/nativescript-ui/Controls/ListView/listview-getting-started)
 
 ## Release notes
