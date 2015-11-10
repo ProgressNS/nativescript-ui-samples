@@ -1,4 +1,4 @@
-<Page loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
+<Page loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://schemas.nativescript.org/tns.xsd">
 
     <GridLayout orientation="vertical" rows="auto, *">
         <Label text="Load on demand" cssClass="example-header"/>

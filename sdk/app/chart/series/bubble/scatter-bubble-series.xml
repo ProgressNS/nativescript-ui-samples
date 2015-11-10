@@ -1,4 +1,4 @@
-<Page loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
+<Page loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://schemas.nativescript.org/tns.xsd">
     <chart:RadCartesianChart id="pieChart">
         <chart:RadCartesianChart.series>
             <chart:ScatterBubbleSeries  items="{{ scatterBubbleSource }}" bubbleScale="5" xProperty="xValue" yProperty="yValue" bubbleSizeProperty="Impact" >
