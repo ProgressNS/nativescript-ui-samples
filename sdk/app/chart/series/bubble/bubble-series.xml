@@ -1,4 +1,4 @@
-<Page loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://schemas.nativescript.org/tns.xsd">
+<Page loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
     <chart:RadCartesianChart id="pieChart">
         <chart:RadCartesianChart.series>
             <chart:BubbleSeries  items="{{ bubbleCategoricalSource }}" bubbleScale="5" categoryProperty="Country" valueProperty="Amount" bubbleSizeProperty="Impact" >

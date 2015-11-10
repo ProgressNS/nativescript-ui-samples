@@ -1,4 +1,4 @@
-<Page loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://schemas.nativescript.org/tns.xsd">
+<Page loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
     <lv:RadListView items="{{ dataItems }}">
         <lv:RadListView.listViewLayout>
             <lv:ListViewGridLayout scrollDirection="Vertical" spanCount="3"/>
