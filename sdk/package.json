@@ -9,7 +9,7 @@
 		}
 	},
 	"dependencies": {
-		"nativescript-telerik-ui": "file:../../../nativescript-ui-debug-trial.tgz",
+		"nativescript-telerik-ui": "^0.1.2",
 		"tns-core-modules": "^1.5.0"
 	}
 }

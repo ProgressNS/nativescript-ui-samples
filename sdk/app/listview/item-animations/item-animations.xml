@@ -4,7 +4,7 @@
         <Label text="Swipe left or right to execute" cssClass="example-header"/>
         <lv:RadListView items="{{ dataItems }}" row="1" >
             <lv:RadListView.listViewLayout>
-                <lv:ListViewLinearLayout itemHeight="50" scrollDirection="Vertical" itemInsertAnimation="Fade" itemDeleteAnimation="Fade"/>
+                <lv:ListViewLinearLayout scrollDirection="Vertical" itemInsertAnimation="Fade" itemDeleteAnimation="Fade"/>
             </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
                 <StackLayout orientation="vertical">

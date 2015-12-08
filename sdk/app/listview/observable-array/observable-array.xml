@@ -4,7 +4,7 @@
         <Label text="Observable array" cssClass="example-header"/>
         <lv:RadListView items="{{ dataItems }}" row="1" >
             <lv:RadListView.listViewLayout>
-                <lv:ListViewLinearLayout itemHeight="50" scrollDirection="Vertical"/>
+                <lv:ListViewLinearLayout scrollDirection="Vertical"/>
             </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
                 <StackLayout orientation="vertical">

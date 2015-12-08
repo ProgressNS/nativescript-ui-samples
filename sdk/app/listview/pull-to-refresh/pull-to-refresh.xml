@@ -1,9 +1,9 @@
 <Page loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
     <GridLayout orientation="vertical" rows="auto, *">
         <Label text="Pull down to refresh" cssClass="example-header"/>
-        <lv:RadListView items="{{ dataItems }}" pullToRefresh="true" row="1" shouldRefreshOnPull="{{onShouldRefreshOnPull}}">
+        <lv:RadListView items="{{ dataItems }}" pullToRefresh="true" row="1" pullToRefreshInitiated="{{onShouldRefreshOnPull}}">
             <lv:RadListView.listViewLayout>
-                <lv:ListViewLinearLayout itemHeight="50" scrollDirection="Vertical"/>
+                <lv:ListViewLinearLayout scrollDirection="Vertical"/>
             </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
                 <StackLayout orientation="vertical">

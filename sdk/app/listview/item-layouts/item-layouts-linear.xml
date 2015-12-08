@@ -1,7 +1,7 @@
 <Page loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
     <lv:RadListView items="{{ dataItems }}" >
         <lv:RadListView.listViewLayout>
-            <lv:ListViewLinearLayout itemHeight="50" scrollDirection="Vertical"/>
+            <lv:ListViewLinearLayout scrollDirection="Vertical"/>
         </lv:RadListView.listViewLayout>
         <lv:RadListView.itemTemplate>
             <StackLayout orientation="vertical">
