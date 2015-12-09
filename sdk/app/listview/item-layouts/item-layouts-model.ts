@@ -4,7 +4,7 @@ import timer = require("timer");
 
 export class ViewModel {
 
-    private _items: ObservableArray;
+    private _items: ObservableArray<DataItem>;
     private _staggeredItems: ObservableArray;
     private _words = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"];
 
@@ -13,7 +13,7 @@ export class ViewModel {
 
     get dataItems() {
         if (!this._items) {
-            this._items = new ObservableArray();
+            this._items = new ObservableArray<DataItem>();
 
             for (var i = 0; i < 10; i++) {
                 this._items.push(new DataItem(i, "Item " + i, "This is item description."));

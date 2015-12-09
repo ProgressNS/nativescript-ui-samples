@@ -3,10 +3,10 @@
         <chart:RadCartesianChart.series>
             <chart:BarSeries items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="Amount">
                 <chart:BarSeries.horizontalAxis>
-                    <chart:LinearAxis labelTextColor="Red" />
+                    <chart:LinearAxis labelTextColor="Green" />
                 </chart:BarSeries.horizontalAxis>
                 <chart:BarSeries.verticalAxis>
-                        <chart:CategoricalAxis labelTextColor="#cb4b16" lineThickness="10" lineColor="#322338"/>
+                        <chart:CategoricalAxis labelTextColor="#cb4b16" labelSize="10" lineThickness="3" lineColor="Red"/>
                 </chart:BarSeries.verticalAxis>
             </chart:BarSeries>
         </chart:RadCartesianChart.series>

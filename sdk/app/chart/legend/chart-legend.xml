@@ -19,7 +19,7 @@
             <chart:LinearAxis/>
         </chart:RadCartesianChart.verticalAxis>
 
-                <chart:RadCartesianChart.legend>
+        <chart:RadCartesianChart.legend>
             <chart:RadLegendView position="Top" height="150" />
         </chart:RadCartesianChart.legend>
 

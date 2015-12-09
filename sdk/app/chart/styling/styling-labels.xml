@@ -1,0 +1,56 @@
+<Page loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
+
+        <chart:RadCartesianChart >
+            <chart:RadCartesianChart.horizontalAxis>
+                <chart:LinearAxis verticalLocation="Bottom" labelTextColor="Green" labelSize="10" lineColor="Red" lineThickness="3" /></chart:RadCartesianChart.horizontalAxis>
+            <chart:RadCartesianChart.verticalAxis>
+                <chart:CategoricalAxis horizontalLocation="Left" labelTextColor="Red" labelSize="10" lineColor="Red" lineThickness="3" /></chart:RadCartesianChart.verticalAxis>
+
+            <!--<chart:RadCartesianChart.grid>
+                <chart:RadCartesianChartGrid
+                    horizontalLinesVisible="true"
+                    verticalLinesVisible="true"
+                    horizontalStripLinesVisible="true"
+                    verticalStripLinesVisible="true"
+                    verticalStrokeColor="Red"
+                    horizontalStrokeColor="Green"
+                    horizontalStrokeWidth="1"
+                    verticalStrokeWidth="2"
+                    verticalStripLineColor="Yellow,Green"
+                    horizontalStripLineColor="Blue"/>
+           </chart:RadCartesianChart.grid>-->
+
+            <chart:RadCartesianChart.series>
+                
+                <chart:BarSeries legendTitle="Items" showLabels="true" seriesName="Bar" valueProperty="Amount" categoryProperty="Country" items="{{ categoricalSource }}">
+                    <chart:BarSeries.labelStyle>
+                        <chart:PointLabelStyle  margin="5" textFormat="item value %f" fontName="Helvetica" fontStyle="Bold" textColor="Yellow" fillColor="Red" textSize="14" strokeColor="Blue" />
+                    </chart:BarSeries.labelStyle>
+                </chart:BarSeries>
+
+                <chart:BarSeries legendTitle="Store scope" showLabels="true" seriesName="Bar" valueProperty="SecondVal" categoryProperty="Country" items="{{ categoricalSource }}">
+                    <chart:BarSeries.labelStyle>
+                        <chart:PointLabelStyle margin="10" textFormat="Store score %f"  fontStyle="Bold" textColor="Blue" fillColor="Yellow" textSize="14" strokeColor="Blue" />
+                    </chart:BarSeries.labelStyle>
+                </chart:BarSeries>
+           </chart:RadCartesianChart.series>
+
+            <chart:RadCartesianChart.legend>
+                <chart:RadLegendView position="Top" title="Financial data" height="150"/>
+            </chart:RadCartesianChart.legend>
+
+            <chart:RadCartesianChart.palettes>
+                <chart:Palette seriesName="Bar">
+                    <chart.Palette.entries>
+                        <chart:PaletteEntry fillColor="Red" strokeColor="#a1a5fa" strokeWidth="2"  />
+                        <chart:PaletteEntry fillColor="Green" strokeColor="#ff15aa" strokeWidth="2" />
+                        <chart:PaletteEntry fillColor="Blue" strokeColor="#bbff41" strokeWidth="2" />
+                        <chart:PaletteEntry fillColor="Red" strokeColor="#ffa121" strokeWidth="2" />
+                        <chart:PaletteEntry fillColor="Yellow" strokeColor="#1c45ff" strokeWidth="2" />
+                    </chart.Palette.entries>
+
+                </chart:Palette>
+            </chart:RadCartesianChart.palettes>
+
+        </chart:RadCartesianChart>
+</Page>

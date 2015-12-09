@@ -4,7 +4,7 @@ import timer = require("timer");
 
 export class ViewModel {
 
-    private _items: ObservableArray;
+    private _items: ObservableArray<DataItem>;
 
     constructor() {
         this.initDataItems();
@@ -19,7 +19,7 @@ export class ViewModel {
     }
 
     private initDataItems() {
-        this._items = new ObservableArray();
+        this._items = new ObservableArray<DataItem>();
 
         for (var i = 0; i < 10; i++) {
             this._items.push(new DataItem(i, "Item " + i, "This is item description."));

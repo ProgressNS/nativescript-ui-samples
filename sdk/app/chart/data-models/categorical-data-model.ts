@@ -6,11 +6,11 @@ export class CategoricalDataModel  {
 
     get categoricalSource() {
         return [
-            { Country: "Germany", Amount: Math.random() * 10 },
-            { Country: "France", Amount: Math.random() * 10 },
-            { Country: "Bulgaria", Amount: Math.random() * 10 },
-            { Country: "Spain", Amount: Math.random() * 10 },
-            { Country: "USA", Amount: Math.random() * 10 }
+            { Country: "Germany", Amount: Math.random() * 10,  SecondVal: Math.random() * 10 },
+            { Country: "France", Amount: Math.random() * 10 ,  SecondVal: Math.random() * 10 },
+            { Country: "Bulgaria", Amount: Math.random() * 10 ,  SecondVal: Math.random() * 10 },
+            { Country: "Spain", Amount: Math.random() * 10 ,  SecondVal: Math.random() * 10 },
+            { Country: "USA", Amount: Math.random() * 10 ,  SecondVal: Math.random() * 10 }
         ]
     }
 

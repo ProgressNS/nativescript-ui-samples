@@ -1,0 +1,29 @@
+<Page loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
+
+     <chart:RadCartesianChart >
+
+         <chart:RadCartesianChart.verticalAxis>
+             <chart:LinearAxis horizontalLocation="Left" labelTextColor="Green" labelSize="10" lineColor="Red" lineThickness="1" /></chart:RadCartesianChart.verticalAxis>
+         <chart:RadCartesianChart.horizontalAxis>
+             <chart:CategoricalAxis verticalLocation="Bottom" labelTextColor="Red" labelSize="10" lineColor="Red" lineThickness="1" /></chart:RadCartesianChart.horizontalAxis>
+         <chart:RadCartesianChart.series>
+
+         <chart:BubbleSeries
+              selectionMode="DataPoint"
+              seriesName="Bubble"
+              legendTitle="Bubbles"
+              bubbleScale="4"
+              valueProperty="Sales"
+              categoryProperty="Name"
+              bubbleSizeProperty="Sales"
+              items="{{ sourceItems }}">
+         </chart:BubbleSeries>
+
+         </chart:RadCartesianChart.series>
+
+         <chart:RadCartesianChart.legend>
+             <chart:RadLegendView position="Top" title="Financial data" height="150"/>
+         </chart:RadCartesianChart.legend>
+     </chart:RadCartesianChart>
+     
+     </Page>
