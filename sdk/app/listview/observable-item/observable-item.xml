@@ -1,0 +1,25 @@
+<Page loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
+
+    <GridLayout orientation="vertical" rows="auto, *, auto, auto">
+        <Label text="Observable array" cssClass="example-header"/>
+        <lv:RadListView items="{{ dataItems }}" row="1" >
+            <lv:RadListView.listViewLayout>
+                <lv:ListViewLinearLayout itemHeight="50" scrollDirection="Vertical"/>
+            </lv:RadListView.listViewLayout>
+            <lv:RadListView.itemTemplate>
+                <StackLayout orientation="vertical">
+                    <Label fontSize="20" text="{{ name }}"/>
+                    <Label fontSize="14" text="{{ description }}"/>
+                </StackLayout>
+            </lv:RadListView.itemTemplate>
+        </lv:RadListView>
+        <StackLayout row="2" orientation="horizontal">
+            <Button text="Add" tap="{{onAddItemClick}}"/>
+            <Button text="Del" tap="{{onRemoveItemClick}}"/>
+            <Button text="Update" tap="{{onUpdateItemClick}}"/>
+            <Button text="Reset" tap="{{onResetClick}}"/>
+        </StackLayout>
+        <Button row="3" text="Update 1 item" tap="{{onUpdatePropertyClick}}"/>
+    </GridLayout>
+
+</Page>

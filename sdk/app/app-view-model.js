@@ -55,6 +55,10 @@ var AppViewModel = (function (_super) {
         this._examples.push({ Id: "32", title: "Observable array", group: "listview features", description: "", moduleName: "./listview/observable-array/observable-array" });
         this._examples.push({ Id: "33", title: "Pull to refresh", group: "listview features", description: "", moduleName: "./listview/pull-to-refresh/pull-to-refresh" });
         this._examples.push({ Id: "34", title: "Swipe to execute", group: "listview features", description: "", moduleName: "./listview/swipe-execute/swipe-execute" });
+        this._examples.push({ Id: "35", title: "Observable item", group: "listview features", description: "", moduleName: "./listview/observable-item/observable-item" });
+        this._examples.push({ Id: "36", title: "Single selection", group: "listview features", description: "", moduleName: "./listview/listview-selection/single-selection" });
+        this._examples.push({ Id: "37", title: "Multiple selection", group: "listview features", description: "", moduleName: "./listview/listview-selection/multiple-selection" });
+        this._examples.push({ Id: "38", title: "Programmatic selection", group: "listview features", description: "", moduleName: "./listview/listview-selection/programmatic-selection" });
     };
     Object.defineProperty(AppViewModel.prototype, "examples", {
         get: function () {

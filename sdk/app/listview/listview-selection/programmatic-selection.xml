@@ -1,0 +1,30 @@
+<Page loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
+
+    <GridLayout orientation="vertical" rows="auto, *, auto">
+        <Label cssClass="example-header" text="Programmatic selection"/>
+        <lv:RadListView id="listView" itemDeselected="onItemDeselected" itemSelected="onItemSelected" items="{{ dataItems }}" multipleSelection="true" row="1" selectionBehavior="Press">
+            <lv:RadListView.listViewLayout>
+                <lv:ListViewLinearLayout itemHeight="50" scrollDirection="Vertical"/>
+            </lv:RadListView.listViewLayout>
+            <lv:RadListView.itemTemplate>
+                <StackLayout orientation="vertical">
+                    <Label fontSize="20" text="{{ itemName }}"/>
+                    <Label fontSize="14" text="{{ itemDescription }}"/>
+                </StackLayout>
+            </lv:RadListView.itemTemplate>
+        </lv:RadListView>
+        <StackLayout orientation="vertical" row="2">
+            <Label id="txtSelection" textWrap="true"/>
+            <Button tap="onSelectAllTap" text="Select all"/>
+            <Button tap="onDeselectAllTap" text="Deselect all"/>
+            <GridLayout columns="auto, *">
+                <Button tap="onSelectItemAtTap" text="Select item at: "/>
+                <TextField col="1" id="txtSelectItemIndex"/>
+            </GridLayout>
+            <GridLayout columns="auto, *">
+                <Button tap="onDeselectItemAtTap" text="Deselect item at: "/>
+                <TextField id="txtDeselectItemIndex" col="1"/>
+            </GridLayout>
+        </StackLayout>
+    </GridLayout>
+</Page>
