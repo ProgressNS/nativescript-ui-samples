@@ -1,5 +1,9 @@
 <Page navigatedTo="onNavigatedTo" xmlns:drawer="nativescript-telerik-ui/sidedrawer" xmlns="http://www.nativescript.org/tns.xsd">
-  <drawer:RadSideDrawer id="sideDrawer">
+  <drawer:RadSideDrawer id="sideDrawer"
+                        drawerClosed="onDrawerClosed"
+                        drawerClosing="onDrawerClosing"
+                        drawerOpened="onDrawerOpened"
+                        drawerOpening="onDrawerOpening>
     <drawer:RadSideDrawer.mainContent>
         <StackLayout>
             <Label text="Drawer notification: "/>

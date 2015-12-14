@@ -1,9 +1,17 @@
-var __extends = (this && this.__extends) || function (d, b) {
+var __extends = this.__extends || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    __.prototype = b.prototype;
+    d.prototype = new __();
 };
+
 var observable = require("data/observable");
+var view = require("ui/core/view");
+var localSettings = require("application-settings");
+var platform = require("platform");
+var appModule = require("application");
+var types = require("utils/types");
+
 var AppViewModel = (function (_super) {
     __extends(AppViewModel, _super);
     function AppViewModel() {
@@ -51,20 +59,22 @@ var AppViewModel = (function (_super) {
         this._examples.push({ Id: "35", title: "Getting started", group: "sidedrawer features", description: "", moduleName: "./sidedrawer/getting-started/getting-started" });
         this._examples.push({ Id: "36", title: "Position", group: "sidedrawer features", description: "", moduleName: "./sidedrawer/position/drawer-position" });
         this._examples.push({ Id: "37", title: "Transitions", group: "sidedrawer features", description: "", moduleName: "./sidedrawer/transitions/drawer-transitions" });
-        this._examples.push({ Id: "38", title: "ListView", group: "controls", description: "Telerik ListView for NativeScript", isControl: true, moduleName: "" });
-        this._examples.push({ Id: "39", title: "Item animations", group: "listview features", description: "", moduleName: "./listview/item-animations/item-animations" });
-        this._examples.push({ Id: "40", title: "Item layouts: linear", group: "listview features", description: "", moduleName: "./listview/item-layouts/item-layouts-linear" });
-        this._examples.push({ Id: "41", title: "Item layouts: grid", group: "listview features", description: "", moduleName: "./listview/item-layouts/item-layouts-grid" });
-        this._examples.push({ Id: "42", title: "Item layouts: staggered", group: "listview features", description: "", moduleName: "./listview/item-layouts/item-layouts-staggered" });
-        this._examples.push({ Id: "43", title: "Item reorder", group: "listview features", description: "", moduleName: "./listview/item-reorder/item-reorder" });
-        this._examples.push({ Id: "44", title: "Load on demand", group: "listview features", description: "", moduleName: "./listview/load-on-demand/load-on-demand" });
-        this._examples.push({ Id: "45", title: "Observable array", group: "listview features", description: "", moduleName: "./listview/observable-array/observable-array" });
-        this._examples.push({ Id: "46", title: "Pull to refresh", group: "listview features", description: "", moduleName: "./listview/pull-to-refresh/pull-to-refresh" });
-        this._examples.push({ Id: "47", title: "Swipe to execute", group: "listview features", description: "", moduleName: "./listview/swipe-execute/swipe-execute" });
-        this._examples.push({ Id: "48", title: "Observable item", group: "listview features", description: "", moduleName: "./listview/observable-item/observable-item" });
-        this._examples.push({ Id: "49", title: "Single selection", group: "listview features", description: "", moduleName: "./listview/listview-selection/single-selection" });
-        this._examples.push({ Id: "50", title: "Multiple selection", group: "listview features", description: "", moduleName: "./listview/listview-selection/multiple-selection" });
-        this._examples.push({ Id: "51", title: "Programmatic selection", group: "listview features", description: "", moduleName: "./listview/listview-selection/programmatic-selection" });
+        this._examples.push({ Id: "38", title: "Events", group: "sidedrawer features", description: "", moduleName: "./sidedrawer/callbacks/drawer-callbacks" });
+
+        this._examples.push({ Id: "39", title: "ListView", group: "controls", description: "Telerik ListView for NativeScript", isControl: true, moduleName: "" });
+        this._examples.push({ Id: "40", title: "Item animations", group: "listview features", description: "", moduleName: "./listview/item-animations/item-animations" });
+        this._examples.push({ Id: "41", title: "Item layouts: linear", group: "listview features", description: "", moduleName: "./listview/item-layouts/item-layouts-linear" });
+        this._examples.push({ Id: "42", title: "Item layouts: grid", group: "listview features", description: "", moduleName: "./listview/item-layouts/item-layouts-grid" });
+        this._examples.push({ Id: "43", title: "Item layouts: staggered", group: "listview features", description: "", moduleName: "./listview/item-layouts/item-layouts-staggered" });
+        this._examples.push({ Id: "44", title: "Item reorder", group: "listview features", description: "", moduleName: "./listview/item-reorder/item-reorder" });
+        this._examples.push({ Id: "45", title: "Load on demand", group: "listview features", description: "", moduleName: "./listview/load-on-demand/load-on-demand" });
+        this._examples.push({ Id: "46", title: "Observable array", group: "listview features", description: "", moduleName: "./listview/observable-array/observable-array" });
+        this._examples.push({ Id: "47", title: "Pull to refresh", group: "listview features", description: "", moduleName: "./listview/pull-to-refresh/pull-to-refresh" });
+        this._examples.push({ Id: "48", title: "Swipe to execute", group: "listview features", description: "", moduleName: "./listview/swipe-execute/swipe-execute" });
+        this._examples.push({ Id: "49", title: "Observable item", group: "listview features", description: "", moduleName: "./listview/observable-item/observable-item" });
+        this._examples.push({ Id: "50", title: "Single selection", group: "listview features", description: "", moduleName: "./listview/listview-selection/single-selection" });
+        this._examples.push({ Id: "51", title: "Multiple selection", group: "listview features", description: "", moduleName: "./listview/listview-selection/multiple-selection" });
+        this._examples.push({ Id: "52", title: "Programmatic selection", group: "listview features", description: "", moduleName: "./listview/listview-selection/programmatic-selection" });
     };
     Object.defineProperty(AppViewModel.prototype, "examples", {
         get: function () {

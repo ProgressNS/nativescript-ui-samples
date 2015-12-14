@@ -1,10 +1,27 @@
 var callbacksModelModule = require("./drawer-callbacks-model");
-var frameModule = require("ui/frame");
+var drawerCallbacksModel;
 function onNavigatedTo(args) {
     var page = args.object;
-    var drawerCallbacksModel = new callbacksModelModule.DrawerCallbacksModel();
+    drawerCallbacksModel = new callbacksModelModule.DrawerCallbacksModel();
     page.bindingContext = drawerCallbacksModel;
-    var drawer = frameModule.topmost().getViewById("sideDrawer");
-    drawer.delegate = drawerCallbacksModel;
 }
 exports.onNavigatedTo = onNavigatedTo;
+function pageLoaded(args) {
+}
+exports.pageLoaded = pageLoaded;
+function onDrawerClosed(args) {
+    drawerCallbacksModel.onDrawerClosed();
+}
+exports.onDrawerClosed = onDrawerClosed;
+function onDrawerClosing(args) {
+    drawerCallbacksModel.onDrawerClosing();
+}
+exports.onDrawerClosing = onDrawerClosing;
+function onDrawerOpened(args) {
+    drawerCallbacksModel.onDrawerOpened();
+}
+exports.onDrawerOpened = onDrawerOpened;
+function onDrawerOpening(args) {
+    drawerCallbacksModel.onDrawerClosing();
+}
+exports.onDrawerOpening = onDrawerOpening;
