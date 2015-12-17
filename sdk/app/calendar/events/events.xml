@@ -1,0 +1,13 @@
+<Page xmlns:rc="nativescript-telerik-ui/calendar" xmlns="http://www.nativescript.org/tns.xsd">
+	<GridLayout orientation="vertical" rows="auto, *, auto">
+        <Label text="GettingStarted" cssClass="example-header"/>
+        <rc:RadCalendar id="calendar" 
+			dateSelected="onDateSelected"
+			dateDeselected="onDateDeselected"
+			navigatedToDate="onNavigatedToDate"
+			navigatingToDateStarted="onNavigatingToDateStarted"
+			viewModeChanged="onViewModeChanged"
+			height="400"/>
+			
+    </GridLayout>
+</Page>

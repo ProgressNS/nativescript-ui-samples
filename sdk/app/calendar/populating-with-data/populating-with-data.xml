@@ -1,0 +1,9 @@
+<Page loaded="onPageLoaded" xmlns:rc="nativescript-telerik-ui/calendar" xmlns="http://www.nativescript.org/tns.xsd">
+	<GridLayout orientation="vertical" rows="auto, *, auto">
+        <Label text="PopulatingWithData" cssClass="example-header"/>
+        <rc:RadCalendar id="calendar" 
+			eventSource="{{ source }}"
+			height="400"/>
+			
+    </GridLayout>
+</Page>

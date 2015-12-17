@@ -2,14 +2,14 @@
 	"nativescript": {
 		"id": "org.nativescript.sdk",
 		"tns-android": {
-			"version": "1.5.0"
+			"version": "1.5.1"
 		},
 		"tns-ios": {
-			"version": "1.5.0"
+			"version": "1.5.1"
 		}
 	},
 	"dependencies": {
-		"nativescript-telerik-ui": "^0.1.3",
+		"nativescript-telerik-ui": "file:../../../libraries/nativescript-ui-debug-trial.tgz",
 		"tns-core-modules": "^1.5.0"
 	}
 }

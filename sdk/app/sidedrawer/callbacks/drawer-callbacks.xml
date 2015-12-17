@@ -3,7 +3,7 @@
                         drawerClosed="onDrawerClosed"
                         drawerClosing="onDrawerClosing"
                         drawerOpened="onDrawerOpened"
-                        drawerOpening="onDrawerOpening>
+                        drawerOpening="onDrawerOpening">
     <drawer:RadSideDrawer.mainContent>
         <StackLayout>
             <Label text="Drawer notification: "/>

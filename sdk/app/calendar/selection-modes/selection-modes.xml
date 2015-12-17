@@ -1,0 +1,16 @@
+<Page xmlns:rc="nativescript-telerik-ui/calendar" loaded="onPageLoaded" xmlns="http://www.nativescript.org/tns.xsd">
+	<GridLayout orientation="vertical" rows="auto, *, auto">
+        <Label text="SelectionMode setting" cssClass="example-header"/>
+        <rc:RadCalendar id="calendar" 
+			selectionMode="{{ SelectionMode }}"
+			row="1"
+			height="400"/>
+			
+		<StackLayout row="2">
+			<Button text="None" tap="onNoneSetSelectionModeTap"/>
+			<Button text="Single" tap="onSingleSetSelectionModeTap"/>
+			<Button text="Multiple" tap="onMultipleSetSelectionModeTap"/>
+			<Button text="Range" tap="onRangeSetSelectionModeTap"/>
+    	</StackLayout>
+    </GridLayout>
+</Page>
