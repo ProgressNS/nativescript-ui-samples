@@ -8,7 +8,7 @@
                 </chart:BarSeries.horizontalAxis>
                 <chart:BarSeries.verticalAxis>
                     <chart:LinearAxis id="verBarAxis"/>
-                </chart:BarSeries.verticalAxis >
+                </chart:BarSeries.verticalAxis>
             </chart:BarSeries>
         </chart:RadCartesianChart.series>
 
