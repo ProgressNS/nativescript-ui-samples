@@ -22,7 +22,7 @@ export class ViewModel {
 
             }
             var listView = args.object;
-            listView.didRefreshOnPull();
+            listView.notifyPullToRefreshFinished();
         }, 1000);
 
     }
