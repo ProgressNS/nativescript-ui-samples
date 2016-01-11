@@ -1,15 +1,14 @@
 <Page loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
     <chart:RadCartesianChart id="cartesianChart">
-
-		<chart:RadCartesianChart.series>
+        <chart:RadCartesianChart.series>
             <chart:AreaSeries items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="Amount">
                 <chart:BarSeries.horizontalAxis>
                     <chart:CategoricalAxis id="horBarAxis"/>
                 </chart:BarSeries.horizontalAxis>
                 <chart:BarSeries.verticalAxis>
                     <chart:LinearAxis id="verBarAxis"/>
-                </chart:BarSeries.verticalAxis >
-            </chart:AreaSeries>
+                </chart:BarSeries.verticalAxis>
+             </chart:AreaSeries>
         </chart:RadCartesianChart.series>
 
         <chart:RadCartesianChart.annotations>
@@ -17,6 +16,5 @@
 			<chart:ChartGridLineAnnotation axisId="verBarAxis" hidden="false" value="4.5" strokeWidth="10" strokeColor="Blue"  strokeDashPattern="10,20,5,20" />
             <chart:ChartGridLineAnnotation axisId="horBarAxis" value="Bulgaria" zPosition="AboveSeries" strokeWidth="5"  strokeDashPattern="5,10,5,10,1"/>
         </chart:RadCartesianChart.annotations>
-
-    </chart:RadCartesianChart>
+   </chart:RadCartesianChart>
 </Page>
