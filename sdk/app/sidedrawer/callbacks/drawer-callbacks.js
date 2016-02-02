@@ -22,6 +22,6 @@ function onDrawerOpened(args) {
 }
 exports.onDrawerOpened = onDrawerOpened;
 function onDrawerOpening(args) {
-    drawerCallbacksModel.onDrawerClosing();
+    drawerCallbacksModel.onDrawerOpening();
 }
 exports.onDrawerOpening = onDrawerOpening;

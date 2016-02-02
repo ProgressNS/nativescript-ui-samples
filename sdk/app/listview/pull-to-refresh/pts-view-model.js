@@ -18,7 +18,7 @@ var ViewModel = (function () {
                 that.get()._items.splice(0, 0, new DataItem(that.get()._items.length, "Item " + that.get()._items.length, "This is item description."));
             }
             var listView = args.object;
-            listView.didRefreshOnPull();
+            listView.notifyPullToRefreshFinished();
         }, 1000);
     };
     ViewModel.prototype.initDataItems = function () {

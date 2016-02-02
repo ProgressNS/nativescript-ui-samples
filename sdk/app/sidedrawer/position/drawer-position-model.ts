@@ -10,22 +10,31 @@ export class DrawerPositionModel {
 
     public onRightLocationTap(args) {
         this.setDrawerLocation(drawerModule.SideDrawerLocation.Right);
+        this.openDrawer();
     }
 
     public onLeftLocationTap(args) {
         this.setDrawerLocation(drawerModule.SideDrawerLocation.Left);
+        this.openDrawer();
     }
 
     public onBottomLocationTap(args) {
         this.setDrawerLocation(drawerModule.SideDrawerLocation.Bottom);
+        this.openDrawer();
     }
 
     public onTopLocationTap(args) {
         this.setDrawerLocation(drawerModule.SideDrawerLocation.Top);
+        this.openDrawer();
     }
 
     private setDrawerLocation(location: drawerModule.SideDrawerLocation) {
         var sideDrawer: drawerModule.RadSideDrawer = frameModule.topmost().getViewById("sideDrawer");
         sideDrawer.drawerLocation = location;
+    }
+    
+    private openDrawer() {
+         var sideDrawer: drawerModule.RadSideDrawer = frameModule.topmost().getViewById("sideDrawer");
+         sideDrawer.showDrawer();
     }
 }

@@ -1,30 +1,39 @@
 <Page loaded="onPageLoaded" xmlns:drawer="nativescript-telerik-ui/sidedrawer" xmlns="http://www.nativescript.org/tns.xsd">
   <drawer:RadSideDrawer id="sideDrawer">
+  <drawer:RadSideDrawer.drawerTransition>
+    <drawer:RevealTransition/>
+  </drawer:RadSideDrawer.drawerTransition>
     <drawer:RadSideDrawer.mainContent>
-        <StackLayout>
-            <Label text="{{transitionsDescription}}"/>
-            <ScrollView>
+        <StackLayout cssClass="mainContent">
+            <Label text="{{drawerPositionText}}" textWrap="true" cssClass="drawerContentText"/>
+              <ScrollView>
                 <StackLayout>
-                    <Button text="Left" tap="{{ onLeftLocationTap }}"/>
-                    <Button text="Top" tap="{{ onTopLocationTap }}"/>
-                    <Button text="Right" tap="{{ onRightLocationTap }}"/>
-                    <Button text="Bottom" tap="{{ onBottomLocationTap }}"/>
+                    <Button text="Left" tap="{{ onLeftLocationTap }}" cssClass="drawerContentButton"/>
+                    <Button text="Top" tap="{{ onTopLocationTap }}" cssClass="drawerContentButton"/>
+                    <Button text="Right" tap="{{ onRightLocationTap }}" cssClass="drawerContentButton"/>
+                    <Button text="Bottom" tap="{{ onBottomLocationTap }}" cssClass="drawerContentButton"/>
                 </StackLayout>
             </ScrollView>
         </StackLayout>
     </drawer:RadSideDrawer.mainContent>
     <drawer:RadSideDrawer.drawerContent>
-        <StackLayout cssClass="drawerContent">
-          <StackLayout cssClass="headerContent">
-            <Label text="Header"/>
-          </StackLayout>
-          <StackLayout cssClass="drawerMenuContent">
-            <Label text="Item 1"/>
-            <Label text="Item 2"/>
-            <Label text="Item 3"/>
-            <Label text="Item 4"/>
-          </StackLayout>
+      <StackLayout cssClass="drawerContent">
+        <StackLayout cssClass="headerContent">
+          <Label text="Navigation Menu"/>
         </StackLayout>
+        <ScrollView>
+          <StackLayout cssClass="drawerMenuContent">
+            <Label text="Primary" cssClass="drawerSectionHeader" />
+            <Label text="Social" cssClass="drawerSectionItem" />
+            <Label text="Promotions" cssClass="drawerSectionItem" />
+            <Label text="Labels" cssClass="drawerSectionHeader" />
+            <Label text="Important" cssClass="drawerSectionItem" />
+            <Label text="Starred" cssClass="drawerSectionItem" />
+            <Label text="Sent Mail" cssClass="drawerSectionItem" />
+            <Label text="Drafts" cssClass="drawerSectionItem" />
+          </StackLayout>
+        </ScrollView>
+      </StackLayout>
     </drawer:RadSideDrawer.drawerContent>
   </drawer:RadSideDrawer>
 </Page>
