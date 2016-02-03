@@ -19,7 +19,7 @@ var ViewModel = (function () {
                 that.get()._items.push(new DataItem(that.get()._items.length, "Item " + that.get()._items.length, "This is item description."));
             }
             var listView = args.object;
-            listView.didLoadDataOnDemand();
+            listView.notifyLoadOnDemandFinished();
         }, 1000);
         args.returnValue = true;
     };
