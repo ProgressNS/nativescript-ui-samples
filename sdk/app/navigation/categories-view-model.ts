@@ -188,8 +188,10 @@ export class NavigationViewModel extends observableModule.Observable {
 
         annotationsExample = new NavigationItem("Plot band", "./chart/annotations/plot-band", annotationsRoot);
         annotationsRoot.subItems.push(annotationsExample);
+  
+        annotationsExample = new NavigationItem("Band line", "./chart/annotations/band-line", annotationsRoot);
+        annotationsRoot.subItems.push(annotationsExample);
     }
-
 
     private buildListViewExamples(currentParent: NavigationItem) {
         var currentItem = new NavigationItem("ListView", undefined, currentParent);
