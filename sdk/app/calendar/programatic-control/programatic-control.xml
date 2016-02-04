@@ -1,4 +1,4 @@
-<Page xmlns:rc="nativescript-telerik-ui/calendar" loaded="onPageLoaded" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:rc="nativescript-telerik-ui/calendar" loaded="onPageLoaded" xmlns="http://www.nativescript.org/tns.xsd">
 	<GridLayout orientation="vertical" rows="auto, *, auto">
         <Label text="Programatic control" cssClass="example-header"/>
         <rc:RadCalendar id="calendar" 
@@ -11,4 +11,4 @@
 			<Button text="go to date" tap="onGoToDateTap"/>
     	</StackLayout>
     </GridLayout>
-</Page>
+</navigation:ExamplePage>
