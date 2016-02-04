@@ -1,5 +1,7 @@
-<Page loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
-
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
+    <navigation:ExamplePage.actionBar>
+        <ActionBar title="{{ exampleContext.title }}"/>
+    </navigation:ExamplePage.actionBar>
     <GridLayout orientation="vertical" rows="auto, *">
         <Label text="Swipe left or right to execute" cssClass="example-header"/>
         <lv:RadListView items="{{ dataItems }}" row="1" selectionBehavior="None" onItemSwipeProgressEnded="{{onSwipeCellFinished}}" itemTap="{{onItemClick}}" onItemSwipeProgressStarted="{{onSwipeCellStarted}}" onItemSwipeProgressChanged="{{onCellSwiping}}" swipeCells="true">
@@ -21,4 +23,4 @@
         </lv:RadListView>
     </GridLayout>
 
-</Page>
+</navigation:ExamplePage>

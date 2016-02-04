@@ -72,6 +72,29 @@ export class NavigationViewModel extends observableModule.Observable {
         this.buildChartExamples(parent);
         this.buildListViewExamples(parent);
         this.buildSideDrawerExamples(parent);
+        this.buildCalendarExamples(parent);
+    }
+
+    private buildCalendarExamples(currentParent: NavigationItem) {
+        var calendarRoot = new NavigationItem("Calendar", undefined, currentParent);
+        currentParent.subItems.push(calendarRoot);
+        var calendarExample = new NavigationItem("Getting started", "./calendar/getting-started/getting-started", calendarRoot);
+        calendarRoot.subItems.push(calendarExample);
+
+        calendarExample = new NavigationItem("Events", "./calendar/events/events", calendarRoot);
+        calendarRoot.subItems.push(calendarExample);
+
+        calendarExample = new NavigationItem("Populating with data", "./calendar/populating-with-data/populating-with-data", calendarRoot);
+        calendarRoot.subItems.push(calendarExample);
+
+        calendarExample = new NavigationItem("Programatic control", "./calendar/programatic-control/programatic-control", calendarRoot);
+        calendarRoot.subItems.push(calendarExample);
+
+        calendarExample = new NavigationItem("Selection modes", "./calendar/selection-modes/selection-modes", calendarRoot);
+        calendarRoot.subItems.push(calendarExample);
+
+        calendarExample = new NavigationItem("View modes", "./calendar/view-modes/view-modes", calendarRoot);
+        calendarRoot.subItems.push(calendarExample);
     }
 
     private buildChartExamples(currentParent: NavigationItem) {
@@ -162,7 +185,7 @@ export class NavigationViewModel extends observableModule.Observable {
         chartRoot.subItems.push(annotationsRoot);
         var annotationsExample = new NavigationItem("Grid line", "./chart/annotations/grid-line", annotationsRoot);
         annotationsRoot.subItems.push(annotationsExample);
-        
+
         annotationsExample = new NavigationItem("Plot band", "./chart/annotations/plot-band", annotationsRoot);
         annotationsRoot.subItems.push(annotationsExample);
     }
@@ -261,7 +284,8 @@ export class NavigationViewModel extends observableModule.Observable {
         } else {
             if (tappedItem.module) {
                 frameModule.topmost().navigate({
-                    moduleName: tappedItem.module
+                    moduleName: tappedItem.module,
+                    context: tappedItem
                 });
             }
         }

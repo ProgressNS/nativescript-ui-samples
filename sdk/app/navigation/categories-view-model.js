@@ -83,6 +83,23 @@ var NavigationViewModel = (function (_super) {
         this.buildChartExamples(parent);
         this.buildListViewExamples(parent);
         this.buildSideDrawerExamples(parent);
+        this.buildCalendarExamples(parent);
+    };
+    NavigationViewModel.prototype.buildCalendarExamples = function (currentParent) {
+        var calendarRoot = new NavigationItem("Calendar", undefined, currentParent);
+        currentParent.subItems.push(calendarRoot);
+        var calendarExample = new NavigationItem("Getting started", "./calendar/getting-started/getting-started", calendarRoot);
+        calendarRoot.subItems.push(calendarExample);
+        calendarExample = new NavigationItem("Events", "./calendar/events/events", calendarRoot);
+        calendarRoot.subItems.push(calendarExample);
+        calendarExample = new NavigationItem("Populating with data", "./calendar/populating-with-data/populating-with-data", calendarRoot);
+        calendarRoot.subItems.push(calendarExample);
+        calendarExample = new NavigationItem("Programatic control", "./calendar/programatic-control/programatic-control", calendarRoot);
+        calendarRoot.subItems.push(calendarExample);
+        calendarExample = new NavigationItem("Selection modes", "./calendar/selection-modes/selection-modes", calendarRoot);
+        calendarRoot.subItems.push(calendarExample);
+        calendarExample = new NavigationItem("View modes", "./calendar/view-modes/view-modes", calendarRoot);
+        calendarRoot.subItems.push(calendarExample);
     };
     NavigationViewModel.prototype.buildChartExamples = function (currentParent) {
         var chartRoot = new NavigationItem("Chart", undefined, currentParent);
@@ -139,9 +156,9 @@ var NavigationViewModel = (function (_super) {
         behaviorsRoot.subItems.push(interactionExample);
         var axesRoot = new NavigationItem("Axes", undefined, chartRoot);
         chartRoot.subItems.push(axesRoot);
-        var axesExample = new NavigationItem("Customization", "./chart/axes/axes-customization", behaviorsRoot);
+        var axesExample = new NavigationItem("Customization", "./chart/axes/customization/axes-customization", behaviorsRoot);
         axesRoot.subItems.push(axesExample);
-        axesExample = new NavigationItem("Multiple axes", "./chart/axes/multiple-axes", behaviorsRoot);
+        axesExample = new NavigationItem("Multiple axes", "./chart/axes/multiple/multiple-axes", behaviorsRoot);
         axesRoot.subItems.push(axesExample);
         var annotationsRoot = new NavigationItem("Annotations", undefined, chartRoot);
         chartRoot.subItems.push(annotationsRoot);
@@ -223,7 +240,8 @@ var NavigationViewModel = (function (_super) {
         else {
             if (tappedItem.module) {
                 frameModule.topmost().navigate({
-                    moduleName: tappedItem.module
+                    moduleName: tappedItem.module,
+                    context: tappedItem
                 });
             }
         }

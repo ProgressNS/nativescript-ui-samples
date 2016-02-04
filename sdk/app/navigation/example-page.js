@@ -7,8 +7,16 @@ var pageModule = require("ui/page");
 var ExamplePage = (function (_super) {
     __extends(ExamplePage, _super);
     function ExamplePage() {
-        _super.apply(this, arguments);
+        _super.call(this);
+        var that = new WeakRef(this);
+        this.on("navigatingTo", function (args) {
+            that.get()._associatedExampleMeta = args.context;
+        });
     }
+    ExamplePage.prototype._onBindingContextChanged = function (oldValue, newValue) {
+        newValue["exampleContext"] = this._associatedExampleMeta;
+        _super.prototype._onBindingContextChanged.call(this, oldValue, newValue);
+    };
     return ExamplePage;
 })(pageModule.Page);
 exports.ExamplePage = ExamplePage;
