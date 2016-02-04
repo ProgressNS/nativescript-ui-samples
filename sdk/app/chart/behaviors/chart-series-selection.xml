@@ -1,4 +1,4 @@
-<Page loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
 
     <chart:RadCartesianChart id="SelectionChart" selectionMode="Multiple" >
         
@@ -23,4 +23,4 @@
 
     </chart:RadCartesianChart>
     
- </Page>
+ </navigation:ExamplePage>

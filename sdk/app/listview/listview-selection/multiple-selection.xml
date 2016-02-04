@@ -1,4 +1,4 @@
-<Page loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
 
     <GridLayout orientation="vertical" rows="auto, *, auto" >
         <Label text="Multiple selection" cssClass="example-header"/>
@@ -16,4 +16,4 @@
         <Label id="txtSelection" textWrap="true" row="2"/>
     </GridLayout>
 
-</Page>
+</navigation:ExamplePage>

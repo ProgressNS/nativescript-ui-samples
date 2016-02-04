@@ -1,4 +1,4 @@
-<Page loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
     <GridLayout orientation="vertical" rows="auto, *">
         <Label text="Pull down to refresh" cssClass="example-header"/>
         <lv:RadListView items="{{ dataItems }}" pullToRefresh="true" row="1" pullToRefreshInitiated="{{onShouldRefreshOnPull}}">
@@ -13,4 +13,4 @@
             </lv:RadListView.itemTemplate>
         </lv:RadListView>
     </GridLayout>
-</Page>
+</navigation:ExamplePage>

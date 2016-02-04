@@ -1,0 +1,25 @@
+<Page 
+    xmlns="http://www.nativescript.org/tns.xsd"
+    xmlns:lv="nativescript-telerik-ui/listview"
+    loaded="pageLoaded"
+    navigatingFrom="onPageNavigatingFrom">
+    <Page.actionBar>
+        <ActionBar title="{{ currentParent.title }}">
+            <ActionBar.navigationButton>
+                <NavigationButton ios:text="Back" android.systemIcon="ic_menu_back"/>
+             </ActionBar.navigationButton>
+        </ActionBar>
+    </Page.actionBar>
+    <GridLayout rows="auto, *">
+        <lv:RadListView row="1" items="{{ _currentSubItems }}" itemTap="{{onNavigationItemTap}}" >
+            <lv:RadListView.listViewLayout>
+                <lv:ListViewLinearLayout scrollDirection="Vertical"/>
+            </lv:RadListView.listViewLayout>
+            <lv:RadListView.itemTemplate>
+                <StackLayout>
+                    <Label text="{{ title }}" textWrap="true" margin="8" />
+                </StackLayout>   
+            </lv:RadListView.itemTemplate>
+        </lv:RadListView>
+    </GridLayout>
+</Page>
