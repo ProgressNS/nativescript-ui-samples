@@ -1,6 +1,7 @@
 import categoriesViewModel = require("./categories-view-model");
 import frameModule = require("ui/frame");
 import actionBarModule = require("ui/action-bar");
+import applicationModule = require("application");
 
 var dataModel = categoriesViewModel.navigationModel;
 
@@ -21,4 +22,8 @@ export function onPageNavigatingFrom(args) {
     if (args.isBackNavigation && (dataModel.canMoveBack() === true)) {
         dataModel.moveBack();
     }
+}
+
+export function onBackTap(args){
+    frameModule.topmost().goBack();
 }

@@ -5,6 +5,8 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var pageModule = require("ui/page");
 var actionBarModule = require("ui/action-bar");
+var applicationModule = require("application");
+var frameModule = require("ui/frame");
 var ExamplePage = (function (_super) {
     __extends(ExamplePage, _super);
     function ExamplePage() {
@@ -13,13 +15,18 @@ var ExamplePage = (function (_super) {
         this.on("navigatingTo", function (args) {
             that.get()._associatedExampleMeta = args.context;
         });
-        var customActionBar = new actionBarModule.ActionBar();
-        this.actionBar = customActionBar;
     }
-    ExamplePage.prototype._onBindingContextChanged = function (oldValue, newValue) {
-        newValue["exampleContext"] = this._associatedExampleMeta;
-        this.actionBar.title = this._associatedExampleMeta.title;
-        _super.prototype._onBindingContextChanged.call(this, oldValue, newValue);
+    ExamplePage.prototype.onLoaded = function (args) {
+        _super.prototype.onLoaded.call(this, args);
+        if (applicationModule.android) {
+            var actionBar = new actionBarModule.ActionBar();
+            actionBar.title = this._associatedExampleMeta.title;
+            var navigationButton = new actionBarModule.NavigationButton();
+            navigationButton.on("tap", function (args) { frameModule.topmost().goBack(); });
+            navigationButton.icon = "res://ic_menu_back";
+            actionBar.navigationButton = navigationButton;
+            this.actionBar = actionBar;
+        }
     };
     return ExamplePage;
 })(pageModule.Page);

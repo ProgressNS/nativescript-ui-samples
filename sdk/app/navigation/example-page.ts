@@ -1,5 +1,7 @@
 import pageModule = require("ui/page");
 import actionBarModule = require("ui/action-bar");
+import applicationModule = require("application");
+import frameModule = require("ui/frame");
 
 export class ExamplePage extends pageModule.Page {
 
@@ -11,20 +13,22 @@ export class ExamplePage extends pageModule.Page {
         this.on("navigatingTo", function(args) {
             that.get()._associatedExampleMeta = args.context;
         });
-        var customActionBar = new actionBarModule.ActionBar();
-        // var bindingOptions = {
-        //     sourceProperty: "bindingContext.exampleContext.title",
-        //     targetProperty: "title"
-        // };
 
-        this.actionBar = customActionBar;
 
-        // customActionBar.bind(bindingOptions, this);
     }
 
-    public _onBindingContextChanged(oldValue, newValue) {
-        newValue["exampleContext"] = this._associatedExampleMeta;
-        this.actionBar.title = this._associatedExampleMeta.title;
-        super._onBindingContextChanged(oldValue, newValue);
+    public onLoaded(args) {
+        super.onLoaded(args);
+       
+        if (applicationModule.android) {
+            var actionBar = new actionBarModule.ActionBar();
+            actionBar.title = this._associatedExampleMeta.title;
+            var navigationButton = new actionBarModule.NavigationButton();
+            navigationButton.on("tap", args =>
+            { frameModule.topmost().goBack() });
+            navigationButton.icon = "res://ic_menu_back";
+            actionBar.navigationButton = navigationButton;
+            this.actionBar = actionBar;
+        }
     }
 }
