@@ -1,4 +1,4 @@
-<Page loaded="onPageLoaded" xmlns:rc="nativescript-telerik-ui/calendar" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:rc="nativescript-telerik-ui/calendar" xmlns="http://www.nativescript.org/tns.xsd">
 	<GridLayout rows="*, 100" orientation="vertical">
         <!--<Label text="PopulatingWithData" cssClass="example-header"/>-->
         <rc:RadCalendar id="calendar" 
@@ -11,4 +11,4 @@
             </ListView.itemTemplate>
         </ListView>
     </GridLayout>
-</Page>
+</navigation:ExamplePage>

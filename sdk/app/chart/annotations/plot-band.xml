@@ -1,4 +1,4 @@
-<Page loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
     <chart:RadCartesianChart id="cartesianChart">
 
 		<chart:RadCartesianChart.series>
@@ -15,6 +15,6 @@
         <chart:RadCartesianChart.annotations>
 		    <chart:ChartPlotBandAnnotation axisId="verBarAxis" minValue="2" maxValue="4" zPosition="AboveSeries" strokeWidth="2" fillColor="#DDFFFF00" strokeColor="Red" strokeDashPattern="3,3,5,5"/>
         </chart:RadCartesianChart.annotations>
-
+        
     </chart:RadCartesianChart>
-</Page>
+</navigation:ExamplePage>

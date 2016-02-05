@@ -32,6 +32,7 @@ var AppViewModel = (function (_super) {
         this._examples.push({ Id: "16", title: "Annotations", group: "annotations", description: "Chart annotations", isExampleGroup: true, moduleName: "" });
         this._examples.push({ Id: "17", title: "Grid line annotation", group: "annotations", description: "", moduleName: "./chart/annotations/grid-line" });
         this._examples.push({ Id: "18", title: "Plot band annotation", group: "annotations", description: "", moduleName: "./chart/annotations/plot-band" });
+        this._examples.push({ Id: "60", title: "Band line annotations", group: "annotations", description: "Band and line annotations", moduleName: "./chart/annotations/band-line" });
         this._examples.push({ Id: "19", title: "Legend", group: "chart series", description: "Chart legend", isExampleGroup: true, moduleName: "" });
         this._examples.push({ Id: "20", title: "Legend overview", group: "chart series", description: "", moduleName: "./chart/legend/chart-legend" });
         this._examples.push({ Id: "21", title: "Behaviors", group: "behaviors", description: "Chart behaviors for interaction", isExampleGroup: true, moduleName: "" });
