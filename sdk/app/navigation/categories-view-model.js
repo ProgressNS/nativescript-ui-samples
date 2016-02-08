@@ -108,6 +108,8 @@ var NavigationViewModel = (function (_super) {
         chartRoot.subItems.push(seriesRoot);
         var seriesExample = new NavigationItem("Bar series", "./chart/series/bar/bar-series", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
+        seriesExample = new NavigationItem("Range bar series", "./chart/series/bar/range-bar-series", seriesRoot);
+        seriesRoot.subItems.push(seriesExample);
         seriesExample = new NavigationItem("Stacked Bar series", "./chart/series/bar/stacked-bar-series", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
         seriesExample = new NavigationItem("Area series", "./chart/series/area/area-series", seriesRoot);

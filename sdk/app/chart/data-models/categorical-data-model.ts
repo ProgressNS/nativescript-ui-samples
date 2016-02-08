@@ -23,4 +23,16 @@ export class CategoricalDataModel  {
             { Country: "USA", Amount: 17, Impact: 4 }
         ];
     }
+    
+    get rangeBarSource () {
+        
+           return [
+            { Name: "Groceries", High: 30, Low: 12 },
+            { Name: "Tools", High: 135, Low: 124 },
+            { Name: "Electronics", High: 55, Low: 12 },
+            { Name: "Gardening", High: 50, Low: 29 }
+        ];
+    }
+    
+    
 }

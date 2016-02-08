@@ -26,6 +26,7 @@
         "./calendar/selection-modes/selection-modes-model.ts",
         "./calendar/view-modes/view-modes.ts",
         "./calendar/view-modes/view-modes-model.ts",
+        "./chart/series/bar/range-bar-series.ts",
         "./chart/annotations/band-line.ts",
         "./chart/annotations/grid-line.ts",
         "./chart/annotations/plot-band.ts",

@@ -106,6 +106,9 @@ export class NavigationViewModel extends observableModule.Observable {
         var seriesExample = new NavigationItem("Bar series", "./chart/series/bar/bar-series", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
 
+        seriesExample = new NavigationItem("Range bar series", "./chart/series/bar/range-bar-series", seriesRoot);
+        seriesRoot.subItems.push(seriesExample);
+
         seriesExample = new NavigationItem("Stacked Bar series", "./chart/series/bar/stacked-bar-series", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
 
@@ -141,7 +144,8 @@ export class NavigationViewModel extends observableModule.Observable {
 
         seriesExample = new NavigationItem("Scatter series", "./chart/series/scatter/scatter-series", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
-
+        
+        
         var stylingRoot = new NavigationItem("Styling", undefined, chartRoot);
         chartRoot.subItems.push(stylingRoot);
         var stylingExample = new NavigationItem("Styling axes", "/chart/styling/styling-axes", stylingRoot);

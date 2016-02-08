@@ -27,6 +27,18 @@ var CategoricalDataModel = (function () {
         enumerable: true,
         configurable: true
     });
+    Object.defineProperty(CategoricalDataModel.prototype, "rangeBarSource", {
+        get: function () {
+            return [
+                { Name: "Groceries", High: 30, Low: 12 },
+                { Name: "Tools", High: 135, Low: 124 },
+                { Name: "Electronics", High: 55, Low: 12 },
+                { Name: "Gardening", High: 50, Low: 29 }
+            ];
+        },
+        enumerable: true,
+        configurable: true
+    });
     return CategoricalDataModel;
 })();
 exports.CategoricalDataModel = CategoricalDataModel;
