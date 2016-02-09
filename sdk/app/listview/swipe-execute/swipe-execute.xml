@@ -7,15 +7,16 @@
                 <lv:ListViewLinearLayout scrollDirection="Vertical"/>
             </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
-                <StackLayout orientation="vertical">
-                    <Label fontSize="20" text="{{ itemName }}"/>
-                    <Label fontSize="14" text="{{ itemDescription }}"/>
+                <StackLayout orientation="vertical" style="background-color: white;">
+                    <Label fontSize="20" text="{{ name }}" marginBottom="8"/>
+                    <Label fontSize="14" text="{{ title }}" style="font-weight: bold;"/>
+                    <Label fontSize="12" text="{{ text }}"/>
                 </StackLayout>
             </lv:RadListView.itemTemplate>
             <lv:RadListView.itemSwipeTemplate>
                 <GridLayout columns="auto, *, auto">
-                    <Button col="0" style="background-color: red;" text="Left button"/>
-                    <Button col="2" style="background-color: blue;" text="Right button"/>
+                    <Button col="0" style="background-color: blue;" text="Mark" color="White" ios:width="60" tap="{{ onItemClick }}"/>
+                    <Button col="2" style="background-color: red;" text="Trash" color="White" ios:width="60" tap="{{ onItemClick }}" fontSize="15"/>
                 </GridLayout>
             </lv:RadListView.itemSwipeTemplate>
         </lv:RadListView>

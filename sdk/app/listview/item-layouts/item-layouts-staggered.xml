@@ -4,7 +4,7 @@
             <lv:ListViewStaggeredLayout scrollDirection="Vertical" spanCount="3"/>
         </lv:RadListView.listViewLayout>
         <lv:RadListView.itemTemplate>
-            <StackLayout orientation="vertical" cssClass="item-template-style">
+            <StackLayout orientation="vertical" cssClass="item-template-style"  backgroundImage="{{ image }}" style="background-position:center;background-size:cover;">
                 <Label fontSize="20" text="{{ itemName }}"/>
                 <Label fontSize="14" text="{{ itemDescription }}" textWrap="true"/>
             </StackLayout>

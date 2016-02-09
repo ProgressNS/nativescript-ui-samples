@@ -6,12 +6,8 @@
                 <lv:ListViewLinearLayout itemHeight="50" scrollDirection="Vertical"/>
             </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
-                <StackLayout orientation="vertical">
                     <Label fontSize="20" text="{{ itemName }}"/>
-                    <Label fontSize="14" text="{{ itemDescription }}"/>
-                </StackLayout>
             </lv:RadListView.itemTemplate>
         </lv:RadListView>
     </GridLayout>
-
 </Page>

@@ -1,22 +1,25 @@
 <Page loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
-   <GridLayout rows="*" >
+    <GridLayout rows="*" >
         <lv:RadListView id="list-view" row="0" items="{{ dataItems }}" marginRight="-2">
             <lv:RadListView.listViewLayout>
-                <lv:ListViewGridLayout scrollDirection="Vertical" itemHeight="200" spanCount="2"/>
+                <lv:ListViewLinearLayout scrollDirection="Vertical" itemeHeight="150"/>
             </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
                 <GridLayout rows="*" backgroundColor="White">
-                   <GridLayout rows="*" columns="*" marginBottom="2" marginRight="2">
-                        <Image src="{{ image }}" stretch="aspectFill"/>
+                    <GridLayout rows="*" columns="*" marginBottom="2" marginRight="2">
+                        <f:FrescoDrawee
+                        horizontalAlignment="stretch"
+                        height="250"
+                        imageUri="{{ image }}"/>
                         <GridLayout verticalAlignment="bottom">
                             <StackLayout backgroundColor="#BBFFFFFF" paddingTop="8" paddingBottom="8" paddingLeft="16" paddingRight="16">
                                 <Label text="{{ itemName }}"/>
                                 <Label text="{{ itemDescription }}"/>
                             </StackLayout>
                         </GridLayout>
-                   </GridLayout>
+                    </GridLayout>
                 </GridLayout>
-           </lv:RadListView.itemTemplate>
+            </lv:RadListView.itemTemplate>
         </lv:RadListView>
     </GridLayout>
 </Page>
