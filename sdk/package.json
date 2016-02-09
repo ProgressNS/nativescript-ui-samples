@@ -9,7 +9,7 @@
 		}
 	},
 	"dependencies": {
-		"nativescript-telerik-ui": "^0.2.2",
+		"nativescript-telerik-ui": "^0.2.3",
 		"tns-core-modules": "1.5.1",
 		"fresco": "file:./deps/fresco-0.1.0.tgz"
 	}

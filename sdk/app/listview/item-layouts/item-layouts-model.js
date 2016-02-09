@@ -1,4 +1,5 @@
 var observable_array_1 = require("data/observable-array");
+debugger;
 var data = require("./ListItems.json");
 debugger;
 var ViewModel = (function () {
@@ -7,6 +8,7 @@ var ViewModel = (function () {
     }
     Object.defineProperty(ViewModel.prototype, "dataItems", {
         get: function () {
+            debugger;
             if (!this._items) {
                 this._items = new observable_array_1.ObservableArray();
                 for (var i = 0; i < data.items.length; i++) {

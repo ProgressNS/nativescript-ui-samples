@@ -16,8 +16,6 @@ export class ViewModel {
 
     public onCellSwiping(args: listViewModule.ListViewEventData) {
         var swipeLimits = args.data.swipeLimits;
-
-
         if (args.data.x > 100){
             console.log("Threshold achieved: " + args.data.x);
         }else if(args.data.x < -100){
@@ -29,7 +27,6 @@ export class ViewModel {
         var swipeLimits = args.data.swipeLimits;
         console.log("Started swipe cell: " + args.object);
         swipeLimits.threshold = 100;
-
     }
 
     public onItemClick(args: listViewModule.ListViewEventData){

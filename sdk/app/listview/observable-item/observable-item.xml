@@ -1,4 +1,4 @@
-<Page loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
 
     <GridLayout orientation="vertical" rows="auto, *, auto, auto">
         <Label text="Observable array" cssClass="example-header"/>
@@ -21,5 +21,4 @@
         </StackLayout>
         <Button row="3" text="Update 1 item" tap="{{onUpdatePropertyClick}}"/>
     </GridLayout>
-
-</Page>
+</navigation:ExamplePage>

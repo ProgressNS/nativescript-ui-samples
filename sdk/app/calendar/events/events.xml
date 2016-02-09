@@ -1,4 +1,4 @@
-<Page xmlns:rc="nativescript-telerik-ui/calendar" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:rc="nativescript-telerik-ui/calendar" xmlns="http://www.nativescript.org/tns.xsd">
 	<GridLayout orientation="vertical" rows="auto, *, auto">
         <Label text="GettingStarted" cssClass="example-header"/>
         <rc:RadCalendar id="calendar" 
@@ -10,4 +10,4 @@
 			height="400"/>
 			
     </GridLayout>
-</Page>
+</navigation:ExamplePage>
