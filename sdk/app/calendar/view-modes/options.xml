@@ -1,3 +1,0 @@
-<Page loaded="onPageLoaded" xmlns="http://www.nativescript.org/tns.xsd">
-    <ListView items="{{myItems}}" id="listView" rowHeight="44" leftPadding="10" itemTap="{{onSelectedOption}}" />
-</Page>

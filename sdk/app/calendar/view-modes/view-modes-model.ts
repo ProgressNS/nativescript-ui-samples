@@ -7,6 +7,7 @@ export class ViewModel extends observableModule.Observable{
 	constructor(){
 		super();
         this._selectionInfo = {
+            options: ["Week", "Month", "Month names", "Year"],
             index: 0
         };
 	}
@@ -39,7 +40,7 @@ export class ViewModel extends observableModule.Observable{
     
     public onOptionsTapped() {
         var navigationEntry = {
-            moduleName: "./calendar/view-modes/options",
+            moduleName: "./calendar/options-menu/options",
             context: this._selectionInfo,
             animated: true
         };

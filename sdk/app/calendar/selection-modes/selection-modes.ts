@@ -5,17 +5,26 @@ var viewModelContext : viewModel.ViewModel;
 
 export function onPageLoaded(args){
     var page = args.object;
-    viewModelContext = new viewModel.ViewModel();
+    if(viewModelContext === undefined) {
+        viewModelContext = new viewModel.ViewModel();
+    }
+    
     page.bindingContext = viewModelContext;
+    viewModelContext.updateSelectionMode();
+}
+
+export function onNavigatedFrom(args) {
+    if(args.isBackNavigation === true) {
+        viewModelContext = undefined;
+    }
 }
 
 export function onNoneSetSelectionModeTap(args: any) {
-    
     viewModelContext.setSelectionMode(calendarModule.CalendarSelectionMode.None);
 }
 
 export function onSingleSetSelectionModeTap(args: any) {
-    viewModelContext.setSelectionMode(calendarModule.CalendarSelectionMode.Sengle);
+    viewModelContext.setSelectionMode(calendarModule.CalendarSelectionMode.Single);
 }
 
 export function onMultipleSetSelectionModeTap(args: any) {

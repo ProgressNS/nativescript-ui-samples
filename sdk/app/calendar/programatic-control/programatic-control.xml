@@ -1,14 +1,14 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:rc="nativescript-telerik-ui/calendar" loaded="onPageLoaded" xmlns="http://www.nativescript.org/tns.xsd">
-	<GridLayout orientation="vertical" rows="auto, *, auto">
-        <Label text="Programatic control" cssClass="example-header"/>
-        <rc:RadCalendar id="calendar" 
-			row="1"
-			height="400"/>
-			
-		<StackLayout row="2">
-			<Button text="navigate forward" tap="onNavigateForwardTap"/>
-			<Button text="navigate back" tap="onNavigateBackTap"/>
-			<Button text="go to date" tap="onGoToDateTap"/>
+    <navigation.actionBar>
+        <ActionBar title="Programatic control" />
+    </navigation.actionBar>
+	<rc:RadCalendar id="calendar"  />
+	<GridLayout orientation="vertical" rows="*, auto">
+        <rc:RadCalendar id="calendar" row="0" />
+		<StackLayout row="1">
+			<Button text="Navigate forward" tap="onNavigateForwardTap" />
+			<Button text="Navigate back" tap="onNavigateBackTap"/>
+			<Button text="Today" tap="onGoToDateTap"/>
     	</StackLayout>
     </GridLayout>
 </navigation:ExamplePage>

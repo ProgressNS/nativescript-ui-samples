@@ -1,4 +1,7 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" navigatedTo="onNavigatedTo" xmlns:drawer="nativescript-telerik-ui/sidedrawer" xmlns="http://www.nativescript.org/tns.xsd">
+  <navigation.actionBar>
+      <ActionBar title="Events" />
+  </navigation.actionBar>
   <drawer:RadSideDrawer id="sideDrawer"
                         drawerClosed="onDrawerClosed"
                         drawerClosing="onDrawerClosing"

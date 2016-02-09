@@ -4,7 +4,7 @@ var viewModelContext : viewModel.ViewModel;
 
 export function onPageLoaded(args){
     var page = args.object;
-    viewModelContext = new viewModel.ViewModel();
+    viewModelContext = new viewModel.ViewModel(args.object.navigationContext);
     page.bindingContext = viewModelContext;
-    viewModelContext.setSelectedOption(args.object.navigationContext);
+    viewModelContext.selectRow(args.object.navigationContext.index);
 }

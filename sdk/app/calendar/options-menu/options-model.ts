@@ -3,13 +3,13 @@ import listViewModule = require("ui/list-view");
 import frameModule = require("ui/frame");
 
 export class ViewModel extends observableModule.Observable{
-    private _selectedOption;
-    private _options: Array<string>;
+    private _info;
     
-	constructor(){
+	constructor(selectionInfo){
 		super();
-        this._options = ["Week", "Month", "Month names", "Year"];	
-		this.items = this._options;
+        this._info = selectionInfo;
+		this.items = this._info.options;
+        // this.selectRow(this._info.index);
 	}
     
     set items(value: Array<string>) {
@@ -20,15 +20,13 @@ export class ViewModel extends observableModule.Observable{
         return this.get("myItems");
     }
     
-    public setSelectedOption(option) {
-        this._selectedOption = option;
+    public selectRow(index) {
         var listView = <listViewModule.ListView>frameModule.topmost().getViewById("listView");
-        listView.ios.selectRowAtIndexPathAnimatedScrollPosition(NSIndexPath.indexPathForItemInSection(option.index, 0), false, 0);
+        listView.ios.selectRowAtIndexPathAnimatedScrollPosition(NSIndexPath.indexPathForItemInSection(index, 0), false, 0);
     }
     
-    public onSelectedOption(option) {
-        var name = this._options[option.index];
-        this._selectedOption.index = option.index;
+    public onSelectedRow(row) {
+        this._info.index = row.index;
         frameModule.topmost().goBack();
     }
 }

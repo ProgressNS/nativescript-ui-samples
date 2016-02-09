@@ -7,10 +7,10 @@ var observableModule = require("data/observable");
 var frameModule = require("ui/frame");
 var ViewModel = (function (_super) {
     __extends(ViewModel, _super);
-    function ViewModel() {
+    function ViewModel(selectionInfo) {
         _super.call(this);
-        this._options = ["Week", "Month", "Month names", "Year"];
-        this.items = this._options;
+        this._info = selectionInfo;
+        this.items = this._info.options;
     }
     Object.defineProperty(ViewModel.prototype, "items", {
         get: function () {
@@ -22,14 +22,12 @@ var ViewModel = (function (_super) {
         enumerable: true,
         configurable: true
     });
-    ViewModel.prototype.setSelectedOption = function (option) {
-        this._selectedOption = option;
+    ViewModel.prototype.selectRow = function (index) {
         var listView = frameModule.topmost().getViewById("listView");
-        listView.ios.selectRowAtIndexPathAnimatedScrollPosition(NSIndexPath.indexPathForItemInSection(option.index, 0), false, 0);
+        listView.ios.selectRowAtIndexPathAnimatedScrollPosition(NSIndexPath.indexPathForItemInSection(index, 0), false, 0);
     };
-    ViewModel.prototype.onSelectedOption = function (option) {
-        var name = this._options[option.index];
-        this._selectedOption.index = option.index;
+    ViewModel.prototype.onSelectedRow = function (row) {
+        this._info.index = row.index;
         frameModule.topmost().goBack();
     };
     return ViewModel;

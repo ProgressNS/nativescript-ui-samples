@@ -11,6 +11,7 @@ var ViewModel = (function (_super) {
     function ViewModel() {
         _super.call(this);
         this._selectionInfo = {
+            options: ["Week", "Month", "Month names", "Year"],
             index: 0
         };
     }
@@ -44,7 +45,7 @@ var ViewModel = (function (_super) {
     };
     ViewModel.prototype.onOptionsTapped = function () {
         var navigationEntry = {
-            moduleName: "./calendar/view-modes/options",
+            moduleName: "./calendar/options-menu/options",
             context: this._selectionInfo,
             animated: true
         };

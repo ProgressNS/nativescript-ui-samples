@@ -16,7 +16,6 @@ export function onNavigateBackTap(args: any) {
 }
 
 export function onGoToDateTap(args: any) {
-    var date = new Date(2015, 1, 19);
-    
+    var date = new Date();
     calendar.goToDate(date);
 }
