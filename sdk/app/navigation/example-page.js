@@ -19,7 +19,10 @@ var ExamplePage = (function (_super) {
     ExamplePage.prototype.onLoaded = function (args) {
         _super.prototype.onLoaded.call(this, args);
         if (applicationModule.android) {
-            var actionBar = new actionBarModule.ActionBar();
+            var actionBar = this.actionBar;
+            if (actionBar === undefined) {
+                actionBar = new actionBarModule.ActionBar();
+            }
             actionBar.title = this._associatedExampleMeta.title;
             var navigationButton = new actionBarModule.NavigationButton();
             navigationButton.on("tap", function (args) { frameModule.topmost().goBack(); });

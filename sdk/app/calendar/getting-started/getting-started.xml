@@ -1,3 +1,6 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:rc="nativescript-telerik-ui/calendar" xmlns="http://www.nativescript.org/tns.xsd">
+    <navigation.actionBar>
+        <ActionBar title="Getting Started" />
+    </navigation.actionBar>
 	<rc:RadCalendar id="calendar"  />
 </navigation:ExamplePage>

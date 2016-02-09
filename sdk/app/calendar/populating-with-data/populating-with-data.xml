@@ -1,6 +1,8 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:rc="nativescript-telerik-ui/calendar" xmlns="http://www.nativescript.org/tns.xsd">
+    <navigation.actionBar>
+        <ActionBar title="Populating with data" />
+    </navigation.actionBar>
 	<GridLayout rows="*, 100" orientation="vertical">
-        <!--<Label text="PopulatingWithData" cssClass="example-header"/>-->
         <rc:RadCalendar id="calendar" 
 		    eventSource="{{ eventSource }}"
             dateSelected="onDateSelected"
