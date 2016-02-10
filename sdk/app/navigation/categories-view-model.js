@@ -175,7 +175,6 @@ var NavigationViewModel = (function (_super) {
         var layoutsItem = new NavigationItem("Item Layouts", undefined, currentItem);
         currentItem.subItems.push(layoutsItem);
         var layoutsExample = new NavigationItem("Linear", "./listview/item-layouts/item-layouts-linear", layoutsItem);
-        debugger;
         layoutsItem.subItems.push(layoutsExample);
         layoutsExample = new NavigationItem("Grid", "./listview/item-layouts/item-layouts-grid", layoutsItem);
         layoutsItem.subItems.push(layoutsExample);

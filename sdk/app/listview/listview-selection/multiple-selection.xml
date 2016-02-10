@@ -1,13 +1,12 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
 
     <GridLayout orientation="vertical" rows="auto, *, auto" >
-        <Label text="Multiple selection" cssClass="example-header"/>
         <lv:RadListView id="listView" items="{{ dataItems }}" row="1" selectionBehavior="Press" itemSelected="onItemSelected" itemDeselected="onItemDeselected" multipleSelection="true">
             <lv:RadListView.listViewLayout>
                 <lv:ListViewLinearLayout itemHeight="50" scrollDirection="Vertical"/>
             </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
-                <StackLayout orientation="vertical" ios:paddingLeft="50">
+                <StackLayout orientation="vertical" android:paddingLeft="10" ios:paddingLeft="50">
                     <Label fontSize="20" text="{{ itemName }}"/>
                     <Label fontSize="13" text="{{ itemEmail }}"/>
                 </StackLayout>
