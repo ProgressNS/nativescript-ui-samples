@@ -156,9 +156,13 @@ var NavigationViewModel = (function (_super) {
         behaviorsRoot.subItems.push(interactionExample);
         var axesRoot = new NavigationItem("Axes", undefined, chartRoot);
         chartRoot.subItems.push(axesRoot);
-        var axesExample = new NavigationItem("Customization", "./chart/axes/customization/axes-customization", behaviorsRoot);
+        var axesExample = new NavigationItem("Customization", "./chart/axes/customization/axes-customization", axesRoot);
         axesRoot.subItems.push(axesExample);
-        axesExample = new NavigationItem("Multiple axes", "./chart/axes/multiple/multiple-axes", behaviorsRoot);
+        axesExample = new NavigationItem("Multiple axes", "./chart/axes/multiple/multiple-axes", axesRoot);
+        axesRoot.subItems.push(axesExample);
+        axesExample = new NavigationItem("Negative values", "./chart/axes/negative-values/negative-values", axesRoot);
+        axesRoot.subItems.push(axesExample);
+        axesExample = new NavigationItem("Date time axis", "./chart/axes/date-time-axes/date-time-axes", axesRoot);
         axesRoot.subItems.push(axesExample);
         var annotationsRoot = new NavigationItem("Annotations", undefined, chartRoot);
         chartRoot.subItems.push(annotationsRoot);
