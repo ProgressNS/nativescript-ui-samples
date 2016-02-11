@@ -6,11 +6,11 @@ export class CategoricalDataModel  {
 
     get categoricalSource() {
         return [
-            { Country: "Germany", Amount: 15, SecondVal: 14 },
-            { Country: "France", Amount: 13, SecondVal: 23 },
-            { Country: "Bulgaria", Amount: 24, SecondVal: 9 },
-            { Country: "Spain", Amount: 5, SecondVal: 19 },
-            { Country: "USA", Amount: 18, SecondVal: 8 }
+            { Country: "Germany", Amount: 15, SecondVal: 14, ThirdVal: 24 },
+            { Country: "France", Amount: 13, SecondVal: 23, ThirdVal: 25 },
+            { Country: "Bulgaria", Amount: 24, SecondVal: 17, ThirdVal: 23 },
+            { Country: "Spain", Amount: 5, SecondVal: 19, ThirdVal: 24 },
+            { Country: "USA", Amount: 18, SecondVal: 8, ThirdVal: 21 }
         ]
     }
 

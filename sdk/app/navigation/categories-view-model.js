@@ -124,8 +124,6 @@ var NavigationViewModel = (function (_super) {
         seriesRoot.subItems.push(seriesExample);
         seriesExample = new NavigationItem("Scatter Bubble series", "./chart/series/bubble/scatter-bubble-series", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
-        seriesExample = new NavigationItem("Donut series", "./chart/series/donut/donut-series", seriesRoot);
-        seriesRoot.subItems.push(seriesExample);
         seriesExample = new NavigationItem("Candlestick series", "./chart/series/financial/candlestick-series", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
         seriesExample = new NavigationItem("Ohlc series", "./chart/series/financial/ohlc-series", seriesRoot);
@@ -164,9 +162,7 @@ var NavigationViewModel = (function (_super) {
         axesRoot.subItems.push(axesExample);
         var annotationsRoot = new NavigationItem("Annotations", undefined, chartRoot);
         chartRoot.subItems.push(annotationsRoot);
-        var annotationsExample = new NavigationItem("Grid line", "./chart/annotations/grid-line", annotationsRoot);
-        annotationsRoot.subItems.push(annotationsExample);
-        annotationsExample = new NavigationItem("Plot band", "./chart/annotations/plot-band", annotationsRoot);
+        var annotationsExample = new NavigationItem("Plot band", "./chart/annotations/plot-band", annotationsRoot);
         annotationsRoot.subItems.push(annotationsExample);
         annotationsExample = new NavigationItem("Band line", "./chart/annotations/band-line", annotationsRoot);
         annotationsRoot.subItems.push(annotationsExample);
