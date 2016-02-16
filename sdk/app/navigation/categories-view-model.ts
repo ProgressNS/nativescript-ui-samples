@@ -220,12 +220,12 @@ export class NavigationViewModel extends observableModule.Observable {
         
         // Selection
         var selectionItem = new NavigationItem("Selection", undefined, currentItem);
-        currentItem.subItems.push(exampleItem);
-        var selectionExample = new NavigationItem("Selection", "./listview/listview-selection/single-selection", selectionItem);
+        currentItem.subItems.push(selectionItem);
+        var selectionExample = new NavigationItem("Single selection", "./listview/listview-selection/single-selection", selectionItem);
         selectionItem.subItems.push(selectionExample);
-        selectionExample = new NavigationItem("Selection", "./listview/listview-selection/multiple-selection", selectionItem);
+        selectionExample = new NavigationItem("Multiple selection", "./listview/listview-selection/multiple-selection", selectionItem);
         selectionItem.subItems.push(selectionExample);
-        selectionExample = new NavigationItem("Selection", "./listview/listview-selection/programmatic-selection", selectionItem);
+        selectionExample = new NavigationItem("Programatic selection", "./listview/listview-selection/programmatic-selection", selectionItem);
         selectionItem.subItems.push(selectionExample);
 
         exampleItem = new NavigationItem("Load on Demand", "./listview/load-on-demand/load-on-demand", currentItem);

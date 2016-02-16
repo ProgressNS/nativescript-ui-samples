@@ -17,3 +17,7 @@ function onPageNavigatingFrom(args) {
     }
 }
 exports.onPageNavigatingFrom = onPageNavigatingFrom;
+function onBackTap(args) {
+    frameModule.topmost().goBack();
+}
+exports.onBackTap = onBackTap;
