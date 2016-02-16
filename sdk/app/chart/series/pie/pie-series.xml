@@ -1,24 +1,24 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
     <StackLayout orientation="vertical">
-    <chart:RadPieChart id="pieChart" width="300" height="300"  allowAnimation="true">
+    <chart:RadPieChart id="pieChart" height="300" allowAnimation="true">
         <chart:RadPieChart.series>
-            <chart:PieSeries selectionMode="DataPoint" expandRadius="1.3" outerRadiusFactor="1" items="{{ pieSource }}" valueProperty="Amount" legendLabelProperty="Brand">
+            <chart:PieSeries selectionMode="DataPoint" expandRadius="1.3" outerRadiusFactor="0.7" items="{{ pieSource }}" valueProperty="Amount" legendLabelProperty="Brand">
             </chart:PieSeries>
         </chart:RadPieChart.series>
         
         <chart:RadPieChart.legend>
-         <chart:RadLegendView position="Right" height="150" />
+         <chart:RadLegendView position="Right" width="150"/>
         </chart:RadPieChart.legend>
     </chart:RadPieChart>
     
-    <chart:RadPieChart id="donutChart" width="300" height="300" allowAnimation="true">
+    <chart:RadPieChart id="donutChart" height="300"  allowAnimation="true">
         <chart:RadPieChart.series>
-            <chart:DonutSeries selectionMode="DataPoint" outerRadiusFactor="0.9" expandRadius="1.3"  outerRadiusFactor="0.9" innerRadiusFactor="0.7" items="{{ pieSource }}" valueProperty="Amount" legendLabelProperty="Brand">
+            <chart:DonutSeries  selectionMode="DataPoint" outerRadiusFactor="0.9" expandRadius="1.3"  outerRadiusFactor="0.7" innerRadiusFactor="0.7" items="{{ pieSource }}" valueProperty="Amount" legendLabelProperty="Brand">
             </chart:DonutSeries>
         </chart:RadPieChart.series>
         
          <chart:RadPieChart.legend>
-         <chart:RadLegendView position="Right" height="150" />
+         <chart:RadLegendView position="Right"/>
         </chart:RadPieChart.legend>
         
     </chart:RadPieChart>

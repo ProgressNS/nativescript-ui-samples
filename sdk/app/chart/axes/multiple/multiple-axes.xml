@@ -1,39 +1,33 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
     <chart:RadCartesianChart id="cartesianChart">
         <chart:RadCartesianChart.series>
-            <chart:LineSeries seriesName="Line" items="{{ rateA }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">           
-            </chart:LineSeries>
-            
-             <chart:LineSeries seriesName="Line" items="{{ rateB }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">
-            </chart:LineSeries>
-            
-               <chart:LineSeries seriesName="Line" items="{{ rateC }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount"> 
-            </chart:LineSeries>
-            
-            <chart:BarSeries seriesName="Bar" items="{{ total }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">   
-            </chart:BarSeries>
-            
-        </chart:RadCartesianChart.series>
-
-        <chart:RadCartesianChart.verticalAxis>
+            <chart:LineSeries seriesName="RateA" items="{{ rateA }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">   
+                 <chart:LineSeries.verticalAxis>
                          <chart:LinearAxis horizontalLocation="Left"/>                 
-        </chart:RadCartesianChart.verticalAxis>
-        
-         <chart:RadCartesianChart.verticalAxis>
+                 </chart:LineSeries.verticalAxis>        
+            </chart:LineSeries>
+            
+             <chart:LineSeries seriesName="RateB" items="{{ rateB }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">
+                  <chart:LineSeries.verticalAxis>
                          <chart:LinearAxis horizontalLocation="Right"/>                 
-        </chart:RadCartesianChart.verticalAxis>
-        
-         <chart:RadCartesianChart.verticalAxis>
+                </chart:LineSeries.verticalAxis>
+            </chart:LineSeries>
+            
+               <chart:LineSeries seriesName="RateC" items="{{ rateC }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount"> 
+                 <chart:LineSeries.verticalAxis>
                          <chart:LinearAxis horizontalLocation="Right"/>                 
-        </chart:RadCartesianChart.verticalAxis>
-        
-         <chart:RadCartesianChart.verticalAxis>
+               </chart:LineSeries.verticalAxis>
+            </chart:LineSeries>
+            
+            <chart:BarSeries seriesName="Total" items="{{ total }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">   
+            <chart:BarSeries.verticalAxis>
                          <chart:LinearAxis horizontalLocation="Right"/>                 
-        </chart:RadCartesianChart.verticalAxis>
+        </chart:BarSeries.verticalAxis>
+            </chart:BarSeries>        
+        </chart:RadCartesianChart.series>
         
-        <chart:RadCartesianChart.horizontalAxis>
-            <chart:CategoricalAxis/>
-        </chart:RadCartesianChart.horizontalAxis>
-
+         <chart:RadCartesianChart.horizontalAxis>
+                    <chart:CategoricalAxis verticalLocation="Down" />
+                </chart:RadCartesianChart.horizontalAxis>
     </chart:RadCartesianChart>
 </navigation:ExamplePage>

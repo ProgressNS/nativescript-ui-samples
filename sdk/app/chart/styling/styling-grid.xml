@@ -6,11 +6,12 @@
                     verticalLinesVisible="true"
                     horizontalStripLinesVisible="true"
                     verticalStripLinesVisible="true"
-                    verticalStrokeColor="4d002680"
+                    verticalStrokeColor="804d0026"
                     horizontalStrokeColor="ffffcc80"
                     horizontalStrokeWidth="2"
                     verticalStrokeWidth="3"      
-                    horizontalStripLineColor="59005c80"/>
+                    horizontalStripLineColor="8059005c, 804d0026"
+                    />
            </chart:RadCartesianChart.grid>
            
        

@@ -4,6 +4,7 @@ var DateTimeDataModel = (function () {
     Object.defineProperty(DateTimeDataModel.prototype, "dateTimeSource", {
         get: function () {
             return [
+                { timeStamp: new Date(2015, 1, 11), Amount: 10 },
                 { timeStamp: new Date(2015, 2, 11), Amount: 10 },
                 { timeStamp: new Date(2015, 3, 1), Amount: 1 },
                 { timeStamp: new Date(2015, 4, 3), Amount: 3 },

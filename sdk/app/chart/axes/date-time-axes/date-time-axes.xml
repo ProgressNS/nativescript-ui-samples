@@ -3,7 +3,7 @@
        <chart:RadCartesianChart.series>
                 <chart:LineSeries items="{{ dateTimeSource }}" categoryProperty="timeStamp" valueProperty="Amount">
                     <chart:LineSeries.horizontalAxis>
-                        <chart:DateTimeContinuousAxis minimum="01/02/2015" maximum="01/10/2015" minorStep="Month" dateFormat="MMM" labelFitMode="Rotate" labelRotationAngle="1.2"/>
+                        <chart:DateTimeContinuousAxis minimum="01/02/2015" maximum="01/10/2015" majorStep="Week" dateFormat="MMM-dd" labelFitMode="Rotate" labelRotationAngle="1.2"/>
                     </chart:LineSeries.horizontalAxis>
                     <chart:LineSeries.verticalAxis>
                         <chart:LinearAxis/>
