@@ -18,16 +18,23 @@ var ExamplePage = (function (_super) {
     }
     ExamplePage.prototype.onLoaded = function (args) {
         _super.prototype.onLoaded.call(this, args);
+        var actionBar = this.actionBar === undefined ? new actionBarModule.ActionBar() : this.actionBar;
+        actionBar.title = this._associatedExampleMeta.title;
         if (applicationModule.android) {
+<<<<<<< HEAD
             var actionBar = this.actionBar;
             if (actionBar === undefined) {
                 actionBar = new actionBarModule.ActionBar();
             }
             actionBar.title = this._associatedExampleMeta.title;
+=======
+>>>>>>> master
             var navigationButton = new actionBarModule.NavigationButton();
             navigationButton.on("tap", function (args) { frameModule.topmost().goBack(); });
             navigationButton.icon = "res://ic_menu_back";
             actionBar.navigationButton = navigationButton;
+        }
+        if (this.actionBar !== actionBar) {
             this.actionBar = actionBar;
         }
     };

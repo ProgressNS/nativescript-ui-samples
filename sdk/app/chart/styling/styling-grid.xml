@@ -6,17 +6,15 @@
                     verticalLinesVisible="true"
                     horizontalStripLinesVisible="true"
                     verticalStripLinesVisible="true"
-                    verticalStrokeColor="Red"
-                    horizontalStrokeColor="Green"
+                    verticalStrokeColor="804d0026"
+                    horizontalStrokeColor="ffffcc80"
                     horizontalStrokeWidth="2"
-                    verticalStrokeWidth="3"
-                    verticalStripLineColor="Yellow,Green"
-                    horizontalStripLineColor="Blue"/>
+                    verticalStrokeWidth="3"      
+                    horizontalStripLineColor="8059005c, 804d0026"
+                    />
            </chart:RadCartesianChart.grid>
            
-        <!--<chart:RadCartesianChart.grid>
-            <chart:RadCartesianChartGrid horizontalLinesVisible="true" horizontalStripLinesVisible="false" verticalStripLinesVisible="false" verticalLinesVisible="true"/>
-        </chart:RadCartesianChart.grid>-->
+       
         
         <chart:RadCartesianChart.series>
             <chart:BarSeries items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="Amount">
