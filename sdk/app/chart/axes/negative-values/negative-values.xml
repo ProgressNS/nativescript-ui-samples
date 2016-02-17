@@ -1,0 +1,19 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
+    <chart:RadCartesianChart id="cartesianChart">
+        <chart:RadCartesianChart.series>
+           <chart:SplineAreaSeries seriesName="SplineArea" items="{{ negativeValues }}"  categoryProperty="Period" valueProperty="Amount">
+           </chart:SplineAreaSeries>
+        </chart:RadCartesianChart.series>
+
+    
+        
+         <chart:RadCartesianChart.verticalAxis>
+                         <chart:LinearAxis offset="0" baseline="0" allowZoom="true"/>                 
+        </chart:RadCartesianChart.verticalAxis>
+        
+        <chart:RadCartesianChart.horizontalAxis>
+            <chart:CategoricalAxis majorTickInterval="1" offset="0" baseline="0" allowZoom="true"/>
+        </chart:RadCartesianChart.horizontalAxis>
+
+    </chart:RadCartesianChart>
+</navigation:ExamplePage>

@@ -1,6 +1,6 @@
-var categoricalModelModule = require("../../data-models/categorical-data-model");
+var bubbleModelModule = require("../../data-models/bubble-data-model");
 function onPageLoaded(args) {
     var page = args.object;
-    page.bindingContext = new categoricalModelModule.CategoricalDataModel();
+    page.bindingContext = new bubbleModelModule.BubbleDataModel();
 }
 exports.onPageLoaded = onPageLoaded;

@@ -106,6 +106,9 @@ export class NavigationViewModel extends observableModule.Observable {
         var seriesExample = new NavigationItem("Bar series", "./chart/series/bar/bar-series", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
 
+        seriesExample = new NavigationItem("Range bar series", "./chart/series/bar/range-bar-series", seriesRoot);
+        seriesRoot.subItems.push(seriesExample);
+
         seriesExample = new NavigationItem("Stacked Bar series", "./chart/series/bar/stacked-bar-series", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
 
@@ -127,9 +130,6 @@ export class NavigationViewModel extends observableModule.Observable {
         seriesExample = new NavigationItem("Scatter Bubble series", "./chart/series/bubble/scatter-bubble-series", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
 
-        seriesExample = new NavigationItem("Donut series", "./chart/series/donut/donut-series", seriesRoot);
-        seriesRoot.subItems.push(seriesExample);
-
         seriesExample = new NavigationItem("Candlestick series", "./chart/series/financial/candlestick-series", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
 
@@ -141,7 +141,8 @@ export class NavigationViewModel extends observableModule.Observable {
 
         seriesExample = new NavigationItem("Scatter series", "./chart/series/scatter/scatter-series", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
-
+        
+        
         var stylingRoot = new NavigationItem("Styling", undefined, chartRoot);
         chartRoot.subItems.push(stylingRoot);
         var stylingExample = new NavigationItem("Styling axes", "/chart/styling/styling-axes", stylingRoot);
@@ -175,21 +176,27 @@ export class NavigationViewModel extends observableModule.Observable {
 
         var axesRoot = new NavigationItem("Axes", undefined, chartRoot);
         chartRoot.subItems.push(axesRoot);
-        var axesExample = new NavigationItem("Customization", "./chart/axes/customization/axes-customization", behaviorsRoot);
+        var axesExample = new NavigationItem("Customization", "./chart/axes/customization/axes-customization", axesRoot);
         axesRoot.subItems.push(axesExample);
 
-        axesExample = new NavigationItem("Multiple axes", "./chart/axes/multiple/multiple-axes", behaviorsRoot);
+        axesExample = new NavigationItem("Multiple axes", "./chart/axes/multiple/multiple-axes", axesRoot);
         axesRoot.subItems.push(axesExample);
 
+        axesExample = new NavigationItem("Negative values", "./chart/axes/negative-values/negative-values", axesRoot);
+        axesRoot.subItems.push(axesExample);     
+        
+        axesExample = new NavigationItem("Date time axis", "./chart/axes/date-time-axes/date-time-axes", axesRoot);
+        axesRoot.subItems.push(axesExample);     
+               
         var annotationsRoot = new NavigationItem("Annotations", undefined, chartRoot);
         chartRoot.subItems.push(annotationsRoot);
-        var annotationsExample = new NavigationItem("Grid line", "./chart/annotations/grid-line", annotationsRoot);
+    
+        var annotationsExample = new NavigationItem("Plot band", "./chart/annotations/plot-band", annotationsRoot);
         annotationsRoot.subItems.push(annotationsExample);
-
-        annotationsExample = new NavigationItem("Plot band", "./chart/annotations/plot-band", annotationsRoot);
+  
+        annotationsExample = new NavigationItem("Band line", "./chart/annotations/band-line", annotationsRoot);
         annotationsRoot.subItems.push(annotationsExample);
     }
-
 
     private buildListViewExamples(currentParent: NavigationItem) {
         var currentItem = new NavigationItem("ListView", undefined, currentParent);

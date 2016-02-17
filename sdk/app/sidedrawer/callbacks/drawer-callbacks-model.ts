@@ -1,10 +1,16 @@
 import drawerModule = require("nativescript-telerik-ui/sidedrawer");
 import observableModule = require("ui/core/dependency-observable");
+import frameModule = require("ui/frame");
 
 export class DrawerCallbacksModel extends observableModule.DependencyObservable {
 
     constructor() {
         super();
+    }
+    
+    public onOpenDrawerTap() {
+        var sideDrawer: drawerModule.RadSideDrawer = frameModule.topmost().getViewById("sideDrawer");
+        sideDrawer.showDrawer();
     }
 
     public onDrawerOpening() {

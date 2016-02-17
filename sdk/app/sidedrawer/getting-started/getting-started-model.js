@@ -9,7 +9,7 @@ var GettingStartedViewModel = (function (_super) {
     function GettingStartedViewModel() {
         _super.call(this);
         this.set("mainContentText", "SideDrawer for NativeScript can be easily setup in the XML definition of your page by defining main- and drawer-content. The component"
-            + " has a default transition and position and also exposes notifications related to changes in its state.");
+            + " has a default transition and position and also exposes notifications related to changes in its state. Swipe from left to open side drawer.");
     }
     return GettingStartedViewModel;
 })(observableModule.Observable);

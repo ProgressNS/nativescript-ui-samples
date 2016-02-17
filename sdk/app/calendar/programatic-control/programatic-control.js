@@ -13,7 +13,7 @@ function onNavigateBackTap(args) {
 }
 exports.onNavigateBackTap = onNavigateBackTap;
 function onGoToDateTap(args) {
-    var date = new Date(2015, 1, 19);
+    var date = new Date();
     calendar.goToDate(date);
 }
 exports.onGoToDateTap = onGoToDateTap;

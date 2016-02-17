@@ -1,6 +1,6 @@
-var categoricalDataModelModule = require("../../data-models/categorical-data-model");
+var multipleAxesDataModelModule = require("../../data-models/multiple-axes-model");
 function onPageLoaded(args) {
     var page = args.object;
-    page.bindingContext = new categoricalDataModelModule.CategoricalDataModel();
+    page.bindingContext = new multipleAxesDataModelModule.MultipleAxesDataModel();
 }
 exports.onPageLoaded = onPageLoaded;

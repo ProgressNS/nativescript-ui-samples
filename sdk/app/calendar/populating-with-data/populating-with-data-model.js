@@ -5,27 +5,37 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var calendarModule = require("nativescript-telerik-ui/calendar");
 var observableModule = require("data/observable");
+var frameModule = require("ui/frame");
 var ViewModel = (function (_super) {
     __extends(ViewModel, _super);
     function ViewModel() {
         _super.call(this);
         var events = new Array();
         for (var i = 1; i < 10; i++) {
-            var event = new calendarModule.CalendarEvent("event" + i, new Date(2015, 11, i * 2), new Date(2015, 11, (i * 2) + (i % 3), 1));
+            var now = new Date();
+            var startDate = new Date(now.getFullYear(), now.getMonth(), i * 2);
+            var endDate = new Date(now.getFullYear(), now.getMonth(), (i * 2) + (i % 3));
+            var event = new calendarModule.CalendarEvent("event" + i, startDate, endDate);
             events.push(event);
         }
         this.source = events;
     }
     Object.defineProperty(ViewModel.prototype, "source", {
         get: function () {
-            return this.get("Source");
+            return this.get("eventSource");
         },
         set: function (value) {
-            this.set("Source", value);
+            this.set("eventSource", value);
         },
         enumerable: true,
         configurable: true
     });
+    ViewModel.prototype.onDateSelected = function (args) {
+        var date = args.date;
+        var calendar = frameModule.topmost().getViewById("calendar");
+        var events = calendar.getEventsForDate(date);
+        this.set("myItems", events);
+    };
     return ViewModel;
 })(observableModule.Observable);
 exports.ViewModel = ViewModel;

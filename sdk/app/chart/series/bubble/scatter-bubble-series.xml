@@ -1,14 +1,21 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
     <chart:RadCartesianChart id="pieChart">
+                <chart:RadCartesianChart.horizontalAxis>
+                    <chart:LinearAxis/>
+                </chart:RadCartesianChart.horizontalAxis>
+                <chart:RadCartesianChart.verticalAxis>
+                    <chart:LinearAxis/>
+                </chart:RadCartesianChart.verticalAxis>
+                
         <chart:RadCartesianChart.series>
-            <chart:ScatterBubbleSeries  items="{{ scatterBubbleSource }}" bubbleScale="5" xProperty="xValue" yProperty="yValue" bubbleSizeProperty="Impact" >
-                <chart:ScatterBubbleSeries.horizontalAxis>
-                    <chart:LinearAxis minimum="20" maximum="100"/>
-                </chart:ScatterBubbleSeries.horizontalAxis>
-                <chart:ScatterBubbleSeries.verticalAxis>
-                    <chart:LinearAxis minimum="20" maximum="100"/>
-                </chart:ScatterBubbleSeries.verticalAxis>
-            </chart:ScatterBubbleSeries>
+            <chart:ScatterSeries  items="{{ scatterSource }}" bubbleScale="5" xProperty="Age" yProperty="Salary" bubbleSizeProperty="Impact" >             
+            </chart:ScatterSeries>
+            
+            <chart:ScatterSeries  items="{{ scatterSource }}" bubbleScale="5" xProperty="Age" yProperty="Spendings" bubbleSizeProperty="Impact" >             
+            </chart:ScatterSeries>
+            
+            <chart:ScatterSeries  items="{{ scatterSource }}" bubbleScale="5" xProperty="Age" yProperty="Savings" bubbleSizeProperty="Impact" >             
+            </chart:ScatterSeries>
         </chart:RadCartesianChart.series>
     </chart:RadCartesianChart>
 </navigation:ExamplePage>
