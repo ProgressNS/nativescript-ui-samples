@@ -38,8 +38,8 @@ export class ViewModel {
     public onSwipeCellFinished(args: listViewModule.ListViewEventData) {
         var swipeLimits = args.data.swipeLimits;
         console.log("Started swipe cell: " + args.object);
-        swipeLimits.threshold = 100;
-        swipeLimits.left = 150;
+        swipeLimits.threshold = 150;
+        swipeLimits.left = 180;
         swipeLimits.right = 180;
 
     }

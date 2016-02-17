@@ -17,7 +17,6 @@ var ViewModel = (function () {
         var that = new WeakRef(this);
         timer.setTimeout(function () {
             var initialNumberOfItems = that.get()._numberOfAddedItems;
-            debugger;
             for (var i = that.get()._numberOfAddedItems - 1; i < initialNumberOfItems + 2; i++) {
                 if (i > posts.names.length - 1) {
                     break;
@@ -27,7 +26,6 @@ var ViewModel = (function () {
             }
             var listView = args.object;
             listView.notifyPullToRefreshFinished();
-            debugger;
         }, 1000);
     };
     ViewModel.prototype.initDataItems = function () {
@@ -42,7 +40,6 @@ var ViewModel = (function () {
                 this._items.push(new DataItem(posts.names[i], posts.titles[i], posts.text[i], "res://" + posts.images[i]));
             }
         }
-        debugger;
     };
     return ViewModel;
 })();

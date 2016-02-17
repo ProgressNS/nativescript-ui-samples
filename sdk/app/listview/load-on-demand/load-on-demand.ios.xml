@@ -1,7 +1,7 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
         <lv:RadListView items="{{ dataItems }}"  row="0" loadOnDemandMode="Manual" loadMoreDataRequested="{{onLoadMoreItemsRequested}}">
             <lv:RadListView.listViewLayout>
-                <lv:ListViewLinearLayout scrollDirection="Vertical" itemHeight="100"/>
+                <lv:ListViewLinearLayout scrollDirection="Vertical" itemHeight="120"/>
             </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
                 <StackLayout orientation="vertical" padding="5 10 5 10"  style="background-color: #7fff7f;">
@@ -15,5 +15,8 @@
                 </StackLayout>
                 </StackLayout>
             </lv:RadListView.itemTemplate>
+            <lv:RadListView.loadOnDemandItemTemplate>
+                <Button text="my button" ios:ios.allowsUserInteraction="true"/>
+            </lv:RadListView.loadOnDemandItemTemplate>
         </lv:RadListView>
 </navigation:ExamplePage>

@@ -22,7 +22,6 @@ export class ViewModel {
         var that = new WeakRef(this);
         timer.setTimeout(function() {
             var initialNumberOfItems = that.get()._numberOfAddedItems;
-            debugger;
             for (var i = that.get()._numberOfAddedItems-1; i < initialNumberOfItems + 2; i++) {
                 if (i > posts.names.length-1){
                     break;
@@ -32,7 +31,6 @@ export class ViewModel {
             }
             var listView = args.object;
             listView.notifyPullToRefreshFinished();
-            debugger;
         }, 1000);
 
     }
@@ -51,8 +49,6 @@ export class ViewModel {
             }
           
         }
-        
-        debugger;
     }
 }
 

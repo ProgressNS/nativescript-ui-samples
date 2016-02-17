@@ -20,12 +20,13 @@ var ViewModel = (function () {
         }
     };
     ViewModel.prototype.onUpdateItemClick = function (args) {
+        debugger;
         for (var index = 0; index < this._items.length; index++) {
             this._items.setItem(index, new DataItem(Math.round(Math.random() * 100), "This is an updated item", "This is the updated item's description."));
         }
     };
     ViewModel.prototype.onRemoveItemClick = function (args) {
-        this._items.splice(2, 1);
+        this._items.splice(this._items.length - 1, 1);
     };
     ViewModel.prototype.initDataItems = function () {
         this._items = new observable_array_1.ObservableArray();

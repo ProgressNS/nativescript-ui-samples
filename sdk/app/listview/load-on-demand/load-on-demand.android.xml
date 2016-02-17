@@ -1,12 +1,15 @@
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:f="fresco/fresco" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
         <lv:RadListView items="{{ dataItems }}"  row="0" loadOnDemandMode="Manual" loadMoreDataRequested="{{onLoadMoreItemsRequested}}">
             <lv:RadListView.listViewLayout>
-                <lv:ListViewLinearLayout scrollDirection="Vertical" itemHeight="100"/>
+                <lv:ListViewLinearLayout scrollDirection="Vertical" />
             </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
                 <StackLayout orientation="vertical" padding="5 10 5 10"  style="background-color: #7fff7f;">
                 <StackLayout orientation="horizontal" padding="10" style="background-color: #65a565;">
-                    <Image src="{{ image }}" stretch="aspectFit" height="100" width="100"/>
+                   <f:FrescoDrawee
+                        height="100"
+                        width="80"
+                        imageUri="{{ image }}"/>
                    <StackLayout orientation="vertical" marginLeft="15">
                     <Label fontSize="20" text="{{ name }}" marginBottom="8"/>
                     <Label fontSize="14" text="{{ title }}" style="font-weight: bold;" textWrap="true"/>

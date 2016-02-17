@@ -32,8 +32,8 @@ var ViewModel = (function () {
     ViewModel.prototype.onSwipeCellFinished = function (args) {
         var swipeLimits = args.data.swipeLimits;
         console.log("Started swipe cell: " + args.object);
-        swipeLimits.threshold = 100;
-        swipeLimits.left = 150;
+        swipeLimits.threshold = 150;
+        swipeLimits.left = 180;
         swipeLimits.right = 180;
     };
     ViewModel.prototype.initDataItems = function () {
