@@ -21,14 +21,6 @@ var ExamplePage = (function (_super) {
         var actionBar = this.actionBar === undefined ? new actionBarModule.ActionBar() : this.actionBar;
         actionBar.title = this._associatedExampleMeta.title;
         if (applicationModule.android) {
-<<<<<<< HEAD
-            var actionBar = this.actionBar;
-            if (actionBar === undefined) {
-                actionBar = new actionBarModule.ActionBar();
-            }
-            actionBar.title = this._associatedExampleMeta.title;
-=======
->>>>>>> master
             var navigationButton = new actionBarModule.NavigationButton();
             navigationButton.on("tap", function (args) { frameModule.topmost().goBack(); });
             navigationButton.icon = "res://ic_menu_back";
