@@ -27,6 +27,7 @@ var ViewModel = (function (_super) {
         listView.ios.selectRowAtIndexPathAnimatedScrollPosition(NSIndexPath.indexPathForItemInSection(index, 0), false, 0);
     };
     ViewModel.prototype.onSelectedRow = function (row) {
+        debugger;
         this._info.index = row.index;
         frameModule.topmost().goBack();
     };

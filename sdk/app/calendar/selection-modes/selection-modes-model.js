@@ -30,6 +30,7 @@ var ViewModel = (function (_super) {
     };
     ViewModel.prototype.updateSelectionMode = function () {
         var index = this._selectionInfo.index;
+        debugger;
         if (index == 0) {
             this.selectionMode = calendarModule.CalendarSelectionMode.None;
         }

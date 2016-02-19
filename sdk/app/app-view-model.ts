@@ -88,7 +88,6 @@ export class AppViewModel extends observable.Observable {
         this._examples.push({ Id: "46", title: "Observable array", group: "listview features", description: "", moduleName: "./listview/observable-array/observable-array" });
         this._examples.push({ Id: "47", title: "Pull to refresh", group: "listview features", description: "", moduleName: "./listview/pull-to-refresh/pull-to-refresh" });
         this._examples.push({ Id: "48", title: "Swipe to execute", group: "listview features", description: "", moduleName: "./listview/swipe-execute/swipe-execute" });
-        this._examples.push({ Id: "49", title: "Observable item", group: "listview features", description: "", moduleName: "./listview/observable-item/observable-item" });
         this._examples.push({ Id: "50", title: "Single selection", group: "listview features", description: "", moduleName: "./listview/listview-selection/single-selection" });
         this._examples.push({ Id: "51", title: "Multiple selection", group: "listview features", description: "", moduleName: "./listview/listview-selection/multiple-selection" });
         this._examples.push({ Id: "52", title: "Programmatic selection", group: "listview features", description: "", moduleName: "./listview/listview-selection/programmatic-selection" });

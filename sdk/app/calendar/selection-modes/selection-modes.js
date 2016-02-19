@@ -17,10 +17,12 @@ function onNavigatedFrom(args) {
 }
 exports.onNavigatedFrom = onNavigatedFrom;
 function onNoneSetSelectionModeTap(args) {
+    debugger;
     viewModelContext.setSelectionMode(calendarModule.CalendarSelectionMode.None);
 }
 exports.onNoneSetSelectionModeTap = onNoneSetSelectionModeTap;
 function onSingleSetSelectionModeTap(args) {
+    debugger;
     viewModelContext.setSelectionMode(calendarModule.CalendarSelectionMode.Single);
 }
 exports.onSingleSetSelectionModeTap = onSingleSetSelectionModeTap;
