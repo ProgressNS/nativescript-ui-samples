@@ -5,7 +5,7 @@ function onPageLoaded(args) {
     if (viewModelContext === undefined) {
         viewModelContext = new viewModel.ViewModel();
     }
-    page.bindingContext = new viewModel.ViewModel();
+    page.bindingContext = viewModelContext;
     viewModelContext.updateItemAnimation();
 }
 exports.onPageLoaded = onPageLoaded;
@@ -15,6 +15,9 @@ function onNavigatedFrom(args) {
     }
 }
 exports.onNavigatedFrom = onNavigatedFrom;
+function onNavigatedTo(args) {
+}
+exports.onNavigatedTo = onNavigatedTo;
 function onNoneSetSelectionModeTap(args) {
     debugger;
 }

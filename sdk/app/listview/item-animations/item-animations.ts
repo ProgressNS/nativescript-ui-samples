@@ -10,7 +10,7 @@ export function onPageLoaded(args){
         viewModelContext = new viewModel.ViewModel();
     }
 
-    page.bindingContext = new viewModel.ViewModel();
+    page.bindingContext = viewModelContext;
     viewModelContext.updateItemAnimation();
 }
 
@@ -18,6 +18,10 @@ export function onNavigatedFrom(args) {
     if(args.isBackNavigation === true) {
         viewModelContext = undefined;
     }
+}
+
+export function onNavigatedTo(args) {
+    
 }
 
 export function onNoneSetSelectionModeTap(args){

@@ -26,7 +26,6 @@ export class ViewModel extends observableModule.Observable{
     }
     
     public onSelectedRow(row) {
-        debugger;
         this._info.index = row.index;
         frameModule.topmost().goBack();
     }

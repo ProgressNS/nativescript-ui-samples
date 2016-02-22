@@ -4,7 +4,6 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var observable_array_1 = require("data/observable-array");
-var listViewModule = require("nativescript-telerik-ui/listview");
 var observableModule = require("data/observable");
 var frameModule = require("ui/frame");
 var ViewModel = (function (_super) {
@@ -20,6 +19,16 @@ var ViewModel = (function (_super) {
     Object.defineProperty(ViewModel.prototype, "dataItems", {
         get: function () {
             return this._items;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ViewModel.prototype, "itemAnimation", {
+        get: function () {
+            return this.get("ItemAnitmation");
+        },
+        set: function (value) {
+            this.set("ItemAnitmation", value);
         },
         enumerable: true,
         configurable: true
@@ -44,34 +53,14 @@ var ViewModel = (function (_super) {
     ViewModel.prototype.initDataItems = function () {
         this._items = new observable_array_1.ObservableArray();
     };
-    Object.defineProperty(ViewModel.prototype, "itemAnimation", {
-        get: function () {
-            return this.get("ItemInsertAnimation");
-        },
-        set: function (value) {
-            this.set("ItemInsertAnimation", value);
-        },
-        enumerable: true,
-        configurable: true
-    });
     ViewModel.prototype.setItemAnimation = function (insertAnimation) {
         this.itemAnimation = insertAnimation;
     };
     ViewModel.prototype.updateItemAnimation = function () {
         var index = this._animations.index;
+        var b = this._animations.options[index];
         debugger;
-        if (index == 0) {
-            this.itemAnimation = "Default";
-        }
-        else if (index == 1) {
-            this.itemAnimation = "Fade";
-        }
-        else if (index == 2) {
-            this.itemAnimation = listViewModule.ListViewItemAnimation.Scale;
-        }
-        else {
-            this.itemAnimation = listViewModule.ListViewItemAnimation.Slide;
-        }
+        this.itemAnimation = index;
     };
     ViewModel.prototype.onOptionsTapped = function () {
         var navigationEntry = {
