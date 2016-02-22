@@ -36,6 +36,11 @@ export class ViewModel extends observableModule.Observable{
         for (var index = 0; index < this._items.length; index++){
             this._items.setItem(index, new DataItem(Math.round(Math.random() * 100), "This is an updated item", "This is the updated item's description."));
         }
+        
+       var listView = <listViewModule.ListView>frameModule.topmost().getViewById("ls");
+       if (listView._ios != undefined) {
+           listView._ios.reloadData();
+       }
     }
 
     public onRemoveItemClick(args: listViewModule.ListViewEventData) {

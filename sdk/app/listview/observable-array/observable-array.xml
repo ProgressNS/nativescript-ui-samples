@@ -9,7 +9,7 @@
             <Button text="Reset" tap="{{onResetClick}}" ios:margin="10"/>
         </StackLayout>
         </StackLayout>
-        <lv:RadListView items="{{ dataItems }}" row="1" >
+        <lv:RadListView items="{{ dataItems }}" row="1" id="ls">
             <lv:RadListView.listViewLayout>
                 <lv:ListViewLinearLayout scrollDirection="Vertical"/>
             </lv:RadListView.listViewLayout>
