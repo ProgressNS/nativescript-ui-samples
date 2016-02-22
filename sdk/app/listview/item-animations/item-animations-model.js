@@ -23,16 +23,6 @@ var ViewModel = (function (_super) {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(ViewModel.prototype, "itemAnimation", {
-        get: function () {
-            return this.get("ItemAnitmation");
-        },
-        set: function (value) {
-            this.set("ItemAnitmation", value);
-        },
-        enumerable: true,
-        configurable: true
-    });
     ViewModel.prototype.onAddItemClick = function (args) {
         var id = Math.round(Math.random() * 100);
         this._items.push(new DataItem(id, "This is a new item: " + id, "This is the new item's description."));
@@ -48,19 +38,17 @@ var ViewModel = (function (_super) {
         }
     };
     ViewModel.prototype.onRemoveItemClick = function (args) {
-        this._items.splice(2, 1);
+        this._items.splice(this._items.length - 1, 1);
     };
     ViewModel.prototype.initDataItems = function () {
         this._items = new observable_array_1.ObservableArray();
     };
-    ViewModel.prototype.setItemAnimation = function (insertAnimation) {
-        this.itemAnimation = insertAnimation;
-    };
     ViewModel.prototype.updateItemAnimation = function () {
         var index = this._animations.index;
         var b = this._animations.options[index];
-        debugger;
-        this.itemAnimation = index;
+        var listView = frameModule.topmost().getViewById("ls");
+        listView.listViewLayout.itemInsertAnimation = this._animations.options[index];
+        listView.listViewLayout.itemDeleteAnimation = this._animations.options[index];
     };
     ViewModel.prototype.onOptionsTapped = function () {
         var navigationEntry = {

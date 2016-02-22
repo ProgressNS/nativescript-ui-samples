@@ -1,4 +1,5 @@
 var viewModel = require("./item-animations-model");
+var frameModule = require("ui/frame");
 var viewModelContext;
 function onPageLoaded(args) {
     var page = args.object;
@@ -15,10 +16,27 @@ function onNavigatedFrom(args) {
     }
 }
 exports.onNavigatedFrom = onNavigatedFrom;
-function onNavigatedTo(args) {
-}
-exports.onNavigatedTo = onNavigatedTo;
 function onNoneSetSelectionModeTap(args) {
-    debugger;
+    var listView = frameModule.topmost().getViewById("ls");
+    listView.listViewLayout.itemInsertAnimation = "Default";
+    listView.listViewLayout.itemDeleteAnimation = "Default";
 }
 exports.onNoneSetSelectionModeTap = onNoneSetSelectionModeTap;
+function onSingleSetSelectionModeTap(args) {
+    var listView = frameModule.topmost().getViewById("ls");
+    listView.listViewLayout.itemInsertAnimation = "Fade";
+    listView.listViewLayout.itemDeleteAnimation = "Fade";
+}
+exports.onSingleSetSelectionModeTap = onSingleSetSelectionModeTap;
+function onMultipleSetSelectionModeTap(args) {
+    var listView = frameModule.topmost().getViewById("ls");
+    listView.listViewLayout.itemInsertAnimation = "Scale";
+    listView.listViewLayout.itemDeleteAnimation = "Scale";
+}
+exports.onMultipleSetSelectionModeTap = onMultipleSetSelectionModeTap;
+function onRangeSetSelectionModeTap(args) {
+    var listView = frameModule.topmost().getViewById("ls");
+    listView.listViewLayout.itemInsertAnimation = "Slide";
+    listView.listViewLayout.itemDeleteAnimation = "Slide";
+}
+exports.onRangeSetSelectionModeTap = onRangeSetSelectionModeTap;
