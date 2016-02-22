@@ -14,9 +14,10 @@ Make sure you are using NativeScript 1.6+. To see which version of NativeScript 
 
 Steps to run the sample:
 
-1. `cd sdk`
-2. `tsc`
-3. `tns run android` or `tns emulate ios`
+1. `git clone https://github.com/telerik/nativescript-ui-samples.git`
+2. `cd nativescript-ui-samples/sdk/app`
+3. `tsc`
+4. `tns run android` or `tns emulate ios`
 
 
 ## Release notes
