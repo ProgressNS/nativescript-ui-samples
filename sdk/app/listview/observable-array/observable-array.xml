@@ -1,8 +1,15 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
 
-    <GridLayout orientation="vertical" rows="auto, *, auto">
-        <Label text="Observable array" cssClass="example-header"/>
-        <lv:RadListView items="{{ dataItems }}" row="1" >
+    <GridLayout orientation="vertical" rows="50, *">
+    <StackLayout orientation="vertical" backgroundColor="#f8f8f8">
+     <StackLayout row="0" orientation="horizontal" horizontalAlignment="center">
+            <Button text="Add" tap="{{onAddItemClick}}" ios:margin="10"/>
+            <Button text="Del" tap="{{onRemoveItemClick}}" ios:margin="10"/>
+            <Button text="Update" tap="{{onUpdateItemClick}}" ios:margin="10"/>
+            <Button text="Reset" tap="{{onResetClick}}" ios:margin="10"/>
+        </StackLayout>
+        </StackLayout>
+        <lv:RadListView items="{{ dataItems }}" row="1" id="ls">
             <lv:RadListView.listViewLayout>
                 <lv:ListViewLinearLayout scrollDirection="Vertical"/>
             </lv:RadListView.listViewLayout>
@@ -13,12 +20,7 @@
                 </StackLayout>
             </lv:RadListView.itemTemplate>
         </lv:RadListView>
-        <StackLayout row="2" orientation="horizontal">
-            <Button text="Add" tap="{{onAddItemClick}}"/>
-            <Button text="Del" tap="{{onRemoveItemClick}}"/>
-            <Button text="Update" tap="{{onUpdateItemClick}}"/>
-            <Button text="Reset" tap="{{onResetClick}}"/>
-        </StackLayout>
+       
     </GridLayout>
 
 </navigation:ExamplePage>

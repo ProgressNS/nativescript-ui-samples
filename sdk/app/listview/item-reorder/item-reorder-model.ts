@@ -1,6 +1,7 @@
 import {ObservableArray} from "data/observable-array";
 import listViewModule = require("../../nativescript-telerik-ui/listview");
 import timer = require("timer");
+var names = require("../listview-selection/PhotosWithNames.json")
 
 export class ViewModel {
 
@@ -21,20 +22,16 @@ export class ViewModel {
     private initDataItems() {
         this._items = new ObservableArray<DataItem>();
 
-        for (var i = 0; i < 10; i++) {
-            this._items.push(new DataItem(i, "Item " + i, "This is item description."));
+        for (var i = 0; i < names.names.length; i++) {
+            this._items.push(new DataItem(names.names[i]));
         }
     }
 }
 
 export class DataItem {
-    public id: number;
     public itemName;
-    public itemDescription;
 
-    constructor(id: number, name: string, description: string) {
-        this.id = id;
+    constructor(name: string) {
         this.itemName = name;
-        this.itemDescription = description;
     }
 }

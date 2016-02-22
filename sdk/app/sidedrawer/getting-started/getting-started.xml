@@ -2,7 +2,7 @@
     <navigation.actionBar>
         <ActionBar title="Getting started" />
     </navigation.actionBar>
-  <drawer:RadSideDrawer>
+  <drawer:RadSideDrawer id="sideDrawer">
     <drawer:RadSideDrawer.mainContent>
       <StackLayout >
         <Label text="{{ mainContentText }}" textWrap="true" cssClass="drawerContentText"/>

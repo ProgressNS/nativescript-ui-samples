@@ -15,17 +15,17 @@ export function onPageLoaded(args) {
 
 export function onItemSelected(args) {
 
-    var selectedItems = listView.getSelectedItems();
-    var selectedTitles = "Selected items: ";
-    for (var i = 0; i < selectedItems.length; i++) {
-        selectedTitles += selectedItems[i].itemName;
+    // var selectedItems = listView.getSelectedItems();
+    // var selectedTitles = "Selected items: ";
+    // for (var i = 0; i < selectedItems.length; i++) {
+    //     selectedTitles += selectedItems[i].itemName;
 
-        if (i < selectedItems.length - 1) {
-            selectedTitles += ", ";
-        }
-    }
+    //     if (i < selectedItems.length - 1) {
+    //         selectedTitles += ", ";
+    //     }
+    // }
 
-    lblSelection.text = selectedTitles;
+    // lblSelection.text = selectedTitles;
 }
 
 export function onSelectItemAtTap(args){
@@ -38,20 +38,21 @@ export function onDeselectItemAtTap(args){
 
 export function onItemDeselected(args) {
 
-    var selectedItems = listView.getSelectedItems();
-    var selectedTitles = "Selected items: ";
-    for (var i = 0; i < selectedItems.length; i++) {
-        selectedTitles += selectedItems[i].itemName;
+    // var selectedItems = listView.getSelectedItems();
+    // var selectedTitles = "Selected items: ";
+    // for (var i = 0; i < selectedItems.length; i++) {
+    //     selectedTitles += selectedItems[i].itemName;
 
-        if (i < selectedItems.length - 1) {
-            selectedTitles += ", ";
-        }
-    }
+    //     if (i < selectedItems.length - 1) {
+    //         selectedTitles += ", ";
+    //     }
+    // }
 
-    lblSelection.text = selectedTitles;
+    // lblSelection.text = selectedTitles;
 }
 
 export function onSelectAllTap(args) {
+    debugger;
     listView.selectAll();
 }
 

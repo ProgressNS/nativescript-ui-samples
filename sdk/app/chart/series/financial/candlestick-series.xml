@@ -9,7 +9,7 @@
             closePropertyName="Close"
             items="{{ candleStickSourceItems }}">
               <chart:CandlestickSeries.horizontalAxis>
-                <chart:CategoricalAxis/>
+                <chart:DateTimeCategoricalAxis  dateFormat="yyyy-MM-dd" verticalLocation="Bottom" />
               </chart:CandlestickSeries.horizontalAxis>
               <chart:CandlestickSeries.verticalAxis>
                 <chart:LinearAxis/>

@@ -1,4 +1,5 @@
 var observable_array_1 = require("data/observable-array");
+var data = require("./ListItems.json");
 var ViewModel = (function () {
     function ViewModel() {
         this._words = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"];
@@ -7,8 +8,8 @@ var ViewModel = (function () {
         get: function () {
             if (!this._items) {
                 this._items = new observable_array_1.ObservableArray();
-                for (var i = 0; i < 10; i++) {
-                    this._items.push(new DataItem(i, "Item " + i, "This is item description."));
+                for (var i = 0; i < data.items.length; i++) {
+                    this._items.push(new DataItem(i, data.items[i].title, data.items[i].author, "res://" + data.items[i].photo));
                 }
             }
             return this._items;
@@ -20,8 +21,8 @@ var ViewModel = (function () {
         get: function () {
             if (!this._staggeredItems) {
                 this._staggeredItems = new observable_array_1.ObservableArray();
-                for (var i = 0; i < 50; i++) {
-                    this._staggeredItems.push(new DataItem(i, "Item " + i, this.getRandomLengthString()));
+                for (var i = 0; i < data.items.length; i++) {
+                    this._staggeredItems.push(new DataItem(i, data.items[i].title, data.items[i].author, "res://" + data.items[i].photo));
                 }
             }
             return this._staggeredItems;
@@ -29,25 +30,15 @@ var ViewModel = (function () {
         enumerable: true,
         configurable: true
     });
-    ViewModel.prototype.getRandomLengthString = function () {
-        var sentenceLength = Math.round((Math.random() * 15));
-        var result = this._words[0];
-        for (var i = 0; i < sentenceLength; i++) {
-            result += (this._words[i % this._words.length] + " ");
-        }
-        return result;
-    };
-    ViewModel.prototype.initStaggeredLayoutItems = function () {
-        this._staggeredItems = new observable_array_1.ObservableArray();
-    };
     return ViewModel;
 })();
 exports.ViewModel = ViewModel;
 var DataItem = (function () {
-    function DataItem(id, name, description) {
+    function DataItem(id, name, description, image) {
         this.id = id;
         this.itemName = name;
         this.itemDescription = description;
+        this.image = image;
     }
     return DataItem;
 })();
