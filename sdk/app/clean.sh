@@ -1,1 +1,1 @@
-find . -name *.js ! -path ./app.js -type f -delete
+find . -name "*.js" ! -path "./app.js" -type f -delete
