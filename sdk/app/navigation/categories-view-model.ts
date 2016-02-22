@@ -234,9 +234,6 @@ export class NavigationViewModel extends observableModule.Observable {
         exampleItem = new NavigationItem("Observable Array", "./listview/observable-array/observable-array", currentItem);
         currentItem.subItems.push(exampleItem);
 
-        exampleItem = new NavigationItem("Observable Item", "./listview/observable-item/observable-item", currentItem);
-        currentItem.subItems.push(exampleItem);
-
         exampleItem = new NavigationItem("Pull to refresh", "./listview/pull-to-refresh/pull-to-refresh", currentItem);
         currentItem.subItems.push(exampleItem);
 

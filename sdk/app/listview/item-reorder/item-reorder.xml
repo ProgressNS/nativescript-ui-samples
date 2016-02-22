@@ -1,17 +1,14 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
     <GridLayout orientation="vertical" rows="auto, *, auto">
-        <Label cssClass="example-header" text="Hold and drag to reorder"/>
-        <lv:RadListView itemReordered="{{onItemReordered}}" items="{{ dataItems }}" row="1" cellReorder="true">
+        <lv:RadListView itemReordered="{{onItemReordered}}" items="{{ dataItems }}" row="1" cellReorder="true" reorderMode="HoldAndDrag">
             <lv:RadListView.listViewLayout>
-                <lv:ListViewLinearLayout itemHeight="50" scrollDirection="Vertical"/>
+                <lv:ListViewLinearLayout scrollDirection="Vertical"/>
             </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
-                <StackLayout orientation="vertical">
-                    <Label fontSize="20" text="{{ itemName }}"/>
-                    <Label fontSize="14" text="{{ itemDescription }}"/>
+                <StackLayout paddingTop="5" paddingBottom="5">
+                    <Label fontSize="20" text="{{ itemName }}" marginLeft="10"/>
                 </StackLayout>
             </lv:RadListView.itemTemplate>
         </lv:RadListView>
     </GridLayout>
-
 </navigation:ExamplePage>

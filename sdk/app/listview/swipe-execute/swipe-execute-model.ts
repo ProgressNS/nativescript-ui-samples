@@ -1,5 +1,6 @@
 import {ObservableArray} from "data/observable-array";
 import listViewModule = require("../../nativescript-telerik-ui/listview");
+var posts = require("./posts.json");
 
 export class ViewModel {
 
@@ -29,35 +30,37 @@ export class ViewModel {
     }
 
     public onItemClick(args: listViewModule.ListViewEventData){
+       // args.data.x = 0;
+       debugger;
         console.log("Item click: " + args.itemIndex);
     }
 
     public onSwipeCellFinished(args: listViewModule.ListViewEventData) {
         var swipeLimits = args.data.swipeLimits;
         console.log("Started swipe cell: " + args.object);
-        swipeLimits.threshold = 100;
-        swipeLimits.left = 150;
-        swipeLimits.right = 150;
+        swipeLimits.threshold = 150;
+        swipeLimits.left = 180;
+        swipeLimits.right = 180;
 
     }
 
     private initDataItems() {
         this._items = new ObservableArray();
 
-        for (var i = 0; i < 50; i++) {
-            this._items.push(new DataItem(i, "Item " + i, "This is item description."));
+        for (var i = 0; i < posts.names.length; i++) {
+            this._items.push(new DataItem(posts.names[i], posts.titles[i], posts.text[i]));
         }
     }
 }
 
 export class DataItem {
-    public id: number;
-    public itemName;
-    public itemDescription;
+    public name;
+    public title;
+    public text;
 
-    constructor(id: number, name: string, description: string) {
-        this.id = id;
-        this.itemName = name;
-        this.itemDescription = description;
+    constructor(name: string, title: string, text:string) {
+        this.name = name;
+        this.text = text;
+        this.title = title;
     }
 }

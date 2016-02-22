@@ -2,10 +2,14 @@ import {ObservableArray} from "data/observable-array";
 import listViewModule = require("../../nativescript-telerik-ui/listview");
 import timer = require("timer");
 
+var posts = require("../swipe-execute/posts.json")
+var application = require("application");
+
 export class ViewModel {
 
     private _items: ObservableArray<DataItem>;
-
+    private _numberOfAddedItems;
+    
     constructor() {
         this.initDataItems();
     }
@@ -18,8 +22,13 @@ export class ViewModel {
         console.log("Event fired");
         var that = new WeakRef(this);
         timer.setTimeout(function() {
-            for (var i = 0; i < 25; i++) {
-                that.get()._items.push(new DataItem(that.get()._items.length, "Item " + that.get()._items.length, "This is item description."));
+            var initialNumberOfItems = that.get()._numberOfAddedItems;
+            for (var i = that.get()._numberOfAddedItems-1; i < initialNumberOfItems + 2; i++) {
+                if (i > posts.names.length-1){
+                    break;
+                }
+                that.get()._items.push(new DataItem(posts.names[i], posts.titles[i], posts.text[i],"res://"+ posts.images[i]));
+                that.get()._numberOfAddedItems++;
             }
             var listView = args.object;
             listView.notifyLoadOnDemandFinished();
@@ -29,21 +38,32 @@ export class ViewModel {
 
     private initDataItems() {
         this._items = new ObservableArray<DataItem>();
-
-        for (var i = 0; i < 25; i++) {
-            this._items.push(new DataItem(i, "Item " + i, "This is item description."));
+        this._numberOfAddedItems = 0;
+        
+        for (var i = 0; i < posts.names.length-15; i++) {
+            this._numberOfAddedItems++;
+            if (application.android){
+                  this._items.push(new DataItem(posts.names[i], posts.titles[i], posts.text[i],"res://"+ posts.images[i].toLowerCase()));
+            }
+            else{
+                 this._items.push(new DataItem(posts.names[i], posts.titles[i], posts.text[i],"res://"+ posts.images[i]));
+            }
+          
         }
     }
 }
 
 export class DataItem {
-    public id: number;
-    public itemName;
-    public itemDescription;
+    public name;
+    public title;
+    public text;
+    public image;
 
-    constructor(id: number, name: string, description: string) {
-        this.id = id;
-        this.itemName = name;
-        this.itemDescription = description;
+    constructor(name: string, title: string, text:string, image:string) {
+        this.name = name;
+        this.text = text;
+        this.title = title;
+        this.image = image;
     }
 }
+

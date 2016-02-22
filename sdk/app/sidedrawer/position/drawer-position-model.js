@@ -13,19 +13,27 @@ var DrawerPositionModel = (function () {
     });
     DrawerPositionModel.prototype.onRightLocationTap = function (args) {
         this.setDrawerLocation(drawerModule.SideDrawerLocation.Right);
+        this.openDrawer();
     };
     DrawerPositionModel.prototype.onLeftLocationTap = function (args) {
         this.setDrawerLocation(drawerModule.SideDrawerLocation.Left);
+        this.openDrawer();
     };
     DrawerPositionModel.prototype.onBottomLocationTap = function (args) {
         this.setDrawerLocation(drawerModule.SideDrawerLocation.Bottom);
+        this.openDrawer();
     };
     DrawerPositionModel.prototype.onTopLocationTap = function (args) {
         this.setDrawerLocation(drawerModule.SideDrawerLocation.Top);
+        this.openDrawer();
     };
     DrawerPositionModel.prototype.setDrawerLocation = function (location) {
         var sideDrawer = frameModule.topmost().getViewById("sideDrawer");
         sideDrawer.drawerLocation = location;
+    };
+    DrawerPositionModel.prototype.openDrawer = function () {
+        var sideDrawer = frameModule.topmost().getViewById("sideDrawer");
+        sideDrawer.showDrawer();
     };
     return DrawerPositionModel;
 })();

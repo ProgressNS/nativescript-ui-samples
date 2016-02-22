@@ -1,4 +1,5 @@
 var observable_array_1 = require("data/observable-array");
+var json = require("./PhotosWithNames.json");
 var ViewModel = (function () {
     function ViewModel() {
         this.initDataItems();
@@ -12,18 +13,17 @@ var ViewModel = (function () {
     });
     ViewModel.prototype.initDataItems = function () {
         this._items = new observable_array_1.ObservableArray();
-        for (var i = 0; i < 25; i++) {
-            this._items.push(new DataItem(i, "Item " + i, "This is item description."));
+        for (var i = 0; i < json.names.length; i++) {
+            this._items.push(new DataItem(json.names[i], json.emails[i]));
         }
     };
     return ViewModel;
 })();
 exports.ViewModel = ViewModel;
 var DataItem = (function () {
-    function DataItem(id, name, description) {
-        this.id = id;
+    function DataItem(name, email) {
         this.itemName = name;
-        this.itemDescription = description;
+        this.itemEmail = email;
     }
     return DataItem;
 })();

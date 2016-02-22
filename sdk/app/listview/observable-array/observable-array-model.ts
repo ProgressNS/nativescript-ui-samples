@@ -26,13 +26,14 @@ export class ViewModel {
     }
 
     public onUpdateItemClick(args: listViewModule.ListViewEventData) {
+        debugger;
         for (var index = 0; index < this._items.length; index++){
             this._items.setItem(index, new DataItem(Math.round(Math.random() * 100), "This is an updated item", "This is the updated item's description."));
         }
     }
 
     public onRemoveItemClick(args: listViewModule.ListViewEventData) {
-        this._items.splice(2, 1); //Remove the third item
+        this._items.splice(this._items.length-1, 1);
     }
 
     private initDataItems() {

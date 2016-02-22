@@ -4,11 +4,16 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var observableModule = require("ui/core/dependency-observable");
+var frameModule = require("ui/frame");
 var DrawerCallbacksModel = (function (_super) {
     __extends(DrawerCallbacksModel, _super);
     function DrawerCallbacksModel() {
         _super.call(this);
     }
+    DrawerCallbacksModel.prototype.onOpenDrawerTap = function () {
+        var sideDrawer = frameModule.topmost().getViewById("sideDrawer");
+        sideDrawer.showDrawer();
+    };
     DrawerCallbacksModel.prototype.onDrawerOpening = function () {
         this.set("currentDrawerNotification", "Drawer opening");
     };
