@@ -10,17 +10,13 @@
                 
         <chart:RadCartesianChart.series>
  
-            <chart:BubbleSeries  items="{{ highDataModel }}" bubbleScale="5" categoryProperty="Year" valueProperty="Amount" bubbleSizeProperty="Impact" >
-               
-            </chart:BubbleSeries>
+            <chart:BubbleSeries  items="{{ highDataModel }}" bubbleScale="5" categoryProperty="Year" valueProperty="Amount" bubbleSizeProperty="Impact" />
             
-            <chart:BubbleSeries  items="{{ middleDataModel }}" bubbleScale="5" categoryProperty="Year" valueProperty="Amount" bubbleSizeProperty="Impact" >
-               
-            </chart:BubbleSeries>
+            <chart:BubbleSeries  items="{{ middleDataModel }}" bubbleScale="5" categoryProperty="Year" valueProperty="Amount" bubbleSizeProperty="Impact" />
             
-            <chart:BubbleSeries  items="{{ lowDataModel }}" bubbleScale="5" categoryProperty="Year" valueProperty="Amount" bubbleSizeProperty="Impact" >
+            <chart:BubbleSeries  items="{{ lowDataModel }}" bubbleScale="5" categoryProperty="Year" valueProperty="Amount" bubbleSizeProperty="Impact" />
                
-            </chart:BubbleSeries>
+            
         </chart:RadCartesianChart.series>
     </chart:RadCartesianChart>
 </navigation:ExamplePage>
