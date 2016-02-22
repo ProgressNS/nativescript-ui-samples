@@ -3,7 +3,7 @@ import observableModule = require("data/observable");
 import frameModule = require("ui/frame");
 
 export class ViewModel extends observableModule.Observable{
-    private _selectionInfo;
+    private _selectionInfo: ObservableArray<DataItem>;
 	constructor(){
 		super();
         this._selectionInfo = {
@@ -26,6 +26,7 @@ export class ViewModel extends observableModule.Observable{
     
      public updateSelectionMode() {
         var index: number = this._selectionInfo.index;
+        debugger;
         if(index == 0) {
            this.selectionMode = calendarModule.CalendarSelectionMode.None;
         } else if (index == 1) {

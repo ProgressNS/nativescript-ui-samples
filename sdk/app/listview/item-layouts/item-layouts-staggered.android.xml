@@ -1,0 +1,22 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:f="fresco/fresco" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
+    <lv:RadListView items="{{ staggeredItems }}">
+        <lv:RadListView.listViewLayout>
+            <lv:ListViewStaggeredLayout scrollDirection="Vertical" spanCount="2"/>
+        </lv:RadListView.listViewLayout>
+        <lv:RadListView.itemTemplate>
+            <GridLayout rows="*" backgroundColor="White">
+                   <GridLayout rows="*" columns="*" marginBottom="2" marginRight="2">
+                       <f:FrescoDrawee
+                       horizontalAlignment="stretch"
+                       imageUri="{{ image }}"/>
+                        <GridLayout verticalAlignment="bottom">
+                            <StackLayout backgroundColor="#BBFFFFFF" paddingTop="8" paddingBottom="8" paddingLeft="16" paddingRight="16">
+                                <Label text="{{ itemName }}"/>
+                                <Label text="{{ itemDescription }}"/>
+                            </StackLayout>
+                        </GridLayout>
+                   </GridLayout>
+                </GridLayout>
+        </lv:RadListView.itemTemplate>
+    </lv:RadListView>
+</navigation:ExamplePage>

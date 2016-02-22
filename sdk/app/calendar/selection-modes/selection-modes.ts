@@ -20,10 +20,12 @@ export function onNavigatedFrom(args) {
 }
 
 export function onNoneSetSelectionModeTap(args: any) {
+    debugger;
     viewModelContext.setSelectionMode(calendarModule.CalendarSelectionMode.None);
 }
 
 export function onSingleSetSelectionModeTap(args: any) {
+    debugger;
     viewModelContext.setSelectionMode(calendarModule.CalendarSelectionMode.Single);
 }
 

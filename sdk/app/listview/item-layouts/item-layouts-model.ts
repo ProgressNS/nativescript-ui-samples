@@ -2,6 +2,8 @@ import {ObservableArray} from "data/observable-array";
 import listViewModule = require("../../nativescript-telerik-ui/listview");
 import timer = require("timer");
 
+var data = require("./ListItems.json")
+
 export class ViewModel {
 
     private _items: ObservableArray<DataItem>;
@@ -14,9 +16,9 @@ export class ViewModel {
     get dataItems() {
         if (!this._items) {
             this._items = new ObservableArray<DataItem>();
-
-            for (var i = 0; i < 10; i++) {
-                this._items.push(new DataItem(i, "Item " + i, "This is item description."));
+            
+            for (var i = 0; i < data.items.length; i++) {
+                this._items.push(new DataItem(i, data.items[i].title, data.items[i].author, "res://" + data.items[i].photo));
             }
         }
         return this._items;
@@ -26,24 +28,11 @@ export class ViewModel {
         if (!this._staggeredItems) {
             this._staggeredItems = new ObservableArray();
 
-            for (var i = 0; i < 50; i++) {
-                this._staggeredItems.push(new DataItem(i, "Item " + i, this.getRandomLengthString()));
+            for (var i = 0; i < data.items.length; i++) {
+                this._staggeredItems.push(new DataItem(i, data.items[i].title, data.items[i].author, "res://" + data.items[i].photo));
             }
         }
         return this._staggeredItems;
-    }
-
-    private getRandomLengthString(){
-        var sentenceLength = Math.round((Math.random() * 15));
-        var result = this._words[0];
-        for (var i = 0; i < sentenceLength; i++){
-            result += (this._words[i % this._words.length] + " ");
-        }
-        return result;
-    }
-
-    private initStaggeredLayoutItems() {
-        this._staggeredItems = new ObservableArray();
     }
 }
 
@@ -51,10 +40,12 @@ export class DataItem {
     public id: number;
     public itemName;
     public itemDescription;
+    public image;
 
-    constructor(id: number, name: string, description: string) {
+    constructor(id: number, name: string, description: string, image:string) {
         this.id = id;
         this.itemName = name;
         this.itemDescription = description;
+        this.image = image;
     }
 }

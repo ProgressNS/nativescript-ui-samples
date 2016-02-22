@@ -7,6 +7,7 @@ The UI for NativeScript samples app resides in the **sdk** folder at root reposi
 - chart
 - sidedrawer
 - listview
+- calendar
 
 ## Running **UI for NativeScript** sample app
 Make sure you are using NativeScript 1.5+. To see which version of NativeScript you are currently using, type `tns --version` in the console.

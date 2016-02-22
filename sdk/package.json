@@ -1,15 +1,16 @@
 {
 	"nativescript": {
 		"id": "org.nativescript.sdk",
-		"tns-ios": {
-			"version": "1.5.2"
-		},
 		"tns-android": {
 			"version": "1.5.1"
+		},
+		"tns-ios": {
+			"version": "1.5.2"
 		}
 	},
 	"dependencies": {
-		"nativescript-telerik-ui": "^0.2.3",
+		"fresco": "file:./deps/fresco-0.1.0.tgz",
+		"nativescript-telerik-ui": "file:../../Desktop/nativescript-ui-debug-dev.tgz",
 		"tns-core-modules": "1.5.1"
 	}
 }
