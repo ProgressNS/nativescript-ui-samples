@@ -1,6 +1,7 @@
 import {ObservableArray} from "data/observable-array";
-import listViewModule = require("../../nativescript-telerik-ui/listview");
+import listViewModule = require("nativescript-telerik-ui/listview");
 import timer = require("timer");
+import frameModule = require("ui/frame");
 
 export class ViewModel {
 
@@ -26,9 +27,13 @@ export class ViewModel {
     }
 
     public onUpdateItemClick(args: listViewModule.ListViewEventData) {
-        debugger;
         for (var index = 0; index < this._items.length; index++){
             this._items.setItem(index, new DataItem(Math.round(Math.random() * 100), "This is an updated item", "This is the updated item's description."));
+        }
+        
+        var listView = <listViewModule.ListView>frameModule.topmost().getViewById("ls");
+        if (listView._ios != undefined) {
+           listView._ios.reloadData();
         }
     }
 

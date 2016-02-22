@@ -1,4 +1,5 @@
 var observable_array_1 = require("data/observable-array");
+var frameModule = require("ui/frame");
 var ViewModel = (function () {
     function ViewModel() {
         this.initDataItems();
@@ -20,9 +21,12 @@ var ViewModel = (function () {
         }
     };
     ViewModel.prototype.onUpdateItemClick = function (args) {
-        debugger;
         for (var index = 0; index < this._items.length; index++) {
             this._items.setItem(index, new DataItem(Math.round(Math.random() * 100), "This is an updated item", "This is the updated item's description."));
+        }
+        var listView = frameModule.topmost().getViewById("ls");
+        if (listView._ios != undefined) {
+            listView._ios.reloadData();
         }
     };
     ViewModel.prototype.onRemoveItemClick = function (args) {
