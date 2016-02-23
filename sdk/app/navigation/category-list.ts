@@ -6,22 +6,12 @@ import applicationModule = require("application");
 var dataModel = categoriesViewModel.navigationModel;
 
 export function pageLoaded(args) {
-
-
     if (frameModule.topmost().ios) {
         frameModule.topmost().ios.controller.interactivePopGestureRecognizer.enabled = false;
     }
-
-
 }
 
 export function onPageNavigatingTo(args) {
-    // if (applicationModule.ios) {
-    //     args.object.bindingContext = undefined;
-    //     if (args.isBackNavigation && (dataModel.canMoveBack() === true)) {
-    //         dataModel.moveBack();
-    //     }
-    // }
     var page = args.object;
     dataModel.initModelData();
 
