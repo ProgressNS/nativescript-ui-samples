@@ -1,13 +1,13 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
     <chart:RadCartesianChart id="bubbleChart">
     
-                 <chart:RadCartesianChart.horizontalAxis>
-                    <chart:LinearAxis/>
-                </chart:RadCartesianChart.horizontalAxis>
-                <chart:RadCartesianChart.verticalAxis>
-                    <chart:LinearAxis />
-                </chart:RadCartesianChart.verticalAxis>
-                
+            <chart:RadCartesianChart.verticalAxis>
+                <chart:LinearAxis />
+            </chart:RadCartesianChart.verticalAxis>
+            <chart:RadCartesianChart.horizontalAxis>
+                <chart:CategoricalAxis verticalLocation="Bottom" labelFitMode="Rotate" labelRotationAngle="1.2"/>
+            </chart:RadCartesianChart.horizontalAxis>
+         
         <chart:RadCartesianChart.series>
  
             <chart:BubbleSeries  items="{{ highDataModel }}" bubbleScale="5" categoryProperty="Year" valueProperty="Amount" bubbleSizeProperty="Impact" />
@@ -15,8 +15,9 @@
             <chart:BubbleSeries  items="{{ middleDataModel }}" bubbleScale="5" categoryProperty="Year" valueProperty="Amount" bubbleSizeProperty="Impact" />
             
             <chart:BubbleSeries  items="{{ lowDataModel }}" bubbleScale="5" categoryProperty="Year" valueProperty="Amount" bubbleSizeProperty="Impact" />
-               
+              
             
         </chart:RadCartesianChart.series>
+        
     </chart:RadCartesianChart>
 </navigation:ExamplePage>

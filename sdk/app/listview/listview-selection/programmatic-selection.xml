@@ -1,27 +1,27 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
- <GridLayout orientation="vertical" rows="100, *">
-    <GridLayout cols="auto,100,auto" backgroundColor="#f8f8f8" orientation="horizontal" row="0">
-         <StackLayout orientation="vertical" horizontalAlignment="left" col="0">
-            <Button text="Select all" tap="onSelectAllTap"/>
+ <GridLayout orientation="vertical" rows="auto, *">
+    <GridLayout rows="auto,auto,auto" backgroundColor="#f8f8f8" orientation="horizontal" row="0">
+         <StackLayout orientation="horizontal" horizontalAlignment="center" row="0">
+            <Button text="Select all" tap="onSelectAllTap" marginRight="10"/>
             <Button text="Deselect all" tap="onDeselectAllTap"/>
         </StackLayout>
-        <StackLayout orientation="vertical" col="2" horizontalAlignment="center">
-            <StackLayout orientation="horizontal">
-            <Button tap="onSelectItemAtTap" text="Select item at: "/>
-            <TextField id="txtSelectItemIndex" backgroundColor="White" width="50"/>
+            <StackLayout orientation="horizontal" row="1" horizontalAlignment="center">
+            <Label text="Select item at:" verticalAlignment="center"/>
+            <TextField id="txtSelectItemIndex" backgroundColor="White" width="50" height="20"/>
+            <Button tap="onSelectItemAtTap" text="Done" marginLeft="10"/>
             </StackLayout>
-            <StackLayout orientation="horizontal">
-            <Button tap="onDeselectItemAtTap" text="Deselect item at: "/>
-            <TextField id="txtDeselectItemIndex" backgroundColor="White" width="50"/>
+            <StackLayout orientation="horizontal" row="2" horizontalAlignment="center">
+            <Label text="Deselect item at:" verticalAlignment="center"/>
+            <TextField id="txtDeselectItemIndex" backgroundColor="White" width="50" height="20"/>
+            <Button tap="onDeselectItemAtTap" text="Done" marginLeft="10"/>
             </StackLayout>
-        </StackLayout>
         </GridLayout>
         <lv:RadListView items="{{ dataItems }}" row="1" id="listView" itemDeselected="onItemDeselected" itemSelected="onItemSelected" multipleSelection="true" selectionBehavior="Press">
             <lv:RadListView.listViewLayout>
                 <lv:ListViewLinearLayout itemHeight="50" scrollDirection="Vertical"/>
             </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
-                <StackLayout orientation="vertical" ios:paddingLeft="50" android:paddingLeft="10">
+                <StackLayout orientation="vertical" ios:paddingLeft="50" android:paddingLeft="16">
                     <Label fontSize="20" text="{{ itemName }}"/>
                     <Label fontSize="14" text="{{ itemEmail }}"/>
                 </StackLayout>
