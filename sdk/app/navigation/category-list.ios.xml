@@ -2,7 +2,8 @@
     xmlns="http://www.nativescript.org/tns.xsd"
     xmlns:lv="nativescript-telerik-ui/listview"
     loaded="pageLoaded"
-    navigatingFrom="onPageNavigatingFrom">
+    navigatingFrom="onPageNavigatingFrom"
+    navigatingTo="onPageNavigatingTo">
     <Page.actionBar>
         <ActionBar title="{{ currentParent.title }}">
             <ActionBar.navigationButton>
