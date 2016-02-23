@@ -17,11 +17,18 @@ export function pageLoaded(args) {
     page.bindingContext = dataModel;
 }
 
-export function onPageNavigatingFrom(args) {
-    args.object.bindingContext = undefined;
+export function onPageNavigatingTo(args){
+       args.object.bindingContext = undefined;
     if (args.isBackNavigation && (dataModel.canMoveBack() === true)) {
         dataModel.moveBack();
     }
+}
+
+export function onPageNavigatingFrom(args) {
+    // args.object.bindingContext = undefined;
+    // if (args.isBackNavigation && (dataModel.canMoveBack() === true)) {
+    //     dataModel.moveBack();
+    // }
 }
 
 export function onBackTap(args){

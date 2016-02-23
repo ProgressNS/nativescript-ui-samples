@@ -10,11 +10,14 @@ function pageLoaded(args) {
     page.bindingContext = dataModel;
 }
 exports.pageLoaded = pageLoaded;
-function onPageNavigatingFrom(args) {
+function onPageNavigatingTo(args) {
     args.object.bindingContext = undefined;
     if (args.isBackNavigation && (dataModel.canMoveBack() === true)) {
         dataModel.moveBack();
     }
+}
+exports.onPageNavigatingTo = onPageNavigatingTo;
+function onPageNavigatingFrom(args) {
 }
 exports.onPageNavigatingFrom = onPageNavigatingFrom;
 function onBackTap(args) {

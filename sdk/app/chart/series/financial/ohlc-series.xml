@@ -9,7 +9,7 @@
             closePropertyName="Close"
             items="{{ ohlcSourceItems }}">
               <chart:OhlcSeries.horizontalAxis>
-                <chart:CategoricalAxis/>
+                   <chart:DateTimeCategoricalAxis  dateFormat="yyyy-MM-dd" verticalLocation="Bottom" />
               </chart:OhlcSeries.horizontalAxis>
               <chart:OhlcSeries.verticalAxis>
                 <chart:LinearAxis/>
