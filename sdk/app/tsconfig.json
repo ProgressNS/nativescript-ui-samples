@@ -80,8 +80,6 @@
         "./listview/load-on-demand/load-on-demand.ts",
         "./listview/observable-array/observable-array-model.ts",
         "./listview/observable-array/observable-array.ts",
-        "./listview/observable-item/observable-item-model.ts",
-        "./listview/observable-item/observable-item.ts",
         "./listview/pull-to-refresh/pts-view-model.ts",
         "./listview/pull-to-refresh/pull-to-refresh.ts",
         "./listview/swipe-execute/swipe-execute-model.ts",
@@ -192,14 +190,8 @@
         "../node_modules/tns-core-modules/utils/utils.d.ts",
         "../node_modules/tns-core-modules/xml/xml.d.ts",
         "../node_modules/nativescript-telerik-ui/chart/chart-android-map.d.ts",
-        "../node_modules/nativescript-telerik-ui/chart/chart-common.ts",
-        "../node_modules/nativescript-telerik-ui/chart/chart-initializers-common.ts",
-        "../node_modules/nativescript-telerik-ui/chart/chart-initializers.android.ts",
-        "../node_modules/nativescript-telerik-ui/chart/chart-initializers.ios.ts",
         "../node_modules/nativescript-telerik-ui/chart/chart-ios-map.d.ts",
-        "../node_modules/nativescript-telerik-ui/chart/chart.android.ts",
-        "../node_modules/nativescript-telerik-ui/chart/chart.d.ts",
-        "../node_modules/nativescript-telerik-ui/chart/chart.ios.ts"
+        "../node_modules/nativescript-telerik-ui/chart/chart.d.ts"
     ],
     "exclude": [],
     "atom": {

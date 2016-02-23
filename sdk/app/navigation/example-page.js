@@ -23,7 +23,7 @@ var ExamplePage = (function (_super) {
         if (applicationModule.android) {
             var navigationButton = new actionBarModule.NavigationButton();
             navigationButton.on("tap", function (args) { frameModule.topmost().goBack(); });
-            navigationButton.icon = "res://ic_menu_back";
+            navigationButton.icon = "res://ic_arrow_back_black_24dp";
             actionBar.navigationButton = navigationButton;
         }
         if (this.actionBar !== actionBar) {

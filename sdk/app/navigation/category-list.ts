@@ -13,24 +13,28 @@ export function pageLoaded(args) {
     if (frameModule.topmost().ios) {
         frameModule.topmost().ios.controller.interactivePopGestureRecognizer.enabled = false;
     }
-    
+
     page.bindingContext = dataModel;
 }
 
-export function onPageNavigatingTo(args){
-       args.object.bindingContext = undefined;
-    if (args.isBackNavigation && (dataModel.canMoveBack() === true)) {
-        dataModel.moveBack();
+export function onPageNavigatingTo(args) {
+    if (applicationModule.ios){
+        args.object.bindingContext = undefined;
+        if (args.isBackNavigation && (dataModel.canMoveBack() === true)) {
+            dataModel.moveBack();
+        }
     }
 }
 
 export function onPageNavigatingFrom(args) {
-    // args.object.bindingContext = undefined;
-    // if (args.isBackNavigation && (dataModel.canMoveBack() === true)) {
-    //     dataModel.moveBack();
-    // }
+    if (applicationModule.android) {
+        args.object.bindingContext = undefined;
+        if (args.isBackNavigation && (dataModel.canMoveBack() === true)) {
+            dataModel.moveBack();
+        }
+    }
 }
 
-export function onBackTap(args){
+export function onBackTap(args) {
     frameModule.topmost().goBack();
 }

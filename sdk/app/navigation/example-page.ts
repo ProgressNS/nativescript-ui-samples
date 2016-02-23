@@ -20,14 +20,13 @@ export class ExamplePage extends pageModule.Page {
     public onLoaded(args) {
         super.onLoaded(args);
 
-
         var actionBar = this.actionBar === undefined ? new actionBarModule.ActionBar() : this.actionBar;
         actionBar.title = this._associatedExampleMeta.title;
         if (applicationModule.android) {
             var navigationButton = new actionBarModule.NavigationButton();
             navigationButton.on("tap", args =>
             { frameModule.topmost().goBack() });
-            navigationButton.icon = "res://ic_menu_back";
+            navigationButton.icon = "res://ic_arrow_back_black_24dp";
             actionBar.navigationButton = navigationButton;
 
         }

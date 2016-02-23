@@ -1,5 +1,6 @@
 var categoriesViewModel = require("./categories-view-model");
 var frameModule = require("ui/frame");
+var applicationModule = require("application");
 var dataModel = categoriesViewModel.navigationModel;
 function pageLoaded(args) {
     var page = args.object;
@@ -11,13 +12,21 @@ function pageLoaded(args) {
 }
 exports.pageLoaded = pageLoaded;
 function onPageNavigatingTo(args) {
-    args.object.bindingContext = undefined;
-    if (args.isBackNavigation && (dataModel.canMoveBack() === true)) {
-        dataModel.moveBack();
+    if (applicationModule.ios) {
+        args.object.bindingContext = undefined;
+        if (args.isBackNavigation && (dataModel.canMoveBack() === true)) {
+            dataModel.moveBack();
+        }
     }
 }
 exports.onPageNavigatingTo = onPageNavigatingTo;
 function onPageNavigatingFrom(args) {
+    if (applicationModule.android) {
+        args.object.bindingContext = undefined;
+        if (args.isBackNavigation && (dataModel.canMoveBack() === true)) {
+            dataModel.moveBack();
+        }
+    }
 }
 exports.onPageNavigatingFrom = onPageNavigatingFrom;
 function onBackTap(args) {

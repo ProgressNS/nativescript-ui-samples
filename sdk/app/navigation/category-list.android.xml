@@ -8,7 +8,7 @@
             <ActionBar.titleView>
                 <StackLayout orientation="horizontal" >
                     <StackLayout horizontalAlignment="left" paddingLeft="0" paddingRight="16" paddingBottom="8" paddingTop="8" tap="onBackTap" visibility="{{_hasBack === true ? 'visible' : 'collapsed'}}"> 
-                        <Image stretch="none" verticalAlignment="center" android:src="res://ic_menu_back"/>
+                        <Image stretch="none" verticalAlignment="center" android:src="res://ic_arrow_back_black_24dp"/>
                     </StackLayout>
                     <Label text="{{ currentParent.title }}" verticalAlignment="center" style="font-size: 20px; color: black;"/>
                </StackLayout>
