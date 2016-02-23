@@ -1,31 +1,22 @@
 var categoriesViewModel = require("./categories-view-model");
 var frameModule = require("ui/frame");
-var applicationModule = require("application");
 var dataModel = categoriesViewModel.navigationModel;
 function pageLoaded(args) {
-    var page = args.object;
-    dataModel.initModelData();
     if (frameModule.topmost().ios) {
         frameModule.topmost().ios.controller.interactivePopGestureRecognizer.enabled = false;
     }
-    page.bindingContext = dataModel;
 }
 exports.pageLoaded = pageLoaded;
 function onPageNavigatingTo(args) {
-    if (applicationModule.ios) {
-        args.object.bindingContext = undefined;
-        if (args.isBackNavigation && (dataModel.canMoveBack() === true)) {
-            dataModel.moveBack();
-        }
-    }
+    var page = args.object;
+    dataModel.initModelData();
+    page.bindingContext = dataModel;
 }
 exports.onPageNavigatingTo = onPageNavigatingTo;
 function onPageNavigatingFrom(args) {
-    if (applicationModule.android) {
-        args.object.bindingContext = undefined;
-        if (args.isBackNavigation && (dataModel.canMoveBack() === true)) {
-            dataModel.moveBack();
-        }
+    args.object.bindingContext = undefined;
+    if (args.isBackNavigation && (dataModel.canMoveBack() === true)) {
+        dataModel.moveBack();
     }
 }
 exports.onPageNavigatingFrom = onPageNavigatingFrom;

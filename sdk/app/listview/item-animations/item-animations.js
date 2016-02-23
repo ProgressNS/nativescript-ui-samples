@@ -7,9 +7,12 @@ function onPageLoaded(args) {
         viewModelContext = new viewModel.ViewModel();
     }
     page.bindingContext = viewModelContext;
-    viewModelContext.updateItemAnimation();
 }
 exports.onPageLoaded = onPageLoaded;
+function onNavigatedTo(args) {
+    viewModelContext.updateItemAnimation();
+}
+exports.onNavigatedTo = onNavigatedTo;
 function onNavigatedFrom(args) {
     if (args.isBackNavigation === true) {
         viewModelContext = undefined;

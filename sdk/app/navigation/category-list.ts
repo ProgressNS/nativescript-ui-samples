@@ -7,31 +7,31 @@ var dataModel = categoriesViewModel.navigationModel;
 
 export function pageLoaded(args) {
 
-    var page = args.object;
-    dataModel.initModelData();
 
     if (frameModule.topmost().ios) {
         frameModule.topmost().ios.controller.interactivePopGestureRecognizer.enabled = false;
     }
 
-    page.bindingContext = dataModel;
+
 }
 
 export function onPageNavigatingTo(args) {
-    if (applicationModule.ios){
-        args.object.bindingContext = undefined;
-        if (args.isBackNavigation && (dataModel.canMoveBack() === true)) {
-            dataModel.moveBack();
-        }
-    }
+    // if (applicationModule.ios) {
+    //     args.object.bindingContext = undefined;
+    //     if (args.isBackNavigation && (dataModel.canMoveBack() === true)) {
+    //         dataModel.moveBack();
+    //     }
+    // }
+    var page = args.object;
+    dataModel.initModelData();
+
+    page.bindingContext = dataModel;
 }
 
 export function onPageNavigatingFrom(args) {
-    if (applicationModule.android) {
-        args.object.bindingContext = undefined;
-        if (args.isBackNavigation && (dataModel.canMoveBack() === true)) {
-            dataModel.moveBack();
-        }
+    args.object.bindingContext = undefined;
+    if (args.isBackNavigation && (dataModel.canMoveBack() === true)) {
+        dataModel.moveBack();
     }
 }
 

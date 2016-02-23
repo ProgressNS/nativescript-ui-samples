@@ -50,7 +50,7 @@ var ViewModel = (function (_super) {
     ViewModel.prototype.updateItemAnimation = function () {
         var index = this._animations.index;
         var b = this._animations.options[index];
-        var listView = frameModule.topmost().getViewById("ls");
+        var listView = frameModule.topmost().currentPage.getViewById("ls");
         listView.listViewLayout.itemInsertAnimation = this._animations.options[index];
         listView.listViewLayout.itemDeleteAnimation = this._animations.options[index];
     };
