@@ -1,5 +1,7 @@
 import {ObservableArray} from "data/observable-array";
 import listViewModule = require("../../nativescript-telerik-ui/listview");
+import frameModule = require("ui/frame");
+import utilsModule = require("utils/utils");
 var posts = require("./posts.json");
 
 export class ViewModel {
@@ -26,22 +28,21 @@ export class ViewModel {
     public onSwipeCellStarted(args: listViewModule.ListViewEventData) {
         var swipeLimits = args.data.swipeLimits;
         console.log("Started swipe cell: " + args.object);
-        swipeLimits.threshold = 100;
+       // swipeLimits.threshold = 100;
+        swipeLimits.threshold = 100 * utilsModule.layout.getDisplayDensity();
+        swipeLimits.left = 150 * utilsModule.layout.getDisplayDensity();
+        swipeLimits.right = 150 * utilsModule.layout.getDisplayDensity();
     }
 
     public onItemClick(args: listViewModule.ListViewEventData){
-       // args.data.x = 0;
-       debugger;
-        console.log("Item click: " + args.itemIndex);
+       var listView = <listViewModule.ListView>frameModule.topmost().getViewById("listView");
+       listView.notifySwipeToExecuteFinished();
+       console.log("Item click: " + args.itemIndex);
     }
 
     public onSwipeCellFinished(args: listViewModule.ListViewEventData) {
         var swipeLimits = args.data.swipeLimits;
         console.log("Started swipe cell: " + args.object);
-        swipeLimits.threshold = 150;
-        swipeLimits.left = 180;
-        swipeLimits.right = 180;
-
     }
 
     private initDataItems() {

@@ -16,7 +16,7 @@
                 </StackLayout>
             </lv:RadListView.itemTemplate>
             <lv:RadListView.loadOnDemandItemTemplate>
-                <Button text="my button" ios:ios.allowsUserInteraction="true"/>
+                <Button text="Load More" ios:ios.allowUserInteraction="true" backgroundColor="white"/>
             </lv:RadListView.loadOnDemandItemTemplate>
         </lv:RadListView>
 </navigation:ExamplePage>

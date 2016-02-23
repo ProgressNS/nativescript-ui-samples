@@ -6,7 +6,7 @@
                 <lv:ListViewLinearLayout itemHeight="50" scrollDirection="Vertical"/>
             </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
-                <StackLayout orientation="vertical" android:paddingLeft="10" ios:paddingLeft="50">
+                <StackLayout orientation="vertical" android:paddingLeft="16" ios:paddingLeft="50">
                     <Label fontSize="20" text="{{ itemName }}"/>
                     <Label fontSize="13" text="{{ itemEmail }}"/>
                 </StackLayout>

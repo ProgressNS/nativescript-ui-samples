@@ -1,4 +1,6 @@
 var observable_array_1 = require("data/observable-array");
+var frameModule = require("ui/frame");
+var utilsModule = require("utils/utils");
 var posts = require("./posts.json");
 var ViewModel = (function () {
     function ViewModel() {
@@ -23,18 +25,18 @@ var ViewModel = (function () {
     ViewModel.prototype.onSwipeCellStarted = function (args) {
         var swipeLimits = args.data.swipeLimits;
         console.log("Started swipe cell: " + args.object);
-        swipeLimits.threshold = 100;
+        swipeLimits.threshold = 100 * utilsModule.layout.getDisplayDensity();
+        swipeLimits.left = 150 * utilsModule.layout.getDisplayDensity();
+        swipeLimits.right = 150 * utilsModule.layout.getDisplayDensity();
     };
     ViewModel.prototype.onItemClick = function (args) {
-        debugger;
+        var listView = frameModule.topmost().getViewById("listView");
+        listView.notifySwipeToExecuteFinished();
         console.log("Item click: " + args.itemIndex);
     };
     ViewModel.prototype.onSwipeCellFinished = function (args) {
         var swipeLimits = args.data.swipeLimits;
         console.log("Started swipe cell: " + args.object);
-        swipeLimits.threshold = 150;
-        swipeLimits.left = 180;
-        swipeLimits.right = 180;
     };
     ViewModel.prototype.initDataItems = function () {
         this._items = new observable_array_1.ObservableArray();
