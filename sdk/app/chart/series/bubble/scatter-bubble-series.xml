@@ -8,14 +8,10 @@
                 </chart:RadCartesianChart.verticalAxis>
                 
         <chart:RadCartesianChart.series>
-            <chart:ScatterSeries  items="{{ scatterSource }}" bubbleScale="5" xProperty="Age" yProperty="Salary" bubbleSizeProperty="Impact" >             
-            </chart:ScatterSeries>
-            
-            <chart:ScatterSeries  items="{{ scatterSource }}" bubbleScale="5" xProperty="Age" yProperty="Spendings" bubbleSizeProperty="Impact" >             
-            </chart:ScatterSeries>
-            
-            <chart:ScatterSeries  items="{{ scatterSource }}" bubbleScale="5" xProperty="Age" yProperty="Savings" bubbleSizeProperty="Impact" >             
-            </chart:ScatterSeries>
+            <chart:ScatterBubbleSeries  items="{{ scatterSource }}" bubbleScale="5" xProperty="Age" yProperty="Salary" bubbleSizeProperty="Impact" />             
+            <chart:ScatterBubbleSeries  items="{{ scatterSource }}" bubbleScale="5" xProperty="Age" yProperty="Spendings" bubbleSizeProperty="Impact" />  
+            <chart:ScatterBubbleSeries  items="{{ scatterSource }}" bubbleScale="5" xProperty="Age" yProperty="Savings" bubbleSizeProperty="Impact" />
+           
         </chart:RadCartesianChart.series>
     </chart:RadCartesianChart>
 </navigation:ExamplePage>
