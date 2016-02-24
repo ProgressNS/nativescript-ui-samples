@@ -1,14 +1,13 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
     <chart:RadCartesianChart id="cartesianChart">
         <chart:RadCartesianChart.series>
-            <chart:LineSeries legendTitle="Line series" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">
-
-            </chart:LineSeries>
-            <chart:AreaSeries legendTitle="Area series" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">
-
-            </chart:AreaSeries>
-            <chart:BarSeries legendTitle="Bar series" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">
-            </chart:BarSeries>
+        
+            <chart:LineSeries legendTitle="Line series" items="{{ categoricalSource }}"  stackMode="Stack" categoryProperty="Country" valueProperty="Amount"/>
+        
+            <chart:AreaSeries legendTitle="Area series" items="{{ categoricalSource }}"  stackMode="Stack" categoryProperty="Country" valueProperty="SecondVal"/>
+        
+            <chart:BarSeries legendTitle="Bar series" items="{{ categoricalSource }}"  stackMode="Stack" categoryProperty="Country" valueProperty="ThirdVal"/>
+            
         </chart:RadCartesianChart.series>
 
 
