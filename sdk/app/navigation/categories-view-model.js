@@ -168,7 +168,7 @@ var NavigationViewModel = (function (_super) {
         chartRoot.subItems.push(annotationsRoot);
         var annotationsExample = new NavigationItem("Plot band", "./chart/annotations/plot-band", annotationsRoot);
         annotationsRoot.subItems.push(annotationsExample);
-        annotationsExample = new NavigationItem("Band line", "./chart/annotations/band-line", annotationsRoot);
+        annotationsExample = new NavigationItem("Grid line", "./chart/annotations/band-line", annotationsRoot);
         annotationsRoot.subItems.push(annotationsExample);
     };
     NavigationViewModel.prototype.buildListViewExamples = function (currentParent) {

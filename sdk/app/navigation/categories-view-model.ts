@@ -194,7 +194,7 @@ export class NavigationViewModel extends observableModule.Observable {
         var annotationsExample = new NavigationItem("Plot band", "./chart/annotations/plot-band", annotationsRoot);
         annotationsRoot.subItems.push(annotationsExample);
   
-        annotationsExample = new NavigationItem("Band line", "./chart/annotations/band-line", annotationsRoot);
+        annotationsExample = new NavigationItem("Grid line", "./chart/annotations/band-line", annotationsRoot);
         annotationsRoot.subItems.push(annotationsExample);
     }
 
