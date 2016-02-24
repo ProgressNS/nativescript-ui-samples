@@ -5,7 +5,7 @@
 
            <chart:BarSeries seriesName="Bar" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="SecondVal">
                 <chart:BarSeries.verticalAxis>
-                    <chart:LinearAxis horizontalLocation="Right" allowPan="true"/>
+                    <chart:LinearAxis horizontalLocation="Right" allowZoom="true" allowPan="true"/>
                 </chart:BarSeries.verticalAxis>
             </chart:BarSeries>
 
