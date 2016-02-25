@@ -1,3 +1,4 @@
+import observableModule = require("data/observable");
 import {ObservableArray} from "data/observable-array";
 import listViewModule = require("nativescript-telerik-ui/listview");
 import timer = require("timer");
@@ -27,18 +28,15 @@ export class ViewModel {
     }
 
     public onUpdateItemClick(args: listViewModule.ListViewEventData) {
-        for (var index = 0; index < this._items.length; index++){
-            this._items.setItem(index, new DataItem(Math.round(Math.random() * 100), "This is an updated item", "This is the updated item's description."));
-        }
-        
-        var listView = <listViewModule.ListView>frameModule.topmost().getViewById("ls");
-        if (listView._ios != undefined) {
-           listView._ios.reloadData();
+        for (var index = 0; index < this._items.length; index++) {
+              this._items.getItem(index).id = Math.random() * 100;
+            this._items.getItem(index).itemName = "This is an updated item";
+            this._items.getItem(index).itemDescription = "This is the updated item's description.";
         }
     }
 
     public onRemoveItemClick(args: listViewModule.ListViewEventData) {
-        this._items.splice(this._items.length-1, 1);
+        this._items.splice(this._items.length - 1, 1);
     }
 
     private initDataItems() {
@@ -46,14 +44,37 @@ export class ViewModel {
     }
 }
 
-export class DataItem {
-    public id: number;
-    public itemName;
-    public itemDescription;
+export class DataItem extends observableModule.Observable {
+
 
     constructor(id: number, name: string, description: string) {
+        super();
         this.id = id;
         this.itemName = name;
         this.itemDescription = description;
+    }
+
+    get id(): number {
+        return this.get("_id");
+    }
+
+    set id(value: number) {
+        this.set("_id", value);
+    }
+
+    get itemName(): string {
+        return this.get("_itemName");
+    }
+
+    set itemName(value: string) {
+        this.set("_itemName", value);
+    }
+
+    get itemDescription(): string {
+        return this.get("_itemDescription");
+    }
+
+    set itemDescription(value: string) {
+        this.set("_itemDescription", value);
     }
 }
