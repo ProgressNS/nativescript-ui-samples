@@ -174,10 +174,7 @@
         "../node_modules/tns-core-modules/ui/web-view/web-view.d.ts",
         "../node_modules/tns-core-modules/utils/types.d.ts",
         "../node_modules/tns-core-modules/utils/utils.d.ts",
-        "../node_modules/tns-core-modules/xml/xml.d.ts",
-        "../node_modules/nativescript-telerik-ui/chart/chart-android-map.d.ts",
-        "../node_modules/nativescript-telerik-ui/chart/chart-ios-map.d.ts",
-        "../node_modules/nativescript-telerik-ui/chart/chart.d.ts"
+        "../node_modules/tns-core-modules/xml/xml.d.ts"
     ],
     "exclude": [],
     "atom": {
