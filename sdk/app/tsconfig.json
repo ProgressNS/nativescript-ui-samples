@@ -8,7 +8,8 @@
         "removeComments": true,
         "noLib": false,
         "preserveConstEnums": true,
-        "suppressImplicitAnyIndexErrors": true
+        "suppressImplicitAnyIndexErrors": true,
+        "sourceMap": true
     },
     "filesGlob": [
         "./**/*.ts",
@@ -29,6 +30,8 @@
         "./calendar/view-modes/view-modes-model.ts",
         "./navigation/options-menu/options.ts",
         "./navigation/options-menu/options-model.ts",
+        "./calendar/transition-modes/transition-modes.ts",
+        "./calendar/transition-modes/transition-modes-model.ts",
         "./chart/series/bar/range-bar-series.ts",
         "./chart/annotations/band-line.ts",
         "./chart/annotations/plot-band.ts",
