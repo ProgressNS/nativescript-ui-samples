@@ -95,7 +95,7 @@ export class NavigationViewModel extends observableModule.Observable {
 
         calendarExample = new NavigationItem("View modes", "./calendar/view-modes/view-modes", calendarRoot);
         calendarRoot.subItems.push(calendarExample);
-        
+
         calendarExample = new NavigationItem("Transition modes", "./calendar/transition-modes/transition-modes", calendarRoot);
         calendarRoot.subItems.push(calendarExample);
     }
@@ -144,8 +144,8 @@ export class NavigationViewModel extends observableModule.Observable {
 
         seriesExample = new NavigationItem("Scatter series", "./chart/series/scatter/scatter-series", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
-        
-        
+
+
         var stylingRoot = new NavigationItem("Styling", undefined, chartRoot);
         chartRoot.subItems.push(stylingRoot);
         var stylingExample = new NavigationItem("Styling axes", "/chart/styling/styling-axes", stylingRoot);
@@ -186,17 +186,17 @@ export class NavigationViewModel extends observableModule.Observable {
         axesRoot.subItems.push(axesExample);
 
         axesExample = new NavigationItem("Negative values", "./chart/axes/negative-values/negative-values", axesRoot);
-        axesRoot.subItems.push(axesExample);     
-        
+        axesRoot.subItems.push(axesExample);
+
         axesExample = new NavigationItem("Date time axis", "./chart/axes/date-time-axes/date-time-axes", axesRoot);
-        axesRoot.subItems.push(axesExample);     
-               
+        axesRoot.subItems.push(axesExample);
+
         var annotationsRoot = new NavigationItem("Annotations", undefined, chartRoot);
         chartRoot.subItems.push(annotationsRoot);
-    
+
         var annotationsExample = new NavigationItem("Plot band", "./chart/annotations/plot-band", annotationsRoot);
         annotationsRoot.subItems.push(annotationsExample);
-  
+
         annotationsExample = new NavigationItem("Grid line", "./chart/annotations/band-line", annotationsRoot);
         annotationsRoot.subItems.push(annotationsExample);
     }
@@ -204,7 +204,11 @@ export class NavigationViewModel extends observableModule.Observable {
     private buildListViewExamples(currentParent: NavigationItem) {
         var currentItem = new NavigationItem("ListView", undefined, currentParent);
         currentParent.subItems.push(currentItem);
-        var exampleItem = new NavigationItem("Item Animations", "./listview/item-animations/item-animations", currentItem);
+
+        var exampleItem = new NavigationItem("Getting started", "./listview/getting-started/getting-started", currentItem);
+        currentItem.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Item Animations", "./listview/item-animations/item-animations", currentItem);
         currentItem.subItems.push(exampleItem);
         
         // Layouts
