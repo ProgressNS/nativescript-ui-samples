@@ -1,4 +1,4 @@
-// >> list-view-first-look-model
+// >> listview-first-look-model
 import {ObservableArray} from "data/observable-array";
 import timer = require("timer");
 
@@ -42,4 +42,4 @@ export class DataItem {
         this.itemDescription = description;
     }
 }
-// << list-view-first-look-model
+// << listview-first-look-model
