@@ -78,6 +78,7 @@
         "./listview/item-layouts/item-layouts-staggered.ts",
         "./listview/item-reorder/item-reorder-model.ts",
         "./listview/item-reorder/item-reorder.ts",
+        "./listview/item-reorder/item-reorder-handle.ts",
         "./listview/listview-selection/listview-selection-model.ts",
         "./listview/listview-selection/multiple-selection.ts",
         "./listview/listview-selection/programmatic-selection.ts",

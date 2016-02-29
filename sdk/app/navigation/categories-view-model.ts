@@ -225,6 +225,9 @@ export class NavigationViewModel extends observableModule.Observable {
         exampleItem = new NavigationItem("Item Reorder", "./listview/item-reorder/item-reorder", currentItem);
         currentItem.subItems.push(exampleItem);
         
+        exampleItem = new NavigationItem("Item Reorder with handle", "./listview/item-reorder/item-reorder-handle", currentItem);
+        currentItem.subItems.push(exampleItem);
+        
         // Selection
         var selectionItem = new NavigationItem("Selection", undefined, currentItem);
         currentItem.subItems.push(selectionItem);

@@ -1,0 +1,24 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page"  loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
+    <GridLayout orientation="vertical" rows="auto, *, auto">
+        <Label cssClass="example-header" text="Hold and drag to reorder"/>
+        
+        <lv:RadListView itemReordered="{{onItemReordered}}" reorderMode="Drag" items="{{ dataItems }}" row="1" cellReorder="true">
+            <lv:RadListView.listViewLayout>
+                <lv:ListViewLinearLayout  scrollDirection="Vertical"/>
+            </lv:RadListView.listViewLayout>
+            <!-- >> listview-item-reorder-handle-xml -->
+            <lv:RadListView.itemTemplate>
+                <GridLayout columns="*, auto" paddingTop="16" paddingBottom="16">
+                    <StackLayout orientation="vertical" col="0">
+                        <Label fontSize="20" text="{{ itemName }}"/>
+                        <Label fontSize="14" text="{{ itemDescription }}"/>
+                    </StackLayout>
+                    <lv:ReorderHandle col="1" verticalAlignment="center">
+                        <Image src="res://reorder-icon" stretch="none" verticalAlignment="stretch" margin="16"/>
+                    </lv:ReorderHandle>
+                </GridLayout>
+            </lv:RadListView.itemTemplate>
+            <!-- << listview-item-reorder-handle-xml -->
+        </lv:RadListView>
+    </GridLayout>
+</navigation:ExamplePage>
