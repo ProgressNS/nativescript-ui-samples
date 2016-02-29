@@ -9,12 +9,11 @@
             <!-- >> listview-item-reorder-handle-xml -->
             <lv:RadListView.itemTemplate>
                 <GridLayout columns="*, auto" paddingTop="16" paddingBottom="16">
-                    <StackLayout orientation="vertical" col="0">
+                    <StackLayout orientation="vertical" col="0" verticalAlignment="center">
                         <Label fontSize="20" text="{{ itemName }}"/>
-                        <Label fontSize="14" text="{{ itemDescription }}"/>
                     </StackLayout>
                     <lv:ReorderHandle col="1" verticalAlignment="center">
-                        <Image src="res://reorder-icon" stretch="none" verticalAlignment="stretch" margin="16"/>
+                        <Image android:src="res://reorder_icon" ios:src="res://reorder-icon" stretch="none" verticalAlignment="stretch" margin="16"/>
                     </lv:ReorderHandle>
                 </GridLayout>
             </lv:RadListView.itemTemplate>

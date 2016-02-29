@@ -1,9 +1,11 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
   <GridLayout rows="*" >
         <lv:RadListView id="list-view" row="0" items="{{ dataItems }}" marginRight="-2">
+            <!-- >> listview-item-layouts-linear-xml -->
             <lv:RadListView.listViewLayout>
-                <lv:ListViewLinearLayout scrollDirection="Vertical" itemeHeight="150"/>
+                <lv:ListViewLinearLayout scrollDirection="Vertical"/>
             </lv:RadListView.listViewLayout>
+            <!-- << listview-item-layouts-linear-xml -->
             <lv:RadListView.itemTemplate>
                 <GridLayout rows="*" backgroundColor="White">
                    <GridLayout rows="*" columns="*" marginBottom="2" marginRight="2">
