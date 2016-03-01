@@ -17,9 +17,8 @@ export class ViewModel {
     get dataItems() {
         return this._items;
     }
-
+    // >> listview-load-on-demand-handler
     public onLoadMoreItemsRequested(args: listViewModule.ListViewEventData) {
-        console.log("Event fired");
         var that = new WeakRef(this);
         timer.setTimeout(function() {
             var initialNumberOfItems = that.get()._numberOfAddedItems;
@@ -35,6 +34,7 @@ export class ViewModel {
         }, 1000);
         args.returnValue = true;
     }
+    // << listview-load-on-demand-handler
 
     private initDataItems() {
         this._items = new ObservableArray<DataItem>();
