@@ -249,6 +249,12 @@ export class NavigationViewModel extends observableModule.Observable {
 
         exampleItem = new NavigationItem("Swipe to execute", "./listview/swipe-execute/swipe-execute", currentItem);
         currentItem.subItems.push(exampleItem);
+        
+        exampleItem = new NavigationItem("Swipe to execute with sticky actions", "./listview/swipe-execute/swipe-execute-sticky", currentItem);
+        currentItem.subItems.push(exampleItem);
+        
+        exampleItem = new NavigationItem("Swipe to execute with stretched content", "./listview/swipe-execute/swipe-execute-stretch", currentItem);
+        currentItem.subItems.push(exampleItem);
     }
 
     private buildSideDrawerExamples(currentParent: NavigationItem) {
