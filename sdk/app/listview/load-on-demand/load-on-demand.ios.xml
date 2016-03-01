@@ -17,8 +17,12 @@
                 </StackLayout>
                 </StackLayout>
             </lv:RadListView.itemTemplate>
+            <!-- >> listview-load-on-demand-custom-view -->
             <lv:RadListView.loadOnDemandItemTemplate>
-                <Button text="Load More" ios:ios.allowUserInteraction="true" backgroundColor="white"/>
+                <GridLayout style="background-color: #7fff7f;">
+                     <Label text="Load More" horizontalAlignment="center" verticalAlignment="center"/>
+                </GridLayout>
             </lv:RadListView.loadOnDemandItemTemplate>
+            <!-- << listview-load-on-demand-custom-view -->
         </lv:RadListView>
 </navigation:ExamplePage>
