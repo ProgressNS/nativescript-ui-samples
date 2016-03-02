@@ -98,6 +98,9 @@ export class NavigationViewModel extends observableModule.Observable {
         
         calendarExample = new NavigationItem("Transition modes", "./calendar/transition-modes/transition-modes", calendarRoot);
         calendarRoot.subItems.push(calendarExample);
+        
+        calendarExample = new NavigationItem("Events view modes", "./calendar/events-view-modes/events-view-modes", calendarRoot);
+        calendarRoot.subItems.push(calendarExample);
     }
 
     private buildChartExamples(currentParent: NavigationItem) {

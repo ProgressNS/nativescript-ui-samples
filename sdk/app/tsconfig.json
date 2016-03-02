@@ -32,6 +32,8 @@
         "./navigation/options-menu/options-model.ts",
         "./calendar/transition-modes/transition-modes.ts",
         "./calendar/transition-modes/transition-modes-model.ts",
+        "./calendar/events-view-modes/events-view-modes.ts",
+        "./calendar/events-view-modes/events-view-modes-model.ts",
         "./chart/series/bar/range-bar-series.ts",
         "./chart/annotations/band-line.ts",
         "./chart/annotations/plot-band.ts",

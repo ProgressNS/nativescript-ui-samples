@@ -100,6 +100,7 @@ export class AppViewModel extends observable.Observable {
         this._examples.push({ Id: "58", title: "Events", group: "calendar features", description: "", moduleName: "./calendar/events/events" });
         this._examples.push({ Id: "59", title: "Programatic control", group: "calendar features", description: "", moduleName: "./calendar/programatic-control/programatic-control" });
         this._examples.push({ Id: "60", title: "Transition modes", group: "calendar features", description: "", moduleName: "./calendar/transition-modes/transition-modes" });
+        this._examples.push({ Id: "61", title: "Events view modes", group: "calendar features", description: "", moduleName: "./calendar/events-view-modes/events-view-modes" });
     }
 
     get examples(): Array<Example> {
