@@ -10,12 +10,12 @@
                         height="100"
                         width="80"
                         imageUri="{{ image }}"/>
-                   <StackLayout orientation="vertical" marginLeft="15">
-                    <Label fontSize="20" text="{{ name }}" marginBottom="8"/>
-                    <Label fontSize="14" text="{{ title }}" style="font-weight: bold;" textWrap="true"/>
-                    <Label fontSize="12" text="{{ text }}" color="White" textWrap="true"/>
-                </StackLayout>
-                </StackLayout>
+                        <StackLayout orientation="vertical" marginLeft="15">
+                            <Label fontSize="20" text="{{ name }}" marginBottom="8"/>
+                            <Label fontSize="14" text="{{ title }}" style="font-weight: bold;" textWrap="true"/>
+                            <Label fontSize="12" text="{{ text }}" color="White" textWrap="true"/>
+                        </StackLayout>
+                    </StackLayout>
                 </StackLayout>
             </lv:RadListView.itemTemplate>
         </lv:RadListView>

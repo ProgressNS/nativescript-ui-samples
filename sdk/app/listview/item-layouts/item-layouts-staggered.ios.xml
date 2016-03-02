@@ -1,8 +1,10 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
     <lv:RadListView items="{{ staggeredItems }}">
+        <!-- >> listview-item-layouts-staggered-xml -->
         <lv:RadListView.listViewLayout>
             <lv:ListViewStaggeredLayout scrollDirection="Vertical" spanCount="2"/>
         </lv:RadListView.listViewLayout>
+        <!-- << listview-item-layouts-staggered-xml -->
         <lv:RadListView.itemTemplate>
             <GridLayout rows="*" backgroundColor="White">
                    <GridLayout rows="*" columns="*" marginBottom="2" marginRight="2">

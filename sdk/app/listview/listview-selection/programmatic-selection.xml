@@ -16,7 +16,7 @@
             <Button tap="onDeselectItemAtTap" text="Done" marginLeft="10"/>
             </StackLayout>
         </GridLayout>
-        <lv:RadListView items="{{ dataItems }}" row="1" id="listView" itemDeselected="onItemDeselected" itemSelected="onItemSelected" multipleSelection="true" selectionBehavior="Press">
+        <lv:RadListView items="{{ dataItems }}" row="1" id="listView" multipleSelection="true" selectionBehavior="Press">
             <lv:RadListView.listViewLayout>
                 <lv:ListViewLinearLayout itemHeight="50" scrollDirection="Vertical"/>
             </lv:RadListView.listViewLayout>
@@ -28,5 +28,4 @@
             </lv:RadListView.itemTemplate>
         </lv:RadListView>
     </GridLayout>
- 
 </navigation:ExamplePage>
