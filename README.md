@@ -20,7 +20,7 @@ Steps to run the sample:
 
 1. `git clone https://github.com/telerik/nativescript-ui-samples.git`
 2. `cd nativescript-ui-samples/sdk/app`
-3. `tsc`
+3. `tsc // this is to compile the typescript files. The compiler is going to report a lot of errors, but ignore them.` 
 4. `tns run android` or `tns emulate ios`
 
 
