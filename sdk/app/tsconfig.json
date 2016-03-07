@@ -74,6 +74,8 @@
         "./listview/getting-started/getting-started.ts",
         "./listview/item-animations/item-animations-model.ts",
         "./listview/item-animations/item-animations.ts",
+        "./listview/item-fade-animation/item-fade-animation-model.ts",
+        "./listview/item-fade-animation/item-fade-animation.ts",
         "./listview/item-layouts/item-layouts-grid.ts",
         "./listview/item-layouts/item-layouts-linear.ts",
         "./listview/item-layouts/item-layouts-model.ts",

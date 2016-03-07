@@ -17,8 +17,9 @@ export class ViewModel {
     get dataItems() {
         return this._items;
     }
-
-    public onShouldRefreshOnPull(args: listViewModule.ListViewEventData) {
+    
+    // >> listview-pull-to-refresh-handler
+    public onPullToRefreshInitiated(args: listViewModule.ListViewEventData) {
         var that = new WeakRef(this);
         timer.setTimeout(function() {
             var initialNumberOfItems = that.get()._numberOfAddedItems;
@@ -32,9 +33,8 @@ export class ViewModel {
             var listView = args.object;
             listView.notifyPullToRefreshFinished();
         }, 1000);
-
     }
-
+    // << listview-pull-to-refresh-handler
     private initDataItems() {
         this._items = new ObservableArray<DataItem>();
         this._numberOfAddedItems = 0;

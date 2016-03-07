@@ -1,19 +1,4 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" navigatedTo="onNavigatedTo" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
-<navigation.actionBar>
-        <ActionBar title="View modes">
-            <ActionBar.actionItems>
-             <ios>
-               <ActionItem text="Options" ios.position="right" tap="{{onOptionsTapped}}" />
-             </ios>
-             <android>
-                    <ActionItem text="Default" android.position="popup" tap="onNoneSetSelectionModeTap" />
-                    <ActionItem text="Fade" android.position="popup" tap="onSingleSetSelectionModeTap" />
-                    <ActionItem text="Scale" android.position="popup" tap="onMultipleSetSelectionModeTap" />
-                    <ActionItem text="Slide" android.position="popup" tap="onRangeSetSelectionModeTap" />
-             </android>
-            </ActionBar.actionItems>
-        </ActionBar>
-    </navigation.actionBar>  
     <GridLayout orientation="vertical" rows="50, *">
     <StackLayout orientation="vertical" backgroundColor="#f8f8f8">
      <StackLayout row="0" orientation="horizontal" horizontalAlignment="center">
@@ -23,9 +8,10 @@
             <Button text="Reset" tap="{{ onResetClick }}" ios:margin="10"/>
         </StackLayout>
         </StackLayout>
-        <lv:RadListView items="{{ dataItems }}" row="1" id="ls">
+         <!-- >> listview-item-animations-xml -->  
+        <lv:RadListView items="{{ dataItems }}" row="1">
             <lv:RadListView.listViewLayout>
-                <lv:ListViewLinearLayout scrollDirection="Vertical"/>
+                <lv:ListViewLinearLayout scrollDirection="Vertical" itemInsertAnimation="Fade" itemDeleteAnimation="Fade"/>
             </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
                 <StackLayout orientation="vertical">
@@ -33,6 +19,7 @@
                     <Label fontSize="14" text="{{ _itemDescription }}"/>
                 </StackLayout>
             </lv:RadListView.itemTemplate>
-         </lv:RadListView>
+        </lv:RadListView>
+         <!-- << listview-item-animations-xml -->  
     </GridLayout>
 </navigation:ExamplePage>
