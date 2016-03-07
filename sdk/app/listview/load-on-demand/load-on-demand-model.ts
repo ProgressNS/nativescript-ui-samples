@@ -48,7 +48,6 @@ export class ViewModel {
             else{
                  this._items.push(new DataItem(posts.names[i], posts.titles[i], posts.text[i],"res://"+ posts.images[i]));
             }
-          
         }
     }
 }

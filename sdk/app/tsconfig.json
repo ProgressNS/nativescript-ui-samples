@@ -1,5 +1,5 @@
 {
-    "version": "1.5.3",
+    "version": "1.8.7",
     "compilerOptions": {
         "target": "es5",
         "module": "commonjs",
@@ -11,6 +11,11 @@
         "suppressImplicitAnyIndexErrors": true,
         "sourceMap": false
     },
+    "filesGlob": [
+        "./**/*.ts",
+        "./../node_modules/tns-core-modules/**/*.ts",
+        "./../node_modules/nativescript-telerik-ui/**/*.ts"
+    ],
     "exclude": [],
     "include":["../node_modules"],
     "atom": {
