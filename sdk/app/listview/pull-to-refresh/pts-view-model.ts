@@ -1,5 +1,5 @@
 import {ObservableArray} from "data/observable-array";
-import listViewModule = require("../../nativescript-telerik-ui/listview");
+import listViewModule = require("../../nativescript-telerik-ui-pro/listview");
 import timer = require("timer");
 
 var posts = require("../swipe-execute/posts.json")

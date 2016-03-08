@@ -1,5 +1,5 @@
 import observableModule = require("data/observable");
-import calendarModule = require("nativescript-telerik-ui/calendar");
+import calendarModule = require("nativescript-telerik-ui-pro/calendar");
 import frameModule = require("ui/frame");
 
 export class ViewModel extends observableModule.Observable {

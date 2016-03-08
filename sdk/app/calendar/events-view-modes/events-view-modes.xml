@@ -1,4 +1,4 @@
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:rc="nativescript-telerik-ui/calendar" loaded="onPageLoaded" navigatedTo="onNavigatedTo" navigatingFrom="onNavigatedFrom" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:rc="nativescript-telerik-ui-pro/calendar" loaded="onPageLoaded" navigatedTo="onNavigatedTo" navigatingFrom="onNavigatedFrom" xmlns="http://www.nativescript.org/tns.xsd">
      <navigation.actionBar>
         <ActionBar title="Events view modes">
             <ActionBar.actionItems>

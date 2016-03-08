@@ -1,4 +1,4 @@
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:drawer="nativescript-telerik-ui/sidedrawer" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:drawer="nativescript-telerik-ui-pro/sidedrawer" xmlns="http://www.nativescript.org/tns.xsd">
   <navigation.actionBar>
       <ActionBar title="Positions" />
   </navigation.actionBar>

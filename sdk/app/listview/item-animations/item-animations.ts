@@ -1,6 +1,6 @@
 
 import viewModel = require("./item-animations-model");
-import listViewModule = require("nativescript-telerik-ui/listview");
+import listViewModule = require("nativescript-telerik-ui-pro/listview");
 import frameModule = require("ui/frame");
 
 var viewModelContext: viewModel.ViewModel;

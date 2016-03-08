@@ -1,6 +1,6 @@
 import observableModule = require("data/observable");
 import frame = require("ui/frame");
-import drawerModule = require("nativescript-telerik-ui/sidedrawer");
+import drawerModule = require("nativescript-telerik-ui-pro/sidedrawer");
 
 export class GettingStartedViewModel extends observableModule.Observable {
     constructor() {

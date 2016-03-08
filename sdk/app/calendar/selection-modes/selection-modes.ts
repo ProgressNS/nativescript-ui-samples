@@ -1,5 +1,5 @@
 import viewModel = require("./selection-modes-model");
-import calendarModule = require("nativescript-telerik-ui/calendar");
+import calendarModule = require("nativescript-telerik-ui-pro/calendar");
 
 var viewModelContext : viewModel.ViewModel;
 

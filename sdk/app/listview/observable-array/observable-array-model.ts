@@ -1,6 +1,6 @@
 import observableModule = require("data/observable");
 import {ObservableArray} from "data/observable-array";
-import listViewModule = require("nativescript-telerik-ui/listview");
+import listViewModule = require("nativescript-telerik-ui-pro/listview");
 import timer = require("timer");
 import frameModule = require("ui/frame");
 

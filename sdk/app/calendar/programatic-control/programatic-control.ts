@@ -1,4 +1,4 @@
-import calendarModule = require("nativescript-telerik-ui/calendar");
+import calendarModule = require("nativescript-telerik-ui-pro/calendar");
 
 var calendar : calendarModule.RadCalendar;
 
