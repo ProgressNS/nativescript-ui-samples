@@ -60,6 +60,7 @@
         "./chart/legend/chart-legend.ts",
         "./chart/series/area/area-series.ts",
         "./chart/series/area/stacked-area-series.ts",
+        "./chart/series/area/stacked-area-series-model.ts",
         "./chart/series/bar/bar-series.ts",
         "./chart/series/bar/range-bar-series.ts",
         "./chart/series/bar/stacked-bar-series.ts",
