@@ -24,13 +24,13 @@
                 </chart:Palette>
                
     </chart:RadCartesianChart.palettes>
-      <!-- >> grid-line-annotations -->
+      <!-- << grid-line-annotations -->
      <chart:RadCartesianChart.annotations>
 		    <chart:ChartGridLineAnnotation axisId="hAxis" hidden="false" value="50" zPosition="AboveSeries" strokeWidth="1" strokeColor="#EB916580" />
 			<chart:ChartGridLineAnnotation axisId="vAxis" hidden="false" value="10000" zPosition="AboveSeries" strokeWidth="1" strokeColor="#65BFEB80" />
             <chart:ChartPlotBandAnnotation axisId="hAxis" hidden="false" value="20" zPosition="AboveSeries"  minValue="60" maxValue="70" fillColor="#A1FAC980" strokeColor="#A1FAC980"/>
 			<chart:ChartPlotBandAnnotation axisId="vAxis" hidden="false" value="20000" zPosition="AboveSeries" minValue="2500" maxValue="5000" fillColor="#AC74E880" strokeColor="#AC74E880"/>
         </chart:RadCartesianChart.annotations>
-          <!-- >> grid-line-annotations -->
+          <!-- << grid-line-annotations -->
     </chart:RadCartesianChart>
 </navigation:ExamplePage>
