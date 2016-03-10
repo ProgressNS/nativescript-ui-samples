@@ -1,4 +1,5 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
+      <!-- >> legend -->
     <chart:RadCartesianChart id="cartesianChart">
         <chart:RadCartesianChart.series>
         
@@ -9,18 +10,17 @@
             <chart:BarSeries legendTitle="Bar series" items="{{ categoricalSource }}"  stackMode="Stack" categoryProperty="Country" valueProperty="ThirdVal"/>
             
         </chart:RadCartesianChart.series>
-
-
+        
         <chart:RadCartesianChart.horizontalAxis>
             <chart:CategoricalAxis/>
         </chart:RadCartesianChart.horizontalAxis>
         <chart:RadCartesianChart.verticalAxis>
             <chart:LinearAxis/>
         </chart:RadCartesianChart.verticalAxis>
-
+        
         <chart:RadCartesianChart.legend>
             <chart:RadLegendView position="Top" height="150" />
         </chart:RadCartesianChart.legend>
-
     </chart:RadCartesianChart>
+       <!-- << legend -->
 </navigation:ExamplePage>

@@ -11,6 +11,7 @@
 
             </chart:LineSeries>
         </chart:RadCartesianChart.series>
+             <!-- >> series-styling -->
         <chart:RadCartesianChart.palettes>
             <chart:Palette seriesName="Bar">
                 <chart:Palette.entries>
@@ -28,7 +29,7 @@
                 </chart:Palette.entries>
             </chart:Palette>
         </chart:RadCartesianChart.palettes>
-
+     <!-- << series-styling -->
         <chart:RadCartesianChart.horizontalAxis>
             <chart:CategoricalAxis/>
         </chart:RadCartesianChart.horizontalAxis>
