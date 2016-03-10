@@ -39,7 +39,6 @@
         "./calendar/transition-modes/transition-modes.ts",
         "./calendar/view-modes/view-modes-model.ts",
         "./calendar/view-modes/view-modes.ts",
-        "./chart/annotations/band-line.ts",
         "./chart/annotations/grid-line.ts",
         "./chart/annotations/plot-band.ts",
         "./chart/axes/customization/axes-customization.ts",

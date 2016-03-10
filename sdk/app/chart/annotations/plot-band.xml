@@ -11,10 +11,10 @@
                 </chart:BarSeries.verticalAxis>
             </chart:BarSeries>
         </chart:RadCartesianChart.series>
-
+      <!-- >> plot-band-annotations -->
         <chart:RadCartesianChart.annotations>
 		    <chart:ChartPlotBandAnnotation axisId="verBarAxis" minValue="2" maxValue="4" zPosition="AboveSeries" strokeWidth="2" fillColor="#DDFFFF00" strokeColor="Red" strokeDashPattern="3,3,5,5"/>
         </chart:RadCartesianChart.annotations>
-        
+              <!-- >> plot-band-annotations -->
     </chart:RadCartesianChart>
 </navigation:ExamplePage>
