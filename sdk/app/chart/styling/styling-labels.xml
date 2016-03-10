@@ -7,7 +7,7 @@
                 <chart:LinearAxis horizontalLocation="Left" labelSize="10" lineColor="Red" lineThickness="3"/></chart:RadCartesianChart.verticalAxis>
 
             <chart:RadCartesianChart.series>
-                 <!-- << labels-styling -->
+                 <!-- >> labels-styling -->
          <chart:LineSeries legendTitle="Store scope" showLabels="true" seriesName="Bar" valueProperty="Amount" categoryProperty="Country" items="{{ categoricalSource }}">
                     <chart:LineSeries.labelStyle>
                         <chart:PointLabelStyle margin="10"  fontStyle="Bold" fillColor="#60B3FC" textSize="10" textColor="White" />

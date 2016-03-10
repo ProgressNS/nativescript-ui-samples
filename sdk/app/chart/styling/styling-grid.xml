@@ -1,6 +1,6 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
     <chart:RadCartesianChart id="cartesianChart">
-    <!-- grid-styling -->
+    <!-- >> grid-styling -->
     <chart:RadCartesianChart.grid>
                 <chart:RadCartesianChartGrid
                     horizontalLinesVisible="true"
@@ -15,7 +15,7 @@
                     />
            </chart:RadCartesianChart.grid>
            
-      <!-- grid-styling -->
+      <!-- << grid-styling -->
         
         <chart:RadCartesianChart.series>
             <chart:BarSeries items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="Amount">

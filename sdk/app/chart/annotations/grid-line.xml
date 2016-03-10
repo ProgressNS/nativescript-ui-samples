@@ -24,7 +24,7 @@
                 </chart:Palette>
                
     </chart:RadCartesianChart.palettes>
-      <!-- << grid-line-annotations -->
+      <!-- >> grid-line-annotations -->
      <chart:RadCartesianChart.annotations>
 		    <chart:ChartGridLineAnnotation axisId="hAxis" hidden="false" value="50" zPosition="AboveSeries" strokeWidth="1" strokeColor="#EB916580" />
 			<chart:ChartGridLineAnnotation axisId="vAxis" hidden="false" value="10000" zPosition="AboveSeries" strokeWidth="1" strokeColor="#65BFEB80" />
