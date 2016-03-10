@@ -1,3 +1,4 @@
+<!-- >> scatter-bubble-series -->
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
     <chart:RadCartesianChart id="pieChart">
                 <chart:RadCartesianChart.horizontalAxis>
@@ -15,3 +16,4 @@
         </chart:RadCartesianChart.series>
     </chart:RadCartesianChart>
 </navigation:ExamplePage>
+<!-- << scatter-bubble-series -->
