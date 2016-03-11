@@ -32,5 +32,5 @@ export class CategoricalDataModel  {
             { Name: "Electronics", High: 55, Low: 12 },
             { Name: "Gardening", High: 50, Low: 29 }
         ];
-    }// >> range-bar-source 
+    }// << range-bar-source 
 }
