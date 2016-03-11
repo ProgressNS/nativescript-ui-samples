@@ -21,5 +21,11 @@ export class FinancialDataModel {
             { Date: "01/8/2015", Open: 120, Close: 81, Low: 45, High: 141 },
             { Date: "01/9/2015", Open: 105, Close: 200, Low: 55, High: 250 }
         ];
+<<<<<<< Updated upstream
     }// << ohlc-data-model
 }
+=======
+    }
+// << ohlc-data-model
+}
+>>>>>>> Stashed changes

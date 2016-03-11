@@ -1,4 +1,4 @@
-<!-- << range-bar-series-->
+<!-- >> range-bar-series-->
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
       <chart:RadCartesianChart  height="700" width="300">
             
