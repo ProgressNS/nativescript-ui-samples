@@ -1,0 +1,25 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui-pro/listview" xmlns="http://www.nativescript.org/tns.xsd">
+    <lv:RadListView items="{{ dataItems }}" >
+        <lv:RadListView.listViewLayout>
+            <lv:ListViewLinearLayout scrollDirection="Vertical"/>
+        </lv:RadListView.listViewLayout>
+        <lv:RadListView.itemTemplate>
+            <StackLayout orientation="vertical">
+                <Label fontSize="20" text="{{ itemName }}"/>
+                <Label fontSize="14" text="{{ itemDescription }}"/>
+            </StackLayout>
+        </lv:RadListView.itemTemplate>
+        <!-- >> listview-header-footer-xml -->
+        <lv:RadListView.headerItemTemplate>
+            <GridLayout backgroundColor="#65a565">
+                <Label text="{{ headerTitle }}"/>
+            </GridLayout>
+        </lv:RadListView.headerItemTemplate>
+        <lv:RadListView.footerItemTemplate>
+            <GridLayout backgroundColor="#7fff7f">
+                <Label text="{{ footerTitle }}"/>
+            </GridLayout>
+        </lv:RadListView.footerItemTemplate>
+        <!-- << listview-header-footer-xml -->
+    </lv:RadListView>
+</navigation:ExamplePage>

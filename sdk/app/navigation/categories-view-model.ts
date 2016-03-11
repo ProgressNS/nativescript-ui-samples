@@ -98,7 +98,7 @@ export class NavigationViewModel extends observableModule.Observable {
 
         calendarExample = new NavigationItem("Transition modes", "./calendar/transition-modes/transition-modes", calendarRoot);
         calendarRoot.subItems.push(calendarExample);
-        
+
         calendarExample = new NavigationItem("Events view modes", "./calendar/events-view-modes/events-view-modes", calendarRoot);
         calendarRoot.subItems.push(calendarExample);
     }
@@ -213,10 +213,10 @@ export class NavigationViewModel extends observableModule.Observable {
 
         exampleItem = new NavigationItem("Item Animations", "./listview/item-animations/item-animations", currentItem);
         currentItem.subItems.push(exampleItem);
-        
+
         exampleItem = new NavigationItem("Item Fade Animation", "./listview/item-fade-animation/item-fade-animation", currentItem);
         currentItem.subItems.push(exampleItem);
-        
+
         // Layouts
         var layoutsItem = new NavigationItem("Item Layouts", undefined, currentItem);
         currentItem.subItems.push(layoutsItem);
@@ -226,14 +226,14 @@ export class NavigationViewModel extends observableModule.Observable {
         layoutsItem.subItems.push(layoutsExample);
         layoutsExample = new NavigationItem("Staggered", "./listview/item-layouts/item-layouts-staggered", layoutsItem);
         layoutsItem.subItems.push(layoutsExample);
-        
+
         // Item reorder
         exampleItem = new NavigationItem("Item Reorder", "./listview/item-reorder/item-reorder", currentItem);
         currentItem.subItems.push(exampleItem);
-        
+
         exampleItem = new NavigationItem("Item Reorder with handle", "./listview/item-reorder/item-reorder-handle", currentItem);
         currentItem.subItems.push(exampleItem);
-        
+
         // Selection
         var selectionItem = new NavigationItem("Selection", undefined, currentItem);
         currentItem.subItems.push(selectionItem);
@@ -255,10 +255,13 @@ export class NavigationViewModel extends observableModule.Observable {
 
         exampleItem = new NavigationItem("Swipe to execute", "./listview/swipe-execute/swipe-execute", currentItem);
         currentItem.subItems.push(exampleItem);
-        
+
+        exampleItem = new NavigationItem("Header and footer", "./listview/header-footer/header-footer", currentItem);
+        currentItem.subItems.push(exampleItem);
+
         exampleItem = new NavigationItem("Swipe to execute with sticky actions", "./listview/swipe-execute/swipe-execute-sticky", currentItem);
         currentItem.subItems.push(exampleItem);
-        
+
         exampleItem = new NavigationItem("Swipe to execute with stretched content", "./listview/swipe-execute/swipe-execute-stretch", currentItem);
         currentItem.subItems.push(exampleItem);
     }
