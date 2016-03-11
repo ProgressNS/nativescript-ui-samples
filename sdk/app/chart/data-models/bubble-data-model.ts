@@ -57,5 +57,4 @@ export class BubbleDataModel  {
 
         ];
     }
-}
-// << bubble-data-source
+}// << bubble-data-source

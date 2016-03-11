@@ -12,8 +12,7 @@ export class CategoricalDataModel  {
             { Country: "Spain", Amount: 5, SecondVal: 19, ThirdVal: 24 },
             { Country: "USA", Amount: 18, SecondVal: 8, ThirdVal: 21 }
         ]
-    }
-// << categorical-source
+    }// << categorical-source
 
     get bubbleCategoricalSource() {
         return [
@@ -33,6 +32,5 @@ export class CategoricalDataModel  {
             { Name: "Electronics", High: 55, Low: 12 },
             { Name: "Gardening", High: 50, Low: 29 }
         ];
-    }   
-    // >> range-bar-source 
+    }// >> range-bar-source 
 }

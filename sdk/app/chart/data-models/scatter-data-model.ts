@@ -26,7 +26,6 @@ export class ScatterDataModel  {
             { Country: "Spain", xValue: 34, yValue: 78, Impact: 3 },
             { Country: "USA", xValue: 45, yValue: 87, Impact: 4 }
         ];
-    }
-    // << scatter-bubble-data-source
+    }// << scatter-bubble-data-source
 }
 
