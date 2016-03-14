@@ -44,6 +44,6 @@ export class ViewModel extends observableModule.Observable {
             { Country: "Spain", Amount: 5, SecondVal: 19, ThirdVal: 24 },
             { Country: "USA", Amount: 18, SecondVal: 8, ThirdVal: 21 }
         ]
-    } // >> stacked-series-model
+    } // << stacked-series-model
 
 }
