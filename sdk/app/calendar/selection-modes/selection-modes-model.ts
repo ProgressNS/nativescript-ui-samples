@@ -12,11 +12,11 @@ export class ViewModel extends observableModule.Observable{
         };
 	}
     
-	set selectionMode(value: calendarModule.CalendarSelectionMode){
+	set selectionMode(value: string){
 		this.set("SelectionMode", value);
 	}
 	
-	get selectionMode() : calendarModule.CalendarSelectionMode{
+	get selectionMode() : string{
 		return this.get("SelectionMode");
 	}
 	
