@@ -10,13 +10,13 @@
                  <!-- >> labels-styling -->
          <chart:LineSeries legendTitle="Store scope" showLabels="true" seriesName="Bar" valueProperty="Amount" categoryProperty="Country" items="{{ categoricalSource }}">
                     <chart:LineSeries.labelStyle>
-                        <chart:PointLabelStyle margin="10"  fontStyle="Bold" fillColor="#60B3FC" textSize="10" textColor="White" />
+                        <chart:PointLabelStyle margin="10" fontStyle="Bold" fillColor="#60B3FC" textSize="10" textColor="White" />
                     </chart:LineSeries.labelStyle>
                 </chart:LineSeries>
 
                 <chart:LineSeries legendTitle="Store scope" showLabels="true" seriesName="Bar" valueProperty="SecondVal" categoryProperty="Country" items="{{ categoricalSource }}">
                     <chart:LineSeries.labelStyle>
-                        <chart:PointLabelStyle margin="10"  fontStyle="Bold" fillColor="#FC6060" textSize="10" textColor="White"  />
+                        <chart:PointLabelStyle margin="10" fontStyle="Bold" fillColor="#FC6060" textSize="10" textColor="White"  />
                     </chart:LineSeries.labelStyle>
                 </chart:LineSeries>
                  <!-- << labels-styling -->

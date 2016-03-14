@@ -3,11 +3,13 @@ import stackedSeriesModel = require("./stacked-area-series-model");
 import chartModule = require("nativescript-telerik-ui-pro/chart");
 import frameModule = require("ui/frame");
 
+// >> stacked-series-binding-context
 var context = new stackedSeriesModel.ViewModel();
 export function onPageLoaded(args){
     var page = args.object;
     page.bindingContext = context;
 }
+// << stacked-series-binding-context
 
 export function onNavigatedTo(args) {
     console.log(this.context);
