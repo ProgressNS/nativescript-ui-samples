@@ -1,5 +1,7 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
+   
     <chart:RadCartesianChart id="cartesianChart">
+    <!-- >> creating-series -->
         <chart:RadCartesianChart.series>
             <chart:SplineAreaSeries seriesName="Area" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="ThirdVal">
 
@@ -10,8 +12,9 @@
             <chart:LineSeries seriesName="Line" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">
 
             </chart:LineSeries>
+            <!-- << creating-series -->
         </chart:RadCartesianChart.series>
-             <!-- >> series-styling -->
+             <!-- >> creating-palettes -->
         <chart:RadCartesianChart.palettes>
             <chart:Palette seriesName="Bar">
                 <chart:Palette.entries>
@@ -29,7 +32,7 @@
                 </chart:Palette.entries>
             </chart:Palette>
         </chart:RadCartesianChart.palettes>
-     <!-- << series-styling -->
+     <!-- << creating-palettes -->
         <chart:RadCartesianChart.horizontalAxis>
             <chart:CategoricalAxis/>
         </chart:RadCartesianChart.horizontalAxis>

@@ -1,3 +1,4 @@
+// >> bubble-data-source
 export class BubbleDataModel  {
     constructor() {
 
@@ -17,9 +18,7 @@ export class BubbleDataModel  {
             {  Year: 1510, Amount: 7, Impact: 14 },
             {  Year: 1410, Amount: 35, Impact: 11 },
             {  Year: 1330, Amount: 33, Impact: 17 },
-            {  Year: 1100, Amount: 23, Impact: 18 },
-            {  Year: 1280, Amount: 12, Impact: 13 },
-            {  Year: 1250, Amount: 19, Impact: 14 }
+           
         ];
     }
 
@@ -37,9 +36,7 @@ export class BubbleDataModel  {
             {  Year: 510, Amount: 7, Impact: 14 },
             {  Year: 540, Amount: 35, Impact: 11 },
             {  Year: 685, Amount: 33, Impact: 17 },
-            {  Year: 720, Amount: 23, Impact: 18 },
-            {  Year: 1135, Amount: 12, Impact: 13 },
-            {  Year: 1040, Amount: 19, Impact: 14 }
+           
         ];
     }
     
@@ -57,9 +54,7 @@ export class BubbleDataModel  {
             {  Year: 151, Amount: 7, Impact: 14 },
             {  Year: 141, Amount: 35, Impact: 11 },
             {  Year: 133, Amount: 33, Impact: 17 },
-            {  Year: 110, Amount: 23, Impact: 18 },
-            {  Year: 128, Amount: 12, Impact: 13 },
-            {  Year: 125, Amount: 19, Impact: 14 }
+
         ];
     }
-}
+}// << bubble-data-source

@@ -1,3 +1,4 @@
+<!-- >> stacked-series -->
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" navigatedTo="onNavigatedTo" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd"> 
     <navigation.actionBar>
          <ActionBar title="Stacked Area">
@@ -33,3 +34,4 @@
         </chart:RadCartesianChart.verticalAxis>
     </chart:RadCartesianChart>
 </navigation:ExamplePage>
+<!-- << stacked-series -->

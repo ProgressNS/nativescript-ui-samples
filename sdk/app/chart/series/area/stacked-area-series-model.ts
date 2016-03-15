@@ -35,7 +35,7 @@ export class ViewModel extends observableModule.Observable {
           chart.series[2].stackMode = this._stackModes.options[index];
         
     }
-    
+    // >> stacked-series-model
      get categoricalSource() {
         return [
             { Country: "Germany", Amount: 15, SecondVal: 14, ThirdVal: 24 },
@@ -44,6 +44,6 @@ export class ViewModel extends observableModule.Observable {
             { Country: "Spain", Amount: 5, SecondVal: 19, ThirdVal: 24 },
             { Country: "USA", Amount: 18, SecondVal: 8, ThirdVal: 21 }
         ]
-    }
+    } // << stacked-series-model
 
 }

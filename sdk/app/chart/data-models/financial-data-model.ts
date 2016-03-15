@@ -23,3 +23,4 @@ export class FinancialDataModel {
         ];
     }// << ohlc-data-model
 }
+

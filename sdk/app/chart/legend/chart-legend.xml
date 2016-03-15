@@ -1,5 +1,5 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
-      <!-- >> legend -->
+      <!-- >> legend-example -->
     <chart:RadCartesianChart id="cartesianChart">
         <chart:RadCartesianChart.series>
         
@@ -19,8 +19,8 @@
         </chart:RadCartesianChart.verticalAxis>
         
         <chart:RadCartesianChart.legend>
-            <chart:RadLegendView position="Top" height="150" />
+            <chart:RadLegendView position="Top" height="150" title="Series type"/>
         </chart:RadCartesianChart.legend>
     </chart:RadCartesianChart>
-       <!-- << legend -->
+       <!-- << legend-example -->
 </navigation:ExamplePage>

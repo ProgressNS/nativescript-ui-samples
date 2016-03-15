@@ -3,7 +3,7 @@ export class CategoricalDataModel  {
     constructor() {
 
     }
-
+// >> categorical-source
     get categoricalSource() {
         return [
             { Country: "Germany", Amount: 15, SecondVal: 14, ThirdVal: 24 },
@@ -12,7 +12,7 @@ export class CategoricalDataModel  {
             { Country: "Spain", Amount: 5, SecondVal: 19, ThirdVal: 24 },
             { Country: "USA", Amount: 18, SecondVal: 8, ThirdVal: 21 }
         ]
-    }
+    }// << categorical-source
 
     get bubbleCategoricalSource() {
         return [
@@ -23,7 +23,7 @@ export class CategoricalDataModel  {
             { Country: "USA", Amount: 17, Impact: 4 }
         ];
     }
-    
+   // >> range-bar-source
     get rangeBarSource () {
         
            return [
@@ -32,7 +32,5 @@ export class CategoricalDataModel  {
             { Name: "Electronics", High: 55, Low: 12 },
             { Name: "Gardening", High: 50, Low: 29 }
         ];
-    }
-    
-    
+    }// << range-bar-source 
 }

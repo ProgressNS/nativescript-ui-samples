@@ -1,5 +1,5 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
-  <!-- << pan-and-zoom -->
+  <!-- >> pan-and-zoom -->
     <chart:RadCartesianChart id="PanZoomChart" >
         <chart:RadCartesianChart.series>
 

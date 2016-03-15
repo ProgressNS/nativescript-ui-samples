@@ -1,3 +1,4 @@
+// >> negative-values-model
 export class NegativeValuesDataModel {
 
     constructor() {
@@ -18,4 +19,4 @@ export class NegativeValuesDataModel {
             { Period: 10, Amount: -50 }
         ]
     }
-}
+}// << negative-values-model

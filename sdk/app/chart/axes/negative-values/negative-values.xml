@@ -1,12 +1,10 @@
+<!-- >> negative-values -->
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
     <chart:RadCartesianChart id="cartesianChart">
         <chart:RadCartesianChart.series>
            <chart:SplineAreaSeries seriesName="SplineArea" items="{{ negativeValues }}"  categoryProperty="Period" valueProperty="Amount">
            </chart:SplineAreaSeries>
         </chart:RadCartesianChart.series>
-
-    
-        
          <chart:RadCartesianChart.verticalAxis>
                          <chart:LinearAxis  allowZoom="true"/>                 
         </chart:RadCartesianChart.verticalAxis>
@@ -17,3 +15,4 @@
 
     </chart:RadCartesianChart>
 </navigation:ExamplePage>
+<!-- << negative-values -->
