@@ -8,13 +8,13 @@
                     <chart:LinearAxis horizontalLocation="Right" allowPan="true"/>
                 </chart:BarSeries.verticalAxis>
             </chart:BarSeries>
-             <!-- series-selection-->
+             <!-- >> series-selection -->
             <chart:LineSeries selectionMode="Series" showLabels="true" seriesName="Line" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">
                 <chart:LineSeries.verticalAxis>
                     <chart:LinearAxis horizontalLocation="Left"/>
                 </chart:LineSeries.verticalAxis>
             </chart:LineSeries>
-            <!-- series-selection-->
+            <!-- << series-selection -->
         </chart:RadCartesianChart.series>
 
         <chart:RadCartesianChart.horizontalAxis>
