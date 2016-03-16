@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "fresco": "file:./deps/fresco-0.1.0.tgz",
-    "nativescript-telerik-ui-pro": "file:nativescript-ui-debug-dev-pro.tgz",
     "tns-core-modules": "^1.6.0"
   },
   "devDependencies": {
