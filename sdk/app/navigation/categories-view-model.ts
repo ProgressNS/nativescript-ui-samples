@@ -217,9 +217,6 @@ export class NavigationViewModel extends observableModule.Observable {
         exampleItem = new NavigationItem("Item Animations", "./listview/item-animations/item-animations", currentItem);
         currentItem.subItems.push(exampleItem);
 
-        exampleItem = new NavigationItem("Item Fade Animation", "./listview/item-fade-animation/item-fade-animation", currentItem);
-        currentItem.subItems.push(exampleItem);
-
         // Layouts
         var layoutsItem = new NavigationItem("Item Layouts", undefined, currentItem);
         currentItem.subItems.push(layoutsItem);

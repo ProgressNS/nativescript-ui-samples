@@ -23,9 +23,10 @@
             <Button text="Reset" tap="{{ onResetClick }}" ios:margin="10"/>
         </StackLayout>
         </StackLayout>
+        <!-- >> listview-item-animations-xml -->  
         <lv:RadListView items="{{ dataItems }}" row="1" id="ls">
             <lv:RadListView.listViewLayout>
-                <lv:ListViewLinearLayout scrollDirection="Vertical"/>
+                <lv:ListViewLinearLayout scrollDirection="Vertical" itemInsertAnimation="Default" itemDeleteAnimation="Default"/>
             </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
                 <StackLayout orientation="vertical">
@@ -34,5 +35,6 @@
                 </StackLayout>
             </lv:RadListView.itemTemplate>
          </lv:RadListView>
+        <!-- << listview-item-animations-xml --> 
     </GridLayout>
 </navigation:ExamplePage>
