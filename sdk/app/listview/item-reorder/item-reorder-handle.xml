@@ -2,7 +2,7 @@
     <GridLayout orientation="vertical" rows="auto, *, auto">
         <Label cssClass="example-header" text="Hold and drag to reorder"/>
         
-        <lv:RadListView itemReordered="{{onItemReordered}}" items="{{ dataItems }}" row="1" cellReorder="true" reorderMode="Drag">
+        <lv:RadListView itemReordered="{{onItemReordered}}" items="{{ dataItems }}" row="1" cellReorder="true">
             <lv:RadListView.listViewLayout>
                 <lv:ListViewLinearLayout  scrollDirection="Vertical"/>
             </lv:RadListView.listViewLayout>
