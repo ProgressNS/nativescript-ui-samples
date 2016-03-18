@@ -90,6 +90,7 @@ export class AppViewModel extends observable.Observable {
         this._examples.push({ Id: "50", title: "Single selection", group: "listview features", description: "", moduleName: "./listview/listview-selection/single-selection" });
         this._examples.push({ Id: "51", title: "Multiple selection", group: "listview features", description: "", moduleName: "./listview/listview-selection/multiple-selection" });
         this._examples.push({ Id: "52", title: "Programmatic selection", group: "listview features", description: "", moduleName: "./listview/listview-selection/programmatic-selection" });
+        this._examples.push({ Id: "53", title: "Item Loading", group: "listview features", description: "", moduleName: "./listview/item-loading/item-loading" });
         
         this._examples.push({ Id: "53", title: "Calendar", group: "controls", description: "Telerik Calendar for NativeScript", isControl: true, moduleName: "" });
         this._examples.push({ Id: "54", title: "Getting started", group: "calendar features", description: "", moduleName: "./calendar/getting-started/getting-started" });
