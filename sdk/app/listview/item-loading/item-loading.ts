@@ -40,11 +40,16 @@ export function onItemDeselected(args) {
 }
 
 export function onItemLoading(args) {
-    console.log(args.itemIndex);
+    debugger;
     if (args.itemIndex % 2 == 0){
-        args.view.backgroundColor="#2fcbf9";
+        args.view.backgroundColor="#b3ecff";
+        args.view._subViews[0].fontSize="24";
+        args.view._subViews[1].fontSize="18";
+        
     }
     else {
-        args.view.backgroundColor="#cbcbcb";
+        args.view.backgroundColor="#ccf2ff";
+        args.view._subViews[0].fontSize="20";
+        args.view._subViews[1].fontSize="14";
     }
 }
