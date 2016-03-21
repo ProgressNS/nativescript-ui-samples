@@ -5,8 +5,14 @@ import { Color } from "color"
 
 export class StylingViewModel extends Observable {
 
- constructor() {
+    private _selectionInfo;
+    constructor() {
         super();
+
+        this._selectionInfo = {
+            options: ["Week", "Month", "Month names", "Year"],
+            index: 0
+        };
 
         let now = new Date();
         let startDate: Date,
@@ -32,5 +38,42 @@ export class StylingViewModel extends Observable {
 
     get source(): Array<calendarModule.CalendarEvent> {
         return <Array<calendarModule.CalendarEvent>>this.get("eventSource");
+    }
+
+
+	set viewMode(value: calendarModule.CalendarViewMode){
+		this.set("ViewMode", value);
+		
+	}
+	
+	get viewMode() : calendarModule.CalendarViewMode{
+		return this.get("ViewMode");
+	}
+	
+	public setViewMode(viewMode : string){
+		this.viewMode = viewMode;
+	}
+
+     public updateViewMode() {
+        var index: number = this._selectionInfo.index;
+        if(index == 0) {
+           this.viewMode = calendarModule.CalendarViewMode.Week;
+        } else if (index == 1) {
+            this.viewMode = calendarModule.CalendarViewMode.Month;
+        } else if (index == 2) {
+            this.viewMode = calendarModule.CalendarViewMode.MonthNames;
+        } else {
+             this.viewMode = calendarModule.CalendarViewMode.Year;
+        }
+    }
+    
+    public onOptionsTapped() {
+        var navigationEntry = {
+            moduleName: "./navigation/options-menu/options",
+            context: this._selectionInfo,
+            animated: true
+        };
+        
+        frameModule.topmost().navigate(navigationEntry);
     }
 }
