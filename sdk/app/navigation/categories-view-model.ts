@@ -211,13 +211,13 @@ export class NavigationViewModel extends observableModule.Observable {
         var currentItem = new NavigationItem("ListView", undefined, currentParent);
         currentParent.subItems.push(currentItem);
 
-        var exampleItem = new NavigationItem("Getting started", "./listview/getting-started/getting-started", currentItem);
+        var exampleItem = new NavigationItem("Getting Started", "./listview/getting-started/getting-started", currentItem);
+        currentItem.subItems.push(exampleItem);
+        
+        var exampleItem = new NavigationItem("Item Loading", "./listview/item-loading/item-loading", currentItem);
         currentItem.subItems.push(exampleItem);
 
         exampleItem = new NavigationItem("Item Animations", "./listview/item-animations/item-animations", currentItem);
-        currentItem.subItems.push(exampleItem);
-
-        exampleItem = new NavigationItem("Item Fade Animation", "./listview/item-fade-animation/item-fade-animation", currentItem);
         currentItem.subItems.push(exampleItem);
 
         // Layouts
@@ -240,11 +240,11 @@ export class NavigationViewModel extends observableModule.Observable {
         // Selection
         var selectionItem = new NavigationItem("Selection", undefined, currentItem);
         currentItem.subItems.push(selectionItem);
-        var selectionExample = new NavigationItem("Single selection", "./listview/listview-selection/single-selection", selectionItem);
+        var selectionExample = new NavigationItem("Single Selection", "./listview/listview-selection/single-selection", selectionItem);
         selectionItem.subItems.push(selectionExample);
-        selectionExample = new NavigationItem("Multiple selection", "./listview/listview-selection/multiple-selection", selectionItem);
+        selectionExample = new NavigationItem("Multiple Selection", "./listview/listview-selection/multiple-selection", selectionItem);
         selectionItem.subItems.push(selectionExample);
-        selectionExample = new NavigationItem("Programatic selection", "./listview/listview-selection/programmatic-selection", selectionItem);
+        selectionExample = new NavigationItem("Programatic Selection", "./listview/listview-selection/programmatic-selection", selectionItem);
         selectionItem.subItems.push(selectionExample);
 
         exampleItem = new NavigationItem("Load on Demand", "./listview/load-on-demand/load-on-demand", currentItem);
@@ -253,13 +253,13 @@ export class NavigationViewModel extends observableModule.Observable {
         exampleItem = new NavigationItem("Observable Array", "./listview/observable-array/observable-array", currentItem);
         currentItem.subItems.push(exampleItem);
 
-        exampleItem = new NavigationItem("Pull to refresh", "./listview/pull-to-refresh/pull-to-refresh", currentItem);
+        exampleItem = new NavigationItem("Pull to Refresh", "./listview/pull-to-refresh/pull-to-refresh", currentItem);
         currentItem.subItems.push(exampleItem);
 
-        exampleItem = new NavigationItem("Swipe to execute", "./listview/swipe-execute/swipe-execute", currentItem);
+        exampleItem = new NavigationItem("Swipe to Execute", "./listview/swipe-execute/swipe-execute", currentItem);
         currentItem.subItems.push(exampleItem);
 
-        exampleItem = new NavigationItem("Header and footer", "./listview/header-footer/header-footer", currentItem);
+        exampleItem = new NavigationItem("Header and Footer", "./listview/header-footer/header-footer", currentItem);
         currentItem.subItems.push(exampleItem);
 
         exampleItem = new NavigationItem("Swipe to execute with sticky actions", "./listview/swipe-execute/swipe-execute-sticky", currentItem);
