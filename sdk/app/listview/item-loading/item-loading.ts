@@ -9,38 +9,8 @@ export function onPageLoaded(args) {
     page.bindingContext = new viewModel.ViewModel();
 }
 
-export function onItemSelected(args) {
-
-    var selectedItems = listView.getSelectedItems();
-    var selectedTitles = "Selected items: ";
-    for (var i = 0; i < selectedItems.length; i++) {
-        selectedTitles += selectedItems[i].itemName;
-
-        if (i < selectedItems.length - 1) {
-            selectedTitles += ", ";
-        }
-    }
-
-    lblSelection.text = selectedTitles;
-}
-
-export function onItemDeselected(args) {
-
-    var selectedItems = listView.getSelectedItems();
-    var selectedTitles = "Selected items: ";
-    for (var i = 0; i < selectedItems.length; i++) {
-        selectedTitles += selectedItems[i].itemName;
-
-        if (i < selectedItems.length - 1) {
-            selectedTitles += ", ";
-        }
-    }
-
-    lblSelection.text = selectedTitles;
-}
-
+// >> listview-item-loading-model
 export function onItemLoading(args) {
-    debugger;
     if (args.itemIndex % 2 == 0){
         args.view.backgroundColor="#b3ecff";
         args.view._subViews[0].fontSize="24";
@@ -53,3 +23,4 @@ export function onItemLoading(args) {
         args.view._subViews[1].fontSize="14";
     }
 }
+// << listview-item-loading-model

@@ -1,7 +1,7 @@
 <Page loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui-pro/listview" xmlns="http://www.nativescript.org/tns.xsd">
-
     <GridLayout orientation="vertical" rows="auto, *, auto" >
-        <lv:RadListView id="listView" items="{{ dataItems }}" row="1" itemLoading="onItemLoading" selectionBehavior="Press" itemSelected="onItemSelected" itemDeselected="onItemDeselected">
+     <!-- >> listview-item-loading-xml --> 
+        <lv:RadListView id="listView" items="{{ dataItems }}" row="1" itemLoading="onItemLoading">
             <lv:RadListView.listViewLayout>
                 <lv:ListViewLinearLayout scrollDirection="Vertical"/>
             </lv:RadListView.listViewLayout>
@@ -12,6 +12,6 @@
                 </StackLayout>
             </lv:RadListView.itemTemplate>
         </lv:RadListView>
-        <Label id="txtSelection" textWrap="true" row="2"/>
+       <!-- << listview-item-loading-xml --> 
     </GridLayout>
 </Page>
