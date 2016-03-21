@@ -9,7 +9,7 @@ export class ViewModel {
 
     private _items: ObservableArray<DataItem>;
     private _numberOfAddedItems;
-    
+
     constructor() {
         this.initDataItems();
     }
@@ -21,15 +21,17 @@ export class ViewModel {
     public onLoadMoreItemsRequested(args: listViewModule.ListViewEventData) {
         var that = new WeakRef(this);
         timer.setTimeout(function() {
+            var listView: listViewModule.RadListView = args.object;
             var initialNumberOfItems = that.get()._numberOfAddedItems;
-            for (var i = that.get()._numberOfAddedItems-1; i < initialNumberOfItems + 2; i++) {
-                if (i > posts.names.length-1){
+            for (var i = that.get()._numberOfAddedItems - 1; i < initialNumberOfItems + 2; i++) {
+                if (i > posts.names.length - 1) {
+                    listView.loadOnDemandMode = listViewModule.ListViewLoadOnDemandMode.None;
                     break;
                 }
-                that.get()._items.push(new DataItem(posts.names[i], posts.titles[i], posts.text[i],"res://"+ posts.images[i]));
+                that.get()._items.push(new DataItem(posts.names[i], posts.titles[i], posts.text[i], "res://" + posts.images[i]));
                 that.get()._numberOfAddedItems++;
             }
-            var listView = args.object;
+
             listView.notifyLoadOnDemandFinished();
         }, 1000);
         args.returnValue = true;
@@ -39,14 +41,14 @@ export class ViewModel {
     private initDataItems() {
         this._items = new ObservableArray<DataItem>();
         this._numberOfAddedItems = 0;
-        
-        for (var i = 0; i < posts.names.length-15; i++) {
+
+        for (var i = 0; i < posts.names.length - 15; i++) {
             this._numberOfAddedItems++;
-            if (application.android){
-                  this._items.push(new DataItem(posts.names[i], posts.titles[i], posts.text[i],"res://"+ posts.images[i].toLowerCase()));
+            if (application.android) {
+                this._items.push(new DataItem(posts.names[i], posts.titles[i], posts.text[i], "res://" + posts.images[i].toLowerCase()));
             }
-            else{
-                 this._items.push(new DataItem(posts.names[i], posts.titles[i], posts.text[i],"res://"+ posts.images[i]));
+            else {
+                this._items.push(new DataItem(posts.names[i], posts.titles[i], posts.text[i], "res://" + posts.images[i]));
             }
         }
     }
@@ -58,7 +60,7 @@ export class DataItem {
     public text;
     public image;
 
-    constructor(name: string, title: string, text:string, image:string) {
+    constructor(name: string, title: string, text: string, image: string) {
         this.name = name;
         this.text = text;
         this.title = title;
