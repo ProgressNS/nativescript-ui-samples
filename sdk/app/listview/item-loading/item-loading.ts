@@ -5,7 +5,6 @@ var lblSelection;
 export function onPageLoaded(args) {
     var page = args.object;
     listView = page.getViewById("listView");
-    lblSelection = page.getViewById("txtSelection");
     page.bindingContext = new viewModel.ViewModel();
 }
 
@@ -14,8 +13,7 @@ export function onItemLoading(args) {
     if (args.itemIndex % 2 == 0){
         args.view.backgroundColor="#b3ecff";
         args.view._subViews[0].fontSize="24";
-        args.view._subViews[1].fontSize="18";
-        
+        args.view._subViews[1].fontSize="18";   
     }
     else {
         args.view.backgroundColor="#ccf2ff";
