@@ -57,6 +57,11 @@
                     <rc:CalendarCellStyle  cellBackgroundColor="Green" cellBorderWidth="3" cellBorderColor="Red" cellTextColor="CornflowerBlue" cellTextFontName="Times New Roman" cellTextFontStyle="Bold" cellTextSize="18" />
                 </rc:CalendarMonthViewStyle.titleCellStyle>
 
+                <rc:CalendarMonthviewStyle.inlineEventCellStyle>
+                    <rc:CalendarInlineEventCellStyle cellBackgroundColor="LightPink" eventTextColor="Gold" eventFontName="Avenir" eventFontStyle="BoldItalic" eventTextSize="12" 
+                                            timeTextColor="DeepSkyBlue" timeFontName="Courier" timeFontStyle="Regular" timeTextSize="14"/>
+                </rc:CalendarMonthviewStyle.inlineEventCellStyle>
+
             </rc:CalendarMonthViewStyle>
             
             </rc:RadCalendar.monthViewStyle>
