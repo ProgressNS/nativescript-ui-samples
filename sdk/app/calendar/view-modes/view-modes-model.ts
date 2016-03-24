@@ -8,7 +8,7 @@ export class ViewModel extends observableModule.Observable{
 		super();
         this._selectionInfo = {
             options: ["Week", "Month", "Month names", "Year"],
-            index: 0
+            index: 1
         };
 	}
 	
