@@ -10,6 +10,9 @@ export function onPageLoaded(args){
     }
     
     page.bindingContext = viewModelContext;
+}
+
+export function onNavigatedTo(args) {
     viewModelContext.updateSelectionMode();
 }
 
