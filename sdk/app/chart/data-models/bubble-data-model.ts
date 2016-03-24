@@ -11,14 +11,7 @@ export class BubbleDataModel  {
             {  Year: 1866, Amount: 25, Impact: 10 },
             {  Year: 1900, Amount: 5, Impact: 3 },
             {  Year: 1700, Amount: 17, Impact: 4 },
-            { Year: 1600, Amount: 20, Impact: 1 },
-            {  Year: 1000, Amount: 23, Impact: 17 },
-            {  Year: 1200, Amount: 25, Impact: 10 },
-            {  Year: 1180, Amount: 30, Impact: 23 },
-            {  Year: 1510, Amount: 7, Impact: 14 },
-            {  Year: 1410, Amount: 35, Impact: 11 },
-            {  Year: 1330, Amount: 33, Impact: 17 },
-           
+            { Year: 1600, Amount: 20, Impact: 1 }, 
         ];
     }
 
@@ -30,13 +23,6 @@ export class BubbleDataModel  {
             {  Year: 900, Amount: 5, Impact: 3 },
             {  Year: 700, Amount: 17, Impact: 4 },
             { Year: 600, Amount: 20, Impact: 1 },
-            {  Year: 650, Amount: 23, Impact: 17 },
-            {  Year: 750, Amount: 25, Impact: 10 },
-            {  Year: 850, Amount: 30, Impact: 23 },
-            {  Year: 510, Amount: 7, Impact: 14 },
-            {  Year: 540, Amount: 35, Impact: 11 },
-            {  Year: 685, Amount: 33, Impact: 17 },
-           
         ];
     }
     
@@ -48,13 +34,6 @@ export class BubbleDataModel  {
             {  Year: 100, Amount: 5, Impact: 3 },
             {  Year: 340, Amount: 17, Impact: 4 },
             { Year: 135, Amount: 20, Impact: 1 },
-            {  Year: 320, Amount: 23, Impact: 17 },
-            {  Year: 432, Amount: 25, Impact: 10 },
-            {  Year: 118, Amount: 30, Impact: 23 },
-            {  Year: 151, Amount: 7, Impact: 14 },
-            {  Year: 141, Amount: 35, Impact: 11 },
-            {  Year: 133, Amount: 33, Impact: 17 },
-
         ];
     }
 }// << bubble-data-source
