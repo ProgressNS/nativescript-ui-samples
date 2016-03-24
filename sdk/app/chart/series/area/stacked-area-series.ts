@@ -24,21 +24,33 @@ export function onNavigatedFrom(args) {
 
 export function onNoneStackModeSelected(args: any) {
     var chart = <chartModule.RadCartesianChart>frameModule.topmost().getViewById("cartesianChart");
-    for (var series in chart.series) {
-       series.stackMode = "None";
+    for(var i=0; i<chart.series.length; i++){
+       chart.series[i].stackMode = "None";
+    }
+    
+    if(chart.android){
+      chart.android.requestLayout();
     }
 }
 
 export function onStackModeSelected(args: any) {
-        var chart = <chartModule.RadCartesianChart>frameModule.topmost().getViewById("cartesianChart");
-    for (var series in chart.series) {
-       series.stackMode = "Stack";
+    var chart = <chartModule.RadCartesianChart>frameModule.topmost().getViewById("cartesianChart");
+    for(var i=0; i<chart.series.length; i++){
+       chart.series[i].stackMode = "Stack";
+    }
+    
+    if(chart.android){
+      chart.android.requestLayout();
     }
 }
 
 export function onStack100ModeSelected(args: any) {
         var chart = <chartModule.RadCartesianChart>frameModule.topmost().getViewById("cartesianChart");
-    for (var series in chart.series) {
-       series.stackMode = "Stack100";
+    for(var i=0; i<chart.series.length; i++){
+       chart.series[i].stackMode = "Stack100";
+    }
+    
+   if(chart.android){
+        chart.android.requestLayout();
     }
 }
