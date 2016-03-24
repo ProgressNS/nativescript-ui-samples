@@ -16,13 +16,13 @@
             </navigation.actionBar>
     <chart:RadCartesianChart id="cartesianChart">
         <chart:RadCartesianChart.series>
-            <chart:AreaSeries items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">
+            <chart:AreaSeries items="{{ firstSeries }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">
 
             </chart:AreaSeries>
-            <chart:AreaSeries items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">
+            <chart:AreaSeries items="{{ secondSeries }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">
 
             </chart:AreaSeries>
-            <chart:AreaSeries items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">
+            <chart:AreaSeries items="{{ thirdSeries }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">
 
             </chart:AreaSeries>
         </chart:RadCartesianChart.series>

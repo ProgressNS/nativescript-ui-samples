@@ -36,13 +36,33 @@ export class ViewModel extends observableModule.Observable {
         
     }
     // >> stacked-series-model
-     get categoricalSource() {
+     get firstSeries() {
         return [
-            { Country: "Germany", Amount: 15, SecondVal: 14, ThirdVal: 24 },
-            { Country: "France", Amount: 13, SecondVal: 23, ThirdVal: 25 },
-            { Country: "Bulgaria", Amount: 24, SecondVal: 17, ThirdVal: 23 },
-            { Country: "Spain", Amount: 5, SecondVal: 19, ThirdVal: 24 },
-            { Country: "USA", Amount: 18, SecondVal: 8, ThirdVal: 21 }
+            { Country: "Germany", Amount: 320, SecondVal: 14, ThirdVal: 24 },
+            { Country: "France", Amount: 206, SecondVal: 23, ThirdVal: 25 },
+            { Country: "Bulgaria", Amount: 100, SecondVal: 17, ThirdVal: 23 },
+            { Country: "Spain", Amount: 25, SecondVal: 19, ThirdVal: 24 },
+            { Country: "USA", Amount: 85, SecondVal: 8, ThirdVal: 21 }
+        ]
+    }
+    
+    get secondSeries() {
+        return [
+            { Country: "Germany", Amount: 120, SecondVal: 14, ThirdVal: 24 },
+            { Country: "France", Amount: 56, SecondVal: 23, ThirdVal: 25 },
+            { Country: "Bulgaria", Amount: 300, SecondVal: 17, ThirdVal: 23 },
+            { Country: "Spain", Amount: 95, SecondVal: 19, ThirdVal: 24 },
+            { Country: "USA", Amount: 405, SecondVal: 8, ThirdVal: 21 }
+        ]
+    }
+    
+    get thirdSeries() {
+        return [
+            { Country: "Germany", Amount: 96, SecondVal: 14, ThirdVal: 24 },
+            { Country: "France", Amount: 139, SecondVal: 23, ThirdVal: 25 },
+            { Country: "Bulgaria", Amount: 276, SecondVal: 17, ThirdVal: 23 },
+            { Country: "Spain", Amount: 300, SecondVal: 19, ThirdVal: 24 },
+            { Country: "USA", Amount: 100, SecondVal: 8, ThirdVal: 21 }
         ]
     } // << stacked-series-model
 
