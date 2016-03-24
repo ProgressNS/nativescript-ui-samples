@@ -35,6 +35,15 @@ export class ViewModel extends observableModule.Observable{
         } else {
              this.selectionMode = calendarModule.CalendarSelectionMode.Range;
         }
+        this.resetSelection();
+    }
+    
+    public resetSelection() {
+        var calendar: calendarModule.RadCalendar = frameModule.topmost().getViewById("calendar");
+        if (!calendar) {
+            return;
+        }
+        calendar.reload();
     }
     
     public onOptionsTapped() {

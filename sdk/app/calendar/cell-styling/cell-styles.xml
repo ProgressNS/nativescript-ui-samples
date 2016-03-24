@@ -1,4 +1,4 @@
-<Page xmlns:rc="nativescript-telerik-ui-pro/calendar" xmlns="http://www.nativescript.org/tns.xsd" loaded="onPageLoaded">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:rc="nativescript-telerik-ui-pro/calendar" xmlns="http://www.nativescript.org/tns.xsd" loaded="onPageLoaded">
 
     <navigation.actionBar>
         <ActionBar title="Styles">
@@ -56,6 +56,11 @@
                 <rc:CalendarMonthViewStyle.titleCellStyle>
                     <rc:CalendarCellStyle  cellBackgroundColor="Green" cellBorderWidth="3" cellBorderColor="Red" cellTextColor="CornflowerBlue" cellTextFontName="Times New Roman" cellTextFontStyle="Bold" cellTextSize="18" />
                 </rc:CalendarMonthViewStyle.titleCellStyle>
+
+                <rc:CalendarMonthviewStyle.inlineEventCellStyle>
+                    <rc:CalendarInlineEventCellStyle cellBackgroundColor="LightPink" eventTextColor="Gold" eventFontName="Avenir" eventFontStyle="BoldItalic" eventTextSize="12" 
+                                            timeTextColor="DeepSkyBlue" timeFontName="Courier" timeFontStyle="Regular" timeTextSize="14"/>
+                </rc:CalendarMonthviewStyle.inlineEventCellStyle>
 
             </rc:CalendarMonthViewStyle>
             
@@ -141,4 +146,4 @@
         
     </GridLayout>
 
-</Page>
+</navigation:ExamplePage>
