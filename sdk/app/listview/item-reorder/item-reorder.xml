@@ -1,7 +1,7 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui-pro/listview" xmlns="http://www.nativescript.org/tns.xsd">
     <GridLayout orientation="vertical" rows="auto, *, auto">
         <!-- >> listview-item-reorder-xml -->
-        <lv:RadListView itemReordered="{{onItemReordered}}" items="{{ dataItems }}" row="1" cellReorder="true">
+        <lv:RadListView itemReordered="{{onItemReordered}}" items="{{ dataItems }}" row="1" itemReorder="true">
             <lv:RadListView.listViewLayout>
                 <lv:ListViewLinearLayout scrollDirection="Vertical"/>
             </lv:RadListView.listViewLayout>
