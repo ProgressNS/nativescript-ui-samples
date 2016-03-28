@@ -21,7 +21,7 @@
         <Label text="Month view mode styling" cssClass="example-header"/>
         <rc:RadCalendar id="calendar" height="400"  eventSource="{{ eventSource }}" eventsViewMode="Inline" selectionMode="Single" viewMode="{{ViewMode}}">
         
-        <!-- >> calenar-monthview-styling -->
+        <!-- >> calendar-monthview-styling -->
         <rc:RadCalendar.monthViewStyle>
             <rc:CalendarMonthViewStyle backgroundColor="Gray" showTitle="true" showWeekNumbers="true" showDayNames="true" >
                 <rc:CalendarMonthViewStyle.todayCellStyle>
@@ -58,18 +58,18 @@
                     <rc:CellStyle  cellBackgroundColor="#bbcbdb" cellBorderWidth="1" cellBorderColor="#745151" cellTextColor="#dd855c" cellTextFontName="Times New Roman" cellTextFontStyle="Bold" cellTextSize="18" />
                 </rc:CalendarMonthViewStyle.titleCellStyle>
 
-            <!-- >> calenar-inlineevents-styling -->
+            <!-- >> calendar-inlineevents-styling -->
                 <rc:CalendarMonthviewStyle.inlineEventCellStyle>
                     <rc:InlineEventCellStyle cellBackgroundColor="LightPink" eventTextColor="Gold" eventFontName="Avenir" eventFontStyle="BoldItalic" eventTextSize="12" 
                                             timeTextColor="DeepSkyBlue" timeFontName="Courier" timeFontStyle="Regular" timeTextSize="14"/>
                 </rc:CalendarMonthviewStyle.inlineEventCellStyle>
-            <!-- << calenar-inlineevents-styling -->
+            <!-- << calendar-inlineevents-styling -->
 
                 </rc:CalendarMonthViewStyle>
             </rc:RadCalendar.monthViewStyle>
-            <!-- << calenar-monthview-styling -->
+            <!-- << calendar-monthview-styling -->
             
-            <!-- >> calenar-weekview-styling -->
+            <!-- >> calendar-weekview-styling -->
             <rc:RadCalendar.weekViewStyle>
                 <rc:CalendarWeekViewStyle backgroundColor="#dd855c" showTitle="true" showWeekNumbers="true" showDayNames="true" >
                     <rc:CalendarWeekViewStyle.todayCellStyle>
@@ -109,9 +109,9 @@
                 </rc:CalendarWeekViewStyle>
             
             </rc:RadCalendar.weekViewStyle>
-            <!-- << calenar-weekeview-styling -->
+            <!-- << calendar-weekview-styling -->
             
-            <!-- >> calenar-yearview-styling -->
+            <!-- >> calendar-yearview-styling -->
             <rc:RadCalendar.yearViewStyle>
                 <rc:CalendarYearViewStyle >
                     <rc:CalendarYearViewStyle.titleCellStyle>
@@ -127,9 +127,9 @@
                     </rc:CalendarYearViewStyle.monthCellStyle>
                 </rc:CalendarYearViewStyle>
             </rc:RadCalendar.yearViewStyle>
-                <!-- << calenar-yearview-styling -->
+                <!-- << calendar-yearview-styling -->
                 
-                <!-- >> calenar-monthnames-styling -->
+                <!-- >> calendar-monthnames-styling -->
             <rc:RadCalendar.monthNamesViewStyle>
                 <rc:CalendarMonthNamesViewStyle>
                     <rc:CalendarMonthNamesViewStyle.titleCellStyle>
@@ -142,7 +142,7 @@
                     
                 </rc:CalendarMonthNamesViewStyle>
             </rc:RadCalendar.monthNamesViewStyle>
-            <!-- << calenar-monthnames-styling -->
+            <!-- << calendar-monthnames-styling -->
             
         </rc:RadCalendar>
         
