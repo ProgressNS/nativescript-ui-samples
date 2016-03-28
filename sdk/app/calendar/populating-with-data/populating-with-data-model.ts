@@ -38,5 +38,6 @@ export class ViewModel extends observableModule.Observable {
         var date: Date = args.date;
         var calendar: calendarModule.RadCalendar = <calendarModule.RadCalendar>frameModule.topmost().getViewById("calendar");
         var events: Array<calendarModule.CalendarEvent> = calendar.getEventsForDate(date);
+        this.set("myItems", events);
     }
 }
