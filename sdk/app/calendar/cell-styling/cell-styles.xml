@@ -21,6 +21,7 @@
         <Label text="Month view mode styling" cssClass="example-header"/>
         <rc:RadCalendar id="calendar" height="400"  eventSource="{{ eventSource }}" eventsViewMode="Inline" selectionMode="Single" viewMode="{{ViewMode}}">
         
+        <!-- >> calenar-monthview-styling -->
         <rc:RadCalendar.monthViewStyle>
             <rc:CalendarMonthViewStyle backgroundColor="Gray" showTitle="true" showWeekNumbers="true" showDayNames="true" >
                 <rc:CalendarMonthViewStyle.todayCellStyle>
@@ -57,16 +58,18 @@
                     <rc:CellStyle  cellBackgroundColor="#bbcbdb" cellBorderWidth="1" cellBorderColor="#745151" cellTextColor="#dd855c" cellTextFontName="Times New Roman" cellTextFontStyle="Bold" cellTextSize="18" />
                 </rc:CalendarMonthViewStyle.titleCellStyle>
 
+            <!-- >> calenar-inlineevents-styling -->
                 <rc:CalendarMonthviewStyle.inlineEventCellStyle>
                     <rc:InlineEventCellStyle cellBackgroundColor="LightPink" eventTextColor="Gold" eventFontName="Avenir" eventFontStyle="BoldItalic" eventTextSize="12" 
                                             timeTextColor="DeepSkyBlue" timeFontName="Courier" timeFontStyle="Regular" timeTextSize="14"/>
                 </rc:CalendarMonthviewStyle.inlineEventCellStyle>
+            <!-- << calenar-inlineevents-styling -->
 
-            </rc:CalendarMonthViewStyle>
-            
+                </rc:CalendarMonthViewStyle>
             </rc:RadCalendar.monthViewStyle>
+            <!-- << calenar-monthview-styling -->
             
-            
+            <!-- >> calenar-weekview-styling -->
             <rc:RadCalendar.weekViewStyle>
                 <rc:CalendarWeekViewStyle backgroundColor="#dd855c" showTitle="true" showWeekNumbers="true" showDayNames="true" >
                     <rc:CalendarWeekViewStyle.todayCellStyle>
@@ -106,10 +109,11 @@
                 </rc:CalendarWeekViewStyle>
             
             </rc:RadCalendar.weekViewStyle>
+            <!-- << calenar-weekeview-styling -->
             
+            <!-- >> calenar-yearview-styling -->
             <rc:RadCalendar.yearViewStyle>
                 <rc:CalendarYearViewStyle >
-                
                     <rc:CalendarYearViewStyle.titleCellStyle>
                         <rc:CellStyle  cellBackgroundColor="#f1e8ca" cellBorderWidth="2" cellBorderColor="#745151" cellTextColor="#745151" cellTextFontName="Times New Roman" cellTextFontStyle="Bold" cellTextSize="18" />
                     </rc:CalendarYearViewStyle.titleCellStyle>
@@ -121,14 +125,13 @@
                                                     dayNameTextColor="#9ebd9e" dayNameFontName="Times New Roman" dayNameFontStyle="Bold" dayNameTextSize="14"
                                                     monthNameTextColor="#dd855c" monthNameFontName="Times New Roman" monthNameFontStyle="BoldItalic" monthNameTextSize="15"/>        
                     </rc:CalendarYearViewStyle.monthCellStyle>
-                    
                 </rc:CalendarYearViewStyle>
-            
             </rc:RadCalendar.yearViewStyle>
+                <!-- << calenar-yearview-styling -->
                 
+                <!-- >> calenar-monthnames-styling -->
             <rc:RadCalendar.monthNamesViewStyle>
-                <rc:CalendarMonthNamesViewStyle >
-                
+                <rc:CalendarMonthNamesViewStyle>
                     <rc:CalendarMonthNamesViewStyle.titleCellStyle>
                         <rc:CellStyle cellBackgroundColor="#dd855c" cellBorderWidth="2" cellBorderColor="#f1e8ca" cellTextColor="#745151" cellTextFontName="Times New Roman" cellTextFontStyle="Bold" cellTextSize="18" />
                     </rc:CalendarMonthNamesViewStyle.titleCellStyle>
@@ -138,9 +141,8 @@
                     </rc:CalendarMonthNamesViewStyle.monthNameCellStyle>
                     
                 </rc:CalendarMonthNamesViewStyle>
-                
             </rc:RadCalendar.monthNamesViewStyle>
-                
+            <!-- << calenar-monthnames-styling -->
             
         </rc:RadCalendar>
         
