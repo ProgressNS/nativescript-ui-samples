@@ -1,10 +1,7 @@
 import observableModule = require("data/observable");
-// >> calendar-calendar-require
 import calendarModule = require("nativescript-telerik-ui-pro/calendar");
-// << calendar-calendar-require
 import frameModule = require("ui/frame");
 
-// >> calendar-calendarevents-model
 export class ViewModel extends observableModule.Observable {
     calendarEvents: Array<calendarModule.CalendarEvent>;
     private _viewModesInfo;
@@ -28,7 +25,6 @@ export class ViewModel extends observableModule.Observable {
         this.set("eventsViewMode", value);
     }
     
-    // >> calendar-calendar-event-instance
     public createEvents() {
         let events: Array<calendarModule.CalendarEvent> = new Array<calendarModule.CalendarEvent>();
         let j = 1;
@@ -42,7 +38,6 @@ export class ViewModel extends observableModule.Observable {
 		}
         this.calendarEvents = events;
     }
-    // << calendar-calendar-event-instance
     
     public updateEventsViewMode() {
         let radCalendar: calendarModule.RadCalendar = frameModule.topmost().getViewById("calendar");
@@ -79,4 +74,3 @@ export class ViewModel extends observableModule.Observable {
         frameModule.topmost().navigate(navigationEntry);
     }
 }
-// << calendar-calendarevents-model

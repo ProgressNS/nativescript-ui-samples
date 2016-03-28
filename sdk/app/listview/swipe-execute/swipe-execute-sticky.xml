@@ -8,7 +8,7 @@
             selectionBehavior="None" 
             itemTap="onItemClick" 
             itemSwipeProgressStarted="onSwipeCellStarted" 
-            swipeCells="true">
+            itemSwipe="true">
         <!-- << listview-swipe-handler-sticky-xml -->
             <lv:RadListView.listViewLayout>
                 <lv:ListViewLinearLayout scrollDirection="Vertical"/>

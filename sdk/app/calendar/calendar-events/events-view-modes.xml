@@ -12,7 +12,6 @@
                 </android>
             </ActionBar.actionItems>
         </ActionBar>
-    </navigation.actionBar>
-    <>    
+    </navigation.actionBar>    
     <rc:RadCalendar id="calendar" eventsViewMode="{{ eventsViewMode }}" eventSource="{{ calendarEvents }}" />
 </navigation:ExamplePage>

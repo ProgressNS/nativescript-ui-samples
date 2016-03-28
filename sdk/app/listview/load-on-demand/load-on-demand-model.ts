@@ -28,7 +28,8 @@ export class ViewModel {
                     listView.loadOnDemandMode = listViewModule.ListViewLoadOnDemandMode.None;
                     break;
                 }
-                that.get()._items.push(new DataItem(posts.names[i], posts.titles[i], posts.text[i], "res://" + posts.images[i]));
+                var imageUri = application.android ? posts.images[i].toLowerCase() : posts.images[i];
+                that.get()._items.push(new DataItem(posts.names[i], posts.titles[i], posts.text[i], "res://" + imageUri));
                 that.get()._numberOfAddedItems++;
             }
 

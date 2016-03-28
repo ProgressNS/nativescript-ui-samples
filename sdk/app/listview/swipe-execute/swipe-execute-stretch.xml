@@ -8,7 +8,7 @@
             itemSwipeProgressEnded="onSwipeCellFinished"
             itemSwipeProgressChanged="onCellSwiping"
             itemSwipeProgressStarted="onSwipeCellStarted"
-            swipeCells="true">
+            itemSwipe="true">
             <lv:RadListView.listViewLayout>
                 <lv:ListViewLinearLayout scrollDirection="Vertical"/>
             </lv:RadListView.listViewLayout>
