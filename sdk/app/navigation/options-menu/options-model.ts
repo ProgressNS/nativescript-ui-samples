@@ -8,8 +8,15 @@ export class ViewModel extends observableModule.Observable{
 	constructor(selectionInfo){
 		super();
         this._info = selectionInfo;
-		this.items = this._info.options;
-        // this.selectRow(this._info.index);
+        var itemsArr = [];
+        for (var i = 0; i < this._info.options.length; i++) {
+            var element = this._info.options[i];
+            var item = {"title": element};
+            itemsArr.push(item);
+            
+        }
+
+        this.items = itemsArr;
 	}
     
     set items(value: Array<string>) {

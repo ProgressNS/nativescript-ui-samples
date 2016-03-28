@@ -47,6 +47,10 @@ button {
     padding: 10;
 }
 
+.listViewCellLabel {
+    margin-left: 15
+}
+
 .listView{
     background-color: #ffffff;
 }
