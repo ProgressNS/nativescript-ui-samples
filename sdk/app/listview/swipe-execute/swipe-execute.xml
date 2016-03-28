@@ -10,7 +10,7 @@
             itemTap="onItemClick" 
             itemSwipeProgressStarted="onSwipeCellStarted" 
             itemSwipeProgressChanged="onCellSwiping" 
-            swipeCells="true">
+            itemSwipe="true">
         <!-- << listview-swipe-set-enabled-xml -->
             <lv:RadListView.listViewLayout>
                 <lv:ListViewLinearLayout scrollDirection="Vertical"/>
