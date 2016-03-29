@@ -3,8 +3,11 @@
  <chart:RadPieChart id="pieChart">
  <!-- >> datapoint-selection -->
             <chart:RadPieChart.series>
-                <chart:PieSeries selectionMode="DataPoint" outerRadiusFactor="0.8" expandRadius="1.3" showLabels="true" 
+                <chart:PieSeries selectionMode="DataPoint" outerRadiusFactor="0.8" expandRadius="0.2" showLabels="true" 
 							 items="{{ sourceItems }}"  valueProperty="Sales" >
+                             <chart:PieSeries.labelStyle> 
+                                <chart:PointLabelStyle margin="15"/> 
+                             </chart:PieSeries.labelStyle>
 			    </chart:PieSeries>
             </chart:RadPieChart.series>
  <!-- << datapoint-selection -->

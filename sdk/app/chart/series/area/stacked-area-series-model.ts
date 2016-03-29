@@ -31,6 +31,7 @@ export class ViewModel extends observableModule.Observable {
         var index: number = this._stackModes.index;
         let b = this._stackModes.options[index];
         var chart = <chartModule.RadCartesianChart>frameModule.topmost().currentPage.getViewById("cartesianChart");
+        console.log(this._stackModes.options[index]);
         chart.series[0].stackMode = this._stackModes.options[index];
          chart.series[1].stackMode = this._stackModes.options[index];
           chart.series[2].stackMode = this._stackModes.options[index];
