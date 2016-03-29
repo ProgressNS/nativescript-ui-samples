@@ -2,21 +2,17 @@
 
     <chart:RadCartesianChart id="SelectionChart" selectionMode="Multiple" >
         
-        <chart:RadCartesianChart.series>
-           <chart:BarSeries selectionMode="Series" seriesName="Bar" items="{{ bubbleCategoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Impact">
-                <chart:BarSeries.verticalAxis>
-                    <chart:LinearAxis horizontalLocation="Right" allowPan="true"/>
-                </chart:BarSeries.verticalAxis>
-            </chart:BarSeries>
-             <!-- >> series-selection -->
-            <chart:LineSeries selectionMode="Series" showLabels="true" seriesName="Line" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">
-                <chart:LineSeries.verticalAxis>
-                    <chart:LinearAxis horizontalLocation="Left"/>
-                </chart:LineSeries.verticalAxis>
-            </chart:LineSeries>
-            <!-- << series-selection -->
-        </chart:RadCartesianChart.series>
+    <chart:RadCartesianChart.series>
+        <chart:BarSeries selectionMode="Series" seriesName="Bar" items="{{ bubbleCategoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Impact">
+        </chart:BarSeries>
+        <!-- >> series-selection -->
+        <chart:LineSeries selectionMode="Series" showLabels="true" seriesName="Line" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount"/>
+        <!-- << series-selection -->
+    </chart:RadCartesianChart.series>
 
+        <chart:RadCartesianChart.verticalAxis>
+            <chart:LinearAxis horizontalLocation="Right" allowPan="true"/>
+        </chart:RadCartesianChart.verticalAxis>
         <chart:RadCartesianChart.horizontalAxis>
             <chart:CategoricalAxis allowPan="true" allowZoom="true"/>
         </chart:RadCartesianChart.horizontalAxis>
