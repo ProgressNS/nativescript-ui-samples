@@ -7,7 +7,7 @@
                     <chart:CategoricalAxis/>
                 </chart:AreaSeries.horizontalAxis>
                 <chart:AreaSeries.verticalAxis>
-                    <chart:LinearAxis/>
+                    <chart:LinearAxis />
                 </chart:AreaSeries.verticalAxis>
             </chart:AreaSeries>
         </chart:RadCartesianChart.series>
