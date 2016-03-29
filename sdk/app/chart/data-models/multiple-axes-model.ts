@@ -20,7 +20,7 @@ export class MultipleAxesDataModel {
             { Country: "France", Amount: 3, SecondVal: 23 },
             { Country: "Bulgaria", Amount: 2, SecondVal: 9 },
             { Country: "Spain", Amount: 1, SecondVal: 19 },
-            { Country: "USA", Amount: -6, SecondVal: 8 }
+            { Country: "USA", Amount: 0, SecondVal: 8 }
         ]
     }
    

@@ -6,7 +6,7 @@
            </chart:SplineAreaSeries>
         </chart:RadCartesianChart.series>
          <chart:RadCartesianChart.verticalAxis>
-                         <chart:LinearAxis  allowZoom="true"/>                 
+            <chart:LinearAxis  allowZoom="true" minimum="-50" maximum="50"/>                 
         </chart:RadCartesianChart.verticalAxis>
         
         <chart:RadCartesianChart.horizontalAxis>
