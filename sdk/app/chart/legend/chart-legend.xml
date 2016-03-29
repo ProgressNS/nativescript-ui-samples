@@ -3,11 +3,13 @@
     <chart:RadCartesianChart id="cartesianChart">
         <chart:RadCartesianChart.series>
         
+            <chart:BarSeries legendTitle="Bar series" items="{{ categoricalSource }}"  stackMode="Stack" categoryProperty="Country" valueProperty="ThirdVal"/>
+            
             <chart:LineSeries legendTitle="Line series" items="{{ categoricalSource }}"  stackMode="Stack" categoryProperty="Country" valueProperty="Amount"/>
         
             <chart:AreaSeries legendTitle="Area series" items="{{ categoricalSource }}"  stackMode="Stack" categoryProperty="Country" valueProperty="SecondVal"/>
         
-            <chart:BarSeries legendTitle="Bar series" items="{{ categoricalSource }}"  stackMode="Stack" categoryProperty="Country" valueProperty="ThirdVal"/>
+            
             
         </chart:RadCartesianChart.series>
         
@@ -15,7 +17,7 @@
             <chart:CategoricalAxis/>
         </chart:RadCartesianChart.horizontalAxis>
         <chart:RadCartesianChart.verticalAxis>
-            <chart:LinearAxis/>
+            <chart:LinearAxis maximum="50"/>
         </chart:RadCartesianChart.verticalAxis>
         
         <chart:RadCartesianChart.legend>
