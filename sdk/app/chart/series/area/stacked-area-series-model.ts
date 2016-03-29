@@ -2,10 +2,11 @@ import {ObservableArray} from "data/observable-array";
 import chartModule = require("nativescript-telerik-ui-pro/chart");
 import observableModule = require("data/observable");
 import frameModule = require("ui/frame");
-
+var _isFirstLoad = true;
 export class ViewModel extends observableModule.Observable {
 
     private _stackModes;
+   
 
     constructor() {
         super();
@@ -33,6 +34,11 @@ export class ViewModel extends observableModule.Observable {
         chart.series[0].stackMode = this._stackModes.options[index];
          chart.series[1].stackMode = this._stackModes.options[index];
           chart.series[2].stackMode = this._stackModes.options[index];
+          if(_isFirstLoad == false){
+            chart.ios.reloadData();
+          }
+          _isFirstLoad = false;
+         
         
     }
     // >> stacked-series-model
