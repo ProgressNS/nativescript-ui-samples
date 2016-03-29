@@ -23,7 +23,7 @@ export class ViewModel {
         timer.setTimeout(function() {
             var listView: listViewModule.RadListView = args.object;
             var initialNumberOfItems = that.get()._numberOfAddedItems;
-            for (var i = that.get()._numberOfAddedItems - 1; i < initialNumberOfItems + 2; i++) {
+            for (var i = that.get()._numberOfAddedItems; i < initialNumberOfItems + 2; i++) {
                 if (i > posts.names.length - 1) {
                     listView.loadOnDemandMode = listViewModule.ListViewLoadOnDemandMode.None;
                     break;
