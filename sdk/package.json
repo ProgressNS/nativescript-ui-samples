@@ -1,20 +1,20 @@
 {
-  "nativescript": {
-    "id": "org.nativescript.sdk",
-    "tns-ios": {
-      "version": "1.6.0"
-    },
-    "tns-android": {
-      "version": "1.6.3"
-    }
-  },
-  "dependencies": {
-    "fresco": "file:./deps/fresco-0.1.0.tgz",
-    "nativescript-telerik-ui-pro": "file:../packages/nativescript-ui-pro.tgz",
-    "tns-core-modules": "^1.6.0"
-  },
-  "devDependencies": {
-    "nativescript-dev-typescript": "^0.3.1",
-    "typescript": "^1.8.7"
-  }
+	"nativescript": {
+		"id": "org.nativescript.sdk",
+		"tns-ios": {
+			"version": "1.7.0"
+		},
+		"tns-android": {
+			"version": "1.7.1"
+		}
+	},
+	"dependencies": {
+		"fresco": "file:./deps/fresco-0.1.0.tgz",
+		"nativescript-telerik-ui-pro": "file:../packages/nativescript-ui-pro.tgz",
+		"tns-core-modules": "^1.6.0"
+	},
+	"devDependencies": {
+		"nativescript-dev-typescript": "^0.3.1",
+		"typescript": "^1.8.7"
+	}
 }

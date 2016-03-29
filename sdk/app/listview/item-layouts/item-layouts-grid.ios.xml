@@ -9,7 +9,7 @@
             <lv:RadListView.itemTemplate>
                 <GridLayout rows="*" backgroundColor="White">
                    <GridLayout rows="*" columns="*" marginBottom="2" marginRight="2">
-                        <Image src="{{ image }}" stretch="aspectFill"/>
+                        <Image src="{{ image + '.jpg'}}" stretch="aspectFill"/>
                         <GridLayout verticalAlignment="bottom">
                             <StackLayout backgroundColor="#BBFFFFFF" paddingTop="8" paddingBottom="8" paddingLeft="16" paddingRight="16">
                                 <Label text="{{ itemName }}"/>
