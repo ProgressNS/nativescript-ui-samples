@@ -1,6 +1,10 @@
 # Welcome
 This repository contains the source code of the UI for NativeScript samples application. The repository does not contain the source code of UI for NativeScript itself.
 
+The `master` branch contains code currently under development and is not meant to be used with the officially released version of NativeScript UI.
+
+The `release` branch is the default one and is tested with the latest NativeScript UI version available.
+
 ##Overview
 The UI for NativeScript samples app resides in the **sdk** folder at root repository level. The folder has a standard NativeScript application structure as described in [this article](http://docs.nativescript.org/getting-started#directory-structure). The source code of the samples resides in the folders named after each component available in **UI for NativeScript**. The currently available components are:
 

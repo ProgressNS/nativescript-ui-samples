@@ -18,7 +18,7 @@ export class ViewModel {
             this._items = new ObservableArray<DataItem>();
             
             for (var i = 0; i < data.items.length; i++) {
-                this._items.push(new DataItem(i, data.items[i].title, data.items[i].author, "res://" + data.items[i].photo));
+                this._items.push(new DataItemWithImage(i, data.items[i].title, data.items[i].author, "res://" + data.items[i].photo));
             }
         }
         return this._items;
@@ -27,16 +27,32 @@ export class ViewModel {
     get staggeredItems() {
         if (!this._staggeredItems) {
             this._staggeredItems = new ObservableArray();
-
-            for (var i = 0; i < data.items.length; i++) {
-                this._staggeredItems.push(new DataItem(i, data.items[i].title, data.items[i].author, "res://" + data.items[i].photo));
+            
+            for (var i = 0; i < 50; i++) {
+ -                    this._staggeredItems.push(new DataItem(i, "Item " + i, this.getRandomLengthString()));
             }
+            // for (var i = 0; i < data.items.length; i++) {
+            //     this._staggeredItems.push(new DataItem(i, data.items[i].title, data.items[i].author, "res://" + data.items[i].photo));
+            // }
         }
         return this._staggeredItems;
     }
+    
+  private getRandomLengthString() {
+      var sentenceLength = Math.round((Math.random() * 15));
+      var result = this._words[0];
+      for (var i = 0; i < sentenceLength; i++) {
+       result += (this._words[i % this._words.length] + " ");
+      }
+       return result;
+   }
+   
+   private initStaggeredLayoutItems() {
+       this._staggeredItems = new observable_array_1.ObservableArray();
+    };
 }
 
-export class DataItem {
+export class DataItemWithImage {
     public id: number;
     public itemName;
     public itemDescription;
@@ -46,6 +62,18 @@ export class DataItem {
         this.id = id;
         this.itemName = name;
         this.itemDescription = description;
-        this.image = image;
+        this.image =image;
+    }
+}
+
+export class DataItem {
+    public id: number;
+    public itemName;
+    public itemDescription;
+
+    constructor(id: number, name: string, description: string) {
+        this.id = id;
+        this.itemName = name;
+        this.itemDescription = description;
     }
 }
