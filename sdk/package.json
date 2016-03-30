@@ -15,6 +15,7 @@
 	},
 	"devDependencies": {
 		"nativescript-dev-typescript": "^0.3.1",
+		"nativescript-telerik-ui-pro": "^1.0.0",
 		"typescript": "^1.8.7"
 	}
 }
