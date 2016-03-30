@@ -1,6 +1,11 @@
-<Page xmlns:rc="nativescript-telerik-ui/calendar" xmlns="http://www.nativescript.org/tns.xsd">
-	<GridLayout orientation="vertical" rows="auto, *, auto">
-        <rc:RadCalendar id="calendar" 
-			height="400"/>
-    </GridLayout>
-</Page>
+<!-- >> calendar-getting-started-xml -->
+<navigation:ExamplePage
+    xmlns:navigation="navigation/example-page"
+    xmlns:calendar="nativescript-telerik-ui-pro/calendar"
+    xmlns="http://www.nativescript.org/tns.xsd">
+    <navigation.actionBar>
+        <ActionBar title="Getting Started" />
+    </navigation.actionBar>
+	<calendar:RadCalendar id="calendar" />
+</navigation:ExamplePage>
+<!-- << calendar-getting-started-xml -->

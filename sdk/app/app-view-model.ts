@@ -87,10 +87,10 @@ export class AppViewModel extends observable.Observable {
         this._examples.push({ Id: "46", title: "Observable array", group: "listview features", description: "", moduleName: "./listview/observable-array/observable-array" });
         this._examples.push({ Id: "47", title: "Pull to refresh", group: "listview features", description: "", moduleName: "./listview/pull-to-refresh/pull-to-refresh" });
         this._examples.push({ Id: "48", title: "Swipe to execute", group: "listview features", description: "", moduleName: "./listview/swipe-execute/swipe-execute" });
-        this._examples.push({ Id: "49", title: "Observable item", group: "listview features", description: "", moduleName: "./listview/observable-item/observable-item" });
         this._examples.push({ Id: "50", title: "Single selection", group: "listview features", description: "", moduleName: "./listview/listview-selection/single-selection" });
         this._examples.push({ Id: "51", title: "Multiple selection", group: "listview features", description: "", moduleName: "./listview/listview-selection/multiple-selection" });
         this._examples.push({ Id: "52", title: "Programmatic selection", group: "listview features", description: "", moduleName: "./listview/listview-selection/programmatic-selection" });
+        this._examples.push({ Id: "53", title: "Item Loading", group: "listview features", description: "", moduleName: "./listview/item-loading/item-loading" });
         
         this._examples.push({ Id: "53", title: "Calendar", group: "controls", description: "Telerik Calendar for NativeScript", isControl: true, moduleName: "" });
         this._examples.push({ Id: "54", title: "Getting started", group: "calendar features", description: "", moduleName: "./calendar/getting-started/getting-started" });
@@ -99,6 +99,9 @@ export class AppViewModel extends observable.Observable {
         this._examples.push({ Id: "57", title: "Populating with data", group: "calendar features", description: "", moduleName: "./calendar/populating-with-data/populating-with-data" });
         this._examples.push({ Id: "58", title: "Events", group: "calendar features", description: "", moduleName: "./calendar/events/events" });
         this._examples.push({ Id: "59", title: "Programatic control", group: "calendar features", description: "", moduleName: "./calendar/programatic-control/programatic-control" });
+        this._examples.push({ Id: "60", title: "Transition modes", group: "calendar features", description: "", moduleName: "./calendar/transition-modes/transition-modes" });
+        this._examples.push({ Id: "61", title: "Events view modes", group: "calendar features", description: "", moduleName: "./calendar/events-view-modes/events-view-modes" });
+        this._examples.push({ Id: "62", title: "Calendar styling", group: "calendar features", description: "", moduleName: "./calendar/cell-styling/cell-styles"});
     }
 
     get examples(): Array<Example> {

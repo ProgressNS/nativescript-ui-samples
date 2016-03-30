@@ -1,16 +1,25 @@
 import viewModel = require("./view-modes-model");
-import calendarModule = require("nativescript-telerik-ui/calendar");
+import calendarModule = require("nativescript-telerik-ui-pro/calendar");
 
 var viewModelContext : viewModel.ViewModel;
 
 export function onPageLoaded(args){
     var page = args.object;
-    viewModelContext = new viewModel.ViewModel();
+    if(viewModelContext === undefined) {
+        viewModelContext = new viewModel.ViewModel();
+    }
+    
     page.bindingContext = viewModelContext;
+    viewModelContext.updateViewMode();
+}
+
+export function onNavigatedFrom(args) {
+    if(args.isBackNavigation === true) {
+        viewModelContext = undefined;
+    }
 }
 
 export function onWeekSetViewModeTap(args: any) {
-    
     viewModelContext.setViewMode(calendarModule.CalendarViewMode.Week);
 }
 

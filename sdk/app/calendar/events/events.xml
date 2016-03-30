@@ -1,13 +1,13 @@
-<Page xmlns:rc="nativescript-telerik-ui/calendar" xmlns="http://www.nativescript.org/tns.xsd">
-	<GridLayout orientation="vertical" rows="auto, *, auto">
-        <Label text="GettingStarted" cssClass="example-header"/>
-        <rc:RadCalendar id="calendar" 
-			dateSelected="onDateSelected"
-			dateDeselected="onDateDeselected"
-			navigatedToDate="onNavigatedToDate"
-			navigatingToDateStarted="onNavigatingToDateStarted"
-			viewModeChanged="onViewModeChanged"
-			height="400"/>
-			
-    </GridLayout>
-</Page>
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:rc="nativescript-telerik-ui-pro/calendar" xmlns="http://www.nativescript.org/tns.xsd">
+    <navigation.actionBar>
+        <ActionBar title="Events" />
+    </navigation.actionBar>
+    <!-- >> calendar-handling-events-xml -->
+    <rc:RadCalendar id="calendar" 
+	   dateSelected="onDateSelected"
+	   dateDeselected="onDateDeselected"
+	   navigatedToDate="onNavigatedToDate"
+	   navigatingToDateStarted="onNavigatingToDateStarted"
+       viewModeChanged="onViewModeChanged" />
+     <!-- << calendar-handling-events-xml -->
+</navigation:ExamplePage>

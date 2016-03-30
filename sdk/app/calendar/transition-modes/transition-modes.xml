@@ -1,0 +1,21 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:rc="nativescript-telerik-ui-pro/calendar" loaded="onPageLoaded" navigatingFrom="onNavigatedFrom" xmlns="http://www.nativescript.org/tns.xsd">
+     <navigation.actionBar>
+        <ActionBar title="Transition modes">
+            <ActionBar.actionItems>
+                <ios>
+                    <ActionItem text="Options" ios.position="right" tap="{{onOptionsTapped}}" />
+                </ios>
+                <android>
+                    <ActionItem text="None" android.position="popup" tap="onNoneTransitionModeTapped" />
+                    <ActionItem text="Slide" android.position="popup" tap="onSlideTransitionModeTapped" />
+                    <ActionItem text="Stack" android.position="popup" tap="onStackTransitionModeTapped" />
+                    <ActionItem text="Plain" android.position="popup" tap="onPlainTransitionModeTapped" />
+                    <ActionItem text="Free" android.position="popup" tap="onFreeTransitionModeTapped" />
+                    <ActionItem text="Combo" android.position="popup" tap="onComboTransitionModeTapped" />
+                    <ActionItem text="Overlap" android.position="popup" tap="onOverlapTransitionModeTapped" />
+                </android>
+            </ActionBar.actionItems>
+        </ActionBar>
+    </navigation.actionBar>    
+    <rc:RadCalendar id="calendar" transitionMode="{{ CalendarTransition }}" />
+</navigation:ExamplePage>

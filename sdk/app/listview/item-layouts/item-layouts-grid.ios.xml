@@ -1,0 +1,25 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui-pro/listview" xmlns="http://www.nativescript.org/tns.xsd">
+   <GridLayout rows="*" >
+        <lv:RadListView id="list-view" row="0" items="{{ dataItems }}" marginRight="-2">
+            <!-- >> listview-item-layouts-grid-xml -->
+            <lv:RadListView.listViewLayout>
+                <lv:ListViewGridLayout scrollDirection="Vertical" itemHeight="200" spanCount="2"/>
+            </lv:RadListView.listViewLayout>
+            <!-- << listview-item-layouts-grid-xml -->
+            <lv:RadListView.itemTemplate>
+                <GridLayout rows="*" backgroundColor="White">
+                   <GridLayout rows="*" columns="*" marginBottom="2" marginRight="2">
+                        <Image src="{{ image + '.jpg'}}" stretch="aspectFill"/>
+                        <GridLayout verticalAlignment="bottom">
+                            <StackLayout backgroundColor="#BBFFFFFF" paddingTop="8" paddingBottom="8" paddingLeft="16" paddingRight="16">
+                                <Label text="{{ itemName }}"/>
+                                <Label text="{{ itemDescription }}"/>
+                            </StackLayout>
+                        </GridLayout>
+                   </GridLayout>
+                </GridLayout>
+           </lv:RadListView.itemTemplate>
+        </lv:RadListView>
+    </GridLayout>
+</navigation:ExamplePage>
+

@@ -1,4 +1,5 @@
-<Page loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
+<!-- >> line-series -->
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
     <chart:RadCartesianChart id="cartesianChart">
         <chart:RadCartesianChart.series>
             <chart:LineSeries items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="Amount">
@@ -11,4 +12,5 @@
             </chart:LineSeries>
         </chart:RadCartesianChart.series>
     </chart:RadCartesianChart>
-</Page>
+</navigation:ExamplePage>
+<!-- << line-series -->

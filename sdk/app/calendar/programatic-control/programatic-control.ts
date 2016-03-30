@@ -1,4 +1,4 @@
-import calendarModule = require("nativescript-telerik-ui/calendar");
+import calendarModule = require("nativescript-telerik-ui-pro/calendar");
 
 var calendar : calendarModule.RadCalendar;
 
@@ -16,7 +16,6 @@ export function onNavigateBackTap(args: any) {
 }
 
 export function onGoToDateTap(args: any) {
-    var date = new Date(2015, 1, 19);
-    
+    var date = new Date();
     calendar.goToDate(date);
 }

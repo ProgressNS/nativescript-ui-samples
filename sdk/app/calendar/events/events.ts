@@ -1,8 +1,10 @@
-import calendarModule = require("nativescript-telerik-ui/calendar");
+import calendarModule = require("nativescript-telerik-ui-pro/calendar");
 
 export function onPageLoaded(args){
     var page = args.object;
 }
+
+// >> calendar-handling-events
 
 export function onDateSelected(args: calendarModule.CalendarSelectionEventData) {
     console.log("onDateSelected: " + args.date);
@@ -24,3 +26,4 @@ export function onViewModeChanged(args: calendarModule.CalendarViewModeChangedEv
     console.log("onViewModeChanged: " + args.newValue);
 }
 
+// << calendar-handling-events

@@ -1,14 +1,24 @@
-<Page loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
-    <chart:RadCartesianChart id="pieChart">
+<!-- >> bubble-series -->
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
+    <chart:RadCartesianChart id="bubbleChart">
+    
+            <chart:RadCartesianChart.verticalAxis>
+                <chart:LinearAxis />
+            </chart:RadCartesianChart.verticalAxis>
+            <chart:RadCartesianChart.horizontalAxis>
+                <chart:CategoricalAxis verticalLocation="Bottom" labelFitMode="Rotate" labelRotationAngle="1.2"/>
+            </chart:RadCartesianChart.horizontalAxis>
+         
         <chart:RadCartesianChart.series>
-            <chart:BubbleSeries  items="{{ bubbleCategoricalSource }}" bubbleScale="5" categoryProperty="Country" valueProperty="Amount" bubbleSizeProperty="Impact" >
-                <chart:BubbleSeries.horizontalAxis>
-                    <chart:CategoricalAxis/>
-                </chart:BubbleSeries.horizontalAxis>
-                <chart:BubbleSeries.verticalAxis>
-                    <chart:LinearAxis />
-                </chart:BubbleSeries.verticalAxis>
-            </chart:BubbleSeries>
+ 
+            <chart:BubbleSeries  items="{{ highDataModel }}" bubbleScale="5" categoryProperty="Year" valueProperty="Amount" bubbleSizeProperty="Impact" />
+            
+            <chart:BubbleSeries  items="{{ middleDataModel }}" bubbleScale="5" categoryProperty="Year" valueProperty="Amount" bubbleSizeProperty="Impact" />
+            
+            <chart:BubbleSeries  items="{{ lowDataModel }}" bubbleScale="5" categoryProperty="Year" valueProperty="Amount" bubbleSizeProperty="Impact" />
+               
         </chart:RadCartesianChart.series>
+        
     </chart:RadCartesianChart>
-</Page>
+</navigation:ExamplePage>
+<!-- << bubble-series -->

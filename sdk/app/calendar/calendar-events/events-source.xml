@@ -1,0 +1,13 @@
+<navigation:ExamplePage 
+    xmlns:navigation="navigation/example-page"
+    xmlns:calendar="nativescript-telerik-ui-pro/calendar"
+    loaded="onPageLoaded" navigatedTo="onNavigatedTo"
+    navigatingFrom="onNavigatedFrom"
+    xmlns="http://www.nativescript.org/tns.xsd">
+         <navigation.actionBar>
+            <ActionBar title="Events view modes"/>
+        </navigation.actionBar>
+    <!-- >> event-source-binding-xml -->
+    <calendar:RadCalendar id="calendar" eventSource="{{ calendarEvents }}" />
+    <!-- << event-source-binding-xml -->
+</navigation:ExamplePage>

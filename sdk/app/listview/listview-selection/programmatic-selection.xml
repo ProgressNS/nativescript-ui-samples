@@ -1,30 +1,31 @@
-<Page loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
-
-    <GridLayout orientation="vertical" rows="auto, *, auto">
-        <Label cssClass="example-header" text="Programmatic selection"/>
-        <lv:RadListView id="listView" itemDeselected="onItemDeselected" itemSelected="onItemSelected" items="{{ dataItems }}" multipleSelection="true" row="1" selectionBehavior="Press">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui-pro/listview" xmlns="http://www.nativescript.org/tns.xsd">
+ <GridLayout orientation="vertical" rows="auto, *">
+    <GridLayout rows="auto,70,70" backgroundColor="#f8f8f8" orientation="horizontal" row="0">
+         <StackLayout orientation="horizontal" horizontalAlignment="center" row="0">
+            <Button text="Select all" tap="onSelectAllTap" marginRight="10"/>
+            <Button text="Deselect all" tap="onDeselectAllTap"/>
+        </StackLayout>
+            <StackLayout orientation="horizontal" row="1" horizontalAlignment="center">
+            <Label text="Select item at:" verticalAlignment="center"/>
+            <TextField id="txtSelectItemIndex" ios:backgroundColor="white" width="60" ios:height="30" android:height="50"/>
+            <Button tap="onSelectItemAtTap" text="Done" marginLeft="10" height="50"/>
+            </StackLayout>
+            <StackLayout orientation="horizontal" row="2" horizontalAlignment="center">
+            <Label text="Deselect item at:" verticalAlignment="center"/>
+            <TextField  id="txtDeselectItemIndex" ios:backgroundColor="white" width="60" ios:height="30" android:height="50"/>
+            <Button tap="onDeselectItemAtTap" text="Done" marginLeft="10" height="50"/>
+            </StackLayout>
+        </GridLayout>
+        <lv:RadListView items="{{ dataItems }}" row="1" id="listView" multipleSelection="true" selectionBehavior="Press">
             <lv:RadListView.listViewLayout>
                 <lv:ListViewLinearLayout itemHeight="50" scrollDirection="Vertical"/>
             </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
-                <StackLayout orientation="vertical">
+                <StackLayout orientation="vertical" ios:paddingLeft="50" android:paddingLeft="16">
                     <Label fontSize="20" text="{{ itemName }}"/>
-                    <Label fontSize="14" text="{{ itemDescription }}"/>
+                    <Label fontSize="14" text="{{ itemEmail }}"/>
                 </StackLayout>
             </lv:RadListView.itemTemplate>
         </lv:RadListView>
-        <StackLayout orientation="vertical" row="2">
-            <Label id="txtSelection" textWrap="true"/>
-            <Button tap="onSelectAllTap" text="Select all"/>
-            <Button tap="onDeselectAllTap" text="Deselect all"/>
-            <GridLayout columns="auto, *">
-                <Button tap="onSelectItemAtTap" text="Select item at: "/>
-                <TextField col="1" id="txtSelectItemIndex"/>
-            </GridLayout>
-            <GridLayout columns="auto, *">
-                <Button tap="onDeselectItemAtTap" text="Deselect item at: "/>
-                <TextField id="txtDeselectItemIndex" col="1"/>
-            </GridLayout>
-        </StackLayout>
     </GridLayout>
-</Page>
+</navigation:ExamplePage>

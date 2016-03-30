@@ -1,4 +1,5 @@
-<Page loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
+<!-- >> ohlc-series -->
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
     <chart:RadCartesianChart id="cartesianChart">
     <chart:RadCartesianChart.series>
           <chart:OhlcSeries
@@ -9,7 +10,7 @@
             closePropertyName="Close"
             items="{{ ohlcSourceItems }}">
               <chart:OhlcSeries.horizontalAxis>
-                <chart:CategoricalAxis/>
+                   <chart:DateTimeCategoricalAxis  dateFormat="yyyy-MM-dd" verticalLocation="Bottom" />
               </chart:OhlcSeries.horizontalAxis>
               <chart:OhlcSeries.verticalAxis>
                 <chart:LinearAxis/>
@@ -17,4 +18,5 @@
             </chart:OhlcSeries>
         </chart:RadCartesianChart.series>
     </chart:RadCartesianChart>
-</Page>
+</navigation:ExamplePage>
+<!-- << ohlc-series -->

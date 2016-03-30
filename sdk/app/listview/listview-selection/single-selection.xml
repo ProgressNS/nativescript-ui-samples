@@ -1,19 +1,18 @@
-<Page loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui-pro/listview" xmlns="http://www.nativescript.org/tns.xsd">
 
     <GridLayout orientation="vertical" rows="auto, *, auto" >
-        <Label text="Single selection" cssClass="example-header"/>
         <lv:RadListView id="listView" items="{{ dataItems }}" row="1" selectionBehavior="Press" itemSelected="onItemSelected" itemDeselected="onItemDeselected">
             <lv:RadListView.listViewLayout>
                 <lv:ListViewLinearLayout itemHeight="50" scrollDirection="Vertical"/>
             </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
-                <StackLayout orientation="vertical">
+                <StackLayout orientation="vertical" paddingLeft="16">
                     <Label fontSize="20" text="{{ itemName }}"/>
-                    <Label fontSize="14" text="{{ itemDescription }}"/>
+                    <Label fontSize="13" text="{{ itemEmail }}"/>
                 </StackLayout>
             </lv:RadListView.itemTemplate>
         </lv:RadListView>
         <Label id="txtSelection" textWrap="true" row="2"/>
     </GridLayout>
 
-</Page>
+</navigation:ExamplePage>

@@ -1,0 +1,25 @@
+<!-- >> range-bar-series -->
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
+      <chart:RadCartesianChart>
+            
+            <chart:RadCartesianChart.verticalAxis>
+                <chart:LinearAxis horizontalLocation="Left" labelSize="11" />
+            </chart:RadCartesianChart.verticalAxis>
+           
+            <chart:RadCartesianChart.horizontalAxis>
+                <chart:CategoricalAxis verticalLocation="Bottom" labelSize="11" />
+            </chart:RadCartesianChart.horizontalAxis>
+
+            <chart:RadCartesianChart.series>
+                <chart:RangeBarSeries
+                     showLabels="true"
+                     legendTitle="Ranges"
+                     categoryProperty="Name"
+                     lowPropertyName="Low"
+                     highPropertyName="High"
+                     items="{{ rangeBarSource }}">
+                </chart:RangeBarSeries>
+            </chart:RadCartesianChart.series>
+        </chart:RadCartesianChart>
+</navigation:ExamplePage>
+<!-- << range-bar-series -->

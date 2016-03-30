@@ -1,23 +1,21 @@
-<Page loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
+<!-- >> grid -->
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
     <chart:RadCartesianChart id="cartesianChart">
+    <!-- >> grid-styling -->
     <chart:RadCartesianChart.grid>
                 <chart:RadCartesianChartGrid
                     horizontalLinesVisible="true"
                     verticalLinesVisible="true"
                     horizontalStripLinesVisible="true"
                     verticalStripLinesVisible="true"
-                    verticalStrokeColor="Red"
-                    horizontalStrokeColor="Green"
+                    verticalStrokeColor="#804d0026"
+                    horizontalStrokeColor="#ffffcc80"
                     horizontalStrokeWidth="2"
-                    verticalStrokeWidth="3"
-                    verticalStripLineColor="Yellow,Green"
-                    horizontalStripLineColor="Blue"/>
-           </chart:RadCartesianChart.grid>
-           
-        <!--<chart:RadCartesianChart.grid>
-            <chart:RadCartesianChartGrid horizontalLinesVisible="true" horizontalStripLinesVisible="false" verticalStripLinesVisible="false" verticalLinesVisible="true"/>
-        </chart:RadCartesianChart.grid>-->
-        
+                    verticalStrokeWidth="3"      
+                    horizontalStripLineColor="#8059005c, #804d0026"
+                    />
+           </chart:RadCartesianChart.grid>           
+      <!-- << grid-styling -->  
         <chart:RadCartesianChart.series>
             <chart:BarSeries items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="Amount">
             </chart:BarSeries>
@@ -29,4 +27,5 @@
             </chart:RadCartesianChart.verticalAxis>
         </chart:RadCartesianChart.series>
     </chart:RadCartesianChart>
-</Page>
+</navigation:ExamplePage>
+<!-- << grid -->

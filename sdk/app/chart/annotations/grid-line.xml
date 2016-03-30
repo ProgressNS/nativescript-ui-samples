@@ -1,20 +1,27 @@
-<Page loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
     <chart:RadCartesianChart id="cartesianChart">
-        <chart:RadCartesianChart.series>
-            <chart:AreaSeries items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="Amount">
-                <chart:BarSeries.horizontalAxis>
-                    <chart:CategoricalAxis id="horBarAxis"/>
-                </chart:BarSeries.horizontalAxis>
-                <chart:BarSeries.verticalAxis>
-                    <chart:LinearAxis id="verBarAxis"/>
-                </chart:BarSeries.verticalAxis>
-             </chart:AreaSeries>
-        </chart:RadCartesianChart.series>
-
-        <chart:RadCartesianChart.annotations>
-		    <chart:ChartGridLineAnnotation axisId="verBarAxis" hidden="false" value="5.5" zPosition="AboveSeries" strokeWidth="3" strokeColor="Red"  strokeDashPattern="10,20,15,20" />
-			<chart:ChartGridLineAnnotation axisId="verBarAxis" hidden="false" value="4.5" strokeWidth="10" strokeColor="Blue"  strokeDashPattern="10,20,5,20" />
-            <chart:ChartGridLineAnnotation axisId="horBarAxis" value="Bulgaria" zPosition="AboveSeries" strokeWidth="5"  strokeDashPattern="5,10,5,10,1"/>
+         <chart:ScatterSeries.horizontalAxis>
+                    <chart:LinearAxis minimum="0" maximum="80" id="hAxis"/>
+                </chart:ScatterSeries.horizontalAxis>
+                <chart:ScatterSeries.verticalAxis>
+                    <chart:LinearAxis id="vAxis"/>
+                </chart:ScatterSeries.verticalAxis>
+    <chart:RadCartesianChart.series>
+       <chart:ScatterSeries seriesName="SavingsSeries" items="{{ scatterSource }}" xProperty="Age" yProperty="Savings">              
+        </chart:ScatterSeries>
+         <chart:ScatterSeries seriesName="SalarySeries" items="{{ scatterSource }}" xProperty="Age" yProperty="Salary">
+         </chart:ScatterSeries>
+        <chart:ScatterSeries seriesName="SpendingsSeries" items="{{ scatterSource }}" xProperty="Age" yProperty="Spendings">              
+        </chart:ScatterSeries>        
+    </chart:RadCartesianChart.series>
+    
+      <!-- >> grid-line-annotations -->
+     <chart:RadCartesianChart.annotations>
+		    <chart:ChartGridLineAnnotation axisId="hAxis" hidden="false" value="50" zPosition="AboveSeries" strokeWidth="1" strokeColor="#EB916580" />
+			<chart:ChartGridLineAnnotation axisId="vAxis" hidden="false" value="10000" zPosition="AboveSeries" strokeWidth="1" strokeColor="#65BFEB80" />
+            <chart:ChartPlotBandAnnotation axisId="hAxis" hidden="false" value="20" zPosition="AboveSeries"  minValue="60" maxValue="70" fillColor="#A1FAC980" strokeColor="#A1FAC980"/>
+			<chart:ChartPlotBandAnnotation axisId="vAxis" hidden="false" value="20000" zPosition="AboveSeries" minValue="2500" maxValue="5000" fillColor="#AC74E880" strokeColor="#AC74E880"/>
         </chart:RadCartesianChart.annotations>
-   </chart:RadCartesianChart>
-</Page>
+          <!-- << grid-line-annotations -->
+    </chart:RadCartesianChart>
+</navigation:ExamplePage>

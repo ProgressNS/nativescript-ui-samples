@@ -15,21 +15,40 @@ button {
     horizontal-align: center;
 }
 
-.drawerMenuContent {
-    margin:10;
-}
-
 .mainContent{
     background-color: white;
 }
 
 .drawerContent {
-    background-color: white;
+    background-color: gray;
+}
+
+.drawerContentText {
+    font-size: 13;
+    padding: 10;
+}
+
+.drawerContentButton {
+    margin: 10;
+    horizontal-align: left;
 }
 
 .headerContent {
-    padding:20;
-    background-color: #808080
+    padding:10;
+    text-align: center;
+}
+
+.drawerSectionHeader {
+    padding-left: 10;
+    background-color: lightgray;
+}
+
+.drawerSectionItem {
+    padding: 10;
+}
+
+.listViewCellLabel {
+    margin-left: 15
 }
 
 .listView{

@@ -1,28 +1,43 @@
-import calendarModule = require("nativescript-telerik-ui/calendar");
+import calendarModule = require("nativescript-telerik-ui-pro/calendar");
 import observableModule = require("data/observable");
+import frameModule = require("ui/frame");
+import { Color } from "color";
 
-export class ViewModel extends observableModule.Observable{
-		
-	constructor(){
-		super();
-		
-		var events : Array<calendarModule.CalendarEvent> = new Array<calendarModule.CalendarEvent>();
-		for (var i = 1; i < 10; i++) {
-			
-			var event = new calendarModule.CalendarEvent("event" + i, new Date(2015, 11, i * 2), new Date(2015, 11, (i * 2) + (i % 3), 1));
-			
-			events.push(event);
-			
-		}
-		
-		this.source = events;
-	}
-	
-	set source(value : Array<calendarModule.CalendarEvent>) {
-		this.set("Source", value);
-	}
-	
-	get source() : Array<calendarModule.CalendarEvent> {
-		return <Array<calendarModule.CalendarEvent>>this.get("Source");
-	}
+export class ViewModel extends observableModule.Observable {
+
+    constructor() {
+        super();
+        let now = new Date();
+        let startDate: Date,
+            endDate: Date,
+            event: calendarModule.CalendarEvent;
+        let colors: Array<Color> = [new Color(200, 188, 26, 214), new Color(220, 255, 109, 130), new Color(255, 55, 45, 255), new Color(199, 17, 227, 10), new Color(255, 255, 54, 3)];
+        let events: Array<calendarModule.CalendarEvent> = new Array<calendarModule.CalendarEvent>();
+        for (let i = 1; i < 10; i++) {
+            startDate = new Date(now.getFullYear(), now.getMonth(), i * 2, 1);
+            endDate = new Date(now.getFullYear(), now.getMonth(), (i * 2), 3);
+            event = new calendarModule.CalendarEvent("event " + i, startDate, endDate, false, colors[i * 10 % (colors.length - 1)]);
+            events.push(event);
+            if (i % 3 == 0) {
+                event = new calendarModule.CalendarEvent("second " + i, startDate, endDate, true, colors[i * 5 % (colors.length - 1)]);
+                events.push(event);
+            }
+        }
+        this.source = events;
+    }
+
+    set source(value: Array<calendarModule.CalendarEvent>) {
+        this.set("eventSource", value);
+    }
+
+    get source(): Array<calendarModule.CalendarEvent> {
+        return <Array<calendarModule.CalendarEvent>>this.get("eventSource");
+    }
+
+    public onDateSelected(args: calendarModule.CalendarSelectionEventData) {
+        var date: Date = args.date;
+        var calendar: calendarModule.RadCalendar = <calendarModule.RadCalendar>frameModule.topmost().getViewById("calendar");
+        var events: Array<calendarModule.CalendarEvent> = calendar.getEventsForDate(date);
+        this.set("myItems", events);
+    }
 }

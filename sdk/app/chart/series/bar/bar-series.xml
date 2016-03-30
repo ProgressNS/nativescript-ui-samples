@@ -1,5 +1,7 @@
-<Page loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
+<!-- >> bar-series -->
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
     <chart:RadCartesianChart id="cartesianChart">
+    <!-- >> categorical-axis-example -->
         <chart:RadCartesianChart.series>
             <chart:BarSeries items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="Amount">
                 <chart:BarSeries.horizontalAxis>
@@ -10,5 +12,7 @@
                 </chart:BarSeries.verticalAxis>
             </chart:BarSeries>
         </chart:RadCartesianChart.series>
+        <!-- << categorical-axis-example -->
     </chart:RadCartesianChart>
-</Page>
+</navigation:ExamplePage>
+<!-- << bar-series -->

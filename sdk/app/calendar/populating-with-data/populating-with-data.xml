@@ -1,9 +1,16 @@
-<Page loaded="onPageLoaded" xmlns:rc="nativescript-telerik-ui/calendar" xmlns="http://www.nativescript.org/tns.xsd">
-	<GridLayout orientation="vertical" rows="auto, *, auto">
-        <Label text="PopulatingWithData" cssClass="example-header"/>
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:rc="nativescript-telerik-ui-pro/calendar" xmlns="http://www.nativescript.org/tns.xsd">
+    <navigation.actionBar>
+        <ActionBar title="Populating with data" />
+    </navigation.actionBar>
+	<GridLayout rows="*, 100" orientation="vertical">
         <rc:RadCalendar id="calendar" 
-			eventSource="{{ source }}"
-			height="400"/>
-			
+		    eventSource="{{ eventSource }}"
+            dateSelected="onDateSelected"
+            row="0"/>
+        <ListView items="{{ myItems }}" rowHeight="44" row="1">
+            <ListView.itemTemplate>
+                <Label text="{{title}}" marginLeft="10" />
+            </ListView.itemTemplate>
+        </ListView>
     </GridLayout>
-</Page>
+</navigation:ExamplePage>

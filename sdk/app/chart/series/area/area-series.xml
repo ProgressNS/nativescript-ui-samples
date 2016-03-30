@@ -1,4 +1,5 @@
-<Page loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
+<!-- >> area-series -->
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
     <chart:RadCartesianChart id="cartesianChart">
         <chart:RadCartesianChart.series>
             <chart:AreaSeries items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="Amount">
@@ -6,9 +7,10 @@
                     <chart:CategoricalAxis/>
                 </chart:AreaSeries.horizontalAxis>
                 <chart:AreaSeries.verticalAxis>
-                    <chart:LinearAxis/>
+                    <chart:LinearAxis />
                 </chart:AreaSeries.verticalAxis>
             </chart:AreaSeries>
         </chart:RadCartesianChart.series>
     </chart:RadCartesianChart>
-</Page>
+</navigation:ExamplePage>
+<!-- << area-series -->
