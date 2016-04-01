@@ -51,6 +51,17 @@ export function onCellSwiping(args: listViewModule.ListViewEventData) {
 // << listview-swipe-stretch-view
 
 export function onSwipeCellFinished(args: listViewModule.ListViewEventData) {
+    if (args.data.x < 0) {
+        var currentItemView = args.object;
+        var deleteView = currentItemView.getViewById("delete-view");
+        var dimensions = viewModule.View.measureChild(
+            deleteView.parent,
+            deleteView,
+            utilsModule.layout.makeMeasureSpec(Math.abs(args.data.x), utilsModule.layout.EXACTLY),
+            utilsModule.layout.makeMeasureSpec(deleteView.getMeasuredHeight(), utilsModule.layout.EXACTLY));
+        viewModule.View.layoutChild(deleteView.parent, deleteView, currentItemView.getMeasuredWidth(), 0, currentItemView.getMeasuredWidth(), dimensions.measuredHeight);
+    }
+    
     if (args.data.x > 200) {
         console.log("Perform left action");
     } else if (args.data.x < -200) {
