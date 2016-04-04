@@ -43,13 +43,13 @@ export class DrawerTransitionsModel {
         this.openSideDrawer();
     }
 
-    public openSideDrawer(args: observableModule.EventData) {
-        var drawer: drawerModule.RadideDrawer = <drawerModule.RadSideDrawer>frameModule.topmost().getViewById("sideDrawer");
+    public openSideDrawer(args?: observableModule.EventData) {
+        let drawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>frameModule.topmost().getViewById("sideDrawer");
         drawer.showDrawer();
     }
 
     private setDrawerTransition(transition: drawerModule.DrawerTransitionBase) {
-        var drawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>frameModule.topmost().getViewById("sideDrawer");
+        let drawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>frameModule.topmost().getViewById("sideDrawer");
         drawer.drawerTransition = transition;
     }
 }

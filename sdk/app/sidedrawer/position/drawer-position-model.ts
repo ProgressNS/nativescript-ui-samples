@@ -29,12 +29,12 @@ export class DrawerPositionModel {
     }
 
     private setDrawerLocation(location: drawerModule.SideDrawerLocation) {
-        var sideDrawer: drawerModule.RadSideDrawer = frameModule.topmost().getViewById("sideDrawer");
-        sideDrawer.drawerLocation = location;
+        var sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
+        sideDrawer.drawerLocation = drawerModule.SideDrawerLocation[location];
     }
     
     private openDrawer() {
-         var sideDrawer: drawerModule.RadSideDrawer = frameModule.topmost().getViewById("sideDrawer");
+         var sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
          sideDrawer.showDrawer();
     }
 }

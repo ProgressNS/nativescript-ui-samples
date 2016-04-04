@@ -1,6 +1,5 @@
 
 import viewModel = require("./observable-array-model");
-import listViewModule = require("nativescript-telerik-ui-pro/list-view");
 
 export function onPageLoaded(args){
     var page = args.object;

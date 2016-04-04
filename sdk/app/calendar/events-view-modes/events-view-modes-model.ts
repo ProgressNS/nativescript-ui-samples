@@ -45,7 +45,7 @@ export class ViewModel extends observableModule.Observable {
     // << calendar-calendar-event-instance
     
     public updateEventsViewMode() {
-        let radCalendar: calendarModule.RadCalendar = frameModule.topmost().getViewById("calendar");
+        let radCalendar: calendarModule.RadCalendar = <calendarModule.RadCalendar>(frameModule.topmost().getViewById("calendar"));
         if (!radCalendar.ios) {
             return;
         }
