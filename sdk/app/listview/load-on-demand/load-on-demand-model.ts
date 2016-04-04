@@ -25,7 +25,7 @@ export class ViewModel {
             var initialNumberOfItems = that.get()._numberOfAddedItems;
             for (var i = that.get()._numberOfAddedItems; i < initialNumberOfItems + 2; i++) {
                 if (i > posts.names.length - 1) {
-                    listView.loadOnDemandMode = "None";
+                    listView.loadOnDemandMode = listViewModule.ListViewLoadOnDemandMode.None;
                     break;
                 }
                 var imageUri = application.android ? posts.images[i].toLowerCase() : posts.images[i];

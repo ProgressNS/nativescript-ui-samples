@@ -4,8 +4,7 @@ application.cssFile = "./app.css";
 
 if (application.android) {
     application.onLaunch = function (intent) {
-        
-console.log("onLaunch");
+        console.log("onLaunch");
         com.facebook.drawee.backends.pipeline.Fresco.initialize(application.android.context);
     };
 }

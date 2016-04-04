@@ -6,7 +6,7 @@ var json = require("./PhotosWithNames.json");
 
 export class ViewModel {
 
-    private _items: ObservableArray<DataItem>;
+    private _items: ObservableArray;
 
     constructor() {
         this.initDataItems();
@@ -18,7 +18,7 @@ export class ViewModel {
 
 
     private initDataItems() {
-        this._items = new ObservableArray<DataItem>();
+        this._items = new ObservableArray();
 
         for (var i = 0; i < json.names.length; i++) {
            this._items.push(new DataItem(json.names[i], json.emails[i]));

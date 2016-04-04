@@ -24,29 +24,25 @@ export function onNavigatedFrom(args) {
 }
 
 export function onNoneSetSelectionModeTap(args: any) {
-    var listView = <listViewModule.RadListView>frameModule.topmost().getViewById("ls");
-    var layout = <listViewModule.ListViewLinearLayout>listView.listViewLayout;
-    layout.itemInsertAnimation = "Default";
-    layout.itemDeleteAnimation = "Default";
+    var listView = <listViewModule.ListView>frameModule.topmost().getViewById("ls");
+    listView.listViewLayout.itemInsertAnimation = "Default";
+    listView.listViewLayout.itemDeleteAnimation = "Default";
 }
 
 export function onSingleSetSelectionModeTap(args: any) {
-    var listView = <listViewModule.RadListView>frameModule.topmost().getViewById("ls");
-    var layout = <listViewModule.ListViewLinearLayout>listView.listViewLayout;
-    layout.itemInsertAnimation = "Fade";
-    layout.itemDeleteAnimation = "Fade";
+    var listView = <listViewModule.ListView>frameModule.topmost().getViewById("ls");
+    listView.listViewLayout.itemInsertAnimation = "Fade";
+    listView.listViewLayout.itemDeleteAnimation = "Fade";
 }
 
 export function onMultipleSetSelectionModeTap(args: any) {
-    var listView = <listViewModule.RadListView>frameModule.topmost().getViewById("ls");
-    var layout = <listViewModule.ListViewLinearLayout>listView.listViewLayout;
-    layout.itemInsertAnimation = "Scale";
-    layout.itemDeleteAnimation = "Scale";
+    var listView = <listViewModule.ListView>frameModule.topmost().getViewById("ls");
+    listView.listViewLayout.itemInsertAnimation = "Scale";
+    listView.listViewLayout.itemDeleteAnimation = "Scale";
 }
 
 export function onRangeSetSelectionModeTap(args: any) {
-    var listView = <listViewModule.RadListView>frameModule.topmost().getViewById("ls");
-    var layout = <listViewModule.ListViewLinearLayout>listView.listViewLayout;
-    layout.itemInsertAnimation = "Slide";
-    layout.itemDeleteAnimation = "Slide";
+    var listView = <listViewModule.ListView>frameModule.topmost().getViewById("ls");
+    listView.listViewLayout.itemInsertAnimation = "Slide";
+    listView.listViewLayout.itemDeleteAnimation = "Slide";
 }

@@ -1,4 +1,5 @@
 import {ObservableArray} from "data/observable-array";
+import listViewModule = require("../../nativescript-telerik-ui-pro/listview");
 import timer = require("timer");
 
 var data = require("./ListItems.json")
@@ -6,7 +7,7 @@ var data = require("./ListItems.json")
 export class ViewModel {
 
     private _items: ObservableArray<DataItem>;
-    private _staggeredItems: ObservableArray<DataItem>;
+    private _staggeredItems: ObservableArray;
     private _words = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"];
 
     constructor() {
@@ -25,7 +26,7 @@ export class ViewModel {
 
     get staggeredItems() {
         if (!this._staggeredItems) {
-            this._staggeredItems = new ObservableArray<DataItem>();
+            this._staggeredItems = new ObservableArray();
             
             for (var i = 0; i < 50; i++) {
  -                    this._staggeredItems.push(new DataItem(i, "Item " + i, this.getRandomLengthString()));
@@ -47,7 +48,7 @@ export class ViewModel {
    }
    
    private initStaggeredLayoutItems() {
-       this._staggeredItems = new ObservableArray<DataItem>();
+       this._staggeredItems = new observable_array_1.ObservableArray();
     };
 }
 
