@@ -1,12 +1,10 @@
 import {ObservableArray} from "data/observable-array";
-import listViewModule = require("nativescript-telerik-ui-pro/listview");
-import timer = require("timer");
 
 var json = require("./PhotosWithNames.json");
 
 export class ViewModel {
 
-    private _items: ObservableArray;
+    private _items: ObservableArray<DataItem>;
 
     constructor() {
         this.initDataItems();
@@ -18,7 +16,7 @@ export class ViewModel {
 
 
     private initDataItems() {
-        this._items = new ObservableArray();
+        this._items = new ObservableArray<DataItem>();
 
         for (var i = 0; i < json.names.length; i++) {
            this._items.push(new DataItem(json.names[i], json.emails[i]));

@@ -39,7 +39,7 @@ export class ViewModel extends observableModule.Observable{
     }
     
     public resetSelection() {
-        var calendar: calendarModule.RadCalendar = frameModule.topmost().getViewById("calendar");
+        var calendar: calendarModule.RadCalendar = <calendarModule.RadCalendar>(frameModule.topmost().getViewById("calendar"));
         if (!calendar) {
             return;
         }

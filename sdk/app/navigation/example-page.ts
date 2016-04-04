@@ -17,8 +17,8 @@ export class ExamplePage extends pageModule.Page {
 
     }
 
-    public onLoaded(args) {
-        super.onLoaded(args);
+    public onLoaded() {
+        super.onLoaded();
 
         var actionBar = this.actionBar === undefined ? new actionBarModule.ActionBar() : this.actionBar;
         actionBar.title = this._associatedExampleMeta.title;
