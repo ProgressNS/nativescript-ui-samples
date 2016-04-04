@@ -3,7 +3,7 @@ var posts = require("./posts.json");
 
 export class ViewModel {
 
-    private _items: ObservableArray;
+    private _items: ObservableArray<DataItem>;
 
     constructor() {
         this.initDataItems();
@@ -14,7 +14,7 @@ export class ViewModel {
     }
 
     private initDataItems() {
-        this._items = new ObservableArray();
+        this._items = new ObservableArray<DataItem>();
 
         for (var i = 0; i < posts.names.length; i++) {
             this._items.push(new DataItem(posts.names[i], posts.titles[i], posts.text[i]));

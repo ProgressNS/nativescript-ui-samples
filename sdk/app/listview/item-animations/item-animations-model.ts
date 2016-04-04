@@ -51,9 +51,10 @@ export class ViewModel extends observableModule.Observable {
     public updateItemAnimation() {
         var index: number = this._animations.index;
         let b = this._animations.options[index];
-        var listView = <listViewModule.ListView>frameModule.topmost().currentPage.getViewById("ls");
-        listView.listViewLayout.itemInsertAnimation = this._animations.options[index];
-        listView.listViewLayout.itemDeleteAnimation = this._animations.options[index];
+        var listView = <listViewModule.RadListView>frameModule.topmost().currentPage.getViewById("ls");
+        var layout = <listViewModule.ListViewLinearLayout>listView.listViewLayout;
+        layout.itemInsertAnimation = this._animations.options[index];
+        layout.itemDeleteAnimation = this._animations.options[index];
     }
 
     public onOptionsTapped() {
