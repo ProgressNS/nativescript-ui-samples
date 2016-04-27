@@ -1,5 +1,6 @@
 import application = require("application");
 application.cssFile = "./app.css";
+application.mainModule = "./navigation/category-list"
 
 //partial declaration of Fresco native anroid class
 declare module com{
