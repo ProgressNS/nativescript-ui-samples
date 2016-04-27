@@ -1,38 +1,34 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
    
-    <chart:RadCartesianChart id="cartesianChart">
-    <!-- >> creating-series -->
-        <chart:RadCartesianChart.series>
-            <chart:SplineAreaSeries seriesName="Area" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="ThirdVal">
-
-            </chart:SplineAreaSeries>
-            <chart:BarSeries seriesName="Bar" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="SecondVal">
-
-            </chart:BarSeries>
-            <chart:LineSeries seriesName="Line" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">
-
-            </chart:LineSeries>
-            <!-- << creating-series -->
-        </chart:RadCartesianChart.series>
-             <!-- >> creating-palettes -->
-        <chart:RadCartesianChart.palettes>
-            <chart:Palette seriesName="Bar">
-                <chart:Palette.entries>
-                    <chart:PaletteEntry fillColor="#80FCE49D" strokeColor="#80E2A1F8"/>
-                </chart:Palette.entries>
-            </chart:Palette>
-            <chart:Palette seriesName="Area">
-                <chart:Palette.entries>
-                    <chart:PaletteEntry fillColor="#8060B3FC" strokeColor="#60B3FC"/>
-                </chart:Palette.entries>
-            </chart:Palette>
-            <chart:Palette seriesName="Line">
-                <chart:Palette.entries>
-                    <chart:PaletteEntry strokeColor="#FFCF40" strokeWidth="3"/>
-                </chart:Palette.entries>
-            </chart:Palette>
-        </chart:RadCartesianChart.palettes>
-     <!-- << creating-palettes -->
+<chart:RadCartesianChart id="cartesianChart">
+<!-- >> creating-series -->
+    <chart:RadCartesianChart.series>
+        <chart:SplineAreaSeries seriesName="Area" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="ThirdVal"/>
+        <chart:BarSeries seriesName="Bar" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="SecondVal"/>
+        <chart:LineSeries seriesName="Line" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount"/>
+    </chart:RadCartesianChart.series>
+<!-- << creating-series -->
+    
+<!-- >> creating-palettes -->
+    <chart:RadCartesianChart.palettes>
+        <chart:Palette seriesName="Bar">
+            <chart:Palette.entries>
+                <chart:PaletteEntry fillColor="#80FCE49D" strokeColor="#80E2A1F8"/>
+            </chart:Palette.entries>
+        </chart:Palette>
+        <chart:Palette seriesName="Area">
+            <chart:Palette.entries>
+                <chart:PaletteEntry fillColor="#8060B3FC" strokeColor="#60B3FC"/>
+            </chart:Palette.entries>
+        </chart:Palette>
+        <chart:Palette seriesName="Line">
+            <chart:Palette.entries>
+                <chart:PaletteEntry strokeColor="#FFCF40" strokeWidth="3"/>
+            </chart:Palette.entries>
+        </chart:Palette>
+    </chart:RadCartesianChart.palettes>
+<!-- << creating-palettes -->
+    
         <chart:RadCartesianChart.horizontalAxis>
             <chart:CategoricalAxis/>
         </chart:RadCartesianChart.horizontalAxis>

@@ -1,0 +1,63 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
+   
+    <chart:RadCartesianChart  id="cartesianChart" selectionMode="Multiple">
+        <chart:RadCartesianChart.horizontalAxis>
+            <chart:CategoricalAxis lineColor="Red" lineThickness="1" />
+        </chart:RadCartesianChart.horizontalAxis>
+        <chart:RadCartesianChart.verticalAxis>
+            <chart:LinearAxis lineColor="Blue" lineThickness="1" />
+        </chart:RadCartesianChart.verticalAxis>
+    
+    <chart:RadCartesianChart.series>
+        <chart:LineSeries seriesName="myLine" categoryProperty="Country" items="{{ categoricalSource }}"  valueProperty="Amount" selectionMode="Series" />
+        <chart:BarSeries seriesName="myBar" categoryProperty="Country" items="{{ categoricalSource }}"  valueProperty="Amount" selectionMode="DataPoint" />
+        <chart:LineSeries seriesName="myLine" categoryProperty="Country" items="{{ categoricalSource2 }}"  valueProperty="Amount" selectionMode="Series" />
+        <chart:BarSeries seriesName="myBar" categoryProperty="Country" items="{{ categoricalSource2 }}"  valueProperty="Amount" selectionMode="DataPoint" />
+        <chart:LineSeries seriesName="myLine" categoryProperty="Country" items="{{ categoricalSource3 }}"  valueProperty="Amount" selectionMode="Series" />
+        
+    <chart:RadCartesianChart.palettes>
+        <chart:Palette seriesName="myLine" >
+            <chart:Palette.entries>
+                <chart:PaletteEntry  strokeWidth="5" strokeColor="Orange" fillColor="Yellow"/>
+                <chart:PaletteEntry  strokeWidth="5" strokeColor="Blue"/>
+                <chart:PaletteEntry  strokeWidth="5" strokeColor="Pink"/>
+            </chart:Palette.entries>
+        </chart:Palette>
+        <chart:Palette seriesName="myLine" seriesState="Selected">
+            <chart:Palette.entries>
+                <chart:PaletteEntry  strokeWidth="10" strokeColor="Yellow"/>
+                <chart:PaletteEntry  strokeWidth="10" strokeColor="Red"/>
+                <chart:PaletteEntry  strokeWidth="10" strokeColor="Green"/>
+            </chart:Palette.entries>
+        </chart:Palette>
+<!-- >> styling-series-selection -->        
+        <chart:Palette seriesName="myBar" >
+            <chart:Palette.entries>
+                <chart:PaletteEntry  strokeWidth="3" strokeColor="Orange" fillColor="Yellow"/>
+                <chart:PaletteEntry  strokeWidth="3" strokeColor="Pink" fillColor="Green"/>
+            </chart:Palette.entries>
+        </chart:Palette>
+        <chart:Palette seriesName="myBar" seriesState="Selected">
+            <chart:Palette.entries>
+                <chart:PaletteEntry  strokeWidth="5" strokeColor="Yellow" fillColor="Orange"/>
+                <chart:PaletteEntry  strokeWidth="5" strokeColor="Green" fillColor="Pink"/>
+            </chart:Palette.entries>
+        </chart:Palette>
+<!-- << styling-series-selection -->
+
+    </chart:RadCartesianChart.palettes>
+
+        </chart:RadCartesianChart.series>
+        <chart:RadCartesianChart.grid>
+            <chart:RadCartesianChartGrid 
+                horizontalLinesVisible="true" 
+                verticalLinesVisible="false" 
+                verticalStripLinesVisible="false" 
+                horizontalStrokeColor="#e5e5e5"
+                horizontalStripLinesVisible="true"
+                horizontalStripLineColor="#f8f8f8, #00000000"/>
+        </chart:RadCartesianChart.grid>
+
+    </chart:RadCartesianChart>
+    
+</navigation:ExamplePage>
