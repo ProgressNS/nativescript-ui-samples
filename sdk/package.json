@@ -13,7 +13,7 @@
 		}
 	},
 	"dependencies": {
-		"nativescript-telerik-ui-pro":"./../../packages/nativescript-ui-pro.tgz",
+		"nativescript-telerik-ui-pro":"./../packages/nativescript-ui-pro.tgz",
 		"tns-core-modules": "2.0.0",
 		"fresco": "file:./deps/fresco-0.1.0.tgz"
 	},
