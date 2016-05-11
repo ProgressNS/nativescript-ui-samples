@@ -22,7 +22,7 @@ export class DrawerPositionModel {
         this.setDrawerLocation(drawerModule.SideDrawerLocation.Bottom);
         this.openDrawer();
     }
-
+    // >> sidedrawer-setting-location
     public onTopLocationTap(args) {
         this.setDrawerLocation(drawerModule.SideDrawerLocation.Top);
         this.openDrawer();
@@ -32,7 +32,7 @@ export class DrawerPositionModel {
         var sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
         sideDrawer.drawerLocation = drawerModule.SideDrawerLocation[location];
     }
-    
+    // << sidedrawer-setting-location
     private openDrawer() {
          var sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
          sideDrawer.showDrawer();
