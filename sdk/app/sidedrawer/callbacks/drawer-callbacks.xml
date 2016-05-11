@@ -2,6 +2,7 @@
   <navigation.actionBar>
       <ActionBar title="Events" />
   </navigation.actionBar>
+  <!-- >> sidedrawer-events-xml -->
   <drawer:RadSideDrawer id="sideDrawer"
                         drawerClosed="onDrawerClosed"
                         drawerClosing="onDrawerClosing"
@@ -11,13 +12,16 @@
       <drawer:RevealTransition/>
     </drawer:RadSideDrawer.drawerTransition>
     <drawer:RadSideDrawer.mainContent>
+    <!-- >> (hide) -->
         <StackLayout cssClass="mainContent">
             <Button text="Open drawer" tap="{{ onOpenDrawerTap }}" cssClass="drawerContentButton"/>
             <Label text="Drawer notification: " cssClass="drawerContentText"/>
             <Label text="{{ currentDrawerNotification }}" cssClass="drawerContentText"/>
         </StackLayout>
+        <!-- << (hide) -->
     </drawer:RadSideDrawer.mainContent>
     <drawer:RadSideDrawer.drawerContent>
+    <!-- >> (hide) -->
        <StackLayout cssClass="drawerContent">
         <StackLayout cssClass="headerContent">
           <Label text="Navigation Menu"/>
@@ -33,6 +37,8 @@
           <Label text="Drafts" cssClass="drawerSectionItem" />
         </StackLayout>
       </StackLayout>
+      <!-- << (hide) -->
     </drawer:RadSideDrawer.drawerContent>
   </drawer:RadSideDrawer>
+  <!-- >> sidedrawer-events-xml -->
 </navigation:ExamplePage>

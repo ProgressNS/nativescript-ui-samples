@@ -37,7 +37,7 @@ export class DrawerTransitionsModel {
         this.setDrawerTransition(new drawerModule.SlideAlongTransition());
         this.openSideDrawer();
     }
-
+    // >> sidedrawer-setting-transition
     public onSlideInOnTopTransitionTap(args) {
         this.setDrawerTransition(new drawerModule.SlideInOnTopTransition());
         this.openSideDrawer();
@@ -52,4 +52,5 @@ export class DrawerTransitionsModel {
         let drawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>frameModule.topmost().getViewById("sideDrawer");
         drawer.drawerTransition = transition;
     }
+    // << sidedrawer-setting-transition
 }
