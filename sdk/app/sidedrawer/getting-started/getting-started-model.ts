@@ -2,6 +2,7 @@ import observableModule = require("data/observable");
 import frame = require("ui/frame");
 import drawerModule = require("nativescript-telerik-ui-pro/sidedrawer");
 
+// >> sidedrawer-getting-started-model
 export class GettingStartedViewModel extends observableModule.Observable {
     constructor() {
         super();
@@ -9,3 +10,4 @@ export class GettingStartedViewModel extends observableModule.Observable {
             + " has a default transition and position and also exposes notifications related to changes in its state. Swipe from left to open side drawer.");
     }
 }
+// << sidedrawer-getting-started-model
