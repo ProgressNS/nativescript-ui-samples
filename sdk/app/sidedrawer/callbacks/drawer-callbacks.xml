@@ -40,5 +40,5 @@
       <!-- << (hide) -->
     </drawer:RadSideDrawer.drawerContent>
   </drawer:RadSideDrawer>
-  <!-- >> sidedrawer-events-xml -->
+  <!-- << sidedrawer-events-xml -->
 </navigation:ExamplePage>
