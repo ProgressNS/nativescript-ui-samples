@@ -10,5 +10,9 @@
     "exclude": [
         "node_modules",
         "platforms"
-    ]
+    ],
+    "filesGlob" :[
+         "./**/*.ts"
+         ]
+    }
 }
