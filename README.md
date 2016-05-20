@@ -14,7 +14,7 @@ The UI for NativeScript samples app resides in the **sdk** folder at root reposi
 - calendar
 
 ## Running **UI for NativeScript** sample app
-Make sure you are using NativeScript 1.5+. To see which version of NativeScript you are currently using, type `tns --version` in the console.
+Make sure you are using NativeScript 2.0+. To see which version of NativeScript you are currently using, type `tns --version` in the console.
 
 Steps to run the sample:
 

@@ -12,7 +12,7 @@ export function onNavigatedTo(args) {
 export function pageLoaded(args) {
 
 }
-
+// >> sidedrawer-events-handlers
 export function onDrawerClosed(args) {
     drawerCallbacksModel.onDrawerClosed();
     console.log("OnDrawerClosed");
@@ -32,3 +32,4 @@ export function onDrawerOpening(args) {
     drawerCallbacksModel.onDrawerOpening();
     console.log("OnDrawerOpening");
 }
+// << sidedrawer-events-handlers

@@ -14,6 +14,27 @@ export class CategoricalDataModel  {
         ]
     }// << categorical-source
 
+    get categoricalSource2() {
+        return [
+            { Country: "Germany", Amount: 29, SecondVal: 14, ThirdVal: 24 },
+            { Country: "France", Amount: 32, SecondVal: 23, ThirdVal: 25 },
+            { Country: "Bulgaria", Amount: 33, SecondVal: 17, ThirdVal: 23 },
+            { Country: "Spain", Amount: 28, SecondVal: 19, ThirdVal: 24 },
+            { Country: "USA", Amount: 22, SecondVal: 8, ThirdVal: 21 }
+        ]
+    }
+
+    get categoricalSource3() {
+        return [
+            { Country: "Germany", Amount: 35, SecondVal: 14, ThirdVal: 24 },
+            { Country: "France", Amount: 38, SecondVal: 23, ThirdVal: 25 },
+            { Country: "Bulgaria", Amount: 40, SecondVal: 17, ThirdVal: 23 },
+            { Country: "Spain", Amount: 36, SecondVal: 19, ThirdVal: 24 },
+            { Country: "USA", Amount: 42, SecondVal: 8, ThirdVal: 21 }
+        ]
+    }
+
+
     get bubbleCategoricalSource() {
         return [
             { Country: "Germany", Amount: 15, Impact: 5 },

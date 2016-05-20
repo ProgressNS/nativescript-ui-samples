@@ -2,11 +2,14 @@
   <navigation.actionBar>
       <ActionBar title="Positions" />
   </navigation.actionBar>
-  <drawer:RadSideDrawer id="sideDrawer">
+  <!-- >> sidedrawer-setting-location-xml -->
+  <drawer:RadSideDrawer id="sideDrawer" drawerLocation="Left">
+  
   <drawer:RadSideDrawer.drawerTransition>
     <drawer:RevealTransition/>
   </drawer:RadSideDrawer.drawerTransition>
     <drawer:RadSideDrawer.mainContent>
+    <!-- >> (hide) -->
         <StackLayout cssClass="mainContent">
             <Label text="{{drawerPositionText}}" textWrap="true" cssClass="drawerContentText"/>
               <ScrollView>
@@ -18,8 +21,10 @@
                 </StackLayout>
             </ScrollView>
         </StackLayout>
+        <!-- << (hide) -->
     </drawer:RadSideDrawer.mainContent>
     <drawer:RadSideDrawer.drawerContent>
+    <!-- >> (hide) -->
       <StackLayout cssClass="drawerContent">
         <StackLayout cssClass="headerContent">
           <Label text="Navigation Menu"/>
@@ -37,6 +42,8 @@
           </StackLayout>
         </ScrollView>
       </StackLayout>
+      <!-- << (hide) -->
     </drawer:RadSideDrawer.drawerContent>
   </drawer:RadSideDrawer>
+  <!-- << sidedrawer-setting-location-xml -->
 </navigation:ExamplePage>
