@@ -2,7 +2,7 @@
 export class ScatterDataModel  {
     constructor() {
     }
-
+    // >> scatter-data-source
     get scatterSource() {
         return [
             { Age: 20, Salary: 10000, Spendings: 4500, Savings: 5500, Impact: 1 },
@@ -16,7 +16,7 @@ export class ScatterDataModel  {
             { Age: 60, Salary: 22000, Spendings: 22500, Savings: 500 , Impact: 1},
             { Age: 65, Salary: 20000, Spendings: 20500, Savings: 10, Impact: 9 }
         ];
-    }
+    }// << scatter-data-source
     // >> scatter-bubble-data-source
     get scatterBubbleSource() {
         return [
