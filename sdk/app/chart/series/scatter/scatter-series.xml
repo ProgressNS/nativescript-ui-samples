@@ -1,5 +1,5 @@
-<!-- >> scatter-series -->
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
+<!-- >> scatter-series -->
     <chart:RadCartesianChart id="pieChart">
             <chart:RadCartesianChart.horizontalAxis>
                 <chart:LinearAxis/>
@@ -8,10 +8,10 @@
                 <chart:LinearAxis/>
             </chart:RadCartesianChart.verticalAxis>
         <chart:RadCartesianChart.series>
-            <chart:ScatterSeries  items="{{ scatterSource }}" bubbleScale="5" xProperty="Age" yProperty="Salary" bubbleSizeProperty="Impact" />             
-            <chart:ScatterSeries  items="{{ scatterSource }}" bubbleScale="5" xProperty="Age" yProperty="Spendings" bubbleSizeProperty="Impact" />             
-            <chart:ScatterSeries  items="{{ scatterSource }}" bubbleScale="5" xProperty="Age" yProperty="Savings" bubbleSizeProperty="Impact" />             
+            <chart:ScatterSeries  items="{{ scatterSource }}" bubbleScale="5" xProperty="Age" yProperty="Salary"/>             
+            <chart:ScatterSeries  items="{{ scatterSource }}" bubbleScale="5" xProperty="Age" yProperty="Spendings"/>             
+            <chart:ScatterSeries  items="{{ scatterSource }}" bubbleScale="5" xProperty="Age" yProperty="Savings"/>             
         </chart:RadCartesianChart.series>
     </chart:RadCartesianChart>
-</navigation:ExamplePage>
 <!-- << scatter-series -->
+</navigation:ExamplePage>
