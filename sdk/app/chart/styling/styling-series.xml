@@ -3,9 +3,9 @@
 <chart:RadCartesianChart id="cartesianChart">
 <!-- >> creating-series -->
     <chart:RadCartesianChart.series>
-        <chart:SplineAreaSeries seriesName="Area" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="ThirdVal"/>
-        <chart:BarSeries seriesName="Bar" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="SecondVal"/>
-        <chart:LineSeries seriesName="Line" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount"/>
+        <chart:SplineAreaSeries seriesName="Area" items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="ThirdVal"/>
+        <chart:BarSeries seriesName="Bar" items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="SecondVal"/>
+        <chart:LineSeries seriesName="Line" items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="Amount"/>
     </chart:RadCartesianChart.series>
 <!-- << creating-series -->
     
@@ -33,7 +33,7 @@
             <chart:CategoricalAxis/>
         </chart:RadCartesianChart.horizontalAxis>
         <chart:RadCartesianChart.verticalAxis>
-            <chart:LinearAxis minimum="0" maximum="25"/>
+            <chart:LinearAxis/>
         </chart:RadCartesianChart.verticalAxis>
     </chart:RadCartesianChart>
 </navigation:ExamplePage>

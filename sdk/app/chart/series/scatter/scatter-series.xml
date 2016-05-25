@@ -7,7 +7,6 @@
         <chart:RadCartesianChart.verticalAxis>
             <chart:LinearAxis/>
         </chart:RadCartesianChart.verticalAxis>
-        
         <chart:RadCartesianChart.series>
             <chart:ScatterSeries  items="{{ scatterSource }}"  xProperty="Age" yProperty="Salary"/>             
             <chart:ScatterSeries  items="{{ scatterSource }}"  xProperty="Age" yProperty="Spendings"/>             
@@ -16,4 +15,3 @@
     </chart:RadCartesianChart>
     <!-- << scatter-series -->
 </navigation:ExamplePage>
-

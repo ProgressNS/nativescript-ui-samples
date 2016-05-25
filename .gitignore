@@ -49,6 +49,7 @@ libs/
 temp/
 .settings/
 node_modules/
+*.js
 
 #VSCode
 .vscode/

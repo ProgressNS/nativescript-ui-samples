@@ -30,6 +30,9 @@ export class ViewModel {
             for (var i = 0; i < 50; i++) {
                 this._staggeredItems.push(new DataItem(i, "Item " + i, this.getRandomLengthString()));
             }
+            // for (var i = 0; i < data.items.length; i++) {
+            //     this._staggeredItems.push(new DataItem(i, data.items[i].title, data.items[i].author, "res://" + data.items[i].photo));
+            // }
         }
         return this._staggeredItems;
     }

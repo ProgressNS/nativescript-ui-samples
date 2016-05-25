@@ -14,7 +14,7 @@
     "filesGlob": [
         "./**/*.ts",
         "./../node_modules/tns-core-modules/**/*.ts",
-        "./../node_modules/nativescript-telerik-ui-pro/**/*.ts"
+        "./../node_modules/nativescript-telerik-ui/**/*.ts"
     ],
     "files": [
         "./local.ios.d.ts",

@@ -16,8 +16,8 @@ export class ScatterDataModel  {
             { Age: 60, Salary: 22000, Spendings: 22500, Savings: 500 , Impact: 1},
             { Age: 65, Salary: 20000, Spendings: 20500, Savings: 10, Impact: 9 }
         ];
-    }// << scatter-data-source
-    // >> scatter-bubble-data-source
+    }
+    // >> scatter-data-source
     get scatterBubbleSource() {
         return [
             { Country: "Germany", xValue: 23, yValue: 23, Impact: 1 },
@@ -26,6 +26,6 @@ export class ScatterDataModel  {
             { Country: "Spain", xValue: 34, yValue: 78, Impact: 3 },
             { Country: "USA", xValue: 45, yValue: 87, Impact: 4 }
         ];
-    }// << scatter-bubble-data-source
+    }// << scatter-data-source
 }
 
