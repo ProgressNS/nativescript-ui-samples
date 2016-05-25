@@ -8,9 +8,9 @@
                 <chart:LinearAxis/>
             </chart:RadCartesianChart.verticalAxis>
         <chart:RadCartesianChart.series>
-            <chart:ScatterSeries  items="{{ scatterSource }}" bubbleScale="5" xProperty="Age" yProperty="Salary"/>             
-            <chart:ScatterSeries  items="{{ scatterSource }}" bubbleScale="5" xProperty="Age" yProperty="Spendings"/>             
-            <chart:ScatterSeries  items="{{ scatterSource }}" bubbleScale="5" xProperty="Age" yProperty="Savings"/>             
+            <chart:ScatterSeries  items="{{ scatterSource }}" xProperty="Age" yProperty="Salary"/>             
+            <chart:ScatterSeries  items="{{ scatterSource }}" xProperty="Age" yProperty="Spendings"/>             
+            <chart:ScatterSeries  items="{{ scatterSource }}" xProperty="Age" yProperty="Savings"/>             
         </chart:RadCartesianChart.series>
     </chart:RadCartesianChart>
 <!-- << scatter-series -->
