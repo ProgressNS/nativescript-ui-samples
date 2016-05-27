@@ -1,17 +1,17 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
 <!-- >> scatter-series -->
     <chart:RadCartesianChart id="pieChart">
-            <chart:RadCartesianChart.horizontalAxis>
-                <chart:LinearAxis/>
-            </chart:RadCartesianChart.horizontalAxis>
-            <chart:RadCartesianChart.verticalAxis>
-                <chart:LinearAxis/>
-            </chart:RadCartesianChart.verticalAxis>
+        <chart:RadCartesianChart.horizontalAxis>
+            <chart:LinearAxis/>
+        </chart:RadCartesianChart.horizontalAxis>
+        <chart:RadCartesianChart.verticalAxis>
+            <chart:LinearAxis/>
+        </chart:RadCartesianChart.verticalAxis>
         <chart:RadCartesianChart.series>
             <chart:ScatterSeries  items="{{ scatterSource }}" xProperty="Age" yProperty="Salary"/>             
             <chart:ScatterSeries  items="{{ scatterSource }}" xProperty="Age" yProperty="Spendings"/>             
             <chart:ScatterSeries  items="{{ scatterSource }}" xProperty="Age" yProperty="Savings"/>             
         </chart:RadCartesianChart.series>
     </chart:RadCartesianChart>
-<!-- << scatter-series -->
+    <!-- << scatter-series -->
 </navigation:ExamplePage>

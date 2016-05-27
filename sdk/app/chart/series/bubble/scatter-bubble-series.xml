@@ -1,5 +1,5 @@
-<!-- >> scatter-bubble-series -->
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
+<!-- >> scatter-bubble-series -->
     <chart:RadCartesianChart id="pieChart">
             <chart:RadCartesianChart.horizontalAxis>
                 <chart:LinearAxis/>
@@ -13,5 +13,5 @@
             <chart:ScatterBubbleSeries  items="{{ scatterSource }}" bubbleScale="5" xProperty="Age" yProperty="Savings" bubbleSizeProperty="Impact" />
         </chart:RadCartesianChart.series>
     </chart:RadCartesianChart>
-</navigation:ExamplePage>
 <!-- << scatter-bubble-series -->
+</navigation:ExamplePage>

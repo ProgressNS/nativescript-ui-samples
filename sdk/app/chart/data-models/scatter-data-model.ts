@@ -2,7 +2,7 @@
 export class ScatterDataModel  {
     constructor() {
     }
-
+    // >> scatter-data-source
     get scatterSource() {
         return [
             { Age: 20, Salary: 10000, Spendings: 4500, Savings: 5500, Impact: 1 },
