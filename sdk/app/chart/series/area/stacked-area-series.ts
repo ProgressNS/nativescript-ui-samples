@@ -25,7 +25,7 @@ export function onNavigatedFrom(args) {
 export function onNoneStackModeSelected(args: any) {
     var chart = <chartModule.RadCartesianChart>frameModule.topmost().getViewById("cartesianChart");
     for (var i = 0; i < chart.series.length; i++) {
-        (<chartModule.CategoricalSeries>chart.series[i]).stackMode = "None";
+        (<chartModule.CategoricalSeries>chart.series.getItem(i)).stackMode = "None";
     }
 
     if (chart.android) {
@@ -36,7 +36,7 @@ export function onNoneStackModeSelected(args: any) {
 export function onStackModeSelected(args: any) {
     var chart = <chartModule.RadCartesianChart>frameModule.topmost().getViewById("cartesianChart");
     for (var i = 0; i < chart.series.length; i++) {
-        (<chartModule.CategoricalSeries>chart.series[i]).stackMode = "Stack";
+        (<chartModule.CategoricalSeries>chart.series.getItem(i)).stackMode = "Stack";
     }
 
     if (chart.android) {
@@ -47,7 +47,7 @@ export function onStackModeSelected(args: any) {
 export function onStack100ModeSelected(args: any) {
     var chart = <chartModule.RadCartesianChart>frameModule.topmost().getViewById("cartesianChart");
     for (var i = 0; i < chart.series.length; i++) {
-        (<chartModule.CategoricalSeries>chart.series[i]).stackMode = "Stack100";
+        (<chartModule.CategoricalSeries>chart.series.getItem(i)).stackMode = "Stack100";
     }
 
     if (chart.android) {

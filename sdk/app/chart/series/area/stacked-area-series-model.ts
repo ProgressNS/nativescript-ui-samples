@@ -32,9 +32,9 @@ export class ViewModel extends observableModule.Observable {
         let b = this._stackModes.options[index];
         let chart: chartModule.RadCartesianChart = <chartModule.RadCartesianChart>(frameModule.topmost().currentPage.getViewById("cartesianChart"));
         console.log(this._stackModes.options[index]);
-        (<chartModule.CategoricalSeries>chart.series[0]).stackMode = this._stackModes.options[index];
-        (<chartModule.CategoricalSeries>chart.series[1]).stackMode = this._stackModes.options[index];
-        (<chartModule.CategoricalSeries>chart.series[2]).stackMode = this._stackModes.options[index];
+        (<chartModule.CategoricalSeries>chart.series.getItem(0)).stackMode = this._stackModes.options[index];
+        (<chartModule.CategoricalSeries>chart.series.getItem(1)).stackMode = this._stackModes.options[index];
+        (<chartModule.CategoricalSeries>chart.series.getItem(2)).stackMode = this._stackModes.options[index];
           if(_isFirstLoad == false){
             chart.ios.reloadData();
           }
