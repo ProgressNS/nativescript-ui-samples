@@ -4,13 +4,11 @@ import observableModule = require("data/observable");
 import frameModule = require("ui/frame");
 var _isFirstLoad = true;
 export class ViewModel extends observableModule.Observable {
-
     private _stackModes;
-   
 
     constructor() {
         super();
-      
+
         this._stackModes = {
             options: ["Stack", "Stack100", "None"],
             index: 0
@@ -26,8 +24,8 @@ export class ViewModel extends observableModule.Observable {
 
         frameModule.topmost().navigate(navigationEntry);
     }
-    
-     public updateStackMode() {
+
+    public updateStackMode() {
         let index: number = this._stackModes.index;
         let b = this._stackModes.options[index];
         let chart: chartModule.RadCartesianChart = <chartModule.RadCartesianChart>(frameModule.topmost().currentPage.getViewById("cartesianChart"));
@@ -35,15 +33,15 @@ export class ViewModel extends observableModule.Observable {
         (<chartModule.CategoricalSeries>chart.series.getItem(0)).stackMode = this._stackModes.options[index];
         (<chartModule.CategoricalSeries>chart.series.getItem(1)).stackMode = this._stackModes.options[index];
         (<chartModule.CategoricalSeries>chart.series.getItem(2)).stackMode = this._stackModes.options[index];
-          if(_isFirstLoad == false){
+        if (_isFirstLoad == false) {
             chart.ios.reloadData();
-          }
-          _isFirstLoad = false;
-         
-        
+        }
+        _isFirstLoad = false;
+
+
     }
     // >> stacked-series-model
-     get firstSeries() {
+    get firstSeries() {
         return [
             { Country: "Germany", Amount: 320, SecondVal: 14, ThirdVal: 24 },
             { Country: "France", Amount: 206, SecondVal: 23, ThirdVal: 25 },
@@ -52,7 +50,7 @@ export class ViewModel extends observableModule.Observable {
             { Country: "USA", Amount: 85, SecondVal: 8, ThirdVal: 21 }
         ]
     }
-    
+
     get secondSeries() {
         return [
             { Country: "Germany", Amount: 120, SecondVal: 14, ThirdVal: 24 },
@@ -62,7 +60,7 @@ export class ViewModel extends observableModule.Observable {
             { Country: "USA", Amount: 405, SecondVal: 8, ThirdVal: 21 }
         ]
     }
-    
+
     get thirdSeries() {
         return [
             { Country: "Germany", Amount: 96, SecondVal: 14, ThirdVal: 24 },

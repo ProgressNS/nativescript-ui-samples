@@ -16,12 +16,6 @@ export function onNavigatedTo(args) {
     context.updateStackMode();
 }
 
-export function onNavigatedFrom(args) {
-    if (args.isBackNavigation === true) {
-        context = undefined;
-    }
-}
-
 export function onNoneStackModeSelected(args: any) {
     var chart = <chartModule.RadCartesianChart>frameModule.topmost().getViewById("cartesianChart");
     for (var i = 0; i < chart.series.length; i++) {
