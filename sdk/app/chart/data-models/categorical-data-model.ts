@@ -11,7 +11,7 @@ export class CategoricalDataModel extends observableModule.Observable {
 
         this._stackModes = {
             options: ["Stack", "Stack100", "None"],
-            index: 0
+            index: 1
         };
     }
 
@@ -31,6 +31,8 @@ export class CategoricalDataModel extends observableModule.Observable {
         let chart: chartModule.RadCartesianChart = <chartModule.RadCartesianChart>(frameModule.topmost().currentPage.getViewById("cartesianChart"));
         console.log(this._stackModes.options[index]);
         (<chartModule.BarSeries>chart.series.getItem(0)).stackMode = this._stackModes.options[index];
+        (<chartModule.BarSeries>chart.series.getItem(1)).stackMode = this._stackModes.options[index];
+        (<chartModule.BarSeries>chart.series.getItem(2)).stackMode = this._stackModes.options[index];
         if (_isFirstLoad == false && chart && chart.ios) {
             chart.ios.reloadData();
         }
