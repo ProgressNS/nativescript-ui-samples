@@ -33,7 +33,7 @@ export class ViewModel extends observableModule.Observable {
         (<chartModule.CategoricalSeries>chart.series.getItem(0)).stackMode = this._stackModes.options[index];
         (<chartModule.CategoricalSeries>chart.series.getItem(1)).stackMode = this._stackModes.options[index];
         (<chartModule.CategoricalSeries>chart.series.getItem(2)).stackMode = this._stackModes.options[index];
-        if (_isFirstLoad == false) {
+        if (_isFirstLoad == false && chart && chart.ios) {
             chart.ios.reloadData();
         }
         _isFirstLoad = false;

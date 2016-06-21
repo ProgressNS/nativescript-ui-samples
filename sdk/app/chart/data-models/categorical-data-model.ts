@@ -31,7 +31,7 @@ export class CategoricalDataModel extends observableModule.Observable {
         let chart: chartModule.RadCartesianChart = <chartModule.RadCartesianChart>(frameModule.topmost().currentPage.getViewById("cartesianChart"));
         console.log(this._stackModes.options[index]);
         (<chartModule.BarSeries>chart.series.getItem(0)).stackMode = this._stackModes.options[index];
-        if (_isFirstLoad == false) {
+        if (_isFirstLoad == false && chart && chart.ios) {
             chart.ios.reloadData();
         }
         _isFirstLoad = false;
