@@ -6,16 +6,16 @@
 	"nativescript": {
 		"id": "org.nativescript.sdk",
 		"tns-android": {
-			"version": "2.0.0"
+			"version": "2.1.0"
 		},
 		"tns-ios": {
-			"version": "2.0.0"
+			"version": "2.1.0"
 		}
 	},
 	"dependencies": {
 		"fresco": "file:./deps/fresco-0.1.0.tgz",
-		"nativescript-telerik-ui-pro": "^1.1.1",
-		"tns-core-modules": "2.0.0"
+		"nativescript-telerik-ui-pro": "1.2.0", 
+		"tns-core-modules": "2.1.0"
 	},
 	"devDependencies": {
 		"babel-traverse": "6.9.0",
