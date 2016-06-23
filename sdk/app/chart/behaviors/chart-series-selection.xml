@@ -1,6 +1,6 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
 
-    <chart:RadCartesianChart id="SelectionChart" selectionMode="Multiple" >
+    <chart:RadCartesianChart id="SelectionChart" >
         
     <chart:RadCartesianChart.series>
         <chart:BarSeries selectionMode="Series" seriesName="Bar" items="{{ bubbleCategoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Impact">
