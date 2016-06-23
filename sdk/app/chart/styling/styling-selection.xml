@@ -1,6 +1,6 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
    
-    <chart:RadCartesianChart  id="cartesianChart" selectionMode="Multiple">
+    <chart:RadCartesianChart  id="cartesianChart" seriesSelectionMode="Multiple">
         <chart:RadCartesianChart.horizontalAxis>
             <chart:CategoricalAxis lineColor="Red" lineThickness="1" />
         </chart:RadCartesianChart.horizontalAxis>
@@ -12,9 +12,10 @@
         <chart:LineSeries seriesName="myLine" categoryProperty="Country" items="{{ categoricalSource }}"  valueProperty="Amount" selectionMode="Series" />
         <chart:BarSeries seriesName="myBar" categoryProperty="Country" items="{{ categoricalSource }}"  valueProperty="Amount" selectionMode="DataPoint" />
         <chart:LineSeries seriesName="myLine" categoryProperty="Country" items="{{ categoricalSource2 }}"  valueProperty="Amount" selectionMode="Series" />
-        <chart:BarSeries seriesName="myBar" categoryProperty="Country" items="{{ categoricalSource2 }}"  valueProperty="Amount" selectionMode="DataPoint" />
+        <chart:BarSeries seriesName="myBar" categoryProperty="Country" items="{{ categoricalSource2 }}"  valueProperty="Amount" selectionMode="DataPointMultiple" />
         <chart:LineSeries seriesName="myLine" categoryProperty="Country" items="{{ categoricalSource3 }}"  valueProperty="Amount" selectionMode="Series" />
-        
+    </chart:RadCartesianChart.series>
+
     <chart:RadCartesianChart.palettes>
         <chart:Palette seriesName="myLine" >
             <chart:Palette.entries>
@@ -47,7 +48,7 @@
 
     </chart:RadCartesianChart.palettes>
 
-        </chart:RadCartesianChart.series>
+
         <chart:RadCartesianChart.grid>
             <chart:RadCartesianChartGrid 
                 horizontalLinesVisible="true" 
