@@ -1,4 +1,5 @@
 import application = require("application");
+import fresco = require("nativescript-fresco");
 application.mainModule = "./navigation/category-list"
 application.cssFile = "./app.css";
 application.mainModule = "./navigation/category-list"
@@ -15,7 +16,7 @@ declare module com{
 
 if (application.android) {
     application.onLaunch = function (intent) {
-        com.facebook.drawee.backends.pipeline.Fresco.initialize(application.android.context);
+        fresco.initialize();
     };
 }
 
