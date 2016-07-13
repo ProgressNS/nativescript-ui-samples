@@ -1,9 +1,45 @@
+import {ObservableArray} from "data/observable-array";
+import chartModule = require("nativescript-telerik-ui-pro/chart");
+import observableModule = require("data/observable");
+import frameModule = require("ui/frame");
+var _isFirstLoad = true;
+export class CategoricalDataModel extends observableModule.Observable {
+    private _stackModes;
 
-export class CategoricalDataModel  {
     constructor() {
+        super();
 
+        this._stackModes = {
+            options: ["Stack", "Stack100", "None"],
+            index: 1
+        };
     }
-// >> categorical-source
+
+    public onOptionsTapped() {
+        var navigationEntry = {
+            moduleName: "/navigation/options-menu/options",
+            context: this._stackModes,
+            animated: true
+        };
+
+        frameModule.topmost().navigate(navigationEntry);
+    }
+
+    public updateStackMode() {
+        let index: number = this._stackModes.index;
+        let b = this._stackModes.options[index];
+        let chart: chartModule.RadCartesianChart = <chartModule.RadCartesianChart>(frameModule.topmost().currentPage.getViewById("cartesianChart"));
+        console.log(this._stackModes.options[index]);
+        (<chartModule.BarSeries>chart.series.getItem(0)).stackMode = this._stackModes.options[index];
+        (<chartModule.BarSeries>chart.series.getItem(1)).stackMode = this._stackModes.options[index];
+        (<chartModule.BarSeries>chart.series.getItem(2)).stackMode = this._stackModes.options[index];
+        if (_isFirstLoad == false && chart && chart.ios) {
+            chart.ios.reloadData();
+        }
+        _isFirstLoad = false;
+    }
+
+    // >> categorical-source
     get categoricalSource() {
         return [
             { Country: "Germany", Amount: 15, SecondVal: 14, ThirdVal: 24 },
@@ -44,10 +80,10 @@ export class CategoricalDataModel  {
             { Country: "USA", Amount: 17, Impact: 9 }
         ];
     }
-   // >> range-bar-source
-    get rangeBarSource () {
-        
-           return [
+    // >> range-bar-source
+    get rangeBarSource() {
+
+        return [
             { Name: "Groceries", High: 30, Low: 12 },
             { Name: "Tools", High: 135, Low: 124 },
             { Name: "Electronics", High: 55, Low: 12 },
