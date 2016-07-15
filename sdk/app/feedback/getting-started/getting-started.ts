@@ -12,5 +12,7 @@ export function onPageLoaded(args) {
 }
 
 export function btnShowFeedbackTap(args) {
+    // >> feedback-show
     RadFeedback.show();
+    // << feedback-show
 }
