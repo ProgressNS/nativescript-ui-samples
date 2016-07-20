@@ -261,6 +261,9 @@ export class NavigationViewModel extends observableModule.Observable {
         selectionExample = new NavigationItem("Programatic Selection", "./listview/listview-selection/programmatic-selection", selectionItem);
         selectionItem.subItems.push(selectionExample);
 
+        exampleItem = new NavigationItem("Selection states", "./listview/selection-states/selection-states", currentItem);
+        currentItem.subItems.push(exampleItem);
+
         exampleItem = new NavigationItem("Load on Demand", "./listview/load-on-demand/load-on-demand", currentItem);
         currentItem.subItems.push(exampleItem);
 
@@ -281,6 +284,7 @@ export class NavigationViewModel extends observableModule.Observable {
 
         exampleItem = new NavigationItem("Swipe to execute with stretched content", "./listview/swipe-execute/swipe-execute-stretch", currentItem);
         currentItem.subItems.push(exampleItem);
+
     }
 
     private buildSideDrawerExamples(currentParent: NavigationItem) {
