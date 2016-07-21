@@ -2,7 +2,7 @@ import {ObservableArray} from "data/observable-array";
 import {Observable} from "data/observable";
 import listViewModule = require("nativescript-telerik-ui-pro/listview");
 import timer = require("timer");
-
+// >> listview-howto-item-selection-page-model
 export class ViewModel {
 
     private _items: ObservableArray<DataItem>;
@@ -35,6 +35,7 @@ export class ViewModel {
         }
     }
 }
+// << listview-howto-item-selection-page-model
 
 // >> listview-howto-item-selection-model
 export class DataItem extends Observable {
