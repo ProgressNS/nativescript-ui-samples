@@ -74,6 +74,7 @@ export class NavigationViewModel extends observableModule.Observable {
         this.buildSideDrawerExamples(parent);
         this.buildCalendarExamples(parent);
         this.buildFeedbackExamples(parent);
+        this.buildDataFormExamples(parent);
     }
 
     private buildFeedbackExamples(currentParent: NavigationItem) {
@@ -115,6 +116,35 @@ export class NavigationViewModel extends observableModule.Observable {
 
         calendarExample = new NavigationItem("Calendar styling", "./calendar/cell-styling/cell-styles", calendarRoot);
         calendarRoot.subItems.push(calendarExample);
+    }
+
+    private buildDataFormExamples(currentParent: NavigationItem) {
+        var dataFormRoot = new NavigationItem("DataForm", undefined, currentParent);
+        currentParent.subItems.push(dataFormRoot);
+
+        var dataFormExample = new NavigationItem("Getting started", "./dataform/getting-started/getting-started", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Properties adjustment", "./dataform/adjustment/adjustment", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Editors", "./dataform/editors/editors", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        // dataFormExample = new NavigationItem("Validators", "./dataform/validators/validators", dataFormRoot);
+        // dataFormRoot.subItems.push(dataFormExample);
+
+        // dataFormExample = new NavigationItem("Commit Modes", "./dataform/commit-modes/commit-modes", dataFormRoot);
+        // dataFormRoot.subItems.push(dataFormExample);
+
+        // dataFormExample = new NavigationItem("Events", "./dataform/events/events", dataFormRoot);
+        // dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Groups", "./dataform/groups/groups", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Styling", "./dataform/styling/styling", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
     }
 
     private buildChartExamples(currentParent: NavigationItem) {
