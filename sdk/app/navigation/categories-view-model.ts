@@ -131,16 +131,16 @@ export class NavigationViewModel extends observableModule.Observable {
         dataFormExample = new NavigationItem("Editors", "./dataform/editors/editors", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
-        // dataFormExample = new NavigationItem("Validators", "./dataform/validators/validators", dataFormRoot);
-        // dataFormRoot.subItems.push(dataFormExample);
+        dataFormExample = new NavigationItem("Validators", "./dataform/validation/validation", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
 
-        // dataFormExample = new NavigationItem("Commit Modes", "./dataform/commit-modes/commit-modes", dataFormRoot);
-        // dataFormRoot.subItems.push(dataFormExample);
-
-        // dataFormExample = new NavigationItem("Events", "./dataform/events/events", dataFormRoot);
-        // dataFormRoot.subItems.push(dataFormExample);
+        dataFormExample = new NavigationItem("Commit Modes", "./dataform/commit-modes/commit-modes", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
 
         dataFormExample = new NavigationItem("Groups", "./dataform/groups/groups", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Events", "./dataform/events/events", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
         dataFormExample = new NavigationItem("Styling", "./dataform/styling/styling", dataFormRoot);

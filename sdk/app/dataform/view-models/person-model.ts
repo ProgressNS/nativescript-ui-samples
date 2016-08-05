@@ -1,4 +1,4 @@
-export class ViewModel {
+export class PersonViewModel {
 
     private _person: Person;
 
