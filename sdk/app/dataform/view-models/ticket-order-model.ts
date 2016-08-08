@@ -1,4 +1,4 @@
-export class ViewModel {
+export class TicketViewModel {
 
     private _ticketOrder: TicketOrder;
 
