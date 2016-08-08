@@ -29,7 +29,7 @@ export function onPageLoaded(args) {
     item3.title = "manual";
     items.push(item3);
     segmentedBar.items = items;
-    segmentedBar.on(segmentedBarModule.SegmentedBar.selectedIndexChangedEvent, function (eventData) {
+    segmentedBar.on(segmentedBarModule.SegmentedBar.selectedIndexChangedEvent, function (eventData: segmentedBarModule.SelectedIndexChangedEventData) {
         switch (eventData.newIndex) {
             case 0:
                 dataform.commitMode = dataFormModule.CommitMode.Immediate;
