@@ -1,7 +1,8 @@
 <!-- >> sidedrawer-getting-started-xml -->
 <!-- >> sidedrawer-namespace-xml -->
-<dpg:DrawerPage loaded="pageLoaded" navigatedTo="onNavigatedTo" xmlns:tsd="component/sidedrawer" xmlns:dpg="nativescript-telerik-ui-pro/sidedrawer/drawerpage"
-    loaded="pageLoaded" 
+<dpg:DrawerPage loaded="pageLoaded" 
+    navigatedTo="onNavigatedTo"  
+    xmlns:dpg="nativescript-telerik-ui-pro/sidedrawer/drawerpage"
     xmlns:drawer="nativescript-telerik-ui-pro/sidedrawer"
     xmlns="http://www.nativescript.org/tns.xsd">
 <!-- << sidedrawer-namespace-xml -->
