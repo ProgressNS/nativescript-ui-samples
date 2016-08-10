@@ -18,7 +18,7 @@
                     <Button text="Top" tap="{{ onTopLocationTap }}" cssClass="drawerContentButton"/>
                     <Button text="Right" tap="{{ onRightLocationTap }}" cssClass="drawerContentButton"/>
                     <Button text="Bottom" tap="{{ onBottomLocationTap }}" cssClass="drawerContentButton"/>
-                </StackLayout>
+                </StackLayout>a
             </ScrollView>
         </StackLayout>
         <!-- << (hide) -->
