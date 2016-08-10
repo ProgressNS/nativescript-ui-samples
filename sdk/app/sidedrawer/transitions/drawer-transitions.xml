@@ -1,4 +1,4 @@
-<dpg:DrawerPage loaded="pageLoaded" navigatedTo="onNavigatedTo"  
+<navigation:ExampleDrawerPage xmlns:navigation="navigation/example-drawer-page" loaded="pageLoaded" navigatedTo="onNavigatedTo"  
     xmlns:dpg="nativescript-telerik-ui-pro/sidedrawer/drawerpage"
     xmlns:drawer="nativescript-telerik-ui-pro/sidedrawer"
     xmlns="http://www.nativescript.org/tns.xsd">
@@ -44,4 +44,4 @@
           </StackLayout>
         </ScrollView>
     </StackLayout>
-</dpg:DrawerPage>
+</navigation:ExampleDrawerPage>

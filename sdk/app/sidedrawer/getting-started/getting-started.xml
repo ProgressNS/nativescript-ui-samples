@@ -1,6 +1,6 @@
 <!-- >> sidedrawer-getting-started-xml -->
 <!-- >> sidedrawer-namespace-xml -->
-<dpg:DrawerPage loaded="pageLoaded" 
+<navigation:ExampleDrawerPage xmlns:navigation="navigation/example-drawer-page" loaded="pageLoaded" 
     navigatedTo="onNavigatedTo"  
     xmlns:dpg="nativescript-telerik-ui-pro/sidedrawer/drawerpage"
     xmlns:drawer="nativescript-telerik-ui-pro/sidedrawer"
@@ -35,5 +35,5 @@
     <StackLayout >
       <Label text="{{ mainContentText }}" textWrap="true" cssClass="drawerContentText"/>
     </StackLayout>
-</dpg:DrawerPage>
+</navigation:ExampleDrawerPage>
 <!-- << sidedrawer-getting-started-xml -->
