@@ -11,8 +11,6 @@
         "node_modules",
         "platforms"
     ], "filesGlob": [
-        "./**/*.ts",
-        "!./tns_modules/**/*.ts",
-        "./../node_modules/tns-core-modules/**/*.ts"
+        "./**/*.ts"
     ]
 }
