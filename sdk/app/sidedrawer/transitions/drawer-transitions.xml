@@ -37,7 +37,6 @@
           <Button text="Push Transition" tap="{{ onPushTransitionTap }}" cssClass="drawerContentButton"/>
           <Button text="Reveal Transition" tap="{{ onRevealTransitionTap }}" cssClass="drawerContentButton"/>
           <Button text="ReverseSlideOut Transition" tap="{{ onReverseSlideOutTransitionTap }}" cssClass="drawerContentButton"/>
-          <Button text="ScaleDownPusher Transition" tap="{{ onScaleDownPusherTransitionTap }}" cssClass="drawerContentButton"/>
           <Button text="ScaleUp Transition" tap="{{ onScaleUpTransitionTap }}" cssClass="drawerContentButton"/>
           <Button text="SlideAlong Transition" tap="{{ onSlideAlongTransitionTap }}" cssClass="drawerContentButton"/>
           <Button text="SlideInOnTop Transition" tap="{{ onSlideInOnTopTransitionTap }}" cssClass="drawerContentButton"/>
