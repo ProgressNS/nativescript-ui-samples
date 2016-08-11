@@ -1,9 +1,9 @@
-<navigation:ExampleDrawerPage xmlns:navigation="navigation/example-drawer-page" loaded="onPageLoaded" xmlns:drawer="nativescript-telerik-ui-pro/sidedrawer" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:drawer="nativescript-telerik-ui-pro/sidedrawer" xmlns="http://www.nativescript.org/tns.xsd">
   <navigation.actionBar>
       <ActionBar title="Positions" />
   </navigation.actionBar>
   <!-- >> sidedrawer-setting-location-xml -->
-  <navigation:ExampleDrawerPage.sideDrawer>
+  
     <drawer:RadSideDrawer id="sideDrawer" drawerLocation="Left">
     
     <drawer:RadSideDrawer.drawerTransition>
@@ -31,19 +31,20 @@
         </StackLayout>
         <!-- << (hide) -->
       </drawer:RadSideDrawer.drawerContent>
-    </drawer:RadSideDrawer>
-  </navigation:ExampleDrawerPage.sideDrawer>
-  <!-- << sidedrawer-setting-location-xml -->
 
-  <StackLayout cssClass="mainContent">
-      <Label text="{{drawerPositionText}}" textWrap="true" cssClass="drawerContentText"/>
-        <ScrollView>
-          <StackLayout>
-              <Button text="Left" tap="{{ onLeftLocationTap }}" cssClass="drawerContentButton"/>
-              <Button text="Top" tap="{{ onTopLocationTap }}" cssClass="drawerContentButton"/>
-              <Button text="Right" tap="{{ onRightLocationTap }}" cssClass="drawerContentButton"/>
-              <Button text="Bottom" tap="{{ onBottomLocationTap }}" cssClass="drawerContentButton"/>
-          </StackLayout>a
-      </ScrollView>
-  </StackLayout>
-</navigation:ExampleDrawerPage>
+      <drawer:RadSideDrawer.mainContent>
+        <StackLayout cssClass="mainContent">
+          <Label text="{{drawerPositionText}}" textWrap="true" cssClass="drawerContentText"/>
+          <ScrollView>
+            <StackLayout>
+                <Button text="Left" tap="{{ onLeftLocationTap }}" cssClass="drawerContentButton"/>
+                <Button text="Top" tap="{{ onTopLocationTap }}" cssClass="drawerContentButton"/>
+                <Button text="Right" tap="{{ onRightLocationTap }}" cssClass="drawerContentButton"/>
+                <Button text="Bottom" tap="{{ onBottomLocationTap }}" cssClass="drawerContentButton"/>
+            </StackLayout>a
+          </ScrollView>
+        </StackLayout>
+      </drawer:RadSideDrawer.mainContent>
+    </drawer:RadSideDrawer>
+  <!-- << sidedrawer-setting-location-xml -->
+</navigation:ExamplePage>
