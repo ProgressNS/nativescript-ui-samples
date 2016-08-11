@@ -15,8 +15,8 @@ export class TicketViewModel {
 
 export class TicketOrder {
     public movie: string = "Zootopia";
-    //public date: Date = new Date();
-    //public time: Date = new Date();
+    public date: string = "2016-04-06";
+    public time: string = "20:00";
     public type: string = "2D";
     public price: number = 9.50;
     public numberOfTickets: number = 2;

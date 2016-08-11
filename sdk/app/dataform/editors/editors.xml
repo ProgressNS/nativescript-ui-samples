@@ -7,7 +7,7 @@
                     <df:PropertyEditor type="Picker" />
                 </df:EntityProperty.editor>
             </df:EntityProperty>
-            <!--<df:EntityProperty name="date" index="1" >
+            <df:EntityProperty name="date" index="1" >
                 <df:EntityProperty.editor>
                     <df:PropertyEditor type="DatePicker" />
                 </df:EntityProperty.editor>
@@ -16,7 +16,7 @@
                 <df:EntityProperty.editor>
                     <df:PropertyEditor type="TimePicker" />
                 </df:EntityProperty.editor>
-            </df:EntityProperty>-->
+            </df:EntityProperty>
             <df:EntityProperty name="type" displayName="Type" index="3" valuesProvider="2D, 3D">
                 <df:EntityProperty.editor>
                     <df:PropertyEditor type="SegmentedEditor" />
