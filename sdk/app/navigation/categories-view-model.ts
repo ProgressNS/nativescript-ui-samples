@@ -73,6 +73,15 @@ export class NavigationViewModel extends observableModule.Observable {
         this.buildListViewExamples(parent);
         this.buildSideDrawerExamples(parent);
         this.buildCalendarExamples(parent);
+        this.buildFeedbackExamples(parent);
+        this.buildDataFormExamples(parent);
+    }
+
+    private buildFeedbackExamples(currentParent: NavigationItem) {
+        var feedbackRoot = new NavigationItem("Feedback", undefined, currentParent);
+        currentParent.subItems.push(feedbackRoot);
+        var calendarExample = new NavigationItem("Getting started", "./feedback/getting-started/getting-started", feedbackRoot);
+        feedbackRoot.subItems.push(calendarExample);
     }
 
     private buildCalendarExamples(currentParent: NavigationItem) {
@@ -107,6 +116,35 @@ export class NavigationViewModel extends observableModule.Observable {
 
         calendarExample = new NavigationItem("Calendar styling", "./calendar/cell-styling/cell-styles", calendarRoot);
         calendarRoot.subItems.push(calendarExample);
+    }
+
+    private buildDataFormExamples(currentParent: NavigationItem) {
+        var dataFormRoot = new NavigationItem("DataForm", undefined, currentParent);
+        currentParent.subItems.push(dataFormRoot);
+
+        var dataFormExample = new NavigationItem("Getting started", "./dataform/getting-started/getting-started", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Properties adjustment", "./dataform/adjustment/adjustment", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Editors", "./dataform/editors/editors", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Validators", "./dataform/validation/validation", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Commit Modes", "./dataform/commit-modes/commit-modes", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Groups", "./dataform/groups/groups", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Events", "./dataform/events/events", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Styling", "./dataform/styling/styling", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
     }
 
     private buildChartExamples(currentParent: NavigationItem) {
@@ -219,7 +257,7 @@ export class NavigationViewModel extends observableModule.Observable {
 
         var exampleItem = new NavigationItem("Getting Started", "./listview/getting-started/getting-started", currentItem);
         currentItem.subItems.push(exampleItem);
-        
+
         var exampleItem = new NavigationItem("Item Loading", "./listview/item-loading/item-loading", currentItem);
         currentItem.subItems.push(exampleItem);
 
@@ -292,6 +330,9 @@ export class NavigationViewModel extends observableModule.Observable {
         currentItem.subItems.push(exampleItem);
 
         exampleItem = new NavigationItem("Events", "./sidedrawer/callbacks/drawer-callbacks", currentItem);
+        currentItem.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Drawer Over Navigation", "./sidedrawer/over-navigation/drawer-over-navigation", currentItem);
         currentItem.subItems.push(exampleItem);
     }
 
