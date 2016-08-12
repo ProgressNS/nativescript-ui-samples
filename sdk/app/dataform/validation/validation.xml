@@ -10,6 +10,7 @@
                         length="12" /> 
                 </df:EntityProperty.validators>            
             </df:EntityProperty>
+            <!-- >> dataform-validation-xml -->
             <df:EntityProperty name="password" index="1" >
                 <df:EntityProperty.editor> 
                     <df:PropertyEditor type="Password" />
@@ -20,6 +21,7 @@
                         length="6" /> 
                 </df:EntityProperty.validators>  
             </df:EntityProperty>
+            <!-- << dataform-validation-xml -->
             <df:EntityProperty name="email" displayName="E-mail" index="2" >                
                 <df:EntityProperty.editor> 
                     <df:PropertyEditor type="Email" />
