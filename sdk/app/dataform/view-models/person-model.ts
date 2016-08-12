@@ -1,3 +1,4 @@
+// >> dataform-person-view-model
 export class PersonViewModel {
 
     private _person: Person;
@@ -30,3 +31,4 @@ export class Person {
         this.streetNumber = streetNumber;
     }
 }
+// << dataform-person-view-model

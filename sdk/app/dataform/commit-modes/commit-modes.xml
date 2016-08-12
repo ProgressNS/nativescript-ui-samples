@@ -1,4 +1,3 @@
-<!-- >> dataform-commit-modes-xml -->
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-telerik-ui-pro/dataform" xmlns="http://www.nativescript.org/tns.xsd">
     <StackLayout>
         <SegmentedBar id="mySegmentedBar" />
@@ -23,4 +22,3 @@
         </df:RadDataForm>
     </StackLayout>
 </navigation:ExamplePage>
-<!-- << dataform-commit-modes-xml -->
