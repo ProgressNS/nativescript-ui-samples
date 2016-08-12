@@ -20,7 +20,7 @@ button {
 }
 
 .drawerContent {
-    background-color: green;
+    background-color: gray;
 }
 
 .drawerContentText {
@@ -30,7 +30,6 @@ button {
 
 .drawerContentButton {
     margin: 10;
-    background-color: red;
     horizontal-align: left;
 }
 
