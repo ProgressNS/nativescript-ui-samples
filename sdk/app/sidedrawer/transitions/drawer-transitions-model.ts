@@ -46,6 +46,5 @@ export class DrawerTransitionsModel {
     private setDrawerTransition(transition: drawerModule.DrawerTransitionBase) {
         let drawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>frameModule.topmost().getViewById("sideDrawer");
         drawer.drawerTransition = transition;
-    }
-    // << sidedrawer-setting-transition
+    }// << sidedrawer-setting-transition
 }

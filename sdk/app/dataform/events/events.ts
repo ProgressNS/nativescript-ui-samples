@@ -12,12 +12,14 @@ export function onPageLoaded(args) {
     label.text = "LastEvent: NONE";
 }
 
+// >> dataform-commit-cancel
 export function dfPropertyCommit(args) {
     if (args.propertyName == "name") {
         label.text = "LastEvent: name property commit cancelled";
         args.returnValue = false;
     }
 }
+// << dataform-commit-cancel
 
 export function dfPropertyCommitted(args) {
     label.text = "LastEvent: " + args.propertyName + " property committed";
