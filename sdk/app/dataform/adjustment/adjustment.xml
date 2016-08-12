@@ -1,9 +1,8 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-telerik-ui-pro/dataform" xmlns="http://www.nativescript.org/tns.xsd">
     <df:RadDataForm id="myDataForm" source="{{ person }}">
+        <!-- >> dataform-adjustment-xml -->
         <df:RadDataForm.properties>
-            <!-- >> dataform-adjustment-xml -->
             <df:EntityProperty name="name" displayName="Name" index="0" />
-            <!-- << dataform-adjustment-xml -->
             <df:EntityProperty name="age" displayName="Age" index="1" >
                 <df:EntityProperty.editor>
                     <df:PropertyEditor type="Number" />
@@ -26,5 +25,6 @@
                 </df:EntityProperty.editor>
             </df:EntityProperty>
         </df:RadDataForm.properties>
+        <!-- << dataform-adjustment-xml -->
     </df:RadDataForm>
 </navigation:ExamplePage>
