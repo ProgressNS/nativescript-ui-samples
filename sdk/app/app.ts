@@ -16,7 +16,7 @@ declare module com{
 
 if (application.android) {
     application.onLaunch = function (intent) {
-        fresco.initialize();
+        fresco.initialize();
     };
 }
 

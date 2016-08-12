@@ -23,11 +23,6 @@ export class DrawerTransitionsModel {
         this.openSideDrawer();
     }
 
-    public onScaleDownPusherTransitionTap(args) {
-        this.setDrawerTransition(new drawerModule.ScaleDownPusherTransition());
-        this.openSideDrawer();
-    }
-
     public onScaleUpTransitionTap(args) {
         this.setDrawerTransition(new drawerModule.ScaleUpTransition());
         this.openSideDrawer();
