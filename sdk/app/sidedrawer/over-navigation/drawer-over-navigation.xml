@@ -1,4 +1,5 @@
-<navigation:ExampleDrawerPage xmlns:navigation="navigation/example-drawer-page" loaded="pageLoaded" navigatedTo="onNavigatedTo"  
+<!-- >> sidedrawer-over-navigation -->
+<dpg:DrawerPage xmlns:navigation="navigation/example-drawer-page" loaded="pageLoaded" navigatedTo="onNavigatedTo"  
     xmlns:dpg="nativescript-telerik-ui-pro/sidedrawer/drawerpage"
     xmlns:drawer="nativescript-telerik-ui-pro/sidedrawer"
     xmlns="http://www.nativescript.org/tns.xsd">
@@ -6,6 +7,7 @@
       <ActionBar title="Drawer Over Navigation" />
   </navigation.actionBar>
 
+<!-- >> sidedrawer-over-navigation-drawer -->
   <dpg:DrawerPage.sideDrawer>
     <drawer:RadSideDrawer id="sideDrawer">
       <drawer:RadSideDrawer.drawerContent>
@@ -29,8 +31,10 @@
       </drawer:RadSideDrawer.drawerContent>
     </drawer:RadSideDrawer> 
   </dpg:DrawerPage.sideDrawer>
+<!-- << sidedrawer-over-navigation-drawer -->
 
     <StackLayout cssClass="mainContent">
         <Label text="{{ exampleText }}" textWrap="true" cssClass="drawerContentText"/>
     </StackLayout>
-</navigation:ExampleDrawerPage>
+</dpg:DrawerPage>
+<!-- << sidedrawer-over-navigation -->
