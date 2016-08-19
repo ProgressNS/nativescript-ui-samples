@@ -26,8 +26,8 @@ export class ExamplePage extends pageModule.Page {
         if (applicationModule.android) {
             var navigationButton = new actionBarModule.NavigationButton();
             navigationButton.on("tap", args => {
-                if(actionBar._nativeView) {
-                    utilsModule.ad.dismissSoftInput(actionBar._nativeView);
+                if (this.content) {
+                    utilsModule.ad.dismissSoftInput(this.content.android);
                 }
                 frameModule.topmost().goBack();
             });
