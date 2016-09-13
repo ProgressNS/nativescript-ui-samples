@@ -24,7 +24,7 @@
             <lv:RadListView.itemTemplate>
                 <StackLayout cssClass="itemStackLayout">
                     <Label text="{{ title }}" textWrap="true" cssClass="titleLabel"/>
-                    <StackLayout height="0.5" backgroundColor="#404040"/>
+                    <StackLayout height="1" backgroundColor="#EEEEEE"/>
                 </StackLayout>   
             </lv:RadListView.itemTemplate>
         </lv:RadListView>
