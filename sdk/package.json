@@ -1,21 +1,21 @@
 {
-  "description": "NativeScript Application",
+  "description": "SDK Samples for UI for NativeScript",
   "license": "SEE LICENSE IN <your-license-filename>",
   "readme": "NativeScript Application",
-  "repository": "<fill-your-repository-here>",
+  "repository": "https://github.com/telerik/nativescript-ui-samples",
   "nativescript": {
     "id": "org.nativescript.sdk",
     "tns-android": {
-     "version": "2.2.0"
+     "version": "2.3.0"
     },
     "tns-ios": {
-      "version": "2.2.0"
+      "version": "2.3.0"
     }
   },
   "dependencies": {
     "nativescript-fresco": "^1.0.3",
-    "nativescript-telerik-ui-pro": "1.3.1",
-    "tns-core-modules": "2.2.0"
+    "nativescript-telerik-ui-pro": "1.4.0",
+    "tns-core-modules": "2.3.0"
   },
   "devDependencies": {
     "babel-traverse": "6.9.0",
