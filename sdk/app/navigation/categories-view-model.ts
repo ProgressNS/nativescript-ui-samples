@@ -145,6 +145,12 @@ export class NavigationViewModel extends observableModule.Observable {
 
         dataFormExample = new NavigationItem("Styling", "./dataform/styling/styling", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Runtime updates", "./dataform/runtime-updates/runtime-updates", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Platform adjustments", "./dataform/platform-specifics/platform-specifics", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
     }
 
     private buildChartExamples(currentParent: NavigationItem) {
