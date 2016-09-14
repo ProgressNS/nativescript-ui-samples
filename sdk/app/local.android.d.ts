@@ -1,15 +1,8 @@
-declare class TKSolidFill {
-
-}
-
-declare class NSDateFormatter {
-
-}
-
+//partial type definitions
 declare module java {
     module text {
         class SimpleDateFormat {
-
+            constructor(format: String, locale: util.Locale);
         }
     }
     module util {
