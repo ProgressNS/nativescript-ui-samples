@@ -15,6 +15,19 @@ declare class UIDevice extends NSObject {
     userInterfaceIdiom: UIUserInterfaceIdiom;
 }
 
-declare class NSIndexPath extends NSObject { 
+declare class NSIndexPath extends NSObject {
     static indexPathForItemInSection(item: number, section: number): NSIndexPath;
+}
+
+declare class TKSolidFill {
+    static solidFillWithColor(color: UIColor): TKSolidFill;
+}
+
+declare class NSDateFormatter {
+    static alloc(): NSDateFormatter;
+    init(): NSDateFormatter;
+    dateFormat: string;
+}
+
+declare class UIColor {
 }

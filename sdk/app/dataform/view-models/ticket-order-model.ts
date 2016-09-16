@@ -1,6 +1,7 @@
 export class TicketViewModel {
 
     private _ticketOrder: TicketOrder;
+    private _items: Array<String>;
 
     constructor() {
     }
@@ -10,6 +11,16 @@ export class TicketViewModel {
             this._ticketOrder = new TicketOrder();
         }
         return this._ticketOrder;
+    }
+
+    get movies() {
+        if (!this._items) {
+            this._items = new Array<String>();
+            this._items.push("Zootopia");
+            this._items.push("Captain America");
+            this._items.push("The Jungle Book");
+        }
+        return this._items;
     }
 }
 
