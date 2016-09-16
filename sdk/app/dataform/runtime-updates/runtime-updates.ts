@@ -78,17 +78,21 @@ export function changeHidden(value) {
     property.hidden = value;
 }
 
+// >> dataform-editors-code
 export function changeEditor() {
     var property = dataform.getPropertyByName("age");
     var propertyEditor = new dataFormModule.PropertyEditor();
     propertyEditor.type = "Slider";
     property.editor = propertyEditor;
 }
+// << dataform-editors-code
 
+// >> dataform-getting-started-runtime-change
 export function changeEditorFill() {
     var property = dataform.getPropertyByName("name");
     property.editor.style.fillColor = "LightBlue";
 }
+// << dataform-getting-started-runtime-change
 
 export function changeEditorStroke() {
     var property = dataform.getPropertyByName("name");
@@ -106,10 +110,12 @@ export function changeGroupLabelTextSize() {
     group.titleStyle.labelTextSize = 20;
 }
 
+// >> dataform-groups-code
 export function changeGroupLabelTextColor() {
     var group = dataform.getGroupByName("Main Info");
     group.titleStyle.labelTextColor = "Blue";
 }
+// << dataform-groups-code
 
 export function changeGroupName() {
     var group = dataform.getGroupByName("Main Info");
