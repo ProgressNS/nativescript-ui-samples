@@ -39,8 +39,8 @@ export function changeDateFormatting(editor) {
         dateFormatter.dateFormat = "yyyy-MM-dd";
         editor.dateFormatter = dateFormatter;
     } else {
-        var dateFormatter = new java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US);
-        editor.setDateFormat(dateFormatter);
+        var simpleDateFormat = new java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US);
+        editor.setDateFormat(simpleDateFormat);
     }
 }
 
