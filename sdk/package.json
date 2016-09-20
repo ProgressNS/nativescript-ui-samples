@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "nativescript-fresco": "^1.0.3",
-    "nativescript-telerik-ui-pro": "1.4.0",
+    "nativescript-telerik-ui-pro": "1.4.1",
     "tns-core-modules": "2.3.0"
   },
   "devDependencies": {
