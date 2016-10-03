@@ -321,6 +321,13 @@ export class NavigationViewModel extends observableModule.Observable {
         exampleItem = new NavigationItem("Swipe to execute with stretched content", "./listview/swipe-execute/swipe-execute-stretch", currentItem);
         currentItem.subItems.push(exampleItem);
 
+        // Scroll to index
+        var scrollToIndex = new NavigationItem("Scroll to index", undefined, currentItem);
+        currentItem.subItems.push(scrollToIndex);
+        var selectionExample = new NavigationItem("In vertical direction", "./listview/scroll-to-index/scroll-to-index-vertical", scrollToIndex);
+        scrollToIndex.subItems.push(selectionExample);
+        var selectionExample = new NavigationItem("In horizontal direction", "./listview/scroll-to-index/scroll-to-index-horizontal", scrollToIndex);
+        scrollToIndex.subItems.push(selectionExample);
     }
 
     private buildSideDrawerExamples(currentParent: NavigationItem) {
