@@ -32,6 +32,9 @@ export class ViewModel extends observableModule.Observable {
     public updateViewModel() {
         var index: number = this._selectionInfo.index;
         switch (index) {
+            case 0:
+                this.set("myScrollPosition", this._options[0]);
+                break;
             case 1:
                 this.set("myScrollPosition", this._options[1]);
                 break;
@@ -41,17 +44,7 @@ export class ViewModel extends observableModule.Observable {
             case 3:
                 this.set("myScrollPosition", this._options[3]);
                 break;
-            case 4:
-                this.set("myScrollPosition", this._options[4]);
-                break;
-            case 5:
-                this.set("myScrollPosition", this._options[5]);
-                break;
-            case 6:
-                this.set("myScrollPosition", this._options[6]);
-                break;
-            case 7:
-                this.set("myScrollPosition", this._options[7]);
+            default:
                 break;
         }
     }
