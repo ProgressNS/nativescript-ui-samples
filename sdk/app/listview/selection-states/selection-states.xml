@@ -8,12 +8,12 @@
                 <lv:ListViewLinearLayout itemHeight="50" scrollDirection="Vertical"/>
             </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
-            <!-- >> listview-howto-item-selection-template-xml-->
+            <!-- >> listview-howto-item-selection-template-xml -->
                 <StackLayout orientation="vertical" backgroundColor="{{ selected ? 'red' : 'white'}}">
                     <Label fontSize="20" text="{{ name }}"/>
                     <Label fontSize="14" text="{{ description }}"/>
                 </StackLayout>
-            <!-- << listview-howto-item-selection-template-xml-->
+            <!-- << listview-howto-item-selection-template-xml -->
             </lv:RadListView.itemTemplate>
         </lv:RadListView>
     </GridLayout>
