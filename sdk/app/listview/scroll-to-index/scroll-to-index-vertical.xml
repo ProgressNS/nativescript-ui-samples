@@ -14,7 +14,7 @@
         </ActionBar>
     </navigation.actionBar>
     <GridLayout rows="auto, *">
-        <Button text="Scroll to 'Item 50'" tap="onTap"/>
+        <Button text="Scroll to index 50" tap="onTap"/>
         <lv:RadListView items="{{ dataItems }}" scrollPosition="{{ myScrollPosition }}" row="1" id="listView">
             <lv:RadListView.listViewLayout>
                 <lv:ListViewLinearLayout scrollDirection="Vertical" itemHeight="50"/>

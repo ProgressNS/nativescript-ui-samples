@@ -22,7 +22,7 @@ export class ViewModel extends observableModule.Observable {
         if (!this._items) {
             this._items = new ObservableArray<DataItem>();
 
-            for (var i = 1; i <= 100; i++) {
+            for (var i = 0; i < 100; i++) {
                 this._items.push(new DataItem(i, "Item " + i));
             }
         }
