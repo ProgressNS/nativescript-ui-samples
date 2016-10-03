@@ -4,12 +4,12 @@ import frameModule = require("ui/frame");
 
 var viewModelContext: ViewModel;
 
-export function onPageLoaded(args){
+export function onPageLoaded(args) {
     var page = args.object;
-    if(viewModelContext === undefined) {
+    if (viewModelContext === undefined) {
         viewModelContext = new ViewModel();
     }
-    
+
     page.bindingContext = viewModelContext;
 }
 
@@ -24,6 +24,9 @@ export function onNavigatedFrom(args) {
 }
 
 export function onTap() {
+    // >> listview-scroll-to-index
     let listView: RadListView = <RadListView>(frameModule.topmost().currentPage.getViewById("listView"));
+    
     listView.scrollToIndex(50);
+    // << listview-scroll-to-index
 }
