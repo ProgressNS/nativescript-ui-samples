@@ -9,16 +9,16 @@
   "nativescript": {
     "id": "org.nativescript.sdk",
     "tns-android": {
-     "version": "2.3.0"
+     "version": "next"
     },
     "tns-ios": {
-      "version": "2.3.0"
+      "version": "next"
     }
   },
   "dependencies": {
     "nativescript-fresco": "^1.0.3",
-    "nativescript-telerik-ui-pro": "1.4.0",
-    "tns-core-modules": "2.3.0"
+    "nativescript-telerik-ui-pro": "1.4.1",
+    "tns-core-modules": "next"
   },
   "devDependencies": {
     "babel-traverse": "6.9.0",
