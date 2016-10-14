@@ -2,7 +2,7 @@
   "description": "SDK Samples for UI for NativeScript",
   "license": "SEE LICENSE IN <your-license-filename>",
   "readme": "NativeScript Application",
-   "repository": {
+  "repository": {
     "type": "git",
     "url": "git@github.com/telerik/nativescript-ui-samples.git"
   },
@@ -16,8 +16,8 @@
     }
   },
   "dependencies": {
-    "nativescript-fresco": "^1.0.3",
-    "nativescript-telerik-ui-pro": "1.4.1",
+    "nativescript-fresco": "^1.0.11",
+    "nativescript-telerik-ui-pro": "next",
     "tns-core-modules": "next"
   },
   "devDependencies": {
