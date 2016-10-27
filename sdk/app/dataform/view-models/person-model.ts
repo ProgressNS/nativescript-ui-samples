@@ -1,16 +1,19 @@
 // >> dataform-person-view-model
-export class PersonViewModel {
+import { Observable } from "data/observable";
 
-    private _person: Person;
+export class PersonViewModel extends Observable {
 
     constructor() {
+        super();
+        this.person = new Person("John", 23, "john@company.com", "New York", "5th Avenue", 11);
     }
 
-    get person() {
-        if (!this._person) {
-            this._person = new Person("John", 23, "john@company.com", "New York", "5th Avenue", 11);
-        }
-        return this._person;
+    set person(value: Person) {
+        this.set("_person", value);
+    }
+
+    get person(): Person {
+        return this.get("_person");
     }
 }
 
