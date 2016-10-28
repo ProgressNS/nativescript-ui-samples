@@ -3,9 +3,6 @@
     xmlns:dpg="nativescript-telerik-ui-pro/sidedrawer/drawerpage"
     xmlns:drawer="nativescript-telerik-ui-pro/sidedrawer"
     xmlns="http://www.nativescript.org/tns.xsd">
-  <navigation.actionBar>
-      <ActionBar title="Drawer Over Navigation" />
-  </navigation.actionBar>
 
 <!-- >> sidedrawer-over-navigation-drawer -->
   <dpg:DrawerPage.sideDrawer>
