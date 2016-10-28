@@ -207,6 +207,9 @@ export class NavigationViewModel extends observableModule.Observable {
         stylingExample = new NavigationItem("Styling series", "/chart/styling/styling-series", stylingRoot);
         stylingRoot.subItems.push(stylingExample);
 
+        stylingExample = new NavigationItem("Styling Pie Chart series", "/chart/styling/styling-pie-series", stylingRoot);
+        stylingRoot.subItems.push(stylingExample);
+
         stylingExample = new NavigationItem("Styling grid", "/chart/styling/styling-grid", stylingRoot);
         stylingRoot.subItems.push(stylingExample);
 
