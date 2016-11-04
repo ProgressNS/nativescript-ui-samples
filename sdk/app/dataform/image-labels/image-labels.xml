@@ -1,0 +1,45 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded"
+    xmlns:df="nativescript-telerik-ui-pro/dataform" xmlns="http://www.nativescript.org/tns.xsd">
+
+    <df:RadDataForm id="myDataForm" source="{{ employee }}" >
+        <df:RadDataForm.properties>
+            <df:EntityProperty name="name" imageResource="res://ic_dataform_guest" hintText="name" index="0" >
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="Text">
+                        <df:PropertyEditor.style>
+                            <df:PropertyEditorStyle labelHidden="true"/>
+                        </df:PropertyEditor.style>
+                    </df:PropertyEditor>
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+            <df:EntityProperty name="phone" imageResource="res://ic_dataform_phone" hintText="phone" index="1" >
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="Number">
+                        <df:PropertyEditor.style>
+                            <df:PropertyEditorStyle labelHidden="true"/>
+                        </df:PropertyEditor.style>
+                    </df:PropertyEditor>
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+            <df:EntityProperty name="birthDate" imageResource="res://ic_dataform_calendar" hintText="birth date" index="2" >
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="DatePicker">
+                        <df:PropertyEditor.style>
+                            <df:PropertyEditorStyle labelHidden="true"/>
+                        </df:PropertyEditor.style>
+                    </df:PropertyEditor>
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+            <df:EntityProperty name="employeeId" imageResource="res://ic_dataform_table" hintText="employee id" index="3" >
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="Number">
+                        <df:PropertyEditor.style>
+                            <df:PropertyEditorStyle labelHidden="true"/>
+                        </df:PropertyEditor.style>
+                    </df:PropertyEditor>
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+        </df:RadDataForm.properties>        
+    </df:RadDataForm>
+
+</navigation:ExamplePage>

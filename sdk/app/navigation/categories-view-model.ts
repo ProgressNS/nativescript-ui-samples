@@ -125,7 +125,13 @@ export class NavigationViewModel extends observableModule.Observable {
         var dataFormExample = new NavigationItem("Getting started", "./dataform/getting-started/getting-started", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
-        dataFormExample = new NavigationItem("Properties adjustment", "./dataform/adjustment/adjustment", dataFormRoot);
+        dataFormExample = new NavigationItem("Getting started JSON", "./dataform/getting-started-json/getting-started-json", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Properties", "./dataform/adjustment/adjustment", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Properties JSON", "./dataform/metadata/metadata", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
         dataFormExample = new NavigationItem("Editors", "./dataform/editors/editors", dataFormRoot);
@@ -146,10 +152,16 @@ export class NavigationViewModel extends observableModule.Observable {
         dataFormExample = new NavigationItem("Styling", "./dataform/styling/styling", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
+        dataFormExample = new NavigationItem("Styling Advanced", "./dataform/styling-advanced/styling-advanced", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
         dataFormExample = new NavigationItem("Runtime updates", "./dataform/runtime-updates/runtime-updates", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
         dataFormExample = new NavigationItem("Platform adjustments", "./dataform/platform-specifics/platform-specifics", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Image Labels", "./dataform/image-labels/image-labels", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
     }
 
