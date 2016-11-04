@@ -29,11 +29,9 @@ export function onCellSwiping(args: listViewModule.ListViewEventData) {
 export function onSwipeCellStarted(args: listViewModule.ListViewEventData) {
     var swipeLimits = args.data.swipeLimits;
     var swipeView = args['swipeView'];
-//    var listView = frameModule.topmost().currentPage.getViewById("listView");
     var leftItem = swipeView.getViewById('mark-view');
     var rightItem = swipeView.getViewById('delete-view');
-    swipeLimits.threshold = args.data.x > 0 ? leftItem.width : rightItem.width;
-    
+    swipeLimits.threshold = args.data.x > 0 ? leftItem.getMeasuredWidth() : rightItem.getMeasuredWidth();
 }
 // << listview-swipe-action-release-limits
 
@@ -47,16 +45,16 @@ export function onSwipeCellFinished(args: listViewModule.ListViewEventData) {
 }
 // << listview-swipe-action-release-execute
 
-export function onItemClick(args: listViewModule.ListViewEventData) {
+export function onLeftSwipeClick(args: listViewModule.ListViewEventData) {
     var listView = <listViewModule.RadListView>frameModule.topmost().currentPage.getViewById("listView");
-    listView.notifySwipeToExecuteFinished();
-    console.log("Item click: " + args.itemIndex);
-}
-
-export function onLeftSwipeClick(args) {
     console.log("Left swipe click");
+    listView.notifySwipeToExecuteFinished();
 }
 
 export function onRightSwipeClick(args) {
+    var listView = <listViewModule.RadListView>frameModule.topmost().currentPage.getViewById("listView");
     console.log("Right swipe click");
+    //listView.notifySwipeToExecuteFinished();
+    var viewModel: viewModel.ViewModel = <viewModel.ViewModel>listView.bindingContext;
+    viewModel.dataItems.splice(viewModel.dataItems.indexOf(args.object.bindingContext), 1);
 }

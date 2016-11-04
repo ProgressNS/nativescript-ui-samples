@@ -6,8 +6,7 @@
             items="{{ dataItems }}" 
             row="1" 
             selectionBehavior="None" 
-            itemSwipeProgressEnded="onSwipeCellFinished" 
-            itemTap="onItemClick" 
+            itemSwipeProgressEnded="onSwipeCellFinished"
             itemSwipeProgressStarted="onSwipeCellStarted" 
             itemSwipeProgressChanged="onCellSwiping" 
             swipeActions="true">
