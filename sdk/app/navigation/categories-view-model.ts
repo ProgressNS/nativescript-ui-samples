@@ -73,6 +73,15 @@ export class NavigationViewModel extends observableModule.Observable {
         this.buildListViewExamples(parent);
         this.buildSideDrawerExamples(parent);
         this.buildCalendarExamples(parent);
+        this.buildFeedbackExamples(parent);
+        this.buildDataFormExamples(parent);
+    }
+
+    private buildFeedbackExamples(currentParent: NavigationItem) {
+        var feedbackRoot = new NavigationItem("Feedback", undefined, currentParent);
+        currentParent.subItems.push(feedbackRoot);
+        var calendarExample = new NavigationItem("Getting started", "./feedback/getting-started/getting-started", feedbackRoot);
+        feedbackRoot.subItems.push(calendarExample);
     }
 
     private buildCalendarExamples(currentParent: NavigationItem) {
@@ -107,6 +116,41 @@ export class NavigationViewModel extends observableModule.Observable {
 
         calendarExample = new NavigationItem("Calendar styling", "./calendar/cell-styling/cell-styles", calendarRoot);
         calendarRoot.subItems.push(calendarExample);
+    }
+
+    private buildDataFormExamples(currentParent: NavigationItem) {
+        var dataFormRoot = new NavigationItem("DataForm", undefined, currentParent);
+        currentParent.subItems.push(dataFormRoot);
+
+        var dataFormExample = new NavigationItem("Getting started", "./dataform/getting-started/getting-started", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Properties adjustment", "./dataform/adjustment/adjustment", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Editors", "./dataform/editors/editors", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Validators", "./dataform/validation/validation", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Commit Modes", "./dataform/commit-modes/commit-modes", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Groups", "./dataform/groups/groups", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Events", "./dataform/events/events", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Styling", "./dataform/styling/styling", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Runtime updates", "./dataform/runtime-updates/runtime-updates", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Platform adjustments", "./dataform/platform-specifics/platform-specifics", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
     }
 
     private buildChartExamples(currentParent: NavigationItem) {
@@ -161,6 +205,9 @@ export class NavigationViewModel extends observableModule.Observable {
         stylingRoot.subItems.push(stylingExample);
 
         stylingExample = new NavigationItem("Styling series", "/chart/styling/styling-series", stylingRoot);
+        stylingRoot.subItems.push(stylingExample);
+
+        stylingExample = new NavigationItem("Styling Pie Chart series", "/chart/styling/styling-pie-series", stylingRoot);
         stylingRoot.subItems.push(stylingExample);
 
         stylingExample = new NavigationItem("Styling grid", "/chart/styling/styling-grid", stylingRoot);
@@ -253,6 +300,9 @@ export class NavigationViewModel extends observableModule.Observable {
         selectionExample = new NavigationItem("Programatic Selection", "./listview/listview-selection/programmatic-selection", selectionItem);
         selectionItem.subItems.push(selectionExample);
 
+        exampleItem = new NavigationItem("Selection states", "./listview/selection-states/selection-states", currentItem);
+        currentItem.subItems.push(exampleItem);
+
         exampleItem = new NavigationItem("Load on Demand", "./listview/load-on-demand/load-on-demand", currentItem);
         currentItem.subItems.push(exampleItem);
 
@@ -273,6 +323,14 @@ export class NavigationViewModel extends observableModule.Observable {
 
         exampleItem = new NavigationItem("Swipe to execute with stretched content", "./listview/swipe-execute/swipe-execute-stretch", currentItem);
         currentItem.subItems.push(exampleItem);
+
+        // Scroll to index
+        var scrollToIndex = new NavigationItem("Scroll to index", undefined, currentItem);
+        currentItem.subItems.push(scrollToIndex);
+        var selectionExample = new NavigationItem("In vertical direction", "./listview/scroll-to-index/scroll-to-index-vertical", scrollToIndex);
+        scrollToIndex.subItems.push(selectionExample);
+        var selectionExample = new NavigationItem("In horizontal direction", "./listview/scroll-to-index/scroll-to-index-horizontal", scrollToIndex);
+        scrollToIndex.subItems.push(selectionExample);
     }
 
     private buildSideDrawerExamples(currentParent: NavigationItem) {
@@ -288,6 +346,9 @@ export class NavigationViewModel extends observableModule.Observable {
         currentItem.subItems.push(exampleItem);
 
         exampleItem = new NavigationItem("Events", "./sidedrawer/callbacks/drawer-callbacks", currentItem);
+        currentItem.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Drawer Over Navigation", "./sidedrawer/over-navigation/drawer-over-navigation", currentItem);
         currentItem.subItems.push(exampleItem);
     }
 

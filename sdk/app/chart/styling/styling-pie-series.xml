@@ -1,0 +1,49 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
+    <GridLayout orientation="vertical" rows="*, *">
+    <chart:RadPieChart id="pieChart" height="300" allowAnimation="true" row="0">
+        <chart:RadPieChart.series>
+            <chart:PieSeries seriesName="myPieSeries" selectionMode="DataPoint" expandRadius="0.4" outerRadiusFactor="0.7" items="{{ pieSource }}" valueProperty="Amount" legendLabel="Brand">
+            </chart:PieSeries>
+        </chart:RadPieChart.series>
+
+        <chart:RadPieChart.palettes>
+            <chart:Palette seriesName="myPieSeries">
+                <chart:Palette.entries>
+                    <chart:PaletteEntry strokeWidth="5" fillColor="Orange"/>
+                    <chart:PaletteEntry strokeWidth="5" fillColor="Red"/>
+                    <chart:PaletteEntry strokeWidth="5" fillColor="Green"/>
+                    <chart:PaletteEntry strokeWidth="5" fillColor="Blue"/>
+                    <chart:PaletteEntry strokeWidth="5" fillColor="Pink" strokeColor="Gray"/>
+                </chart:Palette.entries>
+            </chart:Palette>
+        </chart:RadPieChart.palettes>
+        
+        <chart:RadPieChart.legend>
+            <chart:RadLegendView position="Floating" offsetOrigin="TopRight"  width="110"/>
+        </chart:RadPieChart.legend>
+    </chart:RadPieChart>
+  
+    <chart:RadPieChart id="donutChart" height="300"  allowAnimation="true" row="1">
+        <chart:RadPieChart.series>
+            <chart:DonutSeries seriesName="myDonutSeries" selectionMode="DataPoint" outerRadiusFactor="0.9" expandRadius="0.4"  outerRadiusFactor="0.7" innerRadiusFactor="0.4" items="{{ pieSource }}" valueProperty="Amount" legendLabel="Brand">
+            </chart:DonutSeries>
+        </chart:RadPieChart.series>
+
+         <chart:RadPieChart.palettes>
+            <chart:Palette seriesName="myDonutSeries">
+                <chart:Palette.entries>
+                    <chart:PaletteEntry strokeWidth="5" fillColor="Orange"/>
+                    <chart:PaletteEntry strokeWidth="5" fillColor="Red"/>
+                    <chart:PaletteEntry strokeWidth="5" fillColor="Green"/>
+                    <chart:PaletteEntry strokeWidth="5" fillColor="Blue"/>
+                    <chart:PaletteEntry strokeWidth="5" fillColor="Pink" strokeColor="Gray"/>
+                </chart:Palette.entries>
+            </chart:Palette>
+        </chart:RadPieChart.palettes>
+        
+        <chart:RadPieChart.legend>
+            <chart:RadLegendView position="Floating" offsetOrigin="TopRight"  width="110"/>
+        </chart:RadPieChart.legend>  
+    </chart:RadPieChart>   
+    </GridLayout>
+</navigation:ExamplePage>

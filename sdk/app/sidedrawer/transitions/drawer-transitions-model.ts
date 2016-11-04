@@ -23,11 +23,6 @@ export class DrawerTransitionsModel {
         this.openSideDrawer();
     }
 
-    public onScaleDownPusherTransitionTap(args) {
-        this.setDrawerTransition(new drawerModule.ScaleDownPusherTransition());
-        this.openSideDrawer();
-    }
-
     public onScaleUpTransitionTap(args) {
         this.setDrawerTransition(new drawerModule.ScaleUpTransition());
         this.openSideDrawer();
@@ -51,6 +46,5 @@ export class DrawerTransitionsModel {
     private setDrawerTransition(transition: drawerModule.DrawerTransitionBase) {
         let drawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>frameModule.topmost().getViewById("sideDrawer");
         drawer.drawerTransition = transition;
-    }
-    // << sidedrawer-setting-transition
+    }// << sidedrawer-setting-transition
 }

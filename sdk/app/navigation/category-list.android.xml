@@ -4,26 +4,15 @@
     loaded="pageLoaded"
     navigatingFrom="onPageNavigatingFrom"
     navigatingTo="onPageNavigatingTo">
-    <Page.actionBar>
-        <ActionBar>
-            <ActionBar.titleView>
-                <StackLayout orientation="horizontal" >
-                    <StackLayout horizontalAlignment="left" paddingLeft="0" paddingRight="16" paddingBottom="8" paddingTop="8" tap="onBackTap" visibility="{{_hasBack === true ? 'visible' : 'collapsed'}}"> 
-                        <Image stretch="none" verticalAlignment="center" android:src="res://ic_arrow_back_black_24dp"/>
-                    </StackLayout>
-                    <Label text="{{ currentParent.title }}" verticalAlignment="center" style="font-size: 20px; color: black;"/>
-               </StackLayout>
-            </ActionBar.titleView>
-        </ActionBar>
-    </Page.actionBar>
     <GridLayout rows="auto, *">
         <lv:RadListView row="1" items="{{ _currentSubItems }}" itemTap="{{onNavigationItemTap}}" >
             <lv:RadListView.listViewLayout>
                 <lv:ListViewLinearLayout scrollDirection="Vertical"/>
             </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
-                <StackLayout>
-                    <Label text="{{ title }}" textWrap="true" margin="8" />
+                <StackLayout cssClass="itemStackLayout">
+                    <Label text="{{ title }}" textWrap="true" cssClass="titleLabel"/>
+                    <StackLayout height="1" backgroundColor="#EEEEEE"/>
                 </StackLayout>   
             </lv:RadListView.itemTemplate>
         </lv:RadListView>

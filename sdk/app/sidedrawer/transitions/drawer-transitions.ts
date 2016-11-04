@@ -1,7 +1,7 @@
 import viewModel = require("./drawer-transitions-model");
 import frame = require("ui/frame");
 
-export function onPageLoaded(args){
+export function pageLoaded(args){
     var page = args.object;
     page.bindingContext = new viewModel.DrawerTransitionsModel();
 

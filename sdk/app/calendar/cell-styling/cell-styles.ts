@@ -15,11 +15,6 @@ export function onPageLoaded(args){
     viewModelContext.updateViewMode();
 }
 
-//  export function onDateSelected(args) {
-//      viewModelContext.onDateSelected(args);
-//  }
-
-
 export function onNavigatedFrom(args) {
     if(args.isBackNavigation === true) {
         viewModelContext = undefined;

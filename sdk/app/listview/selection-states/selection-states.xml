@@ -1,0 +1,20 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui-pro/listview" xmlns="http://www.nativescript.org/tns.xsd">
+    <GridLayout orientation="vertical" rows="auto, *">
+        <Label text="Selection states" cssClass="example-header"/>
+        <!-- >> listview-howto-item-selection-events-xml -->
+        <lv:RadListView items="{{ dataItems }}" row="1" multipleSelection="true" selectionBehavior="Press" itemSelected="{{itemSelected}}" itemDeselected="{{itemDeselected}}">
+        <!-- << listview-howto-item-selection-events-xml -->
+            <lv:RadListView.listViewLayout>
+                <lv:ListViewLinearLayout itemHeight="50" scrollDirection="Vertical"/>
+            </lv:RadListView.listViewLayout>
+            <lv:RadListView.itemTemplate>
+            <!-- >> listview-howto-item-selection-template-xml -->
+                <StackLayout orientation="vertical" backgroundColor="{{ selected ? 'red' : 'white'}}">
+                    <Label fontSize="20" text="{{ name }}"/>
+                    <Label fontSize="14" text="{{ description }}"/>
+                </StackLayout>
+            <!-- << listview-howto-item-selection-template-xml -->
+            </lv:RadListView.itemTemplate>
+        </lv:RadListView>
+    </GridLayout>
+</navigation:ExamplePage>

@@ -11,7 +11,7 @@ export class StylingViewModel extends Observable {
 
         this._selectionInfo = {
             options: ["Week", "Month", "Month names", "Year"],
-            index: 0
+            index: 1
         };
 
         let now = new Date();

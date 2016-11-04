@@ -77,3 +77,15 @@ button {
     margin: 0;
     padding: 5;
 }
+
+.titleLabel {
+    margin: 16;
+    vertical-align: center;
+}
+
+.itemStackLayout {
+    text-align: left;
+    vertical-align: center;
+    font-size: 16;
+    color:#404040;
+}
