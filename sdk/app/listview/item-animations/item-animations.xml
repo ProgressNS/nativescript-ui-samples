@@ -1,4 +1,9 @@
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" navigatedTo="onNavigatedTo" xmlns:lv="nativescript-telerik-ui-pro/listview" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" 
+                        xmlns:lv="nativescript-telerik-ui-pro/listview" 
+                        xmlns="http://www.nativescript.org/tns.xsd"
+                        loaded="onPageLoaded" 
+                        navigatedTo="onNavigatedTo" 
+                        navigatedFrom="onNavigatedFrom" >
 <navigation.actionBar>
         <ActionBar title="View modes">
             <ActionBar.actionItems>
@@ -26,7 +31,7 @@
         <!-- >> listview-item-animations-xml -->  
         <lv:RadListView items="{{ dataItems }}" row="1" id="ls">
             <lv:RadListView.listViewLayout>
-                <lv:ListViewLinearLayout scrollDirection="Vertical" itemInsertAnimation="Default" itemDeleteAnimation="Default"/>
+                 <lv:ListViewLinearLayout scrollDirection="Vertical" itemInsertAnimation="Default" itemDeleteAnimation="Default"/>
             </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
                 <StackLayout orientation="vertical">
