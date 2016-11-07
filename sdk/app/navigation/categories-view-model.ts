@@ -125,7 +125,13 @@ export class NavigationViewModel extends observableModule.Observable {
         var dataFormExample = new NavigationItem("Getting started", "./dataform/getting-started/getting-started", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
-        dataFormExample = new NavigationItem("Properties adjustment", "./dataform/adjustment/adjustment", dataFormRoot);
+        dataFormExample = new NavigationItem("Getting started JSON", "./dataform/getting-started-json/getting-started-json", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Properties", "./dataform/adjustment/adjustment", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Properties JSON", "./dataform/metadata/metadata", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
         dataFormExample = new NavigationItem("Editors", "./dataform/editors/editors", dataFormRoot);
@@ -146,10 +152,16 @@ export class NavigationViewModel extends observableModule.Observable {
         dataFormExample = new NavigationItem("Styling", "./dataform/styling/styling", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
+        dataFormExample = new NavigationItem("Styling Advanced", "./dataform/styling-advanced/styling-advanced", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
         dataFormExample = new NavigationItem("Runtime updates", "./dataform/runtime-updates/runtime-updates", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
         dataFormExample = new NavigationItem("Platform adjustments", "./dataform/platform-specifics/platform-specifics", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Image Labels", "./dataform/image-labels/image-labels", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
     }
 
@@ -299,9 +311,8 @@ export class NavigationViewModel extends observableModule.Observable {
         selectionItem.subItems.push(selectionExample);
         selectionExample = new NavigationItem("Programatic Selection", "./listview/listview-selection/programmatic-selection", selectionItem);
         selectionItem.subItems.push(selectionExample);
-
-        exampleItem = new NavigationItem("Selection states", "./listview/selection-states/selection-states", currentItem);
-        currentItem.subItems.push(exampleItem);
+        exampleItem = new NavigationItem("Selection states", "./listview/selection-states/selection-states", selectionItem);
+        selectionItem.subItems.push(exampleItem);
 
         exampleItem = new NavigationItem("Load on Demand", "./listview/load-on-demand/load-on-demand", currentItem);
         currentItem.subItems.push(exampleItem);
@@ -312,16 +323,24 @@ export class NavigationViewModel extends observableModule.Observable {
         exampleItem = new NavigationItem("Pull to Refresh", "./listview/pull-to-refresh/pull-to-refresh", currentItem);
         currentItem.subItems.push(exampleItem);
 
-        exampleItem = new NavigationItem("Swipe to Execute", "./listview/swipe-execute/swipe-execute", currentItem);
-        currentItem.subItems.push(exampleItem);
+        var swipeLegacy = new NavigationItem("Swipe to execute", undefined, currentItem);
+        currentItem.subItems.push(swipeLegacy);
+        exampleItem = new NavigationItem("Getting started", "./listview/swipe-execute/swipe-execute", swipeLegacy);
+        swipeLegacy.subItems.push(exampleItem);
 
+        exampleItem = new NavigationItem("Swipe to execute with sticky actions", "./listview/swipe-execute/swipe-execute-sticky", swipeLegacy);
+        swipeLegacy.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Swipe to execute with stretched content", "./listview/swipe-execute/swipe-execute-stretch", swipeLegacy);
+        swipeLegacy.subItems.push(exampleItem);
+
+        var swipeActions = new NavigationItem("Swipe actions", undefined, currentItem);
+        currentItem.subItems.push(swipeActions);
+        exampleItem = new NavigationItem("Getting started", "./listview/swipe-actions/swipe-actions", swipeActions);
+        swipeActions.subItems.push(exampleItem);
+
+        // Header and footer
         exampleItem = new NavigationItem("Header and Footer", "./listview/header-footer/header-footer", currentItem);
-        currentItem.subItems.push(exampleItem);
-
-        exampleItem = new NavigationItem("Swipe to execute with sticky actions", "./listview/swipe-execute/swipe-execute-sticky", currentItem);
-        currentItem.subItems.push(exampleItem);
-
-        exampleItem = new NavigationItem("Swipe to execute with stretched content", "./listview/swipe-execute/swipe-execute-stretch", currentItem);
         currentItem.subItems.push(exampleItem);
 
         // Scroll to index
