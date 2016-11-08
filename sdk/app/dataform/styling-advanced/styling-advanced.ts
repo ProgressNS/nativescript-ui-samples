@@ -6,6 +6,95 @@ import viewModule = require("ui/core/view");
 var colorLight = new Color("#CDDC39");
 var colorDark = new Color("#4CAF50");
 var colorGray = new Color("#F9F9F9");
+declare module com {
+    module telerik {
+        module android {
+            module common {
+                class Procedure<T>{
+                    constructor(imp);
+                }
+            }
+        }
+        module widget {
+            class RadioGroup {
+                setPadding(l, t, r, b);
+            }
+
+            module numberpicker {
+                class RadNumberPicker {
+                    labelView();
+                    decreaseView();
+                    increaseView();
+                    rootView;
+                }
+            }
+        }
+    }
+}
+
+declare module android {
+    module graphics {
+        module PorterDuff {
+            class Mode {
+                static SRC_IN;
+            }
+
+        }
+        class PorterDuffColorFilter {
+            constructor(arg1, arg2);
+
+        }
+        module drawable {
+            class GradientDrawable {
+                setStroke(width, stroke);
+            }
+        }
+    }
+    module widget {
+
+        class LinearLayout {
+            labelView();
+            decreaseView();
+            increaseView();
+            static SHOW_DIVIDER_MIDDLE;
+        }
+        class RadioGroup {
+            setBackgroundColor(arg);
+            setPadding(l, t, r, b);
+            setShowDividers(arg);
+            setDividerDrawable(arg);
+        }
+
+        class RadioButton {
+
+        }
+    }
+}
+
+declare class UIStepper {
+    subviews: any;
+    tintColor;
+}
+
+declare class UISwitch {
+    subviews: any;
+    onTintColor;
+    thumbTintColor
+    tintColor;
+}
+
+declare class UIButton {
+
+}
+
+declare class UISlider {
+    tintColor;
+    thumbTintColor;
+}
+
+declare class UISegmentedControl {
+    tintColor;
+}
 
 export function onPageLoaded(args) {
     var page = args.object;
@@ -38,8 +127,8 @@ export function editorSetupSwitchAndroid(editor) {
 }
 
 export function editorSetupStepperAndroid(editor) {
-    var numberPicker: com.telerik.widget.numberpicker.RadNumberPicker = <com.telerik.widget.numberpickerRadNumberPicker>editor.getEditorView();
-    
+    var numberPicker: com.telerik.widget.numberpicker.RadNumberPicker = <com.telerik.widget.numberpicker.RadNumberPicker>editor.getEditorView();
+
     numberPicker.labelView().setTextColor(colorDark.android);
     numberPicker.decreaseView().setTextColor(colorDark.android);
     numberPicker.increaseView().setTextColor(colorDark.android);
@@ -108,10 +197,10 @@ export function editorSetupStepperIOS(editor) {
     }
 
     var labelDef = editor.gridLayout.definitionForView(editor.valueLabel);
-        labelDef.contentOffset = {
-            horizontal: -64,
-            vertical: 0
-        };
+    labelDef.contentOffset = {
+        horizontal: -64,
+        vertical: 0
+    };
 }
 
 export function editorSetupSegmentedEditorIOS(editor) {
