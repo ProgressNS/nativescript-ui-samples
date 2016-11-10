@@ -1,7 +1,7 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-telerik-ui-pro/dataform" xmlns="http://www.nativescript.org/tns.xsd">
     <df:RadDataForm source="{{ person }}" >
         <df:RadDataForm.groups>
-        <!-- >> dataform-stack-layout-xml -->
+        <!-- >> dataform-grid-layout-xml -->
             <df:PropertyGroup collapsible="true" name="Main Info" hidden="false" >
                 <df:PropertyGroup.layout>		
                   <df:DataFormGridLayout />		
@@ -25,7 +25,7 @@
                     </df:EntityProperty>
                 </df:PropertyGroup.properties>
             </df:PropertyGroup>
-        <!-- << dataform-stack-layout-xml -->
+        <!-- << dataform-grid-layout-xml -->
             <df:PropertyGroup collapsible="true" name="Address" hidden="false" >
                 <df:PropertyGroup.layout>		
                   <df:DataFormGridLayout />		
