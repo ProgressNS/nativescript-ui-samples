@@ -23,26 +23,18 @@
             </df:PropertyGroup.properties>
         </df:PropertyGroup>
         <df:PropertyGroup collapsible="true" name="Address" hidden="false" >
-            <df:PropertyGroup.layout>
-                <df:DataFormGridLayout />
-            </df:PropertyGroup.layout>
             <df:PropertyGroup.properties>
-                <df:EntityProperty name="city" index="0" columnIndex="0">
+                <df:EntityProperty name="city" >
                     <df:EntityProperty.editor>
                         <df:PropertyEditor type="Text" />
                     </df:EntityProperty.editor>
                 </df:EntityProperty>
-                <df:EntityProperty name="country" index="0" columnIndex="1">
+                <df:EntityProperty name="street" >
                     <df:EntityProperty.editor>
                         <df:PropertyEditor type="Text" />
                     </df:EntityProperty.editor>
                 </df:EntityProperty>
-                <df:EntityProperty name="street" index="1" columnIndex="0">
-                    <df:EntityProperty.editor>
-                        <df:PropertyEditor type="Text" />
-                    </df:EntityProperty.editor>
-                </df:EntityProperty>
-                <df:EntityProperty name="streetNumber" index="1" columnIndex="1">
+                <df:EntityProperty name="streetNumber" >
                     <df:EntityProperty.editor>
                         <df:PropertyEditor type="Number" />
                     </df:EntityProperty.editor>
