@@ -163,6 +163,13 @@ export class NavigationViewModel extends observableModule.Observable {
 
         dataFormExample = new NavigationItem("Image Labels", "./dataform/image-labels/image-labels", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
+
+        var layouts = new NavigationItem("Layouts", undefined, dataFormRoot);
+        dataFormRoot.subItems.push(layouts);
+        var selectionExample = new NavigationItem("Stack", "./dataform/layouts/stack-layout", layouts);
+        layouts.subItems.push(selectionExample);
+        var selectionExample = new NavigationItem("Grid", "./dataform/layouts/grid-layout", layouts);
+        layouts.subItems.push(selectionExample);
     }
 
     private buildChartExamples(currentParent: NavigationItem) {
