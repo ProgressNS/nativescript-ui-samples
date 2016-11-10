@@ -32,6 +32,7 @@
 
     <StackLayout cssClass="mainContent">
         <Label text="{{ exampleText }}" textWrap="true" cssClass="drawerContentText"/>
+        <Button text="Open drawer" tap="{{ onOpenDrawerTap }}" cssClass="drawerContentButton"/>
     </StackLayout>
 </dpg:DrawerPage>
 <!-- << sidedrawer-over-navigation -->
