@@ -333,10 +333,13 @@ export class NavigationViewModel extends observableModule.Observable {
 
         exampleItem = new NavigationItem("Swipe to execute with stretched content", "./listview/swipe-execute/swipe-execute-stretch", swipeLegacy);
         swipeLegacy.subItems.push(exampleItem);
-
+        // Swipe actions
         var swipeActions = new NavigationItem("Swipe actions", undefined, currentItem);
         currentItem.subItems.push(swipeActions);
         exampleItem = new NavigationItem("Getting started", "./listview/swipe-actions/swipe-actions", swipeActions);
+        swipeActions.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Animated thresholds", "./listview/swipe-actions/swipe-actions-thresholds", swipeActions);
         swipeActions.subItems.push(exampleItem);
 
         // Header and footer
