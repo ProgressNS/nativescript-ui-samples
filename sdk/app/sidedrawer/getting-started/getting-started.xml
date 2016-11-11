@@ -34,6 +34,7 @@
 
     <StackLayout >
       <Label text="{{ mainContentText }}" textWrap="true" cssClass="drawerContentText"/>
+      <Button text="Open drawer" tap="{{ onOpenDrawerTap }}" cssClass="drawerContentButton"/>
     </StackLayout>
 </navigation:ExampleDrawerPage>
 <!-- << sidedrawer-getting-started-xml -->
