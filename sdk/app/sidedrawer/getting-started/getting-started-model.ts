@@ -14,5 +14,10 @@ export class GettingStartedViewModel extends observableModule.Observable {
         let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>( frame.topmost().getViewById("sideDrawer"));
         sideDrawer.showDrawer();
     }
+
+    public onCloseDrawerTap() {
+        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>( frame.topmost().getViewById("sideDrawer"));
+        sideDrawer.closeDrawer();
+    }
 }
 // << sidedrawer-getting-started-model

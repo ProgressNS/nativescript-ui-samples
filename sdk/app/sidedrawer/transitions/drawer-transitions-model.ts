@@ -43,6 +43,11 @@ export class DrawerTransitionsModel {
         drawer.showDrawer();
     }
 
+    public closeDrawer(args?: observableModule.EventData) {
+        let drawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>frameModule.topmost().getViewById("sideDrawer");
+        drawer.closeDrawer();
+    }
+
     private setDrawerTransition(transition: drawerModule.DrawerTransitionBase) {
         let drawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>frameModule.topmost().getViewById("sideDrawer");
         drawer.drawerTransition = transition;
