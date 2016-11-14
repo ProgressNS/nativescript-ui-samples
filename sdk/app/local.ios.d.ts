@@ -31,3 +31,28 @@ declare class NSDateFormatter {
 
 declare class UIColor {
 }
+
+declare class UIStepper {
+    subviews: any;
+    tintColor;
+}
+
+declare class UISwitch {
+    subviews: any;
+    onTintColor;
+    thumbTintColor
+    tintColor;
+}
+
+declare class UIButton {
+
+}
+
+declare class UISlider {
+    tintColor;
+    thumbTintColor;
+}
+
+declare class UISegmentedControl {
+    tintColor;
+}
