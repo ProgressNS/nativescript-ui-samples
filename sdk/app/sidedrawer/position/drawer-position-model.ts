@@ -44,4 +44,9 @@ export class DrawerPositionModel {
          var sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
          sideDrawer.showDrawer();
     }
+
+    private closeDrawer() {
+         var sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
+         sideDrawer.closeDrawer();
+    }
 }
