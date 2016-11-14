@@ -4,7 +4,7 @@
   </navigation.actionBar>
   <!-- >> sidedrawer-setting-location-xml -->
   
-    <drawer:RadSideDrawer id="sideDrawer" drawerLocation="Left">
+    <drawer:RadSideDrawer id="sideDrawer" drawerLocation="Left" drawerContentSize="280">
     
     <drawer:RadSideDrawer.drawerTransition>
       <drawer:RevealTransition/>
@@ -41,7 +41,7 @@
                 <Button text="Top" tap="{{ onTopLocationTap }}" cssClass="drawerContentButton"/>
                 <Button text="Right" tap="{{ onRightLocationTap }}" cssClass="drawerContentButton"/>
                 <Button text="Bottom" tap="{{ onBottomLocationTap }}" cssClass="drawerContentButton"/>
-            </StackLayout>a
+            </StackLayout>
           </ScrollView>
         </StackLayout>
       </drawer:RadSideDrawer.mainContent>
