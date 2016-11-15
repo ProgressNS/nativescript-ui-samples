@@ -5,7 +5,8 @@ import viewModule = require('ui/core/view');
 import frameModule = require("ui/frame");
 import utilsModule = require("utils/utils");
 
-var animationApplied = false;
+var leftThresholdPassed = false;
+var rightThresholdPassed = false;
 
 export function onPageLoaded(args) {
     var page = args.object;
@@ -21,19 +22,14 @@ export function onCellSwiping(args: listViewModule.ListViewEventData) {
     var leftItem = swipeView.getViewById('mark-view');
     var rightItem = swipeView.getViewById('delete-view');
 
-    if (args.data.x > args.data.swipeLimits.threshold && !animationApplied) {
+    if (args.data.x > swipeView.getMeasuredWidth() / 4 && !leftThresholdPassed) {
         console.log("Notify perform left action");
-        leftItem.getViewById('mark-text').animate({
-            rotate: 360,
-            duration: 1000
-        });
-        animationApplied = true;
-    } else if (args.data.x < -args.data.swipeLimits.threshold && !animationApplied) {
-        rightItem.getViewById('delete-text').animate({
-            rotate: -360,
-            duration: 1000
-        });
-        animationApplied = true;
+        var markLabel = leftItem.getViewById('mark-text');
+        leftThresholdPassed = true;
+    } else if (args.data.x < -swipeView.getMeasuredWidth() / 4 && !rightThresholdPassed) {
+        var deleteLabel = rightItem.getViewById('delete-text');
+        console.log("Notify perform right action");
+        rightThresholdPassed = true;
     }
     if (args.data.x > 0) {
         var leftDimensions = viewModule.View.measureChild(
@@ -48,11 +44,11 @@ export function onCellSwiping(args: listViewModule.ListViewEventData) {
             rightItem,
             utilsModule.layout.makeMeasureSpec(Math.abs(args.data.x), utilsModule.layout.EXACTLY),
             utilsModule.layout.makeMeasureSpec(mainView.getMeasuredHeight(), utilsModule.layout.EXACTLY));
-            
+
         viewModule.View.layoutChild(rightItem.parent, rightItem, mainView.getMeasuredWidth() - rightDimensions.measuredWidth, 0, mainView.getMeasuredWidth(), rightDimensions.measuredHeight);
     }
 }
-// << listview-swipe-action-thresholds-notify
+// << listview-swipe-action-thresholds
 
 // >> listview-swipe-action-thresholds-limits
 export function onSwipeCellStarted(args: listViewModule.ListViewEventData) {
@@ -61,17 +57,24 @@ export function onSwipeCellStarted(args: listViewModule.ListViewEventData) {
     var leftItem = swipeView.getViewById('mark-view');
     var rightItem = swipeView.getViewById('delete-view');
     swipeLimits.left = swipeLimits.right = args.data.x > 0 ? leftItem.getMeasuredWidth() * 2 : rightItem.getMeasuredWidth() * 2;
+    swipeLimits.threshold = swipeView.getMeasuredWidth();
 }
-// << listview-swipe-action-release-limits
+// << listview-swipe-action-thresholds-limits
 
+// >> listview-swipe-actions-execute
 export function onSwipeCellFinished(args: listViewModule.ListViewEventData) {
-    if (args.data.x > 200) {
+    var swipeView = args['object'];
+    var leftItem = swipeView.getViewById('mark-view');
+    var rightItem = swipeView.getViewById('delete-view');
+    if (leftThresholdPassed) {
         console.log("Perform left action");
-    } else if (args.data.x < -200) {
+    } else if (rightThresholdPassed) {
         console.log("Perform right action");
     }
-    animationApplied = false;
+    leftThresholdPassed = false;
+    rightThresholdPassed = false;
 }
+// << listview-swipe-actions-execute
 
 export function onLeftSwipeClick(args: listViewModule.ListViewEventData) {
     var listView = <listViewModule.RadListView>frameModule.topmost().currentPage.getViewById("listView");

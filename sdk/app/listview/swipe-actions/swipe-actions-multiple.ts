@@ -38,7 +38,7 @@ export function onCellSwiping(args: listViewModule.ListViewEventData) {
         viewModule.View.layoutChild(rightItem.parent, rightItem, mainView.getMeasuredWidth() - rightDimensions.measuredWidth, 0, mainView.getMeasuredWidth(), rightDimensions.measuredHeight);
     }
 }
-// << listview-swipe-action-multiple-notify
+// << listview-swipe-action-multiple
 
 // >> listview-swipe-action-multiple-limits
 export function onSwipeCellStarted(args: listViewModule.ListViewEventData) {
