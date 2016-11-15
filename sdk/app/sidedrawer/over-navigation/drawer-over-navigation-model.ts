@@ -11,4 +11,9 @@ export class DrawerOverNavigationModel {
         let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>( frameModule.topmost().getViewById("sideDrawer"));
         sideDrawer.showDrawer();
     }
+
+    public closeDrawer() {
+        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>( frameModule.topmost().getViewById("sideDrawer"));
+        sideDrawer.closeDrawer();
+    }
 }

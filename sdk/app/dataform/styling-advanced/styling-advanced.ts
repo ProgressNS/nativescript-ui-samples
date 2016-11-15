@@ -6,95 +6,6 @@ import viewModule = require("ui/core/view");
 var colorLight = new Color("#CDDC39");
 var colorDark = new Color("#4CAF50");
 var colorGray = new Color("#F9F9F9");
-declare module com {
-    module telerik {
-        module android {
-            module common {
-                class Procedure<T>{
-                    constructor(imp);
-                }
-            }
-        }
-        module widget {
-            class RadioGroup {
-                setPadding(l, t, r, b);
-            }
-
-            module numberpicker {
-                class RadNumberPicker {
-                    labelView();
-                    decreaseView();
-                    increaseView();
-                    rootView;
-                }
-            }
-        }
-    }
-}
-
-declare module android {
-    module graphics {
-        module PorterDuff {
-            class Mode {
-                static SRC_IN;
-            }
-
-        }
-        class PorterDuffColorFilter {
-            constructor(arg1, arg2);
-
-        }
-        module drawable {
-            class GradientDrawable {
-                setStroke(width, stroke);
-            }
-        }
-    }
-    module widget {
-
-        class LinearLayout {
-            labelView();
-            decreaseView();
-            increaseView();
-            static SHOW_DIVIDER_MIDDLE;
-        }
-        class RadioGroup {
-            setBackgroundColor(arg);
-            setPadding(l, t, r, b);
-            setShowDividers(arg);
-            setDividerDrawable(arg);
-        }
-
-        class RadioButton {
-
-        }
-    }
-}
-
-declare class UIStepper {
-    subviews: any;
-    tintColor;
-}
-
-declare class UISwitch {
-    subviews: any;
-    onTintColor;
-    thumbTintColor
-    tintColor;
-}
-
-declare class UIButton {
-
-}
-
-declare class UISlider {
-    tintColor;
-    thumbTintColor;
-}
-
-declare class UISegmentedControl {
-    tintColor;
-}
 
 export function onPageLoaded(args) {
     var page = args.object;
@@ -160,7 +71,6 @@ export function editorSetupSegmentedEditorAndroid(editor) {
 
     var segmentItemResourceId = androidContext.getResources().getIdentifier("df_segment_item", "drawable", androidContext.getPackageName());
     var segmentTextColorResourceId = androidContext.getResources().getIdentifier("df_segment_text_color", "color", androidContext.getPackageName());
-
     editor.setCustomizeButtons(new com.telerik.android.common.Procedure<android.widget.RadioButton>({
         apply(argument) {
             var segmentItemDrawable = androidContext.getResources().getDrawable(segmentItemResourceId);

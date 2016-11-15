@@ -7,6 +7,11 @@ export class DrawerCallbacksModel extends observableModule.DependencyObservable 
     constructor() {
         super();
     }
+
+    public onCloseDrawerTap() {
+        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>( frameModule.topmost().getViewById("sideDrawer"));
+        sideDrawer.closeDrawer();
+    }
     
     public onOpenDrawerTap() {
         let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>( frameModule.topmost().getViewById("sideDrawer"));
