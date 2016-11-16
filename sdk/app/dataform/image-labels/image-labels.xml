@@ -14,7 +14,7 @@
                     <df:PropertyEditor type="Phone"/>
                 </df:EntityProperty.editor>
             </df:EntityProperty>
-            <df:EntityProperty name="birthDate" imageResource="res://ic_dataform_calendar" hintText="birth date" index="2" >
+            <df:EntityProperty name="birthDate" displayName="" imageResource="res://ic_dataform_calendar" hintText="birth date" index="2" >
                 <df:EntityProperty.editor>
                     <df:PropertyEditor type="DatePicker"/>
                 </df:EntityProperty.editor>
