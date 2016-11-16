@@ -31,18 +31,22 @@ export class ViewModel {
 
     public onSuggestSelected(args) {
         this.autocmp.suggestMode = "Suggest";
+        this.autocmp.resetAutocomplete();
     }
 
     public onAppendSelected(args) {
         this.autocmp.suggestMode = "Append";
+        this.autocmp.resetAutocomplete();
     }
 
     public onSuggestAppendSelected(args) {
         this.autocmp.suggestMode = "SuggestAppend";
+        this.autocmp.resetAutocomplete();
     }
 
     public onStartsWithSelected(args) {
         this.autocmp.completionMode = "StartsWith";
+        this.autocmp.resetAutocomplete();
     }
 
     public onContainsSelected(args) {
