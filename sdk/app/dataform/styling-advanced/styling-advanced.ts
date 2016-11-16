@@ -37,6 +37,13 @@ export function editorSetupSwitchAndroid(editor) {
     editor.setEditorLayout(customLayoutResourceId);
 }
 
+export function editorSetupSwitchIOS(editor) {
+    var coreEditor = <UISwitch>editor.editor;
+    coreEditor.tintColor = colorLight.ios;
+    coreEditor.onTintColor = colorLight.ios;
+    coreEditor.thumbTintColor = colorDark.ios;
+}
+
 export function editorSetupStepperAndroid(editor) {
     var numberPicker: com.telerik.widget.numberpicker.RadNumberPicker = <com.telerik.widget.numberpicker.RadNumberPicker>editor.getEditorView();
 
@@ -55,6 +62,25 @@ export function editorSetupStepperAndroid(editor) {
     var background3 = new android.graphics.drawable.GradientDrawable();
     background3.setStroke(2, colorLight.android);
     numberPicker.increaseView().setBackground(background3);
+}
+
+export function editorSetupStepperIOS(editor) {
+    editor.valueLabel.textColor = colorDark.ios;
+
+    var coreEditor = <UIStepper>editor.editor;
+    coreEditor.tintColor = colorLight.ios;
+
+    for (var i = 0; i < coreEditor.subviews.count; i++) {
+        if (coreEditor.subviews[i] instanceof UIButton) {
+            coreEditor.subviews[i].imageView.tintColor = colorDark.ios;
+        }
+    }
+
+    var labelDef = editor.gridLayout.definitionForView(editor.valueLabel);
+    labelDef.contentOffset = {
+        horizontal: -64,
+        vertical: 0
+    };
 }
 
 export function editorSetupSegmentedEditorAndroid(editor) {
@@ -82,40 +108,15 @@ export function editorSetupSegmentedEditorAndroid(editor) {
     }));
 }
 
-export function editorSetupSliderAndroid(editor) {
-    editor.getEditorView().getThumb().setColorFilter(new android.graphics.PorterDuffColorFilter(colorDark.android, android.graphics.PorterDuff.Mode.SRC_IN));
-    editor.getEditorView().getProgressDrawable().setColorFilter(new android.graphics.PorterDuffColorFilter(colorLight.android, android.graphics.PorterDuff.Mode.SRC_IN));
-}
-
-export function editorSetupSwitchIOS(editor) {
-    var coreEditor = <UISwitch>editor.editor;
-    coreEditor.tintColor = colorLight.ios;
-    coreEditor.onTintColor = colorLight.ios;
-    coreEditor.thumbTintColor = colorDark.ios;
-}
-
-export function editorSetupStepperIOS(editor) {
-    editor.valueLabel.textColor = colorDark.ios;
-
-    var coreEditor = <UIStepper>editor.editor;
-    coreEditor.tintColor = colorLight.ios;
-
-    for (var i = 0; i < coreEditor.subviews.count; i++) {
-        if (coreEditor.subviews[i] instanceof UIButton) {
-            coreEditor.subviews[i].imageView.tintColor = colorDark.ios;
-        }
-    }
-
-    var labelDef = editor.gridLayout.definitionForView(editor.valueLabel);
-    labelDef.contentOffset = {
-        horizontal: -64,
-        vertical: 0
-    };
-}
-
 export function editorSetupSegmentedEditorIOS(editor) {
     var coreEditor = <UISegmentedControl>editor.editor;
     coreEditor.tintColor = colorDark.ios;
+}
+
+// >> dataform-styling-advanced
+export function editorSetupSliderAndroid(editor) {
+    editor.getEditorView().getThumb().setColorFilter(new android.graphics.PorterDuffColorFilter(colorDark.android, android.graphics.PorterDuff.Mode.SRC_IN));
+    editor.getEditorView().getProgressDrawable().setColorFilter(new android.graphics.PorterDuffColorFilter(colorLight.android, android.graphics.PorterDuff.Mode.SRC_IN));
 }
 
 export function editorSetupSliderIOS(editor) {
@@ -123,3 +124,4 @@ export function editorSetupSliderIOS(editor) {
     coreEditor.tintColor = colorLight.ios;
     coreEditor.thumbTintColor = colorDark.ios;
 }
+// << dataform-styling-advanced
