@@ -30,11 +30,13 @@
             </df:EntityProperty>
             <df:EntityProperty name="numberOfTickets" displayName="Number of Tickets" index="5">
                 <df:EntityProperty.editor>
+                     <!-- >> dataform-editor-params-xml -->
                     <df:PropertyEditor type="Stepper">
                         <df:PropertyEditor.params>
                             <df:PropertyEditorParams minimum="2" maximum="6" step="1"/>
                         </df:PropertyEditor.params>
                     </df:PropertyEditor>
+                    <!-- << dataform-editor-params-xml -->
                 </df:EntityProperty.editor>
             </df:EntityProperty>
             <df:EntityProperty name="contactName" displayName="Contact Name" index="6">

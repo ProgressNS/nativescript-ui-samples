@@ -3,40 +3,25 @@
 
     <df:RadDataForm id="myDataForm" source="{{ employee }}" >
         <df:RadDataForm.properties>
-            <df:EntityProperty name="name" imageResource="res://ic_dataform_guest" hintText="name" index="0" >
+            <!-- >> dataform-image-labels-xml -->
+            <df:EntityProperty name="name"
+                displayName=""
+                imageResource="res://ic_dataform_guest"
+                hintText="name" index="0" />
+            <!-- << dataform-image-labels-xml -->
+            <df:EntityProperty name="phone" displayName="" imageResource="res://ic_dataform_phone" hintText="phone" index="1" >
                 <df:EntityProperty.editor>
-                    <df:PropertyEditor type="Text">
-                        <df:PropertyEditor.style>
-                            <df:PropertyEditorStyle labelHidden="true"/>
-                        </df:PropertyEditor.style>
-                    </df:PropertyEditor>
-                </df:EntityProperty.editor>
-            </df:EntityProperty>
-            <df:EntityProperty name="phone" imageResource="res://ic_dataform_phone" hintText="phone" index="1" >
-                <df:EntityProperty.editor>
-                    <df:PropertyEditor type="Number">
-                        <df:PropertyEditor.style>
-                            <df:PropertyEditorStyle labelHidden="true"/>
-                        </df:PropertyEditor.style>
-                    </df:PropertyEditor>
+                    <df:PropertyEditor type="Phone"/>
                 </df:EntityProperty.editor>
             </df:EntityProperty>
             <df:EntityProperty name="birthDate" imageResource="res://ic_dataform_calendar" hintText="birth date" index="2" >
                 <df:EntityProperty.editor>
-                    <df:PropertyEditor type="DatePicker">
-                        <df:PropertyEditor.style>
-                            <df:PropertyEditorStyle labelHidden="true"/>
-                        </df:PropertyEditor.style>
-                    </df:PropertyEditor>
+                    <df:PropertyEditor type="DatePicker"/>
                 </df:EntityProperty.editor>
             </df:EntityProperty>
-            <df:EntityProperty name="employeeId" imageResource="res://ic_dataform_table" hintText="employee id" index="3" >
+            <df:EntityProperty name="employeeId" displayName="" imageResource="res://ic_dataform_table" hintText="employee id" index="3" >
                 <df:EntityProperty.editor>
-                    <df:PropertyEditor type="Number">
-                        <df:PropertyEditor.style>
-                            <df:PropertyEditorStyle labelHidden="true"/>
-                        </df:PropertyEditor.style>
-                    </df:PropertyEditor>
+                    <df:PropertyEditor type="Number"/>
                 </df:EntityProperty.editor>
             </df:EntityProperty>
         </df:RadDataForm.properties>        
