@@ -36,11 +36,13 @@ export class ViewModel {
 
     public onAppendSelected(args) {
         this.autocmp.suggestMode = "Append";
+        this.autocmp.completionMode = "StartsWith";
         this.autocmp.resetAutocomplete();
     }
 
     public onSuggestAppendSelected(args) {
         this.autocmp.suggestMode = "SuggestAppend";
+        this.autocmp.completionMode = "StartsWith";
         this.autocmp.resetAutocomplete();
     }
 
