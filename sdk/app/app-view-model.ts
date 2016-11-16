@@ -104,6 +104,11 @@ export class AppViewModel extends observable.Observable {
         this._examples.push({ Id: "62", title: "Transition modes", group: "calendar features", description: "", moduleName: "./calendar/transition-modes/transition-modes" });
         this._examples.push({ Id: "63", title: "Events view modes", group: "calendar features", description: "", moduleName: "./calendar/events-view-modes/events-view-modes" });
         this._examples.push({ Id: "64", title: "Calendar styling", group: "calendar features", description: "", moduleName: "./calendar/cell-styling/cell-styles"});
+
+        this._examples.push({ Id: "65", title: "AutoComplete", group: "controls", description: "Telerik AutoComplete for NativeScript", isControl: true, moduleName: "" });
+        this._examples.push({ Id: "66", title: "Getting Started", group: "autocomplete features", description: "", moduleName: "./autocomplete/getting-started/autocomplete-getting-started" });
+        this._examples.push({ Id: "67", title: "Tokens Layouts", group: "autocomplete features", description: "", moduleName: "./autocomplete/layouts/autocomplete-layout" });
+        this._examples.push({ Id: "68", title: "Customization", group: "autocomplete features", description: "", moduleName: "./autocomplete/customization/autocomplete-customization"});
     }
 
     get examples(): Array<Example> {

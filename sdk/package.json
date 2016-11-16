@@ -2,14 +2,14 @@
   "description": "SDK Samples for UI for NativeScript",
   "license": "SEE LICENSE IN <your-license-filename>",
   "readme": "NativeScript Application",
-   "repository": {
+  "repository": {
     "type": "git",
     "url": "git@github.com/telerik/nativescript-ui-samples.git"
   },
   "nativescript": {
     "id": "org.nativescript.sdk",
     "tns-android": {
-     "version": "2.4.0"
+      "version": "2.4.0"
     },
     "tns-ios": {
       "version": "2.4.0"
