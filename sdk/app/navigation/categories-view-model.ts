@@ -75,6 +75,7 @@ export class NavigationViewModel extends observableModule.Observable {
         this.buildCalendarExamples(parent);
         this.buildFeedbackExamples(parent);
         this.buildDataFormExamples(parent);
+        this.buildAutoCompleteExamples(parent);
     }
 
     private buildFeedbackExamples(currentParent: NavigationItem) {
@@ -381,6 +382,19 @@ export class NavigationViewModel extends observableModule.Observable {
         currentItem.subItems.push(exampleItem);
 
         exampleItem = new NavigationItem("Drawer Over Navigation", "./sidedrawer/over-navigation/drawer-over-navigation", currentItem);
+        currentItem.subItems.push(exampleItem);
+    }
+
+        private buildAutoCompleteExamples(currentParent: NavigationItem) {
+        var currentItem = new NavigationItem("AutoComplete", undefined, currentParent);
+        currentParent.subItems.push(currentItem);
+        var exampleItem = new NavigationItem("Getting started", "./autocomplete/getting-started/autocomplete-getting-started", currentItem);
+        currentItem.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Token Layouts", "./autocomplete/layouts/autocomplete-layout", currentItem);
+        currentItem.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Customization", "./autocomplete/customization/autocomplete-customization", currentItem);
         currentItem.subItems.push(exampleItem);
     }
 
