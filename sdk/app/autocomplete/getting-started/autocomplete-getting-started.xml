@@ -27,5 +27,10 @@
                 </lv:SuggestionView>
             </lv:RadAutoCompleteTextView.suggestionView>
          </lv:RadAutoCompleteTextView>
+        <GridLayout visibility="collapsed">
+        <!-- >> auto-complete-getting-started -->
+         <lv:RadAutoCompleteTextView items="{{ dataItems }}" suggestMode="Suggest" displayMode="Tokens"/>
+         <!-- << auto-complete-getting-started -->
+        </GridLayout>
     </StackLayout>
 </navigation:ExamplePage>
