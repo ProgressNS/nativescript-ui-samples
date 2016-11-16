@@ -10,7 +10,7 @@ declare const UIUserInterfaceIdiomPad: number;
 declare class NSObject { }
 declare class UIDevice extends NSObject {
     static alloc(): UIDevice; // inherited from NSObject
-    static currentDevice(): UIDevice;
+    static currentDevice: UIDevice;
     static new(): UIDevice; // inherited from NSObject
     userInterfaceIdiom: UIUserInterfaceIdiom;
 }
