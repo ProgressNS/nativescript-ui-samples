@@ -19,7 +19,6 @@
                     <Label fontSize="20" text="{{ name }}" marginBottom="8"/>
                     <Label fontSize="14" text="{{ title }}" style="font-weight: bold;"/>
                     <Label fontSize="12" text="{{ text }}"/>
-                    <Button text="Click me" tap="onButtonTap"/>
                 </StackLayout>
             </lv:RadListView.itemTemplate>
             <!-- >> listview-swipe-actions-template-xml -->
