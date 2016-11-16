@@ -24,10 +24,10 @@
             <!-- >> listview-swipe-actions-template-xml -->
             <lv:RadListView.itemSwipeTemplate>
                 <GridLayout columns="auto, *, auto" backgroundColor="White">
-                    <StackLayout id="mark-view" col="0" style="background-color: blue;" tap="onLeftSwipeClick" padding="16">
+                    <StackLayout id="mark-view" col="0" style="background-color: blue;" tap="onLeftSwipeClick" padding="32">
                         <Label text="mark" style="text-size: 20" verticalAlignment="center" horizontalAlignment="center"/>
                     </StackLayout>
-                    <StackLayout id="delete-view" col="2" style="background-color: red;" tap="onRightSwipeClick" padding="16">
+                    <StackLayout id="delete-view" col="2" style="background-color: red;" tap="onRightSwipeClick" padding="32">
                         <Label text="delete" style="text-size: 20" verticalAlignment="center" horizontalAlignment="center"/>
                     </StackLayout>
                 </GridLayout>

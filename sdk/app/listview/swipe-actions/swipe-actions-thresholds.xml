@@ -1,6 +1,5 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui-pro/listview" xmlns="http://www.nativescript.org/tns.xsd">
     <GridLayout orientation="vertical" rows="auto, *">
-        <!-- >> listview-swipe-actions-set-enabled-xml -->
         <lv:RadListView 
             id="listView" 
             items="{{ dataItems }}" 
@@ -10,7 +9,6 @@
             itemSwipeProgressStarted="onSwipeCellStarted" 
             itemSwipeProgressChanged="onCellSwiping" 
             swipeActions="true">
-        <!-- << listview-swipe-actions-set-enabled-xml -->
             <lv:RadListView.listViewLayout>
                 <lv:ListViewLinearLayout scrollDirection="Vertical"/>
             </lv:RadListView.listViewLayout>
@@ -21,9 +19,8 @@
                     <Label fontSize="12" text="{{ text }}"/>
                 </StackLayout>
             </lv:RadListView.itemTemplate>
-            <!-- >> listview-swipe-actions-template-xml -->
             <lv:RadListView.itemSwipeTemplate>
-                <GridLayout columns="auto, *, auto" backgroundColor="White">
+                <GridLayout columns="auto, *, auto" backgroundColor="Green">
                  <StackLayout id="mark-view" col="0" style="background-color: blue;" tap="onLeftSwipeClick" padding="16">
                         <Label text="mark" id="mark-text" style="text-size: 20" verticalAlignment="center" horizontalAlignment="center"/>
                     </StackLayout>
@@ -32,7 +29,6 @@
                     </StackLayout>
                 </GridLayout>
             </lv:RadListView.itemSwipeTemplate>
-            <!-- << listview-swipe-actions-template-xml -->
         </lv:RadListView>
     </GridLayout>
 </navigation:ExamplePage>

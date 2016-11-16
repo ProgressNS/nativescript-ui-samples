@@ -349,6 +349,9 @@ export class NavigationViewModel extends observableModule.Observable {
         exampleItem = new NavigationItem("Animated thresholds", "./listview/swipe-actions/swipe-actions-thresholds", swipeActions);
         swipeActions.subItems.push(exampleItem);
 
+        exampleItem = new NavigationItem("Multiple actions", "./listview/swipe-actions/swipe-actions-multiple", swipeActions);
+        swipeActions.subItems.push(exampleItem);
+
         // Header and footer
         exampleItem = new NavigationItem("Header and Footer", "./listview/header-footer/header-footer", currentItem);
         currentItem.subItems.push(exampleItem);

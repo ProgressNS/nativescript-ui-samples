@@ -5,8 +5,7 @@ import viewModule = require('ui/core/view');
 import frameModule = require("ui/frame");
 import utilsModule = require("utils/utils");
 
-var leftThresholdPassed = false;
-var rightThresholdPassed = false;
+var animationApplied = false;
 
 export function onPageLoaded(args) {
     var page = args.object;
@@ -14,23 +13,14 @@ export function onPageLoaded(args) {
     page.bindingContext = new viewModel.ViewModel();
 }
 
-// >> listview-swipe-action-thresholds
+// >> listview-swipe-action-multiple
 export function onCellSwiping(args: listViewModule.ListViewEventData) {
     var swipeLimits = args.data.swipeLimits;
     var swipeView = args['swipeView'];
     var mainView = args['mainView'];
-    var leftItem = swipeView.getViewById('mark-view');
-    var rightItem = swipeView.getViewById('delete-view');
+    var leftItem = swipeView.getViewById('left-stack');
+    var rightItem = swipeView.getViewById('right-stack');
 
-    if (args.data.x > swipeView.getMeasuredWidth() / 4 && !leftThresholdPassed) {
-        console.log("Notify perform left action");
-        var markLabel = leftItem.getViewById('mark-text');
-        leftThresholdPassed = true;
-    } else if (args.data.x < -swipeView.getMeasuredWidth() / 4 && !rightThresholdPassed) {
-        var deleteLabel = rightItem.getViewById('delete-text');
-        console.log("Notify perform right action");
-        rightThresholdPassed = true;
-    }
     if (args.data.x > 0) {
         var leftDimensions = viewModule.View.measureChild(
             leftItem.parent,
@@ -48,43 +38,33 @@ export function onCellSwiping(args: listViewModule.ListViewEventData) {
         viewModule.View.layoutChild(rightItem.parent, rightItem, mainView.getMeasuredWidth() - rightDimensions.measuredWidth, 0, mainView.getMeasuredWidth(), rightDimensions.measuredHeight);
     }
 }
-// << listview-swipe-action-thresholds
+// << listview-swipe-action-multiple
 
-// >> listview-swipe-action-thresholds-limits
+// >> listview-swipe-action-multiple-limits
 export function onSwipeCellStarted(args: listViewModule.ListViewEventData) {
     var swipeLimits = args.data.swipeLimits;
-    var swipeView = args['object'];
-    var leftItem = swipeView.getViewById('mark-view');
-    var rightItem = swipeView.getViewById('delete-view');
-    swipeLimits.left = swipeLimits.right = args.data.x > 0 ? leftItem.getMeasuredWidth() * 2 : rightItem.getMeasuredWidth() * 2;
-    swipeLimits.threshold = swipeView.getMeasuredWidth();
+    swipeLimits.threshold = args['mainView'].getMeasuredWidth() * 0.2; // 20% of whole width
+    swipeLimits.left = swipeLimits.right = args['mainView'].getMeasuredWidth() * 0.7 //70% of whole width
 }
-// << listview-swipe-action-thresholds-limits
+// << listview-swipe-action-multiple-limits
 
-// >> listview-swipe-actions-execute
 export function onSwipeCellFinished(args: listViewModule.ListViewEventData) {
-    var swipeView = args['object'];
-    var leftItem = swipeView.getViewById('mark-view');
-    var rightItem = swipeView.getViewById('delete-view');
-    if (leftThresholdPassed) {
+    if (args.data.x > 200) {
         console.log("Perform left action");
-    } else if (rightThresholdPassed) {
+    } else if (args.data.x < -200) {
         console.log("Perform right action");
     }
-    leftThresholdPassed = false;
-    rightThresholdPassed = false;
+    animationApplied = false;
 }
-// << listview-swipe-actions-execute
 
 export function onLeftSwipeClick(args: listViewModule.ListViewEventData) {
     var listView = <listViewModule.RadListView>frameModule.topmost().currentPage.getViewById("listView");
-    console.log("Left swipe click");
+    console.log("Button clicked: " + args.object.id + " for item with index: " + listView.items.indexOf(args.object.bindingContext));
     listView.notifySwipeToExecuteFinished();
 }
 
 export function onRightSwipeClick(args) {
     var listView = <listViewModule.RadListView>frameModule.topmost().currentPage.getViewById("listView");
-    console.log("Right swipe click");
-    var viewModel: viewModel.ViewModel = <viewModel.ViewModel>listView.bindingContext;
-    viewModel.dataItems.splice(viewModel.dataItems.indexOf(args.object.bindingContext), 1);
+    console.log("Button clicked: " + args.object.id + " for item with index: " + listView.items.indexOf(args.object.bindingContext));
+    listView.notifySwipeToExecuteFinished();
 }

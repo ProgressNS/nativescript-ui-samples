@@ -33,16 +33,12 @@ export function onSwipeCellStarted(args: listViewModule.ListViewEventData) {
     var rightItem = swipeView.getViewById('delete-view');
     swipeLimits.left = leftItem.getMeasuredWidth();
     swipeLimits.right = rightItem.getMeasuredWidth();
+    swipeLimits.threshold = leftItem.getMeasuredWidth() / 2;
 }
 // << listview-swipe-action-release-limits
 
 // >> listview-swipe-action-release-execute
 export function onSwipeCellFinished(args: listViewModule.ListViewEventData) {
-    if (args.data.x > 200) {
-        console.log("Perform left action");
-    } else if (args.data.x < -200) {
-        console.log("Perform right action");
-    }
 }
 // << listview-swipe-action-release-execute
 
