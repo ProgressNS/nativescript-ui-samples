@@ -7,9 +7,7 @@ import utilsModule = require("utils/utils");
 var dataModel = categoriesViewModel.navigationModel;
 
 export function pageLoaded(args) {
-    if (frameModule.topmost().ios) {
-        frameModule.topmost().ios.controller.interactivePopGestureRecognizer.enabled = false;
-    } else {
+    if (frameModule.topmost().android) {
         var page = args.object;
         var actionBar = page.actionBar === undefined ? new actionBarModule.ActionBar() : page.actionBar;
         actionBar.title = dataModel.currentParent.title;
