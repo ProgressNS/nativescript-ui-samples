@@ -36,6 +36,7 @@
           <Label text="Sent Mail" cssClass="drawerSectionItem" />
           <Label text="Drafts" cssClass="drawerSectionItem" />
         </StackLayout>
+        <Button text="Close Drawer" tap="{{ onCloseDrawerTap }}"/>
       </StackLayout>
       <!-- << (hide) -->
     </drawer:RadSideDrawer.drawerContent>

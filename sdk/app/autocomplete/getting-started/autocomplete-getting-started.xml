@@ -1,0 +1,31 @@
+<navigation:ExamplePage loaded="onPageLoaded" xmlns:au="nativescript-telerik-ui-pro/autocomplete" xmlns:navigation="navigation/example-page" xmlns="http://www.nativescript.org/tns.xsd">
+    <StackLayout ios:backgroundColor="#CDCECE" padding="5">
+        <Label text="SUGGEST MODES"/>
+        <StackLayout orientation="horizontal">
+            <Button  margin="5" text="Suggest" tap="{{onSuggestSelected}}"/>
+            <Button  margin="5" text="Append" tap="{{onAppendSelected}}"/>
+            <Button margin="5" text="Suggest-Append" tap="{{onSuggestAppendSelected}}"/>
+        </StackLayout>
+        <Label text="COMPLETION MODES"/>
+        <StackLayout orientation="horizontal">
+            <Button margin="5" text="StartsWith" tap="{{onStartsWithSelected}}"/>
+            <Button margin="5" text="Contains" tap="{{onContainsSelected}}"/>
+        </StackLayout>
+        <Label text="DISPLAY MODES"/>
+        <StackLayout orientation="horizontal">
+            <Button margin="5" text="Plain" tap="{{onPlainSelected}}"/>
+            <Button margin="5" text="Tokens" tap="{{onTokensSelected}}"/>
+        </StackLayout>
+         <au:RadAutoCompleteTextView id = "autocmp" marginTop="30" items="{{ dataItems }}" suggestMode="Suggest" displayMode="Tokens">
+            <au:RadAutoCompleteTextView.suggestionView>
+                <au:SuggestionView suggestionViewHeight="300">
+                    <au:SuggestionView.suggestionItemTemplate>
+                        <StackLayout orientation="vertical">
+                            <Label text="{{ text }}" marginLeft="10"></Label>
+                        </StackLayout>
+                    </au:SuggestionView.suggestionItemTemplate>
+                </au:SuggestionView>
+            </au:RadAutoCompleteTextView.suggestionView>
+         </au:RadAutoCompleteTextView>
+    </StackLayout>
+</navigation:ExamplePage>

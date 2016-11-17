@@ -1,0 +1,27 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" 
+                        loaded="onPageLoaded" 
+                        navigatedTo="onNavigatedTo"
+                        navigatingFrom="onNavigatedFrom"
+                        xmlns:lv="nativescript-telerik-ui-pro/listview" 
+                        xmlns="http://www.nativescript.org/tns.xsd">
+    <navigation.actionBar>
+        <ActionBar title="Scroll to index">
+            <ActionBar.actionItems>
+                <ios>
+                    <ActionItem text="Options" ios.position="right" tap="{{onOptionsTapped}}" />
+                </ios>
+            </ActionBar.actionItems>
+        </ActionBar>
+    </navigation.actionBar>
+    <GridLayout rows="auto, *">
+        <Button text="Scroll to index 50" tap="onTap"/>
+        <lv:RadListView items="{{ dataItems }}" scrollPosition="{{ myScrollPosition }}" row="1" id="listView">
+            <lv:RadListView.listViewLayout>
+                <lv:ListViewLinearLayout scrollDirection="Vertical" itemHeight="50"/>
+            </lv:RadListView.listViewLayout>
+            <lv:RadListView.itemTemplate>
+                <Label fontSize="20" text="{{ itemName }}" marginLeft="20"/>
+            </lv:RadListView.itemTemplate>
+        </lv:RadListView>
+    </GridLayout>
+</navigation:ExamplePage>

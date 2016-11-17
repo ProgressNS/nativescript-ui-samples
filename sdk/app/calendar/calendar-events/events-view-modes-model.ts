@@ -51,7 +51,7 @@ export class ViewModel extends observableModule.Observable {
         } else if (index == 1) {
             this.eventsMode = calendarModule.CalendarEventsViewMode.Inline;
         } else {
-            if (UIDevice.currentDevice().userInterfaceIdiom === UIUserInterfaceIdiomPad) {
+            if (UIDevice.currentDevice.userInterfaceIdiom === UIUserInterfaceIdiomPad) {
                 this.eventsMode = calendarModule.CalendarEventsViewMode.Popover;
             } else {
                 let prevIndex = 0;

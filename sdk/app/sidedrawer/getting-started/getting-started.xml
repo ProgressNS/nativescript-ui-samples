@@ -27,6 +27,7 @@
                 <Label text="Sent Mail" cssClass="drawerSectionItem" />
                 <Label text="Drafts" cssClass="drawerSectionItem" />
               </StackLayout>
+              <Button text="Close Drawer" tap="{{ onCloseDrawerTap }}"/>
             </StackLayout>
           </drawer:RadSideDrawer.drawerContent>
         </drawer:RadSideDrawer>
@@ -34,6 +35,7 @@
 
     <StackLayout >
       <Label text="{{ mainContentText }}" textWrap="true" cssClass="drawerContentText"/>
+      <Button text="Open drawer" tap="{{ onOpenDrawerTap }}" cssClass="drawerContentButton"/>
     </StackLayout>
 </navigation:ExampleDrawerPage>
 <!-- << sidedrawer-getting-started-xml -->

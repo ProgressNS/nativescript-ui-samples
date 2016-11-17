@@ -1,6 +1,7 @@
 export class UserViewModel {
 
     private _user: User;
+    private _advancedUser: AdvancedUser;
 
     constructor() {
     }
@@ -11,6 +12,13 @@ export class UserViewModel {
         }
         return this._user;
     }
+
+    get advancedUser() {
+        if (!this._advancedUser) {
+            this._advancedUser = new AdvancedUser();
+        }
+        return this._advancedUser;
+    }
 }
 
 export class User {
@@ -19,5 +27,14 @@ export class User {
     public email: string = "";
 
     constructor() {
+    }
+}
+
+export class AdvancedUser extends User {
+    public phoneNumber: string = "";
+    public id: number = null;
+
+    constructor() {
+        super();
     }
 }

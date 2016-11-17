@@ -10,7 +10,7 @@
         </chart:RadPieChart.series>
         
         <chart:RadPieChart.legend>
-            <chart:RadLegendView position="Floating" offsetOrigin="TopRight"  width="110"/>
+            <chart:RadLegendView position="Right" offsetOrigin="TopRight"  width="110"/>
         </chart:RadPieChart.legend>
     </chart:RadPieChart>
   
@@ -21,7 +21,7 @@
         </chart:RadPieChart.series>
         
         <chart:RadPieChart.legend>
-            <chart:RadLegendView position="Floating" offsetOrigin="TopRight"  width="110"/>
+            <chart:RadLegendView position="Right" offsetOrigin="TopRight"  width="110"/>
         </chart:RadPieChart.legend>  
     </chart:RadPieChart>   
     </GridLayout>

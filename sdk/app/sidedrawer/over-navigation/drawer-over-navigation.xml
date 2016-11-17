@@ -3,9 +3,6 @@
     xmlns:dpg="nativescript-telerik-ui-pro/sidedrawer/drawerpage"
     xmlns:drawer="nativescript-telerik-ui-pro/sidedrawer"
     xmlns="http://www.nativescript.org/tns.xsd">
-  <navigation.actionBar>
-      <ActionBar title="Drawer Over Navigation" />
-  </navigation.actionBar>
 
 <!-- >> sidedrawer-over-navigation-drawer -->
   <dpg:DrawerPage.sideDrawer>
@@ -27,6 +24,7 @@
               <Label text="Drafts" cssClass="drawerSectionItem" />
             </StackLayout>
           </ScrollView>
+          <Button text="Close Drawer" tap="{{ closeDrawer }}"/>
         </StackLayout>
       </drawer:RadSideDrawer.drawerContent>
     </drawer:RadSideDrawer> 
@@ -35,6 +33,7 @@
 
     <StackLayout cssClass="mainContent">
         <Label text="{{ exampleText }}" textWrap="true" cssClass="drawerContentText"/>
+        <Button text="Open drawer" tap="{{ onOpenDrawerTap }}" cssClass="drawerContentButton"/>
     </StackLayout>
 </dpg:DrawerPage>
 <!-- << sidedrawer-over-navigation -->
