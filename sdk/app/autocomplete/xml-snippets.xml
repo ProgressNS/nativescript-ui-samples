@@ -6,23 +6,23 @@ xmlns:au="nativescript-telerik-ui-pro/autocomplete"
 <!-- << autocomplete-import -->
 
 <!-- >> autocomplete-getting-started -->
-    <lv:RadAutoCompleteTextView items="{{ dataItems }}"/>
+<au:RadAutoCompleteTextView items="{{ dataItems }}"/>
 <!-- << autocomplete-getting-started -->
 
 <!-- >> autocomplete-completion-mode -->
-    <lv:RadAutoCompleteTextView completionMode="Contains"/>
+<au:RadAutoCompleteTextView completionMode="Contains"/>
 <!-- << autocomplete-completion-mode -->
 
 <!-- >> autocomplete-suggest-mode -->
-<lv:RadAutoCompleteTextView suggestMode="Append"/>
+<au:RadAutoCompleteTextView suggestMode="Append"/>
 <!-- << autocomplete-suggest-mode -->
 
 <!-- >> autocomplete-layout-mode -->
-<lv:RadAutoCompleteTextView layoutMode="Wrap"/>
+<au:RadAutoCompleteTextView layoutMode="Wrap"/>
 <!-- << autocomplete-layout-mode -->
 
 <!-- >> autocomplete-display-mode -->
-<lv:RadAutoCompleteTextView displayMode="Tokens"/>
+<au:RadAutoCompleteTextView displayMode="Tokens"/>
 <!-- << autocomplete-display-mode -->
 
 <!-- >> autocomplete-suggestion-view-xml -->
