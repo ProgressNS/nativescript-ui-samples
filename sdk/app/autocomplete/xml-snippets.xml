@@ -1,5 +1,10 @@
 <navigation:ExamplePage loaded="onPageLoaded"  xmlns:navigation="navigation/example-page" xmlns:lv="nativescript-telerik-ui-pro/autocomplete" xmlns="http://www.nativescript.org/tns.xsd">
     <StackLayout>
+        
+<!-- >> autocomplete-import -->
+xmlns:au="nativescript-telerik-ui-pro/autocomplete"
+<!-- << autocomplete-import -->
+
 <!-- >> autocomplete-getting-started -->
     <lv:RadAutoCompleteTextView items="{{ dataItems }}"/>
 <!-- << autocomplete-getting-started -->
@@ -19,6 +24,18 @@
 <!-- >> autocomplete-display-mode -->
 <lv:RadAutoCompleteTextView displayMode="Tokens"/>
 <!-- << autocomplete-display-mode -->
+
+<!-- >> autocomplete-suggestion-view-xml -->
+<au:RadAutoCompleteTextView.suggestionView>
+    <au:SuggestionView suggestionViewHeight="300">
+        <au:SuggestionView.suggestionItemTemplate>
+            <StackLayout orientation="vertical">
+                <Label text="{{ text }}"></Label>
+            </StackLayout>
+        </au:SuggestionView.suggestionItemTemplate>
+    </au:SuggestionView>
+</au:RadAutoCompleteTextView.suggestionView>
+<!-- << autocomplete-suggestion-view-xml -->
 
     </StackLayout>
 </navigation:ExamplePage>
