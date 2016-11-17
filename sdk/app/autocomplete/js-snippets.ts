@@ -19,7 +19,7 @@ export class ViewModel {
         this._items = new ObservableArray<autocompleteModule.TokenModel>();
 
         for (var i = 0; i < this.countries.length; i++) {
-            this._items.push(new autocompleteModule.TokenModel(this.countries[i]));
+            this._items.push(new autocompleteModule.TokenModel(this.countries[i],undefined));
         }
     }
 }
