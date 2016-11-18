@@ -1,11 +1,41 @@
 <navigation:ExamplePage loaded="onPageLoaded"  xmlns:navigation="navigation/example-page" xmlns:lv="nativescript-telerik-ui-pro/autocomplete" xmlns="http://www.nativescript.org/tns.xsd">
     <StackLayout>
-<!-- >> auto-complete-getting-started -->
-    <lv:RadAutoCompleteTextView items="{{ dataItems }}" suggestMode="Suggest" displayMode="Tokens"/>
-<!-- << auto-complete-getting-started -->
+        
+<!-- >> autocomplete-import -->
+xmlns:au="nativescript-telerik-ui-pro/autocomplete"
+<!-- << autocomplete-import -->
 
-<!-- >> auto-complete-getting-started -->
-    <lv:RadAutoCompleteTextView completionMode="Contains"/>
-<!-- << auto-complete-getting-started -->
+<!-- >> autocomplete-getting-started -->
+<au:RadAutoCompleteTextView items="{{ dataItems }}"/>
+<!-- << autocomplete-getting-started -->
+
+<!-- >> autocomplete-completion-mode -->
+<au:RadAutoCompleteTextView completionMode="Contains"/>
+<!-- << autocomplete-completion-mode -->
+
+<!-- >> autocomplete-suggest-mode -->
+<au:RadAutoCompleteTextView suggestMode="Append"/>
+<!-- << autocomplete-suggest-mode -->
+
+<!-- >> autocomplete-layout-mode -->
+<au:RadAutoCompleteTextView layoutMode="Wrap"/>
+<!-- << autocomplete-layout-mode -->
+
+<!-- >> autocomplete-display-mode -->
+<au:RadAutoCompleteTextView displayMode="Tokens"/>
+<!-- << autocomplete-display-mode -->
+
+<!-- >> autocomplete-suggestion-view-xml -->
+<au:RadAutoCompleteTextView.suggestionView>
+    <au:SuggestionView suggestionViewHeight="300">
+        <au:SuggestionView.suggestionItemTemplate>
+            <StackLayout orientation="vertical">
+                <Label text="{{ text }}"></Label>
+            </StackLayout>
+        </au:SuggestionView.suggestionItemTemplate>
+    </au:SuggestionView>
+</au:RadAutoCompleteTextView.suggestionView>
+<!-- << autocomplete-suggestion-view-xml -->
+
     </StackLayout>
 </navigation:ExamplePage>

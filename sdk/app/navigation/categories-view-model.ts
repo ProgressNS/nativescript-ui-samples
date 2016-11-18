@@ -386,15 +386,12 @@ export class NavigationViewModel extends observableModule.Observable {
     }
 
         private buildAutoCompleteExamples(currentParent: NavigationItem) {
-        var currentItem = new NavigationItem("AutoComplete", undefined, currentParent);
+        var currentItem = new NavigationItem("AutoCompleteTextView(Beta)", undefined, currentParent);
         currentParent.subItems.push(currentItem);
         var exampleItem = new NavigationItem("Getting started", "./autocomplete/getting-started/autocomplete-getting-started", currentItem);
         currentItem.subItems.push(exampleItem);
 
         exampleItem = new NavigationItem("Token Layouts", "./autocomplete/layouts/autocomplete-layout", currentItem);
-        currentItem.subItems.push(exampleItem);
-
-        exampleItem = new NavigationItem("Customization", "./autocomplete/customization/autocomplete-customization", currentItem);
         currentItem.subItems.push(exampleItem);
     }
 

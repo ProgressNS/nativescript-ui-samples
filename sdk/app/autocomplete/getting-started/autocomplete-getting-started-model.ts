@@ -25,7 +25,7 @@ export class ViewModel {
         this._items = new ObservableArray<autocompleteModule.TokenModel>();
 
         for (var i = 0; i < this.countries.length; i++) {
-            this._items.push(new autocompleteModule.TokenModel(this.countries[i]));
+            this._items.push(new autocompleteModule.TokenModel(this.countries[i],undefined));
         }
     }
 
@@ -36,11 +36,13 @@ export class ViewModel {
 
     public onAppendSelected(args) {
         this.autocmp.suggestMode = "Append";
+        this.autocmp.completionMode = "StartsWith";
         this.autocmp.resetAutocomplete();
     }
 
     public onSuggestAppendSelected(args) {
         this.autocmp.suggestMode = "SuggestAppend";
+        this.autocmp.completionMode = "StartsWith";
         this.autocmp.resetAutocomplete();
     }
 
