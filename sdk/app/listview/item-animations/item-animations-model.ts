@@ -7,10 +7,12 @@ import frameModule = require("ui/frame");
 export class ViewModel extends observableModule.Observable {
     private _items;
     private _animations;
+    private _itemsCount;
 
     constructor() {
         super();
         this.initDataItems();
+        this._itemsCount = 0;
         this._animations = {
             options: ["Default", "Fade", "Scale", "Slide"],
             index: 0
@@ -22,8 +24,8 @@ export class ViewModel extends observableModule.Observable {
     }
 
     public onAddItemClick(args: listViewModule.ListViewEventData) {
-        var id = Math.round(Math.random() * 100);
-        this._items.push(new DataItem(id, "This is a new item: " + id, "This is the new item's description."));
+        this._items.push(new DataItem(this._itemsCount, "This is a new item: " + this._itemsCount, "This is the new item's description."));
+        this._itemsCount++;
     }
 
     public onResetClick(args: listViewModule.ListViewEventData) {
@@ -34,7 +36,6 @@ export class ViewModel extends observableModule.Observable {
 
     public onUpdateItemClick(args: listViewModule.ListViewEventData) {
         for (var index = 0; index < this._items.length; index++) {
-            this._items.getItem(index).id = Math.random() * 100;
             this._items.getItem(index).itemName = "This is an updated item";
             this._items.getItem(index).itemDescription = "This is the updated item's description.";
         }
