@@ -32,6 +32,7 @@ export class ViewModel extends observableModule.Observable {
         while (this._items.length) {
             this._items.pop();
         }
+        this._itemsCount = 0;
     }
 
     public onUpdateItemClick(args: listViewModule.ListViewEventData) {
