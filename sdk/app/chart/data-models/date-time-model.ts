@@ -18,6 +18,5 @@ export class DateTimeDataModel  {
             { timeStamp: new Date(2015,10,3).getTime(), Amount: 6 },
            
         ]
-    }
-// << date-axis-source-date-format
+    }// << date-axis-source-date-format
 }
