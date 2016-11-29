@@ -138,8 +138,12 @@ export class NavigationViewModel extends observableModule.Observable {
         dataFormExample = new NavigationItem("Editors", "./dataform/editors/editors", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
-        dataFormExample = new NavigationItem("Validators", "./dataform/validation/validation", dataFormRoot);
-        dataFormRoot.subItems.push(dataFormExample);
+        var validation = new NavigationItem("Validation", undefined, dataFormRoot);
+        dataFormRoot.subItems.push(validation);
+        var selectionExample = new NavigationItem("Validators", "./dataform/validation/validation", validation);
+        validation.subItems.push(selectionExample);
+        var selectionExample = new NavigationItem("Check 'Validation State'", "./dataform/validation/check-errors/check-errors", validation);
+        validation.subItems.push(selectionExample);
 
         dataFormExample = new NavigationItem("Commit Modes", "./dataform/commit-modes/commit-modes", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
