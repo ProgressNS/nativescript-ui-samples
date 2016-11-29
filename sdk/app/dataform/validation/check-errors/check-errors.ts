@@ -16,5 +16,5 @@ export function onPageLoaded(args) {
 
 export function checkErrors() {
     var hasErrors = dataForm.hasValidationErrors();
-    resultLabel.text = "hasValidationErrors: " + hasErrors;
+    resultLabel.text = hasErrors.toString();
 }
