@@ -6,11 +6,8 @@
                 <au:SuggestionView suggestionViewHeight="300">
                     <au:SuggestionView.suggestionItemTemplate>
                         <StackLayout orientation="horizontal" padding="5">
-                            <f:FrescoDrawee
-                            horizontalAlignment="stretch"
-                            height="50"
-                            imageUri="{{ image }}"/>
-                            <Label text="{{ text }}" marginLeft="5"></Label>
+                            <Image src="{{ image }}" width="50"/>
+                            <Label text="{{ text }}" marginLeft="5" marginTop="15"></Label>
                         </StackLayout>
                     </au:SuggestionView.suggestionItemTemplate>
                 </au:SuggestionView>
