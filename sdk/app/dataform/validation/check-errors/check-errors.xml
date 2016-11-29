@@ -1,6 +1,6 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-telerik-ui-pro/dataform" xmlns="http://www.nativescript.org/tns.xsd">
      <GridLayout rows="auto, auto, *">
-        <Button text="Check" row="0" cssClass="normalButton" tap="checkErrors"/>
+        <Button text="Check" row="0" tap="checkErrors"/>
         <Label id="resultLabel" text="hasValidationErrors: " row="1" margin="20"/>
             <df:RadDataForm id="myDataForm" source="{{ advancedUser }}" row="2">
                 <df:RadDataForm.properties>
