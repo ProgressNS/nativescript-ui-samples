@@ -412,6 +412,9 @@ export class NavigationViewModel extends observableModule.Observable {
 
         exampleItem = new NavigationItem("Scales", "./gauges/scales/scales", currentItem);
         currentItem.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Customization", "./gauges/customization/customization", currentItem);
+        currentItem.subItems.push(exampleItem);
     }
 
     public canMoveBack(): boolean {
