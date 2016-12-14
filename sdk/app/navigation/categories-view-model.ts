@@ -400,6 +400,9 @@ export class NavigationViewModel extends observableModule.Observable {
 
         exampleItem = new NavigationItem("Customization", "./autocomplete/customization/autocomplete-customization", currentItem);
         currentItem.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Events", "./autocomplete/events/autocomplete-events", currentItem);
+        currentItem.subItems.push(exampleItem);
     }
 
     public canMoveBack(): boolean {
