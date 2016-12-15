@@ -8,9 +8,9 @@
             <df:EntityProperty name="age">
                 <df:EntityProperty.editor>
                     <df:CustomPropertyEditor 
-                        createView="createView" 
-                        applyValueToEditor="applyValueToEditor" 
-                        getValueFromEditor="getValueFromEditor"/>
+                        editorNeedsView="editorNeedsView" 
+                        editorHasToApplyValue="editorHasToApplyValue" 
+                        editorNeedsValue="editorNeedsValue"/>
                 </df:EntityProperty.editor>
             </df:EntityProperty>
             <!-- << dataform-editor-custom-xml -->
