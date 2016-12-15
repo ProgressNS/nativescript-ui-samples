@@ -4,6 +4,7 @@
     <df:RadDataForm id="myDataForm" source="{{ person }}">
         <df:RadDataForm.properties>
             <df:EntityProperty name="name"/>
+            <!-- >> dataform-editor-custom-xml -->
             <df:EntityProperty name="age">
                 <df:EntityProperty.editor>
                     <df:CustomPropertyEditor 
@@ -12,6 +13,7 @@
                         getValueFromEditor="getValueFromEditor"/>
                 </df:EntityProperty.editor>
             </df:EntityProperty>
+            <!-- << dataform-editor-custom-xml -->
             <df:EntityProperty name="birthDate">
                 <df:EntityProperty.editor>
                     <df:PropertyEditor type="DatePicker" />

@@ -4,9 +4,9 @@ export function onPageLoaded(args) {
     page.bindingContext = new viewModel.PersonBaseViewModel();
 }
 
+// >> dataform-custom-editors-android
 var buttonValue;
-
-export function createView(args: any) {
+export function editorNeedsView(args: any) {
     var editorView: android.widget.Button = new android.widget.Button(args.context);
     editorView.setOnClickListener(new android.view.View.OnClickListener({
         onClick(view: android.view.View) {
@@ -16,13 +16,13 @@ export function createView(args: any) {
     args.view = editorView;
 }
 
-export function applyValueToEditor(args: any) {
+export function editorHasToApplyValue(args: any) {
     var editorView = args.view;
     var value = args.value;
     updateEditorValue(editorView, value);
 }
 
-export function getValueFromEditor(args: any) {
+export function editorNeedsValue(args: any) {
     args.value = buttonValue;
 }
 
@@ -36,3 +36,4 @@ export function handleTap(editorView, editor) {
     updateEditorValue(editorView, newValue);
     editor.notifyValueChanged();
 }
+// << dataform-custom-editors-android

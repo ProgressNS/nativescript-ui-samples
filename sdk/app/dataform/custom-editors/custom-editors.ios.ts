@@ -1,13 +1,13 @@
 import viewModel = require("./../view-models/person-base-model");
 import dataFormModule = require("nativescript-telerik-ui-pro/dataform");
 
-var buttonEditorHelper;
-
 export function onPageLoaded(args) {
     var page = args.object;
     page.bindingContext = new viewModel.PersonBaseViewModel();
 }
 
+// >> dataform-custom-editors-ios
+var buttonEditorHelper;
 export function createView(args: any) {
     buttonEditorHelper = new ButtonEditorHelper();
     buttonEditorHelper.editor = args.object;
@@ -48,7 +48,9 @@ export class ButtonEditorHelper extends NSObject
         this.editor.notifyValueChanged();
     }
 
+    // The handleTap method will be exposed so it can be called from native.
     public static ObjCExposedMethods = {
         "handleTap:": { returns: interop.types.void, params: [ UIView.class() ] }
     };
 }
+// << dataform-custom-editors-ios
