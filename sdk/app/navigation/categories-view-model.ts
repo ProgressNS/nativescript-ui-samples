@@ -151,6 +151,9 @@ export class NavigationViewModel extends observableModule.Observable {
         dataFormExample = new NavigationItem("Groups", "./dataform/groups/groups", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
+        dataFormExample = new NavigationItem("Custom Editors", "./dataform/custom-editors/custom-editors", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
         dataFormExample = new NavigationItem("Events", "./dataform/events/events", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
