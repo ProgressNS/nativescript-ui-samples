@@ -8,7 +8,7 @@ export function onPageLoaded(args) {
 
 // >> dataform-custom-editors-ios
 var buttonEditorHelper;
-export function createView(args: any) {
+export function editorNeedsView(args: any) {
     buttonEditorHelper = new ButtonEditorHelper();
     buttonEditorHelper.editor = args.object;
 
@@ -18,13 +18,13 @@ export function createView(args: any) {
     args.view = editorView;
 }
 
-export function applyValueToEditor(args: any) {
+export function editorHasToApplyValue(args: any) {
     var editorView = args.view;
     var value = args.value;
     buttonEditorHelper.updateEditorValue(editorView, value);
 }
 
-export function getValueFromEditor(args: any) {
+export function editorNeedsValue(args: any) {
     args.value = buttonEditorHelper.getButtonValue();
 }
 
@@ -48,7 +48,6 @@ export class ButtonEditorHelper extends NSObject
         this.editor.notifyValueChanged();
     }
 
-    // The handleTap method will be exposed so it can be called from native.
     public static ObjCExposedMethods = {
         "handleTap:": { returns: interop.types.void, params: [ UIView.class() ] }
     };
