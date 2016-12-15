@@ -37,5 +37,8 @@ xmlns:au="nativescript-telerik-ui-pro/autocomplete"
 </au:RadAutoCompleteTextView.suggestionView>
 <!-- << autocomplete-suggestion-view-xml -->
 
+<!-- >> autocomplete-events-xml -->
+<au:RadAutoCompleteTextView items="{{ dataItems }}" displayMode="Tokens" tokenAdded="{{ onTokenAdded}}">
+<!-- << autocomplete-events-xml -->
     </StackLayout>
 </navigation:ExamplePage>

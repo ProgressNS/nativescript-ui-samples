@@ -1,6 +1,7 @@
 // >> autocomplete-generate-data
 import {ObservableArray} from "data/observable-array";
 import autocompleteModule = require("nativescript-telerik-ui-pro/autocomplete");
+import observableModule = require("ui/core/dependency-observable");
 
 export class ViewModel {
 
@@ -24,3 +25,11 @@ export class ViewModel {
     }
 }
 // << autocomplete-generate-data
+
+// >> autocomplete-events-ts
+export class EventsViewModel extends observableModule.DependencyObservable {
+     public onTokenAdded(args) {
+        this.set("eventName", "Token Added!");
+    }
+}
+// << autocomplete-events-ts
