@@ -8,38 +8,31 @@ export function onPageLoaded(args) {
 
 // >> dataform-custom-editors-ios
 var buttonEditorHelper;
-export function editorNeedsView(args: any) {
+export function editorNeedsView(args) {
     buttonEditorHelper = new ButtonEditorHelper();
     buttonEditorHelper.editor = args.object;
-
     var editorView = UIButton.buttonWithType(UIButtonType.System);
     editorView.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Left;
     editorView.addTargetActionForControlEvents(buttonEditorHelper, "handleTap:", UIControlEvents.TouchUpInside);
     args.view = editorView;
 }
 
-export function editorHasToApplyValue(args: any) {
-    var editorView = args.view;
-    var value = args.value;
-    buttonEditorHelper.updateEditorValue(editorView, value);
+export function editorHasToApplyValue(args) {
+    buttonEditorHelper.updateEditorValue(args.view, args.value);
 }
 
-export function editorNeedsValue(args: any) {
-    args.value = buttonEditorHelper.getButtonValue();
+export function editorNeedsValue(args) {
+    args.value = buttonEditorHelper.buttonValue;
 }
 
 export class ButtonEditorHelper extends NSObject 
 {    
-    private buttonValue: number;
+    public buttonValue: number;
     public editor: dataFormModule.CustomPropertyEditor;
 
     public updateEditorValue(editorView, newValue) {
         this.buttonValue = newValue;
         editorView.setTitleForState(this.buttonValue + " (tap to increase)", UIControlState.Normal);
-    }
-
-    public getButtonValue() : number {
-        return this.buttonValue;
     }
 
     public "handleTap:"(sender) {

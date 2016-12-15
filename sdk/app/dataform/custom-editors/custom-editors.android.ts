@@ -6,7 +6,7 @@ export function onPageLoaded(args) {
 
 // >> dataform-custom-editors-android
 var buttonValue;
-export function editorNeedsView(args: any) {
+export function editorNeedsView(args) {
     var editorView: android.widget.Button = new android.widget.Button(args.context);
     editorView.setOnClickListener(new android.view.View.OnClickListener({
         onClick(view: android.view.View) {
@@ -16,13 +16,11 @@ export function editorNeedsView(args: any) {
     args.view = editorView;
 }
 
-export function editorHasToApplyValue(args: any) {
-    var editorView = args.view;
-    var value = args.value;
-    updateEditorValue(editorView, value);
+export function editorHasToApplyValue(args) {
+    updateEditorValue(args.view, args.value);
 }
 
-export function editorNeedsValue(args: any) {
+export function editorNeedsValue(args) {
     args.value = buttonValue;
 }
 
