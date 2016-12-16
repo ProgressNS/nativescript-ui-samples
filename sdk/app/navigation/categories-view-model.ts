@@ -415,6 +415,9 @@ export class NavigationViewModel extends observableModule.Observable {
 
         exampleItem = new NavigationItem("Customization", "./gauges/customization/customization", currentItem);
         currentItem.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Animations", "./gauges/animations/animations", currentItem);
+        currentItem.subItems.push(exampleItem);
     }
 
     public canMoveBack(): boolean {

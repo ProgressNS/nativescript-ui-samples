@@ -1,5 +1,5 @@
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:gauge="nativescript-telerik-ui-pro/gauges" xmlns="http://www.nativescript.org/tns.xsd">
-    <gauge:RadRadialGaugeView>
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" navigatedTo="onNavigatedTo" xmlns:gauge="nativescript-telerik-ui-pro/gauges" xmlns="http://www.nativescript.org/tns.xsd">
+    <gauge:RadRadialGaugeView id="gaugeView">
 
         <gauge:RadRadialGaugeView.scales>
 
@@ -11,13 +11,13 @@
                 <gauge:RadialScale.indicators>
                     <gauge:RadialBarIndicator minimum="0" maximum="100" location="0.5">
                         <gauge:RadialBarIndicator.style>
-                            <gauge:BarIndicatorStyle fillColor="rgba(224,151,36, 0.5)" barWidth="0.2"/>
+                            <gauge:BarIndicatorStyle fillColor="rgba(224,151,36,0.5)" barWidth="0.2"/>
                         </gauge:RadialBarIndicator.style>
                     </gauge:RadialBarIndicator>
 
-                    <gauge:RadialBarIndicator minimum="0" maximum="65" location="0.5" isAnimated="true">
+                    <gauge:RadialBarIndicator minimum="0" maximum="0" location="0.5" isAnimated="true">
                         <gauge:RadialBarIndicator.style>
-                            <gauge:BarIndicatorStyle cap="Round" fillColor="rgba(224,151,36, 1)" barWidth="0.2"/>
+                            <gauge:BarIndicatorStyle cap="Round" fillColor="rgba(224,151,36,1)" barWidth="0.2"/>
                         </gauge:RadialBarIndicator.style>
                     </gauge:RadialBarIndicator>
 
@@ -27,9 +27,9 @@
                         </gauge:RadialBarIndicator.style>
                     </gauge:RadialBarIndicator>
 
-                    <gauge:RadialBarIndicator minimum="0" maximum="45" location="0.75" isAnimated="true">
+                    <gauge:RadialBarIndicator minimum="0" maximum="0" location="0.75" isAnimated="true">
                         <gauge:RadialBarIndicator.style>
-                            <gauge:BarIndicatorStyle cap="Round" fillColor="rgba(196,241,57, 1)" barWidth="0.2"/>
+                            <gauge:BarIndicatorStyle cap="Round" fillColor="rgba(196,241,57,1)" barWidth="0.2"/>
                         </gauge:RadialBarIndicator.style>
                     </gauge:RadialBarIndicator>
 
@@ -39,9 +39,9 @@
                         </gauge:RadialBarIndicator.style>
                     </gauge:RadialBarIndicator>
 
-                    <gauge:RadialBarIndicator minimum="0" maximum="75" location="1" isAnimated="true">
+                    <gauge:RadialBarIndicator minimum="0" maximum="0" location="1" isAnimated="true">
                         <gauge:RadialBarIndicator.style>
-                            <gauge:BarIndicatorStyle cap="Round" fillColor="rgba(132,235,247, 1)" barWidth="0.2"/>
+                            <gauge:BarIndicatorStyle cap="Round" fillColor="rgba(132,235,247,1)" barWidth="0.2"/>
                         </gauge:RadialBarIndicator.style>
                     </gauge:RadialBarIndicator>
 
