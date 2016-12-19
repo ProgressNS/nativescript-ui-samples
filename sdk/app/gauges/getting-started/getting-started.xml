@@ -1,6 +1,9 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:gauge="nativescript-telerik-ui-pro/gauges" xmlns="http://www.nativescript.org/tns.xsd">
-    <gauge:RadRadialGaugeView> 
-        <gauge:RadRadialGaugeView.scales>
+    <!-- >> gauges-getting-started-add -->
+    <gauge:RadRadialGauge> 
+        <!-- >> (hide) -->
+        <!-- >> gauges-getting-started-add-scale-indicators -->
+        <gauge:RadRadialGauge.scales>
 
             <gauge:RadialScale minimum="0" maximum="6" radius="0.90">
                 <gauge:RadialScale.style>
@@ -42,8 +45,9 @@
                 </gauge:RadialScale.indicators>
             </gauge:RadialScale>
 
-        </gauge:RadRadialGaugeView.scales>
-
-
-    </gauge:RadRadialGaugeView>
+        </gauge:RadRadialGauge.scales>
+        <!-- <<>> gauges-getting-started-add-scale-indicators -->
+        <!-- << (hide) -->
+    </gauge:RadRadialGauge>
+    <!-- << gauges-getting-started-add -->
 </navigation:ExamplePage>

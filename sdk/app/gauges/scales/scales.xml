@@ -1,15 +1,15 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:gauge="nativescript-telerik-ui-pro/gauges" xmlns="http://www.nativescript.org/tns.xsd">
-    <gauge:RadRadialGaugeView title="celsius" subtitle="fahrenheit">
-
-        <gauge:RadRadialGaugeView.titleStyle>
+    <gauge:RadRadialGauge title="celsius" subtitle="fahrenheit">
+        
+        <gauge:RadRadialGauge.titleStyle>
             <gauge:TitleStyle textColor="gray" ios:textSize="12" ios:verticalOffset="30" android:verticalOffset="90" />
-        </gauge:RadRadialGaugeView.titleStyle>
+        </gauge:RadRadialGauge.titleStyle>
 
-        <gauge:RadRadialGaugeView.subtitleStyle>
+        <gauge:RadRadialGauge.subtitleStyle>
             <gauge:SubtitleStyle textColor="gray" />
-        </gauge:RadRadialGaugeView.subtitleStyle>
+        </gauge:RadRadialGauge.subtitleStyle>
 
-        <gauge:RadRadialGaugeView.scales>
+        <gauge:RadRadialGauge.scales>
 
             <gauge:RadialScale minimum="34" maximum="40" radius="0.6">
                 <gauge:RadialScale.style>
@@ -44,8 +44,8 @@
                 </gauge:RadialScale.style>
             </gauge:RadialScale>
 
-        </gauge:RadRadialGaugeView.scales>
+        </gauge:RadRadialGauge.scales>
 
 
-    </gauge:RadRadialGaugeView>
+    </gauge:RadRadialGauge>
 </navigation:ExamplePage>

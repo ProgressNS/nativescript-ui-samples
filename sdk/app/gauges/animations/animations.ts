@@ -4,7 +4,7 @@ import gaugesModule = require("nativescript-telerik-ui-pro/gauges");
 var needle: gaugesModule.RadialNeedle;
 export function onNavigatedTo(args) {
     
-    let gauge: gaugesModule.RadRadialGaugeView = <gaugesModule.RadRadialGaugeView>frameModule.topmost().getViewById("gaugeView");
+    let gauge: gaugesModule.RadRadialGauge = <gaugesModule.RadRadialGauge>frameModule.topmost().getViewById("gaugeView");
     console.log(gauge);
     let scale: gaugesModule.RadialScale = <gaugesModule.RadialScale>gauge.scales.getItem(0);
     needle = <gaugesModule.RadialNeedle>scale.indicators.getItem(scale.indicators.length - 1);

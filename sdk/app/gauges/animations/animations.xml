@@ -1,11 +1,11 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" navigatedTo="onNavigatedTo" xmlns:gauge="nativescript-telerik-ui-pro/gauges" xmlns="http://www.nativescript.org/tns.xsd">
     <GridLayout rows="*, auto">
-        <gauge:RadRadialGaugeView id="gaugeView" title="km/h" row="0">
-            <gauge:RadRadialGaugeView.titleStyle>
+        <gauge:RadRadialGauge id="gaugeView" title="km/h" row="0">
+            <gauge:RadRadialGauge.titleStyle>
                 <gauge:TitleStyle textColor="black" ios:verticalOffset="20" android:verticalOffset="50"/>
-            </gauge:RadRadialGaugeView.titleStyle>
+            </gauge:RadRadialGauge.titleStyle>
 
-            <gauge:RadRadialGaugeView.scales>
+            <gauge:RadRadialGauge.scales>
                 <gauge:RadialScale minimum="0" maximum="180" radius="0.98">
                     <gauge:RadialScale.style>
                         <gauge:ScaleStyle lineThickness="0" labelsCount="10" majorTicksCount="19" minorTicksCount="1" 
@@ -43,8 +43,8 @@
                         </gauge:RadialNeedle>
                     </gauge:RadialScale.indicators>
                 </gauge:RadialScale>
-            </gauge:RadRadialGaugeView.scales>
-        </gauge:RadRadialGaugeView>
+            </gauge:RadRadialGauge.scales>
+        </gauge:RadRadialGauge>
 
         <StackLayout row="1" orientation="horizontal">
             <Button text="60 km/h" tap="on60Tapped" verticalAlignment="center" margin="10" marginTop="0" />
