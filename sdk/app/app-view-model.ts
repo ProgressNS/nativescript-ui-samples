@@ -112,7 +112,10 @@ export class AppViewModel extends observable.Observable {
         this._examples.push({ Id: "69", title: "Events", group: "autocomplete features", description: "", moduleName: "./autocomplete/events/autocomplete-events" });
         
         this._examples.push({ Id: "70", title: "Gauges", group: "controls", description: "Telerik Gauges for NativeScript", isControl: true, moduleName: "" });
-        this._examples.push({ Id: "71", title: "Getting Started", group: "gauges features", description: "", moduleName: "./autocomplete/getting-started/autocomplete-getting-started" });
+        this._examples.push({ Id: "71", title: "Getting Started", group: "gauges features", description: "", moduleName: "./gauges/getting-started/getting-started" });
+        this._examples.push({ Id: "72", title: "Scales", group: "gauges features", description: "", moduleName: "./gauges/scales/scales" });
+        this._examples.push({ Id: "73", title: "Scales", group: "gauges features", description: "", moduleName: "./gauges/customization/customization" });
+        this._examples.push({ Id: "74", title: "Scales", group: "gauges features", description: "", moduleName: "./gauges/animations/animations" });
     }
 
     get examples(): Array<Example> {
