@@ -152,6 +152,9 @@ export class NavigationViewModel extends observableModule.Observable {
         dataFormExample = new NavigationItem("Groups", "./dataform/groups/groups", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
+        dataFormExample = new NavigationItem("Custom Editors", "./dataform/custom-editors/custom-editors", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
         dataFormExample = new NavigationItem("Events", "./dataform/events/events", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
@@ -400,6 +403,9 @@ export class NavigationViewModel extends observableModule.Observable {
         currentItem.subItems.push(exampleItem);
 
         exampleItem = new NavigationItem("Customization", "./autocomplete/customization/autocomplete-customization", currentItem);
+        currentItem.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Events", "./autocomplete/events/autocomplete-events", currentItem);
         currentItem.subItems.push(exampleItem);
     }
 

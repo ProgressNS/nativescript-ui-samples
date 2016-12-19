@@ -83,6 +83,17 @@ declare module android {
             }
         }
     }
+    module view {
+        module View {
+            class OnClickListener{
+                constructor(impl);
+            }
+        }
+        class View {
+            constructor(context);
+            setOnClickListener(listener);
+        }
+    }
     module widget {
 
         class LinearLayout {
@@ -98,8 +109,10 @@ declare module android {
             setDividerDrawable(arg);
         }
 
-        class RadioButton {
+        class Button extends view.View {
+        }
 
+        class RadioButton {
         }
     }
 }
