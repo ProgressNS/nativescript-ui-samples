@@ -19,7 +19,7 @@
                     <!-- >> gauge-indicators-add-needle-xml -->
                     <gauge:RadialScale.indicators>
                      <!-- >> (hide) -->
-                        <!--<gauge:RadialBarIndicator minimum="0" maximum="60">
+                        <gauge:RadialBarIndicator minimum="0" maximum="60">
                             <gauge:RadialBarIndicator.style>
                                 <gauge:BarIndicatorStyle fillColor="rgb(132, 132, 132)" barWidth="0.02" />
                             </gauge:RadialBarIndicator.style>
@@ -35,7 +35,7 @@
                             <gauge:RadialBarIndicator.style>
                                 <gauge:BarIndicatorStyle fillColor="rgb(198, 85, 90)" barWidth="0.02" />
                             </gauge:RadialBarIndicator.style>
-                        </gauge:RadialBarIndicator>-->
+                        </gauge:RadialBarIndicator>
                         <!-- <<  (hide) -->
                         <gauge:RadialNeedle isAnimated="true" animationDuration="500">
                             <gauge:RadialNeedle.style>
