@@ -10,6 +10,7 @@ export function onNavigatedTo(args) {
     needle = <gaugesModule.RadialNeedle>scale.indicators.getItem(scale.indicators.length - 1);
 }
 
+// >> gauges-indicators-animate-needle
 export function on60Tapped() {
     needle.value = 60;
 }
@@ -25,4 +26,5 @@ export function on120Tapped() {
 export function on160Tapped() {
     needle.value = 160;
 }
+// << gauges-indicators-animate-needle
 

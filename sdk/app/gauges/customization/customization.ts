@@ -1,6 +1,6 @@
 import frameModule = require("ui/frame");
 import gaugesModule = require("nativescript-telerik-ui-pro/gauges");
-
+// >> gauges-indicators-bars-animate
 export function onNavigatedTo(args) {
     let gaugeView: gaugesModule.RadRadialGauge = <gaugesModule.RadRadialGauge>frameModule.topmost().getViewById("gaugeView");
     let scale: gaugesModule.RadialScale = <gaugesModule.RadialScale>gaugeView.scales.getItem(0);
@@ -11,3 +11,4 @@ export function onNavigatedTo(args) {
         }
     }
 }
+// << gauges-indicators-bars-animate
