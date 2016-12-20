@@ -46,7 +46,7 @@
             </gauge:RadialScale>
 
         </gauge:RadRadialGauge.scales>
-        <!-- <<>> gauges-getting-started-add-scale-indicators -->
+        <!-- << gauges-getting-started-add-scale-indicators -->
         <!-- << (hide) -->
     </gauge:RadRadialGauge>
     <!-- << gauges-getting-started-add -->
