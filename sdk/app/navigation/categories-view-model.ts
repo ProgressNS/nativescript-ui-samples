@@ -76,6 +76,7 @@ export class NavigationViewModel extends observableModule.Observable {
         this.buildFeedbackExamples(parent);
         this.buildDataFormExamples(parent);
         this.buildAutoCompleteExamples(parent);
+        this.buildGaugesExamples(parent);
     }
 
     private buildFeedbackExamples(currentParent: NavigationItem) {
@@ -153,6 +154,9 @@ export class NavigationViewModel extends observableModule.Observable {
         dataFormRoot.subItems.push(dataFormExample);
 
         dataFormExample = new NavigationItem("Groups", "./dataform/groups/groups", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Custom Editors", "./dataform/custom-editors/custom-editors", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
         dataFormExample = new NavigationItem("Events", "./dataform/events/events", dataFormRoot);
@@ -393,7 +397,7 @@ export class NavigationViewModel extends observableModule.Observable {
         currentItem.subItems.push(exampleItem);
     }
 
-        private buildAutoCompleteExamples(currentParent: NavigationItem) {
+    private buildAutoCompleteExamples(currentParent: NavigationItem) {
         var currentItem = new NavigationItem("AutoCompleteTextView(Beta)", undefined, currentParent);
         currentParent.subItems.push(currentItem);
         var exampleItem = new NavigationItem("Getting started", "./autocomplete/getting-started/autocomplete-getting-started", currentItem);
@@ -403,6 +407,26 @@ export class NavigationViewModel extends observableModule.Observable {
         currentItem.subItems.push(exampleItem);
 
         exampleItem = new NavigationItem("Customization", "./autocomplete/customization/autocomplete-customization", currentItem);
+        currentItem.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Events", "./autocomplete/events/autocomplete-events", currentItem);
+        currentItem.subItems.push(exampleItem);
+    }
+
+    private buildGaugesExamples(currentParent: NavigationItem) {
+        let currentItem = new NavigationItem("Gauges", undefined, currentParent);
+        currentParent.subItems.push(currentItem);
+
+        var exampleItem = new NavigationItem("Getting started", "./gauges/getting-started/getting-started", currentItem);
+        currentItem.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Scales", "./gauges/scales/scales", currentItem);
+        currentItem.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Customization", "./gauges/customization/customization", currentItem);
+        currentItem.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Animations", "./gauges/animations/animations", currentItem);
         currentItem.subItems.push(exampleItem);
     }
 

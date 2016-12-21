@@ -1,0 +1,58 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" navigatedTo="onNavigatedTo" xmlns:gauge="nativescript-telerik-ui-pro/gauges" xmlns="http://www.nativescript.org/tns.xsd">
+    <GridLayout rows="*, auto">
+        <gauge:RadRadialGauge id="gaugeView" title="km/h" row="0">
+            <gauge:RadRadialGauge.titleStyle>
+                <gauge:TitleStyle textColor="black" ios:verticalOffset="20" android:verticalOffset="50"/>
+            </gauge:RadRadialGauge.titleStyle>
+
+            <gauge:RadRadialGauge.scales>
+                <gauge:RadialScale minimum="0" maximum="180" radius="0.98">
+                    <gauge:RadialScale.style>
+                        <gauge:ScaleStyle lineThickness="0" labelsCount="10" majorTicksCount="19" minorTicksCount="1" 
+                        android:ticksOffset="20"  android:labelsOffset="100" ios:ticksOffset="0.1">
+                            <gauge:ScaleStyle.majorTicksStyle>
+                                <gauge:MajorTickStyle strokeWidth="2" strokeColor="rgb(132, 132, 132)"/>
+                            </gauge:ScaleStyle.majorTicksStyle>
+                                            
+                        </gauge:ScaleStyle>
+                    </gauge:RadialScale.style>
+                    <!-- >> gauge-indicators-add-needle-xml -->
+                    <gauge:RadialScale.indicators>
+                     <!-- >> (hide) -->
+                        <gauge:RadialBarIndicator minimum="0" maximum="60">
+                            <gauge:RadialBarIndicator.style>
+                                <gauge:BarIndicatorStyle fillColor="rgb(132, 132, 132)" barWidth="0.02" />
+                            </gauge:RadialBarIndicator.style>
+                        </gauge:RadialBarIndicator>
+
+                        <gauge:RadialBarIndicator minimum="61" maximum="120">
+                            <gauge:RadialBarIndicator.style>
+                                <gauge:BarIndicatorStyle fillColor="rgb(54, 54, 54)" barWidth="0.02" />
+                            </gauge:RadialBarIndicator.style>
+                        </gauge:RadialBarIndicator>
+
+                        <gauge:RadialBarIndicator minimum="121" maximum="180">
+                            <gauge:RadialBarIndicator.style>
+                                <gauge:BarIndicatorStyle fillColor="rgb(198, 85, 90)" barWidth="0.02" />
+                            </gauge:RadialBarIndicator.style>
+                        </gauge:RadialBarIndicator>
+                        <!-- <<  (hide) -->
+                        <gauge:RadialNeedle isAnimated="true" animationDuration="500">
+                            <gauge:RadialNeedle.style>
+                                <gauge:NeedleStyle length="0.8" android:topWidth="8" android:bottomWidth="8" ios:topWidth="2" ios:bottomWidth="2" />    
+                            </gauge:RadialNeedle.style>
+                        </gauge:RadialNeedle>
+                    </gauge:RadialScale.indicators>
+                    <!-- << gauge-indicators-add-needle-xml -->
+                </gauge:RadialScale>
+            </gauge:RadRadialGauge.scales>
+        </gauge:RadRadialGauge>
+
+        <StackLayout row="1" orientation="horizontal">
+            <Button text="60 km/h" tap="on60Tapped" verticalAlignment="center" margin="10" marginTop="0" />
+            <Button text="80 km/h" tap="on80Tapped" marginRight="10" marginBottom="10" />
+            <Button text="120 km/h" tap="on120Tapped" marginRight="10" marginBottom="10"/>
+            <Button text="160 km/h" tap="on160Tapped" marginRight="10" marginBottom="10" />
+        </StackLayout>
+    </GridLayout>
+</navigation:ExamplePage>
