@@ -1,4 +1,5 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-telerik-ui-pro/dataform" xmlns="http://www.nativescript.org/tns.xsd">
+<!-- >> dataform-autocomplete-xml -->
     <df:RadDataForm source="{{ booking }}">
         <df:RadDataForm.properties>
             <df:EntityProperty name="from" displayName="From:" index="0" autoCompleteDisplayMode="tokens" valuesProvider="{{ fromProviders }}">
@@ -14,4 +15,5 @@
             </df:EntityProperty>
         </df:RadDataForm.properties>
     </df:RadDataForm>
+<!-- << dataform-autocomplete-xml -->
 </navigation:ExamplePage>
