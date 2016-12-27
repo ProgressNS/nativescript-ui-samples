@@ -9,12 +9,7 @@
                 <gauge:RadialScale minimum="0" maximum="180" radius="0.98">
                     <gauge:RadialScale.style>
                         <gauge:ScaleStyle lineThickness="0" labelsCount="10" majorTicksCount="19" minorTicksCount="1" 
-                        android:ticksOffset="20"  android:labelsOffset="100" ios:ticksOffset="0.1">
-                            <gauge:ScaleStyle.majorTicksStyle>
-                                <gauge:MajorTickStyle strokeWidth="2" strokeColor="rgb(132, 132, 132)"/>
-                            </gauge:ScaleStyle.majorTicksStyle>
-                                            
-                        </gauge:ScaleStyle>
+                          ticksOffset="0.1" majorTicksStrokeWidth="2" majorTicksStrokeColor="rgb(132, 132, 132)" />
                     </gauge:RadialScale.style>
                     <!-- >> gauge-indicators-add-needle-xml -->
                     <gauge:RadialScale.indicators>

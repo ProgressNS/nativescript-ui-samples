@@ -13,7 +13,7 @@
 
             <gauge:RadialScale startAngle="135" sweepAngle="270" minimum="34" maximum="40" radius="0.6">
                 <gauge:RadialScale.style>
-                    <gauge:ScaleStyle majorTicksCount="7" minorTicksCount="9" lineThickness="2" ios:labelsOffset="0.05" lineColor="gray" labelsCount="7" ticksOffset="0"/>
+                    <gauge:ScaleStyle majorTicksCount="7" minorTicksCount="9" lineThickness="2" labelsOffset="0.1" lineColor="gray" labelsCount="7" ticksOffset="0"/>
                 </gauge:RadialScale.style>
                 <!-- >> (hide) -->
                 <!-- >> gauges-scales-add-indicators -->
@@ -42,7 +42,7 @@
 
             <gauge:RadialScale minimum="93.2" maximum="104" radius="0.7">
                 <gauge:RadialScale.style>
-                    <gauge:ScaleStyle majorTicksCount="7" minorTicksCount="20" lineThickness="2" ios:labelsOffset="0.05" android:labelsOffset="50" lineColor="gray" labelsCount="7" ticksOffset="0"
+                    <gauge:ScaleStyle majorTicksCount="7" minorTicksCount="20" lineThickness="2" labelsOffset="0.1" lineColor="gray" labelsCount="7" ticksOffset="0"
                     labelsLayoutMode="Outer" ticksLayoutMode="Outer" />
                 </gauge:RadialScale.style>
             </gauge:RadialScale>
