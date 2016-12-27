@@ -136,8 +136,12 @@ export class NavigationViewModel extends observableModule.Observable {
         dataFormExample = new NavigationItem("Properties JSON", "./dataform/metadata/metadata", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
-        dataFormExample = new NavigationItem("Editors", "./dataform/editors/editors", dataFormRoot);
-        dataFormRoot.subItems.push(dataFormExample);
+        var editors = new NavigationItem("Editors", undefined, dataFormRoot);
+        dataFormRoot.subItems.push(editors);
+        var common = new NavigationItem("Common", "./dataform/editors/editors", editors);
+        editors.subItems.push(common);
+        var autocomplete = new NavigationItem("AutoComplete", "./dataform/editors/autocomplete/autocomplete", editors);
+        editors.subItems.push(autocomplete);
 
         var validation = new NavigationItem("Validation", undefined, dataFormRoot);
         dataFormRoot.subItems.push(validation);
