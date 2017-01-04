@@ -1,3 +1,4 @@
+<!-- >> autocomplete-async-xml -->
 <Page loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui-pro/autocomplete" xmlns="http://www.nativescript.org/tns.xsd">
     <StackLayout ios:backgroundColor="#CDCECE" padding="5">
         <Label text="Your destination:"></Label>
@@ -14,3 +15,4 @@
          </lv:RadAutoCompleteTextView>
     </StackLayout>
 </Page>
+<!-- << autocomplete-async-xml -->

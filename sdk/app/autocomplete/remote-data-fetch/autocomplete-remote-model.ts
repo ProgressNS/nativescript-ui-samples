@@ -1,3 +1,4 @@
+// >> autocomplete-async-model
 import {ObservableArray} from "data/observable-array";
 import autocompleteModule = require("nativescript-telerik-ui-pro/autocomplete");
 import observableModule = require("ui/core/dependency-observable");
@@ -17,15 +18,13 @@ export class ViewModel extends observableModule.DependencyObservable {
         super();
         var page = args.object;
         this.autocmp = page.getViewById("autocmp");
-        this.initDataItems();
         this.autocmp.loadSuggestions = function(text) {
             var promise = new Promise( function(resolve, reject) {
                 http.getJSON("http://www.telerik.com/docs/default-source/ui-for-ios/airports.json?sfvrsn=2").then(function(r){
-                var a = r.airports;
-                var len = a.length;
+                var airportsCollection = r.airports;
                 var items:Array<autocompleteModule.TokenModel> = new Array();
-                for (var i = 0; i < len; i++) {
-                    items.push(new autocompleteModule.TokenModel(a[i].FIELD2, null));
+                for (var i = 0; i < airportsCollection.length; i++) {
+                    items.push(new autocompleteModule.TokenModel(airportsCollection[i].FIELD2, null));
                 }
                 resolve(items);
                 }, function (e) {
@@ -40,42 +39,6 @@ export class ViewModel extends observableModule.DependencyObservable {
     get dataItems() {
         return this._items;
     }
-
-    private initDataItems() {
-        this._items = new ObservableArray<autocompleteModule.TokenModel>();
-        //this.loadData();
-        var sdasda = 2;
-        // for (var i = 0; i < this.countries.length; i++) {
-        //     this._items.push(new autocompleteModule.TokenModel(this.countries[i], null));
-        // }
-
-        // this.getSuggestions(text).then(function(suggestions) {
-        //     showPopup();
-        // });
-
-        // this.autocomplete.getSuggestions = function(text) {
-        //     var promise = new Promise();
-        //     promise.function = function() {
-        //         var suggestions getFromServer();
-        //         promise.resolve(suggestions);
-        //     };
-
-        //     promise.function();
-
-        //     return promise;
-        // };
-
-        // var query = new Parse.Query();
-        // query.equalTo('name', 'fiki');
-        // query.find().then(function(fiki){
-
-        // });
-    }
-
-    get loadData() {
-        
-        return function() {
-                
-            }
-    }
 }
+
+// << autocomplete-async-model
