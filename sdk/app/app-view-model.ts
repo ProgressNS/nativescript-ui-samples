@@ -110,12 +110,13 @@ export class AppViewModel extends observable.Observable {
         this._examples.push({ Id: "67", title: "Tokens Layouts", group: "autocomplete features", description: "", moduleName: "./autocomplete/layouts/autocomplete-layout" });
         this._examples.push({ Id: "68", title: "Customization", group: "autocomplete features", description: "", moduleName: "./autocomplete/customization/autocomplete-customization" });
         this._examples.push({ Id: "69", title: "Events", group: "autocomplete features", description: "", moduleName: "./autocomplete/events/autocomplete-events" });
+        this._examples.push({ Id: "70", title: "Async Data Fetch", group: "autocomplete asyc data", description: "", moduleName: "./autocomplete/remote-data-fetch/autocomplete-remote" });
         
-        this._examples.push({ Id: "70", title: "Gauges", group: "controls", description: "Telerik Gauges for NativeScript", isControl: true, moduleName: "" });
-        this._examples.push({ Id: "71", title: "Getting Started", group: "gauges features", description: "", moduleName: "./gauges/getting-started/getting-started" });
-        this._examples.push({ Id: "72", title: "Scales", group: "gauges features", description: "", moduleName: "./gauges/scales/scales" });
-        this._examples.push({ Id: "73", title: "Scales", group: "gauges features", description: "", moduleName: "./gauges/customization/customization" });
-        this._examples.push({ Id: "74", title: "Scales", group: "gauges features", description: "", moduleName: "./gauges/animations/animations" });
+        this._examples.push({ Id: "71", title: "Gauges", group: "controls", description: "Telerik Gauges for NativeScript", isControl: true, moduleName: "" });
+        this._examples.push({ Id: "72", title: "Getting Started", group: "gauges features", description: "", moduleName: "./gauges/getting-started/getting-started" });
+        this._examples.push({ Id: "73", title: "Scales", group: "gauges features", description: "", moduleName: "./gauges/scales/scales" });
+        this._examples.push({ Id: "74", title: "Scales", group: "gauges features", description: "", moduleName: "./gauges/customization/customization" });
+        this._examples.push({ Id: "75", title: "Scales", group: "gauges features", description: "", moduleName: "./gauges/animations/animations" });
     }
 
     get examples(): Array<Example> {

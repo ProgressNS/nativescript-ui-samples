@@ -411,6 +411,9 @@ export class NavigationViewModel extends observableModule.Observable {
 
         exampleItem = new NavigationItem("Events", "./autocomplete/events/autocomplete-events", currentItem);
         currentItem.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Async Data Fetch", "./autocomplete/remote-data-fetch/autocomplete-remote", currentItem);
+        currentItem.subItems.push(exampleItem);
     }
 
     private buildGaugesExamples(currentParent: NavigationItem) {
