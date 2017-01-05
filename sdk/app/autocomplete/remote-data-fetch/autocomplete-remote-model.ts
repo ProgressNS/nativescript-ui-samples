@@ -1,9 +1,10 @@
-// >> autocomplete-async-model
+
 import {ObservableArray} from "data/observable-array";
 import autocompleteModule = require("nativescript-telerik-ui-pro/autocomplete");
 import observableModule = require("ui/core/dependency-observable");
 import http = require("http");
 
+// >> autocomplete-async-model
 export class ViewModel extends observableModule.DependencyObservable {
 
     private _items: ObservableArray<autocompleteModule.TokenModel>;
