@@ -5,7 +5,6 @@ var needle: gaugesModule.RadialNeedle;
 export function onNavigatedTo(args) {
     
     let gauge: gaugesModule.RadRadialGauge = <gaugesModule.RadRadialGauge>frameModule.topmost().getViewById("gaugeView");
-    console.log(gauge);
     let scale: gaugesModule.RadialScale = <gaugesModule.RadialScale>gauge.scales.getItem(0);
     needle = <gaugesModule.RadialNeedle>scale.indicators.getItem(scale.indicators.length - 1);
 }
