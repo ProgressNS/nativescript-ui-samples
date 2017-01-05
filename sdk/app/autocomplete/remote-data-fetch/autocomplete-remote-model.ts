@@ -19,7 +19,7 @@ export class ViewModel extends observableModule.DependencyObservable {
         super();
         var page = args.object;
         this.autocmp = page.getViewById("autocmp");
-        this.autocmp.loadSuggestions = function(text) {
+        this.autocmp.loadSuggestionsAsync = function(text) {
             var promise = new Promise( function(resolve, reject) {
                 http.getJSON("http://www.telerik.com/docs/default-source/ui-for-ios/airports.json?sfvrsn=2").then(function(r:any){
                 var airportsCollection = r.airports;
