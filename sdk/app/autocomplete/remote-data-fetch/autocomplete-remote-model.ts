@@ -20,7 +20,7 @@ export class ViewModel extends observableModule.DependencyObservable {
         this.autocmp = page.getViewById("autocmp");
         this.autocmp.loadSuggestions = function(text) {
             var promise = new Promise( function(resolve, reject) {
-                http.getJSON("http://www.telerik.com/docs/default-source/ui-for-ios/airports.json?sfvrsn=2").then(function(r){
+                http.getJSON("http://www.telerik.com/docs/default-source/ui-for-ios/airports.json?sfvrsn=2").then(function(r:any){
                 var airportsCollection = r.airports;
                 var items:Array<autocompleteModule.TokenModel> = new Array();
                 for (var i = 0; i < airportsCollection.length; i++) {
