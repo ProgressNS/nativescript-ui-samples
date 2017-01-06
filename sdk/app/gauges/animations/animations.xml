@@ -43,11 +43,11 @@
             </gauge:RadRadialGauge.scales>
         </gauge:RadRadialGauge>
 
-        <StackLayout row="1" orientation="horizontal">
-            <Button text="60 km/h" tap="on60Tapped" verticalAlignment="center" margin="10" marginTop="0" />
-            <Button text="80 km/h" tap="on80Tapped" marginRight="10" marginBottom="10" />
-            <Button text="120 km/h" tap="on120Tapped" marginRight="10" marginBottom="10"/>
-            <Button text="160 km/h" tap="on160Tapped" marginRight="10" marginBottom="10" />
+        <StackLayout row="1" orientation="horizontal" horizontalAlignment="center">
+            <Button text="60" tap="on60Tapped" verticalAlignment="center" marginBottom="10" marginTop="0"/>
+            <Button text="80" tap="on80Tapped" verticalAlignment="center"  marginBottom="10" />
+            <Button text="120" tap="on120Tapped" verticalAlignment="center"  marginBottom="10"/>
+            <Button text="160" tap="on160Tapped" verticalAlignment="center" marginBottom="10"/>
         </StackLayout>
     </GridLayout>
 </navigation:ExamplePage>
