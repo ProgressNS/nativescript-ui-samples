@@ -1,5 +1,5 @@
 <!-- >> autocomplete-async-xml -->
-<Page loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui-pro/autocomplete" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage loaded="onPageLoaded" xmlns:navigation="navigation/example-page" xmlns:lv="nativescript-telerik-ui-pro/autocomplete" xmlns="http://www.nativescript.org/tns.xsd">
     <StackLayout ios:backgroundColor="#CDCECE" padding="5">
         <Label text="Your destination:"></Label>
         <lv:RadAutoCompleteTextView id="autocmp" marginTop="30" items="{{ dataItems }}" suggestMode="Suggest" displayMode="Plain">
@@ -14,5 +14,5 @@
             </lv:RadAutoCompleteTextView.suggestionView>
          </lv:RadAutoCompleteTextView>
     </StackLayout>
-</Page>
+</navigation:ExamplePage>
 <!-- << autocomplete-async-xml -->
