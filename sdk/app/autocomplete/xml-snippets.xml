@@ -1,10 +1,8 @@
-<navigation:ExamplePage loaded="onPageLoaded"  xmlns:navigation="navigation/example-page" xmlns:lv="nativescript-telerik-ui-pro/autocomplete" xmlns="http://www.nativescript.org/tns.xsd">
-    <StackLayout>
-        
-<!-- >> autocomplete-import -->
-xmlns:au="nativescript-telerik-ui-pro/autocomplete"
-<!-- << autocomplete-import -->
-
+<navigation:ExamplePage loaded="onPageLoaded"
+xmlns:navigation="navigation/example-page" 
+xmlns:au="nativescript-telerik-ui-pro/autocomplete" 
+xmlns="http://www.nativescript.org/tns.xsd">
+<StackLayout>
 <!-- >> autocomplete-getting-started -->
 <au:RadAutoCompleteTextView items="{{ dataItems }}"/>
 <!-- << autocomplete-getting-started -->
@@ -40,5 +38,7 @@ xmlns:au="nativescript-telerik-ui-pro/autocomplete"
 <!-- >> autocomplete-events-xml -->
 <au:RadAutoCompleteTextView items="{{ dataItems }}" displayMode="Tokens" tokenAdded="{{ onTokenAdded}}">
 <!-- << autocomplete-events-xml -->
-    </StackLayout>
+</au:RadAutoCompleteTextView>
+</StackLayout>
 </navigation:ExamplePage>
+
