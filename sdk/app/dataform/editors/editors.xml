@@ -1,7 +1,7 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-telerik-ui-pro/dataform" xmlns="http://www.nativescript.org/tns.xsd">
     <df:RadDataForm id="myDataForm" source="{{ ticketOrder }}">
         <df:RadDataForm.properties>
-            <df:EntityProperty name="movie" displayName="Movie Name" index="0" valuesProvider="{{ movies }}">
+            <df:EntityProperty name="movie" displayName="Movie Name" index="0" converter="{{ $value }}" valuesProvider="{{ movieNames }}">
                 <df:EntityProperty.editor>
                     <df:PropertyEditor type="Picker" />
                 </df:EntityProperty.editor>

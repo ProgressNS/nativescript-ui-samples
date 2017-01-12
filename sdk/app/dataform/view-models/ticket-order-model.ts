@@ -1,7 +1,12 @@
-export class TicketViewModel {
+import dataFormModule = require("nativescript-telerik-ui-pro/dataform");
 
+// >> dataform-converters-code
+export class TicketViewModel implements dataFormModule.PropertyConverter {
+    // ...
+    // >> (hide)
     private _ticketOrder: TicketOrder;
-    private _items: Array<String>;
+    private _movies: Array<Movie>;
+    private _movieNames: Array<String>;
 
     constructor() {
     }
@@ -14,18 +19,45 @@ export class TicketViewModel {
     }
 
     get movies() {
-        if (!this._items) {
-            this._items = new Array<String>();
-            this._items.push("Zootopia");
-            this._items.push("Captain America");
-            this._items.push("The Jungle Book");
+        if (!this._movies) {
+            this._movies = new Array<Movie>();
+            this._movies.push(new Movie(123, "Zootopia"));
+            this._movies.push(new Movie(217, "Captain America"));
+            this._movies.push(new Movie(324, "The Jungle Book"));
         }
-        return this._items;
+        return this._movies;
+    }
+
+    get movieNames() {
+        if (!this._movieNames) {
+            this._movieNames = this.movies.map((value: Movie) => value.name);
+        }
+        return this._movieNames;
+    }
+    // << (hide)
+    convertFrom(id: number) {
+        return this.movies.filter((movie: Movie) => movie.id == id)[0].name;
+    }
+
+    convertTo(name: string) {
+        return this.movies.filter((movie: Movie) => movie.name == name)[0].id;
+    }
+}
+
+export class Movie {
+    public id: number;
+    public name: string;
+
+    constructor(id: number, name: string) {
+        this.id = id;
+        this.name = name;
     }
 }
 
 export class TicketOrder {
-    public movie: string = "Zootopia";
+    public movie: number = 123;
+    // ...
+    // >> (hide)
     public date: string = "2016-04-06";
     public time: string = "20:00";
     public type: string = "2D";
@@ -38,4 +70,6 @@ export class TicketOrder {
 
     constructor() {
     }
+    // << (hide)
 }
+// >> dataform-converters-code
