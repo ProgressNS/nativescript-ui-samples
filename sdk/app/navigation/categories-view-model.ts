@@ -75,6 +75,7 @@ export class NavigationViewModel extends observableModule.Observable {
         this.buildCalendarExamples(parent);
         this.buildFeedbackExamples(parent);
         this.buildDataFormExamples(parent);
+        this.buildAutoCompleteExamples(parent);
     }
 
     private buildFeedbackExamples(currentParent: NavigationItem) {
@@ -125,7 +126,13 @@ export class NavigationViewModel extends observableModule.Observable {
         var dataFormExample = new NavigationItem("Getting started", "./dataform/getting-started/getting-started", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
-        dataFormExample = new NavigationItem("Properties adjustment", "./dataform/adjustment/adjustment", dataFormRoot);
+        dataFormExample = new NavigationItem("Getting started JSON", "./dataform/getting-started-json/getting-started-json", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Properties", "./dataform/adjustment/adjustment", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Properties JSON", "./dataform/metadata/metadata", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
         dataFormExample = new NavigationItem("Editors", "./dataform/editors/editors", dataFormRoot);
@@ -146,11 +153,24 @@ export class NavigationViewModel extends observableModule.Observable {
         dataFormExample = new NavigationItem("Styling", "./dataform/styling/styling", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
+        dataFormExample = new NavigationItem("Styling Advanced", "./dataform/styling-advanced/styling-advanced", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
         dataFormExample = new NavigationItem("Runtime updates", "./dataform/runtime-updates/runtime-updates", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
         dataFormExample = new NavigationItem("Platform adjustments", "./dataform/platform-specifics/platform-specifics", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Image Labels", "./dataform/image-labels/image-labels", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        var layouts = new NavigationItem("Layouts", undefined, dataFormRoot);
+        dataFormRoot.subItems.push(layouts);
+        var selectionExample = new NavigationItem("Stack", "./dataform/layouts/stack-layout", layouts);
+        layouts.subItems.push(selectionExample);
+        var selectionExample = new NavigationItem("Grid", "./dataform/layouts/grid-layout", layouts);
+        layouts.subItems.push(selectionExample);
     }
 
     private buildChartExamples(currentParent: NavigationItem) {
@@ -205,6 +225,9 @@ export class NavigationViewModel extends observableModule.Observable {
         stylingRoot.subItems.push(stylingExample);
 
         stylingExample = new NavigationItem("Styling series", "/chart/styling/styling-series", stylingRoot);
+        stylingRoot.subItems.push(stylingExample);
+
+        stylingExample = new NavigationItem("Styling Pie Chart series", "/chart/styling/styling-pie-series", stylingRoot);
         stylingRoot.subItems.push(stylingExample);
 
         stylingExample = new NavigationItem("Styling grid", "/chart/styling/styling-grid", stylingRoot);
@@ -296,9 +319,8 @@ export class NavigationViewModel extends observableModule.Observable {
         selectionItem.subItems.push(selectionExample);
         selectionExample = new NavigationItem("Programatic Selection", "./listview/listview-selection/programmatic-selection", selectionItem);
         selectionItem.subItems.push(selectionExample);
-
-        exampleItem = new NavigationItem("Selection states", "./listview/selection-states/selection-states", currentItem);
-        currentItem.subItems.push(exampleItem);
+        exampleItem = new NavigationItem("Selection states", "./listview/selection-states/selection-states", selectionItem);
+        selectionItem.subItems.push(exampleItem);
 
         exampleItem = new NavigationItem("Load on Demand", "./listview/load-on-demand/load-on-demand", currentItem);
         currentItem.subItems.push(exampleItem);
@@ -309,18 +331,39 @@ export class NavigationViewModel extends observableModule.Observable {
         exampleItem = new NavigationItem("Pull to Refresh", "./listview/pull-to-refresh/pull-to-refresh", currentItem);
         currentItem.subItems.push(exampleItem);
 
-        exampleItem = new NavigationItem("Swipe to Execute", "./listview/swipe-execute/swipe-execute", currentItem);
-        currentItem.subItems.push(exampleItem);
+        var swipeLegacy = new NavigationItem("Swipe to execute", undefined, currentItem);
+        currentItem.subItems.push(swipeLegacy);
+        exampleItem = new NavigationItem("Getting started", "./listview/swipe-execute/swipe-execute", swipeLegacy);
+        swipeLegacy.subItems.push(exampleItem);
 
+        exampleItem = new NavigationItem("Swipe to execute with sticky actions", "./listview/swipe-execute/swipe-execute-sticky", swipeLegacy);
+        swipeLegacy.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Swipe to execute with stretched content", "./listview/swipe-execute/swipe-execute-stretch", swipeLegacy);
+        swipeLegacy.subItems.push(exampleItem);
+        // Swipe actions
+        var swipeActions = new NavigationItem("Swipe actions", undefined, currentItem);
+        currentItem.subItems.push(swipeActions);
+        exampleItem = new NavigationItem("Getting started", "./listview/swipe-actions/swipe-actions", swipeActions);
+        swipeActions.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Animated thresholds", "./listview/swipe-actions/swipe-actions-thresholds", swipeActions);
+        swipeActions.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Multiple actions", "./listview/swipe-actions/swipe-actions-multiple", swipeActions);
+        swipeActions.subItems.push(exampleItem);
+
+        // Header and footer
         exampleItem = new NavigationItem("Header and Footer", "./listview/header-footer/header-footer", currentItem);
         currentItem.subItems.push(exampleItem);
 
-        exampleItem = new NavigationItem("Swipe to execute with sticky actions", "./listview/swipe-execute/swipe-execute-sticky", currentItem);
-        currentItem.subItems.push(exampleItem);
-
-        exampleItem = new NavigationItem("Swipe to execute with stretched content", "./listview/swipe-execute/swipe-execute-stretch", currentItem);
-        currentItem.subItems.push(exampleItem);
-
+        // Scroll to index
+        var scrollToIndex = new NavigationItem("Scroll to index", undefined, currentItem);
+        currentItem.subItems.push(scrollToIndex);
+        var selectionExample = new NavigationItem("In vertical direction", "./listview/scroll-to-index/scroll-to-index-vertical", scrollToIndex);
+        scrollToIndex.subItems.push(selectionExample);
+        var selectionExample = new NavigationItem("In horizontal direction", "./listview/scroll-to-index/scroll-to-index-horizontal", scrollToIndex);
+        scrollToIndex.subItems.push(selectionExample);
     }
 
     private buildSideDrawerExamples(currentParent: NavigationItem) {
@@ -339,6 +382,16 @@ export class NavigationViewModel extends observableModule.Observable {
         currentItem.subItems.push(exampleItem);
 
         exampleItem = new NavigationItem("Drawer Over Navigation", "./sidedrawer/over-navigation/drawer-over-navigation", currentItem);
+        currentItem.subItems.push(exampleItem);
+    }
+
+        private buildAutoCompleteExamples(currentParent: NavigationItem) {
+        var currentItem = new NavigationItem("AutoCompleteTextView(Beta)", undefined, currentParent);
+        currentParent.subItems.push(currentItem);
+        var exampleItem = new NavigationItem("Getting started", "./autocomplete/getting-started/autocomplete-getting-started", currentItem);
+        currentItem.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Token Layouts", "./autocomplete/layouts/autocomplete-layout", currentItem);
         currentItem.subItems.push(exampleItem);
     }
 

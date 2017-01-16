@@ -30,11 +30,23 @@ export class DrawerPositionModel {
 
     private setDrawerLocation(location: drawerModule.SideDrawerLocation) {
         var sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
+        if(sideDrawer.android) {
+            if (location == drawerModule.SideDrawerLocation.Top || location == drawerModule.SideDrawerLocation.Bottom) {
+                sideDrawer.android.setDrawerCloseThreshold(20);
+            } else {
+                sideDrawer.android.setDrawerCloseThreshold(280);
+            }
+        }
         sideDrawer.drawerLocation = location;
     }
     // << sidedrawer-setting-location
     private openDrawer() {
          var sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
          sideDrawer.showDrawer();
+    }
+
+    private closeDrawer() {
+         var sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
+         sideDrawer.closeDrawer();
     }
 }

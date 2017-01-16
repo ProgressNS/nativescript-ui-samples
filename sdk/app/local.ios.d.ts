@@ -10,7 +10,7 @@ declare const UIUserInterfaceIdiomPad: number;
 declare class NSObject { }
 declare class UIDevice extends NSObject {
     static alloc(): UIDevice; // inherited from NSObject
-    static currentDevice(): UIDevice;
+    static currentDevice: UIDevice;
     static new(): UIDevice; // inherited from NSObject
     userInterfaceIdiom: UIUserInterfaceIdiom;
 }
@@ -30,4 +30,29 @@ declare class NSDateFormatter {
 }
 
 declare class UIColor {
+}
+
+declare class UIStepper {
+    subviews: any;
+    tintColor;
+}
+
+declare class UISwitch {
+    subviews: any;
+    onTintColor;
+    thumbTintColor
+    tintColor;
+}
+
+declare class UIButton {
+
+}
+
+declare class UISlider {
+    tintColor;
+    thumbTintColor;
+}
+
+declare class UISegmentedControl {
+    tintColor;
 }

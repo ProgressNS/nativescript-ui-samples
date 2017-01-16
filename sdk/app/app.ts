@@ -1,6 +1,5 @@
 import application = require("application");
 import fresco = require("nativescript-fresco");
-application.mainModule = "./navigation/category-list"
 application.cssFile = "./app.css";
 application.mainModule = "./navigation/category-list"
 
