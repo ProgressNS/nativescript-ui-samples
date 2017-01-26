@@ -2,7 +2,7 @@
 <navigation:ExamplePage loaded="onPageLoaded" xmlns:navigation="navigation/example-page" xmlns:lv="nativescript-telerik-ui-pro/autocomplete" xmlns="http://www.nativescript.org/tns.xsd">
     <StackLayout ios:backgroundColor="#CDCECE" padding="5">
         <Label text="Select destination:"></Label>
-        <lv:RadAutoCompleteTextView id="autocmp" items="{{ dataItems }}" suggestMode="Suggest" displayMode="Plain">
+        <lv:RadAutoCompleteTextView id="autocmp" items="{{ dataItems }}" suggestMode="Suggest" displayMode="Plain" showCloseButton="true" closeButtonImageSrc="res://clear">
             <lv:RadAutoCompleteTextView.suggestionView>
                 <lv:SuggestionView suggestionViewHeight="300">
                     <lv:SuggestionView.suggestionItemTemplate>
