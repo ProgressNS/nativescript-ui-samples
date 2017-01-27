@@ -2,6 +2,7 @@ import viewModel = require("./../../view-models/user-model");
 import { Label } from "ui/label";
 import * as viewModule from "ui/core/view";
 import { RadDataForm } from "nativescript-telerik-ui-pro/dataform";
+import { isAndroid } from "platform"
 
 var resultLabel: Label;
 var dataForm: RadDataForm;
@@ -17,4 +18,7 @@ export function onPageLoaded(args) {
 export function checkErrors() {
     var hasErrors = dataForm.hasValidationErrors();
     resultLabel.text = hasErrors.toString();
+    if (isAndroid) {
+        resultLabel.android.requestLayout();
+    }
 }
