@@ -7,7 +7,7 @@
 	    </StackLayout>
         <df:RadDataForm id="myDataForm" source="{{ advancedUser }}" row="2">
                 <df:RadDataForm.properties>
-                    <df:EntityProperty name="username" index="1">                
+                    <df:EntityProperty name="username" index="0">                
                         <df:EntityProperty.validators>
                             <df:NonEmptyValidator 
                                 errorMessage="Username can't be empty." /> 
