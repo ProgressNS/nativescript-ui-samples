@@ -33,7 +33,6 @@
 
     <style name="BrandedSwitchControl" parent="Theme.AppCompat.Light">
         <item name="colorControlActivated">@color/ns_color_accent_custom</item>
-        <item name="android:colorControlActivated">@color/ns_color_accent_custom</item>
         <item name="colorSwitchThumbNormal">@color/ns_color_primary_custom</item>
         <item name="android:colorForeground">@color/ns_color_primary_secondary</item>
     </style>

@@ -39,6 +39,33 @@ declare module com {
 }
 
 declare module android {
+
+    module support {
+        module v7 {
+            module app {
+                class AppCompatActivity {
+                    protected onCreate(savedInstanceState: android.os.Bundle);
+                    protected onSaveInstanceState(outState: android.os.Bundle);
+                    protected onStart();
+                    protected onStop();
+                    protected onDestroy();
+                    protected onBackPressed();
+                    protected onActivityResult(requestCode: number, resultCode: number, data: android.content.Intent);
+                }
+            }
+        }
+    }
+
+    module os {
+        class Bundle {
+        }
+    }
+
+    module content {
+        class Intent {
+        }
+    }
+
     module graphics {
         module PorterDuff {
             class Mode {
@@ -56,6 +83,17 @@ declare module android {
             }
         }
     }
+    module view {
+        module View {
+            class OnClickListener{
+                constructor(impl);
+            }
+        }
+        class View {
+            constructor(context);
+            setOnClickListener(listener);
+        }
+    }
     module widget {
 
         class LinearLayout {
@@ -71,8 +109,10 @@ declare module android {
             setDividerDrawable(arg);
         }
 
-        class RadioButton {
+        class Button extends view.View {
+        }
 
+        class RadioButton {
         }
     }
 }

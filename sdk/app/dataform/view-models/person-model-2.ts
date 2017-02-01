@@ -5,7 +5,7 @@ export class PersonModel2 extends observable.Observable {
 
     constructor() {
         super();
-        
+
         var documents = fs.knownFolders.currentApp();
         var jsonPersonFile = documents.getFile('dataform/view-models/person-model-2.json');
         var that = new WeakRef(this);

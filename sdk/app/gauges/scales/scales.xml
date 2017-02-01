@@ -1,0 +1,54 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:gauge="nativescript-telerik-ui-pro/gauges" xmlns="http://www.nativescript.org/tns.xsd">
+    
+    <gauge:RadRadialGauge title="celsius" subtitle="fahrenheit">
+        <gauge:RadRadialGauge.titleStyle>
+            <gauge:TitleStyle textColor="gray" ios:textSize="12" ios:verticalOffset="30" android:verticalOffset="90" />
+        </gauge:RadRadialGauge.titleStyle>
+
+        <gauge:RadRadialGauge.subtitleStyle>
+            <gauge:SubtitleStyle textColor="gray" />
+        </gauge:RadRadialGauge.subtitleStyle>
+        <!-- >> gauges-scales-add-scales -->
+        <gauge:RadRadialGauge.scales>
+
+            <gauge:RadialScale startAngle="135" sweepAngle="270" minimum="34" maximum="40" radius="0.6">
+                <gauge:RadialScale.style>
+                    <gauge:ScaleStyle majorTicksCount="7" minorTicksCount="9" lineThickness="2" labelsOffset="0.1" lineColor="gray" labelsCount="7" ticksOffset="0"/>
+                </gauge:RadialScale.style>
+                <!-- >> (hide) -->
+                <!-- >> gauges-scales-add-indicators -->
+                <gauge:RadialScale.indicators>
+                    <gauge:RadialBarIndicator minimum="34" maximum="36" location="0.69">
+                        <gauge:RadialBarIndicator.style>
+                            <gauge:BarIndicatorStyle fillColor="blue" barWidth="0.08"/>
+                        </gauge:RadialBarIndicator.style>
+                    </gauge:RadialBarIndicator>
+
+                    <gauge:RadialBarIndicator minimum="36.05" maximum="40" location="0.69">
+                        <gauge:RadialBarIndicator.style>
+                            <gauge:BarIndicatorStyle fillColor="red" barWidth="0.08"/>
+                        </gauge:RadialBarIndicator.style>
+                    </gauge:RadialBarIndicator>
+
+                    <gauge:RadialNeedle value="36.5">
+                        <gauge:RadialNeedle.style>
+                            <gauge:NeedleStyle length="0.5" android:topWidth="8" ios:topWidth="3" android:bottomWidth="8" ios:bottomWidth="3"/>
+                        </gauge:RadialNeedle.style>
+                    </gauge:RadialNeedle>
+                </gauge:RadialScale.indicators>
+                <!-- << gauges-scales-add-indicators -->
+                <!-- << (hide) -->
+            </gauge:RadialScale>
+
+            <gauge:RadialScale minimum="93.2" maximum="104" radius="0.7">
+                <gauge:RadialScale.style>
+                    <gauge:ScaleStyle majorTicksCount="7" minorTicksCount="20" lineThickness="2" labelsOffset="0.1" lineColor="gray" labelsCount="7" ticksOffset="0"
+                    labelsLayoutMode="Outer" ticksLayoutMode="Outer" />
+                </gauge:RadialScale.style>
+            </gauge:RadialScale>
+
+        </gauge:RadRadialGauge.scales>
+        <!-- << gauges-scales-add-scales -->
+    </gauge:RadRadialGauge>
+
+</navigation:ExamplePage>

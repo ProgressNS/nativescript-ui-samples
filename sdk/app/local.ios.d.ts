@@ -6,6 +6,30 @@ declare const enum UIUserInterfaceIdiom {
     TV = 2
 }
 
+declare const enum UIControlState {
+    Normal = 0,
+    Highlighted = 1,
+    Disabled = 2,
+    Selected = 4
+}
+
+declare const enum UIButtonType {
+    Custom = 0,
+    System = 1
+}
+
+declare const enum UIControlEvents {
+    TouchDown = 1,
+    TouchUpInside = 64
+}
+
+declare const enum UIControlContentHorizontalAlignment {
+    Center = 0,
+    Left = 1,
+    Right = 2,
+    Fill = 3
+}
+
 declare const UIUserInterfaceIdiomPad: number;
 declare class NSObject { }
 declare class UIDevice extends NSObject {
@@ -32,6 +56,10 @@ declare class NSDateFormatter {
 declare class UIColor {
 }
 
+declare class UIView {
+    static class();
+}
+
 declare class UIStepper {
     subviews: any;
     tintColor;
@@ -45,7 +73,7 @@ declare class UISwitch {
 }
 
 declare class UIButton {
-
+    static buttonWithType(type);
 }
 
 declare class UISlider {
@@ -55,4 +83,10 @@ declare class UISlider {
 
 declare class UISegmentedControl {
     tintColor;
+}
+
+declare module interop {        
+    var types: {
+        "void": any;
+    }
 }

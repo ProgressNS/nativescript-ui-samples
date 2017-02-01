@@ -39,6 +39,9 @@ export function editorSetupSwitchAndroid(editor) {
 
 export function editorSetupSwitchIOS(editor) {
     var coreEditor = <UISwitch>editor.editor;
+    if (coreEditor.tintColor == colorLight.ios) {
+        return;
+    }
     coreEditor.tintColor = colorLight.ios;
     coreEditor.onTintColor = colorLight.ios;
     coreEditor.thumbTintColor = colorDark.ios;

@@ -1,0 +1,53 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" navigatedTo="onNavigatedTo" xmlns:gauge="nativescript-telerik-ui-pro/gauges" xmlns="http://www.nativescript.org/tns.xsd">
+    <!-- >> gauges-indicators-add-bars-xml -->
+    <gauge:RadRadialGauge id="gaugeView" margin="10">
+        <gauge:RadRadialGauge.scales>
+
+            <gauge:RadialScale startAngle="0" sweepAngle="360" minimum="0" maximum="100" radius="0.9">
+                <gauge:RadialScale.style>
+                    <gauge:ScaleStyle ticksVisible="false" labelsVisible="false" lineThickness="0" />
+                </gauge:RadialScale.style>
+            
+                <gauge:RadialScale.indicators>
+                    <gauge:RadialBarIndicator minimum="0" maximum="100" location="0.5">
+                        <gauge:RadialBarIndicator.style>
+                            <gauge:BarIndicatorStyle fillColor="rgba(224,151,36,0.5)" barWidth="0.2"/>
+                        </gauge:RadialBarIndicator.style>
+                    </gauge:RadialBarIndicator>
+
+                    <gauge:RadialBarIndicator minimum="0" maximum="0" location="0.5" isAnimated="true">
+                        <gauge:RadialBarIndicator.style>
+                            <gauge:BarIndicatorStyle cap="Round" fillColor="rgba(224,151,36,1)" barWidth="0.2"/>
+                        </gauge:RadialBarIndicator.style>
+                    </gauge:RadialBarIndicator>
+
+                    <gauge:RadialBarIndicator minimum="0" maximum="100" location="0.75">
+                        <gauge:RadialBarIndicator.style>
+                            <gauge:BarIndicatorStyle fillColor="rgba(196,241,57,0.5)" barWidth="0.2"/>
+                        </gauge:RadialBarIndicator.style>
+                    </gauge:RadialBarIndicator>
+
+                    <gauge:RadialBarIndicator minimum="0" maximum="0" location="0.75" isAnimated="true">
+                        <gauge:RadialBarIndicator.style>
+                            <gauge:BarIndicatorStyle cap="Round" fillColor="rgba(196,241,57,1)" barWidth="0.2"/>
+                        </gauge:RadialBarIndicator.style>
+                    </gauge:RadialBarIndicator>
+
+                    <gauge:RadialBarIndicator minimum="0" maximum="100" location="1">
+                        <gauge:RadialBarIndicator.style>
+                            <gauge:BarIndicatorStyle fillColor="rgba(132,235,247,0.5)" barWidth="0.2"/>
+                        </gauge:RadialBarIndicator.style>
+                    </gauge:RadialBarIndicator>
+
+                    <gauge:RadialBarIndicator minimum="0" maximum="0" location="1" isAnimated="true">
+                        <gauge:RadialBarIndicator.style>
+                            <gauge:BarIndicatorStyle cap="Round" fillColor="rgba(132,235,247,1)" barWidth="0.2"/>
+                        </gauge:RadialBarIndicator.style>
+                    </gauge:RadialBarIndicator>
+                </gauge:RadialScale.indicators>
+                
+            </gauge:RadialScale>
+        </gauge:RadRadialGauge.scales>
+    </gauge:RadRadialGauge>
+    <!-- << gauges-indicators-add-bars-xml -->
+</navigation:ExamplePage>

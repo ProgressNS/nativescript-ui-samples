@@ -9,8 +9,6 @@
     android:paddingBottom="16dp"
     android:textSize="12sp"
     android:textColor="?android:attr/textColorTertiary"
-    app:switchTextAppearance="@style/BrandedSwitchText"
-    app:theme="@style/BrandedSwitchControl"
     android:switchTextAppearance="@style/BrandedSwitchText"
     android:theme="@style/BrandedSwitchControl"
     android:paddingLeft="4dp"

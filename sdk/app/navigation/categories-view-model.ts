@@ -76,6 +76,7 @@ export class NavigationViewModel extends observableModule.Observable {
         this.buildFeedbackExamples(parent);
         this.buildDataFormExamples(parent);
         this.buildAutoCompleteExamples(parent);
+        this.buildGaugesExamples(parent);
     }
 
     private buildFeedbackExamples(currentParent: NavigationItem) {
@@ -91,7 +92,7 @@ export class NavigationViewModel extends observableModule.Observable {
         var calendarExample = new NavigationItem("Getting started", "./calendar/getting-started/getting-started", calendarRoot);
         calendarRoot.subItems.push(calendarExample);
 
-        calendarExample = new NavigationItem("Events", "./calendar/events/events", calendarRoot);
+        calendarExample = new NavigationItem("Handling Events", "./calendar/events/events", calendarRoot);
         calendarRoot.subItems.push(calendarExample);
 
         calendarExample = new NavigationItem("Populating with data", "./calendar/populating-with-data/populating-with-data", calendarRoot);
@@ -135,16 +136,27 @@ export class NavigationViewModel extends observableModule.Observable {
         dataFormExample = new NavigationItem("Properties JSON", "./dataform/metadata/metadata", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
-        dataFormExample = new NavigationItem("Editors", "./dataform/editors/editors", dataFormRoot);
-        dataFormRoot.subItems.push(dataFormExample);
+        var editors = new NavigationItem("Editors", undefined, dataFormRoot);
+        dataFormRoot.subItems.push(editors);
+        var common = new NavigationItem("Common", "./dataform/editors/editors", editors);
+        editors.subItems.push(common);
+        var autocomplete = new NavigationItem("AutoComplete", "./dataform/editors/autocomplete/autocomplete", editors);
+        editors.subItems.push(autocomplete);
 
-        dataFormExample = new NavigationItem("Validators", "./dataform/validation/validation", dataFormRoot);
-        dataFormRoot.subItems.push(dataFormExample);
+        var validation = new NavigationItem("Validation", undefined, dataFormRoot);
+        dataFormRoot.subItems.push(validation);
+        var selectionExample = new NavigationItem("Validators", "./dataform/validation/validation", validation);
+        validation.subItems.push(selectionExample);
+        var selectionExample = new NavigationItem("Check Validation State", "./dataform/validation/check-errors/check-errors", validation);
+        validation.subItems.push(selectionExample);
 
         dataFormExample = new NavigationItem("Commit Modes", "./dataform/commit-modes/commit-modes", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
         dataFormExample = new NavigationItem("Groups", "./dataform/groups/groups", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Custom Editors", "./dataform/custom-editors/custom-editors", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
         dataFormExample = new NavigationItem("Events", "./dataform/events/events", dataFormRoot);
@@ -385,13 +397,39 @@ export class NavigationViewModel extends observableModule.Observable {
         currentItem.subItems.push(exampleItem);
     }
 
-        private buildAutoCompleteExamples(currentParent: NavigationItem) {
-        var currentItem = new NavigationItem("AutoCompleteTextView(Beta)", undefined, currentParent);
+    private buildAutoCompleteExamples(currentParent: NavigationItem) {
+        var currentItem = new NavigationItem("AutoCompleteTextView", undefined, currentParent);
         currentParent.subItems.push(currentItem);
         var exampleItem = new NavigationItem("Getting started", "./autocomplete/getting-started/autocomplete-getting-started", currentItem);
         currentItem.subItems.push(exampleItem);
 
         exampleItem = new NavigationItem("Token Layouts", "./autocomplete/layouts/autocomplete-layout", currentItem);
+        currentItem.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Customization", "./autocomplete/customization/autocomplete-customization", currentItem);
+        currentItem.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Events", "./autocomplete/events/autocomplete-events", currentItem);
+        currentItem.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Async Data Fetch", "./autocomplete/remote-data-fetch/autocomplete-remote", currentItem);
+        currentItem.subItems.push(exampleItem);
+    }
+
+    private buildGaugesExamples(currentParent: NavigationItem) {
+        let currentItem = new NavigationItem("Gauges", undefined, currentParent);
+        currentParent.subItems.push(currentItem);
+
+        var exampleItem = new NavigationItem("Getting started", "./gauges/getting-started/getting-started", currentItem);
+        currentItem.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Scales", "./gauges/scales/scales", currentItem);
+        currentItem.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Customization", "./gauges/customization/customization", currentItem);
+        currentItem.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Animations", "./gauges/animations/animations", currentItem);
         currentItem.subItems.push(exampleItem);
     }
 
