@@ -1,12 +1,11 @@
 <navigation:ExampleDrawerPage xmlns:navigation="navigation/example-drawer-page" loaded="pageLoaded" navigatedTo="onNavigatedTo"  
-    xmlns:dpg="nativescript-telerik-ui-pro/sidedrawer/drawerpage"
     xmlns:drawer="nativescript-telerik-ui-pro/sidedrawer"
     xmlns="http://www.nativescript.org/tns.xsd">
   <navigation.actionBar>
       <ActionBar title="Transitions" />
   </navigation.actionBar>
 
-  <dpg:DrawerPage.sideDrawer>
+  <navigation:ExampleDrawerPage.sideDrawer>
     <drawer:RadSideDrawer id="sideDrawer">
       <drawer:RadSideDrawer.drawerContent>
         <StackLayout cssClass="drawerContent">
@@ -29,7 +28,7 @@
         </StackLayout>
       </drawer:RadSideDrawer.drawerContent>
     </drawer:RadSideDrawer> 
-  </dpg:DrawerPage.sideDrawer>
+  </navigation:ExampleDrawerPage.sideDrawer>
 
   <StackLayout cssClass="mainContent">
       <ScrollView>
