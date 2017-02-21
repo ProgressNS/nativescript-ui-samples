@@ -1,11 +1,10 @@
-<navigation:ExampleDrawerPage xmlns:navigation="navigation/example-drawer-page" loaded="pageLoaded" navigatedTo="onNavigatedTo"  
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="pageLoaded" navigatedTo="onNavigatedTo"  
     xmlns:drawer="nativescript-telerik-ui-pro/sidedrawer"
     xmlns="http://www.nativescript.org/tns.xsd">
   <navigation.actionBar>
       <ActionBar title="Transitions" />
   </navigation.actionBar>
 
-  <navigation:ExampleDrawerPage.sideDrawer>
     <drawer:RadSideDrawer id="sideDrawer">
       <drawer:RadSideDrawer.drawerContent>
         <StackLayout cssClass="drawerContent">
@@ -27,20 +26,20 @@
           <Button text="Close Drawer" tap="{{ closeDrawer }}"/>
         </StackLayout>
       </drawer:RadSideDrawer.drawerContent>
+      <drawer:RadSideDrawer.mainContent>
+       <StackLayout cssClass="mainContent">
+        <ScrollView>
+          <StackLayout>
+            <Button text="Fade Transition" tap="{{ onFadeTransitionTap }}" cssClass="drawerContentButton"/>
+            <Button text="Push Transition" tap="{{ onPushTransitionTap }}" cssClass="drawerContentButton"/>
+            <Button text="Reveal Transition" tap="{{ onRevealTransitionTap }}" cssClass="drawerContentButton"/>
+            <Button text="ReverseSlideOut Transition" tap="{{ onReverseSlideOutTransitionTap }}" cssClass="drawerContentButton"/>
+            <Button text="ScaleUp Transition" tap="{{ onScaleUpTransitionTap }}" cssClass="drawerContentButton"/>
+            <Button text="SlideAlong Transition" tap="{{ onSlideAlongTransitionTap }}" cssClass="drawerContentButton"/>
+            <Button text="SlideInOnTop Transition" tap="{{ onSlideInOnTopTransitionTap }}" cssClass="drawerContentButton"/>
+          </StackLayout>
+        </ScrollView>
+      </StackLayout>
+      </drawer:RadSideDrawer.mainContent>
     </drawer:RadSideDrawer> 
-  </navigation:ExampleDrawerPage.sideDrawer>
-
-  <StackLayout cssClass="mainContent">
-      <ScrollView>
-        <StackLayout>
-          <Button text="Fade Transition" tap="{{ onFadeTransitionTap }}" cssClass="drawerContentButton"/>
-          <Button text="Push Transition" tap="{{ onPushTransitionTap }}" cssClass="drawerContentButton"/>
-          <Button text="Reveal Transition" tap="{{ onRevealTransitionTap }}" cssClass="drawerContentButton"/>
-          <Button text="ReverseSlideOut Transition" tap="{{ onReverseSlideOutTransitionTap }}" cssClass="drawerContentButton"/>
-          <Button text="ScaleUp Transition" tap="{{ onScaleUpTransitionTap }}" cssClass="drawerContentButton"/>
-          <Button text="SlideAlong Transition" tap="{{ onSlideAlongTransitionTap }}" cssClass="drawerContentButton"/>
-          <Button text="SlideInOnTop Transition" tap="{{ onSlideInOnTopTransitionTap }}" cssClass="drawerContentButton"/>
-        </StackLayout>
-      </ScrollView>
-    </StackLayout>
-</navigation:ExampleDrawerPage>
+</navigation:ExamplePage>

@@ -1,9 +1,9 @@
-<dpg:DrawerPage loaded="pageLoaded" navigatedTo="onNavigatedTo"  
-    xmlns:dpg="nativescript-telerik-ui-pro/sidedrawer/drawerpage"
-    xmlns:drawer="nativescript-telerik-ui-pro/sidedrawer"
-    xmlns="http://www.nativescript.org/tns.xsd">
-  <dpg:DrawerPage.sideDrawer>
-    <drawer:RadSideDrawer id="sideDrawer">
+<Page xmlns:navigation="navigation/example-page"  
+  loaded="pageLoaded" 
+  navigatedTo="onNavigatedTo"  
+  xmlns:drawer="nativescript-telerik-ui-pro/sidedrawer"
+  xmlns="http://www.nativescript.org/tns.xsd">
+  <drawer:RadSideDrawer id="sideDrawer" showOverNavigation="true">
       <drawer:RadSideDrawer.drawerContent>
         <StackLayout cssClass="drawerContent">
           <StackLayout cssClass="headerContent">
@@ -24,10 +24,11 @@
           <Button text="Close Drawer" tap="{{ closeDrawer }}"/>
         </StackLayout>
       </drawer:RadSideDrawer.drawerContent>
-    </drawer:RadSideDrawer> 
-  </dpg:DrawerPage.sideDrawer>
-    <StackLayout cssClass="mainContent">
-        <Label text="{{ exampleText }}" textWrap="true" cssClass="drawerContentText"/>
-        <Button text="Open drawer" tap="{{ onOpenDrawerTap }}" cssClass="drawerContentButton"/>
-    </StackLayout>
-</dpg:DrawerPage>
+      <drawer:RadSideDrawer.mainContent>
+        <StackLayout cssClass="mainContent">
+            <Label text="{{ exampleText }}" textWrap="true" cssClass="drawerContentText"/>
+            <Button text="Open drawer" tap="{{ onOpenDrawerTap }}" cssClass="drawerContentButton"/>
+        </StackLayout>
+    </drawer:RadSideDrawer.mainContent>
+  </drawer:RadSideDrawer> 
+</Page>
