@@ -1,4 +1,6 @@
 {
+  "name": "nativescript-telerik-ui sdk examples",
+  "version": "1.6.1",
   "description": "SDK Samples for UI for NativeScript",
   "license": "SEE LICENSE IN <your-license-filename>",
   "readme": "NativeScript Application",
