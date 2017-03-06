@@ -1,0 +1,34 @@
+<Page xmlns:navigation="navigation/example-page"  
+  loaded="pageLoaded" 
+  navigatedTo="onNavigatedTo"  
+  xmlns:drawer="nativescript-telerik-ui-pro/sidedrawer"
+  xmlns="http://www.nativescript.org/tns.xsd">
+  <drawer:RadSideDrawer id="sideDrawer" showOverNavigation="true">
+      <drawer:RadSideDrawer.drawerContent>
+        <StackLayout cssClass="drawerContent">
+          <StackLayout cssClass="headerContent">
+            <Label text="Navigation Menu"/>
+          </StackLayout>
+          <ScrollView>
+            <StackLayout cssClass="drawerMenuContent">
+              <Label text="Primary" cssClass="drawerSectionHeader" />
+              <Label text="Social" cssClass="drawerSectionItem" />
+              <Label text="Promotions" cssClass="drawerSectionItem" />
+              <Label text="Labels" cssClass="drawerSectionHeader" />
+              <Label text="Important" cssClass="drawerSectionItem" />
+              <Label text="Starred" cssClass="drawerSectionItem" />
+              <Label text="Sent Mail" cssClass="drawerSectionItem" />
+              <Label text="Drafts" cssClass="drawerSectionItem" />
+            </StackLayout>
+          </ScrollView>
+          <Button text="Close Drawer" tap="{{ closeDrawer }}"/>
+        </StackLayout>
+      </drawer:RadSideDrawer.drawerContent>
+      <drawer:RadSideDrawer.mainContent>
+        <StackLayout cssClass="mainContent">
+            <Label text="{{ exampleText }}" textWrap="true" cssClass="drawerContentText"/>
+            <Button text="Open drawer" tap="{{ onOpenDrawerTap }}" cssClass="drawerContentButton"/>
+        </StackLayout>
+    </drawer:RadSideDrawer.mainContent>
+  </drawer:RadSideDrawer> 
+</Page>

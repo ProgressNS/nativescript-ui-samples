@@ -16,4 +16,14 @@ export class DrawerOverNavigationModel {
         let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>( frameModule.topmost().getViewById("sideDrawer"));
         sideDrawer.closeDrawer();
     }
+
+    public goToSecondPage() {
+        var navigationEntry = {
+            moduleName: "./sidedrawer/over-navigation/second-page/second-drawer-over-navigation",
+            context: this,
+            animated: true
+        };
+        
+        frameModule.topmost().navigate(navigationEntry);
+    }
 }
