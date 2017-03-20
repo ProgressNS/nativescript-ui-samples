@@ -1,5 +1,5 @@
-import observableModule = require("data/observable");
-import frameModule = require("ui/frame");
+import observableModule = require("tns-core-modules/data/observable");
+import frameModule = require("tns-core-modules/ui/frame");
 
 export class NavigationItem {
     private _subItems: Array<NavigationItem>;

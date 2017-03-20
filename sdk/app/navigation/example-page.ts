@@ -1,8 +1,8 @@
-import pageModule = require("ui/page");
-import actionBarModule = require("ui/action-bar");
-import applicationModule = require("application");
-import frameModule = require("ui/frame");
-import utilsModule = require("utils/utils");
+import pageModule = require("tns-core-modules/ui/page");
+import actionBarModule = require("tns-core-modules/ui/action-bar");
+import applicationModule = require("tns-core-modules/application");
+import frameModule = require("tns-core-modules/ui/frame");
+import utilsModule = require("tns-core-modules/utils/utils");
 
 export class ExamplePage extends pageModule.Page {
 

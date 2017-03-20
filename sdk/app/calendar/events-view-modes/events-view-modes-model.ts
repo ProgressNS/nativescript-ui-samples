@@ -1,8 +1,8 @@
-import observableModule = require("data/observable");
+import observableModule = require("tns-core-modules/data/observable");
 // >> calendar-calendar-require
 import calendarModule = require("nativescript-telerik-ui-pro/calendar");
 // << calendar-calendar-require
-import frameModule = require("ui/frame");
+import frameModule = require("tns-core-modules/ui/frame");
 
 // >> calendar-calendarevents-model
 export class ViewModel extends observableModule.Observable {

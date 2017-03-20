@@ -1,5 +1,5 @@
 import chartModule = require("nativescript-telerik-ui-pro/chart");
-import frameModule = require("ui/frame");
+import frameModule = require("tns-core-modules/ui/frame");
 
 import dataModelModule = require("../../data-models/categorical-data-model");
 

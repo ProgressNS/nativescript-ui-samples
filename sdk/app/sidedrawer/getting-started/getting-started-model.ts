@@ -1,5 +1,5 @@
-import observableModule = require("data/observable");
-import frame = require("ui/frame");
+import observableModule = require("tns-core-modules/data/observable");
+import frame = require("tns-core-modules/ui/frame");
 import drawerModule = require("nativescript-telerik-ui-pro/sidedrawer");
 
 // >> sidedrawer-getting-started-model

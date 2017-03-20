@@ -1,8 +1,8 @@
-import observableModule = require("data/observable");
-import {ObservableArray} from "data/observable-array";
+import observableModule = require("tns-core-modules/data/observable");
+import {ObservableArray} from "tns-core-modules/data/observable-array";
 import listViewModule = require("nativescript-telerik-ui-pro/listview");
-import timer = require("timer");
-import frameModule = require("ui/frame");
+import timer = require("tns-core-modules/timer");
+import frameModule = require("tns-core-modules/ui/frame");
 
 export class ViewModel {
 

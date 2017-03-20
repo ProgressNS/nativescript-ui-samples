@@ -1,7 +1,7 @@
 // >> autocomplete-generate-data
-import {ObservableArray} from "data/observable-array";
+import {ObservableArray} from "tns-core-modules/data/observable-array";
 import autocompleteModule = require("nativescript-telerik-ui-pro/autocomplete");
-import observableModule = require("ui/core/dependency-observable");
+import observableModule = require("tns-core-modules/ui/core/dependency-observable");
 
 export class ViewModel {
 

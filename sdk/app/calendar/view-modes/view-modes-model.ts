@@ -1,6 +1,6 @@
 import calendarModule = require("nativescript-telerik-ui-pro/calendar");
-import observableModule = require("data/observable");
-import frameModule = require("ui/frame");
+import observableModule = require("tns-core-modules/data/observable");
+import frameModule = require("tns-core-modules/ui/frame");
 
 export class ViewModel extends observableModule.Observable{
     private _selectionInfo;

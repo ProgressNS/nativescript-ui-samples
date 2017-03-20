@@ -1,6 +1,6 @@
 import drawerModule = require("nativescript-telerik-ui-pro/sidedrawer");
-import observableModule = require("ui/core/dependency-observable");
-import frameModule = require("ui/frame");
+import observableModule = require("tns-core-modules/ui/core/dependency-observable");
+import frameModule = require("tns-core-modules/ui/frame");
 
 export class DrawerCallbacksModel extends observableModule.DependencyObservable {
 

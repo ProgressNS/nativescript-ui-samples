@@ -23,5 +23,14 @@
                 </StackLayout> 
             </lv:RadListView.itemTemplate>
         </lv:RadListView>
+
+         <!--<ListView row="1" items="{{ _currentSubItems }}" itemTap="{{onNavigationItemTap}}" >
+            <ListView.itemTemplate>
+                <StackLayout cssClass="itemStackLayout">
+                    <Label text="{{ title }}" textWrap="true" cssClass="titleLabel"/>
+                    <StackLayout height="1" backgroundColor="#EEEEEE"/>
+                </StackLayout> 
+            </ListView.itemTemplate>
+        </ListView>-->
     </GridLayout>
 </Page>

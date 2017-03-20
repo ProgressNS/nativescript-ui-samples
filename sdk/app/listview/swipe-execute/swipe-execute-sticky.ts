@@ -1,9 +1,9 @@
 
 import viewModel = require("./swipe-execute-model");
 import listViewModule = require("nativescript-telerik-ui-pro/listview");
-import viewModule = require('ui/core/view');
-import frameModule = require("ui/frame");
-import utilsModule = require("utils/utils");
+import viewModule = require('tns-core-modules/ui/core/view');
+import frameModule = require("tns-core-modules/ui/frame");
+import utilsModule = require("tns-core-modules/utils/utils");
 
 export function onPageLoaded(args) {
     var page = args.object;

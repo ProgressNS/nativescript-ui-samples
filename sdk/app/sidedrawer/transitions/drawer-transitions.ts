@@ -1,5 +1,5 @@
 import viewModel = require("./drawer-transitions-model");
-import frame = require("ui/frame");
+import frame = require("tns-core-modules/ui/frame");
 
 export function pageLoaded(args){
     var page = args.object;

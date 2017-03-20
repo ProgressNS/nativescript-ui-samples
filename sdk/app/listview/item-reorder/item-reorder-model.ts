@@ -1,6 +1,6 @@
-import {ObservableArray} from "data/observable-array";
+import {ObservableArray} from "tns-core-modules/data/observable-array";
 import listViewModule = require("nativescript-telerik-ui-pro/listview");
-import timer = require("timer");
+import timer = require("tns-core-modules/timer");
 var names = require("../listview-selection/PhotosWithNames.json")
 
 export class ViewModel {

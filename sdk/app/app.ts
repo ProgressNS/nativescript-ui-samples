@@ -1,4 +1,4 @@
-import application = require("application");
+import application = require("tns-core-modules/application");
 import fresco = require("nativescript-fresco");
 application.cssFile = "./app.css";
 application.mainModule = "./navigation/category-list";

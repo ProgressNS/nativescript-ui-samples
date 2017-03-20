@@ -1,9 +1,9 @@
-import observable = require("data/observable");
-import view = require("ui/core/view");
-import localSettings = require("application-settings");
-import platform = require("platform");
-import appModule = require("application");
-import types = require("utils/types");
+import observable = require("tns-core-modules/data/observable");
+import view = require("tns-core-modules/ui/core/view");
+import localSettings = require("tns-core-modules/application-settings");
+import platform = require("tns-core-modules/platform");
+import appModule = require("tns-core-modules/application");
+import types = require("tns-core-modules/utils/types");
 
 
 export interface Example {
