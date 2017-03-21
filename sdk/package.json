@@ -19,7 +19,8 @@
   },
   "dependencies": {
     "nativescript-telerik-ui-pro": "http://nsbuild01:8080/build/view/nativescript-ui/view/1.%20Packages/job/nativescript-ui-custom/lastSuccessfulBuild/artifact/out/nativescript-ui-debug-dev-pro.tgz",
-    "tns-core-modules": "http://nsbuild01:8080/build/view/Stable/view/0.%20Packages/job/tns-modules-stable/lastSuccessfulBuild/artifact/bin/dist/tns-core-modules.tgz"
+    "tns-core-modules": "internal-preview",
+    "tns-platform-declarations": "modules-3.0.0"
   },
   "devDependencies": {
     "babel-traverse": "6.9.0",
