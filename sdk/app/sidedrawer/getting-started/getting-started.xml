@@ -11,19 +11,19 @@
 
     <drawer:RadSideDrawer id="sideDrawer">
       <drawer:RadSideDrawer.drawerContent>
-        <StackLayout cssClass="drawerContent">
-          <StackLayout cssClass="headerContent">
+        <StackLayout class="drawerContent">
+          <StackLayout class="headerContent">
             <Label text="Navigation Menu"/>
           </StackLayout>
-          <StackLayout cssClass="drawerMenuContent">
-            <Label text="Primary" cssClass="drawerSectionHeader" />
-            <Label text="Social" cssClass="drawerSectionItem" />
-            <Label text="Promotions" cssClass="drawerSectionItem" />
-            <Label text="Labels" cssClass="drawerSectionHeader" />
-            <Label text="Important" cssClass="drawerSectionItem" />
-            <Label text="Starred" cssClass="drawerSectionItem" />
-            <Label text="Sent Mail" cssClass="drawerSectionItem" />
-            <Label text="Drafts" cssClass="drawerSectionItem" />
+          <StackLayout class="drawerMenuContent">
+            <Label text="Primary" class="drawerSectionHeader" />
+            <Label text="Social" class="drawerSectionItem" />
+            <Label text="Promotions" class="drawerSectionItem" />
+            <Label text="Labels" class="drawerSectionHeader" />
+            <Label text="Important" class="drawerSectionItem" />
+            <Label text="Starred" class="drawerSectionItem" />
+            <Label text="Sent Mail" class="drawerSectionItem" />
+            <Label text="Drafts" class="drawerSectionItem" />
           </StackLayout>
           <Button text="Close Drawer" tap="{{ onCloseDrawerTap }}"/>
         </StackLayout>
@@ -31,8 +31,8 @@
 
       <drawer:RadSideDrawer.mainContent>
         <StackLayout >
-          <Label text="{{ mainContentText }}" textWrap="true" cssClass="drawerContentText"/>
-          <Button text="Open drawer" tap="{{ onOpenDrawerTap }}" cssClass="drawerContentButton"/>
+          <Label text="{{ mainContentText }}" textWrap="true" class="drawerContentText"/>
+          <Button text="Open drawer" tap="{{ onOpenDrawerTap }}" class="drawerContentButton"/>
         </StackLayout>
       </drawer:RadSideDrawer.mainContent>
     </drawer:RadSideDrawer>

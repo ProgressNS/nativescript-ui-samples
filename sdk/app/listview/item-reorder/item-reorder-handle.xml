@@ -1,6 +1,6 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page"  loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui-pro/listview" xmlns="http://www.nativescript.org/tns.xsd">
     <GridLayout orientation="vertical" rows="auto, *, auto">
-        <Label cssClass="example-header" text="Drag an item by the handle to reorder"/>
+        <Label class="example-header" text="Drag an item by the handle to reorder"/>
         
         <lv:RadListView itemReordered="{{onItemReordered}}" items="{{ dataItems }}" row="1" itemReorder="true" reorderMode="Drag">
             <lv:RadListView.listViewLayout>

@@ -17,8 +17,8 @@
                 <lv:ListViewLinearLayout scrollDirection="Vertical"/>
             </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
-                <StackLayout cssClass="itemStackLayout">
-                    <Label text="{{ title }}" textWrap="true" cssClass="titleLabel"/>
+                <StackLayout class="itemStackLayout">
+                    <Label text="{{ title }}" textWrap="true" class="titleLabel"/>
                     <StackLayout height="1" backgroundColor="#EEEEEE"/>
                 </StackLayout> 
             </lv:RadListView.itemTemplate>
