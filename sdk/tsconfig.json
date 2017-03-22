@@ -2,7 +2,7 @@
     "version": "2.0.3",
     "compilerOptions": {
         "module": "commonjs",
-        "target": "es6",
+        "target": "es5",
         "experimentalDecorators": true,
         "noEmitHelpers": true,
         "noEmitOnError": false
