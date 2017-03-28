@@ -6,7 +6,7 @@
     </Page.actionBar>
     <ListView items="{{myItems}}" id="listView" rowHeight="44" itemTap="{{onSelectedRow}}" >
         <ListView.itemTemplate>
-            <Label text="{{ title }}" cssClass="listViewCellLabel" textWrap="true" />
+            <Label text="{{ title }}" class="listViewCellLabel" textWrap="true" />
         </ListView.itemTemplate>
     </ListView>
 </Page>

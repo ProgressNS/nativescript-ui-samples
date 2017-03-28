@@ -1,6 +1,6 @@
 import viewModel = require("./../view-models/user-model");
-import segmentedBarModule = require("ui/segmented-bar");
-import viewModule = require("ui/core/view");
+import segmentedBarModule = require("tns-core-modules/ui/segmented-bar");
+import viewModule = require("tns-core-modules/ui/core/view");
 import dataFormModule = require("nativescript-telerik-ui-pro/dataform");
 
 var dataform;

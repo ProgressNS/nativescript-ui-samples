@@ -1,5 +1,5 @@
 import callbacksModelModule = require("./drawer-callbacks-model");
-import frameModule = require("ui/frame");
+import frameModule = require("tns-core-modules/ui/frame");
 
 var drawerCallbacksModel : callbacksModelModule.DrawerCallbacksModel;
 

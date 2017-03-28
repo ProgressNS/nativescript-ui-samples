@@ -18,7 +18,7 @@
 
 
 	<GridLayout orientation="vertical" rows="auto, *, auto">
-        <Label text="Month view mode styling" cssClass="example-header"/>
+        <Label text="Month view mode styling" class="example-header"/>
         <rc:RadCalendar id="calendar" height="400"  eventSource="{{ eventSource }}" eventsViewMode="Inline" selectionMode="Single" viewMode="{{ViewMode}}">
         
 <!-- >> calendar-monthview-styling -->

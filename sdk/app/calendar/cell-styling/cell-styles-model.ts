@@ -1,7 +1,7 @@
 import * as calendarModule from "nativescript-telerik-ui-pro/calendar";
-import { Observable } from "data/observable";
-import * as frameModule from "ui/frame";
-import { Color } from "color"
+import { Observable } from "tns-core-modules/data/observable";
+import * as frameModule from "tns-core-modules/ui/frame";
+import { Color } from "tns-core-modules/color";
 
 export class StylingViewModel extends Observable {
 

@@ -1,7 +1,7 @@
-import {ObservableArray} from "data/observable-array";
-import {Observable} from "data/observable";
+import {ObservableArray} from "tns-core-modules/data/observable-array";
+import {Observable} from "tns-core-modules/data/observable";
 import listViewModule = require("nativescript-telerik-ui-pro/listview");
-import timer = require("timer");
+import timer = require("tns-core-modules/timer");
 // >> listview-howto-item-selection-page-model
 export class ViewModel {
 

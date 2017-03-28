@@ -1,4 +1,4 @@
-import {ObservableArray} from "data/observable-array";
+import {ObservableArray} from "tns-core-modules/data/observable-array";
 import autocompleteModule = require("nativescript-telerik-ui-pro/autocomplete");
 
 var data = require("./countries.json")

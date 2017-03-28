@@ -1,7 +1,7 @@
-import {ObservableArray} from "data/observable-array";
+import {ObservableArray} from "tns-core-modules/data/observable-array";
 import chartModule = require("nativescript-telerik-ui-pro/chart");
-import observableModule = require("data/observable");
-import frameModule = require("ui/frame");
+import observableModule = require("tns-core-modules/data/observable");
+import frameModule = require("tns-core-modules/ui/frame");
 var _isFirstLoad = true;
 export class ViewModel extends observableModule.Observable {
     private _stackModes;

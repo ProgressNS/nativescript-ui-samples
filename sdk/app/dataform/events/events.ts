@@ -1,6 +1,6 @@
 import viewModel = require("./../view-models/person-model");
-import viewModule = require("ui/core/view");
-import dialogs = require("ui/dialogs");
+import viewModule = require("tns-core-modules/ui/core/view");
+import dialogs = require("tns-core-modules/ui/dialogs");
 
 var label;
 

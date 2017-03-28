@@ -1,5 +1,5 @@
-import fs = require("file-system");
-import observable = require("data/observable");
+import fs = require("tns-core-modules/file-system");
+import observable = require("tns-core-modules/data/observable");
 
 export class PersonModel2 extends observable.Observable {
 

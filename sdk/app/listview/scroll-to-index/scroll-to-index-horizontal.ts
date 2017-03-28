@@ -1,6 +1,6 @@
 import { ViewModel } from "./scroll-to-index-model-horizontal";
 import { RadListView } from "nativescript-telerik-ui-pro/listview";
-import frameModule = require("ui/frame");
+import frameModule = require("tns-core-modules/ui/frame");
 
 var viewModelContext: ViewModel;
 
