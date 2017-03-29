@@ -1,7 +1,6 @@
 import application = require("tns-core-modules/application");
 //import fresco = require("nativescript-fresco");
 application.setCssFileName("./app.css");
-application.mainModule = "./navigation/category-list";
 
 //partial declaration of Fresco native android class
 declare module com {
@@ -25,4 +24,4 @@ if (application.android) {
     });
 }
 
-application.start();
+application.start("./navigation/category-list");
