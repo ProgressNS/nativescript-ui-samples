@@ -4,7 +4,7 @@
             <NavigationButton text="Back" tap="{{ onBackTap }}"/>
         </ActionBar>
     </Page.actionBar>
-    <ListView items="{{myItems}}" id="listView" rowHeight="44" itemTap="{{onSelectedRow}}" >
+    <ListView items="{{myItems}}" id="listView"  itemTap="{{onSelectedRow}}" >
         <ListView.itemTemplate>
             <Label text="{{ title }}" class="listViewCellLabel" textWrap="true" />
         </ListView.itemTemplate>
