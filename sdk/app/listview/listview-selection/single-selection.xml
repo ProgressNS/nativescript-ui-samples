@@ -3,7 +3,7 @@
     <GridLayout orientation="vertical" rows="auto, *, auto" >
         <lv:RadListView id="listView" items="{{ dataItems }}" row="1" selectionBehavior="Press" itemSelected="onItemSelected" itemDeselected="onItemDeselected">
             <lv:RadListView.listViewLayout>
-                <lv:ListViewLinearLayout itemHeight="50" scrollDirection="Vertical"/>
+                <lv:ListViewLinearLayout scrollDirection="Vertical"/>
             </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
                 <StackLayout orientation="vertical" paddingLeft="16">

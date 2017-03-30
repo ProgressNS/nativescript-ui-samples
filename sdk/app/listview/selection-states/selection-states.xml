@@ -5,7 +5,7 @@
         <lv:RadListView items="{{ dataItems }}" row="1" multipleSelection="true" selectionBehavior="Press" itemSelected="{{itemSelected}}" itemDeselected="{{itemDeselected}}">
         <!-- << listview-howto-item-selection-events-xml -->
             <lv:RadListView.listViewLayout>
-                <lv:ListViewLinearLayout itemHeight="50" scrollDirection="Vertical"/>
+                <lv:ListViewLinearLayout scrollDirection="Vertical"/>
             </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
             <!-- >> listview-howto-item-selection-template-xml -->
