@@ -99,7 +99,7 @@ export function editorSetupSegmentedEditorAndroid(editor) {
     radioGroup.setDividerDrawable(segmentDivider);
 
     var segmentItemResourceId = androidContext.getResources().getIdentifier("df_segment_item", "drawable", androidContext.getPackageName());
-    var segmentTextColorResourceId = androidContext.getResources().getIdentifier("df_segment_text_color", "tns-core-modules/color", androidContext.getPackageName());
+    var segmentTextColorResourceId = androidContext.getResources().getIdentifier("df_segment_text_color", "color", androidContext.getPackageName());
     editor.setCustomizeButtons(new com.telerik.android.common.Procedure<android.widget.RadioButton>({
         apply(argument) {
             var segmentItemDrawable = androidContext.getResources().getDrawable(segmentItemResourceId);
