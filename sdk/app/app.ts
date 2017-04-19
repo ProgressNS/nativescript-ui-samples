@@ -1,5 +1,5 @@
 import application = require("tns-core-modules/application");
-//import fresco = require("nativescript-fresco");
+import fresco = require("nativescript-fresco");
 application.setCssFileName("./app.css");
 
 //partial declaration of Fresco native android class
@@ -20,7 +20,7 @@ declare module com {
 
 if (application.android) {
     application.on("launch", (intent) => {
-        //fresco.initialize();
+        fresco.initialize();
     });
 }
 
