@@ -90,14 +90,14 @@ export function changeEditor() {
 // >> dataform-getting-started-runtime-change
 export function changeEditorFill() {
     var property = dataform.getPropertyByName("name");
-    property.editor.style.fillColor = "LightBlue";
+    property.editor.propertyEditorStyle.fillColor = "LightBlue";
 }
 // << dataform-getting-started-runtime-change
 
 export function changeEditorStroke() {
     var property = dataform.getPropertyByName("name");
-    property.editor.style.strokeWidth = 4;
-    property.editor.style.strokeColor = "Yellow";
+    property.editor.propertyEditorStyle.strokeWidth = 4;
+    property.editor.propertyEditorStyle.strokeColor = "Yellow";
 }
 
 export function changeGroupCollapsible(value) {

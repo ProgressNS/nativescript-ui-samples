@@ -1,7 +1,7 @@
 {
   "name": "nativescript-telerik-ui-sdk-examples",
   "version": "1.6.1",
-  "description": "SDK Samples for UI for NativeScript",
+  "description": "SDK Samples for Progress UI for NativeScript",
   "license": "SEE LICENSE IN <your-license-filename>",
   "readme": "NativeScript Application",
   "repository": {
@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "nativescript-fresco": "rc",
-    "nativescript-telerik-ui-pro": "1.6.1",
+    "nativescript-telerik-ui-pro": "http://nsbuild01:8080/build/view/nativescript-ui/view/1.%20Packages/job/nativescript-ui-master/lastSuccessfulBuild/artifact/out/nativescript-ui-debug-dev-pro.tgz",
     "tns-core-modules": "rc",
     "tns-core-modules-widgets": "rc"
   },
