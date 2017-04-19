@@ -19,9 +19,8 @@
   },
   "dependencies": {
     "nativescript-fresco": "3.0.1",
-    "nativescript-telerik-ui-pro": "http://nsbuild01:8080/build/view/nativescript-ui/view/1.%20Packages/job/nativescript-ui-master/lastSuccessfulBuild/artifact/out/nativescript-ui-debug-dev-pro.tgz",
-    "tns-core-modules": "http://nsbuild01:8080/build/view/Hotfix/view/0.%20Packages/job/tns-modules-hotfix/lastSuccessfulBuild/artifact/bin/dist/tns-core-modules.tgz",
-    "tns-core-modules-widgets": "http://nsbuild01:8080/build/view/Hotfix/view/0.%20Packages/job/tns-core-modules-widgets-hotfix/lastSuccessfulBuild/artifact/dist/tns-core-modules-widgets.tgz"
+    "nativescript-telerik-ui-pro": "rc",
+    "tns-core-modules": "rc"
   },
   "devDependencies": {
     "babel-traverse": "6.9.0",
