@@ -52,18 +52,18 @@ button {
     margin-left: 15
 }
 
-.listView{
+.listView {
     background-color: #ffffff;
 }
 
-.example-title{
+.example-title {
     color: #555555;
     font-size: 17;
     margin: 0;
     padding: 10;
 }
 
-.control-title{
+.control-title {
     color: #FFFFFF;
     background-color: #284848;
     font-size: 22;
@@ -71,7 +71,7 @@ button {
     padding: 5;
 }
 
-.example-group-title{
+.example-group-title {
     color: #555555;
     background-color: #808080;
     font-size: 20;
