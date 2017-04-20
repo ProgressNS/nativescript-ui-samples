@@ -98,7 +98,7 @@ export class NavigationViewModel extends observableModule.Observable {
         calendarExample = new NavigationItem("Populating with data", "./calendar/populating-with-data/populating-with-data", calendarRoot);
         calendarRoot.subItems.push(calendarExample);
 
-        calendarExample = new NavigationItem("Programatic control", "./calendar/programatic-control/programatic-control", calendarRoot);
+        calendarExample = new NavigationItem("Programmatic control", "./calendar/programatic-control/programatic-control", calendarRoot);
         calendarRoot.subItems.push(calendarExample);
 
         calendarExample = new NavigationItem("Selection modes", "./calendar/selection-modes/selection-modes", calendarRoot);
