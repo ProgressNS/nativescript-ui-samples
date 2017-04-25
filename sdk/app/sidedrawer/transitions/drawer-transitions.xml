@@ -1,12 +1,12 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="pageLoaded" navigatedTo="onNavigatedTo"  
-    xmlns:drawer="nativescript-telerik-ui-pro/sidedrawer"
+    xmlns:nsDrawer="nativescript-telerik-ui-pro/sidedrawer"
     xmlns="http://www.nativescript.org/tns.xsd">
   <navigation.actionBar>
       <ActionBar title="Transitions" />
   </navigation.actionBar>
 
-    <drawer:RadSideDrawer id="sideDrawer">
-      <drawer:RadSideDrawer.drawerContent>
+    <nsDrawer:RadSideDrawer id="sideDrawer">
+      <nsDrawer:RadSideDrawer.drawerContent>
         <StackLayout class="drawerContent">
           <StackLayout class="headerContent">
             <Label text="Navigation Menu"/>
@@ -25,8 +25,8 @@
           </ScrollView>
           <Button text="Close Drawer" tap="{{ closeDrawer }}"/>
         </StackLayout>
-      </drawer:RadSideDrawer.drawerContent>
-      <drawer:RadSideDrawer.mainContent>
+      </nsDrawer:RadSideDrawer.drawerContent>
+      <nsDrawer:RadSideDrawer.mainContent>
        <StackLayout class="mainContent">
         <ScrollView>
           <StackLayout>
@@ -40,6 +40,6 @@
           </StackLayout>
         </ScrollView>
       </StackLayout>
-      </drawer:RadSideDrawer.mainContent>
-    </drawer:RadSideDrawer> 
+      </nsDrawer:RadSideDrawer.mainContent>
+    </nsDrawer:RadSideDrawer> 
 </navigation:ExamplePage>
