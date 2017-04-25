@@ -1,16 +1,16 @@
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:drawer="nativescript-telerik-ui-pro/sidedrawer" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:nsDrawer="nativescript-telerik-ui-pro/sidedrawer" xmlns="http://www.nativescript.org/tns.xsd">
   <navigation.actionBar>
       <ActionBar title="Positions" />
   </navigation.actionBar>
   <!-- >> sidedrawer-setting-location-xml -->
   
-    <drawer:RadSideDrawer id="sideDrawer" drawerLocation="Left" drawerContentSize="280">
+    <nsDrawer:RadSideDrawer id="sideDrawer" drawerLocation="Left" drawerContentSize="280">
     
-    <drawer:RadSideDrawer.drawerTransition>
-      <drawer:RevealTransition/>
-    </drawer:RadSideDrawer.drawerTransition>
+    <nsDrawer:RadSideDrawer.drawerTransition>
+      <nsDrawer:RevealTransition/>
+    </nsDrawer:RadSideDrawer.drawerTransition>
     
-      <drawer:RadSideDrawer.drawerContent>
+      <nsDrawer:RadSideDrawer.drawerContent>
       <!-- >> (hide) -->
         <StackLayout class="drawerContent">
           <StackLayout class="headerContent">
@@ -31,9 +31,9 @@
           </ScrollView>
         </StackLayout>
         <!-- << (hide) -->
-      </drawer:RadSideDrawer.drawerContent>
+      </nsDrawer:RadSideDrawer.drawerContent>
 
-      <drawer:RadSideDrawer.mainContent>
+      <nsDrawer:RadSideDrawer.mainContent>
         <StackLayout class="mainContent">
           <Label text="{{drawerPositionText}}" textWrap="true" class="drawerContentText"/>
           <ScrollView>
@@ -45,7 +45,7 @@
             </StackLayout>
           </ScrollView>
         </StackLayout>
-      </drawer:RadSideDrawer.mainContent>
-    </drawer:RadSideDrawer>
+      </nsDrawer:RadSideDrawer.mainContent>
+    </nsDrawer:RadSideDrawer>
   <!-- << sidedrawer-setting-location-xml -->
 </navigation:ExamplePage>

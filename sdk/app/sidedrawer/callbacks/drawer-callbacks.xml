@@ -1,17 +1,17 @@
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" navigatedTo="onNavigatedTo" xmlns:drawer="nativescript-telerik-ui-pro/sidedrawer" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" navigatedTo="onNavigatedTo" xmlns:nsDrawer="nativescript-telerik-ui-pro/sidedrawer" xmlns="http://www.nativescript.org/tns.xsd">
   <navigation.actionBar>
       <ActionBar title="Events" />
   </navigation.actionBar>
   <!-- >> sidedrawer-events-xml -->
-  <drawer:RadSideDrawer id="sideDrawer"
+  <nsDrawer:RadSideDrawer id="sideDrawer"
                         drawerClosed="onDrawerClosed"
                         drawerClosing="onDrawerClosing"
                         drawerOpened="onDrawerOpened"
                         drawerOpening="onDrawerOpening">
-    <drawer:RadSideDrawer.drawerTransition>
-      <drawer:RevealTransition/>
-    </drawer:RadSideDrawer.drawerTransition>
-    <drawer:RadSideDrawer.mainContent>
+    <nsDrawer:RadSideDrawer.drawerTransition>
+      <nsDrawer:RevealTransition/>
+    </nsDrawer:RadSideDrawer.drawerTransition>
+    <nsDrawer:RadSideDrawer.mainContent>
     <!-- >> (hide) -->
         <StackLayout class="mainContent">
             <Button text="Open drawer" tap="{{ onOpenDrawerTap }}" class="drawerContentButton"/>
@@ -19,8 +19,8 @@
             <Label text="{{ currentDrawerNotification }}" class="drawerContentText"/>
         </StackLayout>
         <!-- << (hide) -->
-    </drawer:RadSideDrawer.mainContent>
-    <drawer:RadSideDrawer.drawerContent>
+    </nsDrawer:RadSideDrawer.mainContent>
+    <nsDrawer:RadSideDrawer.drawerContent>
     <!-- >> (hide) -->
        <StackLayout class="drawerContent">
         <StackLayout class="headerContent">
@@ -39,7 +39,7 @@
         <Button text="Close Drawer" tap="{{ onCloseDrawerTap }}"/>
       </StackLayout>
       <!-- << (hide) -->
-    </drawer:RadSideDrawer.drawerContent>
-  </drawer:RadSideDrawer>
+    </nsDrawer:RadSideDrawer.drawerContent>
+  </nsDrawer:RadSideDrawer>
   <!-- << sidedrawer-events-xml -->
 </navigation:ExamplePage>
