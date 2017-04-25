@@ -1,16 +1,13 @@
-<!-- >> sidedrawer-getting-started-xml -->
-<!-- >> sidedrawer-namespace-xml -->
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="pageLoaded" 
     navigatedTo="onNavigatedTo"  
-    xmlns:drawer="nativescript-telerik-ui-pro/sidedrawer"
+    xmlns:nsDrawer="nativescript-telerik-ui-pro/sidedrawer"
     xmlns="http://www.nativescript.org/tns.xsd">
-<!-- << sidedrawer-namespace-xml -->
     <navigation.actionBar>
       <ActionBar title="Getting started" />
     </navigation.actionBar>
-
-    <drawer:RadSideDrawer id="sideDrawer">
-      <drawer:RadSideDrawer.drawerContent>
+<!-- >> sidedrawer-getting-started-xml -->
+    <nsDrawer:RadSideDrawer id="sideDrawer">
+      <nsDrawer:RadSideDrawer.drawerContent>
         <StackLayout backgroundColor="gray">
           <StackLayout height="56" style="text-align: center; vertical-align: center;">
             <Label text="Navigation Menu"/>
@@ -27,14 +24,14 @@
           </StackLayout>
           <Label text="Close Drawer" color="lightgray" padding="10" style="horizontal-align: center" tap="{{ onCloseDrawerTap }}"/>
         </StackLayout>
-      </drawer:RadSideDrawer.drawerContent>
+      </nsDrawer:RadSideDrawer.drawerContent>
 
-      <drawer:RadSideDrawer.mainContent>
+      <nsDrawer:RadSideDrawer.mainContent>
         <StackLayout >
           <Label text="{{ mainContentText }}" textWrap="true" fontSize="13" padding="10" />
           <Button text="Open drawer" tap="{{ onOpenDrawerTap }}" margin="10" style="horizontal-align: left" />
         </StackLayout>
-      </drawer:RadSideDrawer.mainContent>
-    </drawer:RadSideDrawer>
-</navigation:ExamplePage>
+      </nsDrawer:RadSideDrawer.mainContent>
+    </nsDrawer:RadSideDrawer>
 <!-- << sidedrawer-getting-started-xml -->
+</navigation:ExamplePage>

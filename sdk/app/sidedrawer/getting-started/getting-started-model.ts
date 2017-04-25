@@ -1,9 +1,9 @@
-import observableModule = require("tns-core-modules/data/observable");
-import frame = require("tns-core-modules/ui/frame");
-import drawerModule = require("nativescript-telerik-ui-pro/sidedrawer");
-
 // >> sidedrawer-getting-started-model
-export class GettingStartedViewModel extends observableModule.Observable {
+import { Observable } from "tns-core-modules/data/observable";
+import frame = require("tns-core-modules/ui/frame");
+import { RadSideDrawer } from "nativescript-telerik-ui-pro/sidedrawer";
+
+export class GettingStartedViewModel extends Observable {
     constructor() {
         super();
         this.set("mainContentText", "SideDrawer for NativeScript can be easily setup in the XML definition of your page by defining main- and drawer-content. The component"
@@ -11,12 +11,12 @@ export class GettingStartedViewModel extends observableModule.Observable {
     }
 
     public onOpenDrawerTap() {
-        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>( frame.topmost().getViewById("sideDrawer"));
+        let sideDrawer: RadSideDrawer = <RadSideDrawer>( frame.topmost().getViewById("sideDrawer"));
         sideDrawer.showDrawer();
     }
 
     public onCloseDrawerTap() {
-        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>( frame.topmost().getViewById("sideDrawer"));
+        let sideDrawer: RadSideDrawer = <RadSideDrawer>( frame.topmost().getViewById("sideDrawer"));
         sideDrawer.closeDrawer();
     }
 }
