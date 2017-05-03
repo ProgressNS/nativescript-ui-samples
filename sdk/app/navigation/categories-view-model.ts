@@ -101,7 +101,7 @@ export class NavigationViewModel extends observableModule.Observable {
         calendarExample = new NavigationItem("Populating with data", "./calendar/populating-with-data/populating-with-data", calendarRoot);
         calendarRoot.subItems.push(calendarExample);
 
-        calendarExample = new NavigationItem("Programatic control", "./calendar/programatic-control/programatic-control", calendarRoot);
+        calendarExample = new NavigationItem("Programmatic control", "./calendar/programatic-control/programatic-control", calendarRoot);
         calendarRoot.subItems.push(calendarExample);
 
         calendarExample = new NavigationItem("Selection modes", "./calendar/selection-modes/selection-modes", calendarRoot);
@@ -332,7 +332,7 @@ export class NavigationViewModel extends observableModule.Observable {
         selectionItem.subItems.push(selectionExample);
         selectionExample = new NavigationItem("Multiple Selection", "./listview/listview-selection/multiple-selection", selectionItem);
         selectionItem.subItems.push(selectionExample);
-        selectionExample = new NavigationItem("Programatic Selection", "./listview/listview-selection/programmatic-selection", selectionItem);
+        selectionExample = new NavigationItem("Programmatic Selection", "./listview/listview-selection/programmatic-selection", selectionItem);
         selectionItem.subItems.push(selectionExample);
         exampleItem = new NavigationItem("Selection states", "./listview/selection-states/selection-states", selectionItem);
         selectionItem.subItems.push(exampleItem);
