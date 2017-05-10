@@ -31,6 +31,6 @@
     "nativescript-dev-android-snapshot": "~0.0.6",
     "nativescript-dev-typescript": "^0.4.2",
     "tns-platform-declarations": "3.0.0",
-    "typescript": "~2.2.1"
+    "typescript": "^2.3.2"
   }
 }
