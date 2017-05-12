@@ -302,12 +302,14 @@ export class NavigationViewModel extends observableModule.Observable {
         var exampleItem = new NavigationItem("Getting Started", "./listview/getting-started/getting-started", currentItem);
         currentItem.subItems.push(exampleItem);
 
-        // Grouping
-        var grouping = new NavigationItem("Grouping", undefined, currentItem);
+        // Data operations
+        var grouping = new NavigationItem("Data Operations", undefined, currentItem);
         currentItem.subItems.push(grouping);
-        var exampleItem = new NavigationItem("Getting Started", "./listview/grouping/grouping", grouping);
+        exampleItem = new NavigationItem("Getting Started", "./listview/grouping/getting-started", grouping);
         grouping.subItems.push(exampleItem);
-        exampleItem = new NavigationItem("Collapsible", "./listview/grouping/grouping-collapsible", grouping);
+        var exampleItem = new NavigationItem("Grouping", "./listview/grouping/grouping", grouping);
+        grouping.subItems.push(exampleItem);
+        exampleItem = new NavigationItem("Collapsible Grouping", "./listview/grouping/grouping-collapsible", grouping);
         grouping.subItems.push(exampleItem);
 
         var exampleItem = new NavigationItem("Item Loading", "./listview/item-loading/item-loading", currentItem);

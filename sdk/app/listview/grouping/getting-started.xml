@@ -1,0 +1,20 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui-pro/listview" xmlns="http://www.nativescript.org/tns.xsd">
+<!-- >> data-operations-getting-started -->
+    <GridLayout rows="auto, *">
+        <StackLayout orientation="horizontal">
+            <Button text="Toggle Filter" tap="toggleFilter"/>
+            <Button text="Toggle Sorting" tap="toggleSorting"/>
+            <Button text="Toggle Grouping" tap="toggleGrouping"/>
+        </StackLayout>
+        <lv:RadListView id="myListView" row="1" items="{{ dataItems }}" 
+                        enableGroups="true">
+            <lv:RadListView.itemTemplate>
+                <StackLayout orientation="vertical">
+                    <Label fontSize="20" text="{{ itemName }}"/>
+                    <Label fontSize="14" text="{{ itemDescription }}"/>
+                </StackLayout>
+            </lv:RadListView.itemTemplate>
+        </lv:RadListView>
+    </GridLayout>
+<!-- << data-operations-getting-started -->
+</navigation:ExamplePage>
