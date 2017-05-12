@@ -24,7 +24,7 @@ Make sure you are using NativeScript 3.0+. To see which version of NativeScript 
 Steps to run the sample:
 
 1. `cd sdk`
-2. `tns run android` or `tns emulate ios`
+2. `tns run android` or `tns run ios`
 
 
 ## Release notes
