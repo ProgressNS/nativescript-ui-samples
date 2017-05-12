@@ -13,14 +13,14 @@ export class ViewModel {
     get dataItems() {
         if (!this._items) {
             this._items = new ObservableArray<DataItem>();
-
             for (var i = 0; i < 20; i++) {
                 var cat = i % 3 == 0 ? "Category 1" : "Category 2";
-                var name = i % 3 == 0 ? "Special Item " : "Normal Item ";
+                var name = i % 2 == 0 ? "Special Item " : "Normal Item ";
                 var id = Math.floor(Math.random() * 100) + 1;
                 this._items.push(new DataItem(id, name + id, "This is item category is: " + cat, cat));
             }
         }
+        
         return this._items;
     }
 

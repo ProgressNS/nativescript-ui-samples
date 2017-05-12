@@ -7,7 +7,7 @@
             <Button text="Toggle Grouping" tap="toggleGrouping"/>
         </StackLayout>
         <lv:RadListView id="myListView" row="1" items="{{ dataItems }}" 
-                        enableGroups="true">
+                        enableDataOperations="true">
             <lv:RadListView.itemTemplate>
                 <StackLayout orientation="vertical">
                     <Label fontSize="20" text="{{ itemName }}"/>

@@ -1,6 +1,8 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui-pro/listview" xmlns="http://www.nativescript.org/tns.xsd">
 <!-- >> listview-grouping -->
-    <lv:RadListView items="{{ dataItems }}" enableGroups="true" groupingFunction="{{ myGroupingFunc }}">
+    <lv:RadListView items="{{ dataItems }}" 
+                    enableDataOperations="true" 
+                    groupingFunction="{{ myGroupingFunc }}">
         <lv:RadListView.itemTemplate>
             <StackLayout orientation="vertical">
                 <Label fontSize="20" text="{{ itemName }}"/>
