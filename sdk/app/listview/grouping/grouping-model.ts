@@ -8,19 +8,13 @@ export class ViewModel {
     private _words = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"];
 
     constructor() {
-    }
+    }8
 
     get dataItems() {
         if (!this._items) {
-            this._items = new ObservableArray<DataItem>();
-            for (var i = 0; i < 20; i++) {
-                var cat = i % 3 == 0 ? "Category 1" : "Category 2";
-                var name = i % 2 == 0 ? "Special Item " : "Normal Item ";
-                var id = Math.floor(Math.random() * 100) + 1;
-                this._items.push(new DataItem(id, name + id, "This is item category is: " + cat, cat));
-            }
+            this._items = new ObservableArray<DataItem>(items);
         }
-        
+
         return this._items;
     }
 
@@ -69,4 +63,21 @@ export class DataItem {
         this.category = category;
     }
 }
+
+var items: DataItem[] = [
+    new DataItem(89, "Special Item 89", "This is item category is: Category 1", "Category 1"),
+    new DataItem(23, "Item 23", "This is item category is: Category 2", "Category 2"),
+    new DataItem(1, "Item 1", "This is item category is: Category 1", "Category 1"),
+    new DataItem(665, "Special Item 665", "This is item category is: Category 2", "Category 2"),
+    new DataItem(34, "Item 34", "This is item category is: Category 3", "Category 3"),
+    new DataItem(55, "Special Item 55", "This is item category is: Category 3", "Category 3"),
+    new DataItem(78, "Item 78", "This is item category is: Category 1", "Category 1"),
+    new DataItem(5, "Item 5", "This is item category is: Category 1", "Category 1"),
+    new DataItem(111, "Special Item 111", "This is item category is: Category 2", "Category 2"),
+    new DataItem(1134, "Item 1134", "This is item category is: Category 1", "Category 1"),
+    new DataItem(22, "Special Item 22", "This is item category is: Category 3", "Category 3"),
+    new DataItem(345, "Item 345", "This is item category is: Category 1", "Category 1"),
+    new DataItem(80, "Item 80", "This is item category is: Category 1", "Category 1"),
+    new DataItem(54, "Item 54", "This is item category is: Category 3", "Category 3"),
+];
 // << listview-grouping-model
