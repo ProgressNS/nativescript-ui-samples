@@ -12,7 +12,7 @@
         </ActionBar>
     </Page.actionBar>
     <GridLayout rows="auto, *">
-        <lv:RadListView row="1" items="{{ _currentSubItems }}" itemTap="{{onNavigationItemTap}}" >
+        <lv:RadListView row="1" items="{{ currentSubItems }}" itemTap="{{onNavigationItemTap}}" >
             <lv:RadListView.listViewLayout>
                 <lv:ListViewLinearLayout scrollDirection="Vertical"/>
             </lv:RadListView.listViewLayout>
