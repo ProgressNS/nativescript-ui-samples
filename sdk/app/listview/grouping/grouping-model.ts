@@ -1,21 +1,20 @@
 // >> listview-grouping-model
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import timer = require("tns-core-modules/timer");
+import { Observable } from"tns-core-modules/data/observable";
 
-export class ViewModel {
+export class ViewModel extends Observable {
 
     private _items: ObservableArray<DataItem>;
     private _words = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"];
 
     constructor() {
-    }8
+        super();
+        this.set("_items", new ObservableArray<DataItem>(items));
+    }
 
     get dataItems() {
-        if (!this._items) {
-            this._items = new ObservableArray<DataItem>(items);
-        }
-
-        return this._items;
+        return this.get("_items");
     }
 
     get myGroupingFunc(): (item: any) => any {
@@ -32,10 +31,7 @@ export class ViewModel {
 
     get mySortingFunc(): (item: any, otherItem: any) => number {
         return (item: DataItem, otherItem: DataItem) => {
-            console.log(">>>> item.id " + item.id);
-            console.log(">>>> otherItem.id " + otherItem.id);
             var res = item.id < otherItem.id ? -1 : item.id > otherItem.id ? 1 : 0;
-            console.log(">>>> res : " + res);
             return res;
         };
     }
