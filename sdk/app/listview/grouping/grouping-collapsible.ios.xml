@@ -1,0 +1,24 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui-pro/listview" xmlns="http://www.nativescript.org/tns.xsd">
+<!-- >> listview-collapsible-grouping -->
+    <lv:RadListView items="{{ dataItems }}" 
+    id="myListView"
+                    enableDataOperations="true"
+                    enableCollapsibleGroups="true" 
+                    groupingFunction="{{ myGroupingFunc }}">
+                    <lv:RadListView.listViewLayout>
+            <lv:ListViewLinearLayout scrollDirection="Vertical"/>
+        </lv:RadListView.listViewLayout>
+        <lv:RadListView.itemTemplate>
+            <StackLayout orientation="vertical">
+                <Label fontSize="20" text="{{ itemName }}"/>
+                <Label fontSize="14" text="{{ itemDescription }}"/>
+            </StackLayout>
+        </lv:RadListView.itemTemplate>
+         <lv:RadListView.headerItemTemplate>
+            <GridLayout backgroundColor="#65a565">
+                <Label text="{{ category }}"/>
+            </GridLayout>
+        </lv:RadListView.headerItemTemplate>
+    </lv:RadListView>
+<!-- << listview-collapsible-grouping -->
+</navigation:ExamplePage>

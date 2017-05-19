@@ -20,23 +20,24 @@ export class ExamplePage extends pageModule.Page {
 
     public onLoaded() {
         super.onLoaded();
+        if (this._associatedExampleMeta) {
+            var actionBar = this.actionBar === undefined ? new actionBarModule.ActionBar() : this.actionBar;
+            actionBar.title = this._associatedExampleMeta.title;
+            if (applicationModule.android) {
+                var navigationButton = new actionBarModule.NavigationButton();
+                navigationButton.on("tap", args => {
+                    if (this.content) {
+                        utilsModule.ad.dismissSoftInput(this.content.android);
+                    }
+                    frameModule.topmost().goBack();
+                });
+                navigationButton.icon = "res://ic_arrow_back_black_24dp";
+                actionBar.navigationButton = navigationButton;
 
-        var actionBar = this.actionBar === undefined ? new actionBarModule.ActionBar() : this.actionBar;
-        actionBar.title = this._associatedExampleMeta.title;
-        if (applicationModule.android) {
-            var navigationButton = new actionBarModule.NavigationButton();
-            navigationButton.on("tap", args => {
-                if (this.content) {
-                    utilsModule.ad.dismissSoftInput(this.content.android);
-                }
-                frameModule.topmost().goBack();
-            });
-            navigationButton.icon = "res://ic_arrow_back_black_24dp";
-            actionBar.navigationButton = navigationButton;
-
-        }
-        if (this.actionBar !== actionBar) {
-            this.actionBar = actionBar;
+            }
+            if (this.actionBar !== actionBar) {
+                this.actionBar = actionBar;
+            }
         }
     }
 }
