@@ -5,9 +5,6 @@
                     enableDataOperations="true"
                     enableCollapsibleGroups="true" 
                     groupingFunction="{{ myGroupingFunc }}">
-                    <lv:RadListView.listViewLayout>
-            <lv:ListViewLinearLayout scrollDirection="Vertical"/>
-        </lv:RadListView.listViewLayout>
         <lv:RadListView.itemTemplate>
             <StackLayout orientation="vertical">
                 <Label fontSize="20" text="{{ itemName }}"/>
