@@ -2,9 +2,6 @@
     <!-- >> listview-multiple-selection-xml -->
     <lv:RadListView id="listView" items="{{ dataItems }}" row="1" selectionBehavior="Press" multipleSelection="true">
     <!-- << listview-multiple-selection-xml -->
-        <lv:RadListView.listViewLayout>
-            <lv:ListViewLinearLayout scrollDirection="Vertical"/>
-        </lv:RadListView.listViewLayout>
         <lv:RadListView.itemTemplate>
             <StackLayout orientation="vertical" android:paddingLeft="16" ios:paddingLeft="50">
                 <Label fontSize="20" text="{{ itemName }}"/>

@@ -11,9 +11,6 @@
             itemSwipeProgressChanged="onCellSwiping" 
             swipeActions="true">
         <!-- << listview-swipe-actions-set-enabled-xml -->
-            <lv:RadListView.listViewLayout>
-                <lv:ListViewLinearLayout scrollDirection="Vertical"/>
-            </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
                 <StackLayout orientation="vertical" style="background-color: white;" paddingLeft="5">
                     <Label fontSize="20" text="{{ name }}" marginBottom="8"/>

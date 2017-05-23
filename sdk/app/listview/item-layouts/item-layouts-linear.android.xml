@@ -1,9 +1,6 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:f="nativescript-fresco" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui-pro/listview" xmlns="http://www.nativescript.org/tns.xsd">
     <GridLayout rows="*" >
         <lv:RadListView id="list-view" row="0" items="{{ dataItems }}" marginRight="-2">
-            <lv:RadListView.listViewLayout>
-                <lv:ListViewLinearLayout scrollDirection="Vertical"/>
-            </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
                 <GridLayout rows="*" backgroundColor="White">
                     <GridLayout rows="*" columns="*" marginBottom="2" marginRight="2">
