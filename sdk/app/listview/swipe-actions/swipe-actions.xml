@@ -8,7 +8,8 @@
             selectionBehavior="None" 
             itemSwipeProgressEnded="onSwipeCellFinished"
             itemSwipeProgressStarted="onSwipeCellStarted" 
-            itemSwipeProgressChanged="onCellSwiping" 
+            itemSwipeProgressChanged="onSwipeCellProgressChanged"
+            itemSwiping="onItemSwiping" 
             swipeActions="true">
         <!-- << listview-swipe-actions-set-enabled-xml -->
             <lv:RadListView.listViewLayout>
