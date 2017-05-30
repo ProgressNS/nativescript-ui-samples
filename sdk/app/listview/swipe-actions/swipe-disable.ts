@@ -26,8 +26,8 @@ export function onCellSwiping(args: listViewModule.ListViewEventData) {
 export function onSwipeCellStarted(args: listViewModule.ListViewEventData) {
     var swipeLimits = args.data.swipeLimits;
     var swipeView = args['object'];
-    var leftItem = swipeView.getViewById('mark-view');
-    var rightItem = swipeView.getViewById('delete-view');
+    var leftItem = swipeView.getViewById<viewModule.View>('mark-view');
+    var rightItem = swipeView.getViewById<viewModule.View>('delete-view');
     swipeLimits.left = leftItem.getMeasuredWidth();
     swipeLimits.right = rightItem.getMeasuredWidth();
     swipeLimits.threshold = leftItem.getMeasuredWidth() / 2;
