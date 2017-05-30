@@ -17,7 +17,7 @@ export class ViewModel {
     
     // >> listview-item-reorder-handler
     public onItemReordered(args: listViewModule.ListViewEventData){
-        console.log("Item reordered. Old index: " + args.itemIndex + " " + "new index: " + args.data.targetIndex);
+        console.log("Item reordered. Old index: " + args.index + " " + "new index: " + args.data.targetIndex);
     }
     // << listview-item-reorder-handler
 
