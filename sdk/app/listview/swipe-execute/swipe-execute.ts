@@ -48,7 +48,7 @@ export function onSwipeCellFinished(args: listViewModule.SwipeActionsEventData) 
 export function onItemClick(args: listViewModule.ListViewEventData) {
     var listView = args.object;
     listView.notifySwipeToExecuteFinished();
-    console.log("Item click: " + args.itemIndex);
+    console.log("Item click: " + args.index);
 }
 
 export function onLeftSwipeClick(args) {
