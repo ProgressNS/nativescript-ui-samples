@@ -16,7 +16,7 @@
                 <df:EntityProperty name="name" >
                     <df:EntityProperty.editor>
                         <df:PropertyEditor type="Text" >
-                            <df:PropertyEditor.style>
+                            <df:PropertyEditor.propertyEditorStyle>
                                 <df:PropertyEditorStyle
                                         strokeColor="#6A1B9A"
                                         strokeWidth="2"
@@ -27,7 +27,7 @@
                                         android:labelFontName="sans-serif-light"
                                         labelFontStyle="Italic"
                                         labelTextColor="#6A1B9A"/>
-                            </df:PropertyEditor.style>
+                            </df:PropertyEditor.propertyEditorStyle>
                         </df:PropertyEditor>
                     </df:EntityProperty.editor>
                 </df:EntityProperty>

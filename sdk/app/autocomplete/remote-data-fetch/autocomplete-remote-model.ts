@@ -1,11 +1,11 @@
 
-import {ObservableArray} from "data/observable-array";
+import {ObservableArray} from "tns-core-modules/data/observable-array";
 import autocompleteModule = require("nativescript-telerik-ui-pro/autocomplete");
-import observableModule = require("ui/core/dependency-observable");
-import http = require("http");
+import observableModule = require("tns-core-modules/data/observable");
+import http = require("tns-core-modules/http");
 
 // >> autocomplete-async-model
-export class ViewModel extends observableModule.DependencyObservable {
+export class ViewModel extends observableModule.Observable {
 
     private _items: ObservableArray<autocompleteModule.TokenModel>;
     private autocmp;

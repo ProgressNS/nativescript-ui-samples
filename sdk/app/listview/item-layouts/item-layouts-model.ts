@@ -1,5 +1,5 @@
-import {ObservableArray} from "data/observable-array";
-import timer = require("timer");
+import {ObservableArray} from "tns-core-modules/data/observable-array";
+import timer = require("tns-core-modules/timer");
 
 var data = require("./ListItems.json")
 

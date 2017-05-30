@@ -1,22 +1,27 @@
-import application = require("application");
+import application = require("tns-core-modules/application");
 import fresco = require("nativescript-fresco");
-application.cssFile = "./app.css";
-application.mainModule = "./navigation/category-list";
+application.setCssFileName("./app.css");
 
-//partial declaration of Fresco native anroid class
-declare module com{
-    module facebook{
-        module drawee{
+//partial declaration of Fresco native android class
+declare module com {
+    module facebook {
+        module drawee {
             module backends {
-                module pipeline{
-                    class Fresco{
-                       static initialize(context: any) : any;
-}}}}}}
-
-if (application.android) {
-    application.onLaunch = function (intent) {
-        fresco.initialize();
-    };
+                module pipeline {
+                    class Fresco {
+                        static initialize(context: any): any;
+                    }
+                }
+            }
+        }
+    }
 }
 
-application.start();
+
+if (application.android) {
+    application.on("launch", (intent) => {
+        fresco.initialize();
+    });
+}
+
+application.start("./navigation/category-list");

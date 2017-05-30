@@ -1,7 +1,7 @@
 import viewModel = require("./../view-models/settings-model");
-import application = require("application");
-import { Color } from "color";
-import viewModule = require("ui/core/view");
+import application = require("tns-core-modules/application");
+import { Color } from "tns-core-modules/color";
+import viewModule = require("tns-core-modules/ui/core/view");
 
 var colorLight = new Color("#CDDC39");
 var colorDark = new Color("#4CAF50");

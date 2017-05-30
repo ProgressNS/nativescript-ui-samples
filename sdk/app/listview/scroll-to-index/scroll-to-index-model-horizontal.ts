@@ -1,6 +1,6 @@
-import { ObservableArray } from "data/observable-array";
-import observableModule = require("data/observable");
-import frameModule = require("ui/frame");
+import { ObservableArray } from "tns-core-modules/data/observable-array";
+import observableModule = require("tns-core-modules/data/observable");
+import frameModule = require("tns-core-modules/ui/frame");
 import { DataItem } from "./data-item";
 
 export class ViewModel extends observableModule.Observable {

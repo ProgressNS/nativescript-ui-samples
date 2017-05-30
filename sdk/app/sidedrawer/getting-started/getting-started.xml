@@ -1,41 +1,37 @@
-<!-- >> sidedrawer-getting-started-xml -->
-<!-- >> sidedrawer-namespace-xml -->
-<navigation:ExampleDrawerPage xmlns:navigation="navigation/example-drawer-page" loaded="pageLoaded" 
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="pageLoaded" 
     navigatedTo="onNavigatedTo"  
-    xmlns:dpg="nativescript-telerik-ui-pro/sidedrawer/drawerpage"
-    xmlns:drawer="nativescript-telerik-ui-pro/sidedrawer"
+    xmlns:nsDrawer="nativescript-telerik-ui-pro/sidedrawer"
     xmlns="http://www.nativescript.org/tns.xsd">
-<!-- << sidedrawer-namespace-xml -->
     <navigation.actionBar>
-        <ActionBar title="Getting started" />
+      <ActionBar title="Getting started" />
     </navigation.actionBar>
+<!-- >> sidedrawer-getting-started-xml -->
+    <nsDrawer:RadSideDrawer id="sideDrawer">
+      <nsDrawer:RadSideDrawer.drawerContent>
+        <StackLayout backgroundColor="gray">
+          <StackLayout height="56" style="text-align: center; vertical-align: center;">
+            <Label text="Navigation Menu"/>
+          </StackLayout>
+          <StackLayout>
+            <Label text="Primary" padding="10" backgroundColor="lightgray"/>
+            <Label text="Social" padding="10"/>
+            <Label text="Promotions" padding="10" />
+            <Label text="Labels" padding="10" backgroundColor="lightgray" />
+            <Label text="Important" padding="10" />
+            <Label text="Starred" padding="10" />
+            <Label text="Sent Mail" padding="10" />
+            <Label text="Drafts" padding="10" />
+          </StackLayout>
+          <Label text="Close Drawer" color="lightgray" padding="10" style="horizontal-align: center" tap="{{ onCloseDrawerTap }}"/>
+        </StackLayout>
+      </nsDrawer:RadSideDrawer.drawerContent>
 
-    <dpg:DrawerPage.sideDrawer>
-        <drawer:RadSideDrawer id="sideDrawer">
-          <drawer:RadSideDrawer.drawerContent>
-            <StackLayout cssClass="drawerContent">
-              <StackLayout cssClass="headerContent">
-                <Label text="Navigation Menu"/>
-              </StackLayout>
-              <StackLayout cssClass="drawerMenuContent">
-                <Label text="Primary" cssClass="drawerSectionHeader" />
-                <Label text="Social" cssClass="drawerSectionItem" />
-                <Label text="Promotions" cssClass="drawerSectionItem" />
-                <Label text="Labels" cssClass="drawerSectionHeader" />
-                <Label text="Important" cssClass="drawerSectionItem" />
-                <Label text="Starred" cssClass="drawerSectionItem" />
-                <Label text="Sent Mail" cssClass="drawerSectionItem" />
-                <Label text="Drafts" cssClass="drawerSectionItem" />
-              </StackLayout>
-              <Button text="Close Drawer" tap="{{ onCloseDrawerTap }}"/>
-            </StackLayout>
-          </drawer:RadSideDrawer.drawerContent>
-        </drawer:RadSideDrawer>
-    </dpg:DrawerPage.sideDrawer>
-
-    <StackLayout >
-      <Label text="{{ mainContentText }}" textWrap="true" cssClass="drawerContentText"/>
-      <Button text="Open drawer" tap="{{ onOpenDrawerTap }}" cssClass="drawerContentButton"/>
-    </StackLayout>
-</navigation:ExampleDrawerPage>
+      <nsDrawer:RadSideDrawer.mainContent>
+        <StackLayout >
+          <Label text="{{ mainContentText }}" textWrap="true" fontSize="13" padding="10" />
+          <Button text="Open drawer" tap="{{ onOpenDrawerTap }}" margin="10" style="horizontal-align: left" />
+        </StackLayout>
+      </nsDrawer:RadSideDrawer.mainContent>
+    </nsDrawer:RadSideDrawer>
 <!-- << sidedrawer-getting-started-xml -->
+</navigation:ExamplePage>

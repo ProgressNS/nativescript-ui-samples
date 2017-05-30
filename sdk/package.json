@@ -1,7 +1,7 @@
 {
   "name": "nativescript-telerik-ui-sdk-examples",
-  "version": "1.6.1",
-  "description": "SDK Samples for UI for NativeScript",
+  "version": "2.0.0",
+  "description": "SDK Samples for Progress UI for NativeScript",
   "license": "SEE LICENSE IN <your-license-filename>",
   "readme": "NativeScript Application",
   "repository": {
@@ -11,16 +11,16 @@
   "nativescript": {
     "id": "org.nativescript.sdk",
     "tns-android": {
-      "version": "2.5.0"
+      "version": "3.0.0"
     },
     "tns-ios": {
-      "version": "2.5.0"
+      "version": "3.0.0"
     }
   },
   "dependencies": {
-    "nativescript-fresco": "^1.0.3",
-    "nativescript-telerik-ui-pro": "1.6.1",
-    "tns-core-modules": "2.5.1"
+    "nativescript-fresco": "^3.0.2",
+    "nativescript-telerik-ui-pro": "2.0.1",
+    "tns-core-modules": "3.0.0"
   },
   "devDependencies": {
     "babel-traverse": "6.9.0",
@@ -28,8 +28,9 @@
     "babylon": "6.8.0",
     "filewalker": "0.1.2",
     "lazy": "1.0.11",
-    "nativescript-dev-android-snapshot": "0.0.6",
-    "nativescript-dev-typescript": "^0.3.2",
-    "typescript": "2.1.5"
+    "nativescript-dev-android-snapshot": "~0.0.6",
+    "nativescript-dev-typescript": "^0.4.2",
+    "tns-platform-declarations": "3.0.0",
+    "typescript": "~2.2.1"
   }
 }

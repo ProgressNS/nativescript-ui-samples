@@ -1,6 +1,6 @@
-import dependencyObservableModule = require("ui/core/dependency-observable");
+import observableModule = require("tns-core-modules/data/observable");
 
-export class PieDataModel extends dependencyObservableModule.DependencyObservable {
+export class PieDataModel extends observableModule.Observable {
     constructor() {
         super();
         this.initData();

@@ -1,6 +1,6 @@
-import observableModule = require("data/observable");
-import listViewModule = require("ui/list-view");
-import frameModule = require("ui/frame");
+import observableModule = require("tns-core-modules/data/observable");
+import listViewModule = require("tns-core-modules/ui/list-view");
+import frameModule = require("tns-core-modules/ui/frame");
 
 export class ViewModel extends observableModule.Observable {
     private _info;

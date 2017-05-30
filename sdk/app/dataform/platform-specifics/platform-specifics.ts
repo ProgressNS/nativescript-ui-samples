@@ -1,6 +1,6 @@
 import viewModel = require("./../view-models/person-base-model");
-import {Color} from "color";
-var application = require("application");
+import {Color} from "tns-core-modules/color";
+var application = require("tns-core-modules/application");
 var imageSource = require("image-source");
 
 export function onPageLoaded(args) {

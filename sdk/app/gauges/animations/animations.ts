@@ -1,4 +1,4 @@
-import frameModule = require("ui/frame");
+import frameModule = require("tns-core-modules/ui/frame");
 import gaugesModule = require("nativescript-telerik-ui-pro/gauges");
 
 var needle: gaugesModule.RadialNeedle;

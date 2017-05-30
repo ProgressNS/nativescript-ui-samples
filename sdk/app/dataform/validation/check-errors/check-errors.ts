@@ -1,8 +1,8 @@
 import viewModel = require("./../../view-models/user-model");
-import { Label } from "ui/label";
-import * as viewModule from "ui/core/view";
+import { Label } from "tns-core-modules/ui/label";
+import * as viewModule from "tns-core-modules/ui/core/view";
 import { RadDataForm } from "nativescript-telerik-ui-pro/dataform";
-import { isAndroid } from "platform"
+import { isAndroid } from "tns-core-modules/platform"
 
 var resultLabel: Label;
 var dataForm: RadDataForm;

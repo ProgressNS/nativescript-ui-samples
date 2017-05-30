@@ -1,6 +1,6 @@
-import frameModule = require("ui/frame");
+import frameModule = require("tns-core-modules/ui/frame");
 import drawerModule = require("nativescript-telerik-ui-pro/sidedrawer");
-import observableModule = require("data/observable");
+import observableModule = require("tns-core-modules/data/observable");
 
 export class DrawerTransitionsModel {
     public onFadeTransitionTap(args) {
@@ -20,6 +20,11 @@ export class DrawerTransitionsModel {
 
     public onReverseSlideOutTransitionTap(args) {
         this.setDrawerTransition(new drawerModule.ReverseSlideOutTransition());
+        this.openSideDrawer();
+    }
+
+    public onScaleDownPusherTransitionTap(args){
+        this.setDrawerTransition(new drawerModule.ScaleDownPusherTransition());
         this.openSideDrawer();
     }
 

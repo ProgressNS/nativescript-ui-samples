@@ -1,9 +1,9 @@
 
 import viewModel = require("./swipe-actions-model");
 import listViewModule = require("nativescript-telerik-ui-pro/listview");
-import viewModule = require('ui/core/view');
-import frameModule = require("ui/frame");
-import utilsModule = require("utils/utils");
+import viewModule = require('tns-core-modules/ui/core/view');
+import frameModule = require("tns-core-modules/ui/frame");
+import utilsModule = require("tns-core-modules/utils/utils");
 
 var animationApplied = false;
 var leftItem: viewModule.View;
@@ -26,20 +26,20 @@ export function onCellSwiping(args: listViewModule.ListViewEventData) {
 
     if (args.data.x > 0) {
         var leftDimensions = viewModule.View.measureChild(
-            leftItem.parent,
+            <viewModule.View>leftItem.parent,
             leftItem,
             utilsModule.layout.makeMeasureSpec(Math.abs(args.data.x), utilsModule.layout.EXACTLY),
             utilsModule.layout.makeMeasureSpec(mainView.getMeasuredHeight(), utilsModule.layout.EXACTLY));
-        viewModule.View.layoutChild(leftItem.parent, leftItem, 0, 0, leftDimensions.measuredWidth, leftDimensions.measuredHeight);
+        viewModule.View.layoutChild(<viewModule.View>leftItem.parent, leftItem, 0, 0, leftDimensions.measuredWidth, leftDimensions.measuredHeight);
         hideOtherSwipeTemplateView("left");
     } else {
         var rightDimensions = viewModule.View.measureChild(
-            rightItem.parent,
+            <viewModule.View>rightItem.parent,
             rightItem,
             utilsModule.layout.makeMeasureSpec(Math.abs(args.data.x), utilsModule.layout.EXACTLY),
             utilsModule.layout.makeMeasureSpec(mainView.getMeasuredHeight(), utilsModule.layout.EXACTLY));
 
-        viewModule.View.layoutChild(rightItem.parent, rightItem, mainView.getMeasuredWidth() - rightDimensions.measuredWidth, 0, mainView.getMeasuredWidth(), rightDimensions.measuredHeight);
+        viewModule.View.layoutChild(<viewModule.View>rightItem.parent, rightItem, mainView.getMeasuredWidth() - rightDimensions.measuredWidth, 0, mainView.getMeasuredWidth(), rightDimensions.measuredHeight);
         hideOtherSwipeTemplateView("right");
     }
 }
@@ -48,12 +48,12 @@ function hideOtherSwipeTemplateView(currentSwipeView: string) {
     switch (currentSwipeView) {
         case "left":
             if (rightItem.getActualSize().width != 0) {
-                viewModule.View.layoutChild(rightItem.parent, rightItem, mainView.getMeasuredWidth(), 0, mainView.getMeasuredWidth(), 0);
+                viewModule.View.layoutChild(<viewModule.View>rightItem.parent, rightItem, mainView.getMeasuredWidth(), 0, mainView.getMeasuredWidth(), 0);
             }
             break;
         case "right":
             if (leftItem.getActualSize().width != 0) {
-                viewModule.View.layoutChild(leftItem.parent, leftItem, 0, 0, 0, 0);
+                viewModule.View.layoutChild(<viewModule.View>leftItem.parent, leftItem, 0, 0, 0, 0);
             }
             break;
         default:

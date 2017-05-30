@@ -1,4 +1,4 @@
-import {ObservableArray} from "data/observable-array";
+import {ObservableArray} from "tns-core-modules/data/observable-array";
 
 var json = require("./PhotosWithNames.json");
 

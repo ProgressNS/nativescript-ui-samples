@@ -1,7 +1,7 @@
 import categoricalDataModelModule = require("../../data-models/categorical-data-model");
 import stackedSeriesModel = require("./stacked-area-series-model");
 import chartModule = require("nativescript-telerik-ui-pro/chart");
-import frameModule = require("ui/frame");
+import frameModule = require("tns-core-modules/ui/frame");
 
 // >> stacked-series-binding-context
 var context = new stackedSeriesModel.ViewModel();

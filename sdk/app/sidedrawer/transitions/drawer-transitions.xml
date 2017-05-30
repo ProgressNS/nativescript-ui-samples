@@ -1,47 +1,45 @@
-<navigation:ExampleDrawerPage xmlns:navigation="navigation/example-drawer-page" loaded="pageLoaded" navigatedTo="onNavigatedTo"  
-    xmlns:dpg="nativescript-telerik-ui-pro/sidedrawer/drawerpage"
-    xmlns:drawer="nativescript-telerik-ui-pro/sidedrawer"
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="pageLoaded" navigatedTo="onNavigatedTo"  
+    xmlns:nsDrawer="nativescript-telerik-ui-pro/sidedrawer"
     xmlns="http://www.nativescript.org/tns.xsd">
   <navigation.actionBar>
       <ActionBar title="Transitions" />
   </navigation.actionBar>
 
-  <dpg:DrawerPage.sideDrawer>
-    <drawer:RadSideDrawer id="sideDrawer">
-      <drawer:RadSideDrawer.drawerContent>
-        <StackLayout cssClass="drawerContent">
-          <StackLayout cssClass="headerContent">
+    <nsDrawer:RadSideDrawer id="sideDrawer">
+      <nsDrawer:RadSideDrawer.drawerContent>
+        <StackLayout class="drawerContent">
+          <StackLayout class="headerContent">
             <Label text="Navigation Menu"/>
           </StackLayout>
           <ScrollView>
-            <StackLayout cssClass="drawerMenuContent">
-              <Label text="Primary" cssClass="drawerSectionHeader" />
-              <Label text="Social" cssClass="drawerSectionItem" />
-              <Label text="Promotions" cssClass="drawerSectionItem" />
-              <Label text="Labels" cssClass="drawerSectionHeader" />
-              <Label text="Important" cssClass="drawerSectionItem" />
-              <Label text="Starred" cssClass="drawerSectionItem" />
-              <Label text="Sent Mail" cssClass="drawerSectionItem" />
-              <Label text="Drafts" cssClass="drawerSectionItem" />
+            <StackLayout class="drawerMenuContent">
+              <Label text="Primary" class="drawerSectionHeader" />
+              <Label text="Social" class="drawerSectionItem" />
+              <Label text="Promotions" class="drawerSectionItem" />
+              <Label text="Labels" class="drawerSectionHeader" />
+              <Label text="Important" class="drawerSectionItem" />
+              <Label text="Starred" class="drawerSectionItem" />
+              <Label text="Sent Mail" class="drawerSectionItem" />
+              <Label text="Drafts" class="drawerSectionItem" />
             </StackLayout>
           </ScrollView>
           <Button text="Close Drawer" tap="{{ closeDrawer }}"/>
         </StackLayout>
-      </drawer:RadSideDrawer.drawerContent>
-    </drawer:RadSideDrawer> 
-  </dpg:DrawerPage.sideDrawer>
-
-  <StackLayout cssClass="mainContent">
-      <ScrollView>
-        <StackLayout>
-          <Button text="Fade Transition" tap="{{ onFadeTransitionTap }}" cssClass="drawerContentButton"/>
-          <Button text="Push Transition" tap="{{ onPushTransitionTap }}" cssClass="drawerContentButton"/>
-          <Button text="Reveal Transition" tap="{{ onRevealTransitionTap }}" cssClass="drawerContentButton"/>
-          <Button text="ReverseSlideOut Transition" tap="{{ onReverseSlideOutTransitionTap }}" cssClass="drawerContentButton"/>
-          <Button text="ScaleUp Transition" tap="{{ onScaleUpTransitionTap }}" cssClass="drawerContentButton"/>
-          <Button text="SlideAlong Transition" tap="{{ onSlideAlongTransitionTap }}" cssClass="drawerContentButton"/>
-          <Button text="SlideInOnTop Transition" tap="{{ onSlideInOnTopTransitionTap }}" cssClass="drawerContentButton"/>
-        </StackLayout>
-      </ScrollView>
-    </StackLayout>
-</navigation:ExampleDrawerPage>
+      </nsDrawer:RadSideDrawer.drawerContent>
+      <nsDrawer:RadSideDrawer.mainContent>
+       <StackLayout class="mainContent">
+        <ScrollView>
+          <StackLayout>
+            <Button text="Fade Transition" tap="{{ onFadeTransitionTap }}" class="drawerContentButton"/>
+            <Button text="Push Transition" tap="{{ onPushTransitionTap }}" class="drawerContentButton"/>
+            <Button text="Reveal Transition" tap="{{ onRevealTransitionTap }}" class="drawerContentButton"/>
+            <Button text="ReverseSlideOut Transition" tap="{{ onReverseSlideOutTransitionTap }}" class="drawerContentButton"/>
+            <Button text="ScaleUp Transition" tap="{{ onScaleUpTransitionTap }}" class="drawerContentButton"/>
+            <Button text="SlideAlong Transition" tap="{{ onSlideAlongTransitionTap }}" class="drawerContentButton"/>
+            <Button text="SlideInOnTop Transition" tap="{{ onSlideInOnTopTransitionTap }}" class="drawerContentButton"/>
+          </StackLayout>
+        </ScrollView>
+      </StackLayout>
+      </nsDrawer:RadSideDrawer.mainContent>
+    </nsDrawer:RadSideDrawer> 
+</navigation:ExamplePage>

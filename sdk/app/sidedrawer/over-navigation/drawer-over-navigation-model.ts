@@ -1,5 +1,5 @@
 import drawerModule = require("nativescript-telerik-ui-pro/sidedrawer");
-import frameModule = require("ui/frame");
+import frameModule = require("tns-core-modules/ui/frame");
 
 export class DrawerOverNavigationModel {
     get exampleText() {
@@ -15,5 +15,15 @@ export class DrawerOverNavigationModel {
     public closeDrawer() {
         let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>( frameModule.topmost().getViewById("sideDrawer"));
         sideDrawer.closeDrawer();
+    }
+
+    public goToSecondPage() {
+        var navigationEntry = {
+            moduleName: "./sidedrawer/over-navigation/second-page/second-drawer-over-navigation",
+            context: this,
+            animated: true
+        };
+        
+        frameModule.topmost().navigate(navigationEntry);
     }
 }

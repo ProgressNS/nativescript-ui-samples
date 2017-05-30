@@ -1,39 +1,39 @@
 <!-- >> sidedrawer-over-navigation -->
-<dpg:DrawerPage xmlns:navigation="navigation/example-drawer-page" loaded="pageLoaded" navigatedTo="onNavigatedTo"  
-    xmlns:dpg="nativescript-telerik-ui-pro/sidedrawer/drawerpage"
-    xmlns:drawer="nativescript-telerik-ui-pro/sidedrawer"
-    xmlns="http://www.nativescript.org/tns.xsd">
-
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" 
+  loaded="pageLoaded" 
+  navigatedTo="onNavigatedTo"  
+  xmlns:nsDrawer="nativescript-telerik-ui-pro/sidedrawer"
+  xmlns="http://www.nativescript.org/tns.xsd">
 <!-- >> sidedrawer-over-navigation-drawer -->
-  <dpg:DrawerPage.sideDrawer>
-    <drawer:RadSideDrawer id="sideDrawer">
-      <drawer:RadSideDrawer.drawerContent>
-        <StackLayout cssClass="drawerContent">
-          <StackLayout cssClass="headerContent">
-            <Label text="Navigation Menu"/>
-          </StackLayout>
-          <ScrollView>
-            <StackLayout cssClass="drawerMenuContent">
-              <Label text="Primary" cssClass="drawerSectionHeader" />
-              <Label text="Social" cssClass="drawerSectionItem" />
-              <Label text="Promotions" cssClass="drawerSectionItem" />
-              <Label text="Labels" cssClass="drawerSectionHeader" />
-              <Label text="Important" cssClass="drawerSectionItem" />
-              <Label text="Starred" cssClass="drawerSectionItem" />
-              <Label text="Sent Mail" cssClass="drawerSectionItem" />
-              <Label text="Drafts" cssClass="drawerSectionItem" />
-            </StackLayout>
-          </ScrollView>
-          <Button text="Close Drawer" tap="{{ closeDrawer }}"/>
+  <nsDrawer:RadSideDrawer id="sideDrawer" showOverNavigation="true">
+    <nsDrawer:RadSideDrawer.drawerContent>
+      <StackLayout class="drawerContent">
+        <StackLayout class="headerContent">
+          <Label text="Navigation Menu"/>
         </StackLayout>
-      </drawer:RadSideDrawer.drawerContent>
-    </drawer:RadSideDrawer> 
-  </dpg:DrawerPage.sideDrawer>
+        <ScrollView>
+          <StackLayout class="drawerMenuContent">
+            <Label text="Primary" class="drawerSectionHeader" />
+            <Label text="Social" class="drawerSectionItem" />
+            <Label text="Promotions" class="drawerSectionItem" />
+            <Label text="Labels" class="drawerSectionHeader" />
+            <Label text="Important" class="drawerSectionItem" />
+            <Label text="Starred" class="drawerSectionItem" />
+            <Label text="Sent Mail" class="drawerSectionItem" />
+            <Label text="Drafts" class="drawerSectionItem" />
+          </StackLayout>
+        </ScrollView>
+        <Button text="Close Drawer" tap="{{ closeDrawer }}"/>
+      </StackLayout>
+    </nsDrawer:RadSideDrawer.drawerContent>
+    <nsDrawer:RadSideDrawer.mainContent>
+      <StackLayout class="mainContent">
+          <Label text="{{ exampleText }}" textWrap="true" class="drawerContentText"/>
+          <Button text="Open drawer" tap="{{ onOpenDrawerTap }}" class="drawerContentButton"/>
+          <Button text="Go to next page" tap="{{ goToSecondPage }}" class="drawerContentButton"/>
+      </StackLayout>
+    </nsDrawer:RadSideDrawer.mainContent>
+  </nsDrawer:RadSideDrawer> 
 <!-- << sidedrawer-over-navigation-drawer -->
-
-    <StackLayout cssClass="mainContent">
-        <Label text="{{ exampleText }}" textWrap="true" cssClass="drawerContentText"/>
-        <Button text="Open drawer" tap="{{ onOpenDrawerTap }}" cssClass="drawerContentButton"/>
-    </StackLayout>
-</dpg:DrawerPage>
+</navigation:ExamplePage>
 <!-- << sidedrawer-over-navigation -->
