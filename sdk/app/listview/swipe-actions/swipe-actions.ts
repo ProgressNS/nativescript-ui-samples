@@ -46,13 +46,13 @@ export function onSwipeCellFinished(args: listViewModule.SwipeActionsEventData) 
 
 // >> listview-swipe-action-handlers
 export function onLeftSwipeClick(args: listViewModule.ListViewEventData) {
-    var listView = args.object;
+     var listView = <listViewModule.RadListView>frameModule.topmost().currentPage.getViewById("listView");
     console.log("Left swipe click");
     listView.notifySwipeToExecuteFinished();
 }
 
 export function onRightSwipeClick(args) {
-    var listView = args.object;
+     var listView = <listViewModule.RadListView>frameModule.topmost().currentPage.getViewById("listView");
     console.log("Right swipe click");
     var viewModel: viewModel.ViewModel = <viewModel.ViewModel>listView.bindingContext;
     viewModel.dataItems.splice(viewModel.dataItems.indexOf(args.object.bindingContext), 1);

@@ -80,13 +80,13 @@ export function onSwipeCellFinished(args: listViewModule.SwipeActionsEventData) 
 }
 
 export function onLeftSwipeClick(args: listViewModule.ListViewEventData) {
-    var listView = args.object;
+     var listView = <listViewModule.RadListView>frameModule.topmost().currentPage.getViewById("listView");
     console.log("Button clicked: " + args.object.id + " for item with index: " + listView.items.indexOf(args.object.bindingContext));
     listView.notifySwipeToExecuteFinished();
 }
 
 export function onRightSwipeClick(args) {
-    var listView = args.object;
+     var listView = <listViewModule.RadListView>frameModule.topmost().currentPage.getViewById("listView");
     console.log("Button clicked: " + args.object.id + " for item with index: " + listView.items.indexOf(args.object.bindingContext));
     listView.notifySwipeToExecuteFinished();
 }

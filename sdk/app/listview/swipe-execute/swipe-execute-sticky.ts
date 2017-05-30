@@ -21,18 +21,18 @@ export function onSwipeCellStarted(args: listViewModule.SwipeActionsEventData) {
 // << listview-swipe-handler-sticky
 
 export function onItemClick(args: listViewModule.SwipeActionsEventData) {
-    let listView:listViewModule.RadListView = args.object;
+    let listView: listViewModule.RadListView = args.object;
     listView.notifySwipeToExecuteFinished();
 }
 
 // >> listview-swipe-action-handler-sticky
 export function onLeftSwipeClick(args) {
-    let listView:listViewModule.RadListView = args.object;
+    var listView = <listViewModule.RadListView>frameModule.topmost().currentPage.getViewById("listView");
     listView.notifySwipeToExecuteFinished();
 }
 
 export function onRightSwipeClick(args) {
-    let listView:listViewModule.RadListView = args.object;
+    var listView = <listViewModule.RadListView>frameModule.topmost().currentPage.getViewById("listView");
     listView.notifySwipeToExecuteFinished();
 }
 // << listview-swipe-action-handler-sticky
