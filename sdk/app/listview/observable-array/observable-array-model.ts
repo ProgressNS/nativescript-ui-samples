@@ -1,46 +1,49 @@
 import observableModule = require("tns-core-modules/data/observable");
-import {ObservableArray} from "tns-core-modules/data/observable-array";
-import listViewModule = require("nativescript-telerik-ui-pro/listview");
+import { ObservableArray } from "tns-core-modules/data/observable-array";
+import { ListViewEventData } from "nativescript-telerik-ui-pro/listview";
 import timer = require("tns-core-modules/timer");
 import frameModule = require("tns-core-modules/ui/frame");
+import { Observable } from "tns-core-modules/data/observable";
 
-export class ViewModel {
-
-    private _items: ObservableArray<DataItem>;
-
+export class ViewModel extends Observable {
     constructor() {
+        super();
         this.initDataItems();
     }
 
-    get dataItems() {
-        return this._items;
+    get dataItems(): ObservableArray<DataItem> {
+        return this.get("_dataItems");
     }
 
-    public onAddItemClick(args: listViewModule.ListViewEventData) {
+    set dataItems(value: ObservableArray<DataItem>) {
+        this.set("_dataItems", value);
+    }
+
+    public onAddItemClick(args: ListViewEventData) {
         var id = Math.round(Math.random() * 100);
-        this._items.push(new DataItem(id, "This is a new item: " + id, "This is the new item's description."));
+        this.dataItems.push(new DataItem(id, "This is a new item: " + id, "This is the new item's description."));
     }
 
-    public onResetClick(args: listViewModule.ListViewEventData) {
-        while (this._items.length) {
-            this._items.pop();
+    public onResetClick(args: ListViewEventData) {
+        while (this.dataItems.length) {
+            this.dataItems.pop();
         }
     }
 
-    public onUpdateItemClick(args: listViewModule.ListViewEventData) {
-        for (var index = 0; index < this._items.length; index++) {
-              this._items.getItem(index).id = Math.random() * 100;
-            this._items.getItem(index).itemName = "This is an updated item";
-            this._items.getItem(index).itemDescription = "This is the updated item's description.";
+    public onUpdateItemClick(args: ListViewEventData) {
+        for (var index = 0; index < this.dataItems.length; index++) {
+            this.dataItems.getItem(index).id = Math.random() * 100;
+            this.dataItems.getItem(index).itemName = "This is an updated item";
+            this.dataItems.getItem(index).itemDescription = "This is the updated item's description.";
         }
     }
 
-    public onRemoveItemClick(args: listViewModule.ListViewEventData) {
-        this._items.splice(this._items.length - 1, 1);
+    public onRemoveItemClick(args: ListViewEventData) {
+        this.dataItems.splice(this.dataItems.length - 1, 1);
     }
 
     private initDataItems() {
-        this._items = new ObservableArray<DataItem>();
+        this.dataItems = new ObservableArray<DataItem>();
     }
 }
 

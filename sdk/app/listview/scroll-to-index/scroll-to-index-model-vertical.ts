@@ -1,32 +1,33 @@
 import { ObservableArray } from "tns-core-modules/data/observable-array";
-import observableModule = require("tns-core-modules/data/observable");
+import { Observable } from "tns-core-modules/data/observable";
 import { DataItem } from "./data-item";
 import frameModule = require("tns-core-modules/ui/frame");
 
-export class ViewModel extends observableModule.Observable {
-    private _items: ObservableArray<DataItem>;
+export class ViewModel extends Observable {
     private _options: Array<string> = ["None", "Top", "CenteredVertically", "Bottom"];
     private _selectionInfo;
 
     constructor() {
         super();
-        let selectedIbdex = 1;
+        let selectedIndex = 1;
         this._selectionInfo = {
             options: this._options,
-            index: selectedIbdex
+            index: selectedIndex
         };
-        this.set("myScrollPosition", this._options[selectedIbdex]);
+        this.set("myScrollPosition", this._options[selectedIndex]);
+        this.dataItems = new ObservableArray<DataItem>();
+
+        for (var i = 0; i < 100; i++) {
+            this.dataItems.push(new DataItem(i, "Item " + i));
+        }
     }
 
-    get dataItems() {
-        if (!this._items) {
-            this._items = new ObservableArray<DataItem>();
+    get dataItems(): ObservableArray<DataItem> {
+        return this.get("_dataItems");
+    }
 
-            for (var i = 0; i < 100; i++) {
-                this._items.push(new DataItem(i, "Item " + i));
-            }
-        }
-        return this._items;
+    set dataItems(value: ObservableArray<DataItem>) {
+        this.set("_dataItems", value);
     }
 
     public updateViewModel() {

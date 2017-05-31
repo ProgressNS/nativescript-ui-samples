@@ -1,27 +1,31 @@
-import {ObservableArray} from "tns-core-modules/data/observable-array";
-import listViewModule = require("nativescript-telerik-ui-pro/listview");
+import { ObservableArray } from "tns-core-modules/data/observable-array";
+import { ListViewEventData }from "nativescript-telerik-ui-pro/listview";
 import timer = require("tns-core-modules/timer");
+import { Observable } from "tns-core-modules/data/observable";
+import * as application from "tns-core-modules/application";
 
 var posts = require("../swipe-execute/posts.json")
-var application = require("tns-core-modules/application");
 
-export class ViewModel {
-
-    private _items: ObservableArray<DataItem>;
+export class ViewModel extends Observable {
     private _numberOfAddedItems;
 
     constructor() {
+        super();
         this.initDataItems();
     }
 
-    get dataItems() {
-        return this._items;
+    get dataItems(): ObservableArray<DataItem> {
+        return this.get("_dataItems");
+    }
+
+    set dataItems(value: ObservableArray<DataItem>) {
+        this.set("_dataItems", value);
     }
 
     // >> listview-pull-to-refresh-handler
-    public onPullToRefreshInitiated(args: listViewModule.ListViewEventData) {
+    public onPullToRefreshInitiated(args: ListViewEventData) {
         var that = new WeakRef(this);
-        timer.setTimeout(function() {
+        timer.setTimeout(function () {
             var initialNumberOfItems = that.get()._numberOfAddedItems;
             for (var i = that.get()._numberOfAddedItems; i < initialNumberOfItems + 2; i++) {
                 if (i > posts.names.length - 1) {
@@ -29,7 +33,7 @@ export class ViewModel {
                 }
                 var imageUri = application.android ? posts.images[i].toLowerCase() : posts.images[i];
 
-                that.get()._items.splice(0, 0, new DataItem(posts.names[i], posts.titles[i], posts.text[i], "res://" + imageUri));
+                that.get().dataItems.splice(0, 0, new DataItem(posts.names[i], posts.titles[i], posts.text[i], "res://" + imageUri));
                 that.get()._numberOfAddedItems++;
             }
             var listView = args.object;
@@ -38,16 +42,16 @@ export class ViewModel {
     }
     // << listview-pull-to-refresh-handler
     private initDataItems() {
-        this._items = new ObservableArray<DataItem>();
+        this.dataItems = new ObservableArray<DataItem>();
         this._numberOfAddedItems = 0;
 
         for (var i = 0; i < posts.names.length - 15; i++) {
             this._numberOfAddedItems++;
             if (application.android) {
-                this._items.push(new DataItem(posts.names[i], posts.titles[i], posts.text[i], "res://" + posts.images[i].toLowerCase()));
+                this.dataItems.push(new DataItem(posts.names[i], posts.titles[i], posts.text[i], "res://" + posts.images[i].toLowerCase()));
             }
             else {
-                this._items.push(new DataItem(posts.names[i], posts.titles[i], posts.text[i], "res://" + posts.images[i]));
+                this.dataItems.push(new DataItem(posts.names[i], posts.titles[i], posts.text[i], "res://" + posts.images[i]));
             }
 
         }

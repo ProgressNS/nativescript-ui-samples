@@ -1,44 +1,52 @@
-import {ObservableArray} from "tns-core-modules/data/observable-array";
-import timer = require("tns-core-modules/timer");
 // >> listview-header-footer-model
-export class ViewModel {
+import { ObservableArray } from "tns-core-modules/data/observable-array";
+import timer = require("tns-core-modules/timer");
+import { Observable } from "tns-core-modules/data/observable";
 
-    private _items: ObservableArray<DataItem>;
+export class ViewModel extends Observable {
     private _words = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"];
-    private _footerTitle;
-    private _headerTitle;
 
     constructor() {
-        this._footerTitle = "This is list footer";
-        this._headerTitle = "This is list header";
-    }
-
-    get dataItems() {
-        if (!this._items) {
-            this._items = new ObservableArray<DataItem>();
-
-            for (var i = 0; i < 10; i++) {
-                this._items.push(new DataItem(i, "Item " + i, "This is item description."));
-            }
+        super();
+        this.footerTitle = "This is list footer";
+        this.headerTitle = "This is list header";
+        this.dataItems = new ObservableArray<DataItem>();
+        for (var i = 0; i < 10; i++) {
+            this.dataItems.push(new DataItem(i, "Item " + i, "This is item description."));
         }
-        return this._items;
     }
 
-    private getRandomLengthString(){
+    get dataItems(): ObservableArray<DataItem> {
+        return this.get("_dataItems");
+    }
+
+    set dataItems(value: ObservableArray<DataItem>) {
+        this.set("_dataItems", value);
+    }
+
+    private getRandomLengthString() {
         var sentenceLength = Math.round((Math.random() * 15));
         var result = this._words[0];
-        for (var i = 0; i < sentenceLength; i++){
+        for (var i = 0; i < sentenceLength; i++) {
             result += (this._words[i % this._words.length] + " ");
         }
         return result;
     }
-    
-    get headerTitle(){
-        return this._headerTitle;
+
+    get headerTitle(): string {
+        return this.get("_headerTitle");
     }
-    
-    get footerTitle(){
-        return this._footerTitle;
+
+    set headerTitle(value: string) {
+        this.set("_headerTitle", value);
+    }
+
+    get footerTitle(): string {
+        return this.get("_footerTitle");
+    }
+
+    set footerTitle(value: string) {
+        this.set("_footerTitle", value);
     }
 }
 

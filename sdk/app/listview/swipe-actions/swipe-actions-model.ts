@@ -1,35 +1,35 @@
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { Observable } from "tns-core-modules/data/observable";
 var posts = require("./posts.json");
-const enabled = "_enabled";
 
 export class ViewModel extends Observable {
-
-    private _items: ObservableArray<DataItem>;
-
     constructor() {
         super();
         this.initDataItems();
         this.enabled = true;
     }
 
-    get dataItems() {
-        return this._items;
+    get dataItems(): ObservableArray<DataItem> {
+        return this.get("_dataItems");
+    }
+
+    set dataItems(value: ObservableArray<DataItem>) {
+        this.set("_dataItems", value);
     }
 
     get enabled(): boolean {
-        return this.get(enabled);
+        return this.get("_enabled");
     }
 
     set enabled(value: boolean) {
-        this.set(enabled, value);
+        this.set("_enabled", value);
     }
 
     private initDataItems() {
-        this._items = new ObservableArray<DataItem>();
+        this.dataItems = new ObservableArray<DataItem>();
 
         for (var i = 0; i < posts.names.length; i++) {
-            this._items.push(new DataItem(posts.names[i], posts.titles[i], posts.text[i]));
+            this.dataItems.push(new DataItem(posts.names[i], posts.titles[i], posts.text[i]));
         }
     }
 }
