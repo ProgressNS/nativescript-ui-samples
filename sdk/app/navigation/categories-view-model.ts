@@ -368,6 +368,9 @@ export class NavigationViewModel extends observableModule.Observable {
         exampleItem = new NavigationItem("Multiple actions", "./listview/swipe-actions/swipe-actions-multiple", swipeActions);
         swipeActions.subItems.push(exampleItem);
 
+        exampleItem = new NavigationItem("Disable/Enable", "./listview/swipe-actions/swipe-disable", swipeActions);
+        swipeActions.subItems.push(exampleItem);
+
         // Header and footer
         exampleItem = new NavigationItem("Header and Footer", "./listview/header-footer/header-footer", currentItem);
         currentItem.subItems.push(exampleItem);
@@ -406,8 +409,41 @@ export class NavigationViewModel extends observableModule.Observable {
         var exampleItem = new NavigationItem("Getting started", "./autocomplete/getting-started/autocomplete-getting-started", currentItem);
         currentItem.subItems.push(exampleItem);
 
-        exampleItem = new NavigationItem("Token Layouts", "./autocomplete/layouts/autocomplete-layout", currentItem);
-        currentItem.subItems.push(exampleItem);
+        var completionModes = new NavigationItem("Completion modes", undefined, currentItem);
+        currentItem.subItems.push(completionModes);
+
+        var exampleItem = new NavigationItem("Contains", "./autocomplete/completion-mode/autocomplete-contains", completionModes);
+        completionModes.subItems.push(exampleItem);
+        var exampleItem = new NavigationItem("Starts with", "./autocomplete/completion-mode/autocomplete-startswith", completionModes);
+        completionModes.subItems.push(exampleItem);
+
+        var displayModes = new NavigationItem("Display modes", undefined, currentItem);
+        currentItem.subItems.push(displayModes);
+
+        var exampleItem = new NavigationItem("Tokens", "./autocomplete/display-mode/autocomplete-tokens", displayModes);
+        displayModes.subItems.push(exampleItem);
+        var exampleItem = new NavigationItem("Plain", "./autocomplete/display-mode/autocomplete-plain", displayModes);
+        displayModes.subItems.push(exampleItem);
+
+        var layoutModes = new NavigationItem("Token Layouts", undefined, currentItem);
+        currentItem.subItems.push(layoutModes);
+
+        var exampleItem = new NavigationItem("Switching at runtime", "./autocomplete/layouts/autocomplete-runtime", layoutModes);
+        layoutModes.subItems.push(exampleItem);
+        var exampleItem = new NavigationItem("Horizontal", "./autocomplete/layouts/autocomplete-horizontal", layoutModes);
+        layoutModes.subItems.push(exampleItem);
+        var exampleItem = new NavigationItem("Wrap", "./autocomplete/layouts/autocomplete-wrap", layoutModes);
+        layoutModes.subItems.push(exampleItem);
+
+        var suggestModes = new NavigationItem("Suggest Mode", undefined, currentItem);
+        currentItem.subItems.push(suggestModes);
+
+        var exampleItem = new NavigationItem("Append", "./autocomplete/suggest-mode/autocomplete-append", suggestModes);
+        suggestModes.subItems.push(exampleItem);
+        var exampleItem = new NavigationItem("Suggest", "./autocomplete/suggest-mode/autocomplete-suggest", suggestModes);
+        suggestModes.subItems.push(exampleItem);
+        var exampleItem = new NavigationItem("Suggest & Append", "./autocomplete/suggest-mode/autocomplete-suggest-append", suggestModes);
+        suggestModes.subItems.push(exampleItem);
 
         exampleItem = new NavigationItem("Customization", "./autocomplete/customization/autocomplete-customization", currentItem);
         currentItem.subItems.push(exampleItem);
@@ -453,7 +489,7 @@ export class NavigationViewModel extends observableModule.Observable {
 
     public onNavigationItemTap(args) {
 
-        var itemIndex = args.itemIndex;
+        var itemIndex = args.index;
         var tappedItem = this.currentSubItems[itemIndex];
         if (tappedItem.module === undefined) {
             this.hasBackNavigation = tappedItem.parent !== undefined;

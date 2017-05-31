@@ -12,7 +12,7 @@ export function onPageLoaded(args) {
 }
 
 // >> listview-swipe-handler-sticky
-export function onSwipeCellStarted(args: listViewModule.ListViewEventData) {
+export function onSwipeCellStarted(args: listViewModule.SwipeActionsEventData) {
     var swipeLimits = args.data.swipeLimits;
     swipeLimits.threshold = 60 * utilsModule.layout.getDisplayDensity();
     swipeLimits.left = 80 * utilsModule.layout.getDisplayDensity();
@@ -20,19 +20,19 @@ export function onSwipeCellStarted(args: listViewModule.ListViewEventData) {
 }
 // << listview-swipe-handler-sticky
 
-export function onItemClick(args: listViewModule.ListViewEventData) {
-    let listView:listViewModule.RadListView = <listViewModule.RadListView>(frameModule.topmost().currentPage.getViewById("listView"));
+export function onItemClick(args: listViewModule.SwipeActionsEventData) {
+    let listView: listViewModule.RadListView = args.object;
     listView.notifySwipeToExecuteFinished();
 }
 
 // >> listview-swipe-action-handler-sticky
 export function onLeftSwipeClick(args) {
-    let listView:listViewModule.RadListView = <listViewModule.RadListView>(frameModule.topmost().currentPage.getViewById("listView"));
+    var listView = <listViewModule.RadListView>frameModule.topmost().currentPage.getViewById("listView");
     listView.notifySwipeToExecuteFinished();
 }
 
 export function onRightSwipeClick(args) {
-    let listView:listViewModule.RadListView = <listViewModule.RadListView>(frameModule.topmost().currentPage.getViewById("listView"));
+    var listView = <listViewModule.RadListView>frameModule.topmost().currentPage.getViewById("listView");
     listView.notifySwipeToExecuteFinished();
 }
 // << listview-swipe-action-handler-sticky

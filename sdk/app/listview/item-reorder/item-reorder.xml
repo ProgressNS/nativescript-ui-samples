@@ -2,9 +2,6 @@
     <GridLayout orientation="vertical" rows="auto, *, auto">
         <!-- >> listview-item-reorder-xml -->
         <lv:RadListView itemReordered="{{onItemReordered}}" items="{{ dataItems }}" row="1" itemReorder="true">
-            <lv:RadListView.listViewLayout>
-                <lv:ListViewLinearLayout scrollDirection="Vertical"/>
-            </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
                 <StackLayout paddingTop="5" paddingBottom="5">
                     <Label fontSize="20" text="{{ itemName }}" marginLeft="10"/>

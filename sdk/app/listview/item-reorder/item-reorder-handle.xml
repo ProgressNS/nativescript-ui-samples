@@ -3,9 +3,6 @@
         <Label class="example-header" text="Drag an item by the handle to reorder"/>
         
         <lv:RadListView itemReordered="{{onItemReordered}}" items="{{ dataItems }}" row="1" itemReorder="true" reorderMode="Drag">
-            <lv:RadListView.listViewLayout>
-                <lv:ListViewLinearLayout  scrollDirection="Vertical"/>
-            </lv:RadListView.listViewLayout>
             <!-- >> listview-item-reorder-handle-xml -->
             <lv:RadListView.itemTemplate>
                 <GridLayout columns="*, auto" paddingTop="16" paddingBottom="16">

@@ -3,9 +3,6 @@
      <!-- >> listview-pull-to-refresh-xml -->
         <lv:RadListView items="{{ dataItems }}" pullToRefresh="true" row="1" pullToRefreshInitiated="{{onPullToRefreshInitiated}}">
      <!-- << listview-pull-to-refresh-xml -->
-            <lv:RadListView.listViewLayout>
-                <lv:ListViewLinearLayout scrollDirection="Vertical"/>
-            </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
               <StackLayout orientation="vertical" padding="5 10 5 10"  style="background-color: #7fff7f;">
                 <StackLayout orientation="horizontal" padding="10" style="background-color: #65a565;">

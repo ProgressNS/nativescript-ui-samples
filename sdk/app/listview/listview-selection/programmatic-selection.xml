@@ -17,9 +17,6 @@
             </StackLayout>
         </GridLayout>
         <lv:RadListView items="{{ dataItems }}" row="1" id="listView" multipleSelection="true" selectionBehavior="Press">
-            <lv:RadListView.listViewLayout>
-                <lv:ListViewLinearLayout scrollDirection="Vertical"/>
-            </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
                 <StackLayout orientation="vertical" ios:paddingLeft="50" android:paddingLeft="16">
                     <Label fontSize="20" text="{{ itemName }}"/>
