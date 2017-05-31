@@ -1,24 +1,25 @@
-import {ObservableArray} from "tns-core-modules/data/observable-array";
-import timer = require("tns-core-modules/timer");
+import { ObservableArray } from "tns-core-modules/data/observable-array";
+import { Observable } from "tns-core-modules/data/observable";
 
-export class ViewModel {
-
-    private _items: ObservableArray<DataItem>;
-
+export class ViewModel extends Observable {
     constructor() {
+        super();
         this.initDataItems();
     }
 
-    get dataItems() {
-        return this._items;
+    get dataItems(): ObservableArray<DataItem> {
+        return this.get("_dataItems");
     }
 
+    set dataItems(value: ObservableArray<DataItem>) {
+        this.set("_dataItems", value);
+    }
 
     private initDataItems() {
-        this._items = new ObservableArray<DataItem>();
+        this.dataItems = new ObservableArray<DataItem>();
 
         for (var i = 0; i < 25; i++) {
-            this._items.push(new DataItem(i, "Item " + i, "This is item description."));
+            this.dataItems.push(new DataItem(i, "Item " + i, "This is item description."));
         }
     }
 }

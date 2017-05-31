@@ -1,11 +1,10 @@
-import {ObservableArray} from "tns-core-modules/data/observable-array";
-import listViewModule = require("nativescript-telerik-ui-pro/listview");
-import observableModule = require("tns-core-modules/data/observable");
-import timer = require("tns-core-modules/timer");
-import frameModule = require("tns-core-modules/ui/frame");
+import { ObservableArray } from "tns-core-modules/data/observable-array";
+import * as listViewModule from "nativescript-telerik-ui-pro/listview";
+import { Observable } from "tns-core-modules/data/observable";
+import * as timer from "tns-core-modules/timer";
+import * as frameModule from "tns-core-modules/ui/frame";
 
-export class ViewModel extends observableModule.Observable {
-    private _items;
+export class ViewModel extends Observable {
     private _animations;
     private _itemsCount;
 
@@ -19,35 +18,39 @@ export class ViewModel extends observableModule.Observable {
         };
     }
 
-    get dataItems() {
-        return this._items;
+    get dataItems(): ObservableArray<DataItem> {
+        return this.get("_dataItems");
+    }
+
+    set dataItems(value: ObservableArray<DataItem>) {
+        this.set("_dataItems", value);
     }
 
     public onAddItemClick(args: listViewModule.ListViewEventData) {
-        this._items.push(new DataItem(this._itemsCount, "This is a new item: " + this._itemsCount, "This is the new item's description."));
+        this.dataItems.push(new DataItem(this._itemsCount, "This is a new item: " + this._itemsCount, "This is the new item's description."));
         this._itemsCount++;
     }
 
     public onResetClick(args: listViewModule.ListViewEventData) {
-        while (this._items.length) {
-            this._items.pop();
+        while (this.dataItems.length) {
+            this.dataItems.pop();
         }
         this._itemsCount = 0;
     }
 
     public onUpdateItemClick(args: listViewModule.ListViewEventData) {
-        for (var index = 0; index < this._items.length; index++) {
-            this._items.getItem(index).itemName = "This is an updated item";
-            this._items.getItem(index).itemDescription = "This is the updated item's description.";
+        for (var index = 0; index < this.dataItems.length; index++) {
+            this.dataItems.getItem(index).itemName = "This is an updated item";
+            this.dataItems.getItem(index).itemDescription = "This is the updated item's description.";
         }
     }
 
     public onRemoveItemClick(args: listViewModule.ListViewEventData) {
-        this._items.splice(this._items.length - 1, 1);
+        this.dataItems.splice(this.dataItems.length - 1, 1);
     }
 
     private initDataItems() {
-        this._items = new ObservableArray<DataItem>();
+        this.dataItems = new ObservableArray<DataItem>();
     }
 
     public updateItemAnimation() {
@@ -69,7 +72,7 @@ export class ViewModel extends observableModule.Observable {
     }
 }
 
-export class DataItem extends observableModule.Observable {
+export class DataItem extends Observable {
 
 
     constructor(id: number, name: string, description: string) {
