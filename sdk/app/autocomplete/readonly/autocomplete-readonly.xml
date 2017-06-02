@@ -24,7 +24,7 @@
                 </au:SuggestionView>
             </au:RadAutoCompleteTextView.suggestionView>
          </au:RadAutoCompleteTextView>
-        <Label text="Readonly:" marginTop="5"/>
+        <Label text="Read Only:" marginTop="5"/>
         <StackLayout orientation="horizontal">
             <Button  margin="5" text="Set true" tap="{{onSetTrue}}"/>
             <Button  margin="5" text="Set false" tap="{{onSetFalse}}"/>

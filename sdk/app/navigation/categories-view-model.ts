@@ -454,7 +454,7 @@ export class NavigationViewModel extends observableModule.Observable {
         exampleItem = new NavigationItem("Async Data Fetch", "./autocomplete/remote-data-fetch/autocomplete-remote", currentItem);
         currentItem.subItems.push(exampleItem);
 
-        exampleItem = new NavigationItem("Readonly", "./autocomplete/readonly/autocomplete-readonly", currentItem);
+        exampleItem = new NavigationItem("Read Only", "./autocomplete/readonly/autocomplete-readonly", currentItem);
         currentItem.subItems.push(exampleItem);
     }
 
