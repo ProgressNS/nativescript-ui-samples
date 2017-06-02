@@ -27,11 +27,3 @@ export class ViewModel extends Observable {
     }
 }
 // << autocomplete-generate-data
-
-// >> autocomplete-events-ts
-export class EventsViewModel extends Observable {
-    public onTokenAdded(args) {
-        this.set("eventName", "Token Added!");
-    }
-}
-// << autocomplete-events-ts

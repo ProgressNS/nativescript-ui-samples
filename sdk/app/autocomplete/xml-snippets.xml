@@ -35,10 +35,6 @@ xmlns="http://www.nativescript.org/tns.xsd">
 </au:RadAutoCompleteTextView.suggestionView>
 <!-- << autocomplete-suggestion-view-xml -->
 
-<!-- >> autocomplete-events-xml -->
-<au:RadAutoCompleteTextView items="{{ dataItems }}" displayMode="Tokens" tokenAdded="{{ onTokenAdded}}">
-<!-- << autocomplete-events-xml -->
-</au:RadAutoCompleteTextView>
 </StackLayout>
 </navigation:ExamplePage>
 

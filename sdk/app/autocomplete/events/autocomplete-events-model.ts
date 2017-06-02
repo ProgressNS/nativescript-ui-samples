@@ -35,6 +35,7 @@ export class ViewModel extends Observable {
         }
     }
 
+    // >> autocomplete-events-ts
     public onTokenAdded(args) {
         this.logEvent("Added Token: " + args.token.text);
     }
@@ -58,6 +59,7 @@ export class ViewModel extends Observable {
     public onSuggestionViewBecameVisible(args) {
         this.logEvent("Suggestion View Became Visible");
     }
+    // << autocomplete-events-ts
 
     private updateEventsText(): void {
         var text;
