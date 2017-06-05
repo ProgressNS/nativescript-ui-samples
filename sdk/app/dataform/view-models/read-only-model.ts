@@ -17,7 +17,6 @@ export class ReadOnlyViewModel extends Observable {
             this._fromProviders.push(data.airports[i].FIELD2 + ", " + data.airports[i].FIELD5);
         }
         this._isReadOnly = true;
-        this.updateStatusText();
     }
 
     get booking() {
@@ -30,6 +29,7 @@ export class ReadOnlyViewModel extends Observable {
 
     set _isReadOnly(value: boolean) {
         this.set("isReadOnly", value);
+        this.updateStatusText();
     }
 
     get _currentStatus(): string {
@@ -67,7 +67,6 @@ export class ReadOnlyViewModel extends Observable {
 
     public onEnableDisable(args) {
         this._isReadOnly = !this._isReadOnly;
-        this.updateStatusText();
     }
 }
 
