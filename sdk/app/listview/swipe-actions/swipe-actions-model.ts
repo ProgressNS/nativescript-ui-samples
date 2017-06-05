@@ -23,6 +23,15 @@ export class ViewModel extends Observable {
 
     set enabled(value: boolean) {
         this.set("_enabled", value);
+        this.updateStatusText();
+    }
+
+    get _currentStatus(): string {
+        return this.get("currentStatus");
+    }
+
+    set _currentStatus(value: string) {
+        this.set("currentStatus", value);
     }
 
     private initDataItems() {
@@ -31,6 +40,10 @@ export class ViewModel extends Observable {
         for (var i = 0; i < posts.names.length; i++) {
             this.dataItems.push(new DataItem(posts.names[i], posts.titles[i], posts.text[i]));
         }
+    }
+
+    private updateStatusText() {
+        this._currentStatus = !this.enabled ? "Enable" : "Disable";
     }
 }
 

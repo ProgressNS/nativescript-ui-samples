@@ -1,6 +1,6 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui-pro/listview" xmlns="http://www.nativescript.org/tns.xsd">
     <GridLayout orientation="vertical" rows="auto, *">
-        <Button text="Disable/Enable" tap="onDisableEnableTap"/>
+        <Button text="{{ currentStatus }}" tap="onDisableEnableTap"/>
         <lv:RadListView  id="listView" 
                          items="{{ dataItems }}" 
                          row="1" 
