@@ -186,6 +186,9 @@ export class NavigationViewModel extends observableModule.Observable {
         layouts.subItems.push(selectionExample);
         var selectionExample = new NavigationItem("Grid", "./dataform/layouts/grid-layout", layouts);
         layouts.subItems.push(selectionExample);
+
+        dataFormExample = new NavigationItem("Read Only", "./dataform/editors/readonly/editor-readonly", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
     }
 
     private buildChartExamples(currentParent: NavigationItem) {
