@@ -8,7 +8,7 @@
                  <df:EntityProperty.editor>
                         <df:PropertyEditor type="Text">
                             <df:PropertyEditor.propertyEditorStyle>
-                                <df:PropertyEditorStyle labelFontStyle="{{ labelFontStyle }}"/>
+                                <df:PropertyEditorStyle labelFontStyle="red"/>
                             </df:PropertyEditor.propertyEditorStyle>
                         </df:PropertyEditor>
                     </df:EntityProperty.editor>
