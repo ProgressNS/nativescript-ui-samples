@@ -1,4 +1,4 @@
-import { PersonBaseViewModel} from "./../view-models/person-base-model";
+import { PersonBaseViewModel} from "./../../view-models/person-base-model";
 import { FontStyles, PropertyEditor } from "nativescript-telerik-ui-pro/dataform";
 
 var nameEditor: PropertyEditor;

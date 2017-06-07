@@ -173,7 +173,7 @@ export class NavigationViewModel extends observableModule.Observable {
         dataFormExample = new NavigationItem("Advanced", "./dataform/styling/advanced/styling-advanced", styling);
         styling.subItems.push(dataFormExample);
 
-        dataFormExample = new NavigationItem("At runtime", "./dataform/editor-style/editor-style", styling);
+        dataFormExample = new NavigationItem("At runtime", "./dataform/styling/editor-style/editor-style", styling);
         styling.subItems.push(dataFormExample);
 
         dataFormExample = new NavigationItem("Runtime updates", "./dataform/runtime-updates/runtime-updates", dataFormRoot);
