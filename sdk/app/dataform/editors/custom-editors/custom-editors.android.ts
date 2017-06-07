@@ -1,4 +1,4 @@
-import viewModel = require("./../view-models/person-base-model");
+import viewModel = require("./../../view-models/person-base-model");
 export function onPageLoaded(args) {
     var page = args.object;
     page.bindingContext = new viewModel.PersonBaseViewModel();

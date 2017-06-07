@@ -145,6 +145,8 @@ export class NavigationViewModel extends observableModule.Observable {
         editors.subItems.push(common);
         var autocomplete = new NavigationItem("AutoComplete", "./dataform/editors/autocomplete/autocomplete", editors);
         editors.subItems.push(autocomplete);
+        var customEditor = new NavigationItem("Custom Editors", "./dataform/editors/custom-editors/custom-editors", editors);
+        editors.subItems.push(customEditor);
 
         var validation = new NavigationItem("Validation", undefined, dataFormRoot);
         dataFormRoot.subItems.push(validation);
@@ -159,17 +161,20 @@ export class NavigationViewModel extends observableModule.Observable {
         dataFormExample = new NavigationItem("Groups", "./dataform/groups/groups", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
-        dataFormExample = new NavigationItem("Custom Editors", "./dataform/custom-editors/custom-editors", dataFormRoot);
-        dataFormRoot.subItems.push(dataFormExample);
-
         dataFormExample = new NavigationItem("Events", "./dataform/events/events", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
-        dataFormExample = new NavigationItem("Styling", "./dataform/styling/styling", dataFormRoot);
-        dataFormRoot.subItems.push(dataFormExample);
+         var styling = new NavigationItem("Styling", undefined, dataFormRoot);
+        dataFormRoot.subItems.push(styling);
 
-        dataFormExample = new NavigationItem("Styling Advanced", "./dataform/styling-advanced/styling-advanced", dataFormRoot);
-        dataFormRoot.subItems.push(dataFormExample);
+        dataFormExample = new NavigationItem("Common", "./dataform/styling/common/styling", styling);
+        styling.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Advanced", "./dataform/styling/advanced/styling-advanced", styling);
+        styling.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("At runtime", "./dataform/editor-style/editor-style", styling);
+        styling.subItems.push(dataFormExample);
 
         dataFormExample = new NavigationItem("Runtime updates", "./dataform/runtime-updates/runtime-updates", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
