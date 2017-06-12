@@ -15,6 +15,9 @@
                 </StackLayout>
                 </StackLayout>
             </lv:RadListView.itemTemplate>
+            <lv:RadListView.pullToRefreshStyle>
+                <lv:PullToRefreshStyle indicatorColor="red" indicatorBackgroundColor="blue"/>
+            </lv:RadListView.pullToRefreshStyle>
         </lv:RadListView>
     </GridLayout>
 </navigation:ExamplePage>
