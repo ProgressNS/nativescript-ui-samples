@@ -1,4 +1,4 @@
-<!-- >> spline-series -->
+<!-- >> spline-series-xml -->
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
     <chart:RadCartesianChart id="cartesianChart">
         <chart:RadCartesianChart.series>
@@ -13,4 +13,4 @@
         </chart:RadCartesianChart.series>
     </chart:RadCartesianChart>
 </navigation:ExamplePage>
-<!-- << spline-series -->
+<!-- << spline-series-xml -->

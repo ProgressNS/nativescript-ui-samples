@@ -215,6 +215,9 @@ export class NavigationViewModel extends observableModule.Observable {
         seriesExample = new NavigationItem("Spline series", "./chart/series/spline/spline-series", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
 
+        seriesExample = new NavigationItem("Spline Area series", "./chart/series/spline/spline-area-series", seriesRoot);
+        seriesRoot.subItems.push(seriesExample);
+
         seriesExample = new NavigationItem("Bubble series", "./chart/series/bubble/bubble-series", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
 
