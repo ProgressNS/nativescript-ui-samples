@@ -21,7 +21,7 @@
               <Label text="Drafts" class="drawerSectionItem" />
             </StackLayout>
           </ScrollView>
-          <Button text="Close Drawer" tap="{{ closeDrawer }}"/>
+          <Label text="Close Drawer" tap="{{ closeDrawer }}" class="drawerContentButton drawerWhiteContentButton"/>
         </StackLayout>
       </nsDrawer:RadSideDrawer.drawerContent>
       <nsDrawer:RadSideDrawer.mainContent>

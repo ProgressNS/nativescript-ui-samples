@@ -33,6 +33,10 @@ button {
     horizontal-align: left;
 }
 
+.drawerWhiteContentButton {
+    color: white;
+}
+
 .headerContent {
     height: 56;
     text-align: center;
@@ -40,7 +44,7 @@ button {
 }
 
 .drawerSectionHeader {
-    padding-left: 10;
+    padding: 10;
     background-color: lightgray;
 }
 
