@@ -12,9 +12,9 @@ export function onPageLoaded(args) {
 }
 
 // >> listview-swipe-action-release-notify
-export function onCellSwiping(args: listViewModule.ListViewEventData) {
+export function onCellSwiping(args: listViewModule.SwipeActionsEventData) {
     var swipeLimits = args.data.swipeLimits;
-    var currentItemView = args.object;
+    var currentItemView = args.swipeView;
     var currentView;
 
     if (args.data.x > 200) {
@@ -26,9 +26,9 @@ export function onCellSwiping(args: listViewModule.ListViewEventData) {
 // << listview-swipe-action-release-notify
 
 // >> listview-swipe-action-release-limits
-export function onSwipeCellStarted(args: listViewModule.ListViewEventData) {
+export function onSwipeCellStarted(args: listViewModule.SwipeActionsEventData) {
     var swipeLimits = args.data.swipeLimits;
-    var listView = frameModule.topmost().currentPage.getViewById("listView") as viewModule.View;
+    var listView = args.object;
     swipeLimits.threshold = listView.getMeasuredWidth();
     swipeLimits.left = listView.getMeasuredWidth();
     swipeLimits.right = listView.getMeasuredWidth();
@@ -36,7 +36,7 @@ export function onSwipeCellStarted(args: listViewModule.ListViewEventData) {
 // << listview-swipe-action-release-limits
 
 // >> listview-swipe-action-release-execute
-export function onSwipeCellFinished(args: listViewModule.ListViewEventData) {
+export function onSwipeCellFinished(args: listViewModule.SwipeActionsEventData) {
     if (args.data.x > 200) {
         console.log("Perform left action");
     } else if (args.data.x < -200) {
@@ -46,7 +46,7 @@ export function onSwipeCellFinished(args: listViewModule.ListViewEventData) {
 // << listview-swipe-action-release-execute
 
 export function onItemClick(args: listViewModule.ListViewEventData) {
-    var listView = <listViewModule.RadListView>frameModule.topmost().currentPage.getViewById("listView");
+    var listView = args.object;
     listView.notifySwipeToExecuteFinished();
     console.log("Item click: " + args.index);
 }

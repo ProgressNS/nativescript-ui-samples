@@ -1,35 +1,29 @@
 // >> autocomplete-generate-data
-import {ObservableArray} from "tns-core-modules/data/observable-array";
-import autocompleteModule = require("nativescript-telerik-ui-pro/autocomplete");
-import observableModule = require("tns-core-modules/data/observable");
+import { ObservableArray } from "tns-core-modules/data/observable-array";
+import { TokenModel } from "nativescript-telerik-ui-pro/autocomplete";
+import { Observable } from "tns-core-modules/data/observable";
 
-export class ViewModel {
+export class ViewModel extends Observable {
+    private countries = ["Australia", "Albania", "Austria", "Argentina", "Maldives", "Bulgaria", "Belgium", "Cyprus", "Italy", "Japan",
+        "Denmark", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland",
+        "Latvia", "Luxembourg", "Macedonia", "Moldova", "Monaco", "Netherlands", "Norway",
+        "Poland", "Romania", "Russia", "Sweden", "Slovenia", "Slovakia", "Turkey", "Ukraine",
+        "Vatican City", "Chad", "China", "Chile"];
 
-    private _items: ObservableArray<autocompleteModule.TokenModel>;
-    private countries = ["Australia", "Albania","Austria", "Argentina", "Maldives","Bulgaria","Belgium","Cyprus","Italy","Japan",
-                                        "Denmark","Finland","France","Germany","Greece","Hungary","Ireland",
-                                        "Latvia","Luxembourg","Macedonia","Moldova","Monaco","Netherlands","Norway",
-                                        "Poland","Romania","Russia","Sweden","Slovenia","Slovakia","Turkey","Ukraine",
-                                        "Vatican City", "Chad", "China", "Chile"];
+    get dataItems(): ObservableArray<TokenModel> {
+        return this.get("_dataItems");
+    }
 
-    get dataItems() {
-        return this._items;
+    set dataItems(value: ObservableArray<TokenModel>) {
+        this.set("_dataItems", value);
     }
 
     private initDataItems() {
-        this._items = new ObservableArray<autocompleteModule.TokenModel>();
+        this.dataItems = new ObservableArray<TokenModel>();
 
         for (var i = 0; i < this.countries.length; i++) {
-            this._items.push(new autocompleteModule.TokenModel(this.countries[i],undefined));
+            this.dataItems.push(new TokenModel(this.countries[i], undefined));
         }
     }
 }
 // << autocomplete-generate-data
-
-// >> autocomplete-events-ts
-export class EventsViewModel extends observableModule.Observable {
-     public onTokenAdded(args) {
-        this.set("eventName", "Token Added!");
-    }
-}
-// << autocomplete-events-ts

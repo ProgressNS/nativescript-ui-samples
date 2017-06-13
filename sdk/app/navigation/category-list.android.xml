@@ -6,9 +6,6 @@
     navigatingTo="onPageNavigatingTo">
     <GridLayout rows="auto, *">
         <lv:RadListView row="1" items="{{ _currentSubItems }}" itemTap="{{onNavigationItemTap}}" >
-            <lv:RadListView.listViewLayout>
-                <lv:ListViewLinearLayout scrollDirection="Vertical"/>
-            </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
                 <StackLayout class="itemStackLayout">
                     <Label text="{{ title }}" textWrap="true" class="titleLabel"/>

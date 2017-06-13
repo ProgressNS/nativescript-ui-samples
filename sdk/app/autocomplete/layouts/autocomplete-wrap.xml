@@ -1,13 +1,12 @@
 <navigation:ExamplePage loaded="onPageLoaded" xmlns:navigation="navigation/example-page" xmlns:au="nativescript-telerik-ui-pro/autocomplete" xmlns="http://www.nativescript.org/tns.xsd">
     <StackLayout ios:backgroundColor="#CDCECE" padding="5">
-     <Label text="Select countries:"/>
-         <au:RadAutoCompleteTextView id="autocmp" items="{{ dataItems }}" suggestMode="Suggest" displayMode="Tokens">
+        <Label text="Select countries"/>
+        <au:RadAutoCompleteTextView id="autocmp" items="{{ dataItems }}" layoutMode="Wrap" displayMode="Tokens">
             <au:RadAutoCompleteTextView.suggestionView>
                 <au:SuggestionView suggestionViewHeight="300">
                     <au:SuggestionView.suggestionItemTemplate>
-                        <StackLayout orientation="horizontal" padding="5">
-                            <Image src="{{ image }}" width="50"/>
-                            <Label text="{{ text }}" marginLeft="5"></Label>
+                        <StackLayout orientation="vertical" padding="10">
+                            <Label text="{{ text }}"></Label>
                         </StackLayout>
                     </au:SuggestionView.suggestionItemTemplate>
                 </au:SuggestionView>

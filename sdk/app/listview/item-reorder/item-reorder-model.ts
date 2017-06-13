@@ -1,31 +1,35 @@
 import {ObservableArray} from "tns-core-modules/data/observable-array";
-import listViewModule = require("nativescript-telerik-ui-pro/listview");
+import { ListViewEventData } from "nativescript-telerik-ui-pro/listview";
 import timer = require("tns-core-modules/timer");
-var names = require("../listview-selection/PhotosWithNames.json")
+import { Observable } from "tns-core-modules/data/observable";
 
-export class ViewModel {
+var names = require("../listview-selection/PhotosWithNames.json");
 
-    private _items: ObservableArray<DataItem>;
-
+export class ViewModel extends Observable {
     constructor() {
+        super();
         this.initDataItems();
     }
 
-    get dataItems() {
-        return this._items;
+     get dataItems(): ObservableArray<DataItem> {
+        return this.get("_dataItems");
+    }
+
+    set dataItems(value: ObservableArray<DataItem>) {
+        this.set("_dataItems", value);
     }
     
     // >> listview-item-reorder-handler
-    public onItemReordered(args: listViewModule.ListViewEventData){
+    public onItemReordered(args: ListViewEventData){
         console.log("Item reordered. Old index: " + args.index + " " + "new index: " + args.data.targetIndex);
     }
     // << listview-item-reorder-handler
 
     private initDataItems() {
-        this._items = new ObservableArray<DataItem>();
+        this.dataItems = new ObservableArray<DataItem>();
 
         for (var i = 0; i < names.names.length; i++) {
-            this._items.push(new DataItem(names.names[i]));
+            this.dataItems.push(new DataItem(names.names[i]));
         }
     }
 }

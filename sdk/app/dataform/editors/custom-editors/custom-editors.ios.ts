@@ -1,4 +1,4 @@
-import viewModel = require("./../view-models/person-base-model");
+import viewModel = require("./../../view-models/person-base-model");
 import dataFormModule = require("nativescript-telerik-ui-pro/dataform");
 
 export function onPageLoaded(args) {

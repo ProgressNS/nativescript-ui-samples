@@ -145,6 +145,8 @@ export class NavigationViewModel extends observableModule.Observable {
         editors.subItems.push(common);
         var autocomplete = new NavigationItem("AutoComplete", "./dataform/editors/autocomplete/autocomplete", editors);
         editors.subItems.push(autocomplete);
+        var customEditor = new NavigationItem("Custom Editors", "./dataform/editors/custom-editors/custom-editors", editors);
+        editors.subItems.push(customEditor);
 
         var validation = new NavigationItem("Validation", undefined, dataFormRoot);
         dataFormRoot.subItems.push(validation);
@@ -159,17 +161,20 @@ export class NavigationViewModel extends observableModule.Observable {
         dataFormExample = new NavigationItem("Groups", "./dataform/groups/groups", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
-        dataFormExample = new NavigationItem("Custom Editors", "./dataform/custom-editors/custom-editors", dataFormRoot);
-        dataFormRoot.subItems.push(dataFormExample);
-
         dataFormExample = new NavigationItem("Events", "./dataform/events/events", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
-        dataFormExample = new NavigationItem("Styling", "./dataform/styling/styling", dataFormRoot);
-        dataFormRoot.subItems.push(dataFormExample);
+         var styling = new NavigationItem("Styling", undefined, dataFormRoot);
+        dataFormRoot.subItems.push(styling);
 
-        dataFormExample = new NavigationItem("Styling Advanced", "./dataform/styling-advanced/styling-advanced", dataFormRoot);
-        dataFormRoot.subItems.push(dataFormExample);
+        dataFormExample = new NavigationItem("Common", "./dataform/styling/common/styling", styling);
+        styling.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Advanced", "./dataform/styling/advanced/styling-advanced", styling);
+        styling.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("At runtime", "./dataform/styling/editor-style/editor-style", styling);
+        styling.subItems.push(dataFormExample);
 
         dataFormExample = new NavigationItem("Runtime updates", "./dataform/runtime-updates/runtime-updates", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
@@ -186,6 +191,12 @@ export class NavigationViewModel extends observableModule.Observable {
         layouts.subItems.push(selectionExample);
         var selectionExample = new NavigationItem("Grid", "./dataform/layouts/grid-layout", layouts);
         layouts.subItems.push(selectionExample);
+
+        dataFormExample = new NavigationItem("Read Only", "./dataform/editors/readonly/editor-readonly", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Value Providers", "./dataform/value-providers/value-providers", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
     }
 
     private buildChartExamples(currentParent: NavigationItem) {
@@ -378,6 +389,9 @@ export class NavigationViewModel extends observableModule.Observable {
         exampleItem = new NavigationItem("Multiple actions", "./listview/swipe-actions/swipe-actions-multiple", swipeActions);
         swipeActions.subItems.push(exampleItem);
 
+        exampleItem = new NavigationItem("Disable/Enable", "./listview/swipe-actions/swipe-disable", swipeActions);
+        swipeActions.subItems.push(exampleItem);
+
         // Header and footer
         exampleItem = new NavigationItem("Header and Footer", "./listview/header-footer/header-footer", currentItem);
         currentItem.subItems.push(exampleItem);
@@ -416,8 +430,41 @@ export class NavigationViewModel extends observableModule.Observable {
         var exampleItem = new NavigationItem("Getting started", "./autocomplete/getting-started/autocomplete-getting-started", currentItem);
         currentItem.subItems.push(exampleItem);
 
-        exampleItem = new NavigationItem("Token Layouts", "./autocomplete/layouts/autocomplete-layout", currentItem);
-        currentItem.subItems.push(exampleItem);
+        var completionModes = new NavigationItem("Completion modes", undefined, currentItem);
+        currentItem.subItems.push(completionModes);
+
+        var exampleItem = new NavigationItem("Contains", "./autocomplete/completion-mode/autocomplete-contains", completionModes);
+        completionModes.subItems.push(exampleItem);
+        var exampleItem = new NavigationItem("Starts with", "./autocomplete/completion-mode/autocomplete-startswith", completionModes);
+        completionModes.subItems.push(exampleItem);
+
+        var displayModes = new NavigationItem("Display modes", undefined, currentItem);
+        currentItem.subItems.push(displayModes);
+
+        var exampleItem = new NavigationItem("Tokens", "./autocomplete/display-mode/autocomplete-tokens", displayModes);
+        displayModes.subItems.push(exampleItem);
+        var exampleItem = new NavigationItem("Plain", "./autocomplete/display-mode/autocomplete-plain", displayModes);
+        displayModes.subItems.push(exampleItem);
+
+        var layoutModes = new NavigationItem("Token Layouts", undefined, currentItem);
+        currentItem.subItems.push(layoutModes);
+
+        var exampleItem = new NavigationItem("Switching at runtime", "./autocomplete/layouts/autocomplete-runtime", layoutModes);
+        layoutModes.subItems.push(exampleItem);
+        var exampleItem = new NavigationItem("Horizontal", "./autocomplete/layouts/autocomplete-horizontal", layoutModes);
+        layoutModes.subItems.push(exampleItem);
+        var exampleItem = new NavigationItem("Wrap", "./autocomplete/layouts/autocomplete-wrap", layoutModes);
+        layoutModes.subItems.push(exampleItem);
+
+        var suggestModes = new NavigationItem("Suggest Mode", undefined, currentItem);
+        currentItem.subItems.push(suggestModes);
+
+        var exampleItem = new NavigationItem("Append", "./autocomplete/suggest-mode/autocomplete-append", suggestModes);
+        suggestModes.subItems.push(exampleItem);
+        var exampleItem = new NavigationItem("Suggest", "./autocomplete/suggest-mode/autocomplete-suggest", suggestModes);
+        suggestModes.subItems.push(exampleItem);
+        var exampleItem = new NavigationItem("Suggest & Append", "./autocomplete/suggest-mode/autocomplete-suggest-append", suggestModes);
+        suggestModes.subItems.push(exampleItem);
 
         exampleItem = new NavigationItem("Customization", "./autocomplete/customization/autocomplete-customization", currentItem);
         currentItem.subItems.push(exampleItem);
@@ -426,6 +473,9 @@ export class NavigationViewModel extends observableModule.Observable {
         currentItem.subItems.push(exampleItem);
 
         exampleItem = new NavigationItem("Async Data Fetch", "./autocomplete/remote-data-fetch/autocomplete-remote", currentItem);
+        currentItem.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Read Only", "./autocomplete/readonly/autocomplete-readonly", currentItem);
         currentItem.subItems.push(exampleItem);
     }
 

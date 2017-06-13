@@ -1,9 +1,13 @@
 <navigation:ExamplePage loaded="onPageLoaded" xmlns:navigation="navigation/example-page" xmlns:au="nativescript-telerik-ui-pro/autocomplete" xmlns="http://www.nativescript.org/tns.xsd">
     <StackLayout ios:backgroundColor="#CDCECE" padding="5">
         <Label text="Select country:"/>
+        <!-- >> autocomplete-events-xml -->
         <au:RadAutoCompleteTextView id="autocmp" items="{{ dataItems }}"
-          suggestMode="Suggest" displayMode="Tokens"
-          tokenRemoved="{{ onTokenRemoved }}" tokenAdded="{{ onTokenAdded}}" tokenSelected= "{{ onTokenSelected }}">
+          suggestMode="Suggest" displayMode="Tokens" 
+          suggestionViewBecameVisible="{{ onSuggestionViewBecameVisible }}"
+          didAutoComplete="{{ onDidAutoComplete }}"
+          tokenAdded="{{ onTokenAdded}}" tokenRemoved="{{ onTokenRemoved }}"
+          tokenSelected= "{{ onTokenSelected }}" tokenDeselected= "{{ onTokenDeselected }}">
             <au:RadAutoCompleteTextView.suggestionView>
                 <au:SuggestionView suggestionViewHeight="300">
                     <au:SuggestionView.suggestionItemTemplate>
@@ -14,9 +18,14 @@
                 </au:SuggestionView>
             </au:RadAutoCompleteTextView.suggestionView>
         </au:RadAutoCompleteTextView>
-        <StackLayout orientation="horizontal" marginTop="5">
-            <Label text="Triggered event: "/>
-            <Label text="{{ eventName }}" width="150"/>
+        <!-- << autocomplete-events-xml -->
+        <StackLayout orientation="vertical" marginTop="5">
+            <Label marginBottom="12" text="{{ eventsText }}"/>
+            <Label text="{{ eventName1 }}"/>
+            <Label text="{{ eventName2 }}"/>
+            <Label text="{{ eventName3 }}"/>
+            <Label text="{{ eventName4 }}"/>
+            <Label text="{{ eventName5 }}"/>
         </StackLayout>
     </StackLayout>
 </navigation:ExamplePage>

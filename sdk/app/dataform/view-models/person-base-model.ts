@@ -1,9 +1,8 @@
-export class PersonBaseViewModel {
+import { Observable } from "tns-core-modules/data/observable";
+
+export class PersonBaseViewModel extends Observable{
 
     private _person: PersonBase;
-
-    constructor() {
-    }
 
     get person() {
         if (!this._person) {

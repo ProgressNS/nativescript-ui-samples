@@ -1,30 +1,32 @@
 // >> listview-first-look-model
-import {ObservableArray} from "tns-core-modules/data/observable-array";
+import { ObservableArray } from "tns-core-modules/data/observable-array";
+import { Observable } from "tns-core-modules/data/observable";
 import timer = require("tns-core-modules/timer");
 
-export class ViewModel {
-
-    private _items: ObservableArray<DataItem>;
+export class ViewModel extends Observable {
     private _words = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"];
 
     constructor() {
-    }
+        super();
+        this.dataItems = new ObservableArray<DataItem>();
 
-    get dataItems() {
-        if (!this._items) {
-            this._items = new ObservableArray<DataItem>();
-
-            for (var i = 0; i < 10; i++) {
-                this._items.push(new DataItem(i, "Item " + i, "This is item description."));
-            }
+        for (var i = 0; i < 10; i++) {
+            this.dataItems.push(new DataItem(i, "Item " + i, "This is item description."));
         }
-        return this._items;
     }
 
-    private getRandomLengthString(){
+    get dataItems(): ObservableArray<DataItem> {
+        return this.get("_dataItems");
+    }
+
+    set dataItems(value: ObservableArray<DataItem>) {
+        this.set("_dataItems", value);
+    }
+
+    private getRandomLengthString() {
         var sentenceLength = Math.round((Math.random() * 15));
         var result = this._words[0];
-        for (var i = 0; i < sentenceLength; i++){
+        for (var i = 0; i < sentenceLength; i++) {
             result += (this._words[i % this._words.length] + " ");
         }
         return result;

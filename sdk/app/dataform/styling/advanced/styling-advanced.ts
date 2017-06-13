@@ -1,4 +1,4 @@
-import viewModel = require("./../view-models/settings-model");
+import viewModel = require("./../../view-models/settings-model");
 import application = require("tns-core-modules/application");
 import { Color } from "tns-core-modules/color";
 import viewModule = require("tns-core-modules/ui/core/view");
