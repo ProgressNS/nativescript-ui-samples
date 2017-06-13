@@ -48,7 +48,7 @@ export function onSwipeCellFinished(args: listViewModule.ListViewEventData) {
 export function onItemClick(args: listViewModule.ListViewEventData) {
     var listView = <listViewModule.RadListView>frameModule.topmost().currentPage.getViewById("listView");
     listView.notifySwipeToExecuteFinished();
-    console.log("Item click: " + args.itemIndex);
+    console.log("Item click: " + args.index);
 }
 
 export function onLeftSwipeClick(args) {

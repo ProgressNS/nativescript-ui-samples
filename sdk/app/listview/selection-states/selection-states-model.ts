@@ -17,12 +17,12 @@ export class ViewModel {
     
     // >> listview-howto-item-selection-events
     public itemSelected(args: listViewModule.ListViewEventData) {
-        var item = this.dataItems.getItem(args.itemIndex);
+        var item = this.dataItems.getItem(args.index);
         item.selected = true;
     }
 
     public itemDeselected(args: listViewModule.ListViewEventData) {
-        var item = this.dataItems.getItem(args.itemIndex);
+        var item = this.dataItems.getItem(args.index);
         item.selected = false;
     }
     // << listview-howto-item-selection-events

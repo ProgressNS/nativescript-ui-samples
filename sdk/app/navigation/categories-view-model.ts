@@ -463,7 +463,7 @@ export class NavigationViewModel extends observableModule.Observable {
 
     public onNavigationItemTap(args) {
 
-        var itemIndex = args.itemIndex;
+        var itemIndex = args.index;
         var tappedItem = this.currentSubItems[itemIndex];
         if (tappedItem.module === undefined) {
             this.hasBackNavigation = tappedItem.parent !== undefined;

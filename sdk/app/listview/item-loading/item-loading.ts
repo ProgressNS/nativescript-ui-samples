@@ -10,7 +10,7 @@ export function onPageLoaded(args) {
 
 // >> listview-item-loading-model
 export function onItemLoading(args) {
-    if (args.itemIndex % 2 == 0){
+    if (args.index % 2 == 0){
         args.view.backgroundColor="#b3ecff";
         args.view._subViews[0].fontSize="24";
         args.view._subViews[1].fontSize="18";   
