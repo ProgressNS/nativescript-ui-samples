@@ -1,0 +1,16 @@
+<!-- >> spline-area-series-xml -->
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
+    <chart:RadCartesianChart id="cartesianChart">
+        <chart:RadCartesianChart.series>
+            <chart:SplineAreaSeries items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="Amount">
+                <chart:SplineAreaSeries.horizontalAxis>
+                    <chart:CategoricalAxis/>
+                </chart:SplineAreaSeries.horizontalAxis>
+                <chart:SplineAreaSeries.verticalAxis>
+                    <chart:LinearAxis/>
+                </chart:SplineAreaSeries.verticalAxis>
+            </chart:SplineAreaSeries>
+        </chart:RadCartesianChart.series>
+    </chart:RadCartesianChart>
+</navigation:ExamplePage>
+<!-- << spline-area-series-xml -->
