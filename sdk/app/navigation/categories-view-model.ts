@@ -197,6 +197,9 @@ export class NavigationViewModel extends observableModule.Observable {
 
         dataFormExample = new NavigationItem("Value Providers", "./dataform/value-providers/value-providers", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Scrollable Form", "./dataform/scrolling/scrolling", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
     }
 
     private buildChartExamples(currentParent: NavigationItem) {
