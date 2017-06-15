@@ -1,4 +1,4 @@
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-telerik-ui-pro/dataform" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" navigatingTo="onPageNavigatingTo" xmlns:df="nativescript-telerik-ui-pro/dataform" xmlns="http://www.nativescript.org/tns.xsd">
     <GridLayout rows="auto, *">
         <Button text="{{ currentStatus }}" tap="{{ onEnableDisable }}"/>
         <df:RadDataForm source="{{ booking }}" row="1">
@@ -13,7 +13,7 @@
                         <df:PropertyEditor id="2" type="AutoCompleteInline" />
                     </df:EntityProperty.editor>
                 </df:EntityProperty>
-                <df:EntityProperty name="movie" displayName="Movie Name" index="2" converter="{{ $value }}" valuesProvider="{{ movieNames }}" readOnly="{{ isReadOnly }}">
+                <df:EntityProperty name="movie" displayName="Movie Name" index="2" converter="{{ moviesConverter }}" valuesProvider="{{ movieNames }}" readOnly="{{ isReadOnly }}">
                     <df:EntityProperty.editor>
                         <df:PropertyEditor type="Picker" />
                     </df:EntityProperty.editor>

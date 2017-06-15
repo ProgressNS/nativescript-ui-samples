@@ -1,5 +1,6 @@
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { Observable } from "tns-core-modules/data/observable";
+import { PropertyConverter } from "nativescript-telerik-ui-pro/dataform";
 var data = require("./airports.json")
 
 export class ReadOnlyViewModel extends Observable {
@@ -17,6 +18,7 @@ export class ReadOnlyViewModel extends Observable {
             this._fromProviders.push(data.airports[i].FIELD2 + ", " + data.airports[i].FIELD5);
         }
         this._isReadOnly = true;
+        this._moviesConverter = new MoviePropertyConverter(this.movies);
     }
 
     get booking() {
@@ -44,7 +46,7 @@ export class ReadOnlyViewModel extends Observable {
         return this._fromProviders;
     }
 
-     get movies() {
+    get movies() {
         if (!this._movies) {
             this._movies = new Array<Movie>();
             this._movies.push(new Movie(123, "Zootopia"));
@@ -67,6 +69,26 @@ export class ReadOnlyViewModel extends Observable {
 
     public onEnableDisable(args) {
         this._isReadOnly = !this._isReadOnly;
+    }
+
+    get _moviesConverter(): PropertyConverter {
+        return this.get("moviesConverter");
+    }
+
+    set _moviesConverter(value: PropertyConverter) {
+        this.set("moviesConverter", value);
+    }
+}
+
+class MoviePropertyConverter implements PropertyConverter {
+    constructor (private movies: Array<Movie>) { }
+
+    public convertFrom(id: number) {
+        return this.movies.filter((movie: Movie) => movie.id == id)[0].name;
+    }
+
+    public convertTo(name: string) {
+        return this.movies.filter((movie: Movie) => movie.name == name)[0].id;
     }
 }
 
