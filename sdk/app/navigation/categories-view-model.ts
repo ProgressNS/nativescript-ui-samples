@@ -319,6 +319,9 @@ export class NavigationViewModel extends observableModule.Observable {
         var exampleItem = new NavigationItem("Getting Started", "./listview/getting-started/getting-started", currentItem);
         currentItem.subItems.push(exampleItem);
 
+        var exampleItem = new NavigationItem("Multiple Item Templates", "./listview/multiple-templates/multiple-templates", currentItem);
+        currentItem.subItems.push(exampleItem);
+
         var exampleItem = new NavigationItem("Item Loading", "./listview/item-loading/item-loading", currentItem);
         currentItem.subItems.push(exampleItem);
 

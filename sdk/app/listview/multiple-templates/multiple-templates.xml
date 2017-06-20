@@ -1,0 +1,49 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui-pro/listview" xmlns="http://www.nativescript.org/tns.xsd">
+    <lv:RadListView items="{{ dataItems }}" itemTemplateSelector="{{ templateSelector }}">
+        <lv:RadListView.itemTemplate>
+            <StackLayout orientation="vertical">
+                <Label fontSize="20" text="Default" margin="5"/>
+                <Label fontSize="17" text="{{ itemName }}" margin="0 5 0 5"/>
+                <Label fontSize="14" text="{{ itemDescription }}" margin="5"/>
+            </StackLayout>
+        </lv:RadListView.itemTemplate>
+
+        <lv:RadListView.itemTemplates>
+            <template key="start">
+                <StackLayout orientation="vertical" style.backgroundColor="black">
+                    <Label fontSize="20" text="Start" color="yellow" margin="5"/>
+                    <Label fontSize="17" text="{{ itemName }}" color="yellow" margin="0 5 0 5"/>
+                    <Label fontSize="14" text="{{ itemDescription }}" color="yellow" margin="5"/>
+                </StackLayout>
+            </template>
+            <template key="red">
+                 <StackLayout orientation="vertical" style.backgroundColor="red">
+                    <Label fontSize="20" text="Red" color="white" margin="5"/>
+                    <Label fontSize="17" text="{{ itemName }}" color="white" margin="0 5 0 5"/>
+                    <Label fontSize="14" text="{{ itemDescription }}" color="white" margin="5"/>
+                </StackLayout>
+            </template>
+            <template key="green">
+                <StackLayout orientation="vertical" style.backgroundColor="green">
+                    <Label fontSize="20" text="Green" color="white" margin="5"/>
+                    <Label fontSize="17" text="{{ itemName }}" color="white" margin="0 5 0 5"/>
+                    <Label fontSize="14" text="{{ itemDescription }}" color="white" margin="5"/>
+                </StackLayout>
+            </template>
+            <template key="blue">
+                <StackLayout orientation="vertical" style.backgroundColor="blue">
+                    <Label fontSize="20" text="Blue" color="white" margin="5"/>
+                    <Label fontSize="17" text="{{ itemName }}" color="white" margin="0 5 0 5"/>
+                    <Label fontSize="14" text="{{ itemDescription }}" color="white" margin="5"/>
+                </StackLayout>
+            </template>
+            <template key="end">
+                <StackLayout orientation="vertical" style.backgroundColor="yellow">
+                    <Label fontSize="20" text="End" color="black" margin="5"/>
+                    <Label fontSize="17" text="{{ itemName }}" color="black" margin="0 5 0 5"/>
+                    <Label fontSize="14" text="{{ itemDescription }}" color="black" margin="5"/>
+                </StackLayout>
+            </template>
+        </lv:RadListView.itemTemplates>
+    </lv:RadListView>
+</navigation:ExamplePage>
