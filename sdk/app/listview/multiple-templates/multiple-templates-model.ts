@@ -1,6 +1,5 @@
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { Observable } from "tns-core-modules/data/observable";
-var data = require("./items.json")
 
 export class ViewModel extends Observable {
 
@@ -8,8 +7,9 @@ export class ViewModel extends Observable {
         super();
         this.dataItems = new ObservableArray<DataItem>();
         this._templateSelector = this.templateSelectorFunction;
-        for (var i = 0; i < data.items.length; i++) {
-            this.dataItems.push(new DataItem(i, data.items[i].name, data.items[i].description, data.items[i].type));
+        let itemsCount = 50;
+        for (var i = 0; i <= itemsCount; i++) {
+            this.dataItems.push(new DataItem(i, "Item " + i, "This is item description", this.getType(i, itemsCount)));
         }
     }
 
@@ -31,6 +31,16 @@ export class ViewModel extends Observable {
 
     public templateSelectorFunction = (item: DataItem, index: number, items: any) => {
         return item.type;
+    }
+
+    private getType(index: number, end: number): string {
+        let lastDigit = index % 10;
+        let type = index == 0 ? "start" : index == end ? "end" : undefined;
+        if (!type) {
+            type = lastDigit == 0 ? "default" : lastDigit <= 3 ? "red" : lastDigit <= 6 ? "blue" : lastDigit <= 9 ? "green" : "default";
+        }
+
+        return type;
     }
 }
 
