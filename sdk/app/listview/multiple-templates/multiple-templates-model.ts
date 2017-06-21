@@ -1,3 +1,4 @@
+// >> listview-multiple-templates-model
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { Observable } from "tns-core-modules/data/observable";
 
@@ -35,7 +36,7 @@ export class ViewModel extends Observable {
 
     private getType(index: number, end: number): string {
         let lastDigit = index % 10;
-        let type = index == 0 ? "start" : index == end ? "end" : undefined;
+        let type = index == 0 ? "first" : index == end ? "last" : undefined;
         if (!type) {
             type = lastDigit == 0 ? "default" : lastDigit <= 3 ? "red" : lastDigit <= 6 ? "blue" : lastDigit <= 9 ? "green" : "default";
         }
@@ -55,3 +56,4 @@ export class DataItem {
         this.itemDescription = description;
     }
 }
+// << listview-multiple-templates-model
