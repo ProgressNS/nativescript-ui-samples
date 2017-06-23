@@ -35,11 +35,9 @@ export class ViewModel extends Observable {
 
     public onHorizontalSelected(args) {
         this.autocmp.layoutMode = "Horizontal";
-        this.autocmp.resetAutocomplete();
     }
 
     public onWrapSelected(args) {
         this.autocmp.layoutMode = "Wrap";
-        this.autocmp.resetAutocomplete();
     }
 }
