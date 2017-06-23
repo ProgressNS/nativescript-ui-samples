@@ -3,7 +3,7 @@
     <Label text="Select country"/>
         <au:RadAutoCompleteTextView id="autocmp" items="{{ dataItems }}" suggestMode="Suggest" displayMode="Tokens">
             <au:RadAutoCompleteTextView.suggestionView>
-                <au:SuggestionView suggestionViewHeight="300">
+                <au:SuggestionView>
                     <au:SuggestionView.suggestionItemTemplate>
                         <StackLayout orientation="vertical" padding="10">
                             <Label text="{{ text }}"></Label>
