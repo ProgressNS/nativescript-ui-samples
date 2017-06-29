@@ -1,4 +1,4 @@
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:rc="nativescript-telerik-ui-pro/calendar" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui-pro/listview" xmlns:rc="nativescript-telerik-ui-pro/calendar" xmlns="http://www.nativescript.org/tns.xsd">
     <navigation.actionBar>
         <ActionBar title="Populating with data" />
     </navigation.actionBar>
@@ -7,10 +7,10 @@
 		    eventSource="{{ eventSource }}"
             dateSelected="onDateSelected"
             row="0"/>
-        <ListView items="{{ myItems }}" rowHeight="44" row="1">
-            <ListView.itemTemplate>
+        <lv:RadListView items="{{ myItems }}" rowHeight="44" row="1">
+            <lv:RadListView.itemTemplate>
                 <Label text="{{title}}" marginLeft="10" />
-            </ListView.itemTemplate>
-        </ListView>
+            </lv:RadListView.itemTemplate>
+        </lv:RadListView>
     </GridLayout>
 </navigation:ExamplePage>
