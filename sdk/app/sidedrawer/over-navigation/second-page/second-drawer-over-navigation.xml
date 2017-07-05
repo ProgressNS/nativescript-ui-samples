@@ -21,13 +21,15 @@
               <Label text="Drafts" class="drawerSectionItem" />
             </StackLayout>
           </ScrollView>
+          <Label text="Go back"  tap="{{ goBack }}" class="drawerWhiteContentButton drawerContentButton"></Label>
           <Label text="Close Drawer" tap="{{ closeDrawer }}" class="drawerContentButton drawerWhiteContentButton"/>
         </StackLayout>
       </nsDrawer:RadSideDrawer.drawerContent>
       <nsDrawer:RadSideDrawer.mainContent>
         <StackLayout class="mainContent">
             <Label text="{{ exampleText }}" textWrap="true" class="drawerContentText"/>
-            <Button text="Open drawer" tap="{{ onOpenDrawerTap }}" class="drawerContentButton"/>
+            <Button text="OPEN DRAWER" tap="{{ onOpenDrawerTap }}" class="drawerContentButton"/>
+            <Button text="GO BACK" tap="{{ goBack }}" class="drawerContentButton"/>
         </StackLayout>
     </nsDrawer:RadSideDrawer.mainContent>
   </nsDrawer:RadSideDrawer> 
