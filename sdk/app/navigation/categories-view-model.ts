@@ -197,6 +197,9 @@ export class NavigationViewModel extends observableModule.Observable {
 
         dataFormExample = new NavigationItem("Value Providers", "./dataform/value-providers/value-providers", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Scrollable Form", "./dataform/scrolling/scrolling", dataFormRoot);
+        dataFormRoot.subItems.push(dataFormExample);
     }
 
     private buildChartExamples(currentParent: NavigationItem) {
@@ -224,6 +227,9 @@ export class NavigationViewModel extends observableModule.Observable {
         seriesRoot.subItems.push(seriesExample);
 
         seriesExample = new NavigationItem("Spline series", "./chart/series/spline/spline-series", seriesRoot);
+        seriesRoot.subItems.push(seriesExample);
+
+        seriesExample = new NavigationItem("Spline Area series", "./chart/series/spline/spline-area-series", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
 
         seriesExample = new NavigationItem("Bubble series", "./chart/series/bubble/bubble-series", seriesRoot);
@@ -322,6 +328,9 @@ export class NavigationViewModel extends observableModule.Observable {
         grouping.subItems.push(exampleItem);
         exampleItem = new NavigationItem("Collapsible Grouping", "./listview/grouping/grouping-collapsible", grouping);
         grouping.subItems.push(exampleItem);
+        
+        var exampleItem = new NavigationItem("Multiple Item Templates", "./listview/multiple-templates/multiple-templates", currentItem);
+        currentItem.subItems.push(exampleItem);
 
         var exampleItem = new NavigationItem("Item Loading", "./listview/item-loading/item-loading", currentItem);
         currentItem.subItems.push(exampleItem);
@@ -403,6 +412,10 @@ export class NavigationViewModel extends observableModule.Observable {
         scrollToIndex.subItems.push(selectionExample);
         var selectionExample = new NavigationItem("In horizontal direction", "./listview/scroll-to-index/scroll-to-index-horizontal", scrollToIndex);
         scrollToIndex.subItems.push(selectionExample);
+
+        // Scroll events 
+        exampleItem = new NavigationItem("Scroll Events", "./listview/scroll-events/scroll-events", currentItem);
+        currentItem.subItems.push(exampleItem);
     }
 
     private buildSideDrawerExamples(currentParent: NavigationItem) {

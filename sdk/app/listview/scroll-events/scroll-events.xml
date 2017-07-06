@@ -1,0 +1,16 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui-pro/listview" xmlns="http://www.nativescript.org/tns.xsd">
+    <GridLayout orientation="vertical" rows="auto, auto, *">
+        <Label text="Scroll events" class="example-header"/>
+        <Label id="lblState" text="State: " class="example-header" row="1"/>
+        <!-- >> listview-scroll-events-xml -->
+        <lv:RadListView scrolled="onScrolled" scrollStarted="onScrollStarted" scrollEnded="onScrollEnded" items="{{ dataItems }}" row="2">
+        <!-- << listview-scroll-events-xml -->
+            <lv:RadListView.itemTemplate>
+                <StackLayout orientation="vertical">
+                    <Label fontSize="20" text="{{ name }}"/>
+                    <Label fontSize="14" text="{{ description }}"/>
+                </StackLayout>
+            </lv:RadListView.itemTemplate>
+        </lv:RadListView>
+    </GridLayout>
+</navigation:ExamplePage>

@@ -4,6 +4,7 @@ import listViewModule = require("nativescript-telerik-ui-pro/listview");
 import viewModule = require('tns-core-modules/ui/core/view');
 import frameModule = require("tns-core-modules/ui/frame");
 import utilsModule = require("tns-core-modules/utils/utils");
+import { EventData } from "tns-core-modules/data/observable";
 
 export function onPageLoaded(args) {
     var page = args.object;
@@ -26,12 +27,12 @@ export function onItemClick(args: listViewModule.SwipeActionsEventData) {
 }
 
 // >> listview-swipe-action-handler-sticky
-export function onLeftSwipeClick(args) {
+export function onLeftSwipeClick(args: EventData) {
     var listView = <listViewModule.RadListView>frameModule.topmost().currentPage.getViewById("listView");
     listView.notifySwipeToExecuteFinished();
 }
 
-export function onRightSwipeClick(args) {
+export function onRightSwipeClick(args: EventData) {
     var listView = <listViewModule.RadListView>frameModule.topmost().currentPage.getViewById("listView");
     listView.notifySwipeToExecuteFinished();
 }

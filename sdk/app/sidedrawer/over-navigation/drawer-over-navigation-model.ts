@@ -8,12 +8,12 @@ export class DrawerOverNavigationModel {
     }
 
     public onOpenDrawerTap() {
-        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>( frameModule.topmost().getViewById("sideDrawer"));
+        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
         sideDrawer.showDrawer();
     }
 
     public closeDrawer() {
-        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>( frameModule.topmost().getViewById("sideDrawer"));
+        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
         sideDrawer.closeDrawer();
     }
 
@@ -23,7 +23,11 @@ export class DrawerOverNavigationModel {
             context: this,
             animated: true
         };
-        
+
         frameModule.topmost().navigate(navigationEntry);
+    }
+
+    public goBack() {
+        frameModule.goBack();
     }
 }

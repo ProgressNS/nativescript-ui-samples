@@ -23,14 +23,15 @@
             <Label text="Drafts" class="drawerSectionItem" />
           </StackLayout>
         </ScrollView>
-        <Button text="Close Drawer" tap="{{ closeDrawer }}"/>
+        <Label text="Go to next page" tap="{{ goToSecondPage }}" class="drawerContentButton drawerWhiteContentButton"/>
+        <Label text="Close Drawer" tap="{{ closeDrawer }}" class="drawerContentButton drawerWhiteContentButton"/>
       </StackLayout>
     </nsDrawer:RadSideDrawer.drawerContent>
     <nsDrawer:RadSideDrawer.mainContent>
       <StackLayout class="mainContent">
           <Label text="{{ exampleText }}" textWrap="true" class="drawerContentText"/>
-          <Button text="Open drawer" tap="{{ onOpenDrawerTap }}" class="drawerContentButton"/>
-          <Button text="Go to next page" tap="{{ goToSecondPage }}" class="drawerContentButton"/>
+          <Button text="OPEN DRAWER" tap="{{ onOpenDrawerTap }}" class="drawerContentButton"/>
+          <Button text="GO TO NEXT PAGE" tap="{{ goToSecondPage }}" class="drawerContentButton"/>
       </StackLayout>
     </nsDrawer:RadSideDrawer.mainContent>
   </nsDrawer:RadSideDrawer> 
