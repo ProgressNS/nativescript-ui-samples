@@ -152,6 +152,8 @@ export class NavigationViewModel extends observableModule.Observable {
         dataFormRoot.subItems.push(validation);
         var selectionExample = new NavigationItem("Validators", "./dataform/validation/validation", validation);
         validation.subItems.push(selectionExample);
+        var selectionExample = new NavigationItem("Custom Validator", "./dataform/validation/custom-validator/custom-validator", validation);
+        validation.subItems.push(selectionExample);
         var selectionExample = new NavigationItem("Check Validation State", "./dataform/validation/check-errors/check-errors", validation);
         validation.subItems.push(selectionExample);
 
