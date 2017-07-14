@@ -10,12 +10,18 @@
                 <ios>
                     <ActionItem text="Options" ios.position="right" tap="{{onOptionsTapped}}" />
                 </ios>
+                <android>
+                    <ActionItem text="Auto" android.position="popup" tap="{{onOptionsTapped}}" />
+                    <ActionItem text="Start" android.position="popup" tap="{{onOptionsTapped}}" />
+                    <ActionItem text="Center" android.position="popup" tap="{{onOptionsTapped}}" />
+                    <ActionItem text="End" android.position="popup" tap="{{onOptionsTapped}}" />
+                </android>
             </ActionBar.actionItems>
         </ActionBar>
     </navigation.actionBar>
     <GridLayout rows="auto, *">
         <Button text="Scroll to index 50" tap="onTap"/>
-        <lv:RadListView items="{{ dataItems }}" scrollPosition="{{ myScrollPosition }}" row="1" id="listView">
+        <lv:RadListView items="{{ dataItems }}" row="1" id="listView">
             <lv:RadListView.listViewLayout>
                 <lv:ListViewLinearLayout scrollDirection="Horizontal" />
             </lv:RadListView.listViewLayout>

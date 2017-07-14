@@ -4,7 +4,7 @@ import { DataItem } from "./data-item";
 import frameModule = require("tns-core-modules/ui/frame");
 
 export class ViewModel extends Observable {
-    private _options: Array<string> = ["None", "Top", "CenteredVertically", "Bottom"];
+    private _options: Array<string> = ["Auto", "Start", "Center", "End"];
     private _selectionInfo;
 
     constructor() {
@@ -51,13 +51,17 @@ export class ViewModel extends Observable {
     }
 
 
-    public onOptionsTapped() {
-        var navigationEntry = {
-            moduleName: "./navigation/options-menu/options",
-            context: this._selectionInfo,
-            animated: true
-        };
+    public onOptionsTapped(args: any) {
+        if (frameModule.topmost().ios) {
+            var navigationEntry = {
+                moduleName: "./navigation/options-menu/options",
+                context: this._selectionInfo,
+                animated: true
+            };
 
-        frameModule.topmost().navigate(navigationEntry);
+            frameModule.topmost().navigate(navigationEntry);
+        } else {
+            this.set('myScrollPosition', args.object.text);
+        }
     }
 }
