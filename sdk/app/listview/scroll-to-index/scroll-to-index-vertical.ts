@@ -27,6 +27,6 @@ export function onTap() {
     // >> listview-scroll-to-index
     let listView: RadListView = <RadListView>(frameModule.topmost().currentPage.getViewById("listView"));
     
-    listView.scrollToIndex(50, true, viewModelContext.get('myScrollPosition'));
+    listView.scrollToIndex(50, false, viewModelContext.get('myScrollPosition'));
     // << listview-scroll-to-index
 }

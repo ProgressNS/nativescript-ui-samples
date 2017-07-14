@@ -25,5 +25,5 @@ export function onNavigatedFrom(args) {
 
 export function onTap() {
     let listView: RadListView = <RadListView>(frameModule.topmost().currentPage.getViewById("listView"));
-    listView.scrollToIndex(50, true, viewModelContext.get('myScrollPosition'));
+    listView.scrollToIndex(50, false, viewModelContext.get('myScrollPosition'));
 }
