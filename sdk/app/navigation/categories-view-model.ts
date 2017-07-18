@@ -390,7 +390,7 @@ export class NavigationViewModel extends observableModule.Observable {
         exampleItem = new NavigationItem("Multiple actions", "./listview/swipe-actions/swipe-actions-multiple", swipeActions);
         swipeActions.subItems.push(exampleItem);
 
-        exampleItem = new NavigationItem("Disable/Enable", "./listview/swipe-actions/swipe-disable", swipeActions);
+        exampleItem = new NavigationItem("Disable\\Enable", "./listview/swipe-actions/swipe-disable", swipeActions);
         swipeActions.subItems.push(exampleItem);
 
         // Header and footer
