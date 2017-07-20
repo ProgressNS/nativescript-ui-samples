@@ -11,8 +11,8 @@ export function onPageLoaded(args) {
 }
 
 export function onScrolled(args: listViewModule.ListViewScrollEventData) {
-    let lblState = <labelModule.Label>frameModule.topmost().getViewById("lblState");
-    lblState.text = "State: Scrolled with offset: " + args.scrollOffset;
+    let lblState = <labelModule.Label>frameModule.topmost().getViewById("lblScrollOffset");
+    lblState.text = "Scrolled: " + args.scrollOffset;
 }
 
 export function onScrollStarted(args: listViewModule.ListViewScrollEventData) {
@@ -23,4 +23,9 @@ export function onScrollStarted(args: listViewModule.ListViewScrollEventData) {
 export function onScrollEnded(args: listViewModule.ListViewScrollEventData) {
     let lblState = <labelModule.Label>frameModule.topmost().getViewById("lblState");
     lblState.text = "State: Scroll ended with offset: " + args.scrollOffset;
+}
+
+export function onScrollDragEnded(args: listViewModule.ListViewScrollEventData) {
+    let lblState = <labelModule.Label>frameModule.topmost().getViewById("lblState");
+    lblState.text = "State: Scroll drag ended with offset: " + args.scrollOffset;
 }
