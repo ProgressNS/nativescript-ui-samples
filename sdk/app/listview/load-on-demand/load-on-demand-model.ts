@@ -3,7 +3,7 @@ import { ListViewEventData, RadListView, ListViewLoadOnDemandMode } from "native
 import { Observable } from "tns-core-modules/data/observable";
 import timer = require("tns-core-modules/timer");
 
-var posts = require("../swipe-execute/posts.json")
+var posts = require("../posts.json")
 import * as application from "tns-core-modules/application";
 
 export class ViewModel extends Observable {

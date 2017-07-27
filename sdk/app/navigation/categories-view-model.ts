@@ -368,16 +368,6 @@ export class NavigationViewModel extends observableModule.Observable {
         exampleItem = new NavigationItem("Pull to Refresh", "./listview/pull-to-refresh/pull-to-refresh", currentItem);
         currentItem.subItems.push(exampleItem);
 
-        var swipeLegacy = new NavigationItem("Swipe to execute", undefined, currentItem);
-        currentItem.subItems.push(swipeLegacy);
-        exampleItem = new NavigationItem("Getting started", "./listview/swipe-execute/swipe-execute", swipeLegacy);
-        swipeLegacy.subItems.push(exampleItem);
-
-        exampleItem = new NavigationItem("Swipe to execute with sticky actions", "./listview/swipe-execute/swipe-execute-sticky", swipeLegacy);
-        swipeLegacy.subItems.push(exampleItem);
-
-        exampleItem = new NavigationItem("Swipe to execute with stretched content", "./listview/swipe-execute/swipe-execute-stretch", swipeLegacy);
-        swipeLegacy.subItems.push(exampleItem);
         // Swipe actions
         var swipeActions = new NavigationItem("Swipe actions", undefined, currentItem);
         currentItem.subItems.push(swipeActions);
