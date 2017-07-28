@@ -1,5 +1,6 @@
 import dataFormModule = require("nativescript-telerik-ui-pro/dataform");
 
+// >> dataform-custom-validator
 export class ExactTextValidator extends dataFormModule.PropertyValidator {
     constructor() {
         super();
@@ -10,3 +11,4 @@ export class ExactTextValidator extends dataFormModule.PropertyValidator {
         return value.toLowerCase() == "admin1";
     }
 }
+// << dataform-custom-validator

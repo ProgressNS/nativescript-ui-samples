@@ -1,10 +1,19 @@
 export class UserViewModel {
 
+    private _baseUser: BaseUser;
     private _user: User;
+    private _registeringUser: RegisteringUser;
     private _advancedUser: AdvancedUser;
     private _superUser: SuperUser;
 
     constructor() {
+    }
+
+    get baseUser() {
+        if(!this._baseUser) {
+            this._baseUser = new BaseUser();
+        }
+        return this._baseUser;
     }
 
     get user() {
@@ -12,6 +21,13 @@ export class UserViewModel {
             this._user = new User();
         }
         return this._user;
+    }
+
+    get registeringUser() {
+        if (!this._registeringUser) {
+            this._registeringUser = new RegisteringUser();
+        }
+        return this._registeringUser;
     }
 
     get advancedUser() {
@@ -29,12 +45,27 @@ export class UserViewModel {
     }
 }
 
-export class User {
+export class BaseUser {
     public username: string = "";
     public password: string = "";
+
+    constructor() {
+    }
+}
+
+export class User extends BaseUser {
     public email: string = "";
 
     constructor() {
+        super();
+    }
+}
+
+export class RegisteringUser extends BaseUser {
+    public password2: string = "";
+
+    constructor() {
+        super();
     }
 }
 

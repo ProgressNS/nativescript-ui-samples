@@ -152,11 +152,19 @@ export class NavigationViewModel extends observableModule.Observable {
         dataFormRoot.subItems.push(validation);
         var selectionExample = new NavigationItem("Validators", "./dataform/validation/validation", validation);
         validation.subItems.push(selectionExample);
-        var selectionExample = new NavigationItem("Custom Validator", "./dataform/validation/custom-validator/custom-validator", validation);
+        var selectionExample = new NavigationItem("Validation Modes", "./dataform/validation/validation-modes/validation-modes", validation);
+        validation.subItems.push(selectionExample);
+        var selectionExample = new NavigationItem("Validation Events", "./dataform/validation/validation-events/validation-events", validation);
+        validation.subItems.push(selectionExample);
+        var selectionExample = new NavigationItem("Async Validation", "./dataform/validation/async-validation/async-validation", validation);
         validation.subItems.push(selectionExample);
         var selectionExample = new NavigationItem("Check Validation State", "./dataform/validation/check-errors/check-errors", validation);
         validation.subItems.push(selectionExample);
-
+        var selectionExample = new NavigationItem("Custom Validator", "./dataform/validation/custom-validator/custom-validator", validation);
+        validation.subItems.push(selectionExample);
+        var selectionExample = new NavigationItem("Custom Validation", "./dataform/validation/custom-validation/custom-validation", validation);
+        validation.subItems.push(selectionExample);
+        
         dataFormExample = new NavigationItem("Commit Modes", "./dataform/commit-modes/commit-modes", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
