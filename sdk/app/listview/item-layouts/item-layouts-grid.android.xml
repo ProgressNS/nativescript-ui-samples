@@ -2,7 +2,7 @@
     <GridLayout rows="*" >
         <lv:RadListView id="list-view" row="0" items="{{ dataItems }}" marginRight="-2">
             <lv:RadListView.listViewLayout>
-                <lv:ListViewGridLayout scrollDirection="Vertical" itemHeight="200" spanCount="2"/>
+                <lv:ListViewGridLayout scrollDirection="Vertical" spanCount="2"/>
             </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
                 <GridLayout rows="*" backgroundColor="White">
