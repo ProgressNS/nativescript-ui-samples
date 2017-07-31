@@ -13,7 +13,7 @@ export function onPageLoaded(args) {
     label = viewModule.getViewById(page, "myLabel");
 }
 
-// >> dataform-validation-custom
+// >> dataform-custom-validation
 export function onTap() {
     var isValid = true;
 
@@ -51,4 +51,4 @@ export function onTap() {
 
     }
 }
-// << dataform-validation-custom
+// << dataform-custom-validation
