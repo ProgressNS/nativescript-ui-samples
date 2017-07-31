@@ -12,7 +12,6 @@ export function onPageLoaded(args) {
     var page = args.object;
     page.bindingContext = new viewModel.UserViewModel();
 
-    console.log("getting");
     dataform = viewModule.getViewById(page, "myDataForm");
     button = viewModule.getViewById(page, "myButton");
     label = viewModule.getViewById(page, "myLabel");
