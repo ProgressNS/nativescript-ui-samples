@@ -5,8 +5,13 @@ export class UserViewModel {
     private _registeringUser: RegisteringUser;
     private _advancedUser: AdvancedUser;
     private _superUser: SuperUser;
+    private _metadata = require("./user-metadata-validation.json");
 
     constructor() {
+    }
+
+    get metadata() {
+        return this._metadata;
     }
 
     get baseUser() {

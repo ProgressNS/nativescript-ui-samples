@@ -156,6 +156,8 @@ export class NavigationViewModel extends observableModule.Observable {
         validation.subItems.push(selectionExample);
         var selectionExample = new NavigationItem("Validation Events", "./dataform/validation/validation-events/validation-events", validation);
         validation.subItems.push(selectionExample);
+        var selectionExample = new NavigationItem("Validators JSON", "./dataform/validation/metadata/metadata", validation);
+        validation.subItems.push(selectionExample);
         var selectionExample = new NavigationItem("Async Validation", "./dataform/validation/async-validation/async-validation", validation);
         validation.subItems.push(selectionExample);
         var selectionExample = new NavigationItem("Check Validation State", "./dataform/validation/check-errors/check-errors", validation);
