@@ -56,6 +56,9 @@
                     </df:EntityProperty.validators>
                 </df:EntityProperty>
                 <df:EntityProperty name="agreeTerms" displayName="I agree with terms" index="6">
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="Switch" />
+                    </df:EntityProperty.editor>
                     <df:EntityProperty.validators>
                         <df:IsTrueValidator errorMessage="You must agree with the terms."/>
                     </df:EntityProperty.validators>
