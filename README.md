@@ -1,5 +1,3 @@
-## !!! IMPORTANT: Issues related to UI for NativeScript are logged in the https://github.com/telerik/nativescript-ui-feedback repository. Please do not use this repository to log issues !!!
-
 # Welcome
 This repository contains the source code of the Progress NativeScript UI samples application. The repository does not contain the source code of UI for NativeScript itself but rather uses the npm package of `nativescript-telerik-ui-pro` [![npm](https://img.shields.io/npm/v/nativescript-telerik-ui-pro.svg)](https://www.npmjs.com/package/nativescript-telerik-ui-pro) or `nativescript-telerik-ui` [![npm](https://img.shields.io/npm/v/nativescript-telerik-ui.svg)](https://www.npmjs.com/package/nativescript-telerik-ui).
 
@@ -16,6 +14,8 @@ Progress NativeScript UI samples app resides in the **sdk** folder at root repos
 - Feedback
 - ListView
 - SideDrawer
+- Gauges
+- AutoCompleteTextView
 
 ## Running **Progress NativeScript UI** sample app
 Make sure you are using NativeScript 3.0+. To see which version of NativeScript you are currently using, type `tns --version` in the console.
