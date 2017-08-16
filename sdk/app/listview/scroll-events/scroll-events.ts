@@ -12,7 +12,9 @@ export function onPageLoaded(args) {
 
 export function onScrolled(args: listViewModule.ListViewScrollEventData) {
     let lblState = <labelModule.Label>frameModule.topmost().getViewById("lblScrollOffset");
-    lblState.text = "Scrolled: " + args.scrollOffset;
+    if (lblState) {
+        lblState.text = "Scrolled: " + args.scrollOffset;
+    }
 }
 
 export function onScrollStarted(args: listViewModule.ListViewScrollEventData) {
