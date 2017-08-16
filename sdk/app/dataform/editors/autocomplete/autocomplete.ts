@@ -1,6 +1,7 @@
 import viewModel = require("./../../view-models/booking-model");
-import { DataFormEventData, EntityProperty, RadDataForm } from "nativescript-telerik-ui-pro/dataform"
-import { Page } from "tns-core-modules/ui/page"
+import { DataFormEventData, EntityProperty, RadDataForm } from "nativescript-telerik-ui-pro/dataform";
+import { Page } from "tns-core-modules/ui/page";
+
 var dataform: RadDataForm;
 
 export function onPageLoaded(args) {
