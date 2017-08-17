@@ -288,7 +288,11 @@ export class NavigationViewModel extends observableModule.Observable {
 
         var behaviorsRoot = new NavigationItem("Interaction", undefined, chartRoot);
         chartRoot.subItems.push(behaviorsRoot);
+        
         var interactionExample = new NavigationItem("Pan & Zoom", "./chart/behaviors/chart-pan-zoom", behaviorsRoot);
+        behaviorsRoot.subItems.push(interactionExample);
+
+        interactionExample = new NavigationItem("Trackball", "./chart/behaviors/chart-trackball", behaviorsRoot);
         behaviorsRoot.subItems.push(interactionExample);
 
         interactionExample = new NavigationItem("Pie selection", "./chart/behaviors/chart-pie-selection", behaviorsRoot);

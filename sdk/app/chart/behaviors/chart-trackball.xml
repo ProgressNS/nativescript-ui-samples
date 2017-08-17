@@ -1,0 +1,26 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
+<GridLayout rows="auto, *">
+    <Label text="Tap and hold on a given datapoint to display the Trackball. Drag across datapoints to update the Trackball position." textWrap="true"/>
+    <chart:RadCartesianChart row="1" id="cartesianChart">
+    <chart:RadCartesianChart.series>
+          <chart:CandlestickSeries
+            categoryProperty="Date"
+            openPropertyName="Open"
+            highPropertyName="High"
+            lowPropertyName="Low"
+            closePropertyName="Close"
+            items="{{ candleStickSourceItems }}">
+              <chart:CandlestickSeries.horizontalAxis>
+                <chart:DateTimeCategoricalAxis  dateFormat="yyyy-MM-dd" verticalLocation="Bottom" />
+              </chart:CandlestickSeries.horizontalAxis>
+              <chart:CandlestickSeries.verticalAxis>
+                <chart:LinearAxis/>
+              </chart:CandlestickSeries.verticalAxis>
+            </chart:CandlestickSeries>
+        </chart:RadCartesianChart.series>
+        <chart:RadCartesianChart.trackball>
+            <chart:Trackball/>
+        </chart:RadCartesianChart.trackball>
+    </chart:RadCartesianChart>
+    </GridLayout>
+</navigation:ExamplePage>
