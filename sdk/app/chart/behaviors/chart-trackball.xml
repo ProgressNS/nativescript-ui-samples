@@ -25,6 +25,6 @@
         </chart:RadCartesianChart.trackball>
         <!-- << chart-trackball-property-xml -->
     </chart:RadCartesianChart>
-    <!-- >> chart-trackball-xml -->
+    <!-- << chart-trackball-xml -->
     </GridLayout>
 </navigation:ExamplePage>
