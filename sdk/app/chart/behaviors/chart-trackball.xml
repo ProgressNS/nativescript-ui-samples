@@ -1,6 +1,7 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
 <GridLayout rows="auto, *">
     <Label text="Tap and hold on a given datapoint to display the Trackball. Drag across datapoints to update the Trackball position." textWrap="true"/>
+    <!-- >> chart-trackball-xml -->
     <chart:RadCartesianChart row="1" id="cartesianChart">
     <chart:RadCartesianChart.series>
           <chart:CandlestickSeries
@@ -18,9 +19,12 @@
               </chart:CandlestickSeries.verticalAxis>
             </chart:CandlestickSeries>
         </chart:RadCartesianChart.series>
+        <!-- >> chart-trackball-property-xml -->
         <chart:RadCartesianChart.trackball>
             <chart:Trackball/>
         </chart:RadCartesianChart.trackball>
+        <!-- << chart-trackball-property-xml -->
     </chart:RadCartesianChart>
+    <!-- >> chart-trackball-xml -->
     </GridLayout>
 </navigation:ExamplePage>
