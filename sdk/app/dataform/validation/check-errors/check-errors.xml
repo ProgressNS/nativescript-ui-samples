@@ -51,6 +51,9 @@
                     </df:EntityProperty.validators>
                 </df:EntityProperty>
                 <df:EntityProperty name="pin" displayName="Enter PIN" index="5">
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="Phone" />
+                    </df:EntityProperty.editor>
                     <df:EntityProperty.validators>
                         <df:RegExValidator regEx="\d{4}" errorMessage="PIN number should contain 4 digits."/>
                     </df:EntityProperty.validators>
