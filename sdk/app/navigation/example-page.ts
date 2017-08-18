@@ -23,8 +23,8 @@ export class ExamplePage extends pageModule.Page {
 
         var actionBar = this.actionBar === undefined ? new actionBarModule.ActionBar() : this.actionBar;
         actionBar.title = this._associatedExampleMeta.title;
+        var navigationButton = new actionBarModule.NavigationButton();
         if (applicationModule.android) {
-            var navigationButton = new actionBarModule.NavigationButton();
             navigationButton.on("tap", args => {
                 if (this.content) {
                     utilsModule.ad.dismissSoftInput(this.content.android);
@@ -34,7 +34,11 @@ export class ExamplePage extends pageModule.Page {
             navigationButton.icon = "res://ic_arrow_back_black_24dp";
             actionBar.navigationButton = navigationButton;
 
+        } else {
+            navigationButton.text = "Back";
+            actionBar.navigationButton = navigationButton;
         }
+
         if (this.actionBar !== actionBar) {
             this.actionBar = actionBar;
         }
