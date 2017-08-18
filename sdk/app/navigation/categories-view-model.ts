@@ -145,6 +145,8 @@ export class NavigationViewModel extends observableModule.Observable {
         editors.subItems.push(common);
         var autocomplete = new NavigationItem("AutoComplete", "./dataform/editors/autocomplete/autocomplete", editors);
         editors.subItems.push(autocomplete);
+        var labels = new NavigationItem("Labels", "./dataform/editors/labels/labels", editors);
+        editors.subItems.push(labels);
         var customEditor = new NavigationItem("Custom Editors", "./dataform/editors/custom-editors/custom-editors", editors);
         editors.subItems.push(customEditor);
 
