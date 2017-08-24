@@ -19,13 +19,13 @@
         </chart:RadPieChart.palettes>
         
         <chart:RadPieChart.legend>
-            <chart:RadLegendView position="Floating" offsetOrigin="TopRight"  width="110"/>
+            <chart:RadLegendView position="Floating" offsetOrigin="TopRight" width="110"/>
         </chart:RadPieChart.legend>
     </chart:RadPieChart>
   
-    <chart:RadPieChart id="donutChart" height="300"  allowAnimation="true" row="1">
+    <chart:RadPieChart id="donutChart" height="300" allowAnimation="true" row="1">
         <chart:RadPieChart.series>
-            <chart:DonutSeries seriesName="myDonutSeries" selectionMode="DataPoint" outerRadiusFactor="0.9" expandRadius="0.4"  outerRadiusFactor="0.7" innerRadiusFactor="0.4" items="{{ pieSource }}" valueProperty="Amount" legendLabel="Brand">
+            <chart:DonutSeries seriesName="myDonutSeries" selectionMode="DataPoint" outerRadiusFactor="0.9" expandRadius="0.4" outerRadiusFactor="0.7" innerRadiusFactor="0.4" items="{{ pieSource }}" valueProperty="Amount" legendLabel="Brand">
             </chart:DonutSeries>
         </chart:RadPieChart.series>
 
@@ -42,8 +42,8 @@
         </chart:RadPieChart.palettes>
         
         <chart:RadPieChart.legend>
-            <chart:RadLegendView position="Floating" offsetOrigin="TopRight"  width="110"/>
-        </chart:RadPieChart.legend>  
-    </chart:RadPieChart>   
+            <chart:RadLegendView position="Floating" offsetOrigin="TopRight" width="110"/>
+        </chart:RadPieChart.legend>
+    </chart:RadPieChart> 
     </GridLayout>
 </navigation:ExamplePage>
