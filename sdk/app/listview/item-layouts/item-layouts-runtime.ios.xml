@@ -1,9 +1,9 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui-pro/listview" xmlns="http://www.nativescript.org/tns.xsd">
   <GridLayout rows="auto, *">
     <StackLayout orientation="horizontal">
-        <Button text="Linear" tap="changeToLinear"></Button>
-        <Button text="Grid" tap="changeToGrid"></Button>
-        <Button text="Staggered" tap="changeToStaggered"></Button>
+        <Button text="Linear" margin="10" tap="changeToLinear"></Button>
+        <Button text="Grid" margin="10" tap="changeToGrid"></Button>
+        <Button text="Staggered" margin="10" tap="changeToStaggered"></Button>
     </StackLayout>
         <lv:RadListView id="myListView" row="1" items="{{ dataItems }}" marginRight="-2">
             <lv:RadListView.itemTemplate>
