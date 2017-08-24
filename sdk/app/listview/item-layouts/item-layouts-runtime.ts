@@ -7,7 +7,7 @@ let listView: RadListView;
 
 export function onPageLoaded(args) {
     var page = args.object as Page;
-    listView = page.getViewById("myListView");
+    listView = page.getViewById<RadListView>("myListView");
     page.bindingContext = new ViewModel();
 }
 
