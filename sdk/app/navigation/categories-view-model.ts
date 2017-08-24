@@ -355,6 +355,8 @@ export class NavigationViewModel extends observableModule.Observable {
         layoutsItem.subItems.push(layoutsExample);
         layoutsExample = new NavigationItem("Staggered", "./listview/item-layouts/item-layouts-staggered", layoutsItem);
         layoutsItem.subItems.push(layoutsExample);
+        layoutsExample = new NavigationItem("Change at runtime", "./listview/item-layouts/item-layouts-runtime", layoutsItem);
+        layoutsItem.subItems.push(layoutsExample);
 
         // Item reorder
         exampleItem = new NavigationItem("Item Reorder", "./listview/item-reorder/item-reorder", currentItem);
