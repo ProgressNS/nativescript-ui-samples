@@ -1,6 +1,7 @@
 import { ViewModel } from "./item-layouts-model";
 import { Page } from "tns-core-modules/ui/page";
 import { RadListView, ListViewGridLayout, ListViewLinearLayout, ListViewStaggeredLayout } from "nativescript-telerik-ui-pro/listview";
+import { ios as isIOS } from "application";
 
 let listView: RadListView;
 
@@ -17,7 +18,10 @@ export function changeToLinear(args) {
 
 export function changeToGrid(args) {
     var layout = new ListViewGridLayout()
-    layout.itemHeight = 200;
+    if (isIOS) {
+        layout.itemHeight = 200;
+    }
+
     layout.spanCount = 2;
     listView.listViewLayout = layout;
 }
