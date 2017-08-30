@@ -33,4 +33,8 @@ export class DrawerCallbacksModel extends observableModule.Observable {
     public onDrawerClosed() {
         this.set("currentDrawerNotification", "Drawer closed");
     }
+
+    public onDrawerPan() {
+        this.set("currentDrawerNotification", "Drawer pan");
+    }
 }

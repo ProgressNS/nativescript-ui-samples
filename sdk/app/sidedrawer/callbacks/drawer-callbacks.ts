@@ -28,4 +28,8 @@ export function onDrawerOpened(args) {
 export function onDrawerOpening(args) {
     drawerCallbacksModel.onDrawerOpening();
 }
+
+export function onDrawerPan(args) {
+    drawerCallbacksModel.onDrawerPan();
+}
 // << sidedrawer-events-handlers
