@@ -168,7 +168,7 @@ export class NavigationViewModel extends observableModule.Observable {
         validation.subItems.push(selectionExample);
         var selectionExample = new NavigationItem("Custom Validation", "./dataform/validation/custom-validation/custom-validation", validation);
         validation.subItems.push(selectionExample);
-        
+
         dataFormExample = new NavigationItem("Commit Modes", "./dataform/commit-modes/commit-modes", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
@@ -178,13 +178,16 @@ export class NavigationViewModel extends observableModule.Observable {
         dataFormExample = new NavigationItem("Events", "./dataform/events/events", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
-         var styling = new NavigationItem("Styling", undefined, dataFormRoot);
+        var styling = new NavigationItem("Styling", undefined, dataFormRoot);
         dataFormRoot.subItems.push(styling);
 
         dataFormExample = new NavigationItem("Common", "./dataform/styling/common/styling", styling);
         styling.subItems.push(dataFormExample);
 
         dataFormExample = new NavigationItem("Advanced", "./dataform/styling/advanced/styling-advanced", styling);
+        styling.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Editor Background", "./dataform/styling/editor-background/styling-editor-background", styling);
         styling.subItems.push(dataFormExample);
 
         dataFormExample = new NavigationItem("At runtime", "./dataform/styling/editor-style/editor-style", styling);
@@ -290,7 +293,7 @@ export class NavigationViewModel extends observableModule.Observable {
 
         var behaviorsRoot = new NavigationItem("Interaction", undefined, chartRoot);
         chartRoot.subItems.push(behaviorsRoot);
-        
+
         var interactionExample = new NavigationItem("Pan & Zoom", "./chart/behaviors/chart-pan-zoom", behaviorsRoot);
         behaviorsRoot.subItems.push(interactionExample);
 
