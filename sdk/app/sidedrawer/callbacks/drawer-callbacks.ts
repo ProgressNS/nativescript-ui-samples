@@ -15,22 +15,22 @@ export function pageLoaded(args) {
 }
 // >> sidedrawer-events-handlers
 export function onDrawerClosed(args: DrawerStateChangedEventArgs) {
-    drawerCallbacksModel.onDrawerClosed();
+    drawerCallbacksModel.onDrawerClosed(args);
 }
 
 export function onDrawerClosing(args: DrawerStateChangingEventArgs) {
-    drawerCallbacksModel.onDrawerClosing();
+    drawerCallbacksModel.onDrawerClosing(args);
 }
 
 export function onDrawerOpened(args: DrawerStateChangedEventArgs) {
-  drawerCallbacksModel.onDrawerOpened();
+  drawerCallbacksModel.onDrawerOpened(args);
 }
 
 export function onDrawerOpening(args: DrawerStateChangingEventArgs) {
-    drawerCallbacksModel.onDrawerOpening();
+    drawerCallbacksModel.onDrawerOpening(args);
 }
 
 export function onDrawerPan(args: DrawerStateChangedEventArgs) {
-    drawerCallbacksModel.onDrawerPan();
+    drawerCallbacksModel.onDrawerPan(args);
 }
 // << sidedrawer-events-handlers
