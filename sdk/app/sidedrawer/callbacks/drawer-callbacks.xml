@@ -4,6 +4,7 @@
   </navigation.actionBar>
   <!-- >> sidedrawer-events-xml -->
   <nsDrawer:RadSideDrawer id="sideDrawer"
+                        drawerPan="onDrawerPan"
                         drawerClosed="onDrawerClosed"
                         drawerClosing="onDrawerClosing"
                         drawerOpened="onDrawerOpened"

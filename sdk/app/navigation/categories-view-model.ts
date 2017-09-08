@@ -145,6 +145,8 @@ export class NavigationViewModel extends observableModule.Observable {
         editors.subItems.push(common);
         var autocomplete = new NavigationItem("AutoComplete", "./dataform/editors/autocomplete/autocomplete", editors);
         editors.subItems.push(autocomplete);
+        var labels = new NavigationItem("Labels", "./dataform/editors/labels/labels", editors);
+        editors.subItems.push(labels);
         var customEditor = new NavigationItem("Custom Editors", "./dataform/editors/custom-editors/custom-editors", editors);
         editors.subItems.push(customEditor);
 
@@ -152,7 +154,19 @@ export class NavigationViewModel extends observableModule.Observable {
         dataFormRoot.subItems.push(validation);
         var selectionExample = new NavigationItem("Validators", "./dataform/validation/validation", validation);
         validation.subItems.push(selectionExample);
+        var selectionExample = new NavigationItem("Validation Modes", "./dataform/validation/validation-modes/validation-modes", validation);
+        validation.subItems.push(selectionExample);
+        var selectionExample = new NavigationItem("Validation Events", "./dataform/validation/validation-events/validation-events", validation);
+        validation.subItems.push(selectionExample);
+        var selectionExample = new NavigationItem("Validators JSON", "./dataform/validation/metadata/metadata", validation);
+        validation.subItems.push(selectionExample);
+        var selectionExample = new NavigationItem("Async Validation", "./dataform/validation/async-validation/async-validation", validation);
+        validation.subItems.push(selectionExample);
         var selectionExample = new NavigationItem("Check Validation State", "./dataform/validation/check-errors/check-errors", validation);
+        validation.subItems.push(selectionExample);
+        var selectionExample = new NavigationItem("Custom Validator", "./dataform/validation/custom-validator/custom-validator", validation);
+        validation.subItems.push(selectionExample);
+        var selectionExample = new NavigationItem("Custom Validation", "./dataform/validation/custom-validation/custom-validation", validation);
         validation.subItems.push(selectionExample);
 
         dataFormExample = new NavigationItem("Commit Modes", "./dataform/commit-modes/commit-modes", dataFormRoot);
@@ -164,13 +178,16 @@ export class NavigationViewModel extends observableModule.Observable {
         dataFormExample = new NavigationItem("Events", "./dataform/events/events", dataFormRoot);
         dataFormRoot.subItems.push(dataFormExample);
 
-         var styling = new NavigationItem("Styling", undefined, dataFormRoot);
+        var styling = new NavigationItem("Styling", undefined, dataFormRoot);
         dataFormRoot.subItems.push(styling);
 
         dataFormExample = new NavigationItem("Common", "./dataform/styling/common/styling", styling);
         styling.subItems.push(dataFormExample);
 
         dataFormExample = new NavigationItem("Advanced", "./dataform/styling/advanced/styling-advanced", styling);
+        styling.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("Editor Background", "./dataform/styling/editor-background/styling-editor-background", styling);
         styling.subItems.push(dataFormExample);
 
         dataFormExample = new NavigationItem("At runtime", "./dataform/styling/editor-style/editor-style", styling);
@@ -276,7 +293,11 @@ export class NavigationViewModel extends observableModule.Observable {
 
         var behaviorsRoot = new NavigationItem("Interaction", undefined, chartRoot);
         chartRoot.subItems.push(behaviorsRoot);
+
         var interactionExample = new NavigationItem("Pan & Zoom", "./chart/behaviors/chart-pan-zoom", behaviorsRoot);
+        behaviorsRoot.subItems.push(interactionExample);
+
+        interactionExample = new NavigationItem("Trackball", "./chart/behaviors/chart-trackball", behaviorsRoot);
         behaviorsRoot.subItems.push(interactionExample);
 
         interactionExample = new NavigationItem("Pie selection", "./chart/behaviors/chart-pie-selection", behaviorsRoot);
@@ -337,6 +358,8 @@ export class NavigationViewModel extends observableModule.Observable {
         layoutsItem.subItems.push(layoutsExample);
         layoutsExample = new NavigationItem("Staggered", "./listview/item-layouts/item-layouts-staggered", layoutsItem);
         layoutsItem.subItems.push(layoutsExample);
+        layoutsExample = new NavigationItem("Change at runtime", "./listview/item-layouts/item-layouts-runtime", layoutsItem);
+        layoutsItem.subItems.push(layoutsExample);
 
         // Item reorder
         exampleItem = new NavigationItem("Item Reorder", "./listview/item-reorder/item-reorder", currentItem);
@@ -366,16 +389,6 @@ export class NavigationViewModel extends observableModule.Observable {
         exampleItem = new NavigationItem("Pull to Refresh", "./listview/pull-to-refresh/pull-to-refresh", currentItem);
         currentItem.subItems.push(exampleItem);
 
-        var swipeLegacy = new NavigationItem("Swipe to execute", undefined, currentItem);
-        currentItem.subItems.push(swipeLegacy);
-        exampleItem = new NavigationItem("Getting started", "./listview/swipe-execute/swipe-execute", swipeLegacy);
-        swipeLegacy.subItems.push(exampleItem);
-
-        exampleItem = new NavigationItem("Swipe to execute with sticky actions", "./listview/swipe-execute/swipe-execute-sticky", swipeLegacy);
-        swipeLegacy.subItems.push(exampleItem);
-
-        exampleItem = new NavigationItem("Swipe to execute with stretched content", "./listview/swipe-execute/swipe-execute-stretch", swipeLegacy);
-        swipeLegacy.subItems.push(exampleItem);
         // Swipe actions
         var swipeActions = new NavigationItem("Swipe actions", undefined, currentItem);
         currentItem.subItems.push(swipeActions);
@@ -388,7 +401,7 @@ export class NavigationViewModel extends observableModule.Observable {
         exampleItem = new NavigationItem("Multiple actions", "./listview/swipe-actions/swipe-actions-multiple", swipeActions);
         swipeActions.subItems.push(exampleItem);
 
-        exampleItem = new NavigationItem("Disable/Enable", "./listview/swipe-actions/swipe-disable", swipeActions);
+        exampleItem = new NavigationItem("Disable\\Enable", "./listview/swipe-actions/swipe-disable", swipeActions);
         swipeActions.subItems.push(exampleItem);
 
         // Header and footer

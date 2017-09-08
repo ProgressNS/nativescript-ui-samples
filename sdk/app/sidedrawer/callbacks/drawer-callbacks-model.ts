@@ -1,36 +1,40 @@
-import drawerModule = require("nativescript-telerik-ui-pro/sidedrawer");
-import observableModule = require("tns-core-modules/data/observable");
+import { RadSideDrawer, DrawerStateChangingEventArgs, DrawerStateChangedEventArgs } from "nativescript-telerik-ui-pro/sidedrawer";
+import { Observable } from "tns-core-modules/data/observable";
 import frameModule = require("tns-core-modules/ui/frame");
 
-export class DrawerCallbacksModel extends observableModule.Observable {
+export class DrawerCallbacksModel extends Observable {
 
     constructor() {
         super();
     }
 
     public onCloseDrawerTap() {
-        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>( frameModule.topmost().getViewById("sideDrawer"));
+        let sideDrawer: RadSideDrawer = <RadSideDrawer>( frameModule.topmost().getViewById("sideDrawer"));
         sideDrawer.closeDrawer();
     }
     
     public onOpenDrawerTap() {
-        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>( frameModule.topmost().getViewById("sideDrawer"));
+        let sideDrawer: RadSideDrawer = <RadSideDrawer>( frameModule.topmost().getViewById("sideDrawer"));
         sideDrawer.showDrawer();
     }
 
-    public onDrawerOpening() {
+    public onDrawerOpening(args: DrawerStateChangingEventArgs) {
         this.set("currentDrawerNotification", "Drawer opening");
     }
 
-    public onDrawerOpened() {
+    public onDrawerOpened(args: DrawerStateChangedEventArgs) {
         this.set("currentDrawerNotification", "Drawer opened");
     }
 
-    public onDrawerClosing() {
+    public onDrawerClosing(args: DrawerStateChangingEventArgs) {
         this.set("currentDrawerNotification", "Drawer closing");
     }
 
-    public onDrawerClosed() {
+    public onDrawerClosed(args: DrawerStateChangedEventArgs) {
         this.set("currentDrawerNotification", "Drawer closed");
+    }
+
+    public onDrawerPan(args: DrawerStateChangedEventArgs) {
+        this.set("currentDrawerNotification", "Drawer pan");
     }
 }

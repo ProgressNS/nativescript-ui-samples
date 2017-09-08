@@ -2,6 +2,7 @@ import viewModel = require("./../../view-models/settings-model");
 import application = require("tns-core-modules/application");
 import { Color } from "tns-core-modules/color";
 import viewModule = require("tns-core-modules/ui/core/view");
+import { RadDataForm, EntityProperty, DataFormEventData } from "nativescript-telerik-ui-pro/dataform";
 
 var colorLight = new Color("#CDDC39");
 var colorDark = new Color("#4CAF50");
@@ -12,20 +13,26 @@ export function onPageLoaded(args) {
     page.bindingContext = new viewModel.SettingsViewModel();
 }
 
-export function dfEditorUpdate(data) {
+export function dfEditorUpdate(args: DataFormEventData) {
     if (application.android) {
-        switch (data.propertyName) {
-            case "onlyOnWiFi": editorSetupSwitchAndroid(data.editor); break;
-            case "networkLimit": editorSetupStepperAndroid(data.editor); break;
-            case "networkPreference": editorSetupSegmentedEditorAndroid(data.editor); break;
-            case "appVolume": editorSetupSliderAndroid(data.editor); break;
+// >> dataform-styling-propertyname
+        switch (args.propertyName) {
+            case "appVolume": editorSetupSliderAndroid(args.editor); break;
+// << dataform-styling-propertyname
+            case "onlyOnWiFi": editorSetupSwitchAndroid(args.editor); break;
+            case "networkLimit": editorSetupStepperAndroid(args.editor); break;
+            case "networkPreference": editorSetupSegmentedEditorAndroid(args.editor); break;
         }
     } else if (application.ios) {
-        switch (data.propertyName) {
-            case "onlyOnWiFi": editorSetupSwitchIOS(data.editor); break;
-            case "networkLimit": editorSetupStepperIOS(data.editor); break;
-            case "networkPreference": editorSetupSegmentedEditorIOS(data.editor); break;
-            case "appVolume": editorSetupSliderIOS(data.editor); break;
+// >> dataform-styling-editortype
+        var entityProperty : EntityProperty =
+            (<RadDataForm>args.object).getPropertyByName(args.propertyName);
+        switch (entityProperty.editor.type) {
+            case "Slider": editorSetupSliderIOS(args.editor); break;
+// << dataform-styling-editortype
+            case "Switch": editorSetupSwitchIOS(args.editor); break;
+            case "Stepper": editorSetupStepperIOS(args.editor); break;
+            case "SegmentedEditor": editorSetupSegmentedEditorIOS(args.editor); break;
         }
     }
 }
@@ -118,8 +125,9 @@ export function editorSetupSegmentedEditorIOS(editor) {
 
 // >> dataform-styling-advanced
 export function editorSetupSliderAndroid(editor) {
-    editor.getEditorView().getThumb().setColorFilter(new android.graphics.PorterDuffColorFilter(colorDark.android, android.graphics.PorterDuff.Mode.SRC_IN));
-    editor.getEditorView().getProgressDrawable().setColorFilter(new android.graphics.PorterDuffColorFilter(colorLight.android, android.graphics.PorterDuff.Mode.SRC_IN));
+    var coreEditor = <android.widget.SeekBar>editor.getEditorView();
+    coreEditor.getThumb().setColorFilter(new android.graphics.PorterDuffColorFilter(colorDark.android, android.graphics.PorterDuff.Mode.SRC_IN));
+    coreEditor.getProgressDrawable().setColorFilter(new android.graphics.PorterDuffColorFilter(colorLight.android, android.graphics.PorterDuff.Mode.SRC_IN));
 }
 
 export function editorSetupSliderIOS(editor) {

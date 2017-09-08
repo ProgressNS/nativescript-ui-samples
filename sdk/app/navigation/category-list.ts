@@ -39,7 +39,6 @@ export function onPageNavigatingTo(args) {
 }
 
 export function onPageNavigatingFrom(args) {
-    args.object.bindingContext = undefined;
     if (args.isBackNavigation && (dataModel.canMoveBack() === true)) {
         dataModel.moveBack();
     }

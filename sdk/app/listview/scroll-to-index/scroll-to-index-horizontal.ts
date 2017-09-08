@@ -4,12 +4,12 @@ import frameModule = require("tns-core-modules/ui/frame");
 
 var viewModelContext: ViewModel;
 
-export function onPageLoaded(args){
+export function onPageLoaded(args) {
     var page = args.object;
-    if(viewModelContext === undefined) {
+    if (viewModelContext === undefined) {
         viewModelContext = new ViewModel();
     }
-    
+
     page.bindingContext = viewModelContext;
 }
 
@@ -25,5 +25,5 @@ export function onNavigatedFrom(args) {
 
 export function onTap() {
     let listView: RadListView = <RadListView>(frameModule.topmost().currentPage.getViewById("listView"));
-    listView.scrollToIndex(50);
+    listView.scrollToIndex(50, false, viewModelContext.get('myScrollPosition'));
 }
