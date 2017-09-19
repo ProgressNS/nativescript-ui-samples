@@ -493,6 +493,9 @@ export class NavigationViewModel extends observableModule.Observable {
 
         exampleItem = new NavigationItem("Read Only", "./autocomplete/readonly/autocomplete-readonly", currentItem);
         currentItem.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Hint", "./autocomplete/hint/autocomplete-hint", currentItem);
+        currentItem.subItems.push(exampleItem);
     }
 
     private buildGaugesExamples(currentParent: NavigationItem) {
