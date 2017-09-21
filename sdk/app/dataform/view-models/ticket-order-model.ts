@@ -1,4 +1,4 @@
-import dataFormModule = require("nativescript-telerik-ui-pro/dataform");
+import dataFormModule = require("nativescript-pro-ui/dataform");
 
 // >> dataform-converters-code
 export class TicketViewModel implements dataFormModule.PropertyConverter {

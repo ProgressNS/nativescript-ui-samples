@@ -1,6 +1,6 @@
 import callbacksModelModule = require("./drawer-callbacks-model");
 import frameModule = require("tns-core-modules/ui/frame");
-import { DrawerStateChangingEventArgs, DrawerStateChangedEventArgs } from 'nativescript-telerik-ui-pro/sidedrawer';
+import { DrawerStateChangingEventArgs, DrawerStateChangedEventArgs } from 'nativescript-pro-ui/sidedrawer';
 
 var drawerCallbacksModel : callbacksModelModule.DrawerCallbacksModel;
 

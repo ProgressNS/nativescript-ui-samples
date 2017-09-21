@@ -1,5 +1,5 @@
 import frameModule = require("tns-core-modules/ui/frame");
-import gaugesModule = require("nativescript-telerik-ui-pro/gauges");
+import gaugesModule = require("nativescript-pro-ui/gauges");
 
 var needle: gaugesModule.RadialNeedle;
 export function onNavigatedTo(args) {

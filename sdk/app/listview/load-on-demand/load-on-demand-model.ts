@@ -1,5 +1,5 @@
 import {ObservableArray} from "tns-core-modules/data/observable-array";
-import { ListViewEventData, RadListView, ListViewLoadOnDemandMode } from "nativescript-telerik-ui-pro/listview";
+import { ListViewEventData, RadListView, ListViewLoadOnDemandMode } from "nativescript-pro-ui/listview";
 import { Observable } from "tns-core-modules/data/observable";
 import timer = require("tns-core-modules/timer");
 

@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "nativescript-fresco": "^3.0.2",
-    "nativescript-telerik-ui-pro": "next",
+    "nativescript-pro-ui": "next",
     "tns-core-modules": "next"
   },
   "devDependencies": {
