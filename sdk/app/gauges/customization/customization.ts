@@ -1,5 +1,5 @@
 import frameModule = require("tns-core-modules/ui/frame");
-import gaugesModule = require("nativescript-telerik-ui-pro/gauges");
+import gaugesModule = require("nativescript-pro-ui/gauges");
 // >> gauges-indicators-bars-animate
 export function onNavigatedTo(args) {
     let gaugeView: gaugesModule.RadRadialGauge = <gaugesModule.RadRadialGauge>frameModule.topmost().getViewById("gaugeView");

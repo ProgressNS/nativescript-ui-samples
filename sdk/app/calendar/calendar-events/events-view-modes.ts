@@ -1,5 +1,5 @@
 import viewModel = require("./events-view-modes-model");
-import calendarModule = require("nativescript-telerik-ui-pro/calendar");
+import calendarModule = require("nativescript-pro-ui/calendar");
 
 var viewModelContext : viewModel.ViewModel;
 export function onPageLoaded(args){

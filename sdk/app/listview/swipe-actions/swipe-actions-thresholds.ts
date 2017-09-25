@@ -1,6 +1,6 @@
 
 import viewModel = require("./swipe-actions-model");
-import listViewModule = require("nativescript-telerik-ui-pro/listview");
+import listViewModule = require("nativescript-pro-ui/listview");
 import viewModule = require('tns-core-modules/ui/core/view');
 import frameModule = require("tns-core-modules/ui/frame");
 import utilsModule = require("tns-core-modules/utils/utils");

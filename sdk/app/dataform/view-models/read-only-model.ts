@@ -1,6 +1,6 @@
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { Observable } from "tns-core-modules/data/observable";
-import { PropertyConverter } from "nativescript-telerik-ui-pro/dataform";
+import { PropertyConverter } from "nativescript-pro-ui/dataform";
 var data = require("./airports.json")
 
 export class ReadOnlyViewModel extends Observable {
