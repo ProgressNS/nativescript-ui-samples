@@ -6,7 +6,7 @@ var viewModelContext : StylingViewModel;
 
 
 export function onPageLoaded(args){
- var page = args.object;
+    var page = args.object;
     if(viewModelContext === undefined) {
         viewModelContext = new StylingViewModel();
     }
@@ -35,4 +35,8 @@ export function onMonthNamesSetViewModeTap(args: any) {
 
 export function onYearSetViewModeTap(args: any) {
     viewModelContext.setViewMode(calendarModule.CalendarViewMode.Year);
+}
+
+export function onDaySetViewModeTap(args: any) {
+    viewModelContext.setViewMode(calendarModule.CalendarViewMode.Day);
 }

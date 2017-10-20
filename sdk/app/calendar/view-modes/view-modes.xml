@@ -10,6 +10,7 @@
                     <ActionItem text="Month" android.position="popup" tap="onMonthSetViewModeTap" />
                     <ActionItem text="Month names" android.position="popup" tap="onMonthNamesSetViewModeTap" />
                     <ActionItem text="Year" android.position="popup" tap="onYearSetViewModeTap" />
+                    <ActionItem text="Day" android.position="popup" tap="onDaySetViewModeTap" />
                 </android>
             </ActionBar.actionItems>
         </ActionBar>

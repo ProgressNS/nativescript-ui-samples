@@ -34,3 +34,7 @@ export function onMonthNamesSetViewModeTap(args: any) {
 export function onYearSetViewModeTap(args: any) {
     viewModelContext.setViewMode(calendarModule.CalendarViewMode.Year);
 }
+
+export function onDaySetViewModeTap(args: any) {
+    viewModelContext.setViewMode(calendarModule.CalendarViewMode.Day);
+}
