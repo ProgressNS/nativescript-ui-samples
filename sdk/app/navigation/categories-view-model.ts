@@ -323,6 +323,9 @@ export class NavigationViewModel extends observableModule.Observable {
         axesExample = new NavigationItem("Date time axis", "./chart/axes/date-time-axes/date-time-axes", axesRoot);
         axesRoot.subItems.push(axesExample);
 
+        axesExample = new NavigationItem("Label visibility", "./chart/axes/label-visibility/last-label", axesRoot);
+        axesRoot.subItems.push(axesExample);
+
         var annotationsRoot = new NavigationItem("Annotations", undefined, chartRoot);
         chartRoot.subItems.push(annotationsRoot);
 
