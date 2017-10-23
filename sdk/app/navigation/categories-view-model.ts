@@ -121,6 +121,9 @@ export class NavigationViewModel extends observableModule.Observable {
 
         calendarExample = new NavigationItem("Calendar styling", "./calendar/cell-styling/cell-styles", calendarRoot);
         calendarRoot.subItems.push(calendarExample);
+
+        calendarExample = new NavigationItem("Calendar day view", "./calendar/day-view/day-view", calendarRoot);
+        calendarRoot.subItems.push(calendarExample);
     }
 
     private buildDataFormExamples(currentParent: NavigationItem) {
