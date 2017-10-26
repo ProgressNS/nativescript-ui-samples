@@ -113,7 +113,7 @@
 <!-- << calendar-weekview-styling -->
 <!-- >> calendar-dayview-styling -->
 <rc:RadCalendar.dayViewStyle>
-<rc:CalendarDayViewStyle backgroundColor="#00000000" showTitle="true" showWeekNumbers="true" showDayNames="true" >
+<rc:CalendarDayViewStyle backgroundColor="#dd855c" showTitle="true" showWeekNumbers="true" showDayNames="true" >
         <rc:CalendarDayViewStyle.todayCellStyle>
             <rc:DayCellStyle cellBackgroundColor="#dd855c" cellBorderWidth="1" cellBorderColor="#f1e8ca" cellTextColor="#745151" cellTextFontName="Times New Roman" cellTextFontStyle="Bold" cellTextSize="14" />
         </rc:CalendarDayViewStyle.todayCellStyle>
@@ -149,15 +149,14 @@
         </rc:CalendarDayViewStyle.titleCellStyle>
 
         <rc:CalendarDayViewStyle.dayEventsViewStyle>
-            <rc:DayEventsViewStyle backgroundColor="#440000ff"
+            <rc:DayEventsViewStyle backgroundColor="#B5B5F9"
                 timeLabelFormat="HH:mm" timeLabelTextColor="#0023ff"
                 timeLabelTextSize="12"/>
         </rc:CalendarDayViewStyle.dayEventsViewStyle>
 
         <rc:CalendarDayViewStyle.allDayEventsViewStyle>
             <rc:AllDayEventsViewStyle backgroundColor="#00ffff"
-                allDayText="DAILY" allDayTextIsVisible="true"
-                allDayTextSize="8"/>
+                allDayText="DAILY" allDayTextIsVisible="true" />
         </rc:CalendarDayViewStyle.allDayEventsViewStyle>
 
     </rc:CalendarDayViewStyle>
