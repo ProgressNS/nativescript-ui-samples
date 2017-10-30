@@ -22,7 +22,12 @@ export class ExamplePage extends pageModule.Page {
         super.onLoaded();
 
         var actionBar = this.actionBar === undefined ? new actionBarModule.ActionBar() : this.actionBar;
-        actionBar.title = this._associatedExampleMeta.title;
+        let title = "Default title";
+        if (this._associatedExampleMeta && this._associatedExampleMeta.title) {
+            title = this._associatedExampleMeta.title;
+        }
+        
+        actionBar.title = title;
         var navigationButton = new actionBarModule.NavigationButton();
         if (applicationModule.android) {
             navigationButton.on("tap", args => {

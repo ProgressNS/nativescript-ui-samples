@@ -121,6 +121,9 @@ export class NavigationViewModel extends observableModule.Observable {
 
         calendarExample = new NavigationItem("Calendar styling", "./calendar/cell-styling/cell-styles", calendarRoot);
         calendarRoot.subItems.push(calendarExample);
+
+        calendarExample = new NavigationItem("Calendar day view", "./calendar/day-view/day-view", calendarRoot);
+        calendarRoot.subItems.push(calendarExample);
     }
 
     private buildDataFormExamples(currentParent: NavigationItem) {
@@ -323,6 +326,9 @@ export class NavigationViewModel extends observableModule.Observable {
         axesExample = new NavigationItem("Date time axis", "./chart/axes/date-time-axes/date-time-axes", axesRoot);
         axesRoot.subItems.push(axesExample);
 
+        axesExample = new NavigationItem("Label visibility", "./chart/axes/label-visibility/label-visibility", axesRoot);
+        axesRoot.subItems.push(axesExample);
+
         var annotationsRoot = new NavigationItem("Annotations", undefined, chartRoot);
         chartRoot.subItems.push(annotationsRoot);
 
@@ -492,6 +498,9 @@ export class NavigationViewModel extends observableModule.Observable {
         currentItem.subItems.push(exampleItem);
 
         exampleItem = new NavigationItem("Read Only", "./autocomplete/readonly/autocomplete-readonly", currentItem);
+        currentItem.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Hint", "./autocomplete/hint/autocomplete-hint", currentItem);
         currentItem.subItems.push(exampleItem);
     }
 
