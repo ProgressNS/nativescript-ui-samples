@@ -502,6 +502,9 @@ export class NavigationViewModel extends observableModule.Observable {
 
         exampleItem = new NavigationItem("Hint", "./autocomplete/hint/autocomplete-hint", currentItem);
         currentItem.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Preselected items", "./autocomplete/preselected-tokens/autocomplete-preselected-tokens", currentItem);
+        currentItem.subItems.push(exampleItem);
     }
 
     private buildGaugesExamples(currentParent: NavigationItem) {
