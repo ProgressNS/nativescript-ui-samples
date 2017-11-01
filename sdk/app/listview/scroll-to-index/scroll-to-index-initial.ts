@@ -1,7 +1,7 @@
 import { ViewModel } from "./scroll-to-index-model-initial";
 import { RadListView, ListViewItemSnapMode } from "nativescript-pro-ui/listview";
 import { EventData } from "tns-core-modules/data/observable";
-import { ios as isIOS, android as isAndroid } from "tns-core-modules/application";
+import { ios as isIOS } from "tns-core-modules/application";
 
 var viewModelContext: ViewModel;
 let scrollFunc = function (listView: RadListView) {
