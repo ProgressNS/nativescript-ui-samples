@@ -421,6 +421,8 @@ export class NavigationViewModel extends observableModule.Observable {
         scrollToIndex.subItems.push(selectionExample);
         var selectionExample = new NavigationItem("In horizontal direction", "./listview/scroll-to-index/scroll-to-index-horizontal", scrollToIndex);
         scrollToIndex.subItems.push(selectionExample);
+        var selectionExample = new NavigationItem("Initially scrolled", "./listview/scroll-to-index/scroll-to-index-initial", scrollToIndex);
+        scrollToIndex.subItems.push(selectionExample);
 
         // Scroll events 
         exampleItem = new NavigationItem("Scroll Events", "./listview/scroll-events/scroll-events", currentItem);
