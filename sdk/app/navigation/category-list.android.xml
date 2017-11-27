@@ -1,6 +1,6 @@
 <Page 
     xmlns="http://www.nativescript.org/tns.xsd"
-    xmlns:lv="nativescript-telerik-ui-pro/listview"
+    xmlns:lv="nativescript-pro-ui/listview"
     loaded="pageLoaded"
     navigatingFrom="onPageNavigatingFrom"
     navigatingTo="onPageNavigatingTo">

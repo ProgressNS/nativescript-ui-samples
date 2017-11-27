@@ -1,5 +1,5 @@
 import { ViewModel } from "./scroll-to-index-model-vertical";
-import { RadListView } from "nativescript-telerik-ui-pro/listview";
+import { RadListView } from "nativescript-pro-ui/listview";
 import frameModule = require("tns-core-modules/ui/frame");
 
 var viewModelContext: ViewModel;
@@ -27,6 +27,6 @@ export function onTap() {
     // >> listview-scroll-to-index
     let listView: RadListView = <RadListView>(frameModule.topmost().currentPage.getViewById("listView"));
     
-    listView.scrollToIndex(50);
+    listView.scrollToIndex(50, false, viewModelContext.get('myScrollPosition'));
     // << listview-scroll-to-index
 }

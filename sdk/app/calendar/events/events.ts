@@ -1,4 +1,4 @@
-import calendarModule = require("nativescript-telerik-ui-pro/calendar");
+import calendarModule = require("nativescript-pro-ui/calendar");
 
 export function onPageLoaded(args){
     var page = args.object;

@@ -1,11 +1,11 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded"
-    xmlns:df="nativescript-telerik-ui-pro/dataform" xmlns="http://www.nativescript.org/tns.xsd">
+    xmlns:df="nativescript-pro-ui/dataform" xmlns="http://www.nativescript.org/tns.xsd">
 
     <df:RadDataForm id="myDataForm" source="{{ person }}">
         <df:RadDataForm.properties>
-            <df:EntityProperty name="name"/>
+            <df:EntityProperty name="name" index="0"/>
             <!-- >> dataform-editor-custom-xml -->
-            <df:EntityProperty name="age">
+            <df:EntityProperty name="age" index="1">
                 <df:EntityProperty.editor>
                     <df:CustomPropertyEditor 
                         editorNeedsView="editorNeedsView" 
@@ -14,7 +14,7 @@
                 </df:EntityProperty.editor>
             </df:EntityProperty>
             <!-- << dataform-editor-custom-xml -->
-            <df:EntityProperty name="birthDate">
+            <df:EntityProperty name="birthDate" index="2">
                 <df:EntityProperty.editor>
                     <df:PropertyEditor type="DatePicker" />
                 </df:EntityProperty.editor>

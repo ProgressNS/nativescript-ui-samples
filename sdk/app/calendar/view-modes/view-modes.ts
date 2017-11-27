@@ -1,5 +1,5 @@
 import viewModel = require("./view-modes-model");
-import calendarModule = require("nativescript-telerik-ui-pro/calendar");
+import calendarModule = require("nativescript-pro-ui/calendar");
 
 var viewModelContext : viewModel.ViewModel;
 
@@ -33,4 +33,8 @@ export function onMonthNamesSetViewModeTap(args: any) {
 
 export function onYearSetViewModeTap(args: any) {
     viewModelContext.setViewMode(calendarModule.CalendarViewMode.Year);
+}
+
+export function onDaySetViewModeTap(args: any) {
+    viewModelContext.setViewMode(calendarModule.CalendarViewMode.Day);
 }

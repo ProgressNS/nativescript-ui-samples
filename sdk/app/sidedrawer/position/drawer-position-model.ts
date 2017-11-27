@@ -1,4 +1,4 @@
-import drawerModule = require("nativescript-telerik-ui-pro/sidedrawer");
+import drawerModule = require("nativescript-pro-ui/sidedrawer");
 import frameModule = require("tns-core-modules/ui/frame");
 
 export class DrawerPositionModel {

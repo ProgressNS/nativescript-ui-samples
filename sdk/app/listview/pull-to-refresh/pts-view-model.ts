@@ -1,10 +1,10 @@
 import { ObservableArray } from "tns-core-modules/data/observable-array";
-import { ListViewEventData }from "nativescript-telerik-ui-pro/listview";
+import { ListViewEventData }from "nativescript-pro-ui/listview";
 import timer = require("tns-core-modules/timer");
 import { Observable } from "tns-core-modules/data/observable";
 import * as application from "tns-core-modules/application";
 
-var posts = require("../swipe-execute/posts.json")
+var posts = require("../posts.json")
 
 export class ViewModel extends Observable {
     private _numberOfAddedItems;

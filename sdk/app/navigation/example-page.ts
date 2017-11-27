@@ -20,24 +20,32 @@ export class ExamplePage extends pageModule.Page {
 
     public onLoaded() {
         super.onLoaded();
-        if (this._associatedExampleMeta) {
-            var actionBar = this.actionBar === undefined ? new actionBarModule.ActionBar() : this.actionBar;
-            actionBar.title = this._associatedExampleMeta.title;
-            if (applicationModule.android) {
-                var navigationButton = new actionBarModule.NavigationButton();
-                navigationButton.on("tap", args => {
-                    if (this.content) {
-                        utilsModule.ad.dismissSoftInput(this.content.android);
-                    }
-                    frameModule.topmost().goBack();
-                });
-                navigationButton.icon = "res://ic_arrow_back_black_24dp";
-                actionBar.navigationButton = navigationButton;
 
-            }
-            if (this.actionBar !== actionBar) {
-                this.actionBar = actionBar;
-            }
+        var actionBar = this.actionBar === undefined ? new actionBarModule.ActionBar() : this.actionBar;
+        let title = "Default title";
+        if (this._associatedExampleMeta && this._associatedExampleMeta.title) {
+            title = this._associatedExampleMeta.title;
+        }
+        
+        actionBar.title = title;
+        var navigationButton = new actionBarModule.NavigationButton();
+        if (applicationModule.android) {
+            navigationButton.on("tap", args => {
+                if (this.content) {
+                    utilsModule.ad.dismissSoftInput(this.content.android);
+                }
+                frameModule.topmost().goBack();
+            });
+            navigationButton.icon = "res://ic_arrow_back_black_24dp";
+            actionBar.navigationButton = navigationButton;
+
+        } else {
+            navigationButton.text = "Back";
+            actionBar.navigationButton = navigationButton;
+        }
+
+        if (this.actionBar !== actionBar) {
+            this.actionBar = actionBar;
         }
     }
 }

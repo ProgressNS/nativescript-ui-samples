@@ -1,28 +1,22 @@
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-telerik-ui-pro/chart" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-pro-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
       <!-- >> legend-example -->
     <chart:RadCartesianChart id="cartesianChart">
         <chart:RadCartesianChart.series>
-        
-            <chart:BarSeries legendTitle="Bar series" items="{{ categoricalSource }}"  stackMode="Stack" categoryProperty="Country" valueProperty="ThirdVal"/>
-            
-            <chart:LineSeries legendTitle="Line series" items="{{ categoricalSource }}"  stackMode="Stack" categoryProperty="Country" valueProperty="Amount"/>
-        
-            <chart:AreaSeries legendTitle="Area series" items="{{ categoricalSource }}"  stackMode="Stack" categoryProperty="Country" valueProperty="SecondVal"/>
-        
-            
-            
+            <chart:BarSeries legendTitle="Bar series" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="ThirdVal"/>
+            <chart:LineSeries legendTitle="Line series" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount"/>
+            <chart:AreaSeries legendTitle="Area series" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="SecondVal"/>
         </chart:RadCartesianChart.series>
-        
         <chart:RadCartesianChart.horizontalAxis>
             <chart:CategoricalAxis/>
         </chart:RadCartesianChart.horizontalAxis>
         <chart:RadCartesianChart.verticalAxis>
             <chart:LinearAxis maximum="50"/>
         </chart:RadCartesianChart.verticalAxis>
-        
+        <!-- >> legend-definition-xml -->
         <chart:RadCartesianChart.legend>
-            <chart:RadLegendView position="Top" height="150" title="Series type"/>
+            <chart:RadLegendView position="Top" title="Series type" height="150" enableSelection="true"/>
         </chart:RadCartesianChart.legend>
+        <!-- << legend-definition-xml -->
     </chart:RadCartesianChart>
        <!-- << legend-example -->
 </navigation:ExamplePage>

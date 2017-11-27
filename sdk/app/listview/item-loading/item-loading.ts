@@ -1,7 +1,7 @@
 import viewModel = require("./item-loading-model");
 import { Color } from "tns-core-modules/color";
 import { Label } from "tns-core-modules/ui/label";
-import { ListViewEventData } from 'nativescript-telerik-ui-pro/listview';
+import { ListViewEventData } from 'nativescript-pro-ui/listview';
 
 var listView;
 var lblSelection;

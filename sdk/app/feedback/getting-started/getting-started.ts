@@ -1,5 +1,5 @@
 // >> feedback-import-module
-import {RadFeedback} from "nativescript-telerik-ui-pro/feedback";
+import {RadFeedback} from "nativescript-pro-ui/feedback";
 // << feedback-import-module
 import {FeedbackViewModel} from "./view-model";
 

@@ -14,8 +14,8 @@ export class EmployeeViewModel {
 }
 
 export class Employee {
-    public name: string = "";
-    public phone: string = "";
-    public birthDate: string = "1988-05-05";
+    public name: string = null
+    public phone: string = null
+    public birthDate: string = null;
     public employeeId: number = null;
 }

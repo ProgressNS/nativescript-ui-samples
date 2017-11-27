@@ -1,4 +1,4 @@
-import * as calendarModule from "nativescript-telerik-ui-pro/calendar";
+import * as calendarModule from "nativescript-pro-ui/calendar";
 import { Observable } from "tns-core-modules/data/observable";
 import * as frameModule from "tns-core-modules/ui/frame";
 import { Color } from "tns-core-modules/color";
@@ -10,7 +10,7 @@ export class StylingViewModel extends Observable {
         super();
 
         this._selectionInfo = {
-            options: ["Week", "Month", "Month names", "Year"],
+            options: ["Week", "Month", "Month names", "Year", "Day"],
             index: 1
         };
 
@@ -61,8 +61,10 @@ export class StylingViewModel extends Observable {
             this.viewMode = calendarModule.CalendarViewMode.Month;
         } else if (index == 2) {
             this.viewMode = calendarModule.CalendarViewMode.MonthNames;
+        } else if (index == 3) {
+            this.viewMode = calendarModule.CalendarViewMode.Year;
         } else {
-             this.viewMode = calendarModule.CalendarViewMode.Year;
+            this.viewMode = calendarModule.CalendarViewMode.Day;
         }
     }
     

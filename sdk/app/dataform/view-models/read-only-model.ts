@@ -1,6 +1,6 @@
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { Observable } from "tns-core-modules/data/observable";
-import { PropertyConverter } from "nativescript-telerik-ui-pro/dataform";
+import { PropertyConverter } from "nativescript-pro-ui/dataform";
 var data = require("./airports.json")
 
 export class ReadOnlyViewModel extends Observable {
@@ -107,7 +107,7 @@ export class TicketOrder {
     public date: string = "2016-04-06";
     public time: string = "20:00";
     public type: string = "2D";
-    public price: number = 9.50;
+    public price: string = "9.50";
     public numberOfTickets: number = 2;
     public contactName: string = null;
     public contactPhone: string = null;

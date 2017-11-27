@@ -1,4 +1,4 @@
-import calendarModule = require("nativescript-telerik-ui-pro/calendar");
+import calendarModule = require("nativescript-pro-ui/calendar");
 import observableModule = require("tns-core-modules/data/observable");
 import frameModule = require("tns-core-modules/ui/frame");
 import { Color } from "tns-core-modules/color";
