@@ -1,7 +1,6 @@
-// >> data-operations-getting-started-context
-import { ViewModel } from "./grouping-model";
+import { ViewModel } from "./multiple-model";
 import { Page } from "tns-core-modules/ui/page";
-import { RadListView } from "nativescript-telerik-ui-pro/listview";
+import { RadListView } from "nativescript-pro-ui/listview";
 
 var page: Page;
 var bindingContext: ViewModel;
@@ -38,4 +37,3 @@ export function toggleGrouping() {
         listView.groupingFunction = undefined;
     }
 }
-// << data-operations-getting-started-context

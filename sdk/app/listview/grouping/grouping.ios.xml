@@ -1,24 +1,31 @@
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui-pro/listview" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-pro-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
 <!-- >> listview-grouping -->
-    <lv:RadListView items="{{ dataItems }}"
-                    enableDataOperations="true"
-                    groupingFunction="{{ myGroupingFunc }}">
-        <lv:RadListView.itemTemplate>
-            <StackLayout orientation="vertical">
-                <Label fontSize="20" text="{{ itemName }}"/>
-                <Label fontSize="14" text="{{ itemDescription }}"/>
-            </StackLayout>
-        </lv:RadListView.itemTemplate>
-        <lv:RadListView.headerItemTemplate>
-            <GridLayout backgroundColor="#65a565">
-                <Label text="{{ category }}" height="50"/>
-            </GridLayout>
-        </lv:RadListView.headerItemTemplate>
-        <lv:RadListView.footerItemTemplate>
-            <GridLayout backgroundColor="#7fff7f">
-                <Label text="{{ category }}" height="50"/>
-            </GridLayout>
-        </lv:RadListView.footerItemTemplate>
-    </lv:RadListView>
+    <GridLayout rows="auto, *">
+        <StackLayout orientation="horizontal">
+                <Button text="{{isEnabled ? 'Disable grouping' : 'Enable grouping'}}" tap="toggleGrouping"/>
+        </StackLayout>
+        <lv:RadListView items="{{ dataItems }}"
+                        row="1"
+                        id="myListView" 
+                        enableDataOperations="true"
+                        groupingFunction="{{ myGroupingFunc }}">
+            <lv:RadListView.itemTemplate>
+                <StackLayout orientation="vertical">
+                    <Label fontSize="20" text="{{ itemName }}"/>
+                    <Label fontSize="14" text="{{ itemDescription }}"/>
+                </StackLayout>
+            </lv:RadListView.itemTemplate>
+            <lv:RadListView.headerItemTemplate>
+                <GridLayout backgroundColor="#65a565">
+                    <Label text="{{ category }}" height="50"/>
+                </GridLayout>
+            </lv:RadListView.headerItemTemplate>
+            <lv:RadListView.footerItemTemplate>
+                <GridLayout backgroundColor="#7fff7f">
+                    <Label text="{{ category }}" height="50"/>
+                </GridLayout>
+            </lv:RadListView.footerItemTemplate>
+        </lv:RadListView>
+    </GridLayout>
 <!-- << listview-grouping -->
 </navigation:ExamplePage>

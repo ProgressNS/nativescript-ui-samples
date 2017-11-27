@@ -14,10 +14,6 @@ export class ViewModel extends Observable {
         this.set("_isEnabled", true);
     }
 
-    get dataItems() {
-        return this.get("_items");
-    }
-
     get isEnabled() {
         return this.get("_isEnabled");
     }
@@ -26,16 +22,8 @@ export class ViewModel extends Observable {
         this.set("_isEnabled", value);
     }
 
-    get myGroupingFunc(): (item: any) => any {
-        return (item: DataItem) => {
-            return item.category;
-        };
-    }
-
-    get myFilteringFunc(): (item: any) => any {
-        return (item: DataItem) => {
-            return item.itemName.includes("Special Item");
-        };
+    get dataItems() {
+        return this.get("_items");
     }
 
     get mySortingFunc(): (item: any, otherItem: any) => number {

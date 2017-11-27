@@ -347,14 +347,19 @@ export class NavigationViewModel extends observableModule.Observable {
         currentItem.subItems.push(exampleItem);
 
         // Data operations
-        var grouping = new NavigationItem("Data Operations", undefined, currentItem);
-        currentItem.subItems.push(grouping);
-        exampleItem = new NavigationItem("Getting Started", "./listview/grouping/getting-started", grouping);
-        grouping.subItems.push(exampleItem);
-        var exampleItem = new NavigationItem("Grouping", "./listview/grouping/grouping", grouping);
-        grouping.subItems.push(exampleItem);
-        exampleItem = new NavigationItem("Collapsible Grouping", "./listview/grouping/grouping-collapsible", grouping);
-        grouping.subItems.push(exampleItem);
+        var dataOperations = new NavigationItem("Data Operations", undefined, currentItem);
+        currentItem.subItems.push(dataOperations);
+        exampleItem = new NavigationItem("Filtering", "./listview/filtering/getting-started", dataOperations);
+        dataOperations.subItems.push(exampleItem);
+        exampleItem = new NavigationItem("Sorting", "./listview/sorting/getting-started", dataOperations);
+        dataOperations.subItems.push(exampleItem);
+        var exampleItem = new NavigationItem("Grouping", "./listview/grouping/grouping", dataOperations);
+        dataOperations.subItems.push(exampleItem);
+        exampleItem = new NavigationItem("Collapsible Grouping", "./listview/grouping/grouping-collapsible", dataOperations);
+        dataOperations.subItems.push(exampleItem);
+        exampleItem = new NavigationItem("Multiple operations", "./listview/multiple-data-operations/getting-started", dataOperations);
+        dataOperations.subItems.push(exampleItem);
+        
         
         var exampleItem = new NavigationItem("Multiple Item Templates", "./listview/multiple-templates/multiple-templates", currentItem);
         currentItem.subItems.push(exampleItem);

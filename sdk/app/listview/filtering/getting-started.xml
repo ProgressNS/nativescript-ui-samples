@@ -1,14 +1,12 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-pro-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
-<!-- >> listview-grouping -->
-<GridLayout rows="auto, *">
+<!-- >> data-operations-filtering -->
+    <GridLayout rows="auto, *">
         <StackLayout orientation="horizontal">
-                <Button text="{{isEnabled ? 'Disable grouping' : 'Enable grouping'}}" tap="toggleGrouping"/>
+            <Button text="{{isEnabled ? 'Disable filtering' : 'Enable filtering'}}" tap="toggleFilter"/>
         </StackLayout>
-        <lv:RadListView items="{{ dataItems }}" 
-                        row="1"
-                        id="myListView"
-                        enableDataOperations="true" 
-                        groupingFunction="{{ myGroupingFunc }}">
+        <lv:RadListView id="myListView" row="1" items="{{ dataItems }}" 
+                        filteringFunction="{{ myFilteringFunc }}"
+                        enableDataOperations="true">
             <lv:RadListView.itemTemplate>
                 <StackLayout orientation="vertical">
                     <Label fontSize="20" text="{{ itemName }}"/>
@@ -17,5 +15,5 @@
             </lv:RadListView.itemTemplate>
         </lv:RadListView>
     </GridLayout>
-<!-- << listview-grouping -->
+<!-- << data-operations-filtering -->
 </navigation:ExamplePage>

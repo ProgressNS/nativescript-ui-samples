@@ -1,4 +1,3 @@
-// >> listview-grouping-model
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import * as timer from "tns-core-modules/timer";
 import { Observable } from"tns-core-modules/data/observable";
@@ -14,16 +13,16 @@ export class ViewModel extends Observable {
         this.set("_isEnabled", true);
     }
 
-    get dataItems() {
-        return this.get("_items");
-    }
-
     get isEnabled() {
         return this.get("_isEnabled");
     }
 
     set isEnabled(value: boolean) {
         this.set("_isEnabled", value);
+    }
+
+    get dataItems() {
+        return this.get("_items");
     }
 
     get myGroupingFunc(): (item: any) => any {
@@ -85,4 +84,3 @@ var items: DataItem[] = [
     new DataItem(80, "Item 80", "This is item category is: Category 1", "Category 1"),
     new DataItem(54, "Item 54", "This is item category is: Category 3", "Category 3"),
 ];
-// << listview-grouping-model

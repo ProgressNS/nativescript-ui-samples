@@ -11,7 +11,7 @@
   "nativescript": {
     "id": "org.nativescript.sdk",
     "tns-android": {
-      "version": "next"
+      "version": "3.4.0-2017-11-13-2"
     },
     "tns-ios": {
       "version": "next"

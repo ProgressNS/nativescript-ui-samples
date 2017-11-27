@@ -1,12 +1,11 @@
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-telerik-ui-pro/listview" xmlns="http://www.nativescript.org/tns.xsd">
-<!-- >> data-operations-getting-started -->
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-pro-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
+<!-- >> data-operations-sorting -->
     <GridLayout rows="auto, *">
         <StackLayout orientation="horizontal">
-            <Button text="Toggle Filter" tap="toggleFilter"/>
-            <Button text="Toggle Sorting" tap="toggleSorting"/>
-            <Button text="Toggle Grouping" tap="toggleGrouping"/>
+            <Button text="{{isEnabled ? 'Disable sorting' : 'Enable sorting'}}" tap="toggleSorting"/>
         </StackLayout>
         <lv:RadListView id="myListView" row="1" items="{{ dataItems }}" 
+                        sortingFunction="{{ mySortingFunc }}"
                         enableDataOperations="true">
             <lv:RadListView.itemTemplate>
                 <StackLayout orientation="vertical">
@@ -16,5 +15,5 @@
             </lv:RadListView.itemTemplate>
         </lv:RadListView>
     </GridLayout>
-<!-- << data-operations-getting-started -->
+<!-- << data-operations-sorting -->
 </navigation:ExamplePage>
