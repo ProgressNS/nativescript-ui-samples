@@ -1,8 +1,7 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-pro-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
 <!-- >> listview-collapsible-grouping -->
     <lv:RadListView items="{{ dataItems }}" 
-    id="myListView"
-                    enableDataOperations="true"
+                    id="myListView"
                     enableCollapsibleGroups="true" 
                     groupingFunction="{{ myGroupingFunc }}">
         <lv:RadListView.itemTemplate>

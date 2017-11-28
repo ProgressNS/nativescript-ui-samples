@@ -6,8 +6,7 @@
         </StackLayout>
         <lv:RadListView items="{{ dataItems }}"
                         row="1"
-                        id="myListView" 
-                        enableDataOperations="true"
+                        id="myListView"
                         groupingFunction="{{ myGroupingFunc }}">
             <lv:RadListView.itemTemplate>
                 <StackLayout orientation="vertical">

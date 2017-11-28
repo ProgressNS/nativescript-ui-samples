@@ -10,15 +10,33 @@ export class ViewModel extends Observable {
     constructor() {
         super();
         this.set("_items", new ObservableArray<DataItem>(items));
-        this.set("_isEnabled", true);
+        this.isGroupingEnabled = true;
+        this.isFilteringEnabled = true;
+        this.isSortingEnabled = true;
     }
 
-    get isEnabled() {
-        return this.get("_isEnabled");
+    get isGroupingEnabled() {
+        return this.get("_isGroupingEnabled");
     }
 
-    set isEnabled(value: boolean) {
-        this.set("_isEnabled", value);
+    set isGroupingEnabled(value: boolean) {
+        this.set("_isGroupingEnabled", value);
+    }
+
+    get isFilteringEnabled() {
+        return this.get("_isFilteringEnabled");
+    }
+
+    set isFilteringEnabled(value: boolean) {
+        this.set("_isFilteringEnabled", value);
+    }
+
+    get isSortingEnabled() {
+        return this.get("_isSortingEnabled");
+    }
+
+    set isSortingEnabled(value: boolean) {
+        this.set("_isSortingEnabled", value);
     }
 
     get dataItems() {
