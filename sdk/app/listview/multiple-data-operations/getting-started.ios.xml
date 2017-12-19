@@ -17,7 +17,7 @@
             </lv:RadListView.itemTemplate>
             <lv:RadListView.headerItemTemplate>
                 <GridLayout backgroundColor="#65a565">
-                    <Label text="{{ category }}"/>
+                    <Label text="{{ category ? category : 'Default' }}"/>
                 </GridLayout>
             </lv:RadListView.headerItemTemplate>
         </lv:RadListView>

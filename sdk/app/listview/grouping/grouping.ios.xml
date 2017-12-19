@@ -16,12 +16,12 @@
             </lv:RadListView.itemTemplate>
             <lv:RadListView.headerItemTemplate>
                 <GridLayout backgroundColor="#65a565">
-                    <Label text="{{ category }}" height="50"/>
+                    <Label text="{{ category ? category : 'Default' }}" height="50"/>
                 </GridLayout>
             </lv:RadListView.headerItemTemplate>
             <lv:RadListView.footerItemTemplate>
                 <GridLayout backgroundColor="#7fff7f">
-                    <Label text="{{ category }}" height="50"/>
+                    <Label text="{{ category ? category : 'Default' }}" height="50"/>
                 </GridLayout>
             </lv:RadListView.footerItemTemplate>
         </lv:RadListView>
