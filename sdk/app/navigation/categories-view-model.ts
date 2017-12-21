@@ -386,8 +386,16 @@ export class NavigationViewModel extends observableModule.Observable {
         exampleItem = new NavigationItem("Selection states", "./listview/selection-states/selection-states", selectionItem);
         selectionItem.subItems.push(exampleItem);
 
-        exampleItem = new NavigationItem("Load on Demand", "./listview/load-on-demand/load-on-demand", currentItem);
-        currentItem.subItems.push(exampleItem);
+        var demand = new NavigationItem("Load on Demand", undefined, currentItem);
+        currentItem.subItems.push(demand);
+        var selectionExample = new NavigationItem("Manual with Fixed Item Size", "./listview/load-on-demand/fixed-size-manual/fixed-size-manual", demand);
+        demand.subItems.push(selectionExample);
+        var selectionExample = new NavigationItem("Auto with Fixed Item Size", "./listview/load-on-demand/fixed-size-auto/fixed-size-auto", demand);
+        demand.subItems.push(selectionExample);
+        var selectionExample = new NavigationItem("Manual with Variable Item Size", "./listview/load-on-demand/dynamic-size-manual/dynamic-size-manual", demand);
+        demand.subItems.push(selectionExample);
+        var selectionExample = new NavigationItem("Auto with Variable Item Size", "./listview/load-on-demand/dynamic-size-auto/dynamic-size-auto", demand);
+        demand.subItems.push(selectionExample);
 
         exampleItem = new NavigationItem("Observable Array", "./listview/observable-array/observable-array", currentItem);
         currentItem.subItems.push(exampleItem);
@@ -420,6 +428,8 @@ export class NavigationViewModel extends observableModule.Observable {
         var selectionExample = new NavigationItem("In vertical direction", "./listview/scroll-to-index/scroll-to-index-vertical", scrollToIndex);
         scrollToIndex.subItems.push(selectionExample);
         var selectionExample = new NavigationItem("In horizontal direction", "./listview/scroll-to-index/scroll-to-index-horizontal", scrollToIndex);
+        scrollToIndex.subItems.push(selectionExample);
+        var selectionExample = new NavigationItem("Initially scrolled", "./listview/scroll-to-index/scroll-to-index-initial", scrollToIndex);
         scrollToIndex.subItems.push(selectionExample);
 
         // Scroll events 
@@ -501,6 +511,9 @@ export class NavigationViewModel extends observableModule.Observable {
         currentItem.subItems.push(exampleItem);
 
         exampleItem = new NavigationItem("Hint", "./autocomplete/hint/autocomplete-hint", currentItem);
+        currentItem.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Preselected items", "./autocomplete/preselected-tokens/autocomplete-preselected-tokens", currentItem);
         currentItem.subItems.push(exampleItem);
     }
 
