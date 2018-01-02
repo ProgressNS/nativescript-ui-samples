@@ -11,16 +11,16 @@
   "nativescript": {
     "id": "org.nativescript.sdk",
     "tns-android": {
-      "version": "3.4.0-2017-11-13-2"
+      "version": "3.4.0"
     },
     "tns-ios": {
-      "version": "next"
+      "version": "3.4.0"
     }
   },
   "dependencies": {
     "nativescript-fresco": "^3.0.2",
-    "nativescript-pro-ui": "next",
-    "tns-core-modules": "next"
+    "nativescript-pro-ui": "^3.3.0",
+    "tns-core-modules": "^3.4.0"
   },
   "devDependencies": {
     "babel-traverse": "6.9.0",
