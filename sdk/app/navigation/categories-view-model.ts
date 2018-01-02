@@ -1,5 +1,6 @@
 import observableModule = require("tns-core-modules/data/observable");
 import frameModule = require("tns-core-modules/ui/frame");
+import { isAndroid } from "tns-core-modules/platform/platform";
 
 export class NavigationItem {
     private _subItems: Array<NavigationItem>;
@@ -346,6 +347,24 @@ export class NavigationViewModel extends observableModule.Observable {
         var exampleItem = new NavigationItem("Getting Started", "./listview/getting-started/getting-started", currentItem);
         currentItem.subItems.push(exampleItem);
 
+        // Data operations
+        var dataOperations = new NavigationItem("Data Operations", undefined, currentItem);
+        currentItem.subItems.push(dataOperations);
+        exampleItem = new NavigationItem("Filtering", "./listview/filtering/getting-started", dataOperations);
+        dataOperations.subItems.push(exampleItem);
+        exampleItem = new NavigationItem("Sorting", "./listview/sorting/getting-started", dataOperations);
+        dataOperations.subItems.push(exampleItem);
+        var exampleItem = new NavigationItem("Grouping", "./listview/grouping/grouping", dataOperations);
+        dataOperations.subItems.push(exampleItem);
+        if(isAndroid) {
+            exampleItem = new NavigationItem("Collapsible Grouping", "./listview/grouping/grouping-collapsible", dataOperations);
+            dataOperations.subItems.push(exampleItem);
+        }
+        
+        exampleItem = new NavigationItem("Multiple operations", "./listview/multiple-data-operations/getting-started", dataOperations);
+        dataOperations.subItems.push(exampleItem);
+        
+        
         var exampleItem = new NavigationItem("Multiple Item Templates", "./listview/multiple-templates/multiple-templates", currentItem);
         currentItem.subItems.push(exampleItem);
 
