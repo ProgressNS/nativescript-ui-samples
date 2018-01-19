@@ -1,46 +1,14 @@
-import { Observable } from "tns-core-modules/data/observable";
+import observableModule = require("tns-core-modules/data/observable");
 import { topmost } from "tns-core-modules/ui/frame";
+import { Page } from "tns-core-modules/ui/page";
 import { isAndroid } from "tns-core-modules/platform/platform";
+import { RadSideDrawer } from "nativescript-pro-ui/sidedrawer";
+import { ActionBar, NavigationButton } from "tns-core-modules/ui/action-bar";
+import utilsModule = require("tns-core-modules/utils/utils");
+import { NavigationItem } from "./navigation-item";
+import { PageViewModel } from "./page-view-model";
 
-export class NavigationItem {
-    private _subItems: Array<NavigationItem>;
-    private _title: string;
-    private _module: string;
-    private _parent: NavigationItem;
-
-    constructor(title: string, module: string, parent: NavigationItem) {
-        this._title = title;
-        this._parent = parent;
-        this._module = module;
-        this._subItems = new Array<NavigationItem>();
-    }
-
-    get subItems(): Array<NavigationItem> {
-        return this._subItems;
-    }
-
-    get title() {
-        return this._title;
-    }
-
-    set title(value: string) {
-        this._title = value;
-    }
-
-    get module() {
-        return this._module;
-    }
-
-    set module(value: string) {
-        this._module = value;
-    }
-
-    get parent() {
-        return this._parent;
-    }
-}
-
-export class NavigationViewModel extends Observable {
+export class NavigationViewModel extends PageViewModel {
 
     private _lastTappedItem;
     private _currentSubItems: Array<NavigationItem>;
@@ -49,38 +17,16 @@ export class NavigationViewModel extends Observable {
 
     constructor() {
         super();
-        this.currentParent = new NavigationItem("SDK Examples", undefined, undefined);
+        this._currentParent = new NavigationItem("SDK Examples", undefined, undefined);
         this.buildComponentList();
-        this.currentSubItems = this.currentParent.subItems;
-        this.hasBackNavigation = false;
-    }
-    
-    get currentSubItems(): Array<NavigationItem> {
-        return this._currentSubItems;
+        this._currentSubItems = this._currentParent.subItems;
+        this._hasBackNavigation = false;
     }
 
-    set currentSubItems(value: Array<NavigationItem>) {
-        this._currentSubItems = value;
-    }
-
-    get currentParent() {
-        return this._currentNavItem;
-    }
-
-    set currentParent(value: NavigationItem) {
-        this._currentNavItem = value;
-    }
-
-    get hasBackNavigation() {
-        return this._hasBack;
-    }
-
-    set hasBackNavigation(value: boolean) {
-        this._hasBack = value;
-    }
+    public page: Page;
 
     private buildComponentList() {
-        var parent = this.currentParent;
+        var parent = this._currentParent;
         this.buildChartExamples(parent);
         this.buildListViewExamples(parent);
         this.buildSideDrawerExamples(parent);
@@ -359,16 +305,16 @@ export class NavigationViewModel extends Observable {
         dataOperations.subItems.push(exampleItem);
         var exampleItem = new NavigationItem("Grouping", "./listview/grouping/grouping-page", dataOperations);
         dataOperations.subItems.push(exampleItem);
-        if(isAndroid) {
-            exampleItem = new NavigationItem("Collapsible Grouping", "./listview/grouping/grouping-collapsible-page", dataOperations);
+        if (isAndroid) {
+            exampleItem = new NavigationItem("Collapsible Grouping", "./listview/grouping/grouping-collapsible", dataOperations);
             dataOperations.subItems.push(exampleItem);
         }
-        
-        exampleItem = new NavigationItem("Multiple operations", "./listview/multiple-data-operations/multiple-data-operations-page", dataOperations);
+
+        exampleItem = new NavigationItem("Multiple operations", "./listview/multiple-data-operations/getting-started", dataOperations);
         dataOperations.subItems.push(exampleItem);
-        
-        
-        var exampleItem = new NavigationItem("Multiple Item Templates", "./listview/multiple-templates/multiple-templates-page", currentItem);
+
+
+        var exampleItem = new NavigationItem("Multiple Item Templates", "./listview/multiple-templates/multiple-templates", currentItem);
         currentItem.subItems.push(exampleItem);
 
         var exampleItem = new NavigationItem("Item Loading", "./listview/item-loading/item-loading-page", currentItem);
@@ -473,9 +419,6 @@ export class NavigationViewModel extends Observable {
 
         exampleItem = new NavigationItem("Events", "./sidedrawer/callbacks/drawer-callbacks-page", currentItem);
         currentItem.subItems.push(exampleItem);
-
-        exampleItem = new NavigationItem("Drawer Over Navigation", "./sidedrawer/over-navigation/drawer-over-navigation-page", currentItem);
-        currentItem.subItems.push(exampleItem);
     }
 
     private buildAutoCompleteExamples(currentParent: NavigationItem) {
@@ -555,44 +498,4 @@ export class NavigationViewModel extends Observable {
         exampleItem = new NavigationItem("Animations", "./gauges/animations/animations-page", currentItem);
         currentItem.subItems.push(exampleItem);
     }
-
-    public canMoveBack(): boolean {
-        return this.hasBackNavigation;
-    }
-
-    public moveBack() {
-        this.currentParent = this.currentParent.parent;
-        this.hasBackNavigation = this.currentParent.parent !== undefined;
-    }
-
-    public initModelData() {
-        if (this.currentParent && this.currentParent.module === undefined) {
-            this.currentSubItems = this.currentParent.subItems;
-        }
-    }
-
-    public onNavigationItemTap(args) {
-
-        var itemIndex = args.index;
-        var tappedItem = this.currentSubItems[itemIndex];
-        if (tappedItem.module === undefined) {
-            this.hasBackNavigation = tappedItem.parent !== undefined;
-            this.currentParent = tappedItem;
-        }
-
-        if (tappedItem.subItems.length > 0) {
-            topmost().navigate({
-                moduleName: "./navigation/category-list-page"
-            });
-        } else {
-            if (tappedItem.module) {
-                topmost().navigate({
-                    moduleName: tappedItem.module,
-                    context: tappedItem
-                });
-            }
-        }
-    }
 }
-
-export var navigationModel = new NavigationViewModel();

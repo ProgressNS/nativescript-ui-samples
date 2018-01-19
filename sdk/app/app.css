@@ -1,4 +1,6 @@
-﻿.title {
+﻿@import '~nativescript-theme-core/css/core.light.css';
+
+.title {
     font-size: 30;
     horizontal-align: center;
     margin:20;
@@ -20,7 +22,7 @@ button {
 }
 
 .drawerContent {
-    background-color: gray;
+    background-color: lightgray;
 }
 
 .drawerContentText {
@@ -107,7 +109,11 @@ button {
     font-weight: bold;
 }
 
-.item-template-style{
+.item-template-style {
     border-width:1;
     border-color: gray;
+}
+
+.btn {
+    margin: 0;
 }
