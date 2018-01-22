@@ -1,3 +1,4 @@
+import "./bundle-config";
 import application = require("tns-core-modules/application");
 import fresco = require("nativescript-fresco");
 application.setCssFileName("./app.css");
