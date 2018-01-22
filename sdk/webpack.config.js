@@ -16,6 +16,10 @@ module.exports = env => {
     const platforms = ["ios", "android"];
     const { snapshot, uglify, report } = env;
 
+    const nativeClassExtenders = [
+        join(__dirname, "app/main-activity.android.ts"),
+    ];
+
     const config = {
         context: resolve("./app"),
         target: nativescriptTarget,
@@ -123,7 +127,10 @@ module.exports = env => {
             projectRoot: __dirname,
             webpackConfig: config,
             targetArchs: ["arm", "arm64", "ia32"],
-            tnsJavaClassesOptions: { packages: ["tns-core-modules" ] },
+            tnsJavaClassesOptions: {
+                packages: [ "tns-core-modules" ],
+                modules: nativeClassExtenders,
+            },
             useLibs: false
         }));
     }
@@ -137,7 +144,6 @@ module.exports = env => {
                 mangle: { 
                     reserved:  [
                         ...nsWebpack.uglifyMangleExcludes,
-                        "org.nativescript.sdk.MainActivity",
                         "AutoCompleteAdapter"
                     ], 
                 },
