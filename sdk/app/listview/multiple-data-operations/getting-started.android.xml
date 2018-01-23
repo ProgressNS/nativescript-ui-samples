@@ -1,9 +1,9 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-pro-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
-    <GridLayout rows="auto, *">
+    <GridLayout rows="*, 7*">
         <StackLayout orientation="horizontal">
-            <Button text="{{isFilteringEnabled ? 'Disable filtering' : 'Enable filtering'}}" tap="toggleFilter"/>
-            <Button text="{{isSortingEnabled ? 'Disable sorting' : 'Enable sorting'}}" tap="toggleSorting"/>
-            <Button text="{{isGroupingEnabled ? 'Disable grouping' : 'Enable grouping'}}" tap="toggleGrouping"/>
+            <Button width="33%" text="{{isFilteringEnabled ? 'Disable filtering' : 'Enable filtering'}}" tap="toggleFilter"/>
+            <Button width="33%" text="{{isSortingEnabled ? 'Disable sorting' : 'Enable sorting'}}" tap="toggleSorting"/>
+            <Button width="33%" text="{{isGroupingEnabled ? 'Disable grouping' : 'Enable grouping'}}" tap="toggleGrouping"/>
         </StackLayout>
         <lv:RadListView id="myListView" row="1" items="{{ dataItems }}" 
                         sortingFunction="{{ mySortingFunc }}"
