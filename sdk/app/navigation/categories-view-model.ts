@@ -1,75 +1,29 @@
 import observableModule = require("tns-core-modules/data/observable");
-import frameModule = require("tns-core-modules/ui/frame");
+import { topmost } from "tns-core-modules/ui/frame";
+import { Page } from "tns-core-modules/ui/page";
 import { isAndroid } from "tns-core-modules/platform/platform";
+import { RadSideDrawer } from "nativescript-pro-ui/sidedrawer";
+import { ActionBar, NavigationButton } from "tns-core-modules/ui/action-bar";
+import utilsModule = require("tns-core-modules/utils/utils");
+import { NavigationItem } from "./navigation-item";
+import { PageViewModel } from "./page-view-model";
 
-export class NavigationItem {
-    private _subItems: Array<NavigationItem>;
-    private _title: string;
-    private _module: string;
-    private _parent: NavigationItem;
-
-    constructor(title: string, module: string, parent: NavigationItem) {
-        this._title = title;
-        this._parent = parent;
-        this._module = module;
-        this._subItems = new Array<NavigationItem>();
-    }
-
-    get subItems(): Array<NavigationItem> {
-        return this._subItems;
-    }
-
-    get title() {
-        return this._title;
-    }
-
-    set title(value: string) {
-        this._title = value;
-    }
-
-    get module() {
-        return this._module;
-    }
-
-    set module(value: string) {
-        this._module = value;
-    }
-
-    get parent() {
-        return this._parent;
-    }
-}
-
-export class NavigationViewModel extends observableModule.Observable {
+export class NavigationViewModel extends PageViewModel {
 
     private _lastTappedItem;
 
     constructor() {
         super();
-        this.currentParent = new NavigationItem("SDK Examples", undefined, undefined);
+        this._currentParent = new NavigationItem("SDK Examples", undefined, undefined);
         this.buildComponentList();
-        this.currentSubItems = this.currentParent.subItems;
-        this.hasBackNavigation = false;
+        this._currentSubItems = this._currentParent.subItems;
+        this._hasBackNavigation = false;
     }
 
-    get currentSubItems(): Array<NavigationItem> {
-        return this.get("_currentSubItems");
-    }
-
-    set currentSubItems(value: Array<NavigationItem>) {
-        this.set("_currentSubItems", value);
-    }
-
-    get currentParent() {
-        return this.get("_currentNavItem");
-    }
-
-    set currentParent(value: NavigationItem) {
-        this.set("_currentNavItem", value);
-    }
+    public page: Page;
 
     private buildComponentList() {
-        var parent = this.currentParent;
+        var parent = this._currentParent;
         this.buildChartExamples(parent);
         this.buildListViewExamples(parent);
         this.buildSideDrawerExamples(parent);
@@ -356,15 +310,15 @@ export class NavigationViewModel extends observableModule.Observable {
         dataOperations.subItems.push(exampleItem);
         var exampleItem = new NavigationItem("Grouping", "./listview/grouping/grouping", dataOperations);
         dataOperations.subItems.push(exampleItem);
-        if(isAndroid) {
+        if (isAndroid) {
             exampleItem = new NavigationItem("Collapsible Grouping", "./listview/grouping/grouping-collapsible", dataOperations);
             dataOperations.subItems.push(exampleItem);
         }
-        
+
         exampleItem = new NavigationItem("Multiple operations", "./listview/multiple-data-operations/getting-started", dataOperations);
         dataOperations.subItems.push(exampleItem);
-        
-        
+
+
         var exampleItem = new NavigationItem("Multiple Item Templates", "./listview/multiple-templates/multiple-templates", currentItem);
         currentItem.subItems.push(exampleItem);
 
@@ -470,9 +424,6 @@ export class NavigationViewModel extends observableModule.Observable {
 
         exampleItem = new NavigationItem("Events", "./sidedrawer/callbacks/drawer-callbacks", currentItem);
         currentItem.subItems.push(exampleItem);
-
-        exampleItem = new NavigationItem("Drawer Over Navigation", "./sidedrawer/over-navigation/drawer-over-navigation", currentItem);
-        currentItem.subItems.push(exampleItem);
     }
 
     private buildAutoCompleteExamples(currentParent: NavigationItem) {
@@ -552,52 +503,4 @@ export class NavigationViewModel extends observableModule.Observable {
         exampleItem = new NavigationItem("Animations", "./gauges/animations/animations", currentItem);
         currentItem.subItems.push(exampleItem);
     }
-
-    public canMoveBack(): boolean {
-        return this.hasBackNavigation;
-    }
-
-    public moveBack() {
-        this.currentParent = this.currentParent.parent;
-        this.hasBackNavigation = this.currentParent.parent !== undefined;
-    }
-
-    public initModelData() {
-        if (this.currentParent && this.currentParent.module === undefined) {
-            this.currentSubItems = this.currentParent.subItems;
-        }
-    }
-
-    public onNavigationItemTap(args) {
-
-        var itemIndex = args.index;
-        var tappedItem = this.currentSubItems[itemIndex];
-        if (tappedItem.module === undefined) {
-            this.hasBackNavigation = tappedItem.parent !== undefined;
-            this.currentParent = tappedItem;
-        }
-
-        if (tappedItem.subItems.length > 0) {
-            frameModule.topmost().navigate({
-                moduleName: "./navigation/category-list"
-            });
-        } else {
-            if (tappedItem.module) {
-                frameModule.topmost().navigate({
-                    moduleName: tappedItem.module,
-                    context: tappedItem
-                });
-            }
-        }
-    }
-
-    get hasBackNavigation() {
-        return this.get("_hasBack");
-    }
-
-    set hasBackNavigation(value: boolean) {
-        this.set("_hasBack", value);
-    }
 }
-
-export var navigationModel = new NavigationViewModel();

@@ -1,0 +1,39 @@
+<nsDrawer:RadSideDrawer id="sideDrawer" xmlns:nsDrawer="nativescript-pro-ui/sidedrawer" xmlns:lv="nativescript-pro-ui/listview">
+    <nsDrawer:RadSideDrawer.drawerContent>
+        <GridLayout rows="auto, *" class="drawerContent">
+            <StackLayout>
+                <Label text="{{ currentParent.title }}" class="h1 text-center" />
+            </StackLayout>
+            <lv:RadListView row="1" items="{{ currentSubItems }}" itemTap="{{ onNavigationItemTap }}" class="drawerContent" >
+                <lv:RadListView.itemTemplate>
+                    <StackLayout class="itemStackLayout">
+                        <Label text="{{ title }}" textWrap="true" class="btn btn-primary btn-active"/>
+                        <StackLayout height="1" class="drawerContent"/>
+                    </StackLayout>   
+                </lv:RadListView.itemTemplate>
+            </lv:RadListView>
+        </GridLayout>
+    </nsDrawer:RadSideDrawer.drawerContent>
+    <nsDrawer:RadSideDrawer.mainContent>
+       <Frame>
+            <Page xmlns="http://www.nativescript.org/tns.xsd"
+                  loaded="pageLoaded"
+                  navigatingFrom="onPageNavigatingFrom"
+                  navigatingTo="onPageNavigatingTo">
+                <Page.actionBar>
+                    <ActionBar title="{{ currentParent.title }}"/>
+                </Page.actionBar>
+                <GridLayout rows="auto, *">
+                    <lv:RadListView row="1" items="{{ currentSubItems }}" itemTap="{{ onNavigationItemTap }}" >
+                        <lv:RadListView.itemTemplate>
+                            <StackLayout class="itemStackLayout">
+                                <Label text="{{ title }}" textWrap="true" class="titleLabel"/>
+                                <StackLayout height="1" backgroundColor="#EEEEEE"/>
+                            </StackLayout>   
+                        </lv:RadListView.itemTemplate>
+                    </lv:RadListView>
+                </GridLayout>
+            </Page>
+        </Frame>
+    </nsDrawer:RadSideDrawer.mainContent>
+</nsDrawer:RadSideDrawer> 

@@ -24,4 +24,4 @@ if (application.android) {
     });
 }
 
-application.start("./navigation/category-list");
+application.run({ moduleName: "./navigation/category-list" });
