@@ -25,4 +25,4 @@ if (application.android) {
     });
 }
 
-application.start("./navigation/category-list");
+application.start("./navigation/category-list-page");

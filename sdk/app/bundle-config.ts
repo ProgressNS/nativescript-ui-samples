@@ -11,8 +11,10 @@ if ((<any>global).TNS_WEBPACK) {
     global.registerModule("nativescript-pro-ui/autocomplete", () => require("nativescript-pro-ui/autocomplete"));
     global.registerModule("nativescript-pro-ui/calendar", () => require("nativescript-pro-ui/calendar"));
     global.registerModule("nativescript-pro-ui/chart", () => require("nativescript-pro-ui/chart"));
+    global.registerModule("nativescript-pro-ui/dataform", () => require("nativescript-pro-ui/dataform"));
     global.registerModule("nativescript-pro-ui/feedback", () => require("nativescript-pro-ui/feedback"));
     global.registerModule("nativescript-pro-ui/gauges", () => require("nativescript-pro-ui/gauges"));
     global.registerModule("nativescript-pro-ui/listview", () => require("nativescript-pro-ui/listview"));
     global.registerModule("nativescript-pro-ui/sidedrawer", () => require("nativescript-pro-ui/sidedrawer"));
+    global.registerModule("nativescript-fresco", () => require("nativescript-fresco"));
 }
