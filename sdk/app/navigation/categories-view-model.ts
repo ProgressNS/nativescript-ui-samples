@@ -285,22 +285,22 @@ export class NavigationViewModel extends Observable {
 
         var stylingRoot = new NavigationItem("Styling", undefined, chartRoot);
         chartRoot.subItems.push(stylingRoot);
-        var stylingExample = new NavigationItem("Styling axes", "/chart/styling/styling-axes-page", stylingRoot);
+        var stylingExample = new NavigationItem("Styling axes", "./chart/styling/styling-axes-page", stylingRoot);
         stylingRoot.subItems.push(stylingExample);
 
-        stylingExample = new NavigationItem("Styling series", "/chart/styling/styling-series-page", stylingRoot);
+        stylingExample = new NavigationItem("Styling series", "./chart/styling/styling-series-page", stylingRoot);
         stylingRoot.subItems.push(stylingExample);
 
-        stylingExample = new NavigationItem("Styling Pie Chart series", "/chart/styling/styling-pie-series-page", stylingRoot);
+        stylingExample = new NavigationItem("Styling Pie Chart series", "./chart/styling/styling-pie-series-page", stylingRoot);
         stylingRoot.subItems.push(stylingExample);
 
-        stylingExample = new NavigationItem("Styling grid", "/chart/styling/styling-grid-page", stylingRoot);
+        stylingExample = new NavigationItem("Styling grid", "./chart/styling/styling-grid-page", stylingRoot);
         stylingRoot.subItems.push(stylingExample);
 
-        stylingExample = new NavigationItem("Styling labels", "/chart/styling/styling-labels-page", stylingRoot);
+        stylingExample = new NavigationItem("Styling labels", "./chart/styling/styling-labels-page", stylingRoot);
         stylingRoot.subItems.push(stylingExample);
 
-        stylingExample = new NavigationItem("Styling series selection", "/chart/styling/styling-selection-page", stylingRoot);
+        stylingExample = new NavigationItem("Styling series selection", "./chart/styling/styling-selection-page", stylingRoot);
         stylingRoot.subItems.push(stylingExample);
 
         var legendRoot = new NavigationItem("Legend", "./chart/legend/chart-legend-page", chartRoot);
