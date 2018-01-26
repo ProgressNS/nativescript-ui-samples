@@ -1,3 +1,4 @@
+import "./bundle-config";
 import application = require("tns-core-modules/application");
 import fresco = require("nativescript-fresco");
 application.setCssFileName("./app.css");
@@ -24,4 +25,4 @@ if (application.android) {
     });
 }
 
-application.start("./navigation/category-list");
+application.start("./navigation/category-list-page");
