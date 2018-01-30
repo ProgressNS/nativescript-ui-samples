@@ -1,10 +1,10 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-pro-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
 <!-- >> listview-grouping -->
-<GridLayout rows="auto, *">
+    <GridLayout rows="auto, *">
         <StackLayout orientation="horizontal">
                 <Button text="{{isEnabled ? 'Disable grouping' : 'Enable grouping'}}" tap="toggleGrouping"/>
         </StackLayout>
-        <lv:RadListView items="{{ dataItems }}" 
+        <lv:RadListView items="{{ dataItems }}"
                         row="1"
                         id="myListView"
                         groupingFunction="{{ myGroupingFunc }}">
