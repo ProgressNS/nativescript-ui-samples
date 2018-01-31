@@ -26,24 +26,13 @@ export class ViewModel extends Observable {
         this.set("_isEnabled", value);
     }
 
+    // >> listview-grouping-func
     get myGroupingFunc(): (item: any) => any {
         return (item: DataItem) => {
             return item.category;
         };
     }
-
-    get myFilteringFunc(): (item: any) => any {
-        return (item: DataItem) => {
-            return item.itemName.includes("Special Item");
-        };
-    }
-
-    get mySortingFunc(): (item: any, otherItem: any) => number {
-        return (item: DataItem, otherItem: DataItem) => {
-            var res = item.id < otherItem.id ? -1 : item.id > otherItem.id ? 1 : 0;
-            return res;
-        };
-    }
+    // << listview-grouping-func
 
     private getRandomLengthString() {
         var sentenceLength = Math.round((Math.random() * 15));

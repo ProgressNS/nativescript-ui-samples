@@ -1,4 +1,5 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-pro-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
+<!-- >> listview-multiple-data-operations-xml -->
     <GridLayout rows="*, 7*">
         <StackLayout orientation="horizontal">
             <Button width="33%" text="{{isFilteringEnabled ? 'Disable filtering' : 'Enable filtering'}}" tap="toggleFilter"/>
@@ -17,4 +18,5 @@
             </lv:RadListView.itemTemplate>
         </lv:RadListView>
     </GridLayout>
+<!-- << listview-multiple-data-operations-xml -->
 </navigation:ExamplePage>

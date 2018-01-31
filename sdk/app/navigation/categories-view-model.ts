@@ -361,9 +361,9 @@ export class NavigationViewModel extends Observable {
         // Data operations
         var dataOperations = new NavigationItem("Data Operations", undefined, currentItem);
         currentItem.subItems.push(dataOperations);
-        exampleItem = new NavigationItem("Filtering", "./listview/filtering/getting-started-page", dataOperations);
+        exampleItem = new NavigationItem("Filtering", "./listview/filtering/filtering-page", dataOperations);
         dataOperations.subItems.push(exampleItem);
-        exampleItem = new NavigationItem("Sorting", "./listview/sorting/getting-started-page", dataOperations);
+        exampleItem = new NavigationItem("Sorting", "./listview/sorting/sorting-page", dataOperations);
         dataOperations.subItems.push(exampleItem);
         var exampleItem = new NavigationItem("Grouping", "./listview/grouping/grouping-page", dataOperations);
         dataOperations.subItems.push(exampleItem);
@@ -372,7 +372,7 @@ export class NavigationViewModel extends Observable {
             dataOperations.subItems.push(exampleItem);
         }
         
-        exampleItem = new NavigationItem("Multiple operations", "./listview/multiple-data-operations/getting-started-page", dataOperations);
+        exampleItem = new NavigationItem("Multiple operations", "./listview/multiple-data-operations/multiple-data-operations-page", dataOperations);
         dataOperations.subItems.push(exampleItem);
         
         

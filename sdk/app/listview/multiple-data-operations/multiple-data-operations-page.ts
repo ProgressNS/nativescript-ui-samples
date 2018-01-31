@@ -1,3 +1,4 @@
+// >> listview-multiple-operations-code
 import { ViewModel } from "./multiple-model";
 import { Page } from "tns-core-modules/ui/page";
 import { RadListView } from "nativescript-pro-ui/listview";
@@ -43,3 +44,4 @@ export function toggleGrouping() {
         bindingContext.isGroupingEnabled = false;
     }
 }
+// << listview-multiple-operations-code
