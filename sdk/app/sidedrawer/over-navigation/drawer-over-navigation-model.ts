@@ -19,7 +19,7 @@ export class DrawerOverNavigationModel {
 
     public goToSecondPage() {
         var navigationEntry = {
-            moduleName: "./sidedrawer/over-navigation/second-page/second-drawer-over-navigation",
+            moduleName: "./sidedrawer/over-navigation/second-page/second-drawer-over-navigation-page",
             context: this,
             animated: true
         };
