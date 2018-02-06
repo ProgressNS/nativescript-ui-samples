@@ -15,25 +15,6 @@
         </GridLayout>
     </nsDrawer:RadSideDrawer.drawerContent>
     <nsDrawer:RadSideDrawer.mainContent>
-       <Frame>
-            <Page xmlns="http://www.nativescript.org/tns.xsd"
-                  loaded="pageLoaded"
-                  navigatingFrom="onPageNavigatingFrom"
-                  navigatingTo="onPageNavigatingTo">
-                <Page.actionBar>
-                    <ActionBar title="{{ currentParent.title }}"/>
-                </Page.actionBar>
-                <GridLayout rows="auto, *">
-                    <lv:RadListView row="1" items="{{ currentSubItems }}" itemTap="{{ onNavigationItemTap }}" >
-                        <lv:RadListView.itemTemplate>
-                            <StackLayout class="itemStackLayout">
-                                <Label text="{{ title }}" textWrap="true" class="titleLabel"/>
-                                <StackLayout height="1" backgroundColor="#EEEEEE"/>
-                            </StackLayout>   
-                        </lv:RadListView.itemTemplate>
-                    </lv:RadListView>
-                </GridLayout>
-            </Page>
-        </Frame>
+       <Frame defaultPage="./navigation/main-content-page"></Frame>
     </nsDrawer:RadSideDrawer.mainContent>
 </nsDrawer:RadSideDrawer> 
