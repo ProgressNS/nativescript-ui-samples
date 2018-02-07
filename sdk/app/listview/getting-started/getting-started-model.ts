@@ -1,7 +1,6 @@
 // >> listview-first-look-model
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { Observable } from "tns-core-modules/data/observable";
-import timer = require("tns-core-modules/timer");
 
 export class ViewModel extends Observable {
     private _words = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"];
