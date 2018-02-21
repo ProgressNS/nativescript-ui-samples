@@ -1,5 +1,5 @@
 import { ObservableArray } from "tns-core-modules/data/observable-array";
-import { TokenModel, RadAutoCompleteTextView } from "nativescript-pro-ui/autocomplete";
+import { TokenModel, RadAutoCompleteTextView } from "nativescript-ui-autocomplete";
 import { Observable } from "tns-core-modules/data/observable";
 import { Page } from "tns-core-modules/ui/page";
 

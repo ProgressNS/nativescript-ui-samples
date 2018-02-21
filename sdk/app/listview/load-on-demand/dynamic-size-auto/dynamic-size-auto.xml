@@ -1,6 +1,6 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" 
                         xmlns:f="nativescript-fresco"
-                        xmlns:lv="nativescript-pro-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
+                        xmlns:lv="nativescript-ui-listview" xmlns="http://www.nativescript.org/tns.xsd">
     <lv:RadListView id="ls" items="{{ dataItems }}"  row="0" loadOnDemandMode="Auto" loadMoreDataRequested="{{onLoadMoreItemsRequested}}">   
         <lv:RadListView.itemTemplate>
             <StackLayout orientation="vertical" padding="5 10 5 10"  style="background-color: #7fff7f;">

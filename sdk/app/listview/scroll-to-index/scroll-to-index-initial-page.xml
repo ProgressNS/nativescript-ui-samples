@@ -1,6 +1,6 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" 
                         loaded="onPageLoaded" 
-                        xmlns:lv="nativescript-pro-ui/listview" 
+                        xmlns:lv="nativescript-ui-listview" 
                         xmlns="http://www.nativescript.org/tns.xsd">
     <GridLayout rows="auto, *" backgroundColor="lightgray">
         <Label text="RadListView is initially scrolled so that 'item 20' is visible" textWrap="true" margin="10" />

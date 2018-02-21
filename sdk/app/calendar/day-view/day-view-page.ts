@@ -1,5 +1,5 @@
 import viewModel = require("./day-view-model");
-import calendarModule = require("nativescript-pro-ui/calendar");
+import calendarModule = require("nativescript-ui-calendar");
 import dialogs = require("ui/dialogs");
 
 export function onPageLoaded(args){

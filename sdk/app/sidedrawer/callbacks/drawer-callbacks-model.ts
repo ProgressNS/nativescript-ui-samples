@@ -1,4 +1,4 @@
-import { RadSideDrawer, DrawerStateChangingEventArgs, DrawerStateChangedEventArgs } from "nativescript-pro-ui/sidedrawer";
+import { RadSideDrawer, DrawerStateChangingEventArgs, DrawerStateChangedEventArgs } from "nativescript-ui-sidedrawer";
 import { Observable } from "tns-core-modules/data/observable";
 import frameModule = require("tns-core-modules/ui/frame");
 

@@ -1,7 +1,7 @@
 
 <navigation:ExamplePage
     xmlns:navigation="navigation/example-page"
-    xmlns:calendar="nativescript-pro-ui/calendar"
+    xmlns:calendar="nativescript-ui-calendar"
     xmlns="http://www.nativescript.org/tns.xsd">
     <navigation.actionBar>
         <ActionBar title="Localization" />

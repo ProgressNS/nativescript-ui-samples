@@ -1,7 +1,7 @@
 // >> sidedrawer-getting-started-model
 import { Observable } from "tns-core-modules/data/observable";
 import frame = require("tns-core-modules/ui/frame");
-import { RadSideDrawer } from "nativescript-pro-ui/sidedrawer";
+import { RadSideDrawer } from "nativescript-ui-sidedrawer";
 
 export class GettingStartedViewModel extends Observable {
     constructor() {

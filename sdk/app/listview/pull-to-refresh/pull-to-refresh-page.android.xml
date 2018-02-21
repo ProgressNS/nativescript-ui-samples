@@ -1,4 +1,4 @@
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:f="nativescript-fresco" loaded="onPageLoaded" xmlns:lv="nativescript-pro-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:f="nativescript-fresco" loaded="onPageLoaded" xmlns:lv="nativescript-ui-listview" xmlns="http://www.nativescript.org/tns.xsd">
     <GridLayout orientation="vertical" rows="auto, *">
         <lv:RadListView items="{{ dataItems }}" row="1" pullToRefresh="true" pullToRefreshInitiated="{{onPullToRefreshInitiated}}">
             <lv:RadListView.itemTemplate>

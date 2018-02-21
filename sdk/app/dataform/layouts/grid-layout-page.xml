@@ -1,6 +1,6 @@
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-pro-ui/dataform" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-ui-dataform" xmlns="http://www.nativescript.org/tns.xsd">
 <!-- >> dataform-grid-layout-xml -->
-    <df:RadDataForm source="{{ person }}" xmlns:df="nativescript-pro-ui/dataform" >
+    <df:RadDataForm source="{{ person }}" xmlns:df="nativescript-ui-dataform" >
         <df:RadDataForm.groups>
             <df:PropertyGroup collapsible="true" name="Main Info" hidden="false" >
                 <df:PropertyGroup.layout>		

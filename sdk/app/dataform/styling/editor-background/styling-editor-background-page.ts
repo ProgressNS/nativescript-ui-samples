@@ -1,5 +1,5 @@
 import { EmployeeViewModel } from "./../../view-models/employee-model";
-import { RadDataForm, EntityProperty, DataFormEventData, EditorType } from "nativescript-pro-ui/dataform";
+import { RadDataForm, EntityProperty, DataFormEventData, EditorType } from "nativescript-ui-dataform";
 import * as utilsModule from "tns-core-modules/utils/utils";
 import { ios } from "tns-core-modules/application";
 import { Color } from "tns-core-modules/color";

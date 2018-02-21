@@ -1,4 +1,4 @@
-import * as calendarModule from "nativescript-pro-ui/calendar";
+import * as calendarModule from "nativescript-ui-calendar";
 import { Observable } from "tns-core-modules/data/observable";
 import * as frameModule from "tns-core-modules/ui/frame";
 import { Color } from "tns-core-modules/color";

@@ -1,4 +1,4 @@
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:rc="nativescript-pro-ui/calendar" loaded="onPageLoaded" navigatingFrom="onNavigatedFrom" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:rc="nativescript-ui-calendar" loaded="onPageLoaded" navigatingFrom="onNavigatedFrom" xmlns="http://www.nativescript.org/tns.xsd">
     <navigation.actionBar>
         <ActionBar title="View modes">
             <ActionBar.actionItems>

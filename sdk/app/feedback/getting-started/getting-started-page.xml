@@ -1,8 +1,0 @@
-<!-- >> feedback-getting-started-xml -->
-<navigation:ExamplePage loaded="onPageLoaded" xmlns:navigation="navigation/example-page" xmlns:lv="nativescript-pro-ui/feedback" xmlns="http://www.nativescript.org/tns.xsd">
-    <StackLayout>
-        <Label textWrap="true" text="{{title}}" margin="8"/>
-        <Button id="btnShowFeedback" tap="btnShowFeedbackTap" text="Start feedback" margin="8" />
-    </StackLayout>
-</navigation:ExamplePage>
-<!-- << feedback-getting-started-xml -->

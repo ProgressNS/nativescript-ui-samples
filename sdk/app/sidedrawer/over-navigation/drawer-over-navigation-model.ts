@@ -1,4 +1,4 @@
-import drawerModule = require("nativescript-pro-ui/sidedrawer");
+import drawerModule = require("nativescript-ui-sidedrawer");
 import frameModule = require("tns-core-modules/ui/frame");
 
 export class DrawerOverNavigationModel {

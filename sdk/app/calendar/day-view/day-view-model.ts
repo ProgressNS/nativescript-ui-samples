@@ -1,5 +1,5 @@
 import observableModule = require("tns-core-modules/data/observable");
-import calendarModule = require("nativescript-pro-ui/calendar");
+import calendarModule = require("nativescript-ui-calendar");
 import { Color } from "tns-core-modules/color";
 
 export class ViewModel extends observableModule.Observable {

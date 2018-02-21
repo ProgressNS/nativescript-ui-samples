@@ -1,5 +1,5 @@
 import { ViewModel } from "./scroll-to-index-model-horizontal";
-import { RadListView } from "nativescript-pro-ui/listview";
+import { RadListView } from "nativescript-ui-listview";
 import frameModule = require("tns-core-modules/ui/frame");
 
 var viewModelContext: ViewModel;

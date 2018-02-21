@@ -1,5 +1,5 @@
 import viewModel = require("./../../view-models/person-base-model");
-import dataFormModule = require("nativescript-pro-ui/dataform");
+import dataFormModule = require("nativescript-ui-dataform");
 
 export function onPageLoaded(args) {
     var page = args.object;

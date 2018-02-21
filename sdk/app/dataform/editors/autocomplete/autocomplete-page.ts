@@ -1,5 +1,5 @@
 import viewModel = require("./../../view-models/booking-model");
-import { DataFormEventData, EntityProperty, RadDataForm } from "nativescript-pro-ui/dataform";
+import { DataFormEventData, EntityProperty, RadDataForm } from "nativescript-ui-dataform";
 import { Page } from "tns-core-modules/ui/page";
 
 var dataform: RadDataForm;

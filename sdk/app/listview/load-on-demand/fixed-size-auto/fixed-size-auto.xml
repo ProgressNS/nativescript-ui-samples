@@ -1,5 +1,5 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:f="nativescript-fresco" loaded="onPageLoaded" 
-                        xmlns:lv="nativescript-pro-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
+                        xmlns:lv="nativescript-ui-listview" xmlns="http://www.nativescript.org/tns.xsd">
     <lv:RadListView id="ls" items="{{ dataItems }}"  row="0" loadOnDemandMode="Auto" loadMoreDataRequested="{{onLoadMoreItemsRequested}}">
         <lv:RadListView.listViewLayout>
             <lv:ListViewLinearLayout scrollDirection="Vertical" itemHeight="120"/>

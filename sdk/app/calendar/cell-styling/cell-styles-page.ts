@@ -1,5 +1,5 @@
 import {StylingViewModel} from "./cell-styles-model";
-import * as calendarModule from "nativescript-pro-ui/calendar";
+import * as calendarModule from "nativescript-ui-calendar";
 
 
 var viewModelContext : StylingViewModel;

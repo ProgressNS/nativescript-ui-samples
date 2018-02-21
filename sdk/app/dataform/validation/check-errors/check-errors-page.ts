@@ -1,7 +1,7 @@
 import viewModel = require("./../../view-models/user-model");
 import { Label } from "tns-core-modules/ui/label";
 import * as viewModule from "tns-core-modules/ui/core/view";
-import { RadDataForm } from "nativescript-pro-ui/dataform";
+import { RadDataForm } from "nativescript-ui-dataform";
 import { isAndroid } from "tns-core-modules/platform"
 
 var resultLabel: Label;

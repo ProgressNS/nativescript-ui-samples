@@ -2,7 +2,7 @@ import viewModel = require("./../../view-models/settings-model");
 import application = require("tns-core-modules/application");
 import { Color } from "tns-core-modules/color";
 import viewModule = require("tns-core-modules/ui/core/view");
-import { RadDataForm, EntityProperty, DataFormEventData } from "nativescript-pro-ui/dataform";
+import { RadDataForm, EntityProperty, DataFormEventData } from "nativescript-ui-dataform";
 
 var colorLight = new Color("#CDDC39");
 var colorDark = new Color("#4CAF50");
