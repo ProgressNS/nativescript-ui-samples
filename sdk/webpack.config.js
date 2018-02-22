@@ -94,7 +94,7 @@ module.exports = env => {
                 { from: "**/*.jpg" },
                 { from: "**/*.png" },
                 { from: "**/*.xml" },
-                { from: "**/person-model.json" },
+                { from: "**/person-model-2.json" },
                 { from: "**/person-metadata.json" },
             ]),
             // Generate a bundle starter script and activate it in package.json
