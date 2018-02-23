@@ -1,4 +1,4 @@
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-pro-ui/dataform" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-ui-dataform" xmlns="http://www.nativescript.org/tns.xsd">
     <StackLayout>
         <df:RadDataForm id="myDataForm" source="{{ baseUser }}" validationMode="Manual" commitMode="Manual">
             <df:RadDataForm.properties>

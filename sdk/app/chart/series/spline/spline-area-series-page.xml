@@ -1,5 +1,5 @@
 <!-- >> spline-area-series-xml -->
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-pro-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-ui-chart" xmlns="http://www.nativescript.org/tns.xsd">
     <chart:RadCartesianChart id="cartesianChart">
         <chart:RadCartesianChart.series>
             <chart:SplineAreaSeries items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="Amount">

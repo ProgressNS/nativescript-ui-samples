@@ -1,7 +1,7 @@
 // >> listview-multiple-operations-code
 import { ViewModel } from "./multiple-model";
 import { Page } from "tns-core-modules/ui/page";
-import { RadListView } from "nativescript-pro-ui/listview";
+import { RadListView } from "nativescript-ui-listview";
 
 var page: Page;
 var bindingContext: ViewModel;

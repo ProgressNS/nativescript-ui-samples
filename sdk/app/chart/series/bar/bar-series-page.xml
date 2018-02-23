@@ -1,5 +1,5 @@
 <!-- >> bar-series -->
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded"  xmlns:chart="nativescript-pro-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded"  xmlns:chart="nativescript-ui-chart" xmlns="http://www.nativescript.org/tns.xsd">
     <chart:RadCartesianChart id="cartesianChart">
     <!-- >> categorical-axis-example -->
         <chart:RadCartesianChart.series>

@@ -1,4 +1,4 @@
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-pro-ui/dataform" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-ui-dataform" xmlns="http://www.nativescript.org/tns.xsd">
     <GridLayout rows="auto, auto, auto, *">
         <Label id="myLabel" text="ACTUAL VALUES:" fontWeight="bold" margin="16" />
         <Label id="myLabel" text="{{ sourceText }}" textWrap="true" row="1" marginLeft="16" />

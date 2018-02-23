@@ -1,5 +1,5 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded"
-    xmlns:df="nativescript-pro-ui/dataform" xmlns="http://www.nativescript.org/tns.xsd">
+    xmlns:df="nativescript-ui-dataform" xmlns="http://www.nativescript.org/tns.xsd">
 
     <df:RadDataForm id="myDataForm" source="{{ employee }}" editorUpdate="dfEditorUpdate">
         <df:RadDataForm.properties>

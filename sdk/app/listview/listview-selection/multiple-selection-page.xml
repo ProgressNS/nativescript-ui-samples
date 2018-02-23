@@ -1,4 +1,4 @@
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-pro-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-ui-listview" xmlns="http://www.nativescript.org/tns.xsd">
     <!-- >> listview-multiple-selection-xml -->
     <lv:RadListView id="listView" items="{{ dataItems }}" row="1" selectionBehavior="Press" multipleSelection="true">
     <!-- << listview-multiple-selection-xml -->

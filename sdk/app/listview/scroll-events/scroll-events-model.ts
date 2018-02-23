@@ -1,6 +1,6 @@
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { Observable } from "tns-core-modules/data/observable";
-import listViewModule = require("nativescript-pro-ui/listview");
+import listViewModule = require("nativescript-ui-listview");
 import timer = require("tns-core-modules/timer");
 
 export class ViewModel extends Observable {

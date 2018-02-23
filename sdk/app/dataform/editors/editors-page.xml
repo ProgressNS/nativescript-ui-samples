@@ -1,4 +1,4 @@
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-pro-ui/dataform" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-ui-dataform" xmlns="http://www.nativescript.org/tns.xsd">
     <df:RadDataForm id="myDataForm" source="{{ ticketOrder }}">
         <df:RadDataForm.properties>
             <df:EntityProperty name="movie" displayName="Movie Name" index="0" converter="{{ $value }}" valuesProvider="{{ movieNames }}">

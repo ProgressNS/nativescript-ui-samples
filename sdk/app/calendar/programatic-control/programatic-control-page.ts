@@ -1,4 +1,4 @@
-import calendarModule = require("nativescript-pro-ui/calendar");
+import calendarModule = require("nativescript-ui-calendar");
 
 var calendar : calendarModule.RadCalendar;
 

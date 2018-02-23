@@ -1,6 +1,6 @@
 
 import viewModel = require("./scroll-events-model");
-import listViewModule = require("nativescript-pro-ui/listview");
+import listViewModule = require("nativescript-ui-listview");
 import frameModule = require("tns-core-modules/ui/frame");
 import labelModule = require("tns-core-modules/ui/label");
 

@@ -1,6 +1,6 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page"
     xmlns:v="dataform/validation/custom-validator/exact-text-validator-page"
-    loaded="onPageLoaded" xmlns:df="nativescript-pro-ui/dataform" xmlns="http://www.nativescript.org/tns.xsd">
+    loaded="onPageLoaded" xmlns:df="nativescript-ui-dataform" xmlns="http://www.nativescript.org/tns.xsd">
     <df:RadDataForm id="myDataForm" source="{{ user }}">
         <df:RadDataForm.properties>
             <!-- >> dataform-custom-validator-xml -->

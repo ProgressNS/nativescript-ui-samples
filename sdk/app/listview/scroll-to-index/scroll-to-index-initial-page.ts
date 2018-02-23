@@ -1,5 +1,5 @@
 import { ViewModel } from "./scroll-to-index-model-initial";
-import { RadListView, ListViewItemSnapMode } from "nativescript-pro-ui/listview";
+import { RadListView, ListViewItemSnapMode } from "nativescript-ui-listview";
 import { EventData } from "tns-core-modules/data/observable";
 import { ios as isIOS } from "tns-core-modules/application";
 

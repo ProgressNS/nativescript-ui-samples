@@ -1,4 +1,4 @@
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-pro-ui/chart" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-ui-chart" xmlns="http://www.nativescript.org/tns.xsd">
 <GridLayout rows="auto, *">
     <Label text="Tap and hold on a given datapoint to display the Trackball. Drag across datapoints to update the Trackball position." textWrap="true"/>
     <!-- >> chart-trackball-xml -->

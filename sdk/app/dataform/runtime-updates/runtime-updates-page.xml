@@ -1,4 +1,4 @@
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-pro-ui/dataform" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-ui-dataform" xmlns="http://www.nativescript.org/tns.xsd">
     <GridLayout rows="auto, *" orientation="vertical">
         <Button id="myButton" text="name: displayName" horizontalAlignment="stretch" tap="onTap" row="0"/>
         <df:RadDataForm id="myDataForm" source="{{ person }}" row="1">

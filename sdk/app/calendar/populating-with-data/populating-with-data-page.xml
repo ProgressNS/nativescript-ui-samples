@@ -1,4 +1,4 @@
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-pro-ui/listview" xmlns:rc="nativescript-pro-ui/calendar" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-ui-listview" xmlns:rc="nativescript-ui-calendar" xmlns="http://www.nativescript.org/tns.xsd">
     <navigation.actionBar>
         <ActionBar title="Populating with data" />
     </navigation.actionBar>

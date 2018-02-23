@@ -1,5 +1,5 @@
 import { ObservableArray } from "tns-core-modules/data/observable-array";
-import * as listViewModule from "nativescript-pro-ui/listview";
+import * as listViewModule from "nativescript-ui-listview";
 import { Observable } from "tns-core-modules/data/observable";
 import * as timer from "tns-core-modules/timer";
 import * as frameModule from "tns-core-modules/ui/frame";

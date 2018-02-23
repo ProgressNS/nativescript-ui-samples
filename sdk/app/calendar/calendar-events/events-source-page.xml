@@ -1,6 +1,6 @@
 <navigation:ExamplePage 
     xmlns:navigation="navigation/example-page"
-    xmlns:calendar="nativescript-pro-ui/calendar"
+    xmlns:calendar="nativescript-ui-calendar"
     loaded="onPageLoaded" navigatedTo="onNavigatedTo"
     navigatingFrom="onNavigatedFrom"
     xmlns="http://www.nativescript.org/tns.xsd">

@@ -2,7 +2,7 @@
                         loaded="onPageLoaded" 
                         navigatedTo="onNavigatedTo"
                         navigatingFrom="onNavigatedFrom"
-                        xmlns:lv="nativescript-pro-ui/listview" 
+                        xmlns:lv="nativescript-ui-listview" 
                         xmlns="http://www.nativescript.org/tns.xsd">
     <navigation.actionBar>
         <ActionBar title="Scroll to index">

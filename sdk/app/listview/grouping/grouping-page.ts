@@ -1,6 +1,6 @@
 // >> listview-grouping-context
 import { ViewModel } from "./grouping-model";
-import { RadListView } from "nativescript-pro-ui/listview";
+import { RadListView } from "nativescript-ui-listview";
 import { Page } from "tns-core-modules/ui/page";
 import { EventData } from "tns-core-modules/data/observable";
 

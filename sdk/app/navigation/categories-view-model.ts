@@ -85,17 +85,9 @@ export class NavigationViewModel extends Observable {
         this.buildListViewExamples(parent);
         this.buildSideDrawerExamples(parent);
         this.buildCalendarExamples(parent);
-        this.buildFeedbackExamples(parent);
         this.buildDataFormExamples(parent);
         this.buildAutoCompleteExamples(parent);
         this.buildGaugesExamples(parent);
-    }
-
-    private buildFeedbackExamples(currentParent: NavigationItem) {
-        var feedbackRoot = new NavigationItem("Feedback", undefined, currentParent);
-        currentParent.subItems.push(feedbackRoot);
-        var calendarExample = new NavigationItem("Getting started", "./feedback/getting-started/getting-started-page", feedbackRoot);
-        feedbackRoot.subItems.push(calendarExample);
     }
 
     private buildCalendarExamples(currentParent: NavigationItem) {
