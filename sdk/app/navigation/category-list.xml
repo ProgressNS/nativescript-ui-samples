@@ -1,15 +1,15 @@
 <nsDrawer:RadSideDrawer id="sideDrawer" xmlns:nsDrawer="nativescript-pro-ui/sidedrawer" xmlns:lv="nativescript-pro-ui/listview">
     <nsDrawer:RadSideDrawer.drawerContent>
-        <GridLayout rows="auto, *" class="drawerContent">
+        <GridLayout rows="auto, *" class="root-drawer-content">
             <StackLayout>
                 <Label text="{{ currentParent.title }}" class="h1 text-center" />
             </StackLayout>
-            <lv:RadListView row="1" items="{{ currentSubItems }}" itemTap="{{ onNavigationItemTap }}" class="drawerContent" >
+            <lv:RadListView row="1" items="{{ currentSubItems }}" itemTap="{{ onNavigationItemTap }}" class="root-drawer-content" >
                 <lv:RadListView.itemTemplate>
-                    <StackLayout class="itemStackLayout">
+                    <StackLayout class="root-item-stack-layout">
                         <Label text="{{ title }}" textWrap="true" class="btn btn-primary btn-active"/>
-                        <StackLayout height="1" class="drawerContent"/>
-                    </StackLayout>   
+                        <StackLayout height="1" class="root-drawer-content"/>
+                    </StackLayout>
                 </lv:RadListView.itemTemplate>
             </lv:RadListView>
         </GridLayout>

@@ -85,18 +85,6 @@ button {
     padding: 5;
 }
 
-.titleLabel {
-    margin: 16;
-    vertical-align: center;
-}
-
-.itemStackLayout {
-    text-align: left;
-    vertical-align: center;
-    font-size: 16;
-    color:#404040;
-}
-
 .label {
     margin-left: 20;
     margin-top: 20;
@@ -117,3 +105,7 @@ button {
 .btn {
     margin: 0;
 }
+
+/* .test {
+    background-color: red;
+} */
