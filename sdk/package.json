@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "nativescript-fresco": "^3.0.2",
-    "nativescript-ui-autocomplete": "^3.5.0",
+    "nativescript-ui-autocomplete": "^3.6.0",
     "nativescript-ui-calendar": "^3.5.0",
     "nativescript-ui-chart": "^3.5.0",
     "nativescript-ui-dataform": "^3.5.0",
