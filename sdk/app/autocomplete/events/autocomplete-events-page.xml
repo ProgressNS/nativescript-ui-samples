@@ -5,7 +5,7 @@
         <au:RadAutoCompleteTextView id="autocmp" items="{{ dataItems }}"
           suggestMode="Suggest" displayMode="Tokens" 
           suggestionViewBecameVisible="{{ onSuggestionViewBecameVisible }}"
-          didAutoComplete="{{ onDidAutoComplete }}"
+          didAutoComplete="{{ onDidAutoComplete }}" textChanged="{{ onTextChanged }}"
           tokenAdded="{{ onTokenAdded}}" tokenRemoved="{{ onTokenRemoved }}"
           tokenSelected= "{{ onTokenSelected }}" tokenDeselected= "{{ onTokenDeselected }}">
             <au:RadAutoCompleteTextView.suggestionView>
