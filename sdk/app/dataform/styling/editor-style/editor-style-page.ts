@@ -1,5 +1,5 @@
 import { PersonBaseViewModel} from "./../../view-models/person-base-model";
-import { FontStyles, PropertyEditor } from "nativescript-pro-ui/dataform";
+import { FontStyles, PropertyEditor } from "nativescript-ui-dataform";
 
 var nameEditor: PropertyEditor;
 var ageEditor: PropertyEditor;

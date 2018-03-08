@@ -1,5 +1,5 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" 
-                        xmlns:lv="nativescript-pro-ui/listview" 
+                        xmlns:lv="nativescript-ui-listview" 
                         xmlns="http://www.nativescript.org/tns.xsd"
                         loaded="onPageLoaded" 
                         navigatedTo="onNavigatedTo" 

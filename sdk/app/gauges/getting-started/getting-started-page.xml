@@ -1,4 +1,4 @@
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:gauge="nativescript-pro-ui/gauges" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:gauge="nativescript-ui-gauge" xmlns="http://www.nativescript.org/tns.xsd">
     <!-- >> gauges-getting-started-add -->
     <gauge:RadRadialGauge> 
         <!-- >> (hide) -->

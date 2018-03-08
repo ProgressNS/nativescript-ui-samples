@@ -1,4 +1,4 @@
-import calendarModule = require("nativescript-pro-ui/calendar");
+import calendarModule = require("nativescript-ui-calendar");
 
 export function onPageLoaded(args){
     var page = args.object;

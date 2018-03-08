@@ -1,5 +1,5 @@
 import frameModule = require("tns-core-modules/ui/frame");
-import drawerModule = require("nativescript-pro-ui/sidedrawer");
+import drawerModule = require("nativescript-ui-sidedrawer");
 import observableModule = require("tns-core-modules/data/observable");
 
 export class DrawerTransitionsModel {

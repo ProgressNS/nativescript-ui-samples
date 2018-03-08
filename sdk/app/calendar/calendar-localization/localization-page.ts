@@ -1,5 +1,5 @@
 import frameModule = require('tns-core-modules/ui/frame');
-import { RadCalendar } from 'nativescript-pro-ui/calendar';
+import { RadCalendar } from 'nativescript-ui-calendar';
 import { Button } from 'tns-core-modules/ui/button';
 
 export function btnChangeLocaleTap(args) {

@@ -1,4 +1,4 @@
-import chartModule = require("nativescript-pro-ui/chart");
+import chartModule = require("nativescript-ui-chart");
 import frameModule = require("tns-core-modules/ui/frame");
 
 import dataModelModule = require("../../data-models/categorical-data-model");

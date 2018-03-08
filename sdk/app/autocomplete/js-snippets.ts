@@ -1,6 +1,6 @@
 // >> autocomplete-generate-data
 import { ObservableArray } from "tns-core-modules/data/observable-array";
-import { TokenModel } from "nativescript-pro-ui/autocomplete";
+import { TokenModel } from "nativescript-ui-autocomplete";
 import { Observable } from "tns-core-modules/data/observable";
 
 export class ViewModel extends Observable {

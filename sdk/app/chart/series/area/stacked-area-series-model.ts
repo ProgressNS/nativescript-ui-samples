@@ -1,5 +1,5 @@
 import {ObservableArray} from "tns-core-modules/data/observable-array";
-import chartModule = require("nativescript-pro-ui/chart");
+import chartModule = require("nativescript-ui-chart");
 import observableModule = require("tns-core-modules/data/observable");
 import frameModule = require("tns-core-modules/ui/frame");
 var _isFirstLoad = true;

@@ -1,4 +1,4 @@
-import dataFormModule = require("nativescript-pro-ui/dataform");
+import dataFormModule = require("nativescript-ui-dataform");
 
 // >> dataform-custom-validator
 export class ExactTextValidator extends dataFormModule.PropertyValidator {

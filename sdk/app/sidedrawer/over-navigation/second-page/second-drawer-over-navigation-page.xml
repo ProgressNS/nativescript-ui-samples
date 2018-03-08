@@ -1,7 +1,7 @@
 <Page xmlns:navigation="navigation/example-page"  
   loaded="pageLoaded" 
   navigatedTo="onNavigatedTo"  
-  xmlns:nsDrawer="nativescript-pro-ui/sidedrawer"
+  xmlns:nsDrawer="nativescript-ui-sidedrawer"
   xmlns="http://www.nativescript.org/tns.xsd">
   <nsDrawer:RadSideDrawer id="sideDrawer" showOverNavigation="true">
       <nsDrawer:RadSideDrawer.drawerContent>

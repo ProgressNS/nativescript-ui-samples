@@ -1,5 +1,5 @@
 import viewModel = require("./transition-modes-model");
-import calendarModule = require("nativescript-pro-ui/calendar");
+import calendarModule = require("nativescript-ui-calendar");
 
 var viewModelContext : viewModel.ViewModel;
 

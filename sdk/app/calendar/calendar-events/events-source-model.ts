@@ -1,6 +1,6 @@
 import observableModule = require("tns-core-modules/data/observable");
 // >> calendar-calendar-require
-import calendarModule = require("nativescript-pro-ui/calendar");
+import calendarModule = require("nativescript-ui-calendar");
 // << calendar-calendar-require
 
 // >> events-source-model

@@ -8,13 +8,12 @@ if ((<any>global).TNS_WEBPACK) {
     const context = (<any>require).context("~/", true, /(page|fragment)\.(xml|css|js|ts|scss|less|sass)$/);
     global.registerWebpackModules(context);
 
-    global.registerModule("nativescript-pro-ui/autocomplete", () => require("nativescript-pro-ui/autocomplete"));
-    global.registerModule("nativescript-pro-ui/calendar", () => require("nativescript-pro-ui/calendar"));
-    global.registerModule("nativescript-pro-ui/chart", () => require("nativescript-pro-ui/chart"));
-    global.registerModule("nativescript-pro-ui/dataform", () => require("nativescript-pro-ui/dataform"));
-    global.registerModule("nativescript-pro-ui/feedback", () => require("nativescript-pro-ui/feedback"));
-    global.registerModule("nativescript-pro-ui/gauges", () => require("nativescript-pro-ui/gauges"));
-    global.registerModule("nativescript-pro-ui/listview", () => require("nativescript-pro-ui/listview"));
-    global.registerModule("nativescript-pro-ui/sidedrawer", () => require("nativescript-pro-ui/sidedrawer"));
+    global.registerModule("nativescript-ui-autocomplete", () => require("nativescript-ui-autocomplete"));
+    global.registerModule("nativescript-ui-calendar", () => require("nativescript-ui-calendar"));
+    global.registerModule("nativescript-ui-chart", () => require("nativescript-ui-chart"));
+    global.registerModule("nativescript-ui-dataform", () => require("nativescript-ui-dataform"));
+    global.registerModule("nativescript-ui-gauge", () => require("nativescript-ui-gauge"));
+    global.registerModule("nativescript-ui-listview", () => require("nativescript-ui-listview"));
+    global.registerModule("nativescript-ui-sidedrawer", () => require("nativescript-ui-sidedrawer"));
     global.registerModule("nativescript-fresco", () => require("nativescript-fresco"));
 }

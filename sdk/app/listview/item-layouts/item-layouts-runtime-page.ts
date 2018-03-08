@@ -1,6 +1,6 @@
 import { ViewModel } from "./item-layouts-model";
 import { Page } from "tns-core-modules/ui/page";
-import { RadListView, ListViewGridLayout, ListViewLinearLayout, ListViewStaggeredLayout } from "nativescript-pro-ui/listview";
+import { RadListView, ListViewGridLayout, ListViewLinearLayout, ListViewStaggeredLayout } from "nativescript-ui-listview";
 import { ios as isIOS } from "application";
 
 let listView: RadListView;

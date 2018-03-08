@@ -1,5 +1,5 @@
 import viewModel = require("./../view-models/user-model");
-import dataFormModule = require("nativescript-pro-ui/dataform");
+import dataFormModule = require("nativescript-ui-dataform");
 import dialogs = require("ui/dialogs");
 
 var dataform;

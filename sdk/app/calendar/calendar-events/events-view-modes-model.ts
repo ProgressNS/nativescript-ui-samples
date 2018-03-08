@@ -1,5 +1,5 @@
 import observableModule = require("tns-core-modules/data/observable");
-import calendarModule = require("nativescript-pro-ui/calendar");
+import calendarModule = require("nativescript-ui-calendar");
 import frameModule = require("tns-core-modules/ui/frame");
 
 export class ViewModel extends observableModule.Observable {

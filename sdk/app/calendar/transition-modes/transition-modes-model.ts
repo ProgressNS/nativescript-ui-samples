@@ -1,4 +1,4 @@
-import calendarModule = require("nativescript-pro-ui/calendar");
+import calendarModule = require("nativescript-ui-calendar");
 import observableModule = require("tns-core-modules/data/observable");
 import frameModule = require("tns-core-modules/ui/frame");
 
