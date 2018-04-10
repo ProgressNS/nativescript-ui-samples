@@ -1,6 +1,6 @@
 import { NavigationViewModel } from "./categories-view-model";
 import { Page } from "tns-core-modules/ui/page";
-import { RadSideDrawer } from "nativescript-pro-ui/sidedrawer";
+import { RadSideDrawer } from "nativescript-ui-sidedrawer";
 
 export function pageLoaded(args) {
     let dataModel = new NavigationViewModel();

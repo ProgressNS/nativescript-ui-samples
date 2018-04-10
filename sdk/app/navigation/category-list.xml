@@ -1,4 +1,4 @@
-<nsDrawer:RadSideDrawer id="sideDrawer" xmlns:nsDrawer="nativescript-pro-ui/sidedrawer" xmlns:lv="nativescript-pro-ui/listview">
+<nsDrawer:RadSideDrawer id="sideDrawer" xmlns:nsDrawer="nativescript-ui-sidedrawer" xmlns:lv="nativescript-ui-listview">
     <nsDrawer:RadSideDrawer.drawerContent>
         <GridLayout rows="auto, *" class="root-drawer-content">
             <StackLayout>

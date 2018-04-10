@@ -1,6 +1,6 @@
 import { NavigationItem } from "./navigation-item";
 import  { Observable } from "tns-core-modules/data/observable";
-import { RadSideDrawer } from "nativescript-pro-ui/sidedrawer";
+import { RadSideDrawer } from "nativescript-ui-sidedrawer";
 import { topmost } from "tns-core-modules/ui/frame";
 
 export class PageViewModel extends Observable {

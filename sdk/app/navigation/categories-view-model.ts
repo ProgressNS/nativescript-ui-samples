@@ -2,7 +2,7 @@ import observableModule = require("tns-core-modules/data/observable");
 import { topmost } from "tns-core-modules/ui/frame";
 import { Page } from "tns-core-modules/ui/page";
 import { isAndroid } from "tns-core-modules/platform/platform";
-import { RadSideDrawer } from "nativescript-pro-ui/sidedrawer";
+import { RadSideDrawer } from "nativescript-ui-sidedrawer";
 import { ActionBar, NavigationButton } from "tns-core-modules/ui/action-bar";
 import utilsModule = require("tns-core-modules/utils/utils");
 import { NavigationItem } from "./navigation-item";
