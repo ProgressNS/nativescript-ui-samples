@@ -6,9 +6,12 @@
     navigatingTo="onPageNavigatingTo">
     <Page.actionBar>
         <ActionBar title="{{ currentParent.title }}">
-            <ActionBar.navigationButton>
+            <android>
+                <NavigationButton text="back" visibility="{{ hasBackNavigation ? 'visible' : 'collapse' }}" tap="{{ onBackTap }}" icon="res://ic_arrow_back_black_24dp"/>
+            </android>
+            <ios>
                 <NavigationButton ios:text="Back" android:icon="{{ _hasBack === true ? 'res://icon_arrow' : ''}}"/>
-            </ActionBar.navigationButton>
+            </ios>
         </ActionBar>
     </Page.actionBar>
     <GridLayout rows="auto, *">
