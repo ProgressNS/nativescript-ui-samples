@@ -2,16 +2,16 @@ import { NavigationItem } from "./navigation-item";
 import  { Observable } from "tns-core-modules/data/observable";
 import { RadSideDrawer } from "nativescript-ui-sidedrawer";
 import { topmost } from "tns-core-modules/ui/frame";
+import * as app from "tns-core-modules/application";
 
 export class PageViewModel extends Observable {
     public sideDrawer: RadSideDrawer;
 
-    constructor (parent?: NavigationItem, subitems?: Array<NavigationItem>, hasBack?: boolean, sideDrawer?: RadSideDrawer) {
+    constructor (parent?: NavigationItem, subitems?: Array<NavigationItem>, hasBack?: boolean) {
         super();
         this._currentParent = parent;
         this._currentSubItems = subitems;
         this._hasBackNavigation = hasBack;
-        this.sideDrawer = sideDrawer;
     }
 
     get _currentSubItems(): Array<NavigationItem> {
@@ -57,9 +57,10 @@ export class PageViewModel extends Observable {
             this._hasBackNavigation = tappedItem.parent !== undefined;
         }
         let hasBack = tappedItem.parent !== undefined;
-        let nextPageContext = new PageViewModel(tappedItem, tappedItem.subItems, hasBack, this.sideDrawer);
+        let nextPageContext = new PageViewModel(tappedItem, tappedItem.subItems, hasBack);
 
-        this.sideDrawer.closeDrawer();
+        let sideDrawer = <RadSideDrawer>app.getRootView();
+        sideDrawer.closeDrawer();
         if (tappedItem.subItems.length > 0) {
             topmost().navigate({
                 moduleName: "./navigation/category-list-nested",

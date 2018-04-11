@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "nativescript-fresco": "^3.0.2",
+    "nativescript-theme-core": "^1.0.4",
     "nativescript-ui-autocomplete": "^3.6.0",
     "nativescript-ui-calendar": "^3.5.0",
     "nativescript-ui-chart": "^3.5.0",
@@ -26,7 +27,6 @@
     "nativescript-ui-gauge": "^3.5.0",
     "nativescript-ui-listview": "^3.5.0",
     "nativescript-ui-sidedrawer": "^4.0.0",
-    "nativescript-theme-core": "^1.0.4",
     "tns-core-modules": "4.0.0"
   },
   "devDependencies": {

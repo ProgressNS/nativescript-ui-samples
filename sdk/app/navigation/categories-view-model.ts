@@ -11,9 +11,9 @@ import { PageViewModel } from "./page-view-model";
 export class NavigationViewModel extends PageViewModel {
 
     private _lastTappedItem;
-    private _currentSubItems: Array<NavigationItem>;
     private _currentNavItem: NavigationItem;
     private _hasBack: boolean;
+    public _currentSubItems: Array<NavigationItem>;
 
     constructor() {
         super();
