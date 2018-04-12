@@ -63,7 +63,7 @@ export class PageViewModel extends Observable {
         sideDrawer.closeDrawer();
         if (tappedItem.subItems.length > 0) {
             topmost().navigate({
-                moduleName: "./navigation/category-list-nested-page",
+                moduleName: "navigation/category-list-nested-page",
                 context: nextPageContext
             });
         } else {

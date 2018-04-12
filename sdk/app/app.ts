@@ -25,4 +25,4 @@ if (application.android) {
     });
 }
 
-application.run({ moduleName: "./navigation/category-list-page" });
+application.run({ moduleName: "navigation/category-list-page" });

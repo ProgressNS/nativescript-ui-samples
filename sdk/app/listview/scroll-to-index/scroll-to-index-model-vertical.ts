@@ -54,7 +54,7 @@ export class ViewModel extends Observable {
     public onOptionsTapped(args: any) {
         if (frameModule.topmost().ios) {
             var navigationEntry = {
-                moduleName: "./navigation/options-menu/options",
+                moduleName: "navigation/options-menu/options",
                 context: this._selectionInfo,
                 animated: true
             };
