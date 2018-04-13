@@ -2,6 +2,7 @@ import "./bundle-config";
 import application = require("tns-core-modules/application");
 import fresco = require("nativescript-fresco");
 application.setCssFileName("./app.css");
+require("./main-activity.android.ts");
 
 //partial declaration of Fresco native android class
 declare module com {
