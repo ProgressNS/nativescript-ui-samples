@@ -1,4 +1,6 @@
-﻿.title {
+﻿@import '~nativescript-theme-core/css/core.light.css';
+
+.title {
     font-size: 30;
     horizontal-align: center;
     margin:20;
@@ -20,7 +22,7 @@ button {
 }
 
 .drawerContent {
-    background-color: gray;
+    background-color: lightgray;
 }
 
 .drawerContentText {
@@ -83,18 +85,6 @@ button {
     padding: 5;
 }
 
-.titleLabel {
-    margin: 16;
-    vertical-align: center;
-}
-
-.itemStackLayout {
-    text-align: left;
-    vertical-align: center;
-    font-size: 16;
-    color:#404040;
-}
-
 .label {
     margin-left: 20;
     margin-top: 20;
@@ -107,7 +97,15 @@ button {
     font-weight: bold;
 }
 
-.item-template-style{
+.item-template-style {
     border-width:1;
     border-color: gray;
 }
+
+.btn {
+    margin: 0;
+}
+
+/* .test {
+    background-color: red;
+} */

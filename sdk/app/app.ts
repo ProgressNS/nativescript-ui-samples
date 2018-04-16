@@ -20,9 +20,10 @@ declare module com {
 
 
 if (application.android) {
+    require("./main-activity.android.ts");
     application.on("launch", (intent) => {
         fresco.initialize();
     });
 }
 
-application.start("./navigation/category-list-page");
+application.run({ moduleName: "navigation/category-list-page" });

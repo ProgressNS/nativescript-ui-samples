@@ -1,11 +1,11 @@
-<Page 
-    xmlns="http://www.nativescript.org/tns.xsd"
-    xmlns:lv="nativescript-ui-listview"
-    loaded="pageLoaded"
-    navigatingFrom="onPageNavigatingFrom"
-    navigatingTo="onPageNavigatingTo">
+ <Page xmlns="http://www.nativescript.org/tns.xsd"
+                xmlns:lv="nativescript-ui-listview"
+                  loaded="pageLoaded">
+    <Page.actionBar>
+        <ActionBar title="{{ currentParent.title }}"/>
+    </Page.actionBar>
     <GridLayout rows="auto, *">
-        <lv:RadListView row="1" items="{{ _currentSubItems }}" itemTap="{{onNavigationItemTap}}" >
+        <lv:RadListView row="1" items="{{ currentSubItems }}" itemTap="{{ onNavigationItemTap }}" >
             <lv:RadListView.itemTemplate>
                 <StackLayout class="itemStackLayout">
                     <Label text="{{ title }}" textWrap="true" class="titleLabel"/>
