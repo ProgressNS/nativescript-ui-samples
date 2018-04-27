@@ -20,7 +20,6 @@ declare module com {
 
 
 if (application.android) {
-    require("./main-activity.android.ts");
     application.on("launch", (intent) => {
         fresco.initialize();
     });
