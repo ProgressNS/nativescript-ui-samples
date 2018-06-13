@@ -1,0 +1,27 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-ui-chart" xmlns="http://www.nativescript.org/tns.xsd">
+
+     <chart:RadCartesianChart>
+
+         <chart:RadCartesianChart.verticalAxis>
+             <chart:LinearAxis horizontalLocation="Left" labelTextColor="Green" labelSize="10" lineColor="Red" lineThickness="1" /></chart:RadCartesianChart.verticalAxis>
+         <chart:RadCartesianChart.horizontalAxis>
+             <chart:CategoricalAxis verticalLocation="Bottom" labelTextColor="Red" labelSize="10" lineColor="Red" lineThickness="1" /></chart:RadCartesianChart.horizontalAxis>
+         <chart:RadCartesianChart.series>
+
+         <chart:BarSeries
+              selectionMode="DataPoint"
+              seriesName="Bars"
+              legendTitle="Bar series"
+              valueProperty="Sales"
+              categoryProperty="Name"
+              items="{{ sourceItems }}">
+         </chart:BarSeries>
+
+         </chart:RadCartesianChart.series>
+
+         <chart:RadCartesianChart.legend>
+             <chart:RadLegendView position="Top" title="Financial data" height="150"/>
+         </chart:RadCartesianChart.legend>
+     </chart:RadCartesianChart>
+     
+     </navigation:ExamplePage>

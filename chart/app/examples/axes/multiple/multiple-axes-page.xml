@@ -1,0 +1,25 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-ui-chart" xmlns="http://www.nativescript.org/tns.xsd">
+    <chart:RadCartesianChart id="cartesianChart">
+        <chart:RadCartesianChart.series>
+             <chart:LineSeries seriesName="RateA" items="{{ rateA }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount"/>   
+            
+             <chart:LineSeries seriesName="RateB" items="{{ rateB }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount" />
+            
+             <chart:LineSeries seriesName="RateC" items="{{ rateC }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount"/>  
+            
+             <chart:BarSeries seriesName="Total" items="{{ total }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">   
+                 <chart:BarSeries.verticalAxis>
+                    <chart:LinearAxis horizontalLocation="Right"/>                 
+                 </chart:BarSeries.verticalAxis>
+            </chart:BarSeries>        
+        </chart:RadCartesianChart.series>
+        
+        <chart:RadCartesianChart.verticalAxis>
+              <chart:LinearAxis horizontalLocation="Left"/>                 
+        </chart:RadCartesianChart.verticalAxis>
+         
+        <chart:RadCartesianChart.horizontalAxis>
+             <chart:CategoricalAxis verticalLocation="Down" />
+        </chart:RadCartesianChart.horizontalAxis>
+    </chart:RadCartesianChart>
+</navigation:ExamplePage>

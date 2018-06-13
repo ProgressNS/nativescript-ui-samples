@@ -1,0 +1,20 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-ui-chart" xmlns="http://www.nativescript.org/tns.xsd">
+
+ <chart:RadPieChart id="pieChart">
+ <!-- >> datapoint-selection -->
+            <chart:RadPieChart.series>
+                <chart:PieSeries selectionMode="DataPoint" outerRadiusFactor="0.8" expandRadius="0.2" showLabels="true" 
+							 items="{{ sourceItems }}" valueProperty="Sales" >
+                             <chart:PieSeries.labelStyle> 
+                                <chart:PointLabelStyle margin="15"/> 
+                             </chart:PieSeries.labelStyle>
+			    </chart:PieSeries>
+            </chart:RadPieChart.series>
+ <!-- << datapoint-selection -->
+            <chart:RadPieChart.legend>
+                <chart:RadLegendView position="Top" title="My pie data" />
+            </chart:RadPieChart.legend>
+
+        </chart:RadPieChart>
+
+ </navigation:ExamplePage>
