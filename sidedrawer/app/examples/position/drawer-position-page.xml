@@ -1,0 +1,48 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:nsDrawer="nativescript-ui-sidedrawer" xmlns="http://www.nativescript.org/tns.xsd">
+  <!-- >> sidedrawer-setting-location-xml -->
+  
+    <nsDrawer:RadSideDrawer id="sideDrawer" drawerLocation="Left" drawerContentSize="280">
+    
+    <nsDrawer:RadSideDrawer.drawerTransition>
+      <nsDrawer:RevealTransition/>
+    </nsDrawer:RadSideDrawer.drawerTransition>
+    
+      <nsDrawer:RadSideDrawer.drawerContent>
+      <!-- >> (hide) -->
+        <StackLayout class="drawerContent">
+          <StackLayout class="headerContent">
+            <Label text="Navigation Menu"/>
+          </StackLayout>
+          <ScrollView>
+            <StackLayout class="drawerMenuContent">
+              <Label text="Primary" class="drawerSectionHeader" />
+              <Label text="Social" class="drawerSectionItem" />
+              <Label text="Promotions" class="drawerSectionItem" />
+              <Label text="Labels" class="drawerSectionHeader" />
+              <Label text="Important" class="drawerSectionItem" />
+              <Label text="Starred" class="drawerSectionItem" />
+              <Label text="Sent Mail" class="drawerSectionItem" />
+              <Label text="Drafts" class="drawerSectionItem" />
+              <Button text="Close Drawer" tap="{{ closeDrawer }}"/>
+            </StackLayout>
+          </ScrollView>
+        </StackLayout>
+        <!-- << (hide) -->
+      </nsDrawer:RadSideDrawer.drawerContent>
+
+      <nsDrawer:RadSideDrawer.mainContent>
+        <StackLayout class="mainContent">
+          <Label text="{{drawerPositionText}}" textWrap="true" class="drawerContentText"/>
+          <ScrollView>
+            <StackLayout>
+                <Button text="Left" tap="{{ onLeftLocationTap }}" class="drawerContentButton"/>
+                <Button text="Top" tap="{{ onTopLocationTap }}" class="drawerContentButton"/>
+                <Button text="Right" tap="{{ onRightLocationTap }}" class="drawerContentButton"/>
+                <Button text="Bottom" tap="{{ onBottomLocationTap }}" class="drawerContentButton"/>
+            </StackLayout>
+          </ScrollView>
+        </StackLayout>
+      </nsDrawer:RadSideDrawer.mainContent>
+    </nsDrawer:RadSideDrawer>
+  <!-- << sidedrawer-setting-location-xml -->
+</navigation:ExamplePage>
