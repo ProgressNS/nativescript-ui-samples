@@ -1,0 +1,31 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-ui-listview" xmlns="http://www.nativescript.org/tns.xsd">
+    <GridLayout orientation="vertical" rows="auto, *">
+        <lv:RadListView 
+            id="listView" 
+            items="{{ dataItems }}" 
+            row="1" 
+            selectionBehavior="None" 
+            itemSwipeProgressEnded="onSwipeCellFinished"
+            itemSwipeProgressStarted="onSwipeCellStarted" 
+            itemSwipeProgressChanged="onCellSwiping" 
+            swipeActions="true">
+            <lv:RadListView.itemTemplate>
+                <StackLayout orientation="vertical" style="background-color: white;" paddingLeft="5">
+                    <Label fontSize="20" text="{{ name }}" marginBottom="8"/>
+                    <Label fontSize="14" text="{{ title }}" style="font-weight: bold;"/>
+                    <Label fontSize="12" text="{{ text }}"/>
+                </StackLayout>
+            </lv:RadListView.itemTemplate>
+            <lv:RadListView.itemSwipeTemplate>
+                <GridLayout columns="auto, *, auto" backgroundColor="Green">
+                 <StackLayout id="mark-view" col="0" style="background-color: blue;" tap="onLeftSwipeClick" padding="16">
+                        <Label text="mark" id="mark-text" style="text-size: 20" verticalAlignment="center" horizontalAlignment="center"/>
+                    </StackLayout>
+                    <StackLayout id="delete-view" col="2" style="background-color: red;" tap="onRightSwipeClick" padding="16">
+                        <Label text="delete" id="delete-text" style="text-size: 20" verticalAlignment="center" horizontalAlignment="center"/>
+                    </StackLayout>
+                </GridLayout>
+            </lv:RadListView.itemSwipeTemplate>
+        </lv:RadListView>
+    </GridLayout>
+</navigation:ExamplePage>

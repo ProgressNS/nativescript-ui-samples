@@ -1,0 +1,28 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-ui-listview" xmlns="http://www.nativescript.org/tns.xsd">
+ <GridLayout orientation="vertical" rows="auto, *">
+    <GridLayout rows="auto,70,70" backgroundColor="#f8f8f8" orientation="horizontal" row="0">
+         <StackLayout orientation="horizontal" horizontalAlignment="center" row="0">
+            <Button text="Select all" tap="onSelectAllTap" marginRight="10"/>
+            <Button text="Deselect all" tap="onDeselectAllTap"/>
+        </StackLayout>
+            <StackLayout orientation="horizontal" row="1" horizontalAlignment="center">
+            <Label text="Select item at:" verticalAlignment="center"/>
+            <TextField id="txtSelectItemIndex" ios:backgroundColor="white" width="60" ios:height="30" android:height="50"/>
+            <Button tap="onSelectItemAtTap" text="Done" marginLeft="10" height="50"/>
+            </StackLayout>
+            <StackLayout orientation="horizontal" row="2" horizontalAlignment="center">
+            <Label text="Deselect item at:" verticalAlignment="center"/>
+            <TextField  id="txtDeselectItemIndex" ios:backgroundColor="white" width="60" ios:height="30" android:height="50"/>
+            <Button tap="onDeselectItemAtTap" text="Done" marginLeft="10" height="50"/>
+            </StackLayout>
+        </GridLayout>
+        <lv:RadListView items="{{ dataItems }}" row="1" id="listView" multipleSelection="true" selectionBehavior="Press">
+            <lv:RadListView.itemTemplate>
+                <StackLayout orientation="vertical" ios:paddingLeft="50" android:paddingLeft="16">
+                    <Label fontSize="20" text="{{ itemName }}"/>
+                    <Label fontSize="14" text="{{ itemEmail }}"/>
+                </StackLayout>
+            </lv:RadListView.itemTemplate>
+        </lv:RadListView>
+    </GridLayout>
+</navigation:ExamplePage>

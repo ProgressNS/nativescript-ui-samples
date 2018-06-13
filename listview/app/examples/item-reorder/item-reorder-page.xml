@@ -1,0 +1,13 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-ui-listview" xmlns="http://www.nativescript.org/tns.xsd">
+    <GridLayout orientation="vertical" rows="auto, *, auto">
+        <!-- >> listview-item-reorder-xml -->
+        <lv:RadListView itemReordered="{{onItemReordered}}" items="{{ dataItems }}" row="1" itemReorder="true">
+            <lv:RadListView.itemTemplate>
+                <StackLayout paddingTop="5" paddingBottom="5">
+                    <Label fontSize="20" text="{{ itemName }}" marginLeft="10"/>
+                </StackLayout>
+            </lv:RadListView.itemTemplate>
+        </lv:RadListView>
+        <!-- << listview-item-reorder-xml -->
+    </GridLayout>
+</navigation:ExamplePage>

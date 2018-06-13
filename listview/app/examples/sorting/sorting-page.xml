@@ -1,0 +1,18 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-ui-listview" xmlns="http://www.nativescript.org/tns.xsd">
+<!-- >> data-operations-sorting -->
+    <GridLayout rows="auto, *">
+        <StackLayout orientation="horizontal">
+            <Button text="{{isEnabled ? 'Disable sorting' : 'Enable sorting'}}" tap="toggleSorting"/>
+        </StackLayout>
+        <lv:RadListView id="myListView" row="1" items="{{ dataItems }}" 
+                        sortingFunction="{{ mySortingFunc }}">
+            <lv:RadListView.itemTemplate>
+                <StackLayout orientation="vertical">
+                    <Label fontSize="20" text="{{ itemName }}"/>
+                    <Label fontSize="14" text="{{ itemDescription }}"/>
+                </StackLayout>
+            </lv:RadListView.itemTemplate>
+        </lv:RadListView>
+    </GridLayout>
+<!-- << data-operations-sorting -->
+</navigation:ExamplePage>

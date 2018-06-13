@@ -1,0 +1,15 @@
+.vscode
+.idea
+.DS_Store
+*.js
+*.js.map
+*.esm.json 
+*.log
+*.d.ts
+!*/karma.conf.js
+!*/app/tests/*.js
+!*/references.d.ts
+*/platforms
+node_modules
+*/report/report.html
+*/report/stats.json

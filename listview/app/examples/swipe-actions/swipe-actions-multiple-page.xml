@@ -1,0 +1,49 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-ui-listview" xmlns="http://www.nativescript.org/tns.xsd">
+    <GridLayout orientation="vertical" rows="auto, *">
+        <lv:RadListView 
+            id="listView" 
+            items="{{ dataItems }}" 
+            row="1" 
+            selectionBehavior="None" 
+            itemSwipeProgressEnded="onSwipeCellFinished"
+            itemSwipeProgressStarted="onSwipeCellStarted" 
+            itemSwipeProgressChanged="onCellSwiping" 
+            swipeActions="true">
+            <lv:RadListView.itemTemplate>
+                <StackLayout orientation="vertical" style="background-color: white;" paddingLeft="5">
+                    <Label fontSize="20" text="{{ name }}" marginBottom="8"/>
+                    <Label fontSize="14" text="{{ title }}" style="font-weight: bold;"/>
+                    <Label fontSize="12" text="{{ text }}"/>
+                </StackLayout>
+            </lv:RadListView.itemTemplate>
+            <!-- >> listview-swipe-actions-multiple-template-xml -->
+            <lv:RadListView.itemSwipeTemplate>
+                <GridLayout columns="auto, *, auto">
+                    <GridLayout columns="*, *, *" col="0" id="left-stack">
+                        <GridLayout col="0" style="background-color: #0099ff;" tap="onLeftSwipeClick" id="btnMark" padding="16" >
+                            <Label text="mark" fontSize="15" verticalAlignment="center" horizontalAlignment="center"/>
+                        </GridLayout>
+                         <GridLayout col="1" style="background-color: #ffcc99;" tap="onLeftSwipeClick" id="btnArchive" padding="16">
+                            <Label text="archive" fontSize="15" verticalAlignment="center" horizontalAlignment="center"/>
+                        </GridLayout>
+                         <GridLayout col="2" style="background-color:  #ff3300;" tap="onLeftSwipeClick" id="btnUnread" padding="16">
+                            <Label text="unread" fontSize="15" verticalAlignment="center" horizontalAlignment="center"/>
+                        </GridLayout>
+                    </GridLayout>
+                    <GridLayout columns="*, *, *" col="2" id="right-stack">
+                        <GridLayout col="0" style="background-color: red;" tap="onRightSwipeClick" id="btnDelete" padding="16" >
+                            <Label text="delete" fontSize="15" verticalAlignment="center" horizontalAlignment="center"/>
+                        </GridLayout>
+                        <GridLayout col="1" style="background-color: #ff66ff;" tap="onRightSwipeClick" id="btnRead" padding="16">
+                            <Label text="read" fontSize="15" verticalAlignment="center" horizontalAlignment="center"/>
+                        </GridLayout>
+                        <GridLayout col="2" style="background-color: #9966ff;" tap="onRightSwipeClick" id="btnForward" padding="16">
+                            <Label text="forward" fontSize="15" verticalAlignment="center" horizontalAlignment="center"/>
+                        </GridLayout>
+                    </GridLayout>
+                </GridLayout>
+            </lv:RadListView.itemSwipeTemplate>
+            <!-- << listview-swipe-actions-multiple-template-xml -->
+        </lv:RadListView>
+    </GridLayout>
+</navigation:ExamplePage>

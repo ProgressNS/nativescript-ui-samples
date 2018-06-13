@@ -1,0 +1,14 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-ui-listview" xmlns="http://www.nativescript.org/tns.xsd">
+    <GridLayout orientation="vertical" rows="auto, *, auto" >
+     <!-- >> listview-item-loading-xml --> 
+        <lv:RadListView id="listView" items="{{ dataItems }}" row="1" itemLoading="onItemLoading">
+            <lv:RadListView.itemTemplate>
+                <StackLayout orientation="vertical" padding="15">
+                    <Label id="nameLabel" fontSize="20" text="{{ itemName }}" marginBottom="10"/>
+                    <Label id="descLabel" fontSize="14" text="{{ itemDescription }}"/>
+                </StackLayout>
+            </lv:RadListView.itemTemplate>
+        </lv:RadListView>
+       <!-- << listview-item-loading-xml --> 
+    </GridLayout>
+</navigation:ExamplePage>
