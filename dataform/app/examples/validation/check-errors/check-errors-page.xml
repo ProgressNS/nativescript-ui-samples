@@ -1,0 +1,72 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-ui-dataform" xmlns="http://www.nativescript.org/tns.xsd">
+     <GridLayout rows="auto, auto, *">
+        <Button text="Check" row="0" tap="checkErrors"/>
+        <StackLayout row="1" orientation="horizontal">
+            <Label text="hasValidationErrors:" class="label"/>
+            <Label id="resultLabel" class="label labelBold"/>
+	    </StackLayout>
+        <df:RadDataForm id="myDataForm" source="{{ advancedUser }}" row="2">
+            <df:RadDataForm.properties>
+                <df:EntityProperty name="username" index="0">
+                    <df:EntityProperty.validators>
+                        <df:NonEmptyValidator
+                            errorMessage="Username can't be empty." />
+                        <df:MaximumLengthValidator
+                            errorMessage="Username can be at most 12 characters."
+                            length="12" />
+                    </df:EntityProperty.validators>
+                </df:EntityProperty>
+                <df:EntityProperty name="password" index="1" >
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="Password" />
+                    </df:EntityProperty.editor>
+                    <df:EntityProperty.validators>
+                        <df:MinimumLengthValidator
+                            errorMessage="Password must be at least 6 characters long."
+                            length="6" />
+                    </df:EntityProperty.validators>
+                </df:EntityProperty>
+                <df:EntityProperty name="email" displayName="E-mail" index="2" >
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="Email" />
+                    </df:EntityProperty.editor>
+                    <df:EntityProperty.validators>
+                        <df:EmailValidator />
+                    </df:EntityProperty.validators>
+                </df:EntityProperty>
+                <df:EntityProperty name="id" displayName="ID" index="3" >
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="Number"/>
+                    </df:EntityProperty.editor>
+                    <df:EntityProperty.validators>
+                        <df:RangeValidator errorMessage="ID must be between 1-100." minimum="1" maximum="100"/>
+                    </df:EntityProperty.validators>
+                </df:EntityProperty>
+                <df:EntityProperty name="phoneNumber" displayName="Phone Number" index="4" >
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="Phone" />
+                    </df:EntityProperty.editor>
+                    <df:EntityProperty.validators>
+                        <df:PhoneValidator errorMessage="Incorrect phone number"/>
+                    </df:EntityProperty.validators>
+                </df:EntityProperty>
+                <df:EntityProperty name="pin" displayName="Enter PIN" index="5">
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="Phone" />
+                    </df:EntityProperty.editor>
+                    <df:EntityProperty.validators>
+                        <df:RegExValidator regEx="\d{4}" errorMessage="PIN number should contain 4 digits."/>
+                    </df:EntityProperty.validators>
+                </df:EntityProperty>
+                <df:EntityProperty name="agreeTerms" displayName="I agree with terms" index="6">
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="Switch" />
+                    </df:EntityProperty.editor>
+                    <df:EntityProperty.validators>
+                        <df:IsTrueValidator errorMessage="You must agree with the terms."/>
+                    </df:EntityProperty.validators>
+                </df:EntityProperty>
+            </df:RadDataForm.properties>
+        </df:RadDataForm>
+    </GridLayout>
+</navigation:ExamplePage>

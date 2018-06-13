@@ -1,0 +1,28 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-ui-dataform" xmlns="http://www.nativescript.org/tns.xsd">
+    
+	<GridLayout rows="auto, *" orientation="vertical">
+    <Label margin="12" id="myLabel" text="defaultText" row="0"/>
+    <df:RadDataForm id="myDataForm" source="{{ person }}" marginTop="50" row="1"
+        groupExpanded="dfGroupExpanded"
+        groupCollapsed="dfGroupCollapsed"
+        propertyCommit="dfPropertyCommit"
+        propertyCommitted="dfPropertyCommitted">
+        <df:RadDataForm.groups>
+            <df:PropertyGroup collapsible="true" name="Main Info" >
+                <df:PropertyGroup.properties>
+                    <df:EntityProperty name="name" />
+                    <df:EntityProperty name="age" />
+                    <df:EntityProperty name="email" />
+                </df:PropertyGroup.properties>
+            </df:PropertyGroup>
+            <df:PropertyGroup collapsible="true" name="Address" >
+                <df:PropertyGroup.properties>
+                    <df:EntityProperty name="city" />
+                    <df:EntityProperty name="street" />
+                    <df:EntityProperty name="streetNumber" />
+                </df:PropertyGroup.properties>
+            </df:PropertyGroup>
+        </df:RadDataForm.groups>
+    </df:RadDataForm>
+    </GridLayout>
+</navigation:ExamplePage>

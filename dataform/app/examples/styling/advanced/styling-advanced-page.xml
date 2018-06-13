@@ -1,0 +1,30 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded"
+    xmlns:df="nativescript-ui-dataform" xmlns="http://www.nativescript.org/tns.xsd">
+
+    <df:RadDataForm id="myDataForm" source="{{ settings }}" 
+        editorUpdate="dfEditorUpdate">
+        <df:RadDataForm.properties>
+            <df:EntityProperty name="onlyOnWiFi" index="0">
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="Switch"/>
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+            <df:EntityProperty name="networkLimit" index="1">
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="Stepper"/>
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+            <df:EntityProperty name="networkPreference" index="2" valuesProvider="{{ prefModes }}">
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="SegmentedEditor"/>
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+            <df:EntityProperty name="appVolume" index="3">
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="Slider"/>
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+        </df:RadDataForm.properties>
+    </df:RadDataForm>
+
+</navigation:ExamplePage>

@@ -1,0 +1,83 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-ui-dataform" xmlns="http://www.nativescript.org/tns.xsd">
+    <df:RadDataForm source="{{ person }}" >
+        <df:RadDataForm.groups>
+            <df:PropertyGroup collapsible="true" name="Main Info" hidden="false" >
+                <df:PropertyGroup.layout>		
+                  <df:DataFormStackLayout />		
+                </df:PropertyGroup.layout>
+
+                <df:PropertyGroup.properties>
+                    <df:EntityProperty name="name" >
+                        <df:EntityProperty.editor>
+                            <df:PropertyEditor type="Text" />
+                        </df:EntityProperty.editor>
+                    </df:EntityProperty>
+                    <df:EntityProperty name="age" >
+                        <df:EntityProperty.editor>
+                            <df:PropertyEditor type="Number" />
+                        </df:EntityProperty.editor>
+                    </df:EntityProperty>
+                    <df:EntityProperty name="email" >
+                        <df:EntityProperty.editor>
+                            <df:PropertyEditor type="Email" />
+                        </df:EntityProperty.editor>
+                    </df:EntityProperty>
+                </df:PropertyGroup.properties>
+            </df:PropertyGroup>
+            <df:PropertyGroup collapsible="true" name="Address" hidden="false" >
+                <df:PropertyGroup.layout>		
+                  <df:DataFormStackLayout />		
+                </df:PropertyGroup.layout>
+                <df:PropertyGroup.properties>
+                    <df:EntityProperty name="city" >
+                        <df:EntityProperty.editor>
+                            <df:PropertyEditor type="Text" />
+                        </df:EntityProperty.editor>
+                    </df:EntityProperty>
+                    <df:EntityProperty name="country">
+                        <df:EntityProperty.editor>
+                            <df:PropertyEditor type="Text" />
+                        </df:EntityProperty.editor>
+                    </df:EntityProperty>
+                    <df:EntityProperty name="street" >
+                        <df:EntityProperty.editor>
+                            <df:PropertyEditor type="Text" />
+                        </df:EntityProperty.editor>
+                    </df:EntityProperty>
+                    <df:EntityProperty name="streetNumber" >
+                        <df:EntityProperty.editor>
+                            <df:PropertyEditor type="Number" />
+                        </df:EntityProperty.editor>
+                    </df:EntityProperty>
+                </df:PropertyGroup.properties>
+            </df:PropertyGroup>
+             <df:PropertyGroup collapsible="true" name="Payment Info" hidden="false" >
+                <df:PropertyGroup.layout>		
+                  <df:DataFormStackLayout />		
+                </df:PropertyGroup.layout>
+                <df:PropertyGroup.properties>
+                    <df:EntityProperty name="bankName" >
+                        <df:EntityProperty.editor>
+                            <df:PropertyEditor type="Text" />
+                        </df:EntityProperty.editor>
+                    </df:EntityProperty>
+                    <df:EntityProperty name="bankId" >
+                        <df:EntityProperty.editor>
+                            <df:PropertyEditor type="Text" />
+                        </df:EntityProperty.editor>
+                    </df:EntityProperty>
+                    <df:EntityProperty name="bankVerificationCode" >
+                        <df:EntityProperty.editor>
+                            <df:PropertyEditor type="Number" />
+                        </df:EntityProperty.editor>
+                    </df:EntityProperty>
+                    <df:EntityProperty name="bankExpirationDate" >
+                        <df:EntityProperty.editor>
+                            <df:PropertyEditor type="DatePicker" />
+                        </df:EntityProperty.editor>
+                    </df:EntityProperty>
+                </df:PropertyGroup.properties>
+            </df:PropertyGroup>
+        </df:RadDataForm.groups>
+    </df:RadDataForm>
+</navigation:ExamplePage>

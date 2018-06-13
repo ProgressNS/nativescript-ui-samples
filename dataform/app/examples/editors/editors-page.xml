@@ -1,0 +1,66 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-ui-dataform" xmlns="http://www.nativescript.org/tns.xsd">
+    <df:RadDataForm id="myDataForm" source="{{ ticketOrder }}">
+        <df:RadDataForm.properties>
+            <df:EntityProperty name="movie" displayName="Movie Name" index="0" converter="{{ $value }}" valuesProvider="{{ movieNames }}">
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="Picker" />
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+            <df:EntityProperty name="date" index="1" >
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="DatePicker" />
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+            <df:EntityProperty name="time" index="2" >
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="TimePicker" />
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+            <!-- >> dataform-editors-xml -->
+            <df:EntityProperty name="type" displayName="Type" index="3" valuesProvider="2D, 3D">
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="SegmentedEditor" />
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+            <!-- << dataform-editors-xml -->
+            <!-- >> dataform-property-readonly-xml -->
+            <df:EntityProperty name="price" index="4" readOnly="true">
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="Decimal" />
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+            <!-- << dataform-property-readonly-xml -->
+            <df:EntityProperty name="numberOfTickets" displayName="Number of Tickets" index="5">
+                <df:EntityProperty.editor>
+                     <!-- >> dataform-editor-params-xml -->
+                    <df:PropertyEditor type="Stepper">
+                        <df:PropertyEditor.params>
+                            <df:PropertyEditorParams minimum="2" maximum="6" step="1"/>
+                        </df:PropertyEditor.params>
+                    </df:PropertyEditor>
+                    <!-- << dataform-editor-params-xml -->
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+            <df:EntityProperty name="contactName" displayName="Contact Name" index="6">
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="Text" />
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+            <df:EntityProperty name="contactPhone" displayName="Contact Phone" index="7">
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="Phone" />
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+            <df:EntityProperty name="contactEmail" displayName="Contact Email" index="8">
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="Email" />
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+            <df:EntityProperty name="agreeTerms" displayName="I Agree with Terms" index="9">
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="Switch" />
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+        </df:RadDataForm.properties>
+    </df:RadDataForm>
+</navigation:ExamplePage>

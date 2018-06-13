@@ -1,0 +1,44 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded"
+    xmlns:df="nativescript-ui-dataform" xmlns="http://www.nativescript.org/tns.xsd">
+
+    <df:RadDataForm id="myDataForm" source="{{ employee }}" editorUpdate="dfEditorUpdate">
+        <df:RadDataForm.properties>
+            <df:EntityProperty name="name" index="0">
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="Text">
+                            <df:PropertyEditor.propertyEditorStyle>
+                                <df:PropertyEditorStyle labelPosition="Top" separatorColor="Transparent"/>
+                            </df:PropertyEditor.propertyEditorStyle>
+                        </df:PropertyEditor>
+                    </df:EntityProperty.editor>
+                </df:EntityProperty>
+            <df:EntityProperty name="phone" index="1">
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="Phone">
+                            <df:PropertyEditor.propertyEditorStyle>
+                                <df:PropertyEditorStyle labelPosition="Top" separatorColor="Transparent"/>
+                            </df:PropertyEditor.propertyEditorStyle>
+                        </df:PropertyEditor>
+                    </df:EntityProperty.editor>
+                </df:EntityProperty>
+            <df:EntityProperty name="birthDate" index="2">
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="DatePicker">
+                            <df:PropertyEditor.propertyEditorStyle>
+                                <df:PropertyEditorStyle labelPosition="Top" separatorColor="Transparent"/>
+                            </df:PropertyEditor.propertyEditorStyle>
+                        </df:PropertyEditor>
+                    </df:EntityProperty.editor>
+                </df:EntityProperty>
+            <df:EntityProperty name="employeeId" index="3">
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="Number">
+                            <df:PropertyEditor.propertyEditorStyle>
+                                <df:PropertyEditorStyle labelPosition="Top" separatorColor="Transparent"/>
+                            </df:PropertyEditor.propertyEditorStyle>
+                        </df:PropertyEditor>
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+        </df:RadDataForm.properties>
+    </df:RadDataForm>
+</navigation:ExamplePage>

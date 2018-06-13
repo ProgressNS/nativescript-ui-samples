@@ -1,0 +1,39 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-ui-dataform" xmlns="http://www.nativescript.org/tns.xsd">
+    <GridLayout rows="auto, auto, auto, *">
+        <Label id="myLabel" text="ACTUAL VALUES:" fontWeight="bold" margin="16" />
+        <Label id="myLabel" text="{{ sourceText }}" textWrap="true" row="1" marginLeft="16" />
+        <Label id="myLabel" text="FORM VALUES:" fontWeight="bold" margin="16" row="2" />
+        <df:RadDataForm id="myDataForm" source="{{ cities }}" row="3"
+            propertyCommitted="{{ onPropertyCommitted }}">
+            <df:RadDataForm.properties>
+            <!-- >> dataform-value-providers-xml -->
+                <df:EntityProperty name="city1" displayName="Selected City 1" index="0" valuesProvider="{{ cityProvider1 }}">
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="Picker" />
+                    </df:EntityProperty.editor>
+                </df:EntityProperty>
+            <!-- << dataform-value-providers-xml -->
+                <df:EntityProperty name="city2" displayName="Selected City 2" index="1" valuesProvider="{{ cityProvider2 }}">
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="Picker" />
+                    </df:EntityProperty.editor>
+                </df:EntityProperty>
+                <df:EntityProperty name="city3" displayName="Selected City 3" index="2" valuesProvider="{{ cityProvider3 }}">
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="Picker" />
+                    </df:EntityProperty.editor>
+                </df:EntityProperty>
+                <df:EntityProperty name="city4" displayName="Selected City 4" index="3" valuesProvider="{{ cityProvider4 }}">
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="Picker" />
+                    </df:EntityProperty.editor>
+                </df:EntityProperty>
+                <df:EntityProperty name="city5" displayName="Selected City 5" index="4" valuesProvider="{{ cityProvider5 }}">
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="Picker" />
+                    </df:EntityProperty.editor>
+                </df:EntityProperty>
+            </df:RadDataForm.properties>
+        </df:RadDataForm>
+    </GridLayout>
+</navigation:ExamplePage>

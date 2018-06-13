@@ -1,0 +1,80 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-ui-dataform" xmlns="http://www.nativescript.org/tns.xsd">
+    <df:RadDataForm id="myDataForm" source="{{ person }}" >
+        <df:RadDataForm.groups>
+        <df:PropertyGroup name="Main Info" hidden="false" >
+            <df:PropertyGroup.titleStyle>
+                <df:GroupTitleStyle fillColor="#00695c" labelTextSize="15" ios:labelFontName="Times New Roman" android:labelFontName="sans-serif" labelFontStyle="Bold" labelTextColor="White"/>
+            </df:PropertyGroup.titleStyle>
+            <df:PropertyGroup.properties>
+                <!-- >> dataform-styling-xml -->
+                <df:EntityProperty name="name" >
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="Text">
+                            <df:PropertyEditor.propertyEditorStyle>
+                                <df:PropertyEditorStyle strokeColor="#00695c" strokeWidth="2" fillColor="#4db6ac"
+                                        labelHidden="false" labelTextSize="18"
+                                        labelPosition="Left" labelWidth="60"
+                                        ios:labelFontName="Times New Roman" android:labelFontName="sans-serif-light"
+                                        labelFontStyle="Italic" labelTextColor="#00695c"/>
+                            </df:PropertyEditor.propertyEditorStyle>
+                        </df:PropertyEditor>
+                    </df:EntityProperty.editor>
+                </df:EntityProperty>
+                <!-- << dataform-styling-xml -->
+                <df:EntityProperty name="age" >
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="Number" >
+                            <df:PropertyEditor.propertyEditorStyle>
+                                <df:PropertyEditorStyle strokeColor="#00695c" strokeWidth="2" fillColor="#4db6ac" labelHidden="false" labelTextSize="18" labelPosition="Left" labelWidth="60" ios:labelFontName="Times New Roman" android:labelFontName="sans-serif-light" labelFontStyle="Italic" labelTextColor="#00695c"/>
+                            </df:PropertyEditor.propertyEditorStyle>
+                        </df:PropertyEditor>
+                    </df:EntityProperty.editor>
+                </df:EntityProperty>
+                <df:EntityProperty name="email" >
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="Email" >
+                            <df:PropertyEditor.propertyEditorStyle>
+                                <df:PropertyEditorStyle strokeColor="#00695c" strokeWidth="2" fillColor="#4db6ac" labelHidden="false" labelTextSize="18" labelPosition="Left" labelWidth="60" ios:labelFontName="Times New Roman" android:labelFontName="sans-serif-light" labelFontStyle="Italic" labelTextColor="#00695c"/>
+                            </df:PropertyEditor.propertyEditorStyle>
+                        </df:PropertyEditor>
+                    </df:EntityProperty.editor>
+                </df:EntityProperty>
+            </df:PropertyGroup.properties>
+        </df:PropertyGroup>
+        <df:PropertyGroup name="Address" hidden="false" >
+            <df:PropertyGroup.titleStyle>
+                <df:GroupTitleStyle fillColor="#00695c" labelTextSize="15" ios:labelFontName="Times New Roman" android:labelFontName="sans-serif" labelFontStyle="Bold" labelTextColor="White"/>
+            </df:PropertyGroup.titleStyle>
+            <df:PropertyGroup.properties>
+                <df:EntityProperty name="city" >
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="Text" >
+                            <df:PropertyEditor.propertyEditorStyle>
+                                <df:PropertyEditorStyle strokeColor="#00695c" strokeWidth="2" fillColor="#4db6ac" labelHidden="false" labelTextSize="18" labelPosition="Top" ios:labelFontName="Times New Roman" android:labelFontName="sans-serif-light" labelFontStyle="Italic" labelTextColor="#00695c"/>
+                            </df:PropertyEditor.propertyEditorStyle>
+                        </df:PropertyEditor>
+                    </df:EntityProperty.editor>
+                </df:EntityProperty>
+                <df:EntityProperty name="street" >
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="Text" >
+                            <df:PropertyEditor.propertyEditorStyle>
+                                <df:PropertyEditorStyle strokeColor="#00695c" strokeWidth="2" fillColor="#4db6ac" labelHidden="false" labelTextSize="18" labelPosition="Top" ios:labelFontName="Times New Roman" android:labelFontName="sans-serif-light" labelFontStyle="Italic" labelTextColor="#00695c"/>
+                            </df:PropertyEditor.propertyEditorStyle>
+                        </df:PropertyEditor>
+                    </df:EntityProperty.editor>
+                </df:EntityProperty>
+                <df:EntityProperty name="streetNumber" >
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="Number" >
+                            <df:PropertyEditor.propertyEditorStyle>
+                                <df:PropertyEditorStyle strokeColor="#00695c" strokeWidth="2" fillColor="#4db6ac" labelHidden="false" labelTextSize="18" labelPosition="Top" ios:labelFontName="Times New Roman" android:labelFontName="sans-serif-light" labelFontStyle="Italic" labelTextColor="#00695c"/>
+                            </df:PropertyEditor.propertyEditorStyle>
+                        </df:PropertyEditor>
+                    </df:EntityProperty.editor>
+                </df:EntityProperty>
+            </df:PropertyGroup.properties>
+        </df:PropertyGroup>
+        </df:RadDataForm.groups>
+    </df:RadDataForm>
+</navigation:ExamplePage>

@@ -1,0 +1,24 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-ui-dataform" xmlns="http://www.nativescript.org/tns.xsd">
+    <StackLayout>
+        <SegmentedBar id="mySegmentedBar" />
+        <Button id="myButton" text="commit manually" tap="onTap" isEnabled="false" horizontalAlignment="stretch"/>
+        <Label id="myLabel" textWrap="true" margin="12" />
+        <df:RadDataForm id="myDataForm" source="{{ user }}"
+            height="400"
+            propertyCommitted="onPropertyCommitted">
+            <df:RadDataForm.properties>
+                <df:EntityProperty name="username" index="0" />
+                <df:EntityProperty name="password" index="1" >
+                    <df:EntityProperty.editor> 
+                        <df:PropertyEditor type="Password" />
+                    </df:EntityProperty.editor>
+                </df:EntityProperty>
+                <df:EntityProperty name="email" index="2" >                
+                    <df:EntityProperty.editor> 
+                        <df:PropertyEditor type="Email" />
+                    </df:EntityProperty.editor>             
+                </df:EntityProperty>
+            </df:RadDataForm.properties>
+        </df:RadDataForm>
+    </StackLayout>
+</navigation:ExamplePage>

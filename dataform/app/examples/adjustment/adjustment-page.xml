@@ -1,0 +1,30 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-ui-dataform" xmlns="http://www.nativescript.org/tns.xsd">
+    <df:RadDataForm id="myDataForm" source="{{ person }}">
+        <!-- >> dataform-adjustment-xml -->
+        <df:RadDataForm.properties>
+            <df:EntityProperty name="name" displayName="Name" index="0" />
+            <df:EntityProperty name="age" displayName="Age" index="1" >
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="Number" />
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+            <df:EntityProperty name="email" displayName="E-Mail" index="2" >
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="Email" />
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+            <df:EntityProperty name="city" displayName="City" index="3" valuesProvider="New York, Washington, Los Angeles">
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="Picker" />
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+            <df:EntityProperty name="street" displayName="Street Name" index="4" />
+            <df:EntityProperty name="streetNumber" displayName="Street Number" index="5" >
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="Number" />
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+        </df:RadDataForm.properties>
+        <!-- << dataform-adjustment-xml -->
+    </df:RadDataForm>
+</navigation:ExamplePage>

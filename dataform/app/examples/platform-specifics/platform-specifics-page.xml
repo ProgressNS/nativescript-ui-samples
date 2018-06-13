@@ -1,0 +1,20 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-ui-dataform" xmlns="http://www.nativescript.org/tns.xsd">
+    <df:RadDataForm id="myDataForm" 
+        editorUpdate="onEditorUpdate"
+        groupUpdate="onGroupUpdate"
+        source="{{ person }}" >
+        <df:RadDataForm.groups>
+            <df:PropertyGroup name="INFO" collapsible="true">
+                <df:PropertyGroup.properties>
+                    <df:EntityProperty name="name"/>
+                    <df:EntityProperty name="age"/>
+                    <df:EntityProperty name="birthDate">
+                        <df:EntityProperty.editor>
+                            <df:PropertyEditor type="DatePicker" />
+                        </df:EntityProperty.editor>
+                    </df:EntityProperty>
+                </df:PropertyGroup.properties>
+            </df:PropertyGroup>
+        </df:RadDataForm.groups>
+    </df:RadDataForm>
+</navigation:ExamplePage>

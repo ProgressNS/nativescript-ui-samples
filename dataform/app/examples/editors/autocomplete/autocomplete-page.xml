@@ -1,0 +1,22 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-ui-dataform" xmlns="http://www.nativescript.org/tns.xsd">
+<!-- >> dataform-autocomplete-xml -->
+    <GridLayout rows="auto, *">
+        <Button text="check values" tap="checkValues"/>
+        <df:RadDataForm id="dataform" row="1" source="{{ booking }}" propertyCommitted="onPropertyCommitted">
+            <df:RadDataForm.properties>
+                <df:EntityProperty name="from" displayName="From:" index="0" autoCompleteDisplayMode="tokens" valuesProvider="{{ fromProviders }}">
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="AutoCompleteInline" />
+                    </df:EntityProperty.editor>
+                </df:EntityProperty>
+
+                <df:EntityProperty name="to" displayName="To:" index="1" autoCompleteDisplayMode="plain" valuesProvider="New York, Washington, Los Angeles">
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="AutoCompleteInline" />
+                    </df:EntityProperty.editor>
+                </df:EntityProperty>
+            </df:RadDataForm.properties>
+        </df:RadDataForm>
+    </GridLayout>
+<!-- << dataform-autocomplete-xml -->
+</navigation:ExamplePage>

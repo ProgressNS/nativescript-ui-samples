@@ -1,0 +1,31 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-ui-dataform" xmlns="http://www.nativescript.org/tns.xsd">
+    <GridLayout rows="auto,*" columns="50,*,50">
+        <Button text="<" isEnabled="{{ canGoDown }}" tap="{{ goDown }}" />
+        <Label col="1" horizontalAlignment="center" verticalAlignment="center" fontSize="24" text="Champions League" />
+        <Button col="2" text=">" isEnabled="{{ canGoUp }}" tap="{{ goUp }}"/>
+        <df:RadDataForm row="1" colSpan="3" id="dataform" source="{{ currentStat }}">
+            <df:RadDataForm.properties>
+                <df:EntityProperty name="season" index="0">
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="Label" />
+                    </df:EntityProperty.editor>
+                </df:EntityProperty>
+                <df:EntityProperty displayName="Champions" name="champion" index="1">
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="Label" />
+                    </df:EntityProperty.editor>
+                </df:EntityProperty>
+                <df:EntityProperty displayName="Runners-up" name="runnerUp" index="2">
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="Label" />
+                    </df:EntityProperty.editor>
+                </df:EntityProperty>
+                <df:EntityProperty displayName="Top goalscorers" name="scorers" index="3">
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="Label" />
+                    </df:EntityProperty.editor>
+                </df:EntityProperty>
+            </df:RadDataForm.properties>
+        </df:RadDataForm>
+    </GridLayout>
+</navigation:ExamplePage>

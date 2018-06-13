@@ -1,0 +1,16 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-ui-dataform" xmlns="http://www.nativescript.org/tns.xsd">
+    <StackLayout>
+        <df:RadDataForm id="myDataForm" source="{{ baseUser }}" validationMode="Manual" commitMode="Manual">
+            <df:RadDataForm.properties>
+                <df:EntityProperty name="username" index="0" />
+                <df:EntityProperty name="password" index="1" >
+                    <df:EntityProperty.editor> 
+                        <df:PropertyEditor type="Password" />
+                    </df:EntityProperty.editor>
+                </df:EntityProperty>
+            </df:RadDataForm.properties>
+        </df:RadDataForm>
+        <Label id="myLabel" textWrap="true" margin="12" android:color="#C73339" ios:color="red" horizontalAlignment="center"/>
+        <Button text="login" tap="onTap" margin="12" horizontalAlignment="stretch"/>
+    </StackLayout>
+</navigation:ExamplePage>
