@@ -1,0 +1,11 @@
+<!-- >> calendar-getting-started-xml -->
+<navigation:ExamplePage
+    xmlns:navigation="navigation/example-page"
+    xmlns:calendar="nativescript-ui-calendar"
+    xmlns="http://www.nativescript.org/tns.xsd">
+    <navigation.actionBar>
+        <ActionBar title="Getting Started" />
+    </navigation.actionBar>
+	<calendar:RadCalendar id="calendar" />
+</navigation:ExamplePage>
+<!-- << calendar-getting-started-xml -->

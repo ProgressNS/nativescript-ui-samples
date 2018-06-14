@@ -1,0 +1,10 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:rc="nativescript-ui-calendar" loaded="onPageLoaded" xmlns="http://www.nativescript.org/tns.xsd">
+    <navigation.actionBar>
+        <ActionBar title="Day View" />
+    </navigation.actionBar>
+    <GridLayout rows="auto, auto, *">
+        <Button text="btn" text="hide title" tap="onTitleTap"/>
+        <Button row="1" text="hide week" tap="onWeekTap"/>
+        <rc:RadCalendar row="2" id="calendar" eventSource="{{ calendarEvents }}" dayViewEventSelected="onDayViewEventSelected" viewMode="Day"/>
+    </GridLayout>
+</navigation:ExamplePage>

@@ -1,0 +1,13 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:rc="nativescript-ui-calendar" xmlns="http://www.nativescript.org/tns.xsd">
+    <navigation.actionBar>
+        <ActionBar title="Events" />
+    </navigation.actionBar>
+    <!-- >> calendar-handling-events-xml -->
+    <rc:RadCalendar id="calendar" 
+	   dateSelected="onDateSelected"
+	   dateDeselected="onDateDeselected"
+	   navigatedToDate="onNavigatedToDate"
+	   navigatingToDateStarted="onNavigatingToDateStarted"
+       viewModeChanged="onViewModeChanged" />
+     <!-- << calendar-handling-events-xml -->
+</navigation:ExamplePage>
