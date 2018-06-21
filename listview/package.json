@@ -9,12 +9,13 @@
       "version": "4.1.0"
     },
     "tns-android": {
-      "version": "4.1.1"
+      "version": "4.1.3"
     }
   },
   "dependencies": {
     "nativescript-fresco": "^3.0.2",
     "nativescript-theme-core": "^1.0.4",
+    "nativescript-ui-core": "*",
     "nativescript-ui-listview": "*",
     "nativescript-unit-test-runner": "^0.3.4",
     "tns-core-modules": "^4.1.0"
