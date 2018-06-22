@@ -34,7 +34,7 @@
   "_id": "tns-template-hello-world-ts@1.6.0",
   "_shasum": "a567c2b9a56024818c06596dab9629d155c5b8a8",
   "_resolved": "https://registry.npmjs.org/tns-template-hello-world-ts/-/tns-template-hello-world-ts-1.6.0.tgz",
-  "_from": "tns-template-hello-world-ts@latest"
+  "_from": "tns-template-hello-world-ts@latest",
   "_npmVersion": "2.14.7",
   "_nodeVersion": "4.2.2",
   "_npmUser": {
