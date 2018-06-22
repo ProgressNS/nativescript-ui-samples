@@ -29,5 +29,9 @@
             ]
         }
     },
+    "exclude": [
+        "node_modules",
+        "platforms"
+    ],
     "compileOnSave": false
 }
