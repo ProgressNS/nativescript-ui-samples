@@ -14,10 +14,10 @@
   },
   "dependencies": {
     "nativescript-theme-core": "^1.0.4",
-    "nativescript-ui-core": "*",
     "nativescript-ui-dataform": "*",
     "nativescript-unit-test-runner": "^0.3.4",
-    "tns-core-modules": "^4.1.0"
+    "tns-core-modules": "^4.1.0",
+    "nativescript-ui-core": "*"
   },
   "devDependencies": {
     "awesome-typescript-loader": "~5.0.0",
