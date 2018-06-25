@@ -2,5 +2,9 @@
     <navigation.actionBar>
         <ActionBar title="Day View" />
     </navigation.actionBar>
-    <rc:RadCalendar id="calendar" eventSource="{{ calendarEvents }}" dayViewEventSelected="onDayViewEventSelected" viewMode="Day" />
+    <GridLayout rows="auto, auto, *">
+        <Button text="btn" text="hide title" tap="onTitleTap"/>
+        <Button row="1" text="hide week" tap="onWeekTap"/>
+        <rc:RadCalendar row="2" id="calendar" eventSource="{{ calendarEvents }}" dayViewEventSelected="onDayViewEventSelected" viewMode="Day"/>
+    </GridLayout>
 </navigation:ExamplePage>
