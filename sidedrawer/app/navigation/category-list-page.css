@@ -1,0 +1,10 @@
+.root-drawer-content {
+    background-color: lightgray;
+}
+
+.root-item-stack-layout {
+    text-align: left;
+    vertical-align: center;
+    font-size: 16;
+    color:#404040;
+}

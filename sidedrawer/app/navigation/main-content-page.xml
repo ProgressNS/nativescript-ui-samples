@@ -1,0 +1,17 @@
+ <Page xmlns="http://www.nativescript.org/tns.xsd"
+                xmlns:lv="nativescript-pro-ui/listview"
+                  loaded="pageLoaded">
+    <Page.actionBar>
+        <ActionBar title="{{ currentParent.title }}"/>
+    </Page.actionBar>
+    <GridLayout rows="auto, *">
+        <ListView row="1" items="{{ currentSubItems }}" itemTap="{{ onNavigationItemTap }}" >
+            <ListView.itemTemplate>
+                <StackLayout class="itemStackLayout">
+                    <Label text="{{ title }}" textWrap="true" class="titleLabel"/>
+                    <StackLayout height="1" backgroundColor="#EEEEEE"/>
+                </StackLayout>   
+            </ListView.itemTemplate>
+        </ListView>
+    </GridLayout>
+</Page>

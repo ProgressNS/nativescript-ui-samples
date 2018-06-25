@@ -1,0 +1,25 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page"
+    xmlns:v="examples/validation/custom-validator/exact-text-validator-page"
+    loaded="onPageLoaded" xmlns:df="nativescript-ui-dataform" xmlns="http://www.nativescript.org/tns.xsd">
+    <df:RadDataForm id="myDataForm" source="{{ user }}">
+        <df:RadDataForm.properties>
+            <!-- >> dataform-custom-validator-xml -->
+            <df:EntityProperty name="username" index="0">
+                <df:EntityProperty.validators>
+                    <v:ExactTextValidator />
+                </df:EntityProperty.validators>
+            </df:EntityProperty>
+            <!-- << dataform-custom-validator-xml -->
+            <df:EntityProperty name="password" index="1" >
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="Password" />
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+            <df:EntityProperty name="email" displayName="E-mail" index="2" >
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="Email" />
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+        </df:RadDataForm.properties>
+    </df:RadDataForm>
+</navigation:ExamplePage>

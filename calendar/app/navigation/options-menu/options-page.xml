@@ -1,0 +1,12 @@
+<Page loaded="onLoaded" navigatedTo="onNavigatedTo" xmlns="http://www.nativescript.org/tns.xsd">
+    <Page.actionBar>
+        <ActionBar>
+            <NavigationButton text="Back" tap="{{ onBackTap }}"/>
+        </ActionBar>
+    </Page.actionBar>
+    <ListView items="{{myItems}}" id="listView"  itemTap="{{onSelectedRow}}" >
+        <ListView.itemTemplate>
+            <Label text="{{ title }}" class="listViewCellLabel" textWrap="true" />
+        </ListView.itemTemplate>
+    </ListView>
+</Page>
