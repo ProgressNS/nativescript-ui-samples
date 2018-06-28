@@ -7,26 +7,26 @@ import * as  http from "tns-core-modules/http";
 // >> autocomplete-async-model
 export class ViewModel extends Observable {
     private autocomplete;
-    private countries = ["Australia", "Albania", "Austria", "Argentina", "Maldives", "Bulgaria", "Belgium", "Cyprus", "Italy", "Japan",
-        "Denmark", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland",
-        "Latvia", "Luxembourg", "Macedonia", "Moldova", "Monaco", "Netherlands", "Norway",
-        "Poland", "Romania", "Russia", "Sweden", "Slovenia", "Slovakia", "Turkey", "Ukraine",
-        "Vatican City", "Chad", "China", "Chile"];
+    private jsonUrl = "https://raw.githubusercontent.com/telerik/nativescript-ui-samples/master/examples-data/airports.json";
 
     constructor(args) {
         super();
         const page = args.object;
         this.autocomplete = page.getViewById("autocomplete");
+        let that = this;
         this.autocomplete.loadSuggestionsAsync = function (text) {
-            const promise = new Promise(function (resolve, reject) {
-                http.getJSON("http://www.telerik.com/docs/default-source/ui-for-ios/airports.json?sfvrsn=2").then(function (r: any) {
-                    const airportsCollection = r.airports;
+            const promise = new Promise((resolve, reject)   => {
+                http.getJSON(that.jsonUrl).then((res: AirportJSON) => {
+                    const airportsCollection = res.airports;
                     const items: Array<TokenModel> = new Array();
                     for (let i = 0; i < airportsCollection.length; i++) {
                         items.push(new TokenModel(airportsCollection[i].FIELD2, null));
                     }
                     resolve(items);
-                }, function (e) {
+                }).catch((err) => {
+                    const message = 'Error fetching remote data from ' + that.jsonUrl + ': ' + err.message;
+                    console.log(message);
+                    alert(message);
                     reject();
                 });
             });
@@ -45,3 +45,32 @@ export class ViewModel extends Observable {
 }
 
 // << autocomplete-async-model
+
+export interface AirportJSON {
+    airports: Airport[];
+}
+
+export interface Airport {
+    FIELD1:  number;
+    FIELD2:  string;
+    FIELD3:  null | string;
+    FIELD4:  string;
+    FIELD5:  string;
+    FIELD6:  null | string;
+    FIELD7:  number;
+    FIELD8:  number;
+    FIELD9:  number;
+    FIELD10: number;
+    FIELD11: Field11;
+    FIELD12: null | string;
+}
+
+export enum Field11 {
+    A = "A",
+    E = "E",
+    N = "N",
+    O = "O",
+    S = "S",
+    U = "U",
+    Z = "Z",
+}
