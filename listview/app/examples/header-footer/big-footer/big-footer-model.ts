@@ -1,14 +1,13 @@
-// >> listview-first-look-model
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { Observable } from "tns-core-modules/data/observable";
 
 export class ViewModel extends Observable {
-
     constructor() {
         super();
+        this.headerTitle = "This is list header with height 50";
+        this.footerTitle = "This is list footer with height 100";
         this.dataItems = new ObservableArray<DataItem>();
-
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 5; i++) {
             this.dataItems.push(new DataItem(i, "Item " + i, "This is item description."));
         }
     }
@@ -19,6 +18,22 @@ export class ViewModel extends Observable {
 
     set dataItems(value: ObservableArray<DataItem>) {
         this.set("_dataItems", value);
+    }
+
+    get headerTitle(): string {
+        return this.get("_headerTitle");
+    }
+
+    set headerTitle(value: string) {
+        this.set("_headerTitle", value);
+    }
+
+    get footerTitle(): string {
+        return this.get("_footerTitle");
+    }
+
+    set footerTitle(value: string) {
+        this.set("_footerTitle", value);
     }
 }
 
@@ -33,4 +48,3 @@ export class DataItem {
         this.itemDescription = description;
     }
 }
-// << listview-first-look-model

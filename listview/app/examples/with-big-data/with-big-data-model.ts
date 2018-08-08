@@ -1,15 +1,15 @@
-// >> listview-first-look-model
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { Observable } from "tns-core-modules/data/observable";
 
 export class ViewModel extends Observable {
+    private _words = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"];
 
     constructor() {
         super();
         this.dataItems = new ObservableArray<DataItem>();
 
-        for (let i = 0; i < 10; i++) {
-            this.dataItems.push(new DataItem(i, "Item " + i, "This is item description."));
+        for (let i = 0; i < 10000; i++) {
+            this.dataItems.push(new DataItem(i, "Item " + i, "This is item description " + i));
         }
     }
 
@@ -33,4 +33,3 @@ export class DataItem {
         this.itemDescription = description;
     }
 }
-// << listview-first-look-model
