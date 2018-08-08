@@ -1,7 +1,7 @@
 <navigation:ExamplePage loaded="onPageLoaded" xmlns:navigation="navigation/example-page" xmlns:au="nativescript-ui-autocomplete" xmlns="http://www.nativescript.org/tns.xsd">
     <StackLayout ios:backgroundColor="#CDCECE" padding="5">
         <Label text="Select countries:"/>
-         <au:RadAutoCompleteTextView id="autocomplete" items="{{ dataItems }}" suggestMode="Suggest" displayMode="Tokens" closeButtonImageSrc="res://clear">
+         <au:RadAutoCompleteTextView id="autocomplete" noResultsText="Nothing found!" items="{{ dataItems }}" suggestMode="Suggest" displayMode="Tokens" closeButtonImageSrc="res://clear">
             <au:RadAutoCompleteTextView.suggestionView>
                 <au:SuggestionView suggestionViewHeight="300">
                     <au:SuggestionView.suggestionItemTemplate>

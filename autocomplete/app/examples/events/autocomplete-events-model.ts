@@ -1,9 +1,8 @@
 import { ObservableArray } from "tns-core-modules/data/observable-array";
-import { TokenModel } from "nativescript-ui-autocomplete";
+import { RadAutoCompleteTextView, TokenModel } from "nativescript-ui-autocomplete";
 import { Observable } from "tns-core-modules/data/observable";
 
 export class ViewModel extends Observable {
-    private autocomplete;
     private currentEventNumber = 0;
     private countries = ["Australia", "Albania", "Austria", "Argentina", "Maldives", "Bulgaria", "Belgium", "Cyprus", "Italy", "Japan",
         "Denmark", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland",
@@ -14,7 +13,6 @@ export class ViewModel extends Observable {
     constructor(args) {
         super();
         const page = args.object;
-        this.autocomplete = page.getViewById("autocomplete");
         this.initDataItems();
         this.updateEventsText();
     }
@@ -61,7 +59,13 @@ export class ViewModel extends Observable {
     }
 
     public onSuggestionViewBecameVisible(args) {
-        this.logEvent("Suggestion View Became Visible");
+        let autoComplete: RadAutoCompleteTextView = args.object;
+        let numberOfItems = autoComplete.filteredItems.length;
+        let eventText = numberOfItems + " Suggestions Visible";
+        if (numberOfItems > 0) {
+            eventText += " - First is " + autoComplete.filteredItems[0].text;
+        }
+        this.logEvent(eventText);
     }
     // << autocomplete-events-ts
 
