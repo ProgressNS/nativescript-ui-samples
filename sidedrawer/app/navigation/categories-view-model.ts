@@ -33,5 +33,8 @@ export class NavigationViewModel extends PageViewModel {
 
         exampleItem = new NavigationItem("Events", "examples/callbacks/drawer-callbacks-page", currentParent);
         currentParent.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Shadow", "examples/shadow/drawer-shadow-page", currentParent);
+        currentParent.subItems.push(exampleItem);
     }
 }
