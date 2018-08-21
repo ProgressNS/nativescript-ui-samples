@@ -1,0 +1,10 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-ui-listview" xmlns="http://www.nativescript.org/tns.xsd">
+    <lv:RadListView items="{{ dataItems }}" >
+        <lv:RadListView.itemTemplate>
+            <Label fontSize="20" text="{{ size }}"  backgroundColor="{{ color }}"  width="{{ size }}"/>
+        </lv:RadListView.itemTemplate>
+        <lv:RadListView.listViewLayout>
+            <lv:ListViewLinearLayout scrollDirection="Horizontal" />
+        </lv:RadListView.listViewLayout>
+    </lv:RadListView>
+</navigation:ExamplePage>

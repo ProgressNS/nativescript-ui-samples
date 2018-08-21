@@ -88,6 +88,11 @@ export class NavigationViewModel extends Observable {
     private buildListViewExamples(currentParent: NavigationItem) {
         let exampleItem = new NavigationItem("Getting Started", "examples/getting-started/getting-started-page", currentParent);
         currentParent.subItems.push(exampleItem);
+        exampleItem = new NavigationItem("Getting Started Horizontal", "examples/getting-started-horizontal/getting-started-horizontal-page", currentParent);
+        currentParent.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Initially load 10 000 items", "examples/with-big-data/with-big-data-page", currentParent);
+        currentParent.subItems.push(exampleItem);
 
         // Data operations
         let dataOperations = new NavigationItem("Data Operations", undefined, currentParent);
@@ -182,8 +187,16 @@ export class NavigationViewModel extends Observable {
         swipeActions.subItems.push(exampleItem);
 
         // Header and footer
-        exampleItem = new NavigationItem("Header and Footer", "examples/header-footer/header-footer-page", currentParent);
-        currentParent.subItems.push(exampleItem);
+        let headerFooterExamples = new NavigationItem("Header and Footer", undefined, currentParent);
+        currentParent.subItems.push(headerFooterExamples);
+        exampleItem = new NavigationItem("Auto height", "examples/header-footer/auto-size/auto-size-page", headerFooterExamples);
+        headerFooterExamples.subItems.push(exampleItem);
+        exampleItem = new NavigationItem("Big header", "examples/header-footer/big-header/big-header-page", headerFooterExamples);
+        headerFooterExamples.subItems.push(exampleItem);
+        exampleItem = new NavigationItem("Big footer", "examples/header-footer/big-footer/big-footer-page", headerFooterExamples);
+        headerFooterExamples.subItems.push(exampleItem);
+        exampleItem = new NavigationItem("Change at runtime", "examples/header-footer/change-size-at-runtime/change-size-at-runtime-page", headerFooterExamples);
+        headerFooterExamples.subItems.push(exampleItem);
 
         // Scroll to index
         let scrollToIndex = new NavigationItem("Scroll to index", undefined, currentParent);
@@ -197,6 +210,9 @@ export class NavigationViewModel extends Observable {
 
         // Scroll events
         exampleItem = new NavigationItem("Scroll Events", "examples/scroll-events/scroll-events-page", currentParent);
+        currentParent.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Horizontal with variable item's width", "examples/horizontal-with-variable-item-width/horizontal-with-variable-item-width-page", currentParent);
         currentParent.subItems.push(exampleItem);
     }
 

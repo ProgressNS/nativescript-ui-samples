@@ -1,4 +1,3 @@
-// >> listview-first-look-model
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { Observable } from "tns-core-modules/data/observable";
 
@@ -33,4 +32,3 @@ export class DataItem {
         this.itemDescription = description;
     }
 }
-// << listview-first-look-model

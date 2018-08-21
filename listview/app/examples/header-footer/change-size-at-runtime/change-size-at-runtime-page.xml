@@ -1,0 +1,28 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-ui-listview" xmlns="http://www.nativescript.org/tns.xsd">
+    <GridLayout rows="auto, *">
+        <Button text="Update header/footer with third label" tap="tabUpdate"/>
+        <lv:RadListView id="myListView" items="{{ dataItems }}" row="1">
+            <lv:RadListView.itemTemplate>
+                <StackLayout orientation="vertical">
+                    <Label fontSize="20" text="{{ itemName }}"/>
+                    <Label fontSize="14" text="{{ itemDescription }}"/>
+                </StackLayout>
+            </lv:RadListView.itemTemplate>
+            <lv:RadListView.headerItemTemplate>
+                <StackLayout backgroundColor="#65a565">
+                    <Label text="This is list header"/>
+                    <Label text="Second header label" visibility="{{ _isSecondVisible ? 'visible' : 'collapse'}}" height="50" backgroundColor="green" color="white"/>
+                    <Label text="Third header label" visibility="{{ _isThirdVisible ? 'visible' : 'collapse'}}" height="50" backgroundColor="red" color="white"/>
+                </StackLayout>
+            </lv:RadListView.headerItemTemplate>
+
+            <lv:RadListView.footerItemTemplate>
+                <StackLayout backgroundColor="#7fff7f">
+                    <Label text="This is list footer"/>
+                    <Label text="Second footer label" visibility="{{ _isSecondVisible ? 'visible' : 'collapse'}}" height="50" backgroundColor="green" color="white"/>
+                    <Label text="Third footer label" visibility="{{ _isThirdVisible ? 'visible' : 'collapse'}}" height="50" backgroundColor="red" color="white"/>
+                </StackLayout>
+            </lv:RadListView.footerItemTemplate>
+        </lv:RadListView>
+    </GridLayout>
+</navigation:ExamplePage>
