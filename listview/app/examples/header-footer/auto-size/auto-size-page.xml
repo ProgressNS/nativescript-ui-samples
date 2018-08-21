@@ -1,0 +1,18 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-ui-listview" xmlns="http://www.nativescript.org/tns.xsd">
+    <lv:RadListView items="{{ dataItems }}" >
+        <lv:RadListView.itemTemplate>
+            <StackLayout orientation="vertical">
+                <Label fontSize="20" text="{{ itemName }}"/>
+                <Label fontSize="14" text="{{ itemDescription }}"/>
+            </StackLayout>
+        </lv:RadListView.itemTemplate>
+        <!-- >> listview-header-footer-xml -->
+         <lv:RadListView.headerItemTemplate>
+            <Label text="This is list header" backgroundColor="#65a565"/>
+        </lv:RadListView.headerItemTemplate>
+        <lv:RadListView.footerItemTemplate>
+            <Label text="This is list footer" backgroundColor="#7fff7f"/>
+        </lv:RadListView.footerItemTemplate>
+        <!-- << listview-header-footer-xml -->
+    </lv:RadListView>
+</navigation:ExamplePage>

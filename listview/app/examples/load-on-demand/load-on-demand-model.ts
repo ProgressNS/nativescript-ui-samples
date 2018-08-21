@@ -1,16 +1,18 @@
 import { ObservableArray } from "tns-core-modules/data/observable-array";
-import { ListViewEventData, RadListView, ListViewLoadOnDemandMode } from "nativescript-ui-listview";
+import { ListViewEventData, RadListView, LoadOnDemandListViewEventData } from "nativescript-ui-listview";
 import { Observable } from "tns-core-modules/data/observable";
 import { android as androidApplication } from "tns-core-modules/application";
 
 const posts = require("../posts.json");
 
 export class ViewModel extends Observable {
-    private _numberOfAddedItems;
+    private _sourceDataItems: ObservableArray<DataItem>;
 
     constructor() {
         super();
+        this.dataItems = new ObservableArray<DataItem>();
         this.initDataItems();
+        this.addMoreItemsFromSource(6);
     }
     get dataItems(): ObservableArray<DataItem> {
         return this.get("_dataItems");
@@ -21,38 +23,35 @@ export class ViewModel extends Observable {
     }
 
     // >> listview-load-on-demand-handler
-    public onLoadMoreItemsRequested(args: ListViewEventData) {
-        const that = new WeakRef(this);
-        setTimeout(function () {
-            const listView: RadListView = args.object;
-            const initialNumberOfItems = that.get()._numberOfAddedItems;
-            for (let i = that.get()._numberOfAddedItems; i < initialNumberOfItems + 2; i++) {
-                if (i > posts.names.length - 1) {
-                    listView.loadOnDemandMode = ListViewLoadOnDemandMode[ListViewLoadOnDemandMode.None];
-                    break;
-                }
-                const imageUri = androidApplication ? posts.images[i].toLowerCase() : posts.images[i];
-                that.get().dataItems.push(new DataItem(posts.names[i], posts.titles[i], posts.text[i], "res://" + imageUri));
-                that.get()._numberOfAddedItems++;
-            }
-
-            listView.notifyLoadOnDemandFinished();
-        }, 1000);
-        args.returnValue = true;
+    public addMoreItemsFromSource(chunkSize: number) {
+        let newItems = this._sourceDataItems.splice(0, chunkSize);
+        this.dataItems.push(newItems);
     }
+
+    public onLoadMoreItemsRequested(args: LoadOnDemandListViewEventData) {
+        const that = new WeakRef(this);
+        if (this._sourceDataItems.length > 0) {
+            setTimeout(function () {
+                const listView: RadListView = args.object;
+                that.get().addMoreItemsFromSource(2);
+                listView.notifyLoadOnDemandFinished();
+            }, 1000);
+            args.returnValue = true;
+        } else {
+            args.returnValue = false;
+        }
+    }
+
     // << listview-load-on-demand-handler
 
     private initDataItems() {
-        this.dataItems = new ObservableArray<DataItem>();
-        this._numberOfAddedItems = 0;
-
-        for (let i = 0; i < posts.names.length - 15; i++) {
-            this._numberOfAddedItems++;
+        this._sourceDataItems = new ObservableArray<DataItem>();
+        for (let i = 0; i < posts.names.length; i++) {
             if (androidApplication) {
-                this.dataItems.push(new DataItem(posts.names[i], posts.titles[i], posts.text[i], "res://" + posts.images[i].toLowerCase()));
+                this._sourceDataItems.push(new DataItem(posts.names[i], posts.titles[i], posts.text[i], "res://" + posts.images[i].toLowerCase()));
             }
             else {
-                this.dataItems.push(new DataItem(posts.names[i], posts.titles[i], posts.text[i], "res://" + posts.images[i]));
+                this._sourceDataItems.push(new DataItem(posts.names[i], posts.titles[i], posts.text[i], "res://" + posts.images[i]));
             }
         }
     }
