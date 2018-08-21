@@ -16,6 +16,11 @@ export class ViewModel extends Observable {
         const page = args.object;
         this.autoComplete = page.getViewById("autocomplete");
         this.initDataItems();
+
+        this.autoComplete.addToken(this.dataItems.getItem(0));
+        this.autoComplete.addToken(this.dataItems.getItem(1));
+        this.autoComplete.addToken(this.dataItems.getItem(2));
+        this.lastIndex = 3;
     }
 
     get dataItems(): ObservableArray<TokenModel> {
@@ -32,13 +37,6 @@ export class ViewModel extends Observable {
         for (let i = 0; i < this.countries.length; i++) {
             this.dataItems.push(new TokenModel(this.countries[i], undefined));
         }
-    }
-
-    public onLoaded(args) {
-        this.autoComplete.addToken(this.dataItems.getItem(0));
-        this.autoComplete.addToken(this.dataItems.getItem(1));
-        this.autoComplete.addToken(this.dataItems.getItem(2));
-        this.lastIndex = 3;
     }
 
     public onAddToken(args) {
