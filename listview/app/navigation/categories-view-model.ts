@@ -112,7 +112,8 @@ export class NavigationViewModel extends Observable {
 
         exampleItem = new NavigationItem("Multiple operations", "examples/multiple-data-operations/multiple-data-operations-page", dataOperations);
         dataOperations.subItems.push(exampleItem);
-
+        exampleItem = new NavigationItem("With Swipe", "examples/multiple-operations-with-swipe/multiple-operations-with-swipe-page", dataOperations);
+        dataOperations.subItems.push(exampleItem);
 
         exampleItem = new NavigationItem("Multiple Item Templates", "examples/multiple-templates/multiple-templates-page", currentParent);
         currentParent.subItems.push(exampleItem);
@@ -163,6 +164,8 @@ export class NavigationViewModel extends Observable {
         selectionExample = new NavigationItem("Manual with Variable Item Size", "examples/load-on-demand/dynamic-size-manual/dynamic-size-manual-page", demand);
         demand.subItems.push(selectionExample);
         selectionExample = new NavigationItem("Auto with Variable Item Size", "examples/load-on-demand/dynamic-size-auto/dynamic-size-auto-page", demand);
+        demand.subItems.push(selectionExample);
+        selectionExample = new NavigationItem("With small source and pull to refresh", "examples/load-on-demand/fixed-size-auto-with-small-source/fixed-size-auto-with-small-source-page", demand);
         demand.subItems.push(selectionExample);
 
         exampleItem = new NavigationItem("Observable Array", "examples/observable-array/observable-array-page", currentParent);

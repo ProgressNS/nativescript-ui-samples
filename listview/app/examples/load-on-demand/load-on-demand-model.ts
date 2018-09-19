@@ -30,15 +30,16 @@ export class ViewModel extends Observable {
 
     public onLoadMoreItemsRequested(args: LoadOnDemandListViewEventData) {
         const that = new WeakRef(this);
+        const listView: RadListView = args.object;
         if (this._sourceDataItems.length > 0) {
             setTimeout(function () {
-                const listView: RadListView = args.object;
                 that.get().addMoreItemsFromSource(2);
                 listView.notifyLoadOnDemandFinished();
             }, 1000);
             args.returnValue = true;
         } else {
             args.returnValue = false;
+            listView.notifyLoadOnDemandFinished(true);
         }
     }
 

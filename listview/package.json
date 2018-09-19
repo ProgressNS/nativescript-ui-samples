@@ -17,7 +17,7 @@
     "nativescript-theme-core": "^1.0.4",
     "nativescript-ui-listview": "*",
     "nativescript-unit-test-runner": "^0.3.4",
-    "tns-core-modules": "~4.2.0",
+    "tns-core-modules": "^4.2.0",
     "nativescript-ui-core": "*"
   },
   "devDependencies": {
@@ -28,7 +28,7 @@
     "nativescript-css-loader": "~0.26.1",
     "nativescript-dev-typescript": "^0.7.0",
     "nativescript-dev-webpack": "~0.15.0",
-    "tns-platform-declarations": "^4.2.0",
+    "tns-platform-declarations": "^4.2.1",
     "tslint": "^5.0.0",
     "typescript": "~2.8.2"
   }
