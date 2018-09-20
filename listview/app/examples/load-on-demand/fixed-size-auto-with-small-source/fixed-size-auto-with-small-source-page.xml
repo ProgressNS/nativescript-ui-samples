@@ -1,0 +1,42 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:f="nativescript-fresco" loaded="onPageLoaded" 
+                        xmlns:lv="nativescript-ui-listview" xmlns="http://www.nativescript.org/tns.xsd">
+    <GridLayout rows="auto, *">
+        <StackLayout orientation="horizontal">
+                <Button marginLeft="15" text="Auto" tap="onChangeAuto" class="action-button"/>
+                <Button marginLeft="15" text="Manual" tap="onChangeManual" class="action-button"/>
+                <Button marginLeft="15" text="None" tap="onChangeNone" class="action-button"/>
+        </StackLayout>
+    
+    <lv:RadListView id="ls" 
+                row="1" 
+                items="{{ dataItems }}" 
+                loadOnDemandMode="Manual" 
+                loadMoreDataRequested="{{ onLoadMoreDataRequested }}" 
+                pullToRefresh="true" 
+                pullToRefreshInitiated="{{ onPullToRefreshInitiated }}">
+        <lv:RadListView.itemTemplate>
+            <StackLayout orientation="vertical" padding="5 10 5 10"  style="background-color: #7fff7f;">
+                <StackLayout orientation="horizontal" padding="10" style="background-color: #65a565;">
+                    <ios>
+                        <Image src="{{ image + '.jpg'}}" stretch="aspectFit" height="100" width="100"/>
+                    </ios>
+                    <android>
+                        <f:FrescoDrawee height="100" width="100" imageUri="{{ image }}"/>
+                    </android>
+                    <StackLayout orientation="vertical" marginLeft="15">
+                        <Label fontSize="20" text="{{ name }}" marginBottom="8"/>
+                        <Label fontSize="14" text="{{ title }}" style="font-weight: bold;" textWrap="true"/>
+                        <Label fontSize="12" text="{{ text }}" color="White" textWrap="true"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </lv:RadListView.itemTemplate>
+        <ios>
+            <lv:RadListView.listViewLayout>
+                <lv:ListViewLinearLayout itemHeight="120" itemInsertAnimation="Fade" itemDeleteAnimation="Fade"/>
+            </lv:RadListView.listViewLayout>
+        </ios>
+    </lv:RadListView>
+</GridLayout>
+</navigation:ExamplePage>
+

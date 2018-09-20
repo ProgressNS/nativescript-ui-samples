@@ -1,0 +1,35 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-ui-listview" xmlns="http://www.nativescript.org/tns.xsd">
+    <GridLayout>
+        <lv:RadListView itemSelected="onItemSelected" 
+                        itemTap="onItemTap" 
+                        selectionBehavior="Press" 
+                        id="myListView" 
+                        items="{{ dataItems }}" 
+                        sortingFunction="{{ mySortingFunc }}"
+                        filteringFunction="{{ myFilteringFunc }}"
+                        groupingFunction="{{ myGroupingFunc }}"
+                        selectionBehavior="Press" 
+                        itemSwipeProgressEnded="onSwipeCellFinished"
+                        itemSwipeProgressStarted="onSwipeCellStarted" 
+                        itemSwipeProgressChanged="onCellSwiping"
+                        itemSwiping="onItemSwiping" 
+                        swipeActions="true">
+            <lv:RadListView.itemTemplate>
+                <StackLayout orientation="vertical" backgroundColor="White">
+                    <Label fontSize="20" text="{{ itemName }}"/>
+                    <Label fontSize="14" text="{{ itemDescription }}"/>
+                </StackLayout>
+            </lv:RadListView.itemTemplate>
+            <lv:RadListView.itemSwipeTemplate>
+                <GridLayout columns="auto, *, auto" backgroundColor="White">
+                    <StackLayout id="mark-view" col="0" style="background-color: blue;" tap="onLeftSwipeClick" paddingLeft="16" paddingRight="16" orientation="horizontal">
+                        <Label text="mark" style="text-size: 20" verticalAlignment="center" horizontalAlignment="center"/>
+                    </StackLayout>
+                    <StackLayout id="delete-view" col="2" style="background-color: red;" tap="onRightSwipeClick"  paddingLeft="16" paddingRight="16" orientation="horizontal">
+                        <Label text="delete" style="text-size: 20" verticalAlignment="center" horizontalAlignment="center" />
+                    </StackLayout>
+                </GridLayout>
+            </lv:RadListView.itemSwipeTemplate>
+        </lv:RadListView>
+    </GridLayout>
+</navigation:ExamplePage>
