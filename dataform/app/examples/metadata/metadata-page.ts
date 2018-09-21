@@ -1,5 +1,5 @@
-import { PersonModel2 } from "./../view-models/person-model-2";
+import { PersonNestedModel } from "./../view-models/person-nested-model";
 export function onPageLoaded(args) {
     const page = args.object;
-    page.bindingContext = new PersonModel2();
+    page.bindingContext = new PersonNestedModel();
 }
