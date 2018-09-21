@@ -171,8 +171,12 @@ export class NavigationViewModel extends Observable {
         dataFormExample = new NavigationItem("Read Only", "examples/editors/readonly/editor-readonly-page", currentParent);
         currentParent.subItems.push(dataFormExample);
 
-        dataFormExample = new NavigationItem("Value Providers", "examples/value-providers/value-providers-page", currentParent);
-        currentParent.subItems.push(dataFormExample);
+        const valueProviders = new NavigationItem("Value Providers", undefined, currentParent);
+        currentParent.subItems.push(valueProviders);
+        let providersExample = new NavigationItem("Types", "examples/value-providers/types/value-providers-types-page", valueProviders);
+        valueProviders.subItems.push(providersExample);
+        providersExample = new NavigationItem("Relations", "examples/value-providers/relations/value-providers-relations-page", valueProviders);
+        valueProviders.subItems.push(providersExample);
 
         dataFormExample = new NavigationItem("Scrollable Form", "examples/scrolling/scrolling-page", currentParent);
         currentParent.subItems.push(dataFormExample);
