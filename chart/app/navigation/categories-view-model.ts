@@ -147,6 +147,9 @@ export class NavigationViewModel extends Observable {
         stylingExample = new NavigationItem("Styling labels", "examples/styling/styling-labels-page", stylingRoot);
         stylingRoot.subItems.push(stylingExample);
 
+        stylingExample = new NavigationItem("Styling ticks", "examples/styling/styling-ticks-page", stylingRoot);
+        stylingRoot.subItems.push(stylingExample);
+
         stylingExample = new NavigationItem("Styling series selection", "examples/styling/styling-selection-page", stylingRoot);
         stylingRoot.subItems.push(stylingExample);
 
@@ -160,6 +163,9 @@ export class NavigationViewModel extends Observable {
         behaviorsRoot.subItems.push(interactionExample);
 
         interactionExample = new NavigationItem("Trackball", "examples/behaviors/chart-trackball-page", behaviorsRoot);
+        behaviorsRoot.subItems.push(interactionExample);
+
+        interactionExample = new NavigationItem("Trackball Content", "examples/behaviors/chart-trackball-content-page", behaviorsRoot);
         behaviorsRoot.subItems.push(interactionExample);
 
         interactionExample = new NavigationItem("Pie selection", "examples/behaviors/chart-pie-selection-page", behaviorsRoot);
