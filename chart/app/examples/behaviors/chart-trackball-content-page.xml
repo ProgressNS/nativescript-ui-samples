@@ -1,0 +1,41 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-ui-chart" xmlns="http://www.nativescript.org/tns.xsd">
+    <GridLayout rows="auto, *">
+        <Label text="Tap and hold to display the Trackball for the closest category. Drag horizontally to update the Trackball position." textWrap="true"/>
+        <chart:RadCartesianChart row="1" marginTop="20" id="cartesianChart">
+            <chart:RadCartesianChart.horizontalAxis>
+                <chart:CategoricalAxis/>
+            </chart:RadCartesianChart.horizontalAxis>
+            <chart:RadCartesianChart.verticalAxis>
+                <chart:LinearAxis/>
+            </chart:RadCartesianChart.verticalAxis>
+            <chart:RadCartesianChart.series>
+                <chart:SplineSeries legendTitle="Bangkok" seriesName="Line1" items="{{ temperatureDataItems }}" categoryProperty="Month" valueProperty="Bangkok"/>
+                <chart:SplineSeries legendTitle="Paris" seriesName="Line2" items="{{ temperatureDataItems }}" categoryProperty="Month" valueProperty="Paris"/>
+                <chart:SplineSeries legendTitle="Ulaanbaatar" seriesName="Line3" items="{{ temperatureDataItems }}" categoryProperty="Month" valueProperty="Ulaanbaatar"/>
+            </chart:RadCartesianChart.series>
+            <chart:RadCartesianChart.trackball>
+                <chart:Trackball snapMode="AllClosestPoints" showIntersectionPoints="true" trackBallContentRequested="onTrackBallContentRequested"/>
+            </chart:RadCartesianChart.trackball>
+            <chart:RadCartesianChart.legend>
+                <chart:RadLegendView position="Top" title="Monthly Averages (&#8451;)" />
+            </chart:RadCartesianChart.legend>
+            <chart:RadCartesianChart.palettes>
+                <chart:Palette seriesName="Line1">
+                    <chart:Palette.entries>
+                        <chart:PaletteEntry fillColor="#E11B01" strokeColor="#E11B01"/>
+                    </chart:Palette.entries>
+                </chart:Palette>
+                <chart:Palette seriesName="Line2">
+                    <chart:Palette.entries>
+                        <chart:PaletteEntry fillColor="#FFBEA7" strokeColor="#FFBEA7"/>
+                    </chart:Palette.entries>
+                </chart:Palette>
+                <chart:Palette seriesName="Line3">
+                    <chart:Palette.entries>
+                        <chart:PaletteEntry fillColor="#03A9F4" strokeColor="#03A9F4"/>
+                    </chart:Palette.entries>
+                </chart:Palette>
+            </chart:RadCartesianChart.palettes>
+        </chart:RadCartesianChart>
+    </GridLayout>
+</navigation:ExamplePage>
