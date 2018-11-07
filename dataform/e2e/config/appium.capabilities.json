@@ -1,0 +1,117 @@
+{
+    "android23": {
+        "platformName": "Android",
+        "platformVersion": "6.0",
+        "deviceName": "Android",
+        "lt": 60000,
+        "appActivity": "com.tns.NativeScriptActivity",
+        "newCommandTimeout": 720,
+        "noReset": true,
+        "fullReset": false,
+        "app": ""
+    },
+    "android24": {
+        "platformName": "Android",
+        "platformVersion": "7.0",
+        "deviceName": "Emulator-Api24-Google",
+        "avd":"Emulator-Api24-Google",
+        "lt": 60000,
+        "newCommandTimeout": 720,
+        "appium-version": "1.7.1",
+        "noReset": true,
+        "fullReset": false,
+        "app": ""
+    },
+    "android24.sauce": {
+        "platformName": "Android",
+        "platformVersion": "7.0",
+        "deviceName": "Android GoogleAPI Emulator",
+        "lt": 60000,
+        "newCommandTimeout": 720,
+        "appiumVersion": "1.8.1",
+        "noReset": true,
+        "fullReset": false,
+        "app": "sauce-storage:dataform-js-android-release.apk",
+        "density": 3.2,
+        "offsetPixels": 51,
+        "automationName": "Appium"
+    },
+    "android25": {
+        "platformName": "Android",
+        "platformVersion": "7.1",
+        "deviceName": "Google Pixel GoogleAPI",
+        "lt": 60000,
+        "appActivity": "com.tns.NativeScriptActivity",
+        "newCommandTimeout": 720,
+        "noReset": true,
+        "fullReset": false,
+        "app": ""
+    },
+    "android27": {
+        "platformName": "Android",
+        "platformVersion": "8.1",
+        "deviceName": "Emulator-Api27-Google",
+        "lt": 60000,
+        "appActivity": "com.tns.NativeScriptActivity",
+        "newCommandTimeout": 720,
+        "noReset": true,
+        "fullReset": false,
+        "app": ""
+    },
+    "sim.iPhoneX.iOS112": {
+        "platformName": "iOS",
+        "platformVersion": "11.2",
+        "deviceName": "iPhone X",
+        "noReset": true,
+        "fullReset": false,
+        "app": ""
+    },
+    "sim.iPhoneX.iOS113": {
+        "platformName": "iOS",
+        "platformVersion": "11.3",
+        "deviceName": "iPhone X",
+        "noReset": true,
+        "fullReset": false,
+        "app": ""
+    },
+    "sim.iPhoneX.ios11": {
+        "platformName": "iOS",
+        "platformVersion": "11.2",
+        "deviceName": "iPhone X",
+        "noReset": true,
+        "fullReset": false,
+        "app": "",
+        "appiumVersion": "1.8.1",
+        "density": 3,
+        "offsetPixels": 87,
+        "automationName": "Appium"
+    },
+    "sim.iPhoneX.ios11.aws": {
+        "platformName": "iOS",
+        "platformVersion": "11.2",
+        "deviceName": "iPhone X",
+        "appiumVersion": "1.8.1",
+        "density": 3,
+        "offsetPixels": 87,
+        "noReset": true,
+        "fullReset": false,
+        "app": "https://s3.amazonaws.com/pro-ui-apps/dataform-js-ios.zip",
+        "idleTimeout": 120,
+        "automationName": "Appium"
+    },
+    "android24.aws": {
+        "platformName": "Android",
+        "platformVersion": "7.0",
+        "deviceName": "Android GoogleAPI Emulator",
+        "lt": 60000,
+        "newCommandTimeout": 720,
+        "appiumVersion": "1.8.1",
+        "density": 3.2,
+        "offsetPixels": 51,
+        "noReset": true,
+        "fullReset": false,
+        "app": "https://s3.amazonaws.com/pro-ui-apps/dataform-js-android-release.apk",
+        "idleTimeout": 120,
+        "automationName": "Appium"
+    }
+}

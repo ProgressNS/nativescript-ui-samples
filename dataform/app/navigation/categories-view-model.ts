@@ -149,6 +149,12 @@ export class NavigationViewModel extends Observable {
         dataFormExample = new NavigationItem("Editor Background", "examples/styling/editor-background/styling-editor-background-page", styling);
         styling.subItems.push(dataFormExample);
 
+        dataFormExample = new NavigationItem("CSS Form", "examples/styling/css-form/css-form-page", styling);
+        styling.subItems.push(dataFormExample);
+
+        dataFormExample = new NavigationItem("CSS Editors", "examples/styling/css-editors/css-editors-page", styling);
+        styling.subItems.push(dataFormExample);
+
         dataFormExample = new NavigationItem("At runtime", "examples/styling/editor-style/editor-style-page", styling);
         styling.subItems.push(dataFormExample);
 
