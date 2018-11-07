@@ -37,13 +37,11 @@ export function dfEditorUpdate(args: DataFormEventData) {
         const textOffsets = new UIEdgeInsets({ top: coreEditorPaddingVertical, left: coreEditorPaddingHorizontal, bottom: coreEditorPaddingVertical, right: coreEditorPaddingHorizontal });
         if (editorHasValueLabel(editorType)) {
             editor.showAccessoryImage = false;
-            editor.editorValueLabel.textInsets = textOffsets;
-        } else if (editorIsTextField(editorType)) {
-            editor.editor.textInsets = textOffsets;
         }
+        editor.editorCore.insets = textOffsets;
 
         // Update core editor background
-        const layer = editorHasValueLabel(editorType) ? editor.editorValueLabel.layer : editor.editor.layer;
+        const layer = editor.editorCore.layer;
         layer.borderColor = strokeColor.ios.CGColor;
         layer.borderWidth = strokeWidth;
         layer.cornerRadius = cornerRadius;

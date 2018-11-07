@@ -23,11 +23,8 @@ export function onGroupUpdate(args) {
 
 export function changeEditorSpacing(editor) {
     if (ios) {
-        const labelDef = editor.gridLayout.definitionForView(editor.valueLabel);
-        labelDef.contentOffset = {
-            horizontal: -25,
-            vertical: 0
-        };
+        const editorView = editor.editorCore;
+        editorView.labelOffset = 12;
     } else {
         editor.getHeaderView().setPadding(12, 12, 12, 48);
     }

@@ -85,11 +85,8 @@ export function editorSetupStepperIOS(editor) {
         }
     }
 
-    let labelDef = editor.gridLayout.definitionForView(editor.valueLabel);
-    labelDef.contentOffset = {
-        horizontal: -64,
-        vertical: 0
-    };
+    const editorView = editor.editorCore;
+    editorView.labelAlignment = TKGridLayoutAlignment.Left;
 }
 
 export function editorSetupSegmentedEditorAndroid(editor) {

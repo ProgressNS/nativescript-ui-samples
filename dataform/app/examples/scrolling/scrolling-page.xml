@@ -16,29 +16,34 @@
                             <df:PropertyEditor type="Email" />
                         </df:EntityProperty.editor>
                     </df:EntityProperty>
-                    <df:EntityProperty name="birthDate" index="5">
+                    <df:EntityProperty name="lastLoginDate" index="5">
                         <df:EntityProperty.editor>
                             <df:PropertyEditor type="DatePicker"/>
                         </df:EntityProperty.editor>
                     </df:EntityProperty>
-                    <df:EntityProperty name="gender" index="6"/>
-                    <df:EntityProperty name="company" index="7"/>
-                    <df:EntityProperty name="webSite" index="8"/>
-                    <df:EntityProperty name="phone" index="9"/>
-                    <df:EntityProperty name="country" index="10"/>
-                    <df:EntityProperty name="city" index="11"/>
-                    <df:EntityProperty name="streetName" index="12"/>
-                    <df:EntityProperty name="streetNumber" index="13">
+                    <df:EntityProperty name="lastLoginTime" index="6">
+                        <df:EntityProperty.editor>
+                            <df:PropertyEditor type="TimePicker"/>
+                        </df:EntityProperty.editor>
+                    </df:EntityProperty>
+                    <df:EntityProperty name="gender" index="7"/>
+                    <df:EntityProperty name="company" index="8"/>
+                    <df:EntityProperty name="webSite" index="9"/>
+                    <df:EntityProperty name="phone" index="10"/>
+                    <df:EntityProperty name="country" index="11"/>
+                    <df:EntityProperty name="city" index="12"/>
+                    <df:EntityProperty name="streetName" index="13"/>
+                    <df:EntityProperty name="streetNumber" index="14">
                         <df:EntityProperty.editor>
                             <df:PropertyEditor type="Number" />
                         </df:EntityProperty.editor>
                     </df:EntityProperty>
-                    <df:EntityProperty name="postalCode" index="14">
+                    <df:EntityProperty name="postalCode" index="15">
                         <df:EntityProperty.editor>
                             <df:PropertyEditor type="Number"/>
                         </df:EntityProperty.editor>
                     </df:EntityProperty>
-                    <df:EntityProperty name="additionalInfo" index="15"/>
+                    <df:EntityProperty name="additionalInfo" index="16"/>
                 </df:RadDataForm.properties>
             </df:RadDataForm>
             <Button id="myButton" text="register" tap="onTap" horizontalAlignment="stretch"/>
