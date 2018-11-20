@@ -2,9 +2,9 @@
       <!-- >> legend-example -->
     <chart:RadCartesianChart id="cartesianChart" seriesSelectionMode="Single">
         <chart:RadCartesianChart.series>
-            <chart:BarSeries legendTitle="Bar series" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="ThirdVal"/>
-            <chart:LineSeries legendTitle="Line series" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount"/>
-            <chart:AreaSeries legendTitle="Area series" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="SecondVal"/>
+            <chart:BarSeries legendTitle="Bar series" items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="ThirdVal"/>
+            <chart:LineSeries legendTitle="Line series" items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="Amount"/>
+            <chart:AreaSeries legendTitle="Area series" items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="SecondVal"/>
         </chart:RadCartesianChart.series>
         <chart:RadCartesianChart.horizontalAxis>
             <chart:CategoricalAxis/>

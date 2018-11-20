@@ -3,13 +3,13 @@
     <chart:RadCartesianChart id="PanZoomChart" >
         <chart:RadCartesianChart.series>
 
-           <chart:BarSeries seriesName="Bar" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="SecondVal">
+           <chart:BarSeries seriesName="Bar" items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="SecondVal">
                 <chart:BarSeries.verticalAxis>
                     <chart:LinearAxis horizontalLocation="Right" allowZoom="true" allowPan="true"/>
                 </chart:BarSeries.verticalAxis>
             </chart:BarSeries>
 
-            <chart:LineSeries seriesName="Line" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount">
+            <chart:LineSeries seriesName="Line" items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="Amount">
                 <chart:LineSeries.verticalAxis>
                     <chart:LinearAxis horizontalLocation="Left" allowZoom="true"/>
                 </chart:LineSeries.verticalAxis>
