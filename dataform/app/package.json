@@ -30,8 +30,5 @@
     "requireModules": [
       "nativescript-ui-dataform"
     ]
-  },
-  "devDependencies": {
-    "nativescript-dev-typescript": "^0.3.0"
   }
 }

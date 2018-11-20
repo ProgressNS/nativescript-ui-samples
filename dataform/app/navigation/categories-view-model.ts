@@ -134,6 +134,9 @@ export class NavigationViewModel extends Observable {
         dataFormExample = new NavigationItem("Groups", "examples/groups/groups-page", currentParent);
         currentParent.subItems.push(dataFormExample);
 
+        dataFormExample = new NavigationItem("Groups JSON", "examples/groups-json/groups-json-page", currentParent);
+        currentParent.subItems.push(dataFormExample);
+
         dataFormExample = new NavigationItem("Events", "examples/events/events-page", currentParent);
         currentParent.subItems.push(dataFormExample);
 
