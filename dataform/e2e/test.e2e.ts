@@ -404,7 +404,7 @@ describe("DataForm", () => {
             let usernameLabel = await driver.findElementByText("Username", SearchOptions.exact);
             expect(usernameLabel).to.exist;
 
-            let passwordLabel = await driver.findElementByText("Password", SearchOptions.exact)
+            let passwordLabel = await driver.findElementByText("Password", SearchOptions.exact);
             expect(passwordLabel).to.exist;
 
             let emailLabel = await driver.findElementByText("E-mail", SearchOptions.exact);
