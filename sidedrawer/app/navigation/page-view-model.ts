@@ -1,7 +1,7 @@
 import { NavigationItem } from "./navigation-item";
 import  { Observable } from "tns-core-modules/data/observable";
 import { RadSideDrawer } from "nativescript-ui-sidedrawer";
-import { topmost } from "tns-core-modules/ui/frame";
+import { topmost, View } from "tns-core-modules/ui/frame";
 
 export class PageViewModel extends Observable {
     public sideDrawer: RadSideDrawer;
@@ -12,6 +12,14 @@ export class PageViewModel extends Observable {
         this._currentSubItems = subitems;
         this._hasBackNavigation = hasBack;
         this.sideDrawer = sideDrawer;
+    }
+
+    get _selectedIndex(): number {
+        return this.get("selectedIndex");
+    }
+
+    set _selectedIndex(value: number) {
+        this.set("selectedIndex", value);
     }
 
     get _currentSubItems(): Array<NavigationItem> {
@@ -53,6 +61,18 @@ export class PageViewModel extends Observable {
     public onNavigationItemTap(args) {
         let itemIndex = args.index;
         let tappedItem = this._currentSubItems[itemIndex];
+
+        if (args.object.id === "sidedrawer-list") {
+
+            // deselect all items
+            args.object.eachChildView(childView => {
+                this._toggleItemSelected(childView.getViewById("item-container"), false);
+            });
+
+            // select tapped item
+            this._toggleItemSelected(args.view.getViewById("item-container"), true);
+        }
+
         if (tappedItem.module === undefined) {
             this._hasBackNavigation = tappedItem.parent !== undefined;
         }
@@ -70,8 +90,15 @@ export class PageViewModel extends Observable {
                 topmost().navigate({
                     moduleName: tappedItem.module,
                     context: tappedItem
+                    // context: this.sideDrawer,
+                    // backstackVisible: false
                 });
             }
         }
+    }
+
+    _toggleItemSelected(view: View, isSelected: boolean): any {
+        // using css styles from theme
+        view.className = isSelected ? "sidedrawer-list-item active" : "sidedrawer-list-item";
     }
 }

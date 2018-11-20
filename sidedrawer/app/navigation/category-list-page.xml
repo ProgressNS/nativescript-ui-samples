@@ -4,11 +4,10 @@
             <StackLayout>
                 <Label text="{{ currentParent.title }}" class="h1 text-center" />
             </StackLayout>
-            <ListView row="1" items="{{ currentSubItems }}" itemTap="{{ onNavigationItemTap }}" class="root-drawer-content" >
+            <ListView id="sidedrawer-list" row="1" items="{{ currentSubItems }}" itemTap="{{ onNavigationItemTap }}" class="root-drawer-content" >
                 <ListView.itemTemplate>
-                    <StackLayout class="root-item-stack-layout">
-                        <Label text="{{ title }}" textWrap="true" class="btn btn-primary btn-active"/>
-                        <StackLayout height="1" class="root-drawer-content"/>
+                    <StackLayout id="item-container" class="root-item-stack-layout" class="sidedrawer-list-item">
+                        <Label id="label" text="{{ title }}" textWrap="true"  margin="0 0 0 10"/>
                     </StackLayout>
                 </ListView.itemTemplate>
             </ListView>
