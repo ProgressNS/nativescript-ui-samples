@@ -1,14 +1,14 @@
 <navigation:ExamplePage loaded="onPageLoaded" xmlns:navigation="navigation/example-page" xmlns:au="nativescript-ui-autocomplete" xmlns="http://www.nativescript.org/tns.xsd">
     <StackLayout ios:backgroundColor="#CDCECE" padding="5">
         <Label text="Select countries:"/>
-         <au:RadAutoCompleteTextView id="autocomplete" noResultsText="Nothing found!" items="{{ dataItems }}" suggestMode="Suggest" displayMode="Tokens" closeButtonImageSrc="res://clear">
+         <au:RadAutoCompleteTextView id="autocomplete" noResultsText="Nothing found!" items="{{ dataItems }}" suggestMode="Suggest" displayMode="Tokens">
             <au:RadAutoCompleteTextView.suggestionView>
                 <au:SuggestionView suggestionViewHeight="300">
                     <au:SuggestionView.suggestionItemTemplate>
-                        <StackLayout orientation="horizontal" padding="5">
+                        <GridLayout columns="auto, *" padding="5">
                             <Image src="{{ image }}" width="50"/>
-                            <Label text="{{ text }}" marginLeft="5" android:marginTop="15"></Label>
-                        </StackLayout>
+                            <Label text="{{ text }}" marginLeft="5" android:marginTop="15" col="2"></Label>
+                        </GridLayout>
                     </au:SuggestionView.suggestionItemTemplate>
                 </au:SuggestionView>
             </au:RadAutoCompleteTextView.suggestionView>

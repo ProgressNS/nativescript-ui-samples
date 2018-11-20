@@ -49,7 +49,7 @@ export class NavigationViewModel extends Observable {
 
     constructor() {
         super();
-        this.currentParent = new NavigationItem("AutoCompleteTextView", undefined, undefined);
+        this.currentParent = new NavigationItem("AutoComplete", undefined, undefined);
         this.buildComponentList();
         this.currentSubItems = this.currentParent.subItems;
         this.hasBackNavigation = false;
@@ -164,6 +164,11 @@ export class NavigationViewModel extends Observable {
 
         const itemIndex = args.index;
         const tappedItem = this.currentSubItems[itemIndex];
+
+        if (!tappedItem) {
+            return;
+        }
+
         if (tappedItem.module === undefined) {
             this.hasBackNavigation = tappedItem.parent !== undefined;
             this.currentParent = tappedItem;
