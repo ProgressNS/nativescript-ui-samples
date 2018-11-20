@@ -6,10 +6,10 @@
         <Label text="RadListView is initially scrolled so that 'item 20' is visible" textWrap="true" margin="10" />
         <lv:RadListView items="{{ dataItems }}" row="1" dataPopulated="onDataPopulated" android:backgroundColor="white">
             <lv:RadListView.listViewLayout>
-                <lv:ListViewLinearLayout scrollDirection="Vertical" ios:itemHeight="50"/>
+                <lv:ListViewLinearLayout scrollDirection="Vertical" estimatedItemHeight="50" />
             </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
-                <Label fontSize="20" text="{{ itemName }}" marginLeft="20" height="50"/>
+                <Label fontSize="20" text="{{ itemName }}" marginLeft="20" height="50" />
             </lv:RadListView.itemTemplate>
         </lv:RadListView>
     </GridLayout>

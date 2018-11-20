@@ -1,17 +1,18 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-ui-listview" xmlns="http://www.nativescript.org/tns.xsd">
-    <GridLayout>
+    <GridLayout rows="*, auto">
         <lv:RadListView itemSelected="onItemSelected" 
                         itemTap="onItemTap" 
-                        selectionBehavior="Press" 
+                        selectionBehavior="LongPress" 
                         id="myListView" 
                         items="{{ dataItems }}" 
                         sortingFunction="{{ mySortingFunc }}"
                         filteringFunction="{{ myFilteringFunc }}"
                         groupingFunction="{{ myGroupingFunc }}"
-                        selectionBehavior="Press" 
                         itemSwipeProgressEnded="onSwipeCellFinished"
                         itemSwipeProgressStarted="onSwipeCellStarted" 
                         itemSwipeProgressChanged="onCellSwiping"
+                        itemSelected="onItemSelected" 
+                        itemDeselected="onItemDeselected"
                         itemSwiping="onItemSwiping" 
                         swipeActions="true">
             <lv:RadListView.itemTemplate>
@@ -31,5 +32,6 @@
                 </GridLayout>
             </lv:RadListView.itemSwipeTemplate>
         </lv:RadListView>
+        <Label id="lbl" textWrap="true" row="1"></Label>
     </GridLayout>
 </navigation:ExamplePage>
