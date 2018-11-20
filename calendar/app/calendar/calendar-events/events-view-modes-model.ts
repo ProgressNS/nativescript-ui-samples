@@ -6,7 +6,7 @@ export class ViewModel extends observableModule.Observable {
     calendarEvents: Array<calendarModule.CalendarEvent>;
     private _viewModesInfo;
     private _eventTitles: Array<string> = ["Meeting with Jack", "Lunch with Peter", "Planning meeting",
-                                            "Go shopping", "Very important meeting", "Another meeting", "Random event"];
+        "Go shopping", "Very important meeting", "Another meeting", "Random event"];
 
     constructor() {
         super();
@@ -25,19 +25,21 @@ export class ViewModel extends observableModule.Observable {
         this.set("eventsViewMode", value);
     }
 
+    // >> calendar-calendar-event-instance
     public createEvents() {
         let events: Array<calendarModule.CalendarEvent> = new Array<calendarModule.CalendarEvent>();
         let j = 1;
         for (let i = 0; i < this._eventTitles.length; i++) {
             const now: Date = new Date();
-            const startDate: Date = new Date(now.getFullYear(), now.getMonth(), j * 2);
-            const endDate: Date = new Date(now.getFullYear(), now.getMonth(), (j * 2) + (j % 3));
+            const startDate: Date = new Date(now.getFullYear(), now.getMonth(), j * 2, j * 2);
+            const endDate: Date = new Date(now.getFullYear(), now.getMonth(), (j * 2) + (j % 3), (j * 2) + (j % 3));
             const event = new calendarModule.CalendarEvent(this._eventTitles[i], startDate, endDate);
             events.push(event);
             j++;
         }
         this.calendarEvents = events;
     }
+    // << calendar-calendar-event-instance
 
     public updateEventsViewMode() {
         let radCalendar: calendarModule.RadCalendar = <calendarModule.RadCalendar>(frameModule.topmost().getViewById("calendar"));
@@ -47,7 +49,7 @@ export class ViewModel extends observableModule.Observable {
 
         const index: number = this._viewModesInfo.index;
         if (index === 0) {
-           this.eventsMode = calendarModule.CalendarEventsViewMode.None;
+            this.eventsMode = calendarModule.CalendarEventsViewMode.None;
         } else if (index === 1) {
             this.eventsMode = calendarModule.CalendarEventsViewMode.Inline;
         } else {
