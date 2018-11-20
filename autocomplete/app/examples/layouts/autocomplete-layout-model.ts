@@ -9,6 +9,7 @@ export class ViewModel extends Observable {
         "Latvia", "Luxembourg", "Macedonia", "Moldova", "Monaco", "Netherlands", "Norway",
         "Poland", "Romania", "Russia", "Sweden", "Slovenia", "Slovakia", "Turkey", "Ukraine",
         "Vatican City", "Chad", "China", "Chile"];
+    private lastIndex: number = 0;
 
     constructor(args) {
         super();
@@ -39,5 +40,14 @@ export class ViewModel extends Observable {
 
     public onWrapSelected(args) {
         this.autocomplete.layoutMode = "Wrap";
+    }
+
+    public onAddToken(args) {
+        if (this.dataItems.length <= this.lastIndex) {
+            this.lastIndex = 0;
+        }
+
+        this.autocomplete.addToken(this.dataItems.getItem(this.lastIndex));
+        this.lastIndex++;
     }
 }
