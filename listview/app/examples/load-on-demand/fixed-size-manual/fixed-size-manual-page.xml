@@ -27,7 +27,7 @@
             <ios>
             <!-- >> listview-load-on-demand-custom-view -->
             <lv:RadListView.loadOnDemandItemTemplate>
-                <GridLayout style="background-color: #7fff7f;">
+                <GridLayout style="background-color: #7fff7f;" height="44" bottomMargin="20">
                      <Label text="Load More" horizontalAlignment="center" verticalAlignment="center"/>
                 </GridLayout>
             </lv:RadListView.loadOnDemandItemTemplate>

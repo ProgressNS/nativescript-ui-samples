@@ -23,10 +23,10 @@
         <Button text="Scroll to index 50" tap="onTap"/>
         <lv:RadListView items="{{ dataItems }}" row="1" id="listView">
             <lv:RadListView.listViewLayout>
-                <lv:ListViewLinearLayout scrollDirection="Horizontal" />
+                <lv:ListViewLinearLayout scrollDirection="Horizontal" estimatedItemWidth="80" />
             </lv:RadListView.listViewLayout>
             <lv:RadListView.itemTemplate>
-                <Label fontSize="20" text="{{ itemName }}" marginLeft="5" width="80"/>
+                <Label fontSize="20" text="{{ itemName }}" marginLeft="5" width="80" />
             </lv:RadListView.itemTemplate>
         </lv:RadListView>
     </GridLayout>

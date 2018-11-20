@@ -4,6 +4,7 @@ import { RadListView, ListViewEventData } from "nativescript-ui-listview";
 import { View } from 'tns-core-modules/ui/core/view';
 import { EventData } from "tns-core-modules/data/observable";
 import { topmost } from "tns-core-modules/ui/frame";
+import { Label } from "tns-core-modules/ui/label";
 
 let page: Page;
 let bindingContext: ViewModel;
@@ -32,12 +33,18 @@ export function onSwipeCellStarted(args: ListViewEventData) {
     swipeLimits.right = rightItem.getMeasuredWidth();
     swipeLimits.threshold = leftItem.getMeasuredWidth() / 2;
     let item = bindingContext.dataItems.getItem(args.index);
-    console.log(">>> onSwipeCellStarted item: " + item.itemName);
+    const message = "onSwipeCellStarted item: " + item.itemName;
+    console.log(message);
+    let lbl = <Label>topmost().getViewById("lbl");
+    lbl.text = message;
 }
 
 export function onSwipeCellFinished(args: ListViewEventData) {
     let item = bindingContext.dataItems.getItem(args.index);
-    console.log(">>> onSwipeCellFinished item: " + item.itemName);
+    const message = "onSwipeCellFinished item: " + item.itemName;
+    console.log(message);
+    let lbl = <Label>topmost().getViewById("lbl");
+    lbl.text = message;
 }
 
 export function onLeftSwipeClick(args: EventData) {
@@ -45,7 +52,10 @@ export function onLeftSwipeClick(args: EventData) {
     const listView = <RadListView>topmost().currentPage.getViewById("myListView");
     let itemIndex = listView.items.indexOf(itemView.bindingContext);
     let item = bindingContext.dataItems.getItem(itemIndex);
-    console.log("Left swipe click for: " + item.itemName);
+    const message = "Left swipe click for: " + itemView.bindingContext.itemName;
+    console.log(message);
+    let lbl = <Label>topmost().getViewById("lbl");
+    lbl.text = message;
     listView.notifySwipeToExecuteFinished();
 }
 
@@ -53,8 +63,10 @@ export function onRightSwipeClick(args: EventData) {
     let swipeView = args.object as View;
     const listView = <RadListView>topmost().currentPage.getViewById("myListView");
     let itemIndex = listView.items.indexOf(swipeView.bindingContext);
-    console.log("Right swipe click for: " + swipeView.bindingContext.itemName);
-
+    const message = "Right swipe click for: " + swipeView.bindingContext.itemName;
+    console.log(message);
+    let lbl = <Label>topmost().getViewById("lbl");
+    lbl.text = message;
     // Currently it is not supported to change the items with splice while using data operations.
     // bindingContext.dataItems.splice(bindingContext.dataItems.indexOf(swipeView.bindingContext), 1);
     listView.notifySwipeToExecuteFinished();
@@ -62,16 +74,25 @@ export function onRightSwipeClick(args: EventData) {
 
 export function onItemSelected(args: ListViewEventData) {
     let item = bindingContext.dataItems.getItem(args.index);
-    console.log("onItemSelected for: " + item.itemName);
+    const message = "onItemSelected for: " + item.itemName;
+    console.log(message);
+    let lbl = <Label>topmost().getViewById("lbl");
+    lbl.text = message;
 }
 
 export function onItemDeselected(args: ListViewEventData) {
     let item = bindingContext.dataItems.getItem(args.index);
-    console.log("onItemDeselected for: " + item.itemName);
+    const message = "onItemDeselected for: " + item.itemName;
+    console.log(message);
+    let lbl = <Label>topmost().getViewById("lbl");
+    lbl.text = message;
 }
 
 export function onItemTap(args: ListViewEventData) {
     console.log("args.index " + args.index);
     let item = bindingContext.dataItems.getItem(args.index);
-    console.log("onItemTap for: " + item.itemName);
+    const message = "onItemTap for: " + item.itemName;
+    console.log(message);
+    let lbl = <Label>topmost().getViewById("lbl");
+    lbl.text = message;
 }

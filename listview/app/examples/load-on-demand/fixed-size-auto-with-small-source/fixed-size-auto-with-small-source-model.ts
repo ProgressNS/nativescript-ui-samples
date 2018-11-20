@@ -11,7 +11,7 @@ export class ViewModel extends Observable {
     private _itemsLoading: boolean;
     private _allItems: Array<{name: string, title: string, text: string, image: string}>;
 
-    constructor(private listView: RadListView) {
+    constructor() {
         super();
         this._allItems = serverPeopleCollection.people.slice();
         this._sourceDataItems = new ObservableArray<DataItem>();
