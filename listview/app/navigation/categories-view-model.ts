@@ -217,6 +217,9 @@ export class NavigationViewModel extends Observable {
 
         exampleItem = new NavigationItem("Horizontal with variable item's width", "examples/horizontal-with-variable-item-width/horizontal-with-variable-item-width-page", currentParent);
         currentParent.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Group, Swipe, Load and Pull", "examples/group-swipe-load-pull/group-swipe-load-pull-page", currentParent);
+        currentParent.subItems.push(exampleItem);
     }
 
 

@@ -1,0 +1,33 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-ui-listview" xmlns="http://www.nativescript.org/tns.xsd">
+	<GridLayout>
+		<lv:RadListView items="{{ blogPosts }}" id="myListView"
+            groupingFunction="{{ groupByDay }}"
+            pullToRefresh="true" pullToRefreshInitiated="{{ onPullToRefreshInitiated }}"
+            loadOnDemandMode="Manual" loadMoreDataRequested="{{ onLoadMoreDataRequested }}" 
+            selectionBehavior="None" swipeActions="true"
+            itemSwipeProgressStarted="{{ onItemSwipeProgressStarted }}" 
+            itemSwipeProgressChanged="{{ onItemSwipeProgressChanged }}" 
+            itemSwipeProgressEnded="{{ onItemSwipeProgressEnded }}">
+		
+			<lv:RadListView.itemTemplate>
+                <StackLayout padding="16" orientation="vertical" background="#F0F6FF">
+                    <Label fontSize="24" text="{{ title }}" textWrap="true" color="#0A255A"></Label>
+                    <Label padding="8,0" text="{{ content }}" textWrap="true" color="#B3B6C8"></Label>
+                    <Label text="{{ publishText }}" color="#3D57FE"></Label>
+                </StackLayout>
+			</lv:RadListView.itemTemplate>
+
+            <lv:RadListView.itemSwipeTemplate>
+                <GridLayout columns="auto, *, auto">
+                    <GridLayout id="comment-view" col="0" background="#2340CB" tap="{{ onLeftSwipeClick }}">
+                        <Label text="comment" padding="12" color="white"  verticalAlignment="center"/>
+                    </GridLayout>
+                    <GridLayout id="delete-view" col="2" background="#2340CB" tap="{{ onRightSwipeClick }}">
+                        <Label text="delete" padding="12" color="white" verticalAlignment="center"/>
+                    </GridLayout>
+                </GridLayout>
+            </lv:RadListView.itemSwipeTemplate>
+
+		</lv:RadListView>
+	</GridLayout>
+</navigation:ExamplePage>
