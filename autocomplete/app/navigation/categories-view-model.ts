@@ -49,7 +49,7 @@ export class NavigationViewModel extends Observable {
 
     constructor() {
         super();
-        this.currentParent = new NavigationItem("AutoCompleteTextView", undefined, undefined);
+        this.currentParent = new NavigationItem("AutoComplete", undefined, undefined);
         this.buildComponentList();
         this.currentSubItems = this.currentParent.subItems;
         this.hasBackNavigation = false;
