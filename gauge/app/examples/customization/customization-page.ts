@@ -8,7 +8,7 @@ export function onNavigatedTo(args) {
     for (let i = 0; i < scale.indicators.length; i++) {
         let barIndicator: RadialBarIndicator = <RadialBarIndicator>scale.indicators.getItem(i);
         if (barIndicator.maximum === 0) {
-            barIndicator.maximum = Math.random() * 100;
+            barIndicator.maximum = i * 15;
         }
     }
 }
