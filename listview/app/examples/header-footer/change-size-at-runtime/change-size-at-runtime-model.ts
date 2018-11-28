@@ -14,7 +14,9 @@ export class ViewModel extends Observable {
 
         setTimeout(() => {
             this.isSecondVisible = true;
-            listView.updateHeaderFooter();
+            if (listView.page.isLoaded) {
+                listView.updateHeaderFooter();
+            }
         }, 2000);
     }
 
