@@ -157,22 +157,26 @@ export class NavigationViewModel extends Observable {
 
         let demand = new NavigationItem("Load on Demand", undefined, currentParent);
         currentParent.subItems.push(demand);
-        selectionExample = new NavigationItem("Manual with Fixed Item Size", "examples/load-on-demand/fixed-size-manual/fixed-size-manual-page", demand);
-        demand.subItems.push(selectionExample);
-        selectionExample = new NavigationItem("Auto with Fixed Item Size", "examples/load-on-demand/fixed-size-auto/fixed-size-auto-page", demand);
-        demand.subItems.push(selectionExample);
-        selectionExample = new NavigationItem("Manual with Variable Item Size", "examples/load-on-demand/dynamic-size-manual/dynamic-size-manual-page", demand);
-        demand.subItems.push(selectionExample);
-        selectionExample = new NavigationItem("Auto with Variable Item Size", "examples/load-on-demand/dynamic-size-auto/dynamic-size-auto-page", demand);
-        demand.subItems.push(selectionExample);
-        selectionExample = new NavigationItem("With small source and pull to refresh", "examples/load-on-demand/fixed-size-auto-with-small-source/fixed-size-auto-with-small-source-page", demand);
-        demand.subItems.push(selectionExample);
+        let loadOnDemandExample = new NavigationItem("Manual with Fixed Item Size", "examples/load-on-demand/fixed-size-manual/fixed-size-manual-page", demand);
+        demand.subItems.push(loadOnDemandExample);
+        loadOnDemandExample = new NavigationItem("Auto with Fixed Item Size", "examples/load-on-demand/fixed-size-auto/fixed-size-auto-page", demand);
+        demand.subItems.push(loadOnDemandExample);
+        loadOnDemandExample = new NavigationItem("Manual with Variable Item Size", "examples/load-on-demand/dynamic-size-manual/dynamic-size-manual-page", demand);
+        demand.subItems.push(loadOnDemandExample);
+        loadOnDemandExample = new NavigationItem("Auto with Variable Item Size", "examples/load-on-demand/dynamic-size-auto/dynamic-size-auto-page", demand);
+        demand.subItems.push(loadOnDemandExample);
+        loadOnDemandExample = new NavigationItem("With small source and pull to refresh", "examples/load-on-demand/fixed-size-auto-with-small-source/fixed-size-auto-with-small-source-page", demand);
+        demand.subItems.push(loadOnDemandExample);
 
         exampleItem = new NavigationItem("Observable Array", "examples/observable-array/observable-array-page", currentParent);
         currentParent.subItems.push(exampleItem);
 
-        exampleItem = new NavigationItem("Pull to Refresh", "examples/pull-to-refresh/pull-to-refresh-page", currentParent);
-        currentParent.subItems.push(exampleItem);
+        let pullToRefresh = new NavigationItem("Pull to Refresh", undefined, currentParent);
+        currentParent.subItems.push(pullToRefresh);
+        let pullToRefreshExample = new NavigationItem("Getting Started", "examples/pull-to-refresh/getting-started/pull-to-refresh-page", pullToRefresh);
+        pullToRefresh.subItems.push(pullToRefreshExample);
+        pullToRefreshExample = new NavigationItem("Customize indicator/background", "examples/pull-to-refresh/customize/pull-to-refresh-customize-page", pullToRefresh);
+        pullToRefresh.subItems.push(pullToRefreshExample);
 
         // Swipe actions
         let swipeActions = new NavigationItem("Swipe actions", undefined, currentParent);

@@ -4,8 +4,8 @@
     loaded="pageLoaded"
     navigatingFrom="onPageNavigatingFrom"
     navigatingTo="onPageNavigatingTo">
-    <GridLayout rows="auto, *">
-        <lv:RadListView row="1" items="{{ _currentSubItems }}" itemTap="{{onNavigationItemTap}}" >
+    <GridLayout>
+        <lv:RadListView items="{{ _currentSubItems }}" itemTap="{{onNavigationItemTap}}">
             <lv:RadListView.itemTemplate>
                 <StackLayout class="itemStackLayout">
                     <Label text="{{ title }}" textWrap="true" class="titleLabel"/>

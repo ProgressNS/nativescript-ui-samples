@@ -1,7 +1,7 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-ui-listview" xmlns="http://www.nativescript.org/tns.xsd">
-    <GridLayout orientation="vertical" rows="auto, *">
+    <GridLayout orientation="vertical">
      <!-- >> listview-pull-to-refresh-xml -->
-        <lv:RadListView items="{{ dataItems }}" pullToRefresh="true" row="1" pullToRefreshInitiated="{{onPullToRefreshInitiated}}">
+        <lv:RadListView items="{{ dataItems }}" pullToRefresh="true" pullToRefreshInitiated="{{onPullToRefreshInitiated}}">
      <!-- << listview-pull-to-refresh-xml -->
             <lv:RadListView.itemTemplate>
               <StackLayout orientation="vertical" padding="5 10 5 10"  style="background-color: #7fff7f;">
@@ -15,9 +15,6 @@
                 </StackLayout>
                 </StackLayout>
             </lv:RadListView.itemTemplate>
-            <lv:RadListView.pullToRefreshStyle>
-                <lv:PullToRefreshStyle indicatorColor="red" indicatorBackgroundColor="blue"/>
-            </lv:RadListView.pullToRefreshStyle>
         </lv:RadListView>
     </GridLayout>
 </navigation:ExamplePage>

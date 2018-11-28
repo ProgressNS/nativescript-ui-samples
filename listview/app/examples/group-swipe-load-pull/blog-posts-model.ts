@@ -27,7 +27,18 @@ export class BlogPostsModel extends Observable {
             ALL_POSTS[i].publishDate = date;
             ALL_POSTS[i].deleted = false;
         }
-        this._blogPosts = new ObservableArray(this.getBlogPosts(this._startItemsCount, false));
+        this.blogPosts = new ObservableArray<BlogPost>(this.getBlogPosts(this._startItemsCount, false));
+    }
+
+    get blogPosts(): ObservableArray<BlogPost> {
+        return this._blogPosts;
+    }
+
+    set blogPosts(value: ObservableArray<BlogPost>) {
+        if (this._blogPosts !== value) {
+            this._blogPosts = value;
+            this.notifyPropertyChange("blogPosts", value);
+        }
     }
 
     get groupByDay(): (item: any) => any {
@@ -36,13 +47,9 @@ export class BlogPostsModel extends Observable {
         };
     }
 
-    get blogPosts() {
-        return this._blogPosts;
-    }
-
     public onPullToRefreshInitiated(args: ListViewEventData) {
         setTimeout(() => {
-            this._blogPosts = new ObservableArray(this.getBlogPosts(this._startItemsCount, false));
+            this.blogPosts = new ObservableArray<BlogPost>(this.getBlogPosts(this._startItemsCount, false));
             const listView = args.object;
             listView.notifyPullToRefreshFinished(true);
         }, 500);
@@ -52,7 +59,7 @@ export class BlogPostsModel extends Observable {
         setTimeout(() => {
             let newItems = this.getBlogPosts(this._loadMoreItemsCount, true);
             for (let i = 0; i < newItems.length; i++) {
-                this._blogPosts.push(newItems[i]);
+                this.blogPosts.push(newItems[i]);
             }
             const listView = args.object;
             listView.notifyLoadOnDemandFinished(newItems.length < this._loadMoreItemsCount);
@@ -87,12 +94,12 @@ export class BlogPostsModel extends Observable {
     public onRightSwipeClick(args) {
         let itemView = args.object;
         let currentBlogPost = <BlogPost>itemView.bindingContext;
-        let currentBlogPostIndex = this._blogPosts.indexOf(currentBlogPost);
-        this._blogPosts.splice(currentBlogPostIndex, 1);
+        let currentBlogPostIndex = this.blogPosts.indexOf(currentBlogPost);
+        this.blogPosts.splice(currentBlogPostIndex, 1);
         this.markDeleted(currentBlogPost);
     }
 
-    getBlogPosts(count: number, proceed: boolean) {
+    getBlogPosts(count: number, proceed: boolean): BlogPost[] {
         this._now = new Date();
         const result =  new Array<BlogPost>();
         let startingIndex = proceed ? this._nextToLoad : this._firstToLoad;
