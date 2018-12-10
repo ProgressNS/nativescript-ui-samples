@@ -1,0 +1,28 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-ui-chart" xmlns="http://www.nativescript.org/tns.xsd">
+   
+<chart:RadCartesianChart id="cartesianChart">
+    <chart:RadCartesianChart.horizontalAxis>
+        <chart:CategoricalAxis/>
+    </chart:RadCartesianChart.horizontalAxis>
+    <chart:RadCartesianChart.verticalAxis>
+        <chart:LinearAxis/>
+    </chart:RadCartesianChart.verticalAxis>
+    <chart:RadCartesianChart.series>
+    <!-- >> chart-styling-bars -->
+        <chart:BarSeries paletteMode="Item" items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="Amount"/>
+    <!-- << chart-styling-bars -->
+    </chart:RadCartesianChart.series>
+    
+    <chart:RadCartesianChart.palettes>
+        <chart:Palette>
+            <chart:Palette.entries>
+                <chart:PaletteEntry strokeColor="#2CACE1" fillColor="#2CACE1"/>
+                <chart:PaletteEntry strokeColor="#A05BC5" fillColor="#A05BC5"/>
+                <chart:PaletteEntry strokeColor="#8FC502" fillColor="#8FC502"/>
+                <chart:PaletteEntry strokeColor="#FF3B3C" fillColor="#FF3B3C"/>
+                <chart:PaletteEntry strokeColor="#476BEF" fillColor="#476BEF"/>
+            </chart:Palette.entries>
+        </chart:Palette>
+    </chart:RadCartesianChart.palettes>
+    </chart:RadCartesianChart>
+</navigation:ExamplePage>
