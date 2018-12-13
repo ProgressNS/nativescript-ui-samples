@@ -10,12 +10,12 @@
     <!-- >> calendar-localization-xml -->
 	    <calendar:RadCalendar id="calendar" locale="is-IS" row="0" />
     <!-- << calendar-localization-xml -->        
-        <StackLayout row="1" orientation="horizontal">
+        <WrapLayout row="1" orientation="horizontal">
             <Button margin="5" tap="btnChangeLocaleTap" text="ru-RU"/>
             <Button margin="5" tap="btnChangeLocaleTap" text="bg-BG"/>
             <Button margin="5" tap="btnChangeLocaleTap" text="en-UK"/>
             <Button margin="5" tap="btnChangeLocaleTap" text="fr-FR"/>
             <Button margin="5" tap="btnChangeLocaleTap" text="de-DE"/>
-        </StackLayout>
+        </WrapLayout>
     </GridLayout>
 </navigation:ExamplePage>
