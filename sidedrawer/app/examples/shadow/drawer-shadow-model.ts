@@ -16,29 +16,29 @@ export class DrawerShadowModel {
 
     public onDefaultShadowTap(args) {
         let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
-
-        sideDrawer.shadowColor = null;
-
-        this.openDrawer();
+        if (sideDrawer) {
+            sideDrawer.shadowColor = null;
+            this.openDrawer();
+        }
     }
 
 
     public onNoShadowTap(args) {
         let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
         let noColor = new colorModule.Color("#00000000");
-
-        sideDrawer.shadowColor = noColor;
-
-        this.openDrawer();
+        if (sideDrawer) {
+            sideDrawer.shadowColor = noColor;
+            this.openDrawer();
+        }
     }
 
     public onColorfulShadowTap(args) {
         let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
         let redColor = new colorModule.Color("#FF0000");
-
-        sideDrawer.shadowColor = redColor;
-
-        this.openDrawer();
+        if (sideDrawer) {
+            sideDrawer.shadowColor = redColor;
+            this.openDrawer();
+        }
     }
     // >> sidedrawer-setting-location
     public onTopLocationTap(args) {
@@ -48,6 +48,10 @@ export class DrawerShadowModel {
 
     private setDrawerLocation(location: drawerModule.SideDrawerLocation) {
         let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
+        if (!sideDrawer) {
+            return;
+        }
+
         if (sideDrawer.android) {
             if (location === drawerModule.SideDrawerLocation.Top || location === drawerModule.SideDrawerLocation.Bottom) {
                 sideDrawer.android.setDrawerCloseThreshold(20);
@@ -60,14 +64,15 @@ export class DrawerShadowModel {
     // << sidedrawer-setting-location
     private openDrawer() {
         let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
-
-        sideDrawer.showDrawer();
-
-
+        if (sideDrawer) {
+            sideDrawer.showDrawer();
+        }
     }
 
     private closeDrawer() {
         let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
-        sideDrawer.closeDrawer();
+        if (sideDrawer) {
+            sideDrawer.closeDrawer();
+        }
     }
 }
