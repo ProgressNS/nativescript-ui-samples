@@ -6,17 +6,17 @@
   "nativescript": {
     "id": "org.nativescript.demo",
     "tns-ios": {
-      "version": "5.0.0"
+      "version": "5.1.0"
     },
     "tns-android": {
-      "version": "5.0.0"
+      "version": "5.1.0"
     }
   },
   "dependencies": {
     "nativescript-theme-core": "^1.0.4",
     "nativescript-ui-autocomplete": "*",
     "nativescript-unit-test-runner": "^0.3.4",
-    "tns-core-modules": "^5.0.0",
+    "tns-core-modules": "^5.1.0",
     "nativescript-ui-core": "*"
   },
   "devDependencies": {
@@ -32,7 +32,7 @@
     "nativescript-dev-appium": "4.0.9",
     "nativescript-dev-typescript": "~0.7.0",
     "nativescript-dev-webpack": "~0.18.0",
-    "tns-platform-declarations": "^5.0.4",
+    "tns-platform-declarations": "^5.1.0",
     "tslint": "~5.11.0",
     "typescript": "^3.1.6"
   }
