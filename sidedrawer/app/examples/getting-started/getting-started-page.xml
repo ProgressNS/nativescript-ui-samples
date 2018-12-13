@@ -9,17 +9,19 @@
           <StackLayout height="56" style="text-align: center; vertical-align: center;">
             <Label text="Navigation Menu"/>
           </StackLayout>
-          <StackLayout>
-            <Label text="Primary" padding="10" backgroundColor="lightgray"/>
-            <Label text="Social" padding="10"/>
-            <Label text="Promotions" padding="10" />
-            <Label text="Labels" padding="10" backgroundColor="lightgray" />
-            <Label text="Important" padding="10" />
-            <Label text="Starred" padding="10" />
-            <Label text="Sent Mail" padding="10" />
-            <Label text="Drafts" padding="10" />
-          </StackLayout>
-          <Label text="Close Drawer" color="lightgray" padding="10" style="horizontal-align: center" tap="{{ onCloseDrawerTap }}"/>
+          <ScrollView>
+            <StackLayout>
+              <Label text="Primary" padding="10" backgroundColor="lightgray"/>
+              <Label text="Social" padding="10"/>
+              <Label text="Promotions" padding="10" />
+              <Label text="Labels" padding="10" backgroundColor="lightgray" />
+              <Label text="Important" padding="10" />
+              <Label text="Starred" padding="10" />
+              <Label text="Sent Mail" padding="10" />
+              <Label text="Drafts" padding="10" />
+              <Label text="Close Drawer" color="lightgray" padding="10" style="horizontal-align: center" tap="{{ onCloseDrawerTap }}"/>
+            </StackLayout>
+          </ScrollView>
         </StackLayout>
       </nsDrawer:RadSideDrawer.drawerContent>
 

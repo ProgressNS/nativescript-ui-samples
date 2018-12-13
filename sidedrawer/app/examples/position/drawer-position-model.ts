@@ -30,6 +30,10 @@ export class DrawerPositionModel {
 
     private setDrawerLocation(location: drawerModule.SideDrawerLocation) {
         let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
+        if (!sideDrawer) {
+            return;
+        }
+
         if (sideDrawer.android) {
             if (location === drawerModule.SideDrawerLocation.Top || location === drawerModule.SideDrawerLocation.Bottom) {
                 sideDrawer.android.setDrawerCloseThreshold(20);
@@ -42,11 +46,15 @@ export class DrawerPositionModel {
     // << sidedrawer-setting-location
     private openDrawer() {
         let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
-        sideDrawer.showDrawer();
+        if (sideDrawer) {
+            sideDrawer.showDrawer();
+        }
     }
 
     private closeDrawer() {
         let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
-        sideDrawer.closeDrawer();
+        if (sideDrawer) {
+            sideDrawer.closeDrawer();
+        }
     }
 }

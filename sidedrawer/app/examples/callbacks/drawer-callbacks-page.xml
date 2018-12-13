@@ -24,17 +24,19 @@
         <StackLayout class="headerContent">
           <Label text="Navigation Menu"/>
         </StackLayout>
-        <StackLayout class="drawerMenuContent">
-          <Label text="Primary" class="drawerSectionHeader" />
-          <Label text="Social" class="drawerSectionItem" />
-          <Label text="Promotions" class="drawerSectionItem" />
-          <Label text="Labels" class="drawerSectionHeader" />
-          <Label text="Important" class="drawerSectionItem" />
-          <Label text="Starred" class="drawerSectionItem" />
-          <Label text="Sent Mail" class="drawerSectionItem" />
-          <Label text="Drafts" class="drawerSectionItem" />
-        </StackLayout>
-        <Button text="Close Drawer" tap="{{ onCloseDrawerTap }}"/>
+        <ScrollView>
+          <StackLayout class="drawerMenuContent">
+            <Label text="Primary" class="drawerSectionHeader" />
+            <Label text="Social" class="drawerSectionItem" />
+            <Label text="Promotions" class="drawerSectionItem" />
+            <Label text="Labels" class="drawerSectionHeader" />
+            <Label text="Important" class="drawerSectionItem" />
+            <Label text="Starred" class="drawerSectionItem" />
+            <Label text="Sent Mail" class="drawerSectionItem" />
+            <Label text="Drafts" class="drawerSectionItem" />
+            <Button text="Close Drawer" tap="{{ onCloseDrawerTap }}"/>
+          </StackLayout>
+        </ScrollView>
       </StackLayout>
       <!-- << (hide) -->
     </nsDrawer:RadSideDrawer.drawerContent>

@@ -17,9 +17,9 @@
               <Label text="Starred" class="drawerSectionItem" />
               <Label text="Sent Mail" class="drawerSectionItem" />
               <Label text="Drafts" class="drawerSectionItem" />
+              <Button text="Close Drawer" tap="{{ closeDrawer }}"/>
             </StackLayout>
           </ScrollView>
-          <Button text="Close Drawer" tap="{{ closeDrawer }}"/>
         </StackLayout>
       </nsDrawer:RadSideDrawer.drawerContent>
       <nsDrawer:RadSideDrawer.mainContent>
