@@ -94,6 +94,9 @@ export class NavigationViewModel extends Observable {
         exampleItem = new NavigationItem("Customization", "examples/customization/customization-page", currentParent);
         currentParent.subItems.push(exampleItem);
 
+        exampleItem = new NavigationItem("Style bindings", "examples/style-bindings/style-bindings-page", currentParent);
+        currentParent.subItems.push(exampleItem);
+
         exampleItem = new NavigationItem("Animations", "examples/animations/animations-page", currentParent);
         currentParent.subItems.push(exampleItem);
     }
