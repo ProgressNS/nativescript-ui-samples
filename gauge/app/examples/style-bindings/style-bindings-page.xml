@@ -1,0 +1,57 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:gauge="nativescript-ui-gauge" loaded="onLoaded" xmlns="http://www.nativescript.org/tns.xsd">
+    <GridLayout rows="*, auto">
+        <gauge:RadRadialGauge id="gaugeView" margin="10" title="{{ title }}" subtitle="{{ subtitle }}" row="0">
+            <gauge:RadRadialGauge.titleStyle>
+                <gauge:TitleStyle textColor="{{ titleTextColor }}" textSize="{{ titleTextSize }}" verticalOffset="{{ titleVerticalOffset }}" horizontalOffset="{{ titleHorizontalOffset }}" />
+            </gauge:RadRadialGauge.titleStyle>
+
+            <gauge:RadRadialGauge.subtitleStyle>
+                <gauge:SubtitleStyle textColor="{{ subtitleTextColor }}" textSize="{{ subtitleTextSize }}" verticalOffset="{{ subtitleVerticalOffset }}" horizontalOffset="{{ subtitleHorizontalOffset }}" />
+            </gauge:RadRadialGauge.subtitleStyle>
+
+            <gauge:RadRadialGauge.scales>
+
+                <gauge:RadialScale minimum="0" maximum="180" radius="0.9">
+                    <gauge:RadialScale.scaleStyle>
+                        <gauge:ScaleStyle majorTicksCount="{{ majorTicksCount }}" minorTicksCount="{{ minorTicksCount }}" lineThickness="{{ lineThickness }}" lineColor="{{ lineColor }}" majorTicksWidth="{{ majorTicksWidth }}" minorTicksWidth="{{ minorTicksWidth }}"
+                            labelsColor="{{ labelsColor }}" labelsCount="{{ labelsCount }}" android:labelsSize="{{ androidLabelsSize }}" ios:labelsSize="{{ iosLabelsSize }}" labelsVisible="{{ labelsVisible }}" />
+                    </gauge:RadialScale.scaleStyle>
+                
+                    <gauge:RadialScale.indicators>
+                        <gauge:RadialBarIndicator minimum="0" maximum="{{ firstPoint }}" location="0.97">
+                            <gauge:RadialBarIndicator.indicatorStyle>
+                                <gauge:BarIndicatorStyle fillColor="{{ firstColor }}" /> 
+                            </gauge:RadialBarIndicator.indicatorStyle> 
+                        </gauge:RadialBarIndicator>
+
+                        <gauge:RadialBarIndicator minimum="{{ firstPoint }}" maximum="{{ secondPoint }}" location="0.97">
+                            <gauge:RadialBarIndicator.indicatorStyle>
+                                <gauge:BarIndicatorStyle fillColor="{{ secondColor }}" /> 
+                            </gauge:RadialBarIndicator.indicatorStyle> 
+                        </gauge:RadialBarIndicator>
+
+                        <gauge:RadialBarIndicator minimum="{{ secondPoint }}" maximum="180" location="0.97">
+                            <gauge:RadialBarIndicator.indicatorStyle>
+                                <gauge:BarIndicatorStyle fillColor="#A7010E" barWidth="{{ barWidth }}" />
+                            </gauge:RadialBarIndicator.indicatorStyle> 
+                        </gauge:RadialBarIndicator>
+
+                        <gauge:RadialNeedle value="{{ needleValue }}">
+                            <gauge:RadialNeedle.needleStyle>
+                                <gauge:NeedleStyle length="{{ needleLength }}" circleRadius="{{ circleRadius }}" circleFillColor="{{ fillColor }}" circleStrokeColor="{{ strokeColor }}" circleStrokeWidth="{{ strokeWidth }}"
+                                fillColor="{{ fillColor }}" strokeColor="{{ strokeColor }}" strokeWidth="{{ strokeWidth }}" topWidth="{{ topWidth }}" bottomWidth="{{ bottomWidth }}" />
+                            </gauge:RadialNeedle.needleStyle>
+                        </gauge:RadialNeedle>
+                    </gauge:RadialScale.indicators>
+                    
+                </gauge:RadialScale>
+            </gauge:RadRadialGauge.scales>
+        </gauge:RadRadialGauge>
+
+        <StackLayout row="1" orientation="horizontal" horizontalAlignment="center">
+            <Button text="Update Binding" tap="{{ onUpdate }}" verticalAlignment="center" marginBottom="10" marginTop="0"/>
+            <Button text="Update Properties" tap="onUpdate" verticalAlignment="center" marginLeft="10" marginBottom="10" />
+            <Button text="Reset" tap="{{ onReset }}" verticalAlignment="center" marginLeft="10" marginBottom="10" />
+        </StackLayout>
+    </GridLayout>
+</navigation:ExamplePage>
