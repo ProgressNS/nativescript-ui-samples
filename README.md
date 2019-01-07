@@ -22,7 +22,7 @@ Progress NativeScript UI samples app resides at root repository level. The sourc
 - ListView
 - SideDrawer
 
-Each of the above-mentioned folder has a standard NativeScript application structure as described in [this article](http://docs.nativescript.org/getting-started#directory-structure). 
+Each of the above-mentioned folder has a standard NativeScript application structure. 
 
 ## Running **Progress NativeScript UI** sample app
 Make sure you are using the latest NativeScript CLI version by running `npm i nativescript -g`.
