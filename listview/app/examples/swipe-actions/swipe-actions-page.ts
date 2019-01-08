@@ -1,6 +1,7 @@
-import { ViewModel } from "./swipe-actions-model";
+import { ViewModel, DataItem } from "./swipe-actions-model";
 import { RadListView, SwipeActionsEventData, ListViewEventData } from "nativescript-ui-listview";
 import { View } from 'tns-core-modules/ui/core/view';
+import { Label } from 'tns-core-modules/ui/label';
 import { topmost } from "tns-core-modules/ui/frame";
 
 export function onPageLoaded(args) {
@@ -56,3 +57,19 @@ export function onRightSwipeClick(args) {
     viewModel.dataItems.splice(viewModel.dataItems.indexOf(args.object.bindingContext), 1);
 }
 // << listview-swipe-action-handlers
+
+export function onLayoutTap(args) {
+    const message = "Tap on Layout for item: " + (<DataItem>args.object.bindingContext).name;
+    console.log(message);
+    const listView = <RadListView>topmost().currentPage.getViewById("listView");
+    listView.notifySwipeToExecuteFinished();
+    let lbl = <Label>topmost().getViewById("lbl");
+    lbl.text += " \n" + message;
+}
+
+export function onLabelTap(args) {
+    const message = "Tap on Title: " + (<Label>args.object).text;
+    console.log(message);
+    let lbl = <Label>topmost().getViewById("lbl");
+    lbl.text = message;
+}

@@ -300,7 +300,7 @@ describe("ListView1", () => {
                     alert = await driver.findElementByText("Left swipe click for: Special Item 111", SearchOptions.contains);
                     expect(alert).to.exist;
                 }
-
+                await item.click();
                 await swipe(driver, item, Direction.left);
                 event = await driver.findElementByText(onSwipeEvent, SearchOptions.contains);
                 expect(event).to.exist;
