@@ -18,7 +18,7 @@ export async function navigateBackToView(driver: AppiumDriver, view: string) {
 }
 
 export async function scrollToElement(driver: AppiumDriver, element: string, direction: Direction = Direction.down) {
-    let listView;
+    let listView: UIElement;
     if (isAndroid) {
         listView = await driver.findElementByClassName("android.widget.FrameLayout");
     }
