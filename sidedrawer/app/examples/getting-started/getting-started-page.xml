@@ -5,11 +5,11 @@
 <!-- >> sidedrawer-getting-started-xml -->
     <nsDrawer:RadSideDrawer id="sideDrawer">
       <nsDrawer:RadSideDrawer.drawerContent>
-        <StackLayout backgroundColor="gray">
+        <GridLayout rows="auto, *" backgroundColor="gray">
           <StackLayout height="56" style="text-align: center; vertical-align: center;">
             <Label text="Navigation Menu"/>
           </StackLayout>
-          <ScrollView>
+          <ScrollView row="1">
             <StackLayout>
               <Label text="Primary" padding="10" backgroundColor="lightgray"/>
               <Label text="Social" padding="10"/>
@@ -22,7 +22,7 @@
               <Label text="Close Drawer" color="lightgray" padding="10" style="horizontal-align: center" tap="{{ onCloseDrawerTap }}"/>
             </StackLayout>
           </ScrollView>
-        </StackLayout>
+        </GridLayout>
       </nsDrawer:RadSideDrawer.drawerContent>
 
       <nsDrawer:RadSideDrawer.mainContent>

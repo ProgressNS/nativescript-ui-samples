@@ -3,11 +3,11 @@
     xmlns="http://www.nativescript.org/tns.xsd">
     <nsDrawer:RadSideDrawer id="sideDrawer">
       <nsDrawer:RadSideDrawer.drawerContent>
-        <StackLayout class="drawerContent">
+        <GridLayout rows="auto, *" class="drawerContent">
           <StackLayout class="headerContent">
             <Label text="Navigation Menu"/>
           </StackLayout>
-          <ScrollView>
+          <ScrollView row="1">
             <StackLayout class="drawerMenuContent">
               <Label text="Primary" class="drawerSectionHeader" />
               <Label text="Social" class="drawerSectionItem" />
@@ -20,11 +20,10 @@
               <Button text="Close Drawer" tap="{{ closeDrawer }}"/>
             </StackLayout>
           </ScrollView>
-        </StackLayout>
+        </GridLayout>
       </nsDrawer:RadSideDrawer.drawerContent>
       <nsDrawer:RadSideDrawer.mainContent>
-       <StackLayout class="mainContent">
-        <ScrollView>
+        <ScrollView class="mainContent">
           <StackLayout>
             <Button text="Fade Transition" tap="{{ onFadeTransitionTap }}" class="drawerContentButton"/>
             <Button text="Push Transition" tap="{{ onPushTransitionTap }}" class="drawerContentButton"/>
@@ -35,7 +34,6 @@
             <Button text="SlideInOnTop Transition" tap="{{ onSlideInOnTopTransitionTap }}" class="drawerContentButton"/>
           </StackLayout>
         </ScrollView>
-      </StackLayout>
       </nsDrawer:RadSideDrawer.mainContent>
     </nsDrawer:RadSideDrawer> 
 </navigation:ExamplePage>

@@ -20,11 +20,11 @@
     </nsDrawer:RadSideDrawer.mainContent>
     <nsDrawer:RadSideDrawer.drawerContent>
     <!-- >> (hide) -->
-       <StackLayout class="drawerContent">
+       <GridLayout rows="auto, *" class="drawerContent">
         <StackLayout class="headerContent">
           <Label text="Navigation Menu"/>
         </StackLayout>
-        <ScrollView>
+        <ScrollView row="1">
           <StackLayout class="drawerMenuContent">
             <Label text="Primary" class="drawerSectionHeader" />
             <Label text="Social" class="drawerSectionItem" />
@@ -37,7 +37,7 @@
             <Button text="Close Drawer" tap="{{ onCloseDrawerTap }}"/>
           </StackLayout>
         </ScrollView>
-      </StackLayout>
+      </GridLayout>
       <!-- << (hide) -->
     </nsDrawer:RadSideDrawer.drawerContent>
   </nsDrawer:RadSideDrawer>
