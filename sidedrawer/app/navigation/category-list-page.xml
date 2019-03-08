@@ -6,9 +6,9 @@
             </StackLayout>
             <ListView id="sidedrawer-list" row="1" items="{{ currentSubItems }}" itemTap="{{ onNavigationItemTap }}" class="root-drawer-content" >
                 <ListView.itemTemplate>
-                    <StackLayout id="item-container" class="root-item-stack-layout" class="sidedrawer-list-item">
+                    <GridLayout id="item-container" class="root-item-stack-layout" class="sidedrawer-list-item">
                         <Label id="label" text="{{ title }}" textWrap="true"  margin="0 0 0 10"/>
-                    </StackLayout>
+                    </GridLayout>
                 </ListView.itemTemplate>
             </ListView>
         </GridLayout>

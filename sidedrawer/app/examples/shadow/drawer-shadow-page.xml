@@ -9,11 +9,11 @@
     
       <nsDrawer:RadSideDrawer.drawerContent>
       <!-- >> (hide) -->
-        <StackLayout class="drawerContent">
+        <GridLayout rows="auto, *" class="drawerContent">
           <StackLayout class="headerContent">
             <Label text="Navigation Menu"/>
           </StackLayout>
-          <ScrollView>
+          <ScrollView row="1">
             <StackLayout class="drawerMenuContent">
               <Label text="Primary" class="drawerSectionHeader" />
               <Label text="Social" class="drawerSectionItem" />
@@ -26,21 +26,19 @@
               <Button text="Close Drawer" tap="{{ closeDrawer }}"/>
             </StackLayout>
           </ScrollView>
-        </StackLayout>
+        </GridLayout>
         <!-- << (hide) -->
       </nsDrawer:RadSideDrawer.drawerContent>
 
       <nsDrawer:RadSideDrawer.mainContent>
-        <StackLayout class="mainContent">
-          <Label text="{{drawerShadowText}}" textWrap="true" class="drawerContentText"/>
-          <ScrollView>
+          <ScrollView class="mainContent">
             <StackLayout>
+                <Label text="{{drawerShadowText}}" textWrap="true" class="drawerContentText"/>
                 <Button text="Default Shadow" tap="{{ onDefaultShadowTap }}" class="drawerContentButton"/>
                 <Button text="Red Shadow" tap="{{ onColorfulShadowTap }}" class="drawerContentButton"/>
                 <Button text="No Shadow" tap="{{ onNoShadowTap }}" class="drawerContentButton"/>
             </StackLayout>
           </ScrollView>
-        </StackLayout>
       </nsDrawer:RadSideDrawer.mainContent>
     </nsDrawer:RadSideDrawer>
   <!-- << sidedrawer-setting-location-xml -->
