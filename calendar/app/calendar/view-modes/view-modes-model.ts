@@ -12,16 +12,16 @@ export class ViewModel extends observableModule.Observable {
         };
     }
 
-    set viewMode(value: string) {
+    set viewMode(value: calendarModule.CalendarViewMode) {
         this.set("ViewMode", value);
 
     }
 
-    get viewMode(): string {
+    get viewMode(): calendarModule.CalendarViewMode {
         return this.get("ViewMode");
     }
 
-    public setViewMode(viewMode: string) {
+    public setViewMode(viewMode: calendarModule.CalendarViewMode) {
         this.viewMode = viewMode;
     }
 
