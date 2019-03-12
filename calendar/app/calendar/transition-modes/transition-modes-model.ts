@@ -12,11 +12,11 @@ export class ViewModel extends observableModule.Observable {
         };
     }
 
-    set calendarTransition(value) {
+    set calendarTransition(value: calendarModule.CalendarTransitionMode) {
         this.set("CalendarTransition", value);
     }
 
-    get calendarTransition() {
+    get calendarTransition(): calendarModule.CalendarTransitionMode {
         return this.get("CalendarTransition");
     }
 

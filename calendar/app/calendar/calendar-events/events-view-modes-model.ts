@@ -17,11 +17,11 @@ export class ViewModel extends observableModule.Observable {
         };
     }
 
-    get eventsMode() {
+    get eventsMode(): calendarModule.CalendarEventsViewMode {
         return this.get("eventsViewMode");
     }
 
-    set eventsMode(value: string) {
+    set eventsMode(value: calendarModule.CalendarEventsViewMode) {
         this.set("eventsViewMode", value);
     }
 
