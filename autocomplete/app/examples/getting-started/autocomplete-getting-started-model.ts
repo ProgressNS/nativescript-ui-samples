@@ -1,9 +1,9 @@
 import { ObservableArray } from "tns-core-modules/data/observable-array";
-import { TokenModel } from "nativescript-ui-autocomplete";
+import { TokenModel, RadAutoCompleteTextView, AutoCompleteDisplayMode, AutoCompleteSuggestMode, AutoCompleteCompletionMode } from "nativescript-ui-autocomplete";
 import { Observable } from "tns-core-modules/data/observable";
 
 export class ViewModel extends Observable {
-    private autocomplete;
+    private autocomplete: RadAutoCompleteTextView;
     private countries = ["Australia", "Albania", "Austria", "Argentina", "Maldives", "Bulgaria", "Belgium", "Cyprus", "Italy", "Japan",
         "Denmark", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland",
         "Latvia", "Luxembourg", "Macedonia", "Moldova", "Monaco", "Netherlands", "Norway",
@@ -13,7 +13,7 @@ export class ViewModel extends Observable {
     constructor(args) {
         super();
         const page = args.object;
-        this.autocomplete = page.getViewById("autocomplete");
+        this.autocomplete = <RadAutoCompleteTextView>page.getViewById("autocomplete");
         this.initDataItems();
     }
 
@@ -34,40 +34,40 @@ export class ViewModel extends Observable {
     }
 
     public onSuggestSelected(args) {
-        this.autocomplete.suggestMode = "Suggest";
-        this.autocomplete.resetAutocomplete();
+        this.autocomplete.suggestMode = AutoCompleteSuggestMode.Suggest;
+        this.autocomplete.resetAutoComplete();
     }
 
     public onAppendSelected(args) {
-        this.autocomplete.suggestMode = "Append";
-        this.autocomplete.completionMode = "StartsWith";
-        this.autocomplete.resetAutocomplete();
+        this.autocomplete.suggestMode = AutoCompleteSuggestMode.Append;
+        this.autocomplete.completionMode = AutoCompleteCompletionMode.StartsWith;
+        this.autocomplete.resetAutoComplete();
     }
 
     public onSuggestAppendSelected(args) {
-        this.autocomplete.suggestMode = "SuggestAppend";
-        this.autocomplete.completionMode = "StartsWith";
-        this.autocomplete.resetAutocomplete();
+        this.autocomplete.suggestMode = AutoCompleteSuggestMode.SuggestAppend;
+        this.autocomplete.completionMode = AutoCompleteCompletionMode.StartsWith;
+        this.autocomplete.resetAutoComplete();
     }
 
     public onStartsWithSelected(args) {
-        this.autocomplete.completionMode = "StartsWith";
-        this.autocomplete.resetAutocomplete();
+        this.autocomplete.completionMode = AutoCompleteCompletionMode.StartsWith;
+        this.autocomplete.resetAutoComplete();
     }
 
     public onContainsSelected(args) {
-        this.autocomplete.completionMode = "Contains";
-        this.autocomplete.suggestMode = "Suggest";
-        this.autocomplete.resetAutocomplete();
+        this.autocomplete.completionMode = AutoCompleteCompletionMode.Contains;
+        this.autocomplete.suggestMode = AutoCompleteSuggestMode.Suggest;
+        this.autocomplete.resetAutoComplete();
     }
 
     public onPlainSelected(args) {
-        this.autocomplete.displayMode = "Plain";
-        this.autocomplete.resetAutocomplete();
+        this.autocomplete.displayMode = AutoCompleteDisplayMode.Plain;
+        this.autocomplete.resetAutoComplete();
     }
 
     public onTokensSelected(args) {
-        this.autocomplete.displayMode = "Tokens";
-        this.autocomplete.resetAutocomplete();
+        this.autocomplete.displayMode = AutoCompleteDisplayMode.Tokens;
+        this.autocomplete.resetAutoComplete();
     }
 }

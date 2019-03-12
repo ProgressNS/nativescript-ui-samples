@@ -14,7 +14,7 @@ export class ViewModel extends Observable {
     constructor(args) {
         super();
         const page = args.object;
-        this.autoComplete = page.getViewById("autocomplete");
+        this.autoComplete = <RadAutoCompleteTextView>page.getViewById("autocomplete");
         this.initDataItems();
 
         this.autoComplete.addToken(this.dataItems.getItem(0));

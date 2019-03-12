@@ -1,18 +1,18 @@
 
 import { ObservableArray } from "tns-core-modules/data/observable-array";
-import { TokenModel } from "nativescript-ui-autocomplete";
+import { TokenModel, RadAutoCompleteTextView } from "nativescript-ui-autocomplete";
 import { Observable } from "tns-core-modules/data/observable";
 import * as  http from "tns-core-modules/http";
 
 // >> autocomplete-async-model
 export class ViewModel extends Observable {
-    private autocomplete;
+    private autocomplete: RadAutoCompleteTextView;
     private jsonUrl = "https://raw.githubusercontent.com/telerik/nativescript-ui-samples/master/examples-data/airports.json";
 
     constructor(args) {
         super();
         const page = args.object;
-        this.autocomplete = page.getViewById("autocomplete");
+        this.autocomplete = <RadAutoCompleteTextView>page.getViewById("autocomplete");
         let that = this;
         this.autocomplete.loadSuggestionsAsync = function (text) {
             const promise = new Promise((resolve, reject)   => {
