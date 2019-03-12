@@ -1,6 +1,6 @@
 import { ViewModel } from "./item-animations-model";
 import { topmost } from "tns-core-modules/ui/frame";
-import { RadListView, ListViewLinearLayout } from "nativescript-ui-listview";
+import { RadListView, ListViewLinearLayout, ListViewItemAnimation } from "nativescript-ui-listview";
 
 let viewModelContext: ViewModel;
 
@@ -24,24 +24,24 @@ export function onNavigatedFrom(args) {
 
 export function onNoneSetSelectionModeTap(args: any) {
     const listView = <RadListView>topmost().getViewById("ls");
-    (<ListViewLinearLayout>listView.listViewLayout).itemInsertAnimation = "Default";
-    (<ListViewLinearLayout>listView.listViewLayout).itemDeleteAnimation = "Default";
+    (<ListViewLinearLayout>listView.listViewLayout).itemInsertAnimation = ListViewItemAnimation.Default;
+    (<ListViewLinearLayout>listView.listViewLayout).itemDeleteAnimation = ListViewItemAnimation.Default;
 }
 
 export function onSingleSetSelectionModeTap(args: any) {
     const listView = <RadListView>topmost().getViewById("ls");
-    (<ListViewLinearLayout>listView.listViewLayout).itemInsertAnimation = "Fade";
-    (<ListViewLinearLayout>listView.listViewLayout).itemDeleteAnimation = "Fade";
+    (<ListViewLinearLayout>listView.listViewLayout).itemInsertAnimation = ListViewItemAnimation.Fade;
+    (<ListViewLinearLayout>listView.listViewLayout).itemDeleteAnimation = ListViewItemAnimation.Fade;
 }
 
 export function onMultipleSetSelectionModeTap(args: any) {
     const listView = <RadListView>topmost().getViewById("ls");
-    (<ListViewLinearLayout>listView.listViewLayout).itemInsertAnimation = "Scale";
-    (<ListViewLinearLayout>listView.listViewLayout).itemDeleteAnimation = "Scale";
+    (<ListViewLinearLayout>listView.listViewLayout).itemInsertAnimation = ListViewItemAnimation.Scale;
+    (<ListViewLinearLayout>listView.listViewLayout).itemDeleteAnimation = ListViewItemAnimation.Scale;
 }
 
 export function onRangeSetSelectionModeTap(args: any) {
     const listView = <RadListView>topmost().getViewById("ls");
-    (<ListViewLinearLayout>listView.listViewLayout).itemInsertAnimation = "Slide";
-    (<ListViewLinearLayout>listView.listViewLayout).itemDeleteAnimation = "Slide";
+    (<ListViewLinearLayout>listView.listViewLayout).itemInsertAnimation = ListViewItemAnimation.Slide;
+    (<ListViewLinearLayout>listView.listViewLayout).itemDeleteAnimation = ListViewItemAnimation.Slide;
 }

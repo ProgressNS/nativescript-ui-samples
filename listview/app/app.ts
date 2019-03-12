@@ -23,4 +23,4 @@ if (application.android) {
 
 application.setCssFileName("app.css");
 
-application.start({ moduleName: "navigation/category-list-page" });
+application.run({ moduleName: "app-root" });
