@@ -1,5 +1,5 @@
 import { ObservableArray } from "tns-core-modules/data/observable-array";
-import { TokenModel } from "nativescript-ui-autocomplete";
+import { TokenModel, RadAutoCompleteTextView, AutoCompleteLayoutMode } from "nativescript-ui-autocomplete";
 import { Observable } from "tns-core-modules/data/observable";
 
 export class ViewModel extends Observable {
@@ -13,7 +13,7 @@ export class ViewModel extends Observable {
     constructor(args) {
         super();
         const page = args.object;
-        this.autocomplete = page.getViewById("autocomplete");
+        this.autocomplete = <RadAutoCompleteTextView>page.getViewById("autocomplete");
         this.initDataItems();
     }
 
@@ -34,12 +34,12 @@ export class ViewModel extends Observable {
     }
 
     public onHorizontalSelected(args) {
-        this.autocomplete.layoutMode = "Horizontal";
-        this.autocomplete.resetAutocomplete();
+        this.autocomplete.layoutMode = AutoCompleteLayoutMode.Horizontal;
+        this.autocomplete.resetAutoComplete();
     }
 
     public onWrapSelected(args) {
-        this.autocomplete.layoutMode = "Wrap";
-        this.autocomplete.resetAutocomplete();
+        this.autocomplete.layoutMode = AutoCompleteLayoutMode.Wrap;
+        this.autocomplete.resetAutoComplete();
     }
 }
