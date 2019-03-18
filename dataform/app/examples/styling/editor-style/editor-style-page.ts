@@ -1,5 +1,6 @@
 import { PersonBaseViewModel} from "./../../view-models/person-base-model";
-import { FontStyles, PropertyEditor } from "nativescript-ui-dataform";
+import { DataFormFontStyle, PropertyEditor, RadDataForm } from "nativescript-ui-dataform";
+import { Color } from "tns-core-modules/color";
 
 let nameEditor: PropertyEditor;
 let ageEditor: PropertyEditor;
@@ -9,16 +10,16 @@ let viewModel: PersonBaseViewModel;
 export function onPageLoaded(args) {
     const page = args.object;
     page.bindingContext = new PersonBaseViewModel();
-    const dataform = page.getViewById("myDataForm");
-    nameEditor = dataform.getPropertyByName("name").editor as PropertyEditor;
-    ageEditor = dataform.getPropertyByName("age").editor as PropertyEditor;
-    birthDateEditor = dataform.getPropertyByName("birthDate").editor as PropertyEditor;
+    const dataform = <RadDataForm>page.getViewById("myDataForm");
+    nameEditor = dataform.getPropertyByName("name").editor;
+    ageEditor = dataform.getPropertyByName("age").editor;
+    birthDateEditor = dataform.getPropertyByName("birthDate").editor;
 }
 
 export function onSet(args) {
-    nameEditor.propertyEditorStyle.labelFontStyle = FontStyles.BoldItalic;
-    ageEditor.propertyEditorStyle.labelFontStyle = FontStyles.BoldItalic;
-    birthDateEditor.propertyEditorStyle.labelFontStyle = FontStyles.BoldItalic;
+    nameEditor.propertyEditorStyle.labelFontStyle = DataFormFontStyle.BoldItalic;
+    ageEditor.propertyEditorStyle.labelFontStyle = DataFormFontStyle.BoldItalic;
+    birthDateEditor.propertyEditorStyle.labelFontStyle = DataFormFontStyle.BoldItalic;
 
     nameEditor.propertyEditorStyle.labelFontName = "Times New Roman";
     ageEditor.propertyEditorStyle.labelFontName = "Times New Roman";
@@ -28,7 +29,7 @@ export function onSet(args) {
     ageEditor.propertyEditorStyle.labelTextSize = 20;
     birthDateEditor.propertyEditorStyle.labelTextSize = 20;
 
-    nameEditor.propertyEditorStyle.labelTextColor = "orange";
-    ageEditor.propertyEditorStyle.labelTextColor = "purple";
-    birthDateEditor.propertyEditorStyle.labelTextColor = "lime";
+    nameEditor.propertyEditorStyle.labelTextColor = new Color("orange");
+    ageEditor.propertyEditorStyle.labelTextColor = new Color("purple");
+    birthDateEditor.propertyEditorStyle.labelTextColor = new Color("lime");
 }

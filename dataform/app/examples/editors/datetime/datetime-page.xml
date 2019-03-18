@@ -1,0 +1,42 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:df="nativescript-ui-dataform" xmlns="http://www.nativescript.org/tns.xsd">
+    <GridLayout rows="auto, auto, *" columns="*, *">
+    <Button text="load defaults values" tap="{{ onSetDefaults }}"></Button>
+    <Button col="1" text="load null values" tap="{{ onSetEmpty }}"></Button>
+    <Button row="1" colSpan="2" text="log dates" tap="{{ onLogDates }}"></Button>
+
+	<df:RadDataForm row="2" colSpan="2" source="{{ datesCollection }}">
+        <df:RadDataForm.properties>
+            <df:EntityProperty name="stringDate" hintText="select date" index="0">
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="DatePicker"></df:PropertyEditor>
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+            <df:EntityProperty name="dateDate" hintText="select date" index="1">
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="DatePicker"></df:PropertyEditor>
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+            <df:EntityProperty name="timestampDate" hintText="select date" index="2" converter="{{ timestampConverter }}">
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="DatePicker"></df:PropertyEditor>
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+            <df:EntityProperty name="stringTime" hintText="select time" index="3">
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="TimePicker"></df:PropertyEditor>
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+            <df:EntityProperty name="dateTime" hintText="select time" index="4">
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="TimePicker"></df:PropertyEditor>
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+            <df:EntityProperty name="timestampTime" hintText="select time" index="5" converter="{{ timestampConverter }}">
+                <df:EntityProperty.editor>
+                    <df:PropertyEditor type="TimePicker"></df:PropertyEditor>
+                </df:EntityProperty.editor>
+            </df:EntityProperty>
+        </df:RadDataForm.properties>
+	</df:RadDataForm>
+</GridLayout>
+</navigation:ExamplePage>

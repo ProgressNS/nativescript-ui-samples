@@ -1,7 +1,7 @@
 import { UserViewModel } from "./../view-models/user-model";
 import { SegmentedBar, SegmentedBarItem, SelectedIndexChangedEventData } from "tns-core-modules/ui/segmented-bar";
 import { getViewById } from "tns-core-modules/ui/core/view";
-import { CommitMode } from "nativescript-ui-dataform";
+import { DataFormCommitMode } from "nativescript-ui-dataform";
 
 let dataform;
 let label;
@@ -32,15 +32,15 @@ export function onPageLoaded(args) {
     segmentedBar.on(SegmentedBar.selectedIndexChangedEvent, function (eventData: SelectedIndexChangedEventData) {
         switch (eventData.newIndex) {
             case 0:
-                dataform.commitMode = CommitMode.Immediate;
+                dataform.commitMode = DataFormCommitMode.Immediate;
                 button.isEnabled = false;
                 break;
             case 1:
-                dataform.commitMode = CommitMode.OnLostFocus;
+                dataform.commitMode = DataFormCommitMode.OnLostFocus;
                 button.isEnabled = false;
                 break;
             case 2:
-                dataform.commitMode = CommitMode.Manual;
+                dataform.commitMode = DataFormCommitMode.Manual;
                 button.isEnabled = true;
                 break;
         }

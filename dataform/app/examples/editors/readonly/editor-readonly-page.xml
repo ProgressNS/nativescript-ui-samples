@@ -5,12 +5,12 @@
         <df:RadDataForm source="{{ booking }}" row="1" isReadOnly="{{ isReadOnly }}">
         <!-- << dataform-form-readonly-xml -->
             <df:RadDataForm.properties>
-                <df:EntityProperty name="from" displayName="From:" index="0" autoCompleteDisplayMode="tokens" valuesProvider="{{ fromProviders }}">
+                <df:EntityProperty name="from" displayName="From:" index="0" autoCompleteDisplayMode="Tokens" valuesProvider="{{ fromProviders }}">
                     <df:EntityProperty.editor>
                         <df:PropertyEditor id="1" type="AutoCompleteInline" />
                     </df:EntityProperty.editor>
                 </df:EntityProperty>
-                <df:EntityProperty name="to" displayName="To:" index="1" autoCompleteDisplayMode="plain" valuesProvider="New York, Washington, Los Angeles">
+                <df:EntityProperty name="to" displayName="To:" index="1" autoCompleteDisplayMode="Plain" valuesProvider="New York, Washington, Los Angeles">
                     <df:EntityProperty.editor>
                         <df:PropertyEditor id="2" type="AutoCompleteInline" />
                     </df:EntityProperty.editor>

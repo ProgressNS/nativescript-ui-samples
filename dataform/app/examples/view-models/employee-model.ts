@@ -16,6 +16,6 @@ export class EmployeeViewModel {
 export class Employee {
     public name: string = null;
     public phone: string = null;
-    public birthDate: string = null;
+    public birthDate: Date = null;
     public employeeId: number = null;
 }

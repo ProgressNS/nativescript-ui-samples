@@ -1,5 +1,5 @@
 import { EmployeeViewModel } from "./../../view-models/employee-model";
-import { RadDataForm, EntityProperty, DataFormEventData, EditorType } from "nativescript-ui-dataform";
+import { RadDataForm, EntityProperty, DataFormEventData, DataFormEditorType } from "nativescript-ui-dataform";
 import * as utilsModule from "tns-core-modules/utils/utils";
 import { ios } from "tns-core-modules/application";
 import { Color } from "tns-core-modules/color";
@@ -19,7 +19,8 @@ export function onPageLoaded(args) {
 }
 
 export function dfEditorUpdate(args: DataFormEventData) {
-    const entityProperty = (<RadDataForm>args.object).getPropertyByName(args.propertyName);
+    const dataForm = <RadDataForm>args.object;
+    const entityProperty = <EntityProperty>dataForm.getPropertyByName(args.propertyName);
     const editor = args.editor;
     const editorType = entityProperty.editor.type;
 
@@ -67,21 +68,21 @@ export function dfEditorUpdate(args: DataFormEventData) {
     // << dataform-background-update
 }
 
-export function editorNeedsUpdate(type) {
+export function editorNeedsUpdate(type: DataFormEditorType) {
     return editorHasValueLabel(type) || editorIsTextField(type);
 }
 
-export function editorHasValueLabel(type) {
-    return type === "DatePicker" ||
-        type === "TimePicker" ||
-        type === "Picker";
+export function editorHasValueLabel(type: DataFormEditorType) {
+    return type === DataFormEditorType.DatePicker ||
+        type === DataFormEditorType.TimePicker ||
+        type === DataFormEditorType.Picker;
 }
 
-export function editorIsTextField(type) {
-    return type === "Text" ||
-        type === "Email" ||
-        type === "Password" ||
-        type === "Phone" ||
-        type === "Number" ||
-        type === "Decimal";
+export function editorIsTextField(type: DataFormEditorType) {
+    return type === DataFormEditorType.Text ||
+        type === DataFormEditorType.Email ||
+        type === DataFormEditorType.Password ||
+        type === DataFormEditorType.Phone ||
+        type === DataFormEditorType.Number ||
+        type === DataFormEditorType.Decimal;
 }
