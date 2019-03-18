@@ -1,15 +1,17 @@
 import { PersonViewModel } from "./../view-models/person-model";
-import { PropertyEditor } from "nativescript-ui-dataform";
+import { PropertyEditor, DataFormEditorType, EntityProperty, RadDataForm, PropertyGroup } from "nativescript-ui-dataform";
+import { Color } from "tns-core-modules/color";
+import { Button } from "tns-core-modules/ui/button";
 
-let dataform;
-let button;
-let counter;
+let dataform: RadDataForm;
+let button: Button;
+let counter: number;
 
 export function onPageLoaded(args) {
     const page = args.object;
     page.bindingContext = new PersonViewModel();
-    dataform = page.getViewById("myDataForm");
-    button = page.getViewById("myButton");
+    dataform = <RadDataForm>page.getViewById("myDataForm");
+    button = <Button>page.getViewById("myButton");
     counter = 0;
 }
 
@@ -69,55 +71,55 @@ export function onTap(args) {
 }
 
 export function changeDisplayName(value) {
-    const property = dataform.getPropertyByName("name");
+    const property = <EntityProperty>dataform.getPropertyByName("name");
     property.displayName = value;
 }
 
 export function changeHidden(value) {
-    const property = dataform.getPropertyByName("name");
+    const property = <EntityProperty>dataform.getPropertyByName("name");
     property.hidden = value;
 }
 
 // >> dataform-editors-code
 export function changeEditor() {
-    const property = dataform.getPropertyByName("age");
+    const property = <EntityProperty>dataform.getPropertyByName("age");
     const propertyEditor = new PropertyEditor();
-    propertyEditor.type = "Slider";
+    propertyEditor.type = DataFormEditorType.Slider;
     property.editor = propertyEditor;
 }
 // << dataform-editors-code
 
 // >> dataform-getting-started-runtime-change
 export function changeEditorFill() {
-    const property = dataform.getPropertyByName("name");
-    property.editor.propertyEditorStyle.fillColor = "LightBlue";
+    const property = <EntityProperty>dataform.getPropertyByName("name");
+    property.editor.propertyEditorStyle.fillColor = new Color("LightBlue");
 }
 // << dataform-getting-started-runtime-change
 
 export function changeEditorStroke() {
-    const property = dataform.getPropertyByName("name");
+    const property = <EntityProperty>dataform.getPropertyByName("name");
     property.editor.propertyEditorStyle.strokeWidth = 4;
-    property.editor.propertyEditorStyle.strokeColor = "Yellow";
+    property.editor.propertyEditorStyle.strokeColor = new Color("Yellow");
 }
 
 export function changeGroupCollapsible(value) {
-    const group = dataform.getGroupByName("Main Info");
+    const group = <PropertyGroup>dataform.getGroupByName("Main Info");
     group.collapsible = value;
 }
 
 export function changeGroupLabelTextSize() {
-    const group = dataform.getGroupByName("Main Info");
+    const group = <PropertyGroup>dataform.getGroupByName("Main Info");
     group.titleStyle.labelTextSize = 20;
 }
 
 // >> dataform-groups-code
 export function changeGroupLabelTextColor() {
-    const group = dataform.getGroupByName("Main Info");
-    group.titleStyle.labelTextColor = "Blue";
+    const group = <PropertyGroup>dataform.getGroupByName("Main Info");
+    group.titleStyle.labelTextColor = new Color("Blue");
 }
 // << dataform-groups-code
 
 export function changeGroupName() {
-    const group = dataform.getGroupByName("Main Info");
+    const group = <PropertyGroup>dataform.getGroupByName("Main Info");
     group.name = "General";
 }

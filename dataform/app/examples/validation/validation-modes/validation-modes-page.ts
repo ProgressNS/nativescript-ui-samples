@@ -1,19 +1,21 @@
 import { UserViewModel } from "./../../view-models/user-model";
 import { SegmentedBar, SegmentedBarItem, SelectedIndexChangedEventData } from "tns-core-modules/ui/segmented-bar";
 import { getViewById } from "tns-core-modules/ui/core/view";
-import { ValidationMode } from "nativescript-ui-dataform";
+import { DataFormValidationMode, RadDataForm } from "nativescript-ui-dataform";
+import { Label } from "tns-core-modules/ui/label";
+import { Button } from "tns-core-modules/ui/button";
 
-let dataform;
-let button;
-let label;
+let dataform: RadDataForm;
+let button: Button;
+let label: Label;
 
 export function onPageLoaded(args) {
     const page = args.object;
     page.bindingContext = new UserViewModel();
 
-    dataform = getViewById(page, "myDataForm");
-    button = getViewById(page, "myButton");
-    label = getViewById(page, "myLabel");
+    dataform = <RadDataForm>getViewById(page, "myDataForm");
+    button = <Button>getViewById(page, "myButton");
+    label = <Label>getViewById(page, "myLabel");
 
     const segmentedBar = <SegmentedBar>getViewById(page, "mySegmentedBar");
     const items = [];
@@ -30,15 +32,15 @@ export function onPageLoaded(args) {
     segmentedBar.on(SegmentedBar.selectedIndexChangedEvent, function (eventData: SelectedIndexChangedEventData) {
         switch (eventData.newIndex) {
             case 0:
-                dataform.validationMode = ValidationMode.Immediate;
+                dataform.validationMode = DataFormValidationMode.Immediate;
                 button.isEnabled = false;
                 break;
             case 1:
-                dataform.validationMode = ValidationMode.OnLostFocus;
+                dataform.validationMode = DataFormValidationMode.OnLostFocus;
                 button.isEnabled = false;
                 break;
             case 2:
-                dataform.validationMode = ValidationMode.Manual;
+                dataform.validationMode = DataFormValidationMode.Manual;
                 button.isEnabled = true;
                 break;
         }

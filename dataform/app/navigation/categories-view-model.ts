@@ -106,6 +106,8 @@ export class NavigationViewModel extends Observable {
         editors.subItems.push(autocomplete);
         const labels = new NavigationItem("Labels", "examples/editors/labels/labels-page", editors);
         editors.subItems.push(labels);
+        const datetime = new NavigationItem("Date Time", "examples/editors/datetime/datetime-page", editors);
+        editors.subItems.push(datetime);
         const customEditor = new NavigationItem("Custom Editors", "examples/editors/custom-editors/custom-editors-page", editors);
         editors.subItems.push(customEditor);
 
