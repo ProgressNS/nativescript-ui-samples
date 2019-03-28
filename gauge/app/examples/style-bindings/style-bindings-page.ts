@@ -3,6 +3,7 @@ import { Page } from 'tns-core-modules/ui/page';
 import { StyleBindingsModel } from "./style-bindings-model";
 import { TitleStyle, SubtitleStyle, BarIndicatorStyle, ScaleStyle, NeedleStyle,
     RadRadialGauge, RadialScale, BarIndicator, RadialNeedle } from "nativescript-ui-gauge";
+import { Color } from "tns-core-modules/color";
 
 
 let styleBindingsModel: StyleBindingsModel;
@@ -32,14 +33,14 @@ export function onLoaded(args: EventData) {
 
 export function onUpdate() {
     needle.value = 136;
-    titleStyle.textColor = "DarkRed";
-    subtitleStyle.textColor = "Red";
-    needleStyle.fillColor = "Red";
-    needleStyle.circleFillColor = "Red";
-    needleStyle.strokeColor = "DarkGray";
-    needleStyle.circleStrokeColor = "DarkGray";
-    firstIndicatorStyle.fillColor = "LightGray";
-    secondIndicatorStyle.fillColor = "Black";
-    scaleStyle.lineColor = "SlateGray";
-    scaleStyle.labelsColor = "DarkRed";
+    titleStyle.textColor = new Color("DarkRed");
+    subtitleStyle.textColor = new Color("Red");
+    needleStyle.fillColor = new Color("Red");
+    needleStyle.circleFillColor = new Color("Red");
+    needleStyle.strokeColor = new Color("DarkGray");
+    needleStyle.circleStrokeColor = new Color("DarkGray");
+    firstIndicatorStyle.fillColor = new Color("LightGray");
+    secondIndicatorStyle.fillColor = new Color("Black");
+    scaleStyle.lineColor = new Color("SlateGray");
+    scaleStyle.labelsColor = new Color("DarkRed");
 }
