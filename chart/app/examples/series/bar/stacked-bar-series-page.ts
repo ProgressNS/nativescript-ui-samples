@@ -1,7 +1,7 @@
 import { CategoricalDataModel } from "../../data-models/categorical-data-model";
 
 import { topmost } from "tns-core-modules/ui/frame";
-import { RadCartesianChart, CategoricalSeries } from "nativescript-ui-chart";
+import { RadCartesianChart, CategoricalSeries, ChartSeriesStackMode } from "nativescript-ui-chart";
 
 let context: CategoricalDataModel = new CategoricalDataModel();
 
@@ -17,7 +17,7 @@ export function onNavigatedTo(args) {
 export function onNoneStackModeSelected(args: any) {
     const chart = <RadCartesianChart>topmost().getViewById("cartesianChart");
     for (let i = 0; i < chart.series.length; i++) {
-        (<CategoricalSeries>chart.series.getItem(i)).stackMode = "None";
+        (<CategoricalSeries>chart.series.getItem(i)).stackMode = ChartSeriesStackMode.None;
     }
 
     if (chart.android) {
@@ -28,7 +28,7 @@ export function onNoneStackModeSelected(args: any) {
 export function onStackModeSelected(args: any) {
     const chart = <RadCartesianChart>topmost().getViewById("cartesianChart");
     for (let i = 0; i < chart.series.length; i++) {
-        (<CategoricalSeries>chart.series.getItem(i)).stackMode = "Stack";
+        (<CategoricalSeries>chart.series.getItem(i)).stackMode = ChartSeriesStackMode.Stack;
     }
 
     if (chart.android) {
@@ -39,7 +39,7 @@ export function onStackModeSelected(args: any) {
 export function onStack100ModeSelected(args: any) {
     const chart = <RadCartesianChart>topmost().getViewById("cartesianChart");
     for (let i = 0; i < chart.series.length; i++) {
-        (<CategoricalSeries>chart.series.getItem(i)).stackMode = "Stack100";
+        (<CategoricalSeries>chart.series.getItem(i)).stackMode = ChartSeriesStackMode.Stack100;
     }
 
     if (chart.android) {
