@@ -1,4 +1,4 @@
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-ui-listview" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:img="nativescript-image" loaded="onPageLoaded" xmlns:lv="nativescript-ui-listview" xmlns="http://www.nativescript.org/tns.xsd">
     <GridLayout orientation="vertical">
      <!-- >> listview-pull-to-refresh-xml -->
         <lv:RadListView items="{{ dataItems }}" pullToRefresh="true" pullToRefreshInitiated="{{onPullToRefreshInitiated}}" backgroundColor="blue">
@@ -6,18 +6,20 @@
             <lv:RadListView.itemTemplate>
               <StackLayout orientation="vertical" padding="5 10 5 10"  style="background-color: #7fff7f;">
                 <StackLayout orientation="horizontal" padding="10" style="background-color: #65a565;">
-                    <Image src="{{ image + '.jpg'}}" stretch="aspectFit" height="100" width="100"/>
-                   <StackLayout orientation="vertical" marginLeft="15">
-                    <Label fontSize="20" text="{{ name }}" marginBottom="8"/>
-                    <Label fontSize="14" text="{{ title }}" style="font-weight: bold;" textWrap="true"/>
-                    <Label fontSize="12" text="{{ text }}" color="White" textWrap="true"/>
+                    <img:Img height="100" width="80" src="{{ image }}"/>
+                    <StackLayout orientation="vertical" marginLeft="15">
+                        <Label fontSize="20" text="{{ name }}" marginBottom="8"/>
+                        <Label fontSize="14" text="{{ title }}" style="font-weight: bold;" textWrap="true"/>
+                        <Label fontSize="12" text="{{ text }}" color="White" textWrap="true"/>
+                    </StackLayout>
                 </StackLayout>
-                </StackLayout>
-                </StackLayout>
+              </StackLayout>
             </lv:RadListView.itemTemplate>
+             <!-- >> listview-pull-to-refresh-styling-xml -->
             <lv:RadListView.pullToRefreshStyle>
                 <lv:PullToRefreshStyle indicatorColor="white" indicatorBackgroundColor="blue"/>
             </lv:RadListView.pullToRefreshStyle>
+            <!-- << listview-pull-to-refresh-styling-xml -->
         </lv:RadListView>
     </GridLayout>
 </navigation:ExamplePage>

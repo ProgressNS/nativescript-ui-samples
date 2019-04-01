@@ -1,5 +1,5 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" 
-                        xmlns:f="nativescript-fresco"
+                        xmlns:img="nativescript-image"
                         xmlns:lv="nativescript-ui-listview" xmlns="http://www.nativescript.org/tns.xsd">
         <!-- >> listview-load-on-demand-xml -->
         <lv:RadListView id="ls" items="{{ dataItems }}"  row="0" loadOnDemandMode="Manual" loadMoreDataRequested="{{onLoadMoreItemsRequested}}">
@@ -10,12 +10,7 @@
             <lv:RadListView.itemTemplate>
                 <StackLayout orientation="vertical" padding="5 10 5 10"  style="background-color: #7fff7f;">
                 <StackLayout orientation="horizontal" padding="10" style="background-color: #65a565;">
-                    <ios>
-                        <Image src="{{ image + '.jpg'}}" stretch="aspectFit" height="100" width="100"/>
-                    </ios>
-                    <android>
-                        <f:FrescoDrawee imageUri="{{ image }}" height="100" width="100"/>
-                    </android>
+                    <img:Img src="{{ image }}" height="100" width="100"/>
                    <StackLayout orientation="vertical" marginLeft="15">
                     <Label fontSize="20" text="{{ name }}" marginBottom="8"/>
                     <Label fontSize="14" text="{{ title }}" style="font-weight: bold;" textWrap="true"/>

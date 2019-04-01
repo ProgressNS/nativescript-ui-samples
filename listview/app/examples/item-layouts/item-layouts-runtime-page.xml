@@ -1,4 +1,4 @@
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:f="nativescript-fresco" loaded="onPageLoaded" xmlns:lv="nativescript-ui-listview" xmlns="http://www.nativescript.org/tns.xsd">
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:img="nativescript-image" loaded="onPageLoaded" xmlns:lv="nativescript-ui-listview" xmlns="http://www.nativescript.org/tns.xsd">
     <GridLayout rows="auto, *">
         <StackLayout orientation="horizontal">
             <Button text="Linear" margin="10" tap="changeToLinear"></Button>
@@ -9,9 +9,7 @@
             <lv:RadListView.itemTemplate>
                 <GridLayout rows="*" backgroundColor="White">
                     <GridLayout rows="*" columns="*" marginBottom="2" marginRight="2">
-                        <f:FrescoDrawee
-                        height="250"
-                        imageUri="{{ image }}"/>
+                        <img:Img height="250" src="{{ image }}"/>
                         <GridLayout verticalAlignment="bottom">
                             <StackLayout backgroundColor="#BBFFFFFF" paddingTop="8" paddingBottom="8" paddingLeft="16" paddingRight="16">
                                 <Label text="{{ itemName }}"/>
