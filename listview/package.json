@@ -13,7 +13,7 @@
     }
   },
   "dependencies": {
-    "nativescript-fresco": "^5.1.0",
+    "nativescript-image": "~2.1.0",
     "nativescript-theme-core": "^1.0.4",
     "nativescript-ui-listview": "*",
     "nativescript-unit-test-runner": "^0.3.4",

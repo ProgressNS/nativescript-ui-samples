@@ -1,23 +1,9 @@
 ﻿import * as application from 'tns-core-modules/application';
-import * as fresco from 'nativescript-fresco';
-
-declare namespace com {
-    namespace facebook {
-        namespace drawee {
-            namespace backends {
-                namespace pipeline {
-                    class Fresco {
-                        static initialize(context: any): any;
-                    }
-                }
-            }
-        }
-    }
-}
+import * as imageModule from 'nativescript-image';
 
 if (application.android) {
     application.on("launch", (intent) => {
-        fresco.initialize();
+        imageModule.initialize();
     });
 }
 
