@@ -116,3 +116,10 @@ button {
     background-color: lightblue;
     padding: 15;
 }
+
+.listItem-template-grid {
+    border-color: red;
+    background-color: blue;
+    color: white;
+    border-width: 1;
+}
