@@ -1,21 +1,22 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-ui-chart" xmlns="http://www.nativescript.org/tns.xsd">
 
     <chart:RadCartesianChart id="SelectionChart" >
-        
-    <chart:RadCartesianChart.series>
-        <chart:BarSeries selectionMode="Series" seriesName="Bar" items="{{ bubbleCategoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Impact">
-        </chart:BarSeries>
-        <!-- >> series-selection -->
-        <chart:LineSeries selectionMode="Series" showLabels="true" seriesName="Line" items="{{ categoricalSource }}" stackMode="Stack" categoryProperty="Country" valueProperty="Amount"/>
-        <!-- << series-selection -->
-    </chart:RadCartesianChart.series>
-
         <chart:RadCartesianChart.verticalAxis>
-            <chart:LinearAxis horizontalLocation="Right" allowPan="true"/>
+            <chart:LinearAxis horizontalLocation="Right"/>
         </chart:RadCartesianChart.verticalAxis>
         <chart:RadCartesianChart.horizontalAxis>
-            <chart:CategoricalAxis allowPan="true" allowZoom="true"/>
+            <chart:CategoricalAxis/>
         </chart:RadCartesianChart.horizontalAxis>
+
+        <chart:RadCartesianChart.series>
+            <chart:BarSeries selectionMode="Series"
+                items="{{ bubbleCategoricalSource }}" categoryProperty="Country" valueProperty="Impact">
+            </chart:BarSeries>
+            <!-- >> series-selection -->
+            <chart:LineSeries selectionMode="Series" showLabels="true"
+                items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="Amount"/>
+            <!-- << series-selection -->
+        </chart:RadCartesianChart.series>
 
     </chart:RadCartesianChart>
     

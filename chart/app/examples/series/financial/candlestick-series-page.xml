@@ -1,20 +1,20 @@
 <!-- >> candlestick-series -->
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-ui-chart" xmlns="http://www.nativescript.org/tns.xsd">
     <chart:RadCartesianChart id="cartesianChart">
-    <chart:RadCartesianChart.series>
-          <chart:CandlestickSeries
-            categoryProperty="Date"
-            openPropertyName="Open"
-            highPropertyName="High"
-            lowPropertyName="Low"
-            closePropertyName="Close"
-            items="{{ candleStickSourceItems }}">
-              <chart:CandlestickSeries.horizontalAxis>
-                <chart:DateTimeCategoricalAxis  dateFormat="yyyy-MM-dd" verticalLocation="Bottom" />
-              </chart:CandlestickSeries.horizontalAxis>
-              <chart:CandlestickSeries.verticalAxis>
-                <chart:LinearAxis/>
-              </chart:CandlestickSeries.verticalAxis>
+        <chart:RadCartesianChart.horizontalAxis>
+            <chart:DateTimeCategoricalAxis  dateFormat="yyyy-MM-dd" verticalLocation="Bottom" />
+        </chart:RadCartesianChart.horizontalAxis>
+        <chart:RadCartesianChart.verticalAxis>
+            <chart:LinearAxis/>
+        </chart:RadCartesianChart.verticalAxis>
+        <chart:RadCartesianChart.series>
+            <chart:CandlestickSeries
+                categoryProperty="Date"
+                openPropertyName="Open"
+                highPropertyName="High"
+                lowPropertyName="Low"
+                closePropertyName="Close"
+                items="{{ candleStickSourceItems }}">
             </chart:CandlestickSeries>
         </chart:RadCartesianChart.series>
     </chart:RadCartesianChart>

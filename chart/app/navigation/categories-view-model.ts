@@ -87,73 +87,73 @@ export class NavigationViewModel extends Observable {
     private buildChartExamples(currentParent: NavigationItem) {
         const seriesRoot = new NavigationItem("Series", undefined, currentParent);
         currentParent.subItems.push(seriesRoot);
-        let seriesExample = new NavigationItem("Bar series", "examples/series/bar/bar-series-page", seriesRoot);
+        let seriesExample = new NavigationItem("Bar Series", "examples/series/bar/bar-series-page", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
 
-        seriesExample = new NavigationItem("Range bar series", "examples/series/bar/range-bar-series-page", seriesRoot);
+        seriesExample = new NavigationItem("Range Bar Series", "examples/series/bar/range-bar-series-page", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
 
-        seriesExample = new NavigationItem("Stacked Bar series", "examples/series/bar/stacked-bar-series-page", seriesRoot);
+        seriesExample = new NavigationItem("Stacked Bar Series", "examples/series/bar/stacked-bar-series-page", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
 
-        seriesExample = new NavigationItem("Area series", "examples/series/area/area-series-page", seriesRoot);
+        seriesExample = new NavigationItem("Area Series", "examples/series/area/area-series-page", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
 
-        seriesExample = new NavigationItem("Stacked Area series", "examples/series/area/stacked-area-series-page", seriesRoot);
+        seriesExample = new NavigationItem("Stacked Area Series", "examples/series/area/stacked-area-series-page", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
 
-        seriesExample = new NavigationItem("Line series", "examples/series/line/line-series-page", seriesRoot);
+        seriesExample = new NavigationItem("Line Series", "examples/series/line/line-series-page", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
 
-        seriesExample = new NavigationItem("Spline series", "examples/series/spline/spline-series-page", seriesRoot);
+        seriesExample = new NavigationItem("Spline Series", "examples/series/spline/spline-series-page", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
 
-        seriesExample = new NavigationItem("Spline Area series", "examples/series/spline/spline-area-series-page", seriesRoot);
+        seriesExample = new NavigationItem("Spline Area Series", "examples/series/spline/spline-area-series-page", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
 
-        seriesExample = new NavigationItem("Bubble series", "examples/series/bubble/bubble-series-page", seriesRoot);
+        seriesExample = new NavigationItem("Bubble Series", "examples/series/bubble/bubble-series-page", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
 
-        seriesExample = new NavigationItem("Scatter Bubble series", "examples/series/bubble/scatter-bubble-series-page", seriesRoot);
+        seriesExample = new NavigationItem("Scatter Bubble Series", "examples/series/bubble/scatter-bubble-series-page", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
 
-        seriesExample = new NavigationItem("Candlestick series", "examples/series/financial/candlestick-series-page", seriesRoot);
+        seriesExample = new NavigationItem("Candlestick Series", "examples/series/financial/candlestick-series-page", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
 
-        seriesExample = new NavigationItem("Ohlc series", "examples/series/financial/ohlc-series-page", seriesRoot);
+        seriesExample = new NavigationItem("Ohlc Series", "examples/series/financial/ohlc-series-page", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
 
-        seriesExample = new NavigationItem("Pie series", "examples/series/pie/pie-series-page", seriesRoot);
+        seriesExample = new NavigationItem("Pie Series", "examples/series/pie/pie-series-page", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
 
-        seriesExample = new NavigationItem("Scatter series", "examples/series/scatter/scatter-series-page", seriesRoot);
+        seriesExample = new NavigationItem("Scatter Series", "examples/series/scatter/scatter-series-page", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
 
 
         const stylingRoot = new NavigationItem("Styling", undefined, currentParent);
         currentParent.subItems.push(stylingRoot);
-        let stylingExample = new NavigationItem("Styling axes", "examples/styling/styling-axes-page", stylingRoot);
+        let stylingExample = new NavigationItem("Styling Axes", "examples/styling/styling-axes-page", stylingRoot);
         stylingRoot.subItems.push(stylingExample);
 
-        stylingExample = new NavigationItem("Styling series", "examples/styling/styling-series-page", stylingRoot);
+        stylingExample = new NavigationItem("Styling Series", "examples/styling/styling-series-page", stylingRoot);
         stylingRoot.subItems.push(stylingExample);
 
-        stylingExample = new NavigationItem("Styling Pie Chart series", "examples/styling/styling-pie-series-page", stylingRoot);
+        stylingExample = new NavigationItem("Styling Pie Series", "examples/styling/styling-pie-series-page", stylingRoot);
         stylingRoot.subItems.push(stylingExample);
 
-        stylingExample = new NavigationItem("Styling Bar series", "examples/styling/styling-bar-series-page", stylingRoot);
+        stylingExample = new NavigationItem("Styling Bar Series", "examples/styling/styling-bar-series-page", stylingRoot);
         stylingRoot.subItems.push(stylingExample);
 
-        stylingExample = new NavigationItem("Styling grid", "examples/styling/styling-grid-page", stylingRoot);
+        stylingExample = new NavigationItem("Styling Grid", "examples/styling/styling-grid-page", stylingRoot);
         stylingRoot.subItems.push(stylingExample);
 
-        stylingExample = new NavigationItem("Styling labels", "examples/styling/styling-labels-page", stylingRoot);
+        stylingExample = new NavigationItem("Styling Labels", "examples/styling/styling-labels-page", stylingRoot);
         stylingRoot.subItems.push(stylingExample);
 
-        stylingExample = new NavigationItem("Styling ticks", "examples/styling/styling-ticks-page", stylingRoot);
+        stylingExample = new NavigationItem("Styling Ticks", "examples/styling/styling-ticks-page", stylingRoot);
         stylingRoot.subItems.push(stylingExample);
 
-        stylingExample = new NavigationItem("Styling series selection", "examples/styling/styling-selection-page", stylingRoot);
+        stylingExample = new NavigationItem("Styling Series Selection", "examples/styling/styling-selection-page", stylingRoot);
         stylingRoot.subItems.push(stylingExample);
 
         const legendRoot = new NavigationItem("Legend", "examples/legend/chart-legend-page", currentParent);
@@ -171,13 +171,13 @@ export class NavigationViewModel extends Observable {
         interactionExample = new NavigationItem("Trackball Content", "examples/behaviors/chart-trackball-content-page", behaviorsRoot);
         behaviorsRoot.subItems.push(interactionExample);
 
-        interactionExample = new NavigationItem("Pie selection", "examples/behaviors/chart-pie-selection-page", behaviorsRoot);
+        interactionExample = new NavigationItem("Pie Selection", "examples/behaviors/chart-pie-selection-page", behaviorsRoot);
         behaviorsRoot.subItems.push(interactionExample);
 
-        interactionExample = new NavigationItem("Series selection", "examples/behaviors/chart-series-selection-page", behaviorsRoot);
+        interactionExample = new NavigationItem("Series Selection", "examples/behaviors/chart-series-selection-page", behaviorsRoot);
         behaviorsRoot.subItems.push(interactionExample);
 
-        interactionExample = new NavigationItem("Datapoint selection", "examples/behaviors/chart-datapoint-selection-page", behaviorsRoot);
+        interactionExample = new NavigationItem("Datapoint Selection", "examples/behaviors/chart-datapoint-selection-page", behaviorsRoot);
         behaviorsRoot.subItems.push(interactionExample);
 
         const axesRoot = new NavigationItem("Axes", undefined, currentParent);
@@ -185,25 +185,25 @@ export class NavigationViewModel extends Observable {
         let axesExample = new NavigationItem("Customization", "examples/axes/customization/axes-customization-page", axesRoot);
         axesRoot.subItems.push(axesExample);
 
-        axesExample = new NavigationItem("Multiple axes", "examples/axes/multiple/multiple-axes-page", axesRoot);
+        axesExample = new NavigationItem("Multiple Axes", "examples/axes/multiple/multiple-axes-page", axesRoot);
         axesRoot.subItems.push(axesExample);
 
-        axesExample = new NavigationItem("Negative values", "examples/axes/negative-values/negative-values-page", axesRoot);
+        axesExample = new NavigationItem("Negative Values", "examples/axes/negative-values/negative-values-page", axesRoot);
         axesRoot.subItems.push(axesExample);
 
-        axesExample = new NavigationItem("Date time axis", "examples/axes/date-time-axes/date-time-axes-page", axesRoot);
+        axesExample = new NavigationItem("DateTime Axis", "examples/axes/date-time-axes/date-time-axes-page", axesRoot);
         axesRoot.subItems.push(axesExample);
 
-        axesExample = new NavigationItem("Label visibility", "examples/axes/label-visibility/label-visibility-page", axesRoot);
+        axesExample = new NavigationItem("Label Visibility", "examples/axes/label-visibility/label-visibility-page", axesRoot);
         axesRoot.subItems.push(axesExample);
 
         const annotationsRoot = new NavigationItem("Annotations", undefined, currentParent);
         currentParent.subItems.push(annotationsRoot);
 
-        let annotationsExample = new NavigationItem("Plot band", "examples/annotations/plot-band-page", annotationsRoot);
+        let annotationsExample = new NavigationItem("Plot Band", "examples/annotations/plot-band-page", annotationsRoot);
         annotationsRoot.subItems.push(annotationsExample);
 
-        annotationsExample = new NavigationItem("Grid line", "examples/annotations/grid-line-page", annotationsRoot);
+        annotationsExample = new NavigationItem("Grid Line", "examples/annotations/grid-line-page", annotationsRoot);
         annotationsRoot.subItems.push(annotationsExample);
     }
 

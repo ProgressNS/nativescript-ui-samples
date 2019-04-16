@@ -8,17 +8,29 @@
             <chart:RadCartesianChart.verticalAxis>
                 <chart:LinearAxis/>
             </chart:RadCartesianChart.verticalAxis>
+
             <chart:RadCartesianChart.series>
-                <chart:SplineSeries legendTitle="Bangkok" seriesName="Line1" items="{{ temperatureDataItems }}" categoryProperty="Month" valueProperty="Bangkok"/>
-                <chart:SplineSeries legendTitle="Paris" seriesName="Line2" items="{{ temperatureDataItems }}" categoryProperty="Month" valueProperty="Paris"/>
-                <chart:SplineSeries legendTitle="Ulaanbaatar" seriesName="Line3" items="{{ temperatureDataItems }}" categoryProperty="Month" valueProperty="Ulaanbaatar"/>
+                <chart:SplineSeries legendTitle="Bangkok" seriesName="Line1"
+                    items="{{ temperatureDataItems }}" categoryProperty="Month" valueProperty="Bangkok">
+                </chart:SplineSeries>
+                <chart:SplineSeries legendTitle="Paris" seriesName="Line2"
+                    items="{{ temperatureDataItems }}" categoryProperty="Month" valueProperty="Paris">
+                </chart:SplineSeries>
+                <chart:SplineSeries legendTitle="Ulaanbaatar" seriesName="Line3"
+                    items="{{ temperatureDataItems }}" categoryProperty="Month" valueProperty="Ulaanbaatar">
+                </chart:SplineSeries>
             </chart:RadCartesianChart.series>
+
             <chart:RadCartesianChart.trackball>
-                <chart:Trackball snapMode="AllClosestPoints" showIntersectionPoints="true" trackBallContentRequested="onTrackBallContentRequested"/>
+                <chart:Trackball snapMode="AllClosestPoints" showIntersectionPoints="true"
+                    trackBallContentRequested="onTrackBallContentRequested">
+                </chart:Trackball>
             </chart:RadCartesianChart.trackball>
+
             <chart:RadCartesianChart.legend>
                 <chart:RadLegendView position="Top" title="Monthly Averages (&#8451;)" />
             </chart:RadCartesianChart.legend>
+
             <chart:RadCartesianChart.palettes>
                 <chart:Palette seriesName="Line1">
                     <chart:Palette.entries>

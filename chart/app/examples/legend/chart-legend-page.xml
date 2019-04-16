@@ -1,22 +1,48 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-ui-chart" xmlns="http://www.nativescript.org/tns.xsd">
-      <!-- >> legend-example -->
+    <!-- >> legend-example -->
     <chart:RadCartesianChart id="cartesianChart" seriesSelectionMode="Single">
-        <chart:RadCartesianChart.series>
-            <chart:BarSeries legendTitle="Bar series" items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="ThirdVal"/>
-            <chart:LineSeries legendTitle="Line series" items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="Amount"/>
-            <chart:AreaSeries legendTitle="Area series" items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="SecondVal"/>
-        </chart:RadCartesianChart.series>
         <chart:RadCartesianChart.horizontalAxis>
             <chart:CategoricalAxis/>
         </chart:RadCartesianChart.horizontalAxis>
         <chart:RadCartesianChart.verticalAxis>
             <chart:LinearAxis maximum="50"/>
         </chart:RadCartesianChart.verticalAxis>
+
+        <chart:RadCartesianChart.series>
+            <chart:BarSeries seriesName="Bar" legendTitle="Bar series"
+                items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="ThirdVal">
+            </chart:BarSeries>
+            <chart:LineSeries seriesName="Line" legendTitle="Line series"
+                items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="Amount">
+            </chart:LineSeries>
+            <chart:AreaSeries seriesName="Area" legendTitle="Area series"
+                items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="SecondVal">
+            </chart:AreaSeries>
+        </chart:RadCartesianChart.series>
+
+        <chart:RadCartesianChart.palettes>
+            <chart:Palette seriesName="Bar">
+                <chart:Palette.entries>
+                    <chart:PaletteEntry fillColor="#ff6699" strokeColor="#ff6699"/>
+                </chart:Palette.entries>
+            </chart:Palette>
+            <chart:Palette seriesName="Line">
+                <chart:Palette.entries>
+                    <chart:PaletteEntry fillColor="#4d88ff" strokeColor="#4d88ff"/>
+                </chart:Palette.entries>
+            </chart:Palette>
+            <chart:Palette seriesName="Area">
+                <chart:Palette.entries>
+                    <chart:PaletteEntry fillColor="#8033cc33" strokeColor="#33cc33"/>
+                </chart:Palette.entries>
+            </chart:Palette>
+        </chart:RadCartesianChart.palettes>
+
         <!-- >> legend-definition-xml -->
         <chart:RadCartesianChart.legend>
             <chart:RadLegendView position="Top" title="Series type" height="150" enableSelection="true"/>
         </chart:RadCartesianChart.legend>
         <!-- << legend-definition-xml -->
     </chart:RadCartesianChart>
-       <!-- << legend-example -->
+    <!-- << legend-example -->
 </navigation:ExamplePage>

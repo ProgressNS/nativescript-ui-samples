@@ -13,7 +13,6 @@
             <chart:RadCartesianChart.series>
                 <chart:RangeBarSeries
                      showLabels="true"
-                     legendTitle="Ranges"
                      categoryProperty="Name"
                      lowPropertyName="Low"
                      highPropertyName="High"

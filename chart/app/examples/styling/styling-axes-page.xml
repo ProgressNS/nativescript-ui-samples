@@ -1,15 +1,15 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-ui-chart" xmlns="http://www.nativescript.org/tns.xsd">
     <chart:RadCartesianChart id="cartesianChart">
+        <!-- >> axis-styling -->
+        <chart:RadCartesianChart.horizontalAxis>
+            <chart:LinearAxis labelTextColor="Green" lineHidden="false" labelSize="10" lineThickness="3" lineColor="Green"/>
+        </chart:RadCartesianChart.horizontalAxis>
+        <chart:RadCartesianChart.verticalAxis>
+            <chart:CategoricalAxis labelTextColor="#cb4b16" labelSize="10" lineThickness="3" lineColor="Red"/>
+        </chart:RadCartesianChart.verticalAxis>
+        <!-- << axis-styling -->
         <chart:RadCartesianChart.series>
             <chart:BarSeries items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="Amount">
-            <!-- >> axis-styling -->
-                <chart:BarSeries.horizontalAxis>
-                    <chart:LinearAxis labelTextColor="Green" />
-                </chart:BarSeries.horizontalAxis>
-                <chart:BarSeries.verticalAxis>
-                        <chart:CategoricalAxis labelTextColor="#cb4b16" labelSize="10" lineThickness="3" lineColor="Red"/>
-                </chart:BarSeries.verticalAxis>
-            <!-- << axis-styling -->
             </chart:BarSeries>
         </chart:RadCartesianChart.series>
     </chart:RadCartesianChart>
