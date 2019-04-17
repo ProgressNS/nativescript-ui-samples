@@ -1,29 +1,41 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-ui-chart" xmlns="http://www.nativescript.org/tns.xsd">
 
-        <chart:RadCartesianChart>
-            <chart:RadCartesianChart.horizontalAxis>
-                <chart:CategoricalAxis verticalLocation="Bottom" labelSize="10" lineColor="Red" lineThickness="3"/></chart:RadCartesianChart.horizontalAxis>
-            <chart:RadCartesianChart.verticalAxis>
-                <chart:LinearAxis horizontalLocation="Left" labelSize="10" lineColor="Red" lineThickness="3"/></chart:RadCartesianChart.verticalAxis>
+    <chart:RadCartesianChart>
+        <chart:RadCartesianChart.horizontalAxis>
+            <chart:CategoricalAxis/>
+        </chart:RadCartesianChart.horizontalAxis>
+        <chart:RadCartesianChart.verticalAxis>
+            <chart:LinearAxis/>
+        </chart:RadCartesianChart.verticalAxis>
 
-            <chart:RadCartesianChart.series>
-                 <!-- >> labels-styling -->
-         <chart:LineSeries legendTitle="Store scope" showLabels="true" seriesName="Bar" valueProperty="Amount" categoryProperty="Country" items="{{ categoricalSource }}">
-                    <chart:LineSeries.labelStyle>
-                        <chart:PointLabelStyle margin="10" fontStyle="Bold" fillColor="#60B3FC" textSize="10" textColor="White" />
-                    </chart:LineSeries.labelStyle>
-                </chart:LineSeries>
+        <chart:RadCartesianChart.series>
+            <!-- >> labels-styling -->
+            <chart:LineSeries
+                legendTitle="Previous Year Sales"
+                showLabels="true"
+                valueProperty="Amount"
+                categoryProperty="Country"
+                items="{{ categoricalSource }}">
+                <chart:LineSeries.labelStyle>
+                    <chart:PointLabelStyle margin="10" fontStyle="Bold" fillColor="#60B3FC" textSize="10" textColor="White" />
+                </chart:LineSeries.labelStyle>
+            </chart:LineSeries>
 
-                <chart:LineSeries legendTitle="Store scope" showLabels="true" seriesName="Bar" valueProperty="SecondVal" categoryProperty="Country" items="{{ categoricalSource }}">
-                    <chart:LineSeries.labelStyle>
-                        <chart:PointLabelStyle margin="10" fontStyle="Bold" fillColor="#FC6060" textSize="10" textColor="White" />
-                    </chart:LineSeries.labelStyle>
-                </chart:LineSeries>
-                 <!-- << labels-styling -->
-           </chart:RadCartesianChart.series>
+            <chart:LineSeries
+                legendTitle="Current Year Sales"
+                showLabels="true"
+                valueProperty="SecondVal"
+                categoryProperty="Country"
+                items="{{ categoricalSource }}">
+                <chart:LineSeries.labelStyle>
+                    <chart:PointLabelStyle margin="10" fontStyle="Bold" fillColor="#FC6060" textSize="10" textColor="White" />
+                </chart:LineSeries.labelStyle>
+            </chart:LineSeries>
+            <!-- << labels-styling -->
+        </chart:RadCartesianChart.series>
 
-            <chart:RadCartesianChart.legend>
-                <chart:RadLegendView position="Top" height="150"/>
-            </chart:RadCartesianChart.legend>
-        </chart:RadCartesianChart>
+        <chart:RadCartesianChart.legend>
+            <chart:RadLegendView position="Top" height="150"/>
+        </chart:RadCartesianChart.legend>
+    </chart:RadCartesianChart>
 </navigation:ExamplePage>

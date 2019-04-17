@@ -1,20 +1,20 @@
 <!-- >> ohlc-series -->
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-ui-chart" xmlns="http://www.nativescript.org/tns.xsd">
     <chart:RadCartesianChart id="cartesianChart">
-    <chart:RadCartesianChart.series>
-          <chart:OhlcSeries
-            categoryProperty="Date"
-            openPropertyName="Open"
-            highPropertyName="High"
-            lowPropertyName="Low"
-            closePropertyName="Close"
-            items="{{ ohlcSourceItems }}">
-              <chart:OhlcSeries.horizontalAxis>
-                   <chart:DateTimeCategoricalAxis  dateFormat="yyyy-MM-dd" verticalLocation="Bottom" />
-              </chart:OhlcSeries.horizontalAxis>
-              <chart:OhlcSeries.verticalAxis>
-                <chart:LinearAxis/>
-              </chart:OhlcSeries.verticalAxis>
+        <chart:RadCartesianChart.horizontalAxis>
+            <chart:DateTimeCategoricalAxis  dateFormat="yyyy-MM-dd" verticalLocation="Bottom" />
+        </chart:RadCartesianChart.horizontalAxis>
+        <chart:RadCartesianChart.verticalAxis>
+            <chart:LinearAxis/>
+        </chart:RadCartesianChart.verticalAxis>
+        <chart:RadCartesianChart.series>
+            <chart:OhlcSeries
+                categoryProperty="Date"
+                openPropertyName="Open"
+                highPropertyName="High"
+                lowPropertyName="Low"
+                closePropertyName="Close"
+                items="{{ ohlcSourceItems }}">
             </chart:OhlcSeries>
         </chart:RadCartesianChart.series>
     </chart:RadCartesianChart>

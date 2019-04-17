@@ -1,18 +1,17 @@
 <!-- >> bar-series -->
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded"  xmlns:chart="nativescript-ui-chart" xmlns="http://www.nativescript.org/tns.xsd">
-    <chart:RadCartesianChart id="cartesianChart">
     <!-- >> categorical-axis-example -->
+    <chart:RadCartesianChart id="cartesianChart">
+        <chart:RadCartesianChart.horizontalAxis>
+            <chart:CategoricalAxis/>
+        </chart:RadCartesianChart.horizontalAxis>
+        <chart:RadCartesianChart.verticalAxis>
+            <chart:LinearAxis/>
+        </chart:RadCartesianChart.verticalAxis>
         <chart:RadCartesianChart.series>
-            <chart:BarSeries items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="Amount">
-                <chart:BarSeries.horizontalAxis>
-                    <chart:CategoricalAxis/>
-                </chart:BarSeries.horizontalAxis>
-                <chart:BarSeries.verticalAxis>
-                    <chart:LinearAxis/>
-                </chart:BarSeries.verticalAxis>
-            </chart:BarSeries>
+            <chart:BarSeries items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="Amount"/>
         </chart:RadCartesianChart.series>
-        <!-- << categorical-axis-example -->
     </chart:RadCartesianChart>
+    <!-- << categorical-axis-example -->
 </navigation:ExamplePage>
 <!-- << bar-series -->

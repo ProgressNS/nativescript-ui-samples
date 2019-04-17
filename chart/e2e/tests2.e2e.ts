@@ -84,7 +84,7 @@ describe("Chart2", () => {
         });
         it("should open Pie selection", async () => {
             await navigateToView(driver, interactionText);
-            const pieSelectionButton = await driver.findElementByText("Pie selection");
+            const pieSelectionButton = await driver.findElementByText("Pie Selection");
             await pieSelectionButton.click();
             await driver.wait(animationTime);
             const isTrue = await driver.compareScreen("pie-selection");
@@ -104,7 +104,7 @@ describe("Chart2", () => {
         });
         it("should open Series selection", async () => {
             await navigateToView(driver, interactionText);
-            const seriesSelectionButton = await driver.findElementByText("Series selection");
+            const seriesSelectionButton = await driver.findElementByText("Series Selection");
             await seriesSelectionButton.click();
             await driver.wait(animationTime);
             const isTrue = await driver.compareScreen("series-selection");
@@ -112,7 +112,7 @@ describe("Chart2", () => {
         });
         it("should open Datapoint selection", async () => {
             await navigateToView(driver, interactionText);
-            const datapointSelectionButton = await driver.findElementByText("Datapoint selection");
+            const datapointSelectionButton = await driver.findElementByText("Datapoint Selection");
             await datapointSelectionButton.click();
             await driver.wait(animationTime);
             const isTrue = await driver.compareScreen("datapoint-selection");
@@ -135,7 +135,7 @@ describe("Chart2", () => {
         });
         it("should open Multiple axes", async () => {
             await navigateToView(driver, axesText);
-            const multipleAxesButton = await driver.findElementByText("Multiple axes");
+            const multipleAxesButton = await driver.findElementByText("Multiple Axes");
             await multipleAxesButton.click();
             await driver.wait(animationTime);
             const isTrue = await driver.compareScreen("multiple-axes");
@@ -143,7 +143,7 @@ describe("Chart2", () => {
         });
         it("should open Negative values", async () => {
             await navigateToView(driver, axesText);
-            const negativeValuesButton = await driver.findElementByText("Negative values");
+            const negativeValuesButton = await driver.findElementByText("Negative Values");
             await negativeValuesButton.click();
             await driver.wait(animationTime);
             const isTrue = await driver.compareScreen("negative-values");
@@ -151,7 +151,7 @@ describe("Chart2", () => {
         });
         it("should open Date time axis", async () => {
             await navigateToView(driver, axesText);
-            const dateTimeAxisButton = await driver.findElementByText("Date time axis");
+            const dateTimeAxisButton = await driver.findElementByText("DateTime Axis");
             await dateTimeAxisButton.click();
             await driver.wait(animationTime);
             const isTrue = await driver.compareScreen("date-time-axis");
@@ -159,7 +159,7 @@ describe("Chart2", () => {
         });
         it("should open Label visibility", async () => {
             await navigateToView(driver, axesText);
-            const labelVisibilityButton = await driver.findElementByText("Label visibility");
+            const labelVisibilityButton = await driver.findElementByText("Label Visibility");
             await labelVisibilityButton.click();
             await driver.wait(animationTime);
             const isTrue = await driver.compareScreen("label-visibility");
@@ -174,7 +174,7 @@ describe("Chart2", () => {
             await annotationsButton.click();
             const annotationsTitle = await driver.findElementByText(annotationsText);
             expect(annotationsTitle).to.exist;
-            const plotBandButton = await driver.findElementByText("Plot band");
+            const plotBandButton = await driver.findElementByText("Plot Band");
             await plotBandButton.click();
             await driver.wait(animationTime);
             const isTrue = await driver.compareScreen("plot-band");
@@ -182,7 +182,7 @@ describe("Chart2", () => {
         });
         it("should open Grid line", async () => {
             await navigateToView(driver, annotationsText);
-            const gridLineButton = await driver.findElementByText("Grid line");
+            const gridLineButton = await driver.findElementByText("Grid Line");
             await gridLineButton.click();
             await driver.wait(animationTime);
             const isTrue = await driver.compareScreen("grid-line");
