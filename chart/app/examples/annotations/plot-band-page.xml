@@ -1,20 +1,22 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-ui-chart" xmlns="http://www.nativescript.org/tns.xsd">
     <chart:RadCartesianChart id="cartesianChart">
+        <chart:RadCartesianChart.horizontalAxis>
+            <chart:CategoricalAxis/>
+        </chart:RadCartesianChart.horizontalAxis>
+        <chart:RadCartesianChart.verticalAxis>
+            <chart:LinearAxis id="verBarAxis"/>
+        </chart:RadCartesianChart.verticalAxis>
 
 		<chart:RadCartesianChart.series>
-            <chart:BarSeries items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="Amount">
-                <chart:BarSeries.horizontalAxis>
-                    <chart:CategoricalAxis id="horBarAxis"/>
-                </chart:BarSeries.horizontalAxis>
-                <chart:BarSeries.verticalAxis>
-                    <chart:LinearAxis id="verBarAxis"/>
-                </chart:BarSeries.verticalAxis>
-            </chart:BarSeries>
+            <chart:BarSeries items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="Amount"></chart:BarSeries>
         </chart:RadCartesianChart.series>
-      <!-- >> plot-band-annotations -->
+
+        <!-- >> plot-band-annotations -->
         <chart:RadCartesianChart.annotations>
-		    <chart:ChartPlotBandAnnotation axisId="verBarAxis" minValue="2" maxValue="4" zPosition="AboveSeries" strokeWidth="2" fillColor="#DDFFFF00" strokeColor="Red" strokeDashPattern="3,3,5,5"/>
+		    <chart:ChartPlotBandAnnotation axisId="verBarAxis" minValue="2" maxValue="4" zPosition="AboveSeries"
+                strokeWidth="2" fillColor="#DDFFFF00" strokeColor="Red" strokeDashPattern="3,3,5,5">
+            </chart:ChartPlotBandAnnotation>
         </chart:RadCartesianChart.annotations>
-              <!-- << plot-band-annotations -->
+        <!-- << plot-band-annotations -->
     </chart:RadCartesianChart>
 </navigation:ExamplePage>

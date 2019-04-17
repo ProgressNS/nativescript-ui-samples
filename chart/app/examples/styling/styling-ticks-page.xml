@@ -1,31 +1,37 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-ui-chart" xmlns="http://www.nativescript.org/tns.xsd">
     <chart:RadCartesianChart>
         <chart:RadCartesianChart.grid>
-            <chart:RadCartesianChartGrid horizontalLinesVisible="true" verticalLinesVisible="true"
+            <chart:RadCartesianChartGrid
+                horizontalLinesVisible="true" verticalLinesVisible="true"
                 horizontalStripLinesVisible="false" verticalStripLinesVisible="false"
                 horizontalStrokeColor="#8BC34A" verticalStrokeColor="#8BC34A"
                 horizontalStrokeWidth="1" verticalStrokeWidth="1"
-                horizontalStripLineColor="#00000000"/>
+                horizontalStripLineColor="#00000000">
+            </chart:RadCartesianChartGrid>
         </chart:RadCartesianChart.grid>
 
         <chart:RadCartesianChart.horizontalAxis>
-            <chart:CategoricalAxis verticalLocation="Bottom" lineThickness="1" lineHidden="true" lineColor="#8BC34A"
+            <chart:CategoricalAxis verticalLocation="Bottom"
+                lineThickness="1" lineHidden="true" lineColor="#8BC34A"
                 labelLayoutMode="Outer" labelMargin="10" labelTextColor="#536DFE"
-                ticksHidden="false" ticksLength="30" ticksThickness="3" ticksColor="#536DFE" ticksOffset="-15"/>
+                ticksHidden="false" ticksLength="30" ticksThickness="3" ticksColor="#536DFE" ticksOffset="-15">
+            </chart:CategoricalAxis>
         </chart:RadCartesianChart.horizontalAxis>
 
         <chart:RadCartesianChart.verticalAxis>
-            <chart:LinearAxis horizontalLocation="Right" lineThickness="1" lineHidden="true" lineColor="#8BC34A"
-            labelLayoutMode="Outer" labelMargin="10" labelTextColor="#536DFE" labelFormat="%.2f"
-            ticksHidden="false" ticksLength="30" ticksThickness="3" ticksColor="#536DFE" ticksOffset="-15"/>
+            <chart:LinearAxis horizontalLocation="Right"
+                lineThickness="1" lineHidden="true" lineColor="#8BC34A"
+                labelLayoutMode="Outer" labelMargin="10" labelTextColor="#536DFE" labelFormat="%.2f"
+                ticksHidden="false" ticksLength="30" ticksThickness="3" ticksColor="#536DFE" ticksOffset="-15">
+            </chart:LinearAxis>
         </chart:RadCartesianChart.verticalAxis>
 
         <chart:RadCartesianChart.series>
-            <chart:LineSeries seriesName="Line" valueProperty="Amount" categoryProperty="Country" items="{{ categoricalSource }}"/>
+            <chart:LineSeries items="{{ categoricalSource }}" valueProperty="Amount" categoryProperty="Country"/>
         </chart:RadCartesianChart.series>
 
         <chart:RadCartesianChart.palettes>
-            <chart:Palette seriesName="Line">
+            <chart:Palette>
                 <chart:Palette.entries>
                     <chart:PaletteEntry strokeColor="#536DFE" ios:strokeWidth="2" android:strokeWidth="4"/>
                 </chart:Palette.entries>

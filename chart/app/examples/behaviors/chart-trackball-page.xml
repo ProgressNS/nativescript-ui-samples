@@ -1,30 +1,28 @@
 <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-ui-chart" xmlns="http://www.nativescript.org/tns.xsd">
-<GridLayout rows="auto, *">
+  <GridLayout rows="auto, *">
     <Label text="Tap and hold on a given datapoint to display the Trackball. Drag across datapoints to update the Trackball position." textWrap="true"/>
     <!-- >> chart-trackball-xml -->
     <chart:RadCartesianChart row="1" id="cartesianChart">
-    <chart:RadCartesianChart.series>
-          <chart:CandlestickSeries
-            categoryProperty="Date"
-            openPropertyName="Open"
-            highPropertyName="High"
-            lowPropertyName="Low"
-            closePropertyName="Close"
-            items="{{ candleStickSourceItems }}">
-              <chart:CandlestickSeries.horizontalAxis>
-                <chart:DateTimeCategoricalAxis  dateFormat="yyyy-MM-dd" verticalLocation="Bottom" />
-              </chart:CandlestickSeries.horizontalAxis>
-              <chart:CandlestickSeries.verticalAxis>
-                <chart:LinearAxis/>
-              </chart:CandlestickSeries.verticalAxis>
-            </chart:CandlestickSeries>
-        </chart:RadCartesianChart.series>
-        <!-- >> chart-trackball-property-xml -->
-        <chart:RadCartesianChart.trackball>
-            <chart:Trackball/>
-        </chart:RadCartesianChart.trackball>
-        <!-- << chart-trackball-property-xml -->
+      <chart:RadCartesianChart.horizontalAxis>
+        <chart:DateTimeCategoricalAxis  dateFormat="yyyy-MM-dd" verticalLocation="Bottom" />
+      </chart:RadCartesianChart.horizontalAxis>
+      <chart:RadCartesianChart.verticalAxis>
+        <chart:LinearAxis/>
+      </chart:RadCartesianChart.verticalAxis>
+
+      <!-- >> chart-trackball-property-xml -->
+      <chart:RadCartesianChart.trackball>
+          <chart:Trackball/>
+      </chart:RadCartesianChart.trackball>
+      <!-- << chart-trackball-property-xml -->
+
+      <chart:RadCartesianChart.series>
+        <chart:CandlestickSeries
+          categoryProperty="Date" items="{{ candleStickSourceItems }}"
+          openPropertyName="Open" highPropertyName="High" lowPropertyName="Low" closePropertyName="Close">
+        </chart:CandlestickSeries>
+      </chart:RadCartesianChart.series>
     </chart:RadCartesianChart>
     <!-- << chart-trackball-xml -->
-    </GridLayout>
+  </GridLayout>
 </navigation:ExamplePage>

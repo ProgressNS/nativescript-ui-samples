@@ -11,7 +11,7 @@ export class CategoricalDataModel extends Observable {
 
         this._stackModes = {
             options: ["Stack", "Stack100", "None"],
-            index: 1
+            index: 0
         };
     }
 
