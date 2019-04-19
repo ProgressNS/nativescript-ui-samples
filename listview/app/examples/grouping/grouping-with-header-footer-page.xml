@@ -1,0 +1,29 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:lv="nativescript-ui-listview" xmlns="http://www.nativescript.org/tns.xsd">
+    <GridLayout rows="auto, *">
+        <StackLayout orientation="horizontal">
+                <Button text="{{isEnabled ? 'Disable grouping' : 'Enable grouping'}}" tap="toggleGrouping"/>
+        </StackLayout>
+        <lv:RadListView items="{{ dataItems }}"
+                        row="1"
+                        id="myListView"
+                        groupingFunction="{{ myGroupingFunc }}">
+            <lv:RadListView.itemTemplate>
+                <StackLayout orientation="vertical">
+                    <Label fontSize="20" text="{{ itemName }}"/>
+                    <Label fontSize="14" text="{{ itemDescription }}"/>
+                </StackLayout>
+            </lv:RadListView.itemTemplate>
+            <lv:RadListView.groupTemplate>
+                <GridLayout ios:height="50">
+                    <Label text="{{ category }}" class="groupLabel"/>
+                </GridLayout>
+            </lv:RadListView.groupTemplate>
+            <lv:RadListView.headerItemTemplate>
+                <Label text="Header with height auto" backgroundColor="#65a565" fontSize="45"/>
+            </lv:RadListView.headerItemTemplate>
+            <lv:RadListView.footerItemTemplate>
+                <Label text="Footer with height auto" backgroundColor="#7fff7f"/>
+            </lv:RadListView.footerItemTemplate>
+        </lv:RadListView>
+    </GridLayout>
+</navigation:ExamplePage>

@@ -103,6 +103,10 @@ export class NavigationViewModel extends Observable {
         dataOperations.subItems.push(exampleItem);
         exampleItem = new NavigationItem("Grouping", "examples/grouping/grouping-page", dataOperations);
         dataOperations.subItems.push(exampleItem);
+        exampleItem = new NavigationItem("Grouping with Scroll to Index", "examples/grouping/grouping-scroll-page", dataOperations);
+        dataOperations.subItems.push(exampleItem);
+        exampleItem = new NavigationItem("Grouping with header/footer", "examples/grouping/grouping-with-header-footer-page", dataOperations);
+        dataOperations.subItems.push(exampleItem);
         exampleItem = new NavigationItem("Grouping with Multiple Templates", "examples/grouping-multiple-templates/grouping-multiple-templates-page", dataOperations);
         dataOperations.subItems.push(exampleItem);
         if (isAndroid) {
