@@ -7,7 +7,7 @@ import * as  http from "tns-core-modules/http";
 // >> autocomplete-async-model
 export class ViewModel extends Observable {
     private autocomplete: RadAutoCompleteTextView;
-    private jsonUrl = "https://raw.githubusercontent.com/NativeScript/nativescript-ui-samples/master/examples-data/airports.json";
+    private jsonUrl = "https://raw.githubusercontent.com/telerik/nativescript-ui-samples/master/examples-data/airports.json";
 
     constructor(args) {
         super();
