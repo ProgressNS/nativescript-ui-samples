@@ -20,11 +20,23 @@ export class ViewModel extends Observable {
     // >> listview-howto-item-selection-events
     public itemSelected(args: ListViewEventData) {
         const item = this.dataItems.getItem(args.index);
+        console.log("Selected item: " + item.name);
         item.selected = true;
+    }
+
+    public itemSelecting(args: ListViewEventData) {
+        const item = this.dataItems.getItem(args.index);
+        console.log("Selecting item: " + item.name);
+    }
+
+    public itemDeselecting(args: ListViewEventData) {
+        const item = this.dataItems.getItem(args.index);
+        console.log("Deselecting item: " + item.name);
     }
 
     public itemDeselected(args: ListViewEventData) {
         const item = this.dataItems.getItem(args.index);
+        console.log("Deselected item: " + item.name);
         item.selected = false;
     }
     // << listview-howto-item-selection-events
