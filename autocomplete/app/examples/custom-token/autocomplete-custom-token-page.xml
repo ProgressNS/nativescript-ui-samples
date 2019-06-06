@@ -1,0 +1,22 @@
+<navigation:ExamplePage loaded="onPageLoaded" xmlns:navigation="navigation/example-page" xmlns:au="nativescript-ui-autocomplete" xmlns="http://www.nativescript.org/tns.xsd">
+    <StackLayout ios:backgroundColor="#CDCECE" padding="5">
+        <Label text="Type city or country name:"></Label>
+        <au:RadAutoCompleteTextView
+            tokenAdded="{{ onTokenAdded }}" tokenRemoved="{{ onTokenRemoved }}"
+            tokenSelected="{{ onTokenSelected }}" tokenDeselected="{{ onTokenDeselected }}"
+            items="{{ dataItems }}" noResultsText="Nothing found!"
+            completionMode="Contains" suggestMode="Suggest" displayMode="Tokens">
+            <au:RadAutoCompleteTextView.suggestionView>
+                <au:SuggestionView>
+                    <au:SuggestionView.suggestionItemTemplate>
+                        <GridLayout columns="auto, *">
+                            <Image src="{{ image }}" marginLeft="10" width="50" verticalAlignment="center"></Image>
+                            <Label text="{{ city }}" marginLeft="10" col="1" verticalAlignment="center"></Label>
+                            <Label text="{{ country }}" marginRight="10" col="1" verticalAlignment="center" textAlignment="right"></Label>
+                        </GridLayout>
+                    </au:SuggestionView.suggestionItemTemplate>
+                </au:SuggestionView>
+            </au:RadAutoCompleteTextView.suggestionView>
+         </au:RadAutoCompleteTextView>
+    </StackLayout>
+</navigation:ExamplePage>
