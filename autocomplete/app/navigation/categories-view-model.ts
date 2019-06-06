@@ -143,6 +143,9 @@ export class NavigationViewModel extends Observable {
 
         exampleItem = new NavigationItem("Preselected items", "examples/preselected-tokens/autocomplete-preselected-tokens-page", currentParent);
         currentParent.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Custom Token Model", "examples/custom-token/autocomplete-custom-token-page", currentParent);
+        currentParent.subItems.push(exampleItem);
     }
 
     public canMoveBack(): boolean {
