@@ -1,15 +1,15 @@
 // >> listview-grouping-model
 import { ObservableArray } from "tns-core-modules/data/observable-array";
-import { Observable } from"tns-core-modules/data/observable";
+import { Observable } from "tns-core-modules/data/observable";
 
 export class ViewModel extends Observable {
 
     private _items: ObservableArray<DataItem>;
     private _words = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"];
 
-    constructor() {
+    constructor(customItems?: Array<DataItem>) {
         super();
-        this.set("_items", new ObservableArray<DataItem>(items));
+        this.set("_items", new ObservableArray<DataItem>(customItems || items));
         this.set("_isEnabled", true);
     }
 
