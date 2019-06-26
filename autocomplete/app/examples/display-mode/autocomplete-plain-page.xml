@@ -2,15 +2,17 @@
     <StackLayout ios:backgroundColor="#CDCECE" padding="5">
         <Label text="Select country"/>
         <au:RadAutoCompleteTextView id="autocomplete" items="{{ dataItems }}" displayMode="Plain">
-            <au:RadAutoCompleteTextView.suggestionView>
-                <au:SuggestionView suggestionViewHeight="300">
-                    <au:SuggestionView.suggestionItemTemplate>
-                        <StackLayout orientation="vertical" padding="10">
-                            <Label text="{{ text }}"></Label>
-                        </StackLayout>
-                    </au:SuggestionView.suggestionItemTemplate>
-                </au:SuggestionView>
-            </au:RadAutoCompleteTextView.suggestionView>
-         </au:RadAutoCompleteTextView>
+        <!-- >> autocomplete-suggestion-view-xml -->
+        <au:RadAutoCompleteTextView.suggestionView>
+            <au:SuggestionView suggestionViewHeight="300">
+                <au:SuggestionView.suggestionItemTemplate>
+                    <StackLayout orientation="vertical" padding="10">
+                        <Label text="{{ text }}"></Label>
+                    </StackLayout>
+                </au:SuggestionView.suggestionItemTemplate>
+            </au:SuggestionView>
+        </au:RadAutoCompleteTextView.suggestionView>
+        <!-- << autocomplete-suggestion-view-xml -->
+        </au:RadAutoCompleteTextView>
     </StackLayout>
 </navigation:ExamplePage>
