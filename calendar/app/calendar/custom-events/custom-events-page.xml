@@ -1,0 +1,19 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:calendar="nativescript-ui-calendar" loaded="onPageLoaded" xmlns="http://www.nativescript.org/tns.xsd">
+    <navigation.actionBar>
+        <ActionBar title="Custom events" />
+    </navigation.actionBar>
+    <GridLayout rows="*, 140">
+	    <calendar:RadCalendar eventSource="{{ eventSource }}" cellTap="onCellTap"/>
+        <ListView items="{{ myItems }}" row="1" >
+            <ListView.itemTemplate>
+                <GridLayout columns="auto, auto, *, auto" rows="auto,auto" class="event-container">
+                    <Label text="{{ id, 'id: ' + id }}" col="0" rowSpan="2" class="event-id" ></Label>
+                    <Label backgroundColor="{{ eventColor }}" col="1" rowSpan="2" class="event-color"></Label>
+                    <Label text="{{ title, 'what: ' + title }}" col="2" class="event-title"></Label>
+                    <Label text="{{ location, 'where: ' + location }}" row="1" col="2" class="event-location"></Label>
+                    <Label text="{{ formattedTime, 'when: ' + formattedTime }}" col="3" rowSpan="2" class="event-time"></Label>
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </GridLayout>
+</navigation:ExamplePage>

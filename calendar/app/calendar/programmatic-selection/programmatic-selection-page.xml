@@ -1,0 +1,13 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:rc="nativescript-ui-calendar" loaded="onPageLoaded" xmlns="http://www.nativescript.org/tns.xsd">
+    <navigation.actionBar>
+        <ActionBar title="Programmatic selection" />
+    </navigation.actionBar>
+	<GridLayout rows="auto,auto,*" columns="*,*,*">
+		<Button text="single" tap="onSingleSelectionTap"></Button>
+		<Button text="multiple" tap="onMultipleSelectionTap" col="1"></Button>
+		<Button text="range" tap="onRangeSelectionTap" col="2"></Button>
+		<Button text="clear selection" tap="onClearSelectionTap" row="1" colSpan="3"></Button>
+
+		<rc:RadCalendar id="calendar" row="2" selectionMode="Single" colSpan="3"></rc:RadCalendar>
+	</GridLayout>
+</navigation:ExamplePage>

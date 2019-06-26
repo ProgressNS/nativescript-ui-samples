@@ -120,6 +120,12 @@ export class NavigationViewModel extends Observable {
 
         calendarExample = new NavigationItem("Calendar day view", "calendar/day-view/day-view-page", currentParent);
         currentParent.subItems.push(calendarExample);
+
+        calendarExample = new NavigationItem("Programmatic selection", "calendar/programmatic-selection/programmatic-selection-page", currentParent);
+        currentParent.subItems.push(calendarExample);
+
+        calendarExample = new NavigationItem("Custom events", "calendar/custom-events/custom-events-page", currentParent);
+        currentParent.subItems.push(calendarExample);
     }
 
     public canMoveBack(): boolean {
