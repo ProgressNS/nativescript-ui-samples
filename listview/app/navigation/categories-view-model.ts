@@ -228,6 +228,9 @@ export class NavigationViewModel extends Observable {
 
         exampleItem = new NavigationItem("Group, Swipe, Load and Pull", "examples/group-swipe-load-pull/group-swipe-load-pull-page", currentParent);
         currentParent.subItems.push(exampleItem);
+
+        exampleItem = new NavigationItem("Get first visible index", "examples/first-visible-index/first-visible-index-page", currentParent);
+        currentParent.subItems.push(exampleItem);
     }
 
 
