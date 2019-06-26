@@ -16,6 +16,8 @@ export class ViewModel extends Observable {
     set dataItems(value: ObservableArray<TokenModel>) {
         this.set("_dataItems", value);
     }
+
+    // >> autocomplete-custom-tokens-items-ts
     private initDataItems() {
         if (!this.dataItems) {
             this.dataItems = new ObservableArray<CityModel>();
@@ -26,6 +28,7 @@ export class ViewModel extends Observable {
             }
         }
     }
+    // << autocomplete-custom-tokens-items-ts
 
     public onTokenAdded(args: AutoCompleteEventData) {
         console.log("Added Token: " + args.token);
@@ -44,6 +47,7 @@ export class ViewModel extends Observable {
     }
 }
 
+// >> autocomplete-custom-token-model-ts
 export class CityModel extends TokenModel {
     public id: number;
     public city: string;
@@ -60,3 +64,4 @@ export class CityModel extends TokenModel {
         return this.id + ": " + this.city + ", " + this.country;
     }
 }
+// << autocomplete-custom-token-model-ts

@@ -1,17 +1,9 @@
 <navigation:ExamplePage loaded="onPageLoaded" xmlns:au="nativescript-ui-autocomplete" xmlns:navigation="navigation/example-page" xmlns="http://www.nativescript.org/tns.xsd">
     <StackLayout ios:backgroundColor="#CDCECE" padding="5">
-    <Label text="Select country"/>
-        <au:RadAutoCompleteTextView id="autocomplete" items="{{ dataItems }}" suggestMode="Suggest" displayMode="Tokens">
-            <au:RadAutoCompleteTextView.suggestionView>
-                <au:SuggestionView>
-                    <au:SuggestionView.suggestionItemTemplate>
-                        <StackLayout orientation="vertical" padding="10">
-                            <Label text="{{ text }}"></Label>
-                        </StackLayout>
-                    </au:SuggestionView.suggestionItemTemplate>
-                </au:SuggestionView>
-            </au:RadAutoCompleteTextView.suggestionView>
-         </au:RadAutoCompleteTextView>
+        <Label text="Select country"/>
+        <!-- >> autocomplete-getting-started -->
+        <au:RadAutoCompleteTextView id="autocomplete" items="{{ dataItems }}" displayMode="Tokens"/>
+        <!-- << autocomplete-getting-started -->
         <Label text="SUGGEST MODES" marginTop="5"/>
         <StackLayout orientation="horizontal">
             <Button  margin="5" text="Suggest" tap="{{onSuggestSelected}}"/>

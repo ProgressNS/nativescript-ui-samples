@@ -6,6 +6,7 @@
             tokenSelected="{{ onTokenSelected }}" tokenDeselected="{{ onTokenDeselected }}"
             items="{{ dataItems }}" noResultsText="Nothing found!"
             completionMode="Contains" suggestMode="Suggest" displayMode="Tokens">
+            <!-- >> autocomplete-custom-tokens-template-xml -->
             <au:RadAutoCompleteTextView.suggestionView>
                 <au:SuggestionView>
                     <au:SuggestionView.suggestionItemTemplate>
@@ -17,6 +18,7 @@
                     </au:SuggestionView.suggestionItemTemplate>
                 </au:SuggestionView>
             </au:RadAutoCompleteTextView.suggestionView>
+            <!-- << autocomplete-custom-tokens-template-xml -->
          </au:RadAutoCompleteTextView>
     </StackLayout>
 </navigation:ExamplePage>
