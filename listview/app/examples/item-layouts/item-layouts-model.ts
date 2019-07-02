@@ -17,9 +17,11 @@ export class ViewModel extends Observable {
         for (let i = 0; i < 50; i++) {
             this.staggeredItems.push(new DataItem(i, "Item " + i, this.getRandomLengthString()));
         }
-        // for (var i = 0; i < data.items.length; i++) {
-        //     this.staggeredItems.push(new DataItem(i, data.items[i].title, data.items[i].author, "res://" + data.items[i].photo));
-        // }
+
+        this.similarItems = new ObservableArray<DataItem>();
+        for (let i = 0; i < 100; i++) {
+            this.similarItems.push(new DataItem(i, "Item " + i, "This is item description"));
+        }
     }
 
     get dataItems(): ObservableArray<DataItem> {
@@ -36,6 +38,14 @@ export class ViewModel extends Observable {
 
     set staggeredItems(value: ObservableArray<DataItem>) {
         this.set("_staggeredItems", value);
+    }
+
+    get similarItems(): ObservableArray<DataItem> {
+        return this.get("_similarItems");
+    }
+
+    set similarItems(value: ObservableArray<DataItem>) {
+        this.set("_similarItems", value);
     }
 
     private getRandomLengthString() {
