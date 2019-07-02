@@ -133,7 +133,9 @@ export class NavigationViewModel extends Observable {
         currentParent.subItems.push(layoutsItem);
         let layoutsExample = new NavigationItem("Linear", "examples/item-layouts/item-layouts-linear-page", layoutsItem);
         layoutsItem.subItems.push(layoutsExample);
-        layoutsExample = new NavigationItem("Grid", "examples/item-layouts/item-layouts-grid-page", layoutsItem);
+        layoutsExample = new NavigationItem("Grid with item height", "examples/item-layouts/item-layouts-grid-page", layoutsItem);
+        layoutsItem.subItems.push(layoutsExample);
+        layoutsExample = new NavigationItem("Grid without item height", "examples/item-layouts/item-layouts-grid-no-height-page", layoutsItem);
         layoutsItem.subItems.push(layoutsExample);
         layoutsExample = new NavigationItem("Staggered", "examples/item-layouts/item-layouts-staggered-page", layoutsItem);
         layoutsItem.subItems.push(layoutsExample);
