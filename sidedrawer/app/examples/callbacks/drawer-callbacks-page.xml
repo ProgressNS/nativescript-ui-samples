@@ -20,7 +20,7 @@
     </nsDrawer:RadSideDrawer.mainContent>
     <nsDrawer:RadSideDrawer.drawerContent>
     <!-- >> (hide) -->
-       <GridLayout rows="auto, *" class="drawerContent">
+       <GridLayout rows="56, *" class="drawerContent">
         <StackLayout class="headerContent">
           <Label text="Navigation Menu"/>
         </StackLayout>
