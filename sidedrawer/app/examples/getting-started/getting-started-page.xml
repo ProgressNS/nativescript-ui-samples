@@ -5,8 +5,8 @@
 <!-- >> sidedrawer-getting-started-xml -->
     <nsDrawer:RadSideDrawer id="sideDrawer">
       <nsDrawer:RadSideDrawer.drawerContent>
-        <GridLayout rows="auto, *" backgroundColor="gray">
-          <StackLayout height="56" style="text-align: center; vertical-align: center;">
+        <GridLayout rows="56, *" backgroundColor="gray">
+          <StackLayout class="headerContent">
             <Label text="Navigation Menu"/>
           </StackLayout>
           <ScrollView row="1">

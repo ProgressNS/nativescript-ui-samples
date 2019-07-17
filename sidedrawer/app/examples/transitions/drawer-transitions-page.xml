@@ -3,7 +3,7 @@
     xmlns="http://www.nativescript.org/tns.xsd">
     <nsDrawer:RadSideDrawer id="sideDrawer">
       <nsDrawer:RadSideDrawer.drawerContent>
-        <GridLayout rows="auto, *" class="drawerContent">
+        <GridLayout rows="56, *" class="drawerContent">
           <StackLayout class="headerContent">
             <Label text="Navigation Menu"/>
           </StackLayout>
