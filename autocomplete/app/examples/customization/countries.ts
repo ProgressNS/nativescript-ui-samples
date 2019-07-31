@@ -129,6 +129,10 @@ export default {
             "flag": "states"
         },
         {
+            "country": "Test",
+            "flag": "test"
+        },
+        {
             "country": "Vatican City",
             "flag": "vatican"
         }
