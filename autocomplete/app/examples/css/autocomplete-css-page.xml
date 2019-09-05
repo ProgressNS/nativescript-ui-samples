@@ -1,0 +1,10 @@
+<navigation:ExamplePage loaded="onPageLoaded" xmlns:navigation="navigation/example-page" xmlns:au="nativescript-ui-autocomplete" xmlns="http://www.nativescript.org/tns.xsd">
+    <ScrollView backgroundColor="#CDCECE" padding="5">
+        <StackLayout>
+            <au:RadAutoCompleteTextView automationText="ac1" class="ac1" items="{{ dataItems }}"/>
+            <au:RadAutoCompleteTextView automationText="ac2" class="ac2" items="{{ dataItems }}"/>
+            <au:RadAutoCompleteTextView automationText="ac3" class="ac3" items="{{ dataItems }}"/>
+            <au:RadAutoCompleteTextView automationText="ac4" class="ac4" items="{{ dataItems }}"/>
+        </StackLayout>
+    </ScrollView>
+</navigation:ExamplePage>
