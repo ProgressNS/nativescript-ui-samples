@@ -1,11 +1,13 @@
 export class NavigationItem {
     private _subItems: Array<NavigationItem>;
     private _title: string;
+    private _titleRoot: string;
     private _module: string;
     private _parent: NavigationItem;
 
     constructor(title: string, module: string, parent: NavigationItem) {
         this._title = title;
+        this._titleRoot = "SideDrawerRoot";
         this._parent = parent;
         this._module = module;
         this._subItems = new Array<NavigationItem>();
@@ -17,6 +19,10 @@ export class NavigationItem {
 
     get title() {
         return this._title;
+    }
+
+    get titleRoot() {
+        return this._titleRoot;
     }
 
     set title(value: string) {
