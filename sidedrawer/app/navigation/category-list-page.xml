@@ -2,7 +2,7 @@
     <nsDrawer:RadSideDrawer.drawerContent>
         <GridLayout rows="auto, *" class="root-drawer-content">
             <StackLayout>
-                <Label text="{{ currentParent.title }}" class="h1 text-center" />
+                <Label text="{{ currentParent.titleRoot }}" class="h1 text-center" />
             </StackLayout>
             <ListView id="sidedrawer-list" row="1" items="{{ currentSubItems }}" itemTap="{{ onNavigationItemTap }}" class="root-drawer-content" >
                 <ListView.itemTemplate>
