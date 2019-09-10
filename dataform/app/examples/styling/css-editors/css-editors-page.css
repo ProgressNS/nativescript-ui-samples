@@ -8,6 +8,10 @@ RadDataForm PropertyEditor {
     padding: 10;
 }
 
+PropertyEditor:focus {
+    background-color: #303F9F;
+}
+
 RadDataForm EntityProperty[name='name'] DataFormEditorLabel {
     width: 0;
     visibility: collapsed;
