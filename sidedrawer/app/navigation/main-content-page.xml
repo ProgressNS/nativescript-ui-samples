@@ -1,16 +1,27 @@
- <Page xmlns="http://www.nativescript.org/tns.xsd"
-                xmlns:lv="nativescript-pro-ui/listview"
-                  loaded="pageLoaded">
+<Page xmlns="http://www.nativescript.org/tns.xsd" xmlns:lv="nativescript-pro-ui/listview" loaded="pageLoaded">
     <Page.actionBar>
-        <ActionBar title="{{ currentParent.title }}"/>
+        <ActionBar title="{{ currentParent.title }}">
+            <ActionItem text="Root" tap="onNavBtnTap" />
+        </ActionBar>
     </Page.actionBar>
     <GridLayout rows="auto, *">
-        <ListView row="1" items="{{ currentSubItems }}" itemTap="{{ onNavigationItemTap }}" >
+        <GridLayout orientation="horizontal" columns="50*, 50*" rows="auto, auto, auto, auto">
+            <Button text="SlideInOnTop" tap="onSlideInOnTopTransitionTap" row="0" col="0"/>
+            <Button text="Fade" tap="onFadeTransitionTap" row="0" col="1"/>
+            <Button text="Push" tap="onPushTransitionTap" row="1" col="0"/>
+            <Button text="Reveal" tap="onRevealTransitionTap" row="1" col="1"/>
+            <Button text="ReverseSlideOut" tap="onReverseSlideOutTransitionTap" row="2" col="0"/>
+            <Button text="ScaleDownPusher" tap="onScaleDownPusherTransitionTap" row="2" col="1"/>
+            <Button text="ScaleUp" tap="onScaleUpTransitionTap" row="3" col="0"/>
+            <Button text="SlideAlong" tap="onSlideAlongTransitionTap" row="3" col="1"/>
+        </GridLayout>
+
+        <ListView row="1" items="{{ currentSubItems }}" itemTap="{{ onNavigationItemTap }}">
             <ListView.itemTemplate>
                 <StackLayout class="itemStackLayout">
-                    <Label text="{{ title }}" textWrap="true" class="titleLabel"/>
-                    <StackLayout height="1" backgroundColor="#EEEEEE"/>
-                </StackLayout>   
+                    <Label text="{{ title }}" textWrap="true" class="titleLabel" />
+                    <StackLayout height="1" backgroundColor="#EEEEEE" />
+                </StackLayout>
             </ListView.itemTemplate>
         </ListView>
     </GridLayout>

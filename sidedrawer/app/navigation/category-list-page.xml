@@ -1,7 +1,7 @@
 <nsDrawer:RadSideDrawer id="sideDrawer" xmlns:nsDrawer="nativescript-ui-sidedrawer">
     <nsDrawer:RadSideDrawer.drawerContent>
-        <GridLayout rows="auto, *" class="root-drawer-content">
-            <StackLayout>
+        <GridLayout rows="auto, *, auto" class="root-drawer-content">
+            <StackLayout row="0">
                 <Label text="{{ currentParent.titleRoot }}" class="h1 text-center" />
             </StackLayout>
             <ListView id="sidedrawer-list" row="1" items="{{ currentSubItems }}" itemTap="{{ onNavigationItemTap }}" class="root-drawer-content" >
@@ -11,6 +11,7 @@
                     </GridLayout>
                 </ListView.itemTemplate>
             </ListView>
+            <Button row="2" text="Close Drawer" tap="{{ onCloseDrawerTap }}"/>
         </GridLayout>
     </nsDrawer:RadSideDrawer.drawerContent>
     <nsDrawer:RadSideDrawer.mainContent>
