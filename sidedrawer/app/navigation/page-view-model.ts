@@ -97,6 +97,10 @@ export class PageViewModel extends Observable {
         }
     }
 
+    public onCloseDrawerTap() {
+        this.sideDrawer.closeDrawer();
+    }
+
     _toggleItemSelected(view: View, isSelected: boolean): any {
         // using css styles from theme
         view.className = isSelected ? "sidedrawer-list-item active" : "sidedrawer-list-item";
