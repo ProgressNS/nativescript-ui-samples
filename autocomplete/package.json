@@ -6,10 +6,10 @@
   "nativescript": {
     "id": "org.nativescript.demo",
     "tns-ios": {
-      "version": "6.0.1"
+      "version": "6.1.0"
     },
     "tns-android": {
-      "version": "6.0.0"
+      "version": "6.1.0"
     }
   },
   "dependencies": {
@@ -39,9 +39,9 @@
     "mocha-multi": "1.1.0",
     "mochawesome": "^3.1.1",
     "nativescript-css-loader": "~0.26.0",
-    "nativescript-dev-appium": "next",
-    "nativescript-dev-webpack": "~1.0.0",
-    "tns-platform-declarations": "^6.1.0",
+    "nativescript-dev-appium": "6.0.1-2019-08-30-02",
+    "nativescript-dev-webpack": "^1.0.0",
+    "tns-platform-declarations": "^6.1.1",
     "tslint": "~5.11.0",
     "typescript": "~3.4.5"
   }
