@@ -1,5 +1,5 @@
 import { Observable } from "tns-core-modules/data/observable";
-import { topmost } from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 import { isAndroid } from "tns-core-modules/platform/platform";
 
 export class NavigationItem {
@@ -181,12 +181,12 @@ export class NavigationViewModel extends Observable {
         }
 
         if (tappedItem.subItems.length > 0) {
-            topmost().navigate({
+            Frame.topmost().navigate({
                 moduleName: "navigation/category-list-page"
             });
         } else {
             if (tappedItem.module) {
-                topmost().navigate({
+                Frame.topmost().navigate({
                     moduleName: tappedItem.module,
                     context: tappedItem
                 });
