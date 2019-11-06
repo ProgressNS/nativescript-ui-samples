@@ -1,6 +1,5 @@
 import { Observable } from "tns-core-modules/data/observable";
-import { topmost } from "tns-core-modules/ui/frame";
-import { isAndroid } from "tns-core-modules/platform/platform";
+import { Frame } from "tns-core-modules/ui/frame";
 
 export class NavigationItem {
     private _subItems: Array<NavigationItem>;
@@ -129,6 +128,25 @@ export class NavigationViewModel extends Observable {
         seriesExample = new NavigationItem("Scatter Series", "examples/series/scatter/scatter-series-page", seriesRoot);
         seriesRoot.subItems.push(seriesExample);
 
+        const cssRoot = new NavigationItem("CSS", undefined, currentParent);
+        currentParent.subItems.push(cssRoot);
+        let cssExample = new NavigationItem("Bar CSS", "examples/css/bar-css-page", cssRoot);
+        cssRoot.subItems.push(cssExample);
+
+        cssExample = new NavigationItem("Line CSS", "examples/css/line-css-page", cssRoot);
+        cssRoot.subItems.push(cssExample);
+
+        cssExample = new NavigationItem("Area CSS", "examples/css/area-css-page", cssRoot);
+        cssRoot.subItems.push(cssExample);
+
+        cssExample = new NavigationItem("Scatter CSS", "examples/css/scatter-css-page", cssRoot);
+        cssRoot.subItems.push(cssExample);
+
+        cssExample = new NavigationItem("Candlestick CSS", "examples/css/candlestick-css-page", cssRoot);
+        cssRoot.subItems.push(cssExample);
+
+        cssExample = new NavigationItem("Donut CSS", "examples/css/donut-css-page", cssRoot);
+        cssRoot.subItems.push(cssExample);
 
         const stylingRoot = new NavigationItem("Styling", undefined, currentParent);
         currentParent.subItems.push(stylingRoot);
@@ -232,12 +250,12 @@ export class NavigationViewModel extends Observable {
         }
 
         if (tappedItem.subItems.length > 0) {
-            topmost().navigate({
+            Frame.topmost().navigate({
                 moduleName: "navigation/category-list-page"
             });
         } else {
             if (tappedItem.module) {
-                topmost().navigate({
+                Frame.topmost().navigate({
                     moduleName: tappedItem.module,
                     context: tappedItem
                 });

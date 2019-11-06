@@ -1,0 +1,43 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-ui-chart" xmlns="http://www.nativescript.org/tns.xsd">
+    <GridLayout rows="auto, 300, auto">
+        <Label class="title" text="Users in the last month"></Label>
+        <chart:RadCartesianChart allowAnimations="false" row="1" id="cartesianChart">
+            <chart:RadCartesianChart.grid>
+                <chart:RadCartesianChartGrid
+                    horizontalLinesVisible="false"
+                    verticalLinesVisible="false"
+                    horizontalStripLinesVisible="false"
+                    verticalStripLinesVisible="false"
+                    horizontalStrokeColor="#00000000"
+                    verticalStrokeColor="#00000000"
+                    horizontalStripLineColor="#00000000, #00000000">
+                </chart:RadCartesianChartGrid>
+            </chart:RadCartesianChart.grid>
+
+            <chart:RadCartesianChart.series>
+                <chart:AreaSeries index="0" items="{{ usersData }}" categoryProperty="Date" valueProperty="CategoryA"></chart:AreaSeries>
+                <chart:AreaSeries index="1" items="{{ usersData }}" categoryProperty="Date" valueProperty="CategoryB"></chart:AreaSeries>
+                <chart:AreaSeries index="2" items="{{ usersData }}" categoryProperty="Date" valueProperty="CategoryC"></chart:AreaSeries>
+            </chart:RadCartesianChart.series>
+
+            <chart:RadCartesianChart.horizontalAxis>
+                <chart:DateTimeContinuousAxis minimum="04/11/2019" maximum="03/12/2019" />
+            </chart:RadCartesianChart.horizontalAxis>
+            <chart:RadCartesianChart.verticalAxis>
+                <chart:LinearAxis />
+            </chart:RadCartesianChart.verticalAxis>
+
+        </chart:RadCartesianChart>
+
+        <Label class="subtitle" row="1" text="Users"></Label>
+
+        <GridLayout class="legend" row="2" columns="auto,*,auto,*,auto,*">
+            <StackLayout class="symbol first"></StackLayout>
+            <Label text="Category A" column="1"></Label>
+            <StackLayout class="symbol second" column="2"></StackLayout>
+            <Label text="Category B" column="3"></Label>
+            <StackLayout class="symbol third" column="4"></StackLayout>
+            <Label text="Category C" column="5"></Label>
+        </GridLayout>
+    </GridLayout>
+</navigation:ExamplePage>

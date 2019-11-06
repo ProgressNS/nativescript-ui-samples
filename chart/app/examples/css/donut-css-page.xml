@@ -1,0 +1,36 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-ui-chart" xmlns="http://www.nativescript.org/tns.xsd">
+    <GridLayout class="root" rows="auto, *, auto">
+        <Label class="title" text="Phone storage"></Label>
+        <WrapLayout class="legend" row="2" orientation="horizontal">
+            <StackLayout orientation="horizontal">
+                <Label class="symbol first"></Label>
+                <Label text="Photos and Videos"></Label>
+            </StackLayout>
+            <StackLayout orientation="horizontal">
+                <Label class="symbol second"></Label>
+                <Label text="Music and Audio"></Label>
+            </StackLayout>
+            <StackLayout orientation="horizontal">
+                <Label class="symbol third"></Label>
+                <Label text="Games"></Label>
+            </StackLayout>
+            <StackLayout orientation="horizontal">
+                <Label class="symbol fourth"></Label>
+                <Label text="Movies and TV"></Label>
+            </StackLayout>
+            <StackLayout orientation="horizontal">
+                <Label class="symbol fifth"></Label>
+                <Label text="Other apps"></Label>
+            </StackLayout>
+        </WrapLayout>
+        <chart:RadPieChart row="1" allowAnimations="false">
+            <chart:RadPieChart.series>
+                <chart:DonutSeries startAngle="-90" endAngle="270" valueProperty="Value" items="{{ phoneStorageData }}"></chart:DonutSeries>
+            </chart:RadPieChart.series>
+        </chart:RadPieChart>
+        <StackLayout row="1" class="chart-label">
+            <Label class="chart-title" text="84 %"/>
+            <Label class="chart-subtitle" text="used"/>
+        </StackLayout>
+    </GridLayout>
+</navigation:ExamplePage>
