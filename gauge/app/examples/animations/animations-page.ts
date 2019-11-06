@@ -1,10 +1,10 @@
-import { topmost } from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 import { RadRadialGauge, RadialScale, RadialNeedle } from "nativescript-ui-gauge";
 
 let needle: RadialNeedle;
 export function onNavigatedTo(args) {
 
-    let gauge: RadRadialGauge = <RadRadialGauge>topmost().getViewById("gaugeView");
+    let gauge: RadRadialGauge = <RadRadialGauge>Frame.topmost().getViewById("gaugeView");
     let scale: RadialScale = <RadialScale>gauge.scales.getItem(0);
     needle = <RadialNeedle>scale.indicators.getItem(scale.indicators.length - 1);
 }
