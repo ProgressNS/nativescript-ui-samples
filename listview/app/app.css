@@ -123,3 +123,11 @@ button {
     color: white;
     border-width: 1;
 }
+
+
+.red-transparent-selection-list {
+    item-selected-background-color: red;
+    background-color: transparent;
+    color: white;
+}
+

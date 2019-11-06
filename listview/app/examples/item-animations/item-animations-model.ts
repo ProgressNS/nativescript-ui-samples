@@ -1,7 +1,7 @@
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { RadListView, ListViewLinearLayout, ListViewEventData } from "nativescript-ui-listview";
 import { Observable } from "tns-core-modules/data/observable";
-import { topmost } from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 
 export class ViewModel extends Observable {
     private _animations;
@@ -55,7 +55,7 @@ export class ViewModel extends Observable {
     public updateItemAnimation() {
         const index: number = this._animations.index;
         let b = this._animations.options[index];
-        const listView = <RadListView>topmost().currentPage.getViewById("ls");
+        const listView = <RadListView>Frame.topmost().currentPage.getViewById("ls");
         (<ListViewLinearLayout>listView.listViewLayout).itemInsertAnimation = this._animations.options[index];
         (<ListViewLinearLayout>listView.listViewLayout).itemDeleteAnimation = this._animations.options[index];
     }
@@ -67,7 +67,7 @@ export class ViewModel extends Observable {
             animated: true
         };
 
-        topmost().navigate(navigationEntry);
+        Frame.topmost().navigate(navigationEntry);
     }
 }
 

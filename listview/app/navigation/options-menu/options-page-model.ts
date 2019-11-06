@@ -1,6 +1,6 @@
 import { Observable } from "tns-core-modules/data/observable";
 import { ListView } from "tns-core-modules/ui/list-view";
-import { topmost } from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 
 export class ViewModel extends Observable {
     private _info;
@@ -28,16 +28,16 @@ export class ViewModel extends Observable {
     }
 
     public selectRow(index) {
-        const listView = <ListView>topmost().getViewById("listView");
+        const listView = <ListView>Frame.topmost().getViewById("listView");
         listView.ios.selectRowAtIndexPathAnimatedScrollPosition(NSIndexPath.indexPathForItemInSection(index, 0), false, 0);
     }
 
     public onSelectedRow(row) {
         this._info.index = row.index;
-        topmost().goBack();
+        Frame.topmost().goBack();
     }
 
     public onBackTap(args) {
-        topmost().goBack();
+        Frame.topmost().goBack();
     }
 }
