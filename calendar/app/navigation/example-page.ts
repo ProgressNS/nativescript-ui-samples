@@ -1,7 +1,7 @@
 import * as pageModule from "tns-core-modules/ui/page";
 import * as actionBarModule from "tns-core-modules/ui/action-bar";
 import * as applicationModule from "tns-core-modules/application";
-import * as frameModule from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 import * as utilsModule from "tns-core-modules/utils/utils";
 
 export class ExamplePage extends pageModule.Page {
@@ -32,7 +32,7 @@ export class ExamplePage extends pageModule.Page {
                 if (this.content) {
                     utilsModule.ad.dismissSoftInput(this.content.android);
                 }
-                frameModule.topmost().goBack();
+                Frame.topmost().goBack();
             });
             navigationButton.android.systemIcon = "ic_menu_back";
             actionBar.navigationButton = navigationButton;

@@ -1,6 +1,6 @@
 import * as calendarModule from "nativescript-ui-calendar";
 import * as observableModule from "tns-core-modules/data/observable";
-import * as frameModule from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 import { Color } from "tns-core-modules/color";
 
 export class ViewModel extends observableModule.Observable {
@@ -36,7 +36,7 @@ export class ViewModel extends observableModule.Observable {
 
     public onDateSelected(args: calendarModule.CalendarSelectionEventData) {
         const date: Date = args.date;
-        const calendar: calendarModule.RadCalendar = <calendarModule.RadCalendar><any>frameModule.topmost().getViewById("calendar");
+        const calendar: calendarModule.RadCalendar = <calendarModule.RadCalendar><any>Frame.topmost().getViewById("calendar");
         const events: Array<calendarModule.CalendarEvent> = calendar.getEventsForDate(date);
         this.set("myItems", events);
     }

@@ -1,6 +1,6 @@
 import * as calendarModule from "nativescript-ui-calendar";
 import { Observable } from "tns-core-modules/data/observable";
-import * as frameModule from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 import { Color } from "tns-core-modules/color";
 
 export class StylingViewModel extends Observable {
@@ -75,6 +75,6 @@ export class StylingViewModel extends Observable {
             animated: true
         };
 
-        frameModule.topmost().navigate(navigationEntry);
+        Frame.topmost().navigate(navigationEntry);
     }
 }

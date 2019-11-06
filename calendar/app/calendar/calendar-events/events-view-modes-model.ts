@@ -1,6 +1,6 @@
 import * as observableModule from "tns-core-modules/data/observable";
 import * as calendarModule from "nativescript-ui-calendar";
-import * as frameModule from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 
 export class ViewModel extends observableModule.Observable {
     calendarEvents: Array<calendarModule.CalendarEvent>;
@@ -42,7 +42,7 @@ export class ViewModel extends observableModule.Observable {
     // << calendar-calendar-event-instance
 
     public updateEventsViewMode() {
-        let radCalendar: calendarModule.RadCalendar = <calendarModule.RadCalendar>(frameModule.topmost().getViewById("calendar"));
+        let radCalendar: calendarModule.RadCalendar = <calendarModule.RadCalendar>(Frame.topmost().getViewById("calendar"));
         if (!radCalendar.ios) {
             return;
         }
@@ -73,6 +73,6 @@ export class ViewModel extends observableModule.Observable {
             animated: true
         };
 
-        frameModule.topmost().navigate(navigationEntry);
+        Frame.topmost().navigate(navigationEntry);
     }
 }
