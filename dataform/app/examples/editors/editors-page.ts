@@ -1,5 +1,7 @@
 import { TicketViewModel } from "./../view-models/ticket-order-model";
-export function onPageLoaded(args) {
+
+export function onPageNavigatingTo(args) {
+    let viewModel = new TicketViewModel();
     const page = args.object;
-    page.bindingContext = new TicketViewModel();
+    page.bindingContext = viewModel;
 }

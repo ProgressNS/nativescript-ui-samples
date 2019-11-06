@@ -3,9 +3,10 @@ import { getViewById } from "tns-core-modules/ui/core/view";
 
 let label;
 
-export function onPageLoaded(args) {
+export function onPageNavigatingTo(args) {
+    let viewModel = new UserViewModel();
     const page = args.object;
-    page.bindingContext = new UserViewModel();
+    page.bindingContext = viewModel;
 
     label = getViewById(page, "myLabel");
 }

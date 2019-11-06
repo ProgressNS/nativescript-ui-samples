@@ -7,9 +7,10 @@ import { isAndroid } from "tns-core-modules/platform";
 let resultLabel: Label;
 let dataForm: RadDataForm;
 
-export function onPageLoaded(args) {
+export function onPageNavigatingTo(args) {
+    let viewModel = new UserViewModel();
     const page = args.object;
-    page.bindingContext = new UserViewModel();
+    page.bindingContext = viewModel;
 
     resultLabel = <Label>getViewById(page, "resultLabel");
     dataForm = <RadDataForm>getViewById(page, "myDataForm");

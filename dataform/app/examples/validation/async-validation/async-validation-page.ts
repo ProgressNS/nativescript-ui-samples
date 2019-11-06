@@ -5,9 +5,10 @@ let indicator;
 let label;
 let evenValidation;
 
-export function onPageLoaded(args) {
+export function onPageNavigatingTo(args) {
+    let viewModel = new UserViewModel();
     const page = args.object;
-    page.bindingContext = new UserViewModel();
+    page.bindingContext = viewModel;
 
     indicator = getViewById(page, "myIndicator");
     label = getViewById(page, "myLabel");

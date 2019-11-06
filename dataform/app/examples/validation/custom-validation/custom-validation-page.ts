@@ -6,7 +6,8 @@ import { letterSpacingProperty } from "tns-core-modules/ui/text-base/text-base";
 let dataform;
 let label;
 
-export function onPageLoaded(args) {
+export function onPageNavigatingTo(args) {
+    let viewModel = new UserViewModel();
     const page = args.object;
     page.bindingContext = new UserViewModel();
 

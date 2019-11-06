@@ -1,5 +1,7 @@
 import { EmployeeViewModel } from "./../view-models/employee-model";
-export function onPageLoaded(args) {
+
+export function onPageNavigatingTo(args) {
+    let viewModel = new EmployeeViewModel();
     const page = args.object;
-    page.bindingContext = new EmployeeViewModel();
+    page.bindingContext = viewModel;
 }

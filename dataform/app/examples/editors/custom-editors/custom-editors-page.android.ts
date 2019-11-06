@@ -1,7 +1,13 @@
 import { PersonBaseViewModel } from "./../../view-models/person-base-model";
-export function onPageLoaded(args) {
-    const page = args.object;
-    page.bindingContext = new PersonBaseViewModel();
+
+let viewModel: PersonBaseViewModel;
+
+export function onPageNavigatingTo(args) {
+    if (!viewModel) {
+        viewModel = new PersonBaseViewModel();
+        const page = args.object;
+        page.bindingContext = viewModel;
+    }
 }
 
 // >> dataform-custom-editors-android

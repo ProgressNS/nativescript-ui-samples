@@ -13,9 +13,10 @@ const cornerRadius = 4;
 const strokeColor = new Color("DarkGray");
 const fillColor = new Color("#00000000");
 
-export function onPageLoaded(args) {
+export function onPageNavigatingTo(args) {
+    let viewModel = new EmployeeViewModel();
     const page = args.object;
-    page.bindingContext = new EmployeeViewModel();
+    page.bindingContext = viewModel;
 }
 
 export function dfEditorUpdate(args: DataFormEventData) {

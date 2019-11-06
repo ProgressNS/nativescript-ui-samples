@@ -1,5 +1,7 @@
 import { PersonExtendedViewModel } from "./../view-models/person-extended-model";
-export function onPageLoaded(args) {
+
+export function onPageNavigatingTo(args) {
+    let viewModel = new PersonExtendedViewModel();
     const page = args.object;
-    page.bindingContext = new PersonExtendedViewModel();
+    page.bindingContext = viewModel;
 }

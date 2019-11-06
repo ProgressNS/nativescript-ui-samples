@@ -1,6 +1,7 @@
 import { AddressViewModel } from "./../../view-models/address-model";
 
-export function onPageLoaded(args) {
+export function onPageNavigatingTo(args) {
+    let viewModel = new AddressViewModel();
     const page = args.object;
-    page.bindingContext = new AddressViewModel();
+    page.bindingContext = viewModel;
 }

@@ -9,7 +9,7 @@ let dataform: RadDataForm;
 let button: Button;
 let label: Label;
 
-export function onPageLoaded(args) {
+export function onPageNavigatingTo(args) {
     const page = args.object;
     page.bindingContext = new UserViewModel();
 

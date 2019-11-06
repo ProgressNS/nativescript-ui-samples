@@ -7,15 +7,19 @@ let dataform;
 let label;
 let button;
 
-export function onPageLoaded(args) {
+export function onPageNavigatedTo(args) {
+    updateLabel();
+}
+
+export function onPageNavigatingTo(args) {
+    let viewModel = new UserViewModel();
     const page = args.object;
-    page.bindingContext = new UserViewModel();
+    page.bindingContext = viewModel;
 
     dataform = getViewById(page, "myDataForm");
     label = getViewById(page, "myLabel");
     button = getViewById(page, "myButton");
 
-    updateLabel();
 
     const segmentedBar = <SegmentedBar>getViewById(page, "mySegmentedBar");
     const items = [];
