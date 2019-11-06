@@ -1,0 +1,36 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-ui-chart" xmlns="http://www.nativescript.org/tns.xsd">
+    <GridLayout class="root" rows="auto, auto, 300, auto">
+        <Label class="title" text="Smartphone Shipments"></Label>
+        <Label class="subtitle" row="1" text="(in millions)"></Label>
+        <chart:RadCartesianChart row="2" allowAnimations="false">
+            <chart:RadCartesianChart.grid>
+                <chart:RadCartesianChartGrid
+                    horizontalLinesVisible="false"
+                    verticalLinesVisible="false"
+                    horizontalStripLinesVisible="false"
+                    verticalStripLinesVisible="false"
+                    horizontalStrokeColor="#00000000"
+                    verticalStrokeColor="#00000000"
+                    horizontalStripLineColor="#00000000, #00000000">
+                </chart:RadCartesianChartGrid>
+            </chart:RadCartesianChart.grid>
+            <chart:RadCartesianChart.series>
+                <chart:BarSeries items="{{ salesData }}" categoryProperty="Vendor" valueProperty="Q12018"></chart:BarSeries>
+                <chart:BarSeries index="1" items="{{ salesData }}" categoryProperty="Vendor" valueProperty="Q12019"></chart:BarSeries>
+            </chart:RadCartesianChart.series>
+
+            <chart:RadCartesianChart.horizontalAxis>
+                <chart:LinearAxis />
+            </chart:RadCartesianChart.horizontalAxis>
+            <chart:RadCartesianChart.verticalAxis>
+                <chart:CategoricalAxis />
+            </chart:RadCartesianChart.verticalAxis>
+        </chart:RadCartesianChart>
+        <StackLayout class="legend" row="3" orientation="horizontal">
+            <StackLayout class="symbol first"></StackLayout>
+            <Label text="Q1 2019"></Label>
+            <StackLayout class="symbol second"></StackLayout>
+            <Label text="Q1 2018"></Label>
+        </StackLayout>
+    </GridLayout>
+</navigation:ExamplePage>

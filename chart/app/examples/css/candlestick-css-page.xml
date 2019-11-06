@@ -1,0 +1,34 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-ui-chart" xmlns="http://www.nativescript.org/tns.xsd">
+    <GridLayout rows="auto, auto, *">
+        <Label class="title" text="DIS Stock Price (USD)"></Label>
+        <Label class="subtitle" row="1" text="The Walt Disney Company"></Label>
+        <chart:RadCartesianChart row="2" allowAnimations="false">
+            <chart:RadCartesianChart.grid>
+                <chart:RadCartesianChartGrid
+                    horizontalLinesVisible="true"
+                    verticalLinesVisible="true"
+                    horizontalStripLinesVisible="false"
+                    verticalStripLinesVisible="false"
+                    horizontalStrokeWidth="1"
+                    horizontalStrokeColor="#EEEEEE"
+                    verticalStrokeColor="#F8F8F8"
+                    horizontalStripLineColor="#00000000, #00000000"
+                    verticalStripLineColor="#00000000, #00000000">
+                </chart:RadCartesianChartGrid>
+            </chart:RadCartesianChart.grid>
+
+            <chart:RadCartesianChart.series>
+                <chart:CandlestickSeries items="{{ getStockData }}" categoryProperty="Date"
+                    openPropertyName="Open" highPropertyName="High" lowPropertyName="Low" closePropertyName="Close">
+                </chart:CandlestickSeries>
+            </chart:RadCartesianChart.series>
+
+            <chart:RadCartesianChart.horizontalAxis>
+                <chart:DateTimeCategoricalAxis />
+            </chart:RadCartesianChart.horizontalAxis>
+            <chart:RadCartesianChart.verticalAxis>
+                <chart:LinearAxis />
+            </chart:RadCartesianChart.verticalAxis>
+        </chart:RadCartesianChart>
+    </GridLayout>
+</navigation:ExamplePage>

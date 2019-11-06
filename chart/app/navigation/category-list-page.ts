@@ -1,6 +1,6 @@
 import { navigationModel } from "./categories-view-model";
 
-import { topmost } from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 import { ad } from "tns-core-modules/utils/utils";
 import { android } from "tns-core-modules/application";
 import { ActionBar, NavigationButton } from "tns-core-modules/ui/action-bar";
@@ -8,7 +8,7 @@ import { ActionBar, NavigationButton } from "tns-core-modules/ui/action-bar";
 const dataModel = navigationModel;
 
 export function pageLoaded(args) {
-    if (topmost().android) {
+    if (Frame.topmost().android) {
         const page = args.object;
         const actionBar = page.actionBar === undefined ? new ActionBar() : page.actionBar;
         actionBar.title = dataModel.currentParent.title;
@@ -18,7 +18,7 @@ export function pageLoaded(args) {
                 if (page.content) {
                     ad.dismissSoftInput(page.content.android);
                 }
-                topmost().goBack();
+                Frame.topmost().goBack();
             });
             if (dataModel.hasBackNavigation) {
                 navigationButton.android.systemIcon = "ic_menu_back";
@@ -46,5 +46,5 @@ export function onPageNavigatingFrom(args) {
 }
 
 export function onBackTap(args) {
-    topmost().goBack();
+    Frame.topmost().goBack();
 }

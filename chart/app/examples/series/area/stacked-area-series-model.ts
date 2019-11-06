@@ -1,6 +1,6 @@
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { Observable } from "tns-core-modules/data/observable";
-import { topmost } from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 import { RadCartesianChart, CategoricalSeries } from "nativescript-ui-chart";
 let _isFirstLoad = true;
 export class ViewModel extends Observable {
@@ -22,13 +22,13 @@ export class ViewModel extends Observable {
             animated: true
         };
 
-        topmost().navigate(navigationEntry);
+        Frame.topmost().navigate(navigationEntry);
     }
 
     public updateStackMode() {
         let index: number = this._stackModes.index;
         let b = this._stackModes.options[index];
-        let chart: RadCartesianChart = <RadCartesianChart>(topmost().currentPage.getViewById("cartesianChart"));
+        let chart: RadCartesianChart = <RadCartesianChart>(Frame.topmost().currentPage.getViewById("cartesianChart"));
         console.log(this._stackModes.options[index]);
         (<CategoricalSeries>chart.series.getItem(0)).stackMode = this._stackModes.options[index];
         (<CategoricalSeries>chart.series.getItem(1)).stackMode = this._stackModes.options[index];

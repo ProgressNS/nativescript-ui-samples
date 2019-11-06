@@ -1,0 +1,37 @@
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded" xmlns:chart="nativescript-ui-chart" xmlns="http://www.nativescript.org/tns.xsd">
+    <GridLayout rows="auto, 300, auto">
+        <Label class="title" text="Campaigns in June"></Label>
+        <chart:RadCartesianChart row="1" allowAnimations="false">
+            <chart:RadCartesianChart.grid>
+                <chart:RadCartesianChartGrid
+                    horizontalLinesVisible="true"
+                    verticalLinesVisible="false"
+                    horizontalStrokeWidth="1"
+                    horizontalStripLinesVisible="false"
+                    verticalStripLinesVisible="false"
+                    horizontalStrokeColor="#E8EAED"
+                    verticalStrokeColor="#00000000"
+                    horizontalStripLineColor="#00000000, #00000000">
+                </chart:RadCartesianChartGrid>
+            </chart:RadCartesianChart.grid>
+
+            <chart:RadCartesianChart.series>
+                <chart:LineSeries items="{{ campaignData }}" categoryProperty="Date" valueProperty="Impressions"></chart:LineSeries>
+                <chart:LineSeries index="1" items="{{ campaignData }}" categoryProperty="Date" valueProperty="Clicks"></chart:LineSeries>
+            </chart:RadCartesianChart.series>
+
+            <chart:RadCartesianChart.horizontalAxis>
+                <chart:DateTimeContinuousAxis minimum="01/06/2019" maximum="30/06/2019"/>
+            </chart:RadCartesianChart.horizontalAxis>
+            <chart:RadCartesianChart.verticalAxis>
+                <chart:LinearAxis />
+            </chart:RadCartesianChart.verticalAxis>
+        </chart:RadCartesianChart>
+        <StackLayout row="2" class="legend" orientation="horizontal">
+            <StackLayout class="symbol first"></StackLayout>
+            <Label text="Impressions"></Label>
+            <StackLayout class="symbol second"></StackLayout>
+            <Label text="Clicks"></Label>
+        </StackLayout>
+    </GridLayout>
+</navigation:ExamplePage>
