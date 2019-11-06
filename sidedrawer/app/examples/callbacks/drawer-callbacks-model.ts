@@ -1,6 +1,6 @@
 import { RadSideDrawer, DrawerStateChangingEventArgs, DrawerStateChangedEventArgs } from "nativescript-ui-sidedrawer";
 import { Observable } from "tns-core-modules/data/observable";
-import { topmost } from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 
 export class DrawerCallbacksModel extends Observable {
 
@@ -9,12 +9,12 @@ export class DrawerCallbacksModel extends Observable {
     }
 
     public onCloseDrawerTap() {
-        let sideDrawer: RadSideDrawer = <RadSideDrawer>(topmost().getViewById("sideDrawer"));
+        let sideDrawer: RadSideDrawer = <RadSideDrawer>(Frame.topmost().getViewById("sideDrawer"));
         sideDrawer.closeDrawer();
     }
 
     public onOpenDrawerTap() {
-        let sideDrawer: RadSideDrawer = <RadSideDrawer>(topmost().getViewById("sideDrawer"));
+        let sideDrawer: RadSideDrawer = <RadSideDrawer>(Frame.topmost().getViewById("sideDrawer"));
         sideDrawer.showDrawer();
     }
 

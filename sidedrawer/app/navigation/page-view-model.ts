@@ -1,7 +1,7 @@
 import { NavigationItem } from "./navigation-item";
 import  { Observable } from "tns-core-modules/data/observable";
 import { RadSideDrawer } from "nativescript-ui-sidedrawer";
-import { topmost, View } from "tns-core-modules/ui/frame";
+import { Frame, View } from "tns-core-modules/ui/frame";
 
 export class PageViewModel extends Observable {
     public sideDrawer: RadSideDrawer;
@@ -55,7 +55,7 @@ export class PageViewModel extends Observable {
     }
 
     public onBackTap(args) {
-        topmost().goBack();
+        Frame.topmost().goBack();
     }
 
     public onNavigationItemTap(args) {
@@ -81,13 +81,13 @@ export class PageViewModel extends Observable {
 
         this.sideDrawer.closeDrawer();
         if (tappedItem.subItems.length > 0) {
-            topmost().navigate({
+            Frame.topmost().navigate({
                 moduleName: "navigation/category-list-nested-page",
                 context: nextPageContext
             });
         } else {
             if (tappedItem.module) {
-                topmost().navigate({
+                Frame.topmost().navigate({
                     moduleName: tappedItem.module,
                     context: tappedItem
                     // context: this.sideDrawer,

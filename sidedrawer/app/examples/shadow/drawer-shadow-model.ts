@@ -1,5 +1,5 @@
 import * as drawerModule from "nativescript-ui-sidedrawer";
-import * as frameModule from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 import * as colorModule from "tns-core-modules/color";
 
 export class DrawerShadowModel {
@@ -15,7 +15,7 @@ export class DrawerShadowModel {
     }
 
     public onDefaultShadowTap(args) {
-        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
+        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(Frame.topmost().getViewById("sideDrawer"));
         if (sideDrawer) {
             sideDrawer.shadowColor = null;
             this.openDrawer();
@@ -24,7 +24,7 @@ export class DrawerShadowModel {
 
 
     public onNoShadowTap(args) {
-        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
+        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(Frame.topmost().getViewById("sideDrawer"));
         let noColor = new colorModule.Color("#00000000");
         if (sideDrawer) {
             sideDrawer.shadowColor = noColor;
@@ -33,7 +33,7 @@ export class DrawerShadowModel {
     }
 
     public onColorfulShadowTap(args) {
-        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
+        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(Frame.topmost().getViewById("sideDrawer"));
         let redColor = new colorModule.Color("#FF0000");
         if (sideDrawer) {
             sideDrawer.shadowColor = redColor;
@@ -47,7 +47,7 @@ export class DrawerShadowModel {
     }
 
     private setDrawerLocation(location: drawerModule.SideDrawerLocation) {
-        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
+        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(Frame.topmost().getViewById("sideDrawer"));
         if (!sideDrawer) {
             return;
         }
@@ -63,14 +63,14 @@ export class DrawerShadowModel {
     }
     // << sidedrawer-setting-location
     private openDrawer() {
-        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
+        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(Frame.topmost().getViewById("sideDrawer"));
         if (sideDrawer) {
             sideDrawer.showDrawer();
         }
     }
 
     private closeDrawer() {
-        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
+        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(Frame.topmost().getViewById("sideDrawer"));
         if (sideDrawer) {
             sideDrawer.closeDrawer();
         }

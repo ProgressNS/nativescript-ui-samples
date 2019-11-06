@@ -17,39 +17,39 @@ button {
     horizontal-align: center;
 }
 
-.mainContent{
+RadSideDrawer .mainContent{
     background-color: white;
 }
 
-.drawerContent {
-    background-color: lightgray;
-}
-
-.drawerContentText {
+RadSideDrawer .drawerContentText {
     font-size: 13;
     padding: 10;
 }
 
-.drawerContentButton {
+RadSideDrawer .drawerMenuContent {
+    background-color: gray;
+}
+
+RadSideDrawer .drawerContentButton {
     margin: 10;
     horizontal-align: left;
 }
 
-.drawerWhiteContentButton {
+RadSideDrawer .drawerWhiteContentButton {
     color: white;
 }
 
-.headerContent {
+RadSideDrawer .headerContent {
     text-align: center;
     vertical-align: center;
 }
 
-.drawerSectionHeader {
+RadSideDrawer .drawerSectionHeader {
     padding: 10;
     background-color: lightgray;
 }
 
-.drawerSectionItem {
+RadSideDrawer .drawerSectionItem {
     padding: 10;
 }
 

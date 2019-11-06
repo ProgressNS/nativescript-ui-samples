@@ -3,7 +3,7 @@
     xmlns="http://www.nativescript.org/tns.xsd">
     <nsDrawer:RadSideDrawer id="sideDrawer">
       <nsDrawer:RadSideDrawer.drawerContent>
-        <GridLayout rows="56, *" class="drawerContent">
+        <GridLayout rows="56, *" class="drawerMenuContent">
           <StackLayout class="headerContent">
             <Label text="Navigation Menu"/>
           </StackLayout>
@@ -17,7 +17,7 @@
               <Label text="Starred" class="drawerSectionItem" />
               <Label text="Sent Mail" class="drawerSectionItem" />
               <Label text="Drafts" class="drawerSectionItem" />
-              <Button text="Close Drawer" tap="{{ closeDrawer }}"/>
+              <Label text="Close Drawer" color="lightgray" padding="10" style="horizontal-align: center" tap="{{ closeDrawer }}"/>
             </StackLayout>
           </ScrollView>
         </GridLayout>

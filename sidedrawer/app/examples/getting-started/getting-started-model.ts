@@ -1,6 +1,6 @@
 // >> sidedrawer-getting-started-model
 import { Observable } from "tns-core-modules/data/observable";
-import * as frame from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 import { RadSideDrawer } from "nativescript-ui-sidedrawer";
 
 export class GettingStartedViewModel extends Observable {
@@ -11,12 +11,12 @@ export class GettingStartedViewModel extends Observable {
     }
 
     public onOpenDrawerTap() {
-        let sideDrawer: RadSideDrawer = <RadSideDrawer>(frame.topmost().getViewById("sideDrawer"));
+        let sideDrawer: RadSideDrawer = <RadSideDrawer>(Frame.topmost().getViewById("sideDrawer"));
         sideDrawer.showDrawer();
     }
 
     public onCloseDrawerTap() {
-        let sideDrawer: RadSideDrawer = <RadSideDrawer>(frame.topmost().getViewById("sideDrawer"));
+        let sideDrawer: RadSideDrawer = <RadSideDrawer>(Frame.topmost().getViewById("sideDrawer"));
         sideDrawer.closeDrawer();
     }
 }

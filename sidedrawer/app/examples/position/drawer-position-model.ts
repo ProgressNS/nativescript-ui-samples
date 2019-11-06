@@ -1,5 +1,5 @@
 import * as drawerModule from "nativescript-ui-sidedrawer";
-import * as frameModule from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 
 export class DrawerPositionModel {
 
@@ -29,7 +29,7 @@ export class DrawerPositionModel {
     }
 
     private setDrawerLocation(location: drawerModule.SideDrawerLocation) {
-        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
+        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(Frame.topmost().getViewById("sideDrawer"));
         if (!sideDrawer) {
             return;
         }
@@ -45,14 +45,14 @@ export class DrawerPositionModel {
     }
     // << sidedrawer-setting-location
     private openDrawer() {
-        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
+        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(Frame.topmost().getViewById("sideDrawer"));
         if (sideDrawer) {
             sideDrawer.showDrawer();
         }
     }
 
     private closeDrawer() {
-        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(frameModule.topmost().getViewById("sideDrawer"));
+        let sideDrawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>(Frame.topmost().getViewById("sideDrawer"));
         if (sideDrawer) {
             sideDrawer.closeDrawer();
         }
