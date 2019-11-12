@@ -1,5 +1,5 @@
 import { Observable } from "tns-core-modules/data/observable";
-import { topmost } from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 import { isAndroid } from "tns-core-modules/platform/platform";
 
 export class NavigationItem {
@@ -158,8 +158,12 @@ export class NavigationViewModel extends Observable {
         selectionItem.subItems.push(selectionExample);
         selectionExample = new NavigationItem("Programmatic Selection", "examples/listview-selection/programmatic-selection-page", selectionItem);
         selectionItem.subItems.push(selectionExample);
-        exampleItem = new NavigationItem("Selection states", "examples/selection-states/selection-states-page", selectionItem);
-        selectionItem.subItems.push(exampleItem);
+        selectionExample = new NavigationItem("Selection states", "examples/selection-states/selection-states-page", selectionItem);
+        selectionItem.subItems.push(selectionExample);
+        selectionExample = new NavigationItem("Styling Single Selection", "examples/listview-selection/styling-single-selection-page", selectionItem);
+        selectionItem.subItems.push(selectionExample);
+        selectionExample = new NavigationItem("Styling Multiple Selection", "examples/listview-selection/styling-multiple-selection-page", selectionItem);
+        selectionItem.subItems.push(selectionExample);
 
         let demand = new NavigationItem("Load on Demand", undefined, currentParent);
         currentParent.subItems.push(demand);
@@ -214,12 +218,12 @@ export class NavigationViewModel extends Observable {
         // Scroll to index
         let scrollToIndex = new NavigationItem("Scroll to index", undefined, currentParent);
         currentParent.subItems.push(scrollToIndex);
-        selectionExample = new NavigationItem("In vertical direction", "examples/scroll-to-index/scroll-to-index-vertical-page", scrollToIndex);
-        scrollToIndex.subItems.push(selectionExample);
-        selectionExample = new NavigationItem("In horizontal direction", "examples/scroll-to-index/scroll-to-index-horizontal-page", scrollToIndex);
-        scrollToIndex.subItems.push(selectionExample);
-        selectionExample = new NavigationItem("Initially scrolled", "examples/scroll-to-index/scroll-to-index-initial-page", scrollToIndex);
-        scrollToIndex.subItems.push(selectionExample);
+        let scrollExample = new NavigationItem("In vertical direction", "examples/scroll-to-index/scroll-to-index-vertical-page", scrollToIndex);
+        scrollToIndex.subItems.push(scrollExample);
+        scrollExample = new NavigationItem("In horizontal direction", "examples/scroll-to-index/scroll-to-index-horizontal-page", scrollToIndex);
+        scrollToIndex.subItems.push(scrollExample);
+        scrollExample = new NavigationItem("Initially scrolled", "examples/scroll-to-index/scroll-to-index-initial-page", scrollToIndex);
+        scrollToIndex.subItems.push(scrollExample);
 
         // Scroll events
         exampleItem = new NavigationItem("Scroll Events", "examples/scroll-events/scroll-events-page", currentParent);
@@ -262,12 +266,12 @@ export class NavigationViewModel extends Observable {
         }
 
         if (tappedItem.subItems.length > 0) {
-            topmost().navigate({
+            Frame.topmost().navigate({
                 moduleName: "navigation/category-list-page"
             });
         } else {
             if (tappedItem.module) {
-                topmost().navigate({
+                Frame.topmost().navigate({
                     moduleName: tappedItem.module,
                     context: tappedItem
                 });

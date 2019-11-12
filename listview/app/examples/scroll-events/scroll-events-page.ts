@@ -1,6 +1,6 @@
 import { ViewModel } from "./scroll-events-model";
 import { RadListView, ListViewScrollEventData } from "nativescript-ui-listview";
-import { topmost } from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 import { Label } from "tns-core-modules/ui/label";
 
 export function onPageLoaded(args) {
@@ -10,23 +10,23 @@ export function onPageLoaded(args) {
 }
 
 export function onScrolled(args: ListViewScrollEventData) {
-    let lblState = <Label>topmost().getViewById("lblScrollOffset");
+    let lblState = <Label>Frame.topmost().getViewById("lblScrollOffset");
     if (lblState) {
         lblState.text = "Scrolled: " + args.scrollOffset;
     }
 }
 
 export function onScrollStarted(args: ListViewScrollEventData) {
-    let lblState = <Label>topmost().getViewById("lblState");
+    let lblState = <Label>Frame.topmost().getViewById("lblState");
     lblState.text = "State: Scroll started with offset: " + args.scrollOffset;
 }
 
 export function onScrollEnded(args: ListViewScrollEventData) {
-    let lblState = <Label>topmost().getViewById("lblState");
+    let lblState = <Label>Frame.topmost().getViewById("lblState");
     lblState.text = "State: Scroll ended with offset: " + args.scrollOffset;
 }
 
 export function onScrollDragEnded(args: ListViewScrollEventData) {
-    let lblState = <Label>topmost().getViewById("lblState");
+    let lblState = <Label>Frame.topmost().getViewById("lblState");
     lblState.text = "State: Scroll drag ended with offset: " + args.scrollOffset;
 }

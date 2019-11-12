@@ -2,7 +2,7 @@ import { ViewModel, DataItem } from "./swipe-actions-model";
 import { RadListView, SwipeActionsEventData, ListViewEventData } from "nativescript-ui-listview";
 import { View } from 'tns-core-modules/ui/core/view';
 import { Label } from 'tns-core-modules/ui/label';
-import { topmost } from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 
 export function onPageLoaded(args) {
     const page = args.object;
@@ -45,13 +45,13 @@ export function onSwipeCellFinished(args: SwipeActionsEventData) {
 
 // >> listview-swipe-action-handlers
 export function onLeftSwipeClick(args: ListViewEventData) {
-    const listView = <RadListView>topmost().currentPage.getViewById("listView");
+    const listView = <RadListView>Frame.topmost().currentPage.getViewById("listView");
     console.log("Left swipe click");
     listView.notifySwipeToExecuteFinished();
 }
 
 export function onRightSwipeClick(args) {
-    const listView = <RadListView>topmost().currentPage.getViewById("listView");
+    const listView = <RadListView>Frame.topmost().currentPage.getViewById("listView");
     console.log("Right swipe click");
     const viewModel: ViewModel = <ViewModel>listView.bindingContext;
     viewModel.dataItems.splice(viewModel.dataItems.indexOf(args.object.bindingContext), 1);
@@ -61,15 +61,15 @@ export function onRightSwipeClick(args) {
 export function onLayoutTap(args) {
     const message = "Tap on Layout for item: " + (<DataItem>args.object.bindingContext).name;
     console.log(message);
-    const listView = <RadListView>topmost().currentPage.getViewById("listView");
+    const listView = <RadListView>Frame.topmost().currentPage.getViewById("listView");
     listView.notifySwipeToExecuteFinished();
-    let lbl = <Label>topmost().getViewById("lbl");
+    let lbl = <Label>Frame.topmost().getViewById("lbl");
     lbl.text += " \n" + message;
 }
 
 export function onLabelTap(args) {
     const message = "Tap on Title: " + (<Label>args.object).text;
     console.log(message);
-    let lbl = <Label>topmost().getViewById("lbl");
+    let lbl = <Label>Frame.topmost().getViewById("lbl");
     lbl.text = message;
 }
