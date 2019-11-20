@@ -1,5 +1,5 @@
 import * as categoriesViewModel from "./categories-view-model";
-import * as frameModule from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 import * as actionBarModule from "tns-core-modules/ui/action-bar";
 import * as applicationModule from "tns-core-modules/application";
 import * as utilsModule from "tns-core-modules/utils/utils";
@@ -7,7 +7,7 @@ import * as utilsModule from "tns-core-modules/utils/utils";
 let dataModel = categoriesViewModel.navigationModel;
 
 export function pageLoaded(args) {
-    if (frameModule.topmost().android) {
+    if (Frame.topmost().android) {
         const page = args.object;
         const actionBar = page.actionBar === undefined ? new actionBarModule.ActionBar() : page.actionBar;
         actionBar.title = dataModel.currentParent.title;
@@ -17,7 +17,7 @@ export function pageLoaded(args) {
                 if (page.content) {
                     utilsModule.ad.dismissSoftInput(page.content.android);
                 }
-                frameModule.topmost().goBack();
+                Frame.topmost().goBack();
             });
             if (dataModel.hasBackNavigation) {
                 navigationButton.android.systemIcon = "ic_menu_back";
@@ -43,5 +43,5 @@ export function onPageNavigatingFrom(args) {
 }
 
 export function onBackTap(args) {
-    frameModule.topmost().goBack();
+    Frame.topmost().goBack();
 }
