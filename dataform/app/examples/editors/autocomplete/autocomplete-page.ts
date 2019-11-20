@@ -4,9 +4,10 @@ import { Page } from "tns-core-modules/ui/page";
 
 let dataform: RadDataForm;
 
-export function onPageLoaded(args) {
+export function onPageNavigatingTo(args) {
+    let viewModel = new BookingViewModel();
     const page = args.object as Page;
-    page.bindingContext = new BookingViewModel();
+    page.bindingContext = viewModel;
     dataform = page.getViewById<RadDataForm>("dataform");
 }
 

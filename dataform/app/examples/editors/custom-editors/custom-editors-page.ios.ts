@@ -1,9 +1,10 @@
 import { PersonBaseViewModel } from "./../../view-models/person-base-model";
 import { CustomPropertyEditor } from "nativescript-ui-dataform";
 
-export function onPageLoaded(args) {
+export function onPageNavigatingTo(args) {
+    let viewModel = new PersonBaseViewModel();
     const page = args.object;
-    page.bindingContext = new PersonBaseViewModel();
+    page.bindingContext = viewModel;
 }
 
 // >> dataform-custom-editors-ios

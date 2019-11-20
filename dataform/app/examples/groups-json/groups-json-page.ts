@@ -1,6 +1,7 @@
 import { PersonGroupsModel } from "./../view-models/person-groups-model";
 
-export function onPageLoaded(args) {
+export function onPageNavigatingTo(args) {
+    let viewModel = new PersonGroupsModel();
     const page = args.object;
-    page.bindingContext = new PersonGroupsModel();
+    page.bindingContext = viewModel;
 }

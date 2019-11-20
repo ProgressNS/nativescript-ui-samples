@@ -1,15 +1,15 @@
-import { PersonBaseViewModel} from "./../../view-models/person-base-model";
+import { PersonBaseViewModel } from "./../../view-models/person-base-model";
 import { DataFormFontStyle, PropertyEditor, RadDataForm } from "nativescript-ui-dataform";
 import { Color } from "tns-core-modules/color";
 
 let nameEditor: PropertyEditor;
 let ageEditor: PropertyEditor;
 let birthDateEditor: PropertyEditor;
-let viewModel: PersonBaseViewModel;
 
-export function onPageLoaded(args) {
+export function onPageNavigatingTo(args) {
+    let viewModel = new PersonBaseViewModel();
     const page = args.object;
-    page.bindingContext = new PersonBaseViewModel();
+    page.bindingContext = viewModel;
     const dataform = <RadDataForm>page.getViewById("myDataForm");
     nameEditor = dataform.getPropertyByName("name").editor;
     ageEditor = dataform.getPropertyByName("age").editor;

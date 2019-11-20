@@ -1,6 +1,7 @@
 import { CityViewModel } from "./../../view-models/city-model";
 
-export function onPageLoaded(args) {
+export function onPageNavigatingTo(args) {
+    let viewModel = new CityViewModel();
     const page = args.object;
-    page.bindingContext = new CityViewModel();
+    page.bindingContext = viewModel;
 }

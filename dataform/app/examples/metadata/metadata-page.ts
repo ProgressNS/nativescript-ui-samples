@@ -1,5 +1,7 @@
 import { PersonNestedModel } from "./../view-models/person-nested-model";
-export function onPageLoaded(args) {
+
+export function onPageNavigatingTo(args) {
+    let viewModel = new PersonNestedModel();
     const page = args.object;
-    page.bindingContext = new PersonNestedModel();
+    page.bindingContext = viewModel;
 }

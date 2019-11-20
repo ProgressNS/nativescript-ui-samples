@@ -7,9 +7,10 @@ let dataform: RadDataForm;
 let button: Button;
 let counter: number;
 
-export function onPageLoaded(args) {
+export function onPageNavigatingTo(args) {
+    let viewModel = new PersonViewModel();
     const page = args.object;
-    page.bindingContext = new PersonViewModel();
+    page.bindingContext = viewModel;
     dataform = <RadDataForm>page.getViewById("myDataForm");
     button = <Button>page.getViewById("myButton");
     counter = 0;

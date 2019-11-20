@@ -3,9 +3,10 @@ import { Color } from "tns-core-modules/color";
 import { ios } from "tns-core-modules/application";
 import { fromResource } from "tns-core-modules/image-source";
 
-export function onPageLoaded(args) {
+export function onPageNavigatingTo(args) {
+    let viewModel = new PersonBaseViewModel();
     const page = args.object;
-    page.bindingContext = new PersonBaseViewModel();
+    page.bindingContext = viewModel;
 }
 
 export function onEditorUpdate(args) {

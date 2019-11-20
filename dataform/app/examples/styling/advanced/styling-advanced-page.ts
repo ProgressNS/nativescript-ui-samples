@@ -7,9 +7,10 @@ let colorLight = new Color("#CDDC39");
 let colorDark = new Color("#4CAF50");
 let colorGray = new Color("#F9F9F9");
 
-export function onPageLoaded(args) {
-    let page = args.object;
-    page.bindingContext = new SettingsViewModel();
+export function onPageNavigatingTo(args) {
+    let viewModel = new SettingsViewModel();
+    const page = args.object;
+    page.bindingContext = viewModel;
 }
 
 export function dfEditorUpdate(args: DataFormEventData) {

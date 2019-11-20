@@ -3,9 +3,10 @@ import { alert } from "tns-core-modules/ui/dialogs";
 
 let dataform;
 
-export function onPageLoaded(args) {
+export function onPageNavigatingTo(args) {
+    let viewModel = new UserViewModel();
     const page = args.object;
-    page.bindingContext = new UserViewModel();
+    page.bindingContext = viewModel;
     dataform = page.getViewById("myDataForm");
 }
 
