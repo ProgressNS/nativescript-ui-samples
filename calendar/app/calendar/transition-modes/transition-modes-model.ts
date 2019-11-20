@@ -1,6 +1,6 @@
 import * as calendarModule from "nativescript-ui-calendar";
 import * as observableModule from "tns-core-modules/data/observable";
-import * as frameModule from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 
 export class ViewModel extends observableModule.Observable {
     private _transitionInfo;
@@ -56,7 +56,7 @@ export class ViewModel extends observableModule.Observable {
             animated: true
         };
 
-        frameModule.topmost().navigate(navigationEntry);
+        Frame.topmost().navigate(navigationEntry);
     }
 
 }
