@@ -1,6 +1,6 @@
 import { ViewModel } from "./scroll-to-index-model-vertical";
 import { RadListView } from "nativescript-ui-listview";
-import { topmost } from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 
 let viewModelContext: ViewModel;
 
@@ -25,7 +25,7 @@ export function onNavigatedFrom(args) {
 
 export function onTap() {
     // >> listview-scroll-to-index
-    let listView: RadListView = <RadListView>(topmost().currentPage.getViewById("listView"));
+    let listView: RadListView = <RadListView>(Frame.topmost().currentPage.getViewById("listView"));
 
     listView.scrollToIndex(50, false, viewModelContext.get('myScrollPosition'));
     // << listview-scroll-to-index

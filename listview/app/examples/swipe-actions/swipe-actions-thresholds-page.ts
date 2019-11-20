@@ -1,7 +1,6 @@
 import { ViewModel } from "./swipe-actions-model";
 import { SwipeActionsEventData, ListViewEventData } from "nativescript-ui-listview";
 import { View } from 'tns-core-modules/ui/core/view';
-import { topmost } from "tns-core-modules/ui/frame";
 import { layout } from "tns-core-modules/utils/utils";
 
 let leftThresholdPassed = false;

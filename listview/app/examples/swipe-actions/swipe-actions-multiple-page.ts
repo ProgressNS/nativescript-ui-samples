@@ -1,7 +1,7 @@
 import { ViewModel } from "./swipe-actions-model";
 import { RadListView, SwipeActionsEventData, ListViewEventData } from "nativescript-ui-listview";
 import { View } from 'tns-core-modules/ui/core/view';
-import { topmost } from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 import { layout } from "tns-core-modules/utils/utils";
 
 let animationApplied = false;
@@ -86,13 +86,13 @@ export function onSwipeCellFinished(args: SwipeActionsEventData) {
 }
 
 export function onLeftSwipeClick(args: ListViewEventData) {
-    const listView = <RadListView>topmost().currentPage.getViewById("listView");
+    const listView = <RadListView>Frame.topmost().currentPage.getViewById("listView");
     console.log("Button clicked: " + args.object.id + " for item with index: " + listView.items.indexOf(args.object.bindingContext));
     listView.notifySwipeToExecuteFinished();
 }
 
 export function onRightSwipeClick(args) {
-    const listView = <RadListView>topmost().currentPage.getViewById("listView");
+    const listView = <RadListView>Frame.topmost().currentPage.getViewById("listView");
     console.log("Button clicked: " + args.object.id + " for item with index: " + listView.items.indexOf(args.object.bindingContext));
     listView.notifySwipeToExecuteFinished();
 }

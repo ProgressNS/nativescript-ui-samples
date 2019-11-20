@@ -1,6 +1,6 @@
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { Observable } from "tns-core-modules/data/observable";
-import { topmost } from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 import { DataItem } from "./data-item";
 
 export class ViewModel extends Observable {
@@ -52,14 +52,14 @@ export class ViewModel extends Observable {
 
 
     public onOptionsTapped(args: any) {
-        if (topmost().ios) {
+        if (Frame.topmost().ios) {
             const navigationEntry = {
                 moduleName: "navigation/options-menu/options-page",
                 context: this._selectionInfo,
                 animated: true
             };
 
-            topmost().navigate(navigationEntry);
+            Frame.topmost().navigate(navigationEntry);
         } else {
             this.set('myScrollPosition', args.object.text);
         }
