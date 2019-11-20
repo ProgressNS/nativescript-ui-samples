@@ -14,7 +14,7 @@
               <Label text="Primary" padding="10" backgroundColor="lightgray"/>
               <Label text="Social" padding="10"/>
               <Label text="Promotions" padding="10" />
-              <Label text="Labels" padding="10" backgroundColor="lightgray" />
+              <Label text="Labels" padding="10" backgroundcolor="lightgray" backgroundColor="transparent" />
               <Label text="Important" padding="10" />
               <Label text="Starred" padding="10" />
               <Label text="Sent Mail" padding="10" />

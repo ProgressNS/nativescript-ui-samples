@@ -2,19 +2,14 @@
   <!-- >> sidedrawer-setting-location-xml -->
   
     <nsDrawer:RadSideDrawer id="sideDrawer" drawerLocation="Left" drawerContentSize="280">
-    
-    <nsDrawer:RadSideDrawer.drawerTransition>
-      <nsDrawer:RevealTransition/>
-    </nsDrawer:RadSideDrawer.drawerTransition>
-    
       <nsDrawer:RadSideDrawer.drawerContent>
       <!-- >> (hide) -->
-        <GridLayout rows="56, *" class="drawerContent">
+        <GridLayout rows="56, *" class="drawerMenuContent">
           <StackLayout class="headerContent">
             <Label text="Navigation Menu"/>
           </StackLayout>
           <ScrollView row="1">
-            <StackLayout class="drawerMenuContent">
+            <StackLayout>
               <Label text="Primary" class="drawerSectionHeader" />
               <Label text="Social" class="drawerSectionItem" />
               <Label text="Promotions" class="drawerSectionItem" />
@@ -23,7 +18,7 @@
               <Label text="Starred" class="drawerSectionItem" />
               <Label text="Sent Mail" class="drawerSectionItem" />
               <Label text="Drafts" class="drawerSectionItem" />
-              <Button text="Close Drawer" tap="{{ closeDrawer }}"/>
+              <Label text="Close Drawer" color="lightgray" padding="10" style="horizontal-align: center" tap="{{ closeDrawer }}"/>
             </StackLayout>
           </ScrollView>
         </GridLayout>
@@ -31,7 +26,7 @@
       </nsDrawer:RadSideDrawer.drawerContent>
 
       <nsDrawer:RadSideDrawer.mainContent>
-        <GridLayout rows="auto, *" class="mainContent">
+        <GridLayout rows="auto, *">
           <Label text="{{drawerPositionText}}" textWrap="true" class="drawerContentText"/>
           <ScrollView row="1">
             <StackLayout>

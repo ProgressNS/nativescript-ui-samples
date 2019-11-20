@@ -7,11 +7,11 @@
                         drawerOpened="onDrawerOpened"
                         drawerOpening="onDrawerOpening">
     <nsDrawer:RadSideDrawer.drawerTransition>
-      <nsDrawer:RevealTransition/>
+      <nsDrawer:PushTransition/>
     </nsDrawer:RadSideDrawer.drawerTransition>
     <nsDrawer:RadSideDrawer.mainContent>
     <!-- >> (hide) -->
-        <StackLayout class="mainContent">
+        <StackLayout>
             <Button text="Open drawer" tap="{{ onOpenDrawerTap }}" class="drawerContentButton"/>
             <Label text="Drawer notification: " class="drawerContentText"/>
             <Label text="{{ currentDrawerNotification }}" class="drawerContentText"/>
@@ -20,7 +20,7 @@
     </nsDrawer:RadSideDrawer.mainContent>
     <nsDrawer:RadSideDrawer.drawerContent>
     <!-- >> (hide) -->
-       <GridLayout rows="56, *" class="drawerContent">
+       <GridLayout rows="56, *" class="drawerMenuContent">
         <StackLayout class="headerContent">
           <Label text="Navigation Menu"/>
         </StackLayout>
@@ -34,7 +34,7 @@
             <Label text="Starred" class="drawerSectionItem" />
             <Label text="Sent Mail" class="drawerSectionItem" />
             <Label text="Drafts" class="drawerSectionItem" />
-            <Button text="Close Drawer" tap="{{ onCloseDrawerTap }}"/>
+            <Label text="Close Drawer" color="lightgray" padding="10" style="horizontal-align: center" tap="{{ onCloseDrawerTap }}"/>
           </StackLayout>
         </ScrollView>
       </GridLayout>

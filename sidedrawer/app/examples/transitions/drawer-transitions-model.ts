@@ -1,4 +1,4 @@
-import * as frameModule from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 import * as drawerModule from "nativescript-ui-sidedrawer";
 import * as observableModule from "tns-core-modules/data/observable";
 
@@ -44,17 +44,17 @@ export class DrawerTransitionsModel {
     }
 
     public openSideDrawer(args?: observableModule.EventData) {
-        let drawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>frameModule.topmost().getViewById("sideDrawer");
+        let drawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>Frame.topmost().getViewById("sideDrawer");
         drawer.showDrawer();
     }
 
     public closeDrawer(args?: observableModule.EventData) {
-        let drawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>frameModule.topmost().getViewById("sideDrawer");
+        let drawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>Frame.topmost().getViewById("sideDrawer");
         drawer.closeDrawer();
     }
 
     private setDrawerTransition(transition: drawerModule.DrawerTransitionBase) {
-        let drawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>frameModule.topmost().getViewById("sideDrawer");
+        let drawer: drawerModule.RadSideDrawer = <drawerModule.RadSideDrawer>Frame.topmost().getViewById("sideDrawer");
         drawer.drawerTransition = transition;
     }// << sidedrawer-setting-transition
 }
