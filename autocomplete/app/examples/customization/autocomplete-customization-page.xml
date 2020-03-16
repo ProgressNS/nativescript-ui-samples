@@ -13,5 +13,7 @@
                 </au:SuggestionView>
             </au:RadAutoCompleteTextView.suggestionView>
          </au:RadAutoCompleteTextView>
+        <Label text="For testing"></Label>
+        <TextView automationText="testing" hint="For testing"></TextView>
     </StackLayout>
 </navigation:ExamplePage>
