@@ -53,6 +53,16 @@ export class StylingViewModel extends Observable {
         this.viewMode = viewMode;
     }
 
+    get minDate(): Date {
+        // 80 days ago
+        return new Date(Date.now() - 1000 * 60 * 60 * 24 * 80);
+    }
+
+    get maxDate(): Date {
+        // in 10 days
+        return new Date(Date.now() + 1000 * 60 * 60 * 24 * 10);
+    }
+
     public updateViewMode() {
         const index: number = this._selectionInfo.index;
         if (index === 0) {
