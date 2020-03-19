@@ -72,22 +72,6 @@ export function onRightSwipeClick(args: EventData) {
     listView.notifySwipeToExecuteFinished();
 }
 
-export function onItemSelected(args: ListViewEventData) {
-    let item = bindingContext.dataItems.getItem(args.index);
-    const message = "onItemSelected for: " + item.itemName;
-    console.log(message);
-    let lbl = <Label>Frame.topmost().getViewById("lbl");
-    lbl.text = message;
-}
-
-export function onItemDeselected(args: ListViewEventData) {
-    let item = bindingContext.dataItems.getItem(args.index);
-    const message = "onItemDeselected for: " + item.itemName;
-    console.log(message);
-    let lbl = <Label>Frame.topmost().getViewById("lbl");
-    lbl.text = message;
-}
-
 export function onItemTap(args: ListViewEventData) {
     console.log("args.index " + args.index);
     let item = bindingContext.dataItems.getItem(args.index);
