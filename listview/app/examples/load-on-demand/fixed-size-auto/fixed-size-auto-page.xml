@@ -1,8 +1,8 @@
-<navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:img="nativescript-image" loaded="onPageLoaded" 
+<navigation:ExamplePage xmlns:navigation="navigation/example-page" xmlns:img="nativescript-image" loaded="onPageLoaded"
                         xmlns:lv="nativescript-ui-listview" xmlns="http://www.nativescript.org/tns.xsd">
     <lv:RadListView id="ls" items="{{ dataItems }}"  row="0" loadOnDemandMode="Auto" loadMoreDataRequested="{{onLoadMoreItemsRequested}}">
         <lv:RadListView.listViewLayout>
-            <lv:ListViewLinearLayout scrollDirection="Vertical" itemHeight="120"/>
+            <lv:ListViewLinearLayout scrollDirection="Vertical" itemHeight="120" dynamicItemSize="false"/>
         </lv:RadListView.listViewLayout>
         <lv:RadListView.itemTemplate>
             <StackLayout orientation="vertical" padding="5 10 5 10"  style="background-color: #7fff7f;">
