@@ -40,7 +40,7 @@
     "nativescript-css-loader": "~0.26.1",
     "nativescript-dev-appium": "next",
     "nativescript-dev-webpack": "^1.5.1",
-    "tns-platform-declarations": "^6.5.0",
+    "tns-platform-declarations": "^6.5.1",
     "tslint": "~5.11.0",
     "typescript": "~3.5.3"
   }
