@@ -31,3 +31,5 @@ Steps to run the sample:
 
 1. `cd listview`
 2. `tns run android` or `tns run ios`
+
+© 2023 XYZ, Inc.
